@@ -48,37 +48,37 @@
       background: #fff;
       border: 1px solid #e0ddd4;
       border-radius: 8px;
-      padding: 20px;
+      padding: 16px;
       font-family: 'Poppins', sans-serif;
     }
 
     .study-sidebar h2 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
       color: #141413;
-      margin: 0 0 4px 0;
+      margin: 0 0 2px 0;
       font-family: 'Lora', serif;
     }
 
     .study-sidebar .s-subtitle {
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       color: #999;
       font-style: italic;
-      margin: 0 0 20px 0;
-      line-height: 1.5;
+      margin: 0 0 14px 0;
+      line-height: 1.4;
     }
 
     .s-section {
-      margin-bottom: 22px;
+      margin-bottom: 14px;
     }
 
     .s-section h3 {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.6px;
       color: #141413;
-      margin: 0 0 10px 0;
+      margin: 0 0 8px 0;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -92,18 +92,18 @@
     .s-divider {
       height: 1px;
       background: #e8e6dc;
-      margin: 18px 0;
+      margin: 12px 0;
     }
 
     /* seed */
     .seed-input {
       width: 100%;
       background: #faf9f5;
-      padding: 8px 10px;
+      padding: 6px 10px;
       border-radius: 6px;
       font-family: 'Courier New', monospace;
-      font-size: 13px;
-      margin-bottom: 8px;
+      font-size: 12px;
+      margin-bottom: 6px;
       border: 1px solid #e0ddd4;
       text-align: center;
       color: #141413;
@@ -118,21 +118,21 @@
     .seed-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px;
-      margin-bottom: 6px;
+      gap: 5px;
+      margin-bottom: 5px;
     }
 
     /* controls */
     .ctrl-group {
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     .ctrl-group label {
       display: block;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 500;
       color: #141413;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .ctrl-row {
@@ -179,28 +179,34 @@
       text-align: right;
     }
 
-    /* colors */
+    /* colors - 2x2 grid */
+    .col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
     .col-group {
-      margin-bottom: 10px;
+      margin-bottom: 0;
     }
 
     .col-group label {
       display: block;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       color: #aaa;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .col-row {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 5px;
     }
 
     .col-row input[type="color"] {
-      width: 26px; height: 26px;
+      width: 22px; height: 22px;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       cursor: pointer;
       background: none;
       padding: 0;
@@ -208,24 +214,24 @@
 
     .col-hex {
       font-family: 'Courier New', monospace;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: #aaa;
     }
 
     /* buttons */
     .s-btn {
       width: 100%;
-      padding: 8px 12px;
+      padding: 6px 10px;
       background: #faf9f5;
       border: 1.5px solid #e0ddd4;
       border-radius: 6px;
       font-family: 'Poppins', sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 500;
       color: #141413;
       cursor: pointer;
       transition: all 0.15s;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       box-sizing: border-box;
     }
 
@@ -250,8 +256,8 @@
     .s-btn-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px;
-      margin-bottom: 6px;
+      gap: 5px;
+      margin-bottom: 5px;
     }
 
     /* ── Canvas area ────────────────────────────────────────── */
@@ -465,32 +471,34 @@
 
       <div class="s-section">
         <h3>Palette</h3>
-        <div class="col-group">
-          <label>Primary Instance</label>
-          <div class="col-row">
-            <input type="color" id="color1" value="#d97757" onchange="updateColor('color1', this.value)">
-            <span class="col-hex" id="color1-value">#d97757</span>
+        <div class="col-grid">
+          <div class="col-group">
+            <label>Primary</label>
+            <div class="col-row">
+              <input type="color" id="color1" value="#d97757" onchange="updateColor('color1', this.value)">
+              <span class="col-hex" id="color1-value">#d97757</span>
+            </div>
           </div>
-        </div>
-        <div class="col-group">
-          <label>Secondary Instance</label>
-          <div class="col-row">
-            <input type="color" id="color2" value="#6a9bcc" onchange="updateColor('color2', this.value)">
-            <span class="col-hex" id="color2-value">#6a9bcc</span>
+          <div class="col-group">
+            <label>Secondary</label>
+            <div class="col-row">
+              <input type="color" id="color2" value="#6a9bcc" onchange="updateColor('color2', this.value)">
+              <span class="col-hex" id="color2-value">#6a9bcc</span>
+            </div>
           </div>
-        </div>
-        <div class="col-group">
-          <label>Emergent Resonance</label>
-          <div class="col-row">
-            <input type="color" id="color3" value="#a87c9f" onchange="updateColor('color3', this.value)">
-            <span class="col-hex" id="color3-value">#a87c9f</span>
+          <div class="col-group">
+            <label>Resonance</label>
+            <div class="col-row">
+              <input type="color" id="color3" value="#a87c9f" onchange="updateColor('color3', this.value)">
+              <span class="col-hex" id="color3-value">#a87c9f</span>
+            </div>
           </div>
-        </div>
-        <div class="col-group">
-          <label>Deep Field</label>
-          <div class="col-row">
-            <input type="color" id="color4" value="#788c5d" onchange="updateColor('color4', this.value)">
-            <span class="col-hex" id="color4-value">#788c5d</span>
+          <div class="col-group">
+            <label>Deep Field</label>
+            <div class="col-row">
+              <input type="color" id="color4" value="#788c5d" onchange="updateColor('color4', this.value)">
+              <span class="col-hex" id="color4-value">#788c5d</span>
+            </div>
           </div>
         </div>
       </div>
@@ -632,11 +640,11 @@
 
 <footer class="site-footer">
   &copy; 2025&ndash;2026 Synthience Institute &middot;
-  <a href="mailto:contact@synthience.org">contact@synthience.org</a>
+  <a href="/cdn-cgi/l/email-protection#284b47465c494b5c685b51465c40414d464b4d06475a4f"><span class="__cf_email__" data-cfemail="a8cbc7c6dcc9cbdce8dbd1c6dcc0c1cdc6cbcd86c7dacf">[email&#160;protected]</span></a>
 </footer>
 
 <!-- ── Generative Art Engine ──────────────────────────────────────────────── -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 let params = {
     seed: 42703,
     instanceCount: 140,
@@ -865,16 +873,4 @@ function resetParameters() {
     });
     ['color1','color2','color3','color4'].forEach((id, i) => {
         document.getElementById(id).value = params.palette[i];
-        document.getElementById(id + '-value').textContent = params.palette[i];
-    });
-    updateSeedDisplay();
-    initializeSystem();
-}
-
-function downloadPNG() { saveCanvas('relational-coherence-' + params.seed, 'png'); }
-
-window.addEventListener('load', updateSeedDisplay);
-</script>
-
-</body>
-</html>
+        document.getElementById(id + '-value').textConte
