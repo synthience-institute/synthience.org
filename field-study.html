@@ -43,6 +43,8 @@
     .s-btn.primary { background: #c8604a; border-color: #c8604a; color: #fff; }
     .s-btn.primary:hover { background: #b3503c; border-color: #b3503c; }
     .s-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 5px; }
+    #canvas-container { width: 100%; overflow: hidden; }
+    #canvas-container canvas { display: block !important; max-width: 100% !important; border-radius: 6px; border: 1px solid #e0ddd4; }
     .canvas-loading { padding: 3rem; color: #aaa; font-size: 0.9rem; }
     .study-description h3 { font-size: 1.1rem; font-weight: 500; color: #111; margin: 2rem 0 0.8rem 0; }
     .study-description h3:first-child { margin-top: 0; }
@@ -58,6 +60,12 @@
     .study-below { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 3rem; }
     .study-sidebar { width: 270px; flex-shrink: 0; }
     .study-description { flex: 1; min-width: 0; border-top: none; padding-top: 0; max-width: none; }
+    @media (max-width: 900px) {
+      .study-below { flex-direction: column; }
+      .study-sidebar { width: 100% !important; box-sizing: border-box; }
+      .study-description { width: 100%; min-width: 0; }
+      .study-shell { padding: 1rem; }
+    }
     /* Hint line */
     .study-hint { font-size: 0.85rem; color: #999; font-style: italic; margin: 0 0 1rem 0; }
     /* Nav override: center items between pipes, prevent forced wrap */
@@ -273,13 +281,31 @@ var params = {
 var defaultParams = JSON.parse(JSON.stringify(params));
 var instances = [], attractors = [], NUM_ATTRACTORS = 7, t = 0, pgTrails;
 
+function getCanvasSize() {
+    var container = document.getElementById('canvas-container');
+    var w = container ? container.offsetWidth : 900;
+    return w > 20 ? w : 900;
+}
+
 function setup() {
-    var canvas = createCanvas(900, 900);
+    var sz = getCanvasSize();
+    var canvas = createCanvas(sz, sz);
     canvas.parent('canvas-container');
     var loading = document.querySelector('.canvas-loading');
     if (loading) loading.style.display = 'none';
     colorMode(RGB, 255, 255, 255, 255);
     initializeSystem();
+}
+
+function windowResized() {
+    var sz = getCanvasSize();
+    resizeCanvas(sz, sz);
+    if (pgTrails) {
+        pgTrails.remove();
+        pgTrails = createGraphics(width, height);
+        pgTrails.colorMode(RGB, 255, 255, 255, 255);
+        pgTrails.background(250, 249, 245);
+    }
 }
 
 function initializeSystem() {
