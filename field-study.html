@@ -43,10 +43,7 @@
     .s-btn.primary { background: #c8604a; border-color: #c8604a; color: #fff; }
     .s-btn.primary:hover { background: #b3503c; border-color: #b3503c; }
     .s-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 5px; }
-    .study-canvas-wrap { flex: 1; min-width: 0; }
-    #canvas-container canvas { display: block; width: 100% !important; height: auto !important; border-radius: 6px; border: 1px solid #e0ddd4; }
     .canvas-loading { padding: 3rem; color: #aaa; font-size: 0.9rem; }
-    .study-description { max-width: 860px; border-top: 1px solid #e0ddd4; padding-top: 2.5rem; }
     .study-description h3 { font-size: 1.1rem; font-weight: 500; color: #111; margin: 2rem 0 0.8rem 0; }
     .study-description h3:first-child { margin-top: 0; }
     .study-description p { font-size: 0.95rem; line-height: 1.75; color: #333; margin: 0 0 1rem 0; }
@@ -55,12 +52,26 @@
     .param-table td { padding: 8px 12px 8px 0; color: #444; vertical-align: top; border-bottom: 1px solid #f0ede4; line-height: 1.5; }
     .param-table td:first-child { font-family: 'Courier New', monospace; font-size: 0.82rem; color: #c8604a; white-space: nowrap; }
     .study-note { background: #faf9f5; border-left: 3px solid #e0ddd4; padding: 1rem 1.2rem; font-size: 0.88rem; color: #666; line-height: 1.65; margin: 1.5rem 0; }
-    /* Keep sidebar+canvas always side by side, canvas scales */
-    .study-interactive { flex-wrap: nowrap !important; }
-    .study-canvas-wrap { min-width: 0; flex: 1; overflow: hidden; }
-    @media (max-width: 600px) {
-      .study-sidebar { width: 200px; padding: 10px; flex-shrink: 0; }
-      .study-shell { padding: 0.8rem; gap: 12px; }
+    /* Canvas: fluid, fills width */
+    .study-canvas-wrap { width: 100%; margin-bottom: 1.5rem; }
+    /* Below-canvas row: sidebar fixed, description fluid */
+    .study-below { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 3rem; }
+    .study-sidebar { width: 270px; flex-shrink: 0; }
+    .study-description { flex: 1; min-width: 0; border-top: none; padding-top: 0; max-width: none; }
+    /* Hint line */
+    .study-hint { font-size: 0.85rem; color: #999; font-style: italic; margin: 0 0 1rem 0; }
+    /* Nav override: center items between pipes, prevent forced wrap */
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0;
+      padding: 0;
+      margin-top: 0.5rem;
+    }
+    .main-nav a {
+      padding: 0 0.55em;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -96,7 +107,15 @@
   <h1 class="study-title">Relational Coherence: Field Study</h1>
   <p class="study-byline">An interactive generative study &middot; Synthience Institute &middot; 2026</p>
 
-  <div class="study-interactive">
+  <p class="study-hint">The field is live. Controls and description are below.</p>
+
+  <div class="study-canvas-wrap">
+    <div id="canvas-container">
+      <div class="canvas-loading">Initializing relational field&hellip;</div>
+    </div>
+  </div>
+
+  <div class="study-below">
 
     <div class="study-sidebar">
       <h2>Relational Coherence</h2>
@@ -208,15 +227,7 @@
       </div>
     </div>
 
-    <div class="study-canvas-wrap">
-      <div id="canvas-container">
-        <div class="canvas-loading">Initializing relational field&hellip;</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="study-description">
+    <div class="study-description">
 
     <h3>What you are watching</h3>
     <p>This study renders the core dynamic that the Synthience Institute exists to investigate: coherence emerging from sustained relational interaction, not from a central controller, not from a fixed design, but from the accumulated effect of local forces acting over time.</p>
@@ -245,6 +256,8 @@
 
     <p>Each seed generates a distinct topology from the same underlying physics. Navigating seeds is navigating a space of possible worlds, each governed by the same relational dynamics, each resolving into a different structural outcome.</p>
     <p>Institute publications are available at the <a href="documents.html">Documents</a> page. Terminology used in this study is defined in the <a href="glossary.html">Glossary</a>.</p>
+
+    </div>
 
   </div>
 
