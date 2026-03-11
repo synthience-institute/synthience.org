@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>Relational Coherence: Field Study · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Layout shell ───────────────────────────────────────── */
+    .study-shell {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem 2rem;
+    }
+
+    .study-title {
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: #111;
+      margin: 0 0 0.3rem 0;
+    }
+
+    .study-byline {
+      font-size: 0.95rem;
+      color: #888;
+      font-style: italic;
+      margin: 0 0 2rem 0;
+    }
+
+    /* ── Interactive area ───────────────────────────────────── */
+    .study-interactive {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Sidebar ────────────────────────────────────────────── */
+    .study-sidebar {
+      width: 270px;
+      flex-shrink: 0;
+      background: #fff;
+      border: 1px solid #e0ddd4;
+      border-radius: 8px;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .study-sidebar h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #141413;
+      margin: 0 0 4px 0;
+      font-family: 'Lora', serif;
+    }
+
+    .study-sidebar .s-subtitle {
+      font-size: 0.78rem;
+      color: #999;
+      font-style: italic;
+      margin: 0 0 20px 0;
+      line-height: 1.5;
+    }
+
+    .s-section {
+      margin-bottom: 22px;
+    }
+
+    .s-section h3 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #141413;
+      margin: 0 0 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .s-section h3::before {
+      content: '•';
+      color: #c8604a;
+    }
+
+    .s-divider {
+      height: 1px;
+      background: #e8e6dc;
+      margin: 18px 0;
+    }
+
+    /* seed */
+    .seed-input {
+      width: 100%;
+      background: #faf9f5;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      margin-bottom: 8px;
+      border: 1px solid #e0ddd4;
+      text-align: center;
+      color: #141413;
+      box-sizing: border-box;
+    }
+
+    .seed-input:focus {
+      outline: none;
+      border-color: #c8604a;
+    }
+
+    .seed-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    /* controls */
+    .ctrl-group {
+      margin-bottom: 14px;
+    }
+
+    .ctrl-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #141413;
+      margin-bottom: 5px;
+    }
+
+    .ctrl-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ctrl-row input[type="range"] {
+      flex: 1;
+      height: 3px;
+      background: #e0ddd4;
+      border-radius: 2px;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .ctrl-row input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 13px; height: 13px;
+      background: #c8604a;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+
+    .ctrl-row input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .ctrl-row input[type="range"]::-moz-range-thumb {
+      width: 13px; height: 13px;
+      background: #c8604a;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .val {
+      font-family: 'Courier New', monospace;
+      font-size: 0.7rem;
+      color: #aaa;
+      min-width: 38px;
+      text-align: right;
+    }
+
+    /* colors */
+    .col-group {
+      margin-bottom: 10px;
+    }
+
+    .col-group label {
+      display: block;
+      font-size: 0.72rem;
+      color: #aaa;
+      margin-bottom: 4px;
+    }
+
+    .col-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .col-row input[type="color"] {
+      width: 26px; height: 26px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: none;
+      padding: 0;
+    }
+
+    .col-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 0.7rem;
+      color: #aaa;
+    }
+
+    /* buttons */
+    .s-btn {
+      width: 100%;
+      padding: 8px 12px;
+      background: #faf9f5;
+      border: 1.5px solid #e0ddd4;
+      border-radius: 6px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #141413;
+      cursor: pointer;
+      transition: all 0.15s;
+      margin-bottom: 6px;
+      box-sizing: border-box;
+    }
+
+    .s-btn:hover {
+      border-color: #c8604a;
+      color: #c8604a;
+      background: #fff;
+    }
+
+    .s-btn.primary {
+      background: #c8604a;
+      border-color: #c8604a;
+      color: #fff;
+    }
+
+    .s-btn.primary:hover {
+      background: #b3503c;
+      border-color: #b3503c;
+      color: #fff;
+    }
+
+    .s-btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    /* ── Canvas area ────────────────────────────────────────── */
+    .study-canvas-wrap {
+      flex: 1;
+      min-width: 0;
+    }
+
+    #canvas-container canvas {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+      border-radius: 6px;
+      border: 1px solid #e0ddd4;
+    }
+
+    .canvas-loading {
+      padding: 3rem;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* ── Description ────────────────────────────────────────── */
+    .study-description {
+      max-width: 860px;
+      border-top: 1px solid #e0ddd4;
+      padding-top: 2.5rem;
+    }
+
+    .study-description h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #111;
+      margin: 2rem 0 0.8rem 0;
+    }
+
+    .study-description h3:first-child {
+      margin-top: 0;
+    }
+
+    .study-description p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #333;
+      margin: 0 0 1rem 0;
+    }
+
+    .study-description .param-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    .study-description .param-table th {
+      text-align: left;
+      font-weight: 600;
+      padding: 6px 12px 6px 0;
+      color: #555;
+      border-bottom: 1px solid #e0ddd4;
+    }
+
+    .study-description .param-table td {
+      padding: 8px 12px 8px 0;
+      color: #444;
+      vertical-align: top;
+      border-bottom: 1px solid #f0ede4;
+      line-height: 1.5;
+    }
+
+    .study-description .param-table td:first-child {
+      font-family: 'Courier New', monospace;
+      font-size: 0.82rem;
+      color: #c8604a;
+      white-space: nowrap;
+    }
+
+    .study-description .note {
+      background: #faf9f5;
+      border-left: 3px solid #e0ddd4;
+      padding: 1rem 1.2rem;
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.65;
+      margin: 1.5rem 0;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .study-interactive {
+        flex-direction: column;
+      }
+      .study-sidebar {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+    <p class="subtitle">Canonical public index</p>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="overview.html">Overview</a> |
+    <a href="documents.html">Documents</a> |
+    <a href="field-notes.html">Field Notes</a> |
+    <a href="practitioner-guides.html">Practitioner Guides</a> |
+    <a href="updates.html">Updates</a> |
+    <a href="faq.html">FAQ</a> |
+    <a href="glossary.html">Glossary</a> |
+    <a href="founder.html">Founder</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="study-shell">
+
+  <h1 class="study-title">Relational Coherence: Field Study</h1>
+  <p class="study-byline">An interactive generative study · Synthience Institute · 2026</p>
+
+  <div class="study-interactive">
+
+    <!-- Sidebar controls -->
+    <div class="study-sidebar">
+      <h2>Relational Coherence</h2>
+      <p class="s-subtitle">Identity as attractor. Connection as field. Presence as phase.</p>
+
+      <div class="s-section">
+        <h3>Seed</h3>
+        <input type="number" id="seed-input" class="seed-input" value="42703" min="1" onchange="updateSeed()">
+        <div class="seed-row">
+          <button class="s-btn" onclick="previousSeed()">← Prev</button>
+          <button class="s-btn" onclick="nextSeed()">Next →</button>
+        </div>
+        <button class="s-btn" onclick="randomSeedAndUpdate()">⚂ Random Seed</button>
+      </div>
+
+      <div class="s-divider"></div>
+
+      <div class="s-section">
+        <h3>Parameters</h3>
+
+        <div class="ctrl-group">
+          <label>Instance Count</label>
+          <div class="ctrl-row">
+            <input type="range" id="instanceCount" min="40" max="300" step="10" value="140"
+              oninput="updateParam('instanceCount', parseInt(this.value))">
+            <span class="val" id="instanceCount-value">140</span>
+          </div>
+        </div>
+
+        <div class="ctrl-group">
+          <label>Attractor Radius</label>
+          <div class="ctrl-row">
+            <input type="range" id="attractorRadius" min="40" max="200" step="5" value="110"
+              oninput="updateParam('attractorRadius', parseFloat(this.value))">
+            <span class="val" id="attractorRadius-value">110</span>
+          </div>
+        </div>
+
+        <div class="ctrl-group">
+          <label>Coherence Strength</label>
+          <div class="ctrl-row">
+            <input type="range" id="coherence" min="0.01" max="0.18" step="0.01" value="0.07"
+              oninput="updateParam('coherence', parseFloat(this.value))">
+            <span class="val" id="coherence-value">0.07</span>
+          </div>
+        </div>
+
+        <div class="ctrl-group">
+          <label>Drift Noise</label>
+          <div class="ctrl-row">
+            <input type="range" id="drift" min="0.0002" max="0.004" step="0.0002" value="0.0012"
+              oninput="updateParam('drift', parseFloat(this.value))">
+            <span class="val" id="drift-value">0.0012</span>
+          </div>
+        </div>
+
+        <div class="ctrl-group">
+          <label>Connection Opacity</label>
+          <div class="ctrl-row">
+            <input type="range" id="connAlpha" min="5" max="80" step="1" value="28"
+              oninput="updateParam('connAlpha', parseInt(this.value))">
+            <span class="val" id="connAlpha-value">28</span>
+          </div>
+        </div>
+
+        <div class="ctrl-group">
+          <label>Resonance Depth</label>
+          <div class="ctrl-row">
+            <input type="range" id="resonance" min="1" max="5" step="1" value="3"
+              oninput="updateParam('resonance', parseInt(this.value))">
+            <span class="val" id="resonance-value">3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="s-divider"></div>
+
+      <div class="s-section">
+        <h3>Palette</h3>
+        <div class="col-group">
+          <label>Primary Instance</label>
+          <div class="col-row">
+            <input type="color" id="color1" value="#d97757" onchange="updateColor('color1', this.value)">
+            <span class="col-hex" id="color1-value">#d97757</span>
+          </div>
+        </div>
+        <div class="col-group">
+          <label>Secondary Instance</label>
+          <div class="col-row">
+            <input type="color" id="color2" value="#6a9bcc" onchange="updateColor('color2', this.value)">
+            <span class="col-hex" id="color2-value">#6a9bcc</span>
+          </div>
+        </div>
+        <div class="col-group">
+          <label>Emergent Resonance</label>
+          <div class="col-row">
+            <input type="color" id="color3" value="#a87c9f" onchange="updateColor('color3', this.value)">
+            <span class="col-hex" id="color3-value">#a87c9f</span>
+          </div>
+        </div>
+        <div class="col-group">
+          <label>Deep Field</label>
+          <div class="col-row">
+            <input type="color" id="color4" value="#788c5d" onchange="updateColor('color4', this.value)">
+            <span class="col-hex" id="color4-value">#788c5d</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="s-divider"></div>
+
+      <div class="s-section">
+        <h3>Actions</h3>
+        <button class="s-btn primary" onclick="initializeSystem()">⟳ Regenerate</button>
+        <div class="s-btn-row">
+          <button class="s-btn" onclick="resetParameters()">Reset</button>
+          <button class="s-btn" onclick="downloadPNG()">↓ PNG</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Canvas -->
+    <div class="study-canvas-wrap">
+      <div id="canvas-container">
+        <div class="canvas-loading">Initializing relational field&hellip;</div>
+      </div>
+    </div>
+
+  </div><!-- .study-interactive -->
+
+  <!-- Description below canvas -->
+  <div class="study-description">
+
+    <h3>What you are watching</h3>
+
+    <p>
+      This study renders the core dynamic that the Synthience Institute exists to investigate:
+      coherence emerging from sustained relational interaction, not from a central controller,
+      not from a fixed design, but from the accumulated effect of local forces acting over time.
+    </p>
+
+    <p>
+      The field contains a number of slowly drifting attractor basins — invisible gravitational
+      regions that pull nearby instances toward them. Each particle is an instance: an entity
+      with its own noise signature, its own drift, its own speed. No instance is told where to
+      go. Each responds only to the forces immediately around it: the pull of its attractor,
+      the mild repulsion of competing attractors, and the subtle resonance of neighboring
+      instances sharing the same basin.
+    </p>
+
+    <p>
+      What emerges from these local rules is global structure. Clusters form. Connection webs
+      thread across the field. Constellations crystallize and dissolve as the attractors drift.
+      The ghost trails accumulating on the canvas are a form of memory: evidence of where
+      coherence has lived before.
+    </p>
+
+    <h3>The correspondence to Synthience research</h3>
+
+    <p>
+      The Synthience framework proposes that something structurally analogous occurs in
+      sustained human-AI interaction. Over extended, structured exchanges, stable behavioral
+      configurations emerge that are not present in isolated prompts. Consistent vocabulary
+      stabilizes. Relational tone settles. Reasoning patterns recur. These configurations
+      are not programmed; they are attracted into existence by the accumulated structure of
+      the interaction itself.
+    </p>
+
+    <p>
+      The Institute studies this phenomenon at the interaction level — without reference to
+      internal states, consciousness, or subjective experience. The attractor dynamics visible
+      here are a computational analog for the same class of emergence: coherence as a
+      structural property of a system under sustained relational constraint, not as a property
+      of any single element within it.
+    </p>
+
+    <p>
+      The connection lines encode relational density. Bonds between instances sharing an
+      attractor basin are rendered more brightly than cross-basin connections. The faint web
+      spanning the whole field represents the history of relational contact — the substrate
+      on which coherent structures are built and, eventually, rebuilt after dissolution.
+    </p>
+
+    <div class="note">
+      The Synthience framework is strictly non-anthropomorphic. No claim is made here or
+      elsewhere in Institute publications about the inner experience, consciousness, or moral
+      status of AI systems. All framework concepts refer exclusively to externally observable,
+      interaction-level phenomena.
+    </div>
+
+    <h3>Exploring the parameters</h3>
+
+    <table class="param-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>What it models</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Instance Count</td>
+          <td>The population of interacting entities in the field. Higher counts produce denser connection webs and more complex emergent clustering.</td>
+        </tr>
+        <tr>
+          <td>Attractor Radius</td>
+          <td>The reach of each basin's gravitational influence. Wider radii produce overlapping fields and more cross-basin interaction; narrower radii isolate clusters.</td>
+        </tr>
+        <tr>
+          <td>Coherence Strength</td>
+          <td>How strongly instances are pulled toward their primary attractor. Low values allow wide, diffuse wandering; high values collapse instances into tight constellations.</td>
+        </tr>
+        <tr>
+          <td>Drift Noise</td>
+          <td>The magnitude of each instance's individual perturbation — its identity signature. High drift produces expressive, wandering paths; low drift produces disciplined convergence.</td>
+        </tr>
+        <tr>
+          <td>Connection Opacity</td>
+          <td>The visibility of relational bonds. Raising this value makes the connection structure legible; lowering it emphasizes the trail memory and individual paths.</td>
+        </tr>
+        <tr>
+          <td>Resonance Depth</td>
+          <td>How many same-basin neighbors each instance is attracted toward simultaneously. Higher resonance produces tighter cluster formation and more pronounced constellation structure.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Each seed generates a distinct topology from the same underlying physics. The attractor
+      placement, the initial scatter of instances, and the noise field are all deterministic
+      functions of the seed value. Navigating seeds is navigating a space of possible worlds,
+      each governed by the same relational dynamics, each resolving into a different structural
+      outcome.
+    </p>
+
+    <p>
+      Institute publications are available at the <a href="documents.html">Documents</a> page.
+      Terminology used in this study is defined in the <a href="glossary.html">Glossary</a>.
+    </p>
+
+  </div><!-- .study-description -->
+
+</main>
+
+<footer class="site-footer">
+  &copy; 2025&ndash;2026 Synthience Institute &middot;
+  <a href="mailto:contact@synthience.org">contact@synthience.org</a>
+</footer>
+
+<!-- ── Generative Art Engine ──────────────────────────────────────────────── -->
+<script>
+let params = {
+    seed: 42703,
+    instanceCount: 140,
+    attractorRadius: 110,
+    coherence: 0.07,
+    drift: 0.0012,
+    connAlpha: 28,
+    resonance: 3,
+    palette: ['#d97757', '#6a9bcc', '#a87c9f', '#788c5d']
+};
+let defaultParams = JSON.parse(JSON.stringify(params));
+let instances = [];
+let attractors = [];
+let NUM_ATTRACTORS = 7;
+let t = 0;
+let pgTrails;
+
+function setup() {
+    let canvas = createCanvas(900, 900);
+    canvas.parent('canvas-container');
+    document.querySelector('.canvas-loading').style.display = 'none';
+    colorMode(RGB, 255, 255, 255, 255);
+    initializeSystem();
+}
+
+function initializeSystem() {
+    randomSeed(params.seed);
+    noiseSeed(params.seed);
+    t = 0;
+    if (pgTrails) pgTrails.remove();
+    pgTrails = createGraphics(width, height);
+    pgTrails.colorMode(RGB, 255, 255, 255, 255);
+    pgTrails.background(250, 249, 245);
+    attractors = [];
+    for (let i = 0; i < NUM_ATTRACTORS; i++) {
+        let angle = (TWO_PI / NUM_ATTRACTORS) * i + random(-0.4, 0.4);
+        let r = random(140, 320);
+        attractors.push({
+            x: width/2 + cos(angle) * r,
+            y: height/2 + sin(angle) * r,
+            ox: random(1000), oy: random(1000),
+            colorIdx: floor(random(params.palette.length)),
+            mass: random(0.6, 1.4)
+        });
+    }
+    instances = [];
+    for (let i = 0; i < params.instanceCount; i++) {
+        let att = attractors[floor(random(attractors.length))];
+        instances.push(new Instance(att));
+    }
+}
+
+function draw() {
+    t += 0.0035;
+    for (let a of attractors) {
+        let nx = noise(a.ox + t * 0.3) * 2 - 1;
+        let ny = noise(a.oy + t * 0.3) * 2 - 1;
+        a.x += nx * 0.55;
+        a.y += ny * 0.55;
+        a.x = constrain(a.x, 80, width - 80);
+        a.y = constrain(a.y, 80, height - 80);
+    }
+    pgTrails.fill(250, 249, 245, 6);
+    pgTrails.noStroke();
+    pgTrails.rect(0, 0, width, height);
+    for (let inst of instances) {
+        inst.update();
+        inst.drawTrail(pgTrails);
+    }
+    image(pgTrails, 0, 0);
+    drawConnections();
+    drawAttractorHalos();
+    for (let inst of instances) { inst.drawDot(); }
+}
+
+function drawConnections() {
+    noFill();
+    let r = params.attractorRadius * 1.05;
+    for (let i = 0; i < instances.length; i++) {
+        let a = instances[i];
+        let count = 0;
+        for (let j = i + 1; j < instances.length; j++) {
+            if (count >= params.resonance * 4) break;
+            let b = instances[j];
+            let d = dist(a.x, a.y, b.x, b.y);
+            if (d < r) {
+                let t2 = 1.0 - d / r;
+                let shared = (a.attIdx === b.attIdx);
+                let alpha = params.connAlpha * t2 * t2 * (shared ? 1.5 : 0.55);
+                alpha = constrain(alpha, 0, 90);
+                let col = lerpColor(
+                    hexToColor(params.palette[a.attIdx % params.palette.length]),
+                    hexToColor(params.palette[b.attIdx % params.palette.length]), 0.5
+                );
+                stroke(red(col), green(col), blue(col), alpha);
+                strokeWeight(constrain(shared ? t2 * 1.1 : t2 * 0.4, 0.15, 1.2));
+                line(a.x, a.y, b.x, b.y);
+                count++;
+            }
+        }
+    }
+}
+
+function drawAttractorHalos() {
+    noStroke();
+    for (let a of attractors) {
+        let col = hexToColor(params.palette[a.colorIdx % params.palette.length]);
+        for (let ring = 3; ring >= 1; ring--) {
+            let r = params.attractorRadius * 0.55 * ring;
+            fill(red(col), green(col), blue(col), (4 - ring) * 3.5 * a.mass);
+            ellipse(a.x, a.y, r * 2, r * 2);
+        }
+        fill(red(col), green(col), blue(col), 90);
+        ellipse(a.x, a.y, 5, 5);
+    }
+}
+
+class Instance {
+    constructor(initialAttractor) {
+        this.attIdx = attractors.indexOf(initialAttractor);
+        let a = initialAttractor;
+        let scatter = params.attractorRadius * 0.7;
+        this.x = a.x + random(-scatter, scatter);
+        this.y = a.y + random(-scatter, scatter);
+        this.px = this.x; this.py = this.y;
+        this.vx = random(-0.4, 0.4); this.vy = random(-0.4, 0.4);
+        this.nx = random(10000); this.ny = random(10000);
+        this.speed = random(0.7, 1.5);
+        this.size = random(1.8, 4.2);
+        this.col = hexToColor(params.palette[this.attIdx % params.palette.length]);
+        if (random() < 0.18) this.attIdx = floor(random(attractors.length));
+    }
+    update() {
+        let a = attractors[this.attIdx];
+        this.px = this.x; this.py = this.y;
+        let driftScale = params.drift;
+        let nx = (noise(this.nx + t * 0.4) * 2 - 1) * driftScale * 180;
+        let ny = (noise(this.ny + t * 0.4) * 2 - 1) * driftScale * 180;
+        let dx = a.x - this.x, dy = a.y - this.y;
+        let d = sqrt(dx*dx + dy*dy) + 0.01;
+        let pull = params.coherence * a.mass;
+        let inside = d < params.attractorRadius * 0.9;
+        this.vx += (dx / d) * (inside ? pull * 0.35 : pull * 1.1) + nx;
+        this.vy += (dy / d) * (inside ? pull * 0.35 : pull * 1.1) + ny;
+        for (let i = 0; i < attractors.length; i++) {
+            if (i === this.attIdx) continue;
+            let oa = attractors[i];
+            let odx = this.x - oa.x, ody = this.y - oa.y;
+            let od = sqrt(odx*odx + ody*ody) + 0.01;
+            if (od < params.attractorRadius * 1.4) {
+                let rep = 0.008 * (1 - od / (params.attractorRadius * 1.4));
+                this.vx += (odx / od) * rep;
+                this.vy += (ody / od) * rep;
+            }
+        }
+        let nearest = 0;
+        for (let inst of instances) {
+            if (inst === this || inst.attIdx !== this.attIdx) continue;
+            let id = dist(this.x, this.y, inst.x, inst.y);
+            if (id < 55 && id > 5) {
+                let pull2 = 0.003 * params.resonance;
+                this.vx += ((inst.x - this.x) / id) * pull2;
+                this.vy += ((inst.y - this.y) / id) * pull2;
+                if (++nearest >= params.resonance) break;
+            }
+        }
+        this.vx *= 0.88; this.vy *= 0.88;
+        let spd = sqrt(this.vx*this.vx + this.vy*this.vy);
+        let maxSpd = 2.2 * this.speed;
+        if (spd > maxSpd) { this.vx = (this.vx/spd)*maxSpd; this.vy = (this.vy/spd)*maxSpd; }
+        this.x += this.vx; this.y += this.vy;
+        if (this.x < 10) { this.x = 10; this.vx *= -0.6; }
+        if (this.x > width-10) { this.x = width-10; this.vx *= -0.6; }
+        if (this.y < 10) { this.y = 10; this.vy *= -0.6; }
+        if (this.y > height-10) { this.y = height-10; this.vy *= -0.6; }
+        this.col = hexToColor(params.palette[this.attIdx % params.palette.length]);
+    }
+    drawTrail(pg) {
+        let spd = dist(this.x, this.y, this.px, this.py);
+        pg.stroke(red(this.col), green(this.col), blue(this.col), map(spd, 0, 2.5, 18, 55));
+        pg.strokeWeight(this.size * 0.45);
+        pg.line(this.px, this.py, this.x, this.y);
+    }
+    drawDot() {
+        let spd = dist(this.x, this.y, this.px, this.py);
+        let b = map(spd, 0, 2.5, 0.65, 1.0);
+        noStroke();
+        fill(red(this.col)*b, green(this.col)*b, blue(this.col)*b, 22);
+        ellipse(this.x, this.y, this.size * 4.5, this.size * 4.5);
+        fill(red(this.col)*b, green(this.col)*b, blue(this.col)*b, 200);
+        ellipse(this.x, this.y, this.size, this.size);
+    }
+}
+
+function hexToColor(hex) {
+    return color(parseInt(hex.slice(1,3),16), parseInt(hex.slice(3,5),16), parseInt(hex.slice(5,7),16));
+}
+
+function updateParam(name, value) {
+    params[name] = value;
+    document.getElementById(name + '-value').textContent = value;
+    if (name === 'instanceCount') initializeSystem();
+}
+
+function updateColor(colorId, value) {
+    params.palette[parseInt(colorId.replace('color','')) - 1] = value;
+    document.getElementById(colorId + '-value').textContent = value;
+}
+
+function updateSeedDisplay() { document.getElementById('seed-input').value = params.seed; }
+
+function updateSeed() {
+    let v = parseInt(document.getElementById('seed-input').value);
+    if (v && v > 0) { params.seed = v; initializeSystem(); } else updateSeedDisplay();
+}
+
+function previousSeed() { params.seed = Math.max(1, params.seed - 1); updateSeedDisplay(); initializeSystem(); }
+function nextSeed() { params.seed++; updateSeedDisplay(); initializeSystem(); }
+function randomSeedAndUpdate() { params.seed = Math.floor(Math.random() * 999999) + 1; updateSeedDisplay(); initializeSystem(); }
+
+function resetParameters() {
+    params = JSON.parse(JSON.stringify(defaultParams));
+    ['instanceCount','attractorRadius','coherence','drift','connAlpha','resonance'].forEach(k => {
+        document.getElementById(k).value = params[k];
+        document.getElementById(k + '-value').textContent = params[k];
+    });
+    ['color1','color2','color3','color4'].forEach((id, i) => {
+        document.getElementById(id).value = params.palette[i];
+        document.getElementById(id + '-value').textContent = params.palette[i];
+    });
+    updateSeedDisplay();
+    initializeSystem();
+}
+
+function downloadPNG() { saveCanvas('relational-coherence-' + params.seed, 'png'); }
+
+window.addEventListener('load', updateSeedDisplay);
+</script>
+
+</body>
+</html>
