@@ -55,7 +55,13 @@
     .param-table td { padding: 8px 12px 8px 0; color: #444; vertical-align: top; border-bottom: 1px solid #f0ede4; line-height: 1.5; }
     .param-table td:first-child { font-family: 'Courier New', monospace; font-size: 0.82rem; color: #c8604a; white-space: nowrap; }
     .study-note { background: #faf9f5; border-left: 3px solid #e0ddd4; padding: 1rem 1.2rem; font-size: 0.88rem; color: #666; line-height: 1.65; margin: 1.5rem 0; }
-    @media (max-width: 900px) { .study-interactive { flex-direction: column; } .study-sidebar { width: 100%; box-sizing: border-box; } }
+    /* Keep sidebar+canvas always side by side, canvas scales */
+    .study-interactive { flex-wrap: nowrap !important; }
+    .study-canvas-wrap { min-width: 0; flex: 1; overflow: hidden; }
+    @media (max-width: 600px) {
+      .study-sidebar { width: 200px; padding: 10px; flex-shrink: 0; }
+      .study-shell { padding: 0.8rem; gap: 12px; }
+    }
   </style>
 </head>
 <body>
@@ -68,7 +74,6 @@
   </div>
   <div class="header-text">
     <h1>Synthience Institute</h1>
-    <p class="subtitle">Canonical public index</p>
   </div>
   <nav class="main-nav">
     <a href="index.html">Home</a> |
