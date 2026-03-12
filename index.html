@@ -358,15 +358,27 @@ function draw() {
         var a = attractors[i];
         a.x += (noise(a.ox + t * 0.3) * 2 - 1) * 0.55;
         a.y += (noise(a.oy + t * 0.3) * 2 - 1) * 0.55;
-        // Constant gentle pull toward center -- always active, scales with distance
+        // Very gentle constant pull toward center -- just enough to counter long-term drift
         var cx = width / 2, cy = height / 2;
-        var dx = cx - a.x, dy = cy - a.y;
-        var dist = sqrt(dx*dx + dy*dy);
-        // Gentle always-on force: 0.003% of distance per frame, stronger past 35% radius
-        var maxDist = min(width, height) * 0.35;
-        var strength = dist > maxDist ? 0.006 : 0.0015;
-        a.x += dx * strength;
-        a.y += dy * strength;
+        var adx = cx - a.x, ady = cy - a.y;
+        var adist = sqrt(adx*adx + ady*ady);
+        var maxDist = min(width, height) * 0.38;
+        var strength = adist > maxDist ? 0.003 : 0.0006;
+        a.x += adx * strength;
+        a.y += ady * strength;
+        // Attractor-to-attractor repulsion to keep them separated
+        for (var j = 0; j < attractors.length; j++) {
+            if (j === i) continue;
+            var b = attractors[j];
+            var rdx = a.x - b.x, rdy = a.y - b.y;
+            var rdist = sqrt(rdx*rdx + rdy*rdy) + 0.01;
+            var minSep = params.attractorRadius * 1.8;
+            if (rdist < minSep) {
+                var repForce = 0.12 * (1 - rdist / minSep);
+                a.x += (rdx / rdist) * repForce;
+                a.y += (rdy / rdist) * repForce;
+            }
+        }
         a.x = constrain(a.x, 80, width - 80);
         a.y = constrain(a.y, 80, height - 80);
     }
