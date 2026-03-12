@@ -5,7 +5,6 @@
 
   var nav = [
     ['index.html', 'Home'],
-    ['field-study.html', 'Live Field'],
     ['about.html', 'About'],
     ['overview.html', 'Overview'],
     ['documents.html', 'Documents'],
