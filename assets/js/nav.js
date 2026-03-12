@@ -5,15 +5,15 @@
 
   var nav = [
     ['index.html', 'Home'],
-    ['about.html', 'About'],
-    ['overview.html', 'Overview'],
-    ['documents.html', 'Documents'],
     ['field-notes.html', 'Field Notes'],
+    ['documents.html', 'Documents'],
+    ['about.html', 'About'],
+    ['founder.html', 'Founder'],
     ['practitioner-guides.html', 'Practitioner Guides'],
+    ['overview.html', 'Overview'],
     ['updates.html', 'Updates'],
     ['faq.html', 'FAQ'],
     ['glossary.html', 'Glossary'],
-    ['founder.html', 'Founder'],
     ['contact.html', 'Contact']
   ];
 
