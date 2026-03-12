@@ -128,6 +128,7 @@ Each published document is assigned a persistent DOI upon release. Documents mar
   <span style="font-size:0.85rem;color:#666;">View:</span>
   <button id="btn-type" class="active" onclick="showView('type')">By Type</button>
   <button id="btn-alpha" onclick="showView('alpha')">Alphabetical</button>
+  <button id="btn-pub" onclick="showView('pub')">Published</button>
 </div>
 
 <!-- BY TYPE VIEW -->
@@ -375,6 +376,12 @@ Each published document is assigned a persistent DOI upon release. Documents mar
 <ul id="alpha-ul"></ul>
 </div>
 
+<!-- PUBLISHED VIEW -->
+<div id="pub-list">
+<hr class="section-rule">
+<ul id="pub-ul"></ul>
+</div>
+
 </main>
 
 <footer class="site-footer">
@@ -436,17 +443,35 @@ allDocs.forEach(function(doc) {
   ul.appendChild(li);
 });
 
+var pubUl = document.getElementById('pub-ul');
+allDocs.filter(function(doc) { return doc.status === 'published'; }).forEach(function(doc) {
+  var li = document.createElement('li');
+  var linksHtml = '';
+  if (doc.read) linksHtml += ' <a href="' + doc.read + '">Read</a>';
+  if (doc.read && doc.link) linksHtml += ' &middot;';
+  if (doc.link) linksHtml += ' <a href="' + doc.link + '" target="_blank" rel="noopener">Zenodo</a>';
+  li.innerHTML = '<div class="doc-title">' + doc.id + ' &mdash; ' + doc.title + '</div>'
+    + '<div class="doc-desc">' + doc.desc + '</div>'
+    + '<div class="doc-links"><span class="status-published">Published</span>' + linksHtml + '</div>';
+  pubUl.appendChild(li);
+});
+
 function showView(view) {
+  document.getElementById('type-view').style.display = 'none';
+  document.getElementById('alpha-list').style.display = 'none';
+  document.getElementById('pub-list').style.display = 'none';
+  document.getElementById('btn-type').classList.remove('active');
+  document.getElementById('btn-alpha').classList.remove('active');
+  document.getElementById('btn-pub').classList.remove('active');
   if (view === 'alpha') {
-    document.getElementById('type-view').style.display = 'none';
     document.getElementById('alpha-list').style.display = 'block';
-    document.getElementById('btn-type').classList.remove('active');
     document.getElementById('btn-alpha').classList.add('active');
+  } else if (view === 'pub') {
+    document.getElementById('pub-list').style.display = 'block';
+    document.getElementById('btn-pub').classList.add('active');
   } else {
     document.getElementById('type-view').style.display = 'block';
-    document.getElementById('alpha-list').style.display = 'none';
     document.getElementById('btn-type').classList.add('active');
-    document.getElementById('btn-alpha').classList.remove('active');
   }
 }
 </script>
