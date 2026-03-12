@@ -99,15 +99,9 @@
 
 <main class="study-shell">
 
-  <div style="margin-bottom: 0.5rem;">
-    <div style="display:flex; align-items:baseline; gap:1rem; flex-wrap:wrap; padding-bottom:1.4rem; margin-bottom:0.6rem; border-bottom:1px solid #e0dcd4;">
-      <span style="font-size:1.05rem; font-weight:600; color:#111; font-family:'Lora',serif; white-space:nowrap;">Synthience Institute</span>
-      <span style="font-size:0.88rem; color:#555; line-height:1.5;">We study what emerges from sustained relational interaction -- between humans and AI, AI and AI, and institutions built around both.</span>
-    </div>
-    <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
-      <span style="font-size:1rem; font-weight:500; color:#333; font-family:'Lora',serif;">Relational Coherence: Field Study</span>
-      <span style="font-size:0.82rem; color:#aaa; font-style:italic;">Controls and description below</span>
-    </div>
+  <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-bottom: 0.5rem;">
+    <span style="font-size:1rem; font-weight:500; color:#333; font-family:'Lora',serif;">Relational Coherence: Field Study</span>
+    <span style="font-size:0.82rem; color:#aaa; font-style:italic;">Controls and description below</span>
   </div>
 
   <div class="study-canvas-wrap">
@@ -363,6 +357,15 @@ function draw() {
         var a = attractors[i];
         a.x += (noise(a.ox + t * 0.3) * 2 - 1) * 0.55;
         a.y += (noise(a.oy + t * 0.3) * 2 - 1) * 0.55;
+        // Gentle centering force to prevent corner crowding over time
+        var cx = width / 2, cy = height / 2;
+        var dx = cx - a.x, dy = cy - a.y;
+        var dist = sqrt(dx*dx + dy*dy);
+        var maxDist = min(width, height) * 0.42;
+        if (dist > maxDist) {
+            a.x += dx * 0.004;
+            a.y += dy * 0.004;
+        }
         a.x = constrain(a.x, 80, width - 80);
         a.y = constrain(a.y, 80, height - 80);
     }
