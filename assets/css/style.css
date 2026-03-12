@@ -52,6 +52,18 @@ nav {
   margin-bottom: 2rem;
 }
 
+.site-tagline {
+  display: block;
+  font-size: 0.88rem;
+  color: #555;
+  margin: 0.15rem 0 0.6rem 0;
+  line-height: 1.5;
+}
+
+.nav-links {
+  display: block;
+}
+
 nav a {
   margin-right: 0.5rem;
   text-decoration: none;
