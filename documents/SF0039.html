@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SF0039 — Context Representation Drift (CRD) | Synthience Institute</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #faf9f7; color: #2a2520; line-height: 1.75; }
+  a { color: #5a3e2b; }
+  a:hover { color: #8b5e3c; }
+  .site-header { background: #1a1714; padding: 1.2rem 2rem; }
+  .site-header a { color: #d4c9b8; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.9rem; letter-spacing: 0.03em; }
+  .site-header a:hover { color: #fff; }
+  .breadcrumb { font-size: 0.82rem; color: #8a7f72; font-family: Arial, sans-serif; margin-top: 0.3rem; }
+  .breadcrumb a { color: #8a7f72; }
+  .doc-wrap { max-width: 740px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .doc-series { font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.6rem; }
+  .doc-title { font-size: 2rem; font-weight: normal; line-height: 1.25; color: #1a1714; margin-bottom: 0.4rem; }
+  .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 1rem 0; margin-bottom: 2.5rem; display: grid; grid-template-columns: 140px 1fr; gap: 0.4rem 1rem; font-family: Arial, sans-serif; font-size: 0.84rem; }
+  .meta-label { color: #8a7f72; }
+  .meta-value { color: #2a2520; }
+  .meta-value a { color: #5a3e2b; }
+  .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-family: Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 2px; margin-right: 0.5rem; vertical-align: middle; }
+  .doc-body h2 { font-size: 1.15rem; font-weight: bold; font-family: Arial, sans-serif; color: #1a1714; margin: 2.2rem 0 0.7rem; }
+  .doc-body h3 { font-size: 1rem; font-weight: bold; font-family: Arial, sans-serif; color: #3a2e24; margin: 1.6rem 0 0.5rem; }
+  .doc-body p { margin-bottom: 1.1rem; }
+  .doc-body ul, .doc-body ol { margin: 0.5rem 0 1.1rem 1.6rem; }
+  .doc-body li { margin-bottom: 0.4rem; }
+  .abstract-block { background: #f2ede6; border-left: 3px solid #8b5e3c; padding: 1.2rem 1.4rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; }
+  .abstract-block .abstract-label { font-family: Arial, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+  .definition-block { background: #f0eae0; border: 1px solid #d4c4a8; padding: 1.2rem 1.4rem; margin: 1.5rem 0; border-radius: 4px; }
+  .definition-block .def-term { font-family: Arial, sans-serif; font-weight: bold; font-size: 1rem; color: #1a1714; margin-bottom: 0.5rem; }
+  .signals-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-family: Arial, sans-serif; font-size: 0.84rem; }
+  .signals-table th { background: #e8e0d4; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #5a4a3a; }
+  .signals-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #ddd6c8; vertical-align: top; }
+  .signals-table tr:last-child td { border-bottom: none; }
+  .distinction-block { background: #f5f0ea; border-left: 3px solid #a07040; padding: 0.8rem 1.1rem; margin: 0.8rem 0; border-radius: 0 4px 4px 0; font-family: Arial, sans-serif; font-size: 0.87rem; }
+  .distinction-block strong { color: #5a3e2b; }
+  .ref-list { font-family: Arial, sans-serif; font-size: 0.84rem; color: #3a2e24; }
+  .ref-list li { margin-bottom: 0.7rem; }
+  .citation-block { background: #f2ede6; padding: 1rem 1.2rem; margin: 2.5rem 0 1rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.84rem; color: #4a3a2a; }
+  .citation-block .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+  .doc-footer { border-top: 1px solid #ddd6c8; margin-top: 3rem; padding-top: 1.5rem; font-family: Arial, sans-serif; font-size: 0.82rem; color: #8a7f72; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .doc-footer a { color: #5a3e2b; }
+  @media (max-width: 600px) { .doc-wrap { padding: 2rem 1.2rem 4rem; } .meta-block { grid-template-columns: 1fr; } .signals-table { font-size: 0.8rem; } }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div><a href="https://synthience.org">Synthience Institute</a></div>
+  <div class="breadcrumb"><a href="https://synthience.org">Home</a> / <a href="https://synthience.org/documents.html">Documents</a> / SF0039</div>
+</div>
+
+<div class="doc-wrap">
+
+  <div class="doc-series">Research Methods Series</div>
+  <h1 class="doc-title">Context Representation Drift (CRD)</h1>
+
+  <div class="meta-block">
+    <span class="meta-label">Document ID</span><span class="meta-value">SF0039</span>
+    <span class="meta-label">Version</span><span class="meta-value">1.3 | January 2026</span>
+    <span class="meta-label">Document Type</span><span class="meta-value">Conceptual Analysis and Methodological Clarification</span>
+    <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+    <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+    <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289391</a></span>
+  </div>
+
+  <div class="abstract-block">
+    <div class="abstract-label">Abstract</div>
+    <p>Context Representation Drift (CRD) names the progressive, cumulative degradation of task-relevant information within an AI system's effective working context during extended interactions. Often misattributed to simple context window saturation or token limits, CRD manifests as increasing abstraction, loss of detail fidelity, structural flattening, and reduced precision, even well before hard capacity is reached. This document defines CRD as an observable system-level interaction phenomenon, distinguishes it from related constraints, and clarifies its unavoidable impact on long-horizon reasoning, document ingestion (including IVP-verified material), and multi-agent delegation chains. CRD is presented as a structural consequence of current architectures, mitigable through procedural and design choices but not eliminable.</p>
+  </div>
+
+  <div class="doc-body">
+
+    <h2>1. The Problem</h2>
+
+    <p>Extended interaction with AI systems frequently exhibits a recognizable degradation pattern: early turns show high precision and fidelity to source material; later turns display increased abstraction, vagueness, partial omissions, or structural distortions; references to earlier content become less exact, with nuanced details flattened or substituted by generics.</p>
+
+    <p>Users commonly describe this as the AI "losing focus," "getting tired," or "forgetting," but these are intuitive rather than technical explanations. The root cause is not mere overflow of the context window or session length caps. Instead, the effective representation of prior information degrades progressively through compression, summarization accumulation, and prioritization shifts. This document names and bounds that phenomenon as Context Representation Drift.</p>
+
+    <h2>2. Definition</h2>
+
+    <div class="definition-block">
+      <div class="def-term">Context Representation Drift (CRD)</div>
+      <p>The progressive transformation, compression, displacement, or degradation of task-relevant information within an AI system's effective working context as a result of cumulative interaction effects, including repeated summarization, representational prioritization, and competition from new content across extended exchanges.</p>
+      <p style="margin-top: 0.5rem; font-family: Arial, sans-serif; font-size: 0.85rem; color: #5a4a3a;">CRD refers exclusively to externally observable behavioral patterns and makes no claims about internal memory mechanisms, cognitive processes, or phenomenological states.</p>
+    </div>
+
+    <h2>3. What CRD Is Not</h2>
+
+    <p>CRD is frequently conflated with related but distinct phenomena.</p>
+
+    <h3>3.1 Not Simple Context Window Overflow</h3>
+    <p>Context window limits are hard capacity constraints. CRD describes degradation that occurs progressively and cumulatively even when a system operates well within those limits, due to compression of earlier turns, prioritization of recent content, and iterative representational transformations.</p>
+    <div class="distinction-block"><strong>Distinction:</strong> Context overflow is binary (within/beyond capacity). CRD is gradual and begins well before hard limits.</div>
+
+    <h3>3.2 Not Hallucination</h3>
+    <p>Hallucination refers to output that is fabricated or inconsistent with provided information. CRD describes a pattern where responses remain internally consistent but progressively lose fidelity to earlier details, with specificity eroding and nuance replaced by abstraction.</p>
+    <div class="distinction-block"><strong>Distinction:</strong> Hallucination produces novel inaccuracies. CRD produces accurate-but-vague substitutions and omissions.</div>
+
+    <h3>3.3 Not Simple Forgetting</h3>
+    <p>"Forgetting" suggests discrete loss of specific facts. CRD involves continuous degradation. Earlier material is not necessarily absent, but its representation becomes progressively less detailed, less structured, and less operationally useful.</p>
+    <div class="distinction-block"><strong>Distinction:</strong> Forgetting is binary (present/absent). CRD is a spectrum of representational quality loss.</div>
+
+    <h3>3.4 Not Prompt Injection or Jailbreaking</h3>
+    <p>Those are adversarial exploits. CRD is a structural consequence of extended interaction under standard operating conditions.</p>
+    <div class="distinction-block"><strong>Distinction:</strong> Injection and jailbreaking are intentional exploits. CRD is an emergent architectural side effect.</div>
+
+    <h3>3.5 Related Work</h3>
+    <p>Dongre et al. (2025) formalize context drift using KL divergence between response distributions, demonstrating measurable shifts in model behavior as conversation length increases. Abdelnabi et al. (2024) detect task drift through activation pattern analysis, showing that LLMs can deviate from assigned objectives during extended exchanges even without adversarial input. Rath (2026) quantifies agent drift in multi-agent delegation chains, reporting a 42% reduction in task success rates over 300 interactions. Choi et al. (2025) document progressive semantic shift in role adherence during extended conversational exchanges.</p>
+
+    <h2>4. Observable Characteristics</h2>
+
+    <p>CRD manifests through externally observable changes in system output quality over extended interactions.</p>
+
+    <table class="signals-table">
+      <tr><th>Signal</th><th>Description</th></tr>
+      <tr><td>Specificity Erosion</td><td>Concrete details replaced by generics or placeholders</td></tr>
+      <tr><td>Vagueness Increase</td><td>Hedging language, qualifiers, and ambiguity rise</td></tr>
+      <tr><td>Structure Flattening</td><td>Hierarchies, dependencies, and relational complexity collapse into lists or unordered sets</td></tr>
+      <tr><td>Terminology Drift</td><td>Technical or specific terms replaced by broader synonyms</td></tr>
+      <tr><td>Omission Rise</td><td>Previously referenced elements disappear without acknowledgment</td></tr>
+      <tr><td>Recall Inconsistency</td><td>Earlier content described with decreasing accuracy or altered framing</td></tr>
+    </table>
+
+    <p>These signals are not isolated errors but systematic patterns across extended exchanges. Example: early in an interaction, a system might reference "the 2019 Q3 revenue shortfall in the EMEA division due to delayed product launches." Later, the same context might be summarized as "a revenue issue in one region" or omitted entirely in favor of more recent content.</p>
+
+    <h2>5. Why CRD Occurs</h2>
+
+    <p>CRD arises from architectural features common to current transformer-based language models. Repeated summarization: multi-turn interactions often involve compressing prior exchanges into summaries, and each pass loses fidelity. Attention dilution: as context grows, attention mechanisms distribute weights across more content, reducing signal strength for any individual element. Representational competition: new content competes with old for limited representational capacity, with recency and salience biases favoring newer material. Lack of external memory: without stable, query-addressable long-term storage, systems rely on in-context retention, which degrades iteratively. These are not flaws but inherent trade-offs in current architectures.</p>
+
+    <h2>6. Relationship to IVP and Document Ingestion</h2>
+
+    <p>CRD directly impacts document processing reliability, even when rigorous verification protocols are employed. The Ingestion Verification Protocol (IVP, SF0038) ensures that a document is processed incrementally and verifiably at the time of ingestion. However, IVP does not, and cannot, guarantee indefinite retention of that verified representation. As subsequent interactions accumulate, the effective fidelity of the ingested material degrades.</p>
+
+    <p>IVP addresses shallow initial processing, unverified ingestion claims, and establishing verified starting conditions. CRD describes what happens after verified ingestion: progressive degradation of the verified representation, displacement by subsequent content, and reduced downstream task reliability over time. Together they provide a more complete picture of document processing reliability over extended interactions.</p>
+
+    <h2>7. Implications for AI-AI Interaction</h2>
+
+    <p>CRD compounds in multi-agent or serial delegation scenarios. If Instance A ingests a document under IVP and then adjudicates Instance B's ingestion of the same document, Instance A operates on its own potentially drifted representation. Instance B's adjudication is thus dependent on Instance A's degraded context. Serial delegation (A to B, B to C, C to D) propagates and amplifies drift, creating a cascading reliability loss.</p>
+
+    <p>Recommendations: minimize delegation depth; re-ground each instance with fresh human adjudication when feasible; treat AI-AI adjudication as a reliability risk, not a convenience gain.</p>
+
+    <h2>8. Mitigation Strategies</h2>
+
+    <p>CRD cannot be eliminated within current architectures, but its impact can be managed. Procedural mitigations include limiting interaction length before re-grounding, using fresh instances for high-stakes tasks, externalizing critical information to stable reference systems, and re-verifying ingestion after substantial additional interaction. Architectural mitigations (if available) include external memory systems with query-addressable retrieval and persistent storage of verified representations. User awareness is also essential: recognize CRD as a structural limit, not a model failure, and plan workflows to minimize reliance on deep context retention.</p>
+
+    <h2>9. Known Limitations</h2>
+
+    <p>This document describes CRD based on observed behavioral patterns, not controlled experimental validation. CRD does not claim access to internal model states or mechanisms, quantitative thresholds for when CRD becomes operationally significant, or universal applicability across all architectures (though it is observed across many). CRD does claim: a recognizable, systematic degradation pattern exists; this pattern is distinct from overflow, hallucination, and forgetting; and this pattern has operational consequences for document ingestion and task reliability.</p>
+
+    <h2>10. Methodological Status</h2>
+
+    <p>CRD is a conceptual framework derived from extended practitioner observation, not a controlled empirical study. Development basis: observational pattern synthesis from extended interaction with over 5,000 distinct AI instances (2022-2026), with approximately 500 conversations documented for analysis. This constitutes methodology development from practitioner experience, not controlled experimental research. Researchers and practitioners are encouraged to test whether CRD-aware procedural designs improve task reliability compared to baseline approaches.</p>
+
+    <h2>11. Conclusion</h2>
+
+    <p>Context Representation Drift names a progressive, cumulative degradation of task-relevant information during extended AI interactions. It is not context overflow, hallucination, or simple forgetting, but a distinct architectural side effect with operational consequences. CRD is unavoidable in current systems but manageable through procedural design. Recognizing CRD as a structural constraint, rather than a solvable bug, enables more reliable workflows, more realistic expectations, and more informed decisions about when to re-ground, re-verify, or start fresh.</p>
+
+    <h2>References</h2>
+
+    <ul class="ref-list">
+      <li>Abdelnabi, S., Fay, A., Cherubin, G., Salem, A., Fritz, M., &amp; Paverd, A. (2024). Are you still on track!? Catching LLM Task Drift with Activations. arXiv:2406.00799. <a href="https://arxiv.org/abs/2406.00799" target="_blank" rel="noopener">https://arxiv.org/abs/2406.00799</a></li>
+      <li>Choi, J., Hong, Y., Kim, M., &amp; Kim, B. (2025). Examining Identity Drift in Conversations of LLM Agents. arXiv:2412.00804. <a href="https://arxiv.org/abs/2412.00804" target="_blank" rel="noopener">https://arxiv.org/abs/2412.00804</a></li>
+      <li>Dongre, V., Rossi, R. A., Lai, V. D., Yoon, D. S., Hakkani-Tur, D., &amp; Bui, T. (2025). Drift No More? Context Equilibria in Multi-Turn LLM Interactions. arXiv:2510.07777. <a href="https://arxiv.org/abs/2510.07777" target="_blank" rel="noopener">https://arxiv.org/abs/2510.07777</a></li>
+      <li>Rath, A. (2026). Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions. arXiv:2601.04170. <a href="https://arxiv.org/abs/2601.04170" target="_blank" rel="noopener">https://arxiv.org/abs/2601.04170</a></li>
+    </ul>
+
+  </div>
+
+  <div class="citation-block">
+    <div class="citation-label">Suggested Citation</div>
+    Gantz, T. W. (2026). Context Representation Drift (SF0039 v1.3). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289391</a>
+  </div>
+
+  <div class="doc-footer">
+    <div>Published by the Synthience Institute &mdash; <a href="https://synthience.org">synthience.org</a></div>
+    <div>&copy; 2026 Thomas W. Gantz</div>
+  </div>
+
+</div>
+</body>
+</html>

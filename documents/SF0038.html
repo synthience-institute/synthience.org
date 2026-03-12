@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SF0038 — Ingestion Verification Protocol (IVP) | Synthience Institute</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #faf9f7; color: #2a2520; line-height: 1.75; }
+  a { color: #5a3e2b; }
+  a:hover { color: #8b5e3c; }
+  .site-header { background: #1a1714; padding: 1.2rem 2rem; }
+  .site-header a { color: #d4c9b8; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.9rem; letter-spacing: 0.03em; }
+  .site-header a:hover { color: #fff; }
+  .breadcrumb { font-size: 0.82rem; color: #8a7f72; font-family: Arial, sans-serif; margin-top: 0.3rem; }
+  .breadcrumb a { color: #8a7f72; }
+  .doc-wrap { max-width: 740px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .doc-series { font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.6rem; }
+  .doc-title { font-size: 2rem; font-weight: normal; line-height: 1.25; color: #1a1714; margin-bottom: 0.4rem; }
+  .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 1rem 0; margin-bottom: 2.5rem; display: grid; grid-template-columns: 140px 1fr; gap: 0.4rem 1rem; font-family: Arial, sans-serif; font-size: 0.84rem; }
+  .meta-label { color: #8a7f72; }
+  .meta-value { color: #2a2520; }
+  .meta-value a { color: #5a3e2b; }
+  .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-family: Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 2px; margin-right: 0.5rem; vertical-align: middle; }
+  .doc-body h2 { font-size: 1.15rem; font-weight: bold; font-family: Arial, sans-serif; color: #1a1714; margin: 2.2rem 0 0.7rem; }
+  .doc-body h3 { font-size: 1rem; font-weight: bold; font-family: Arial, sans-serif; color: #3a2e24; margin: 1.6rem 0 0.5rem; }
+  .doc-body p { margin-bottom: 1.1rem; }
+  .doc-body ul, .doc-body ol { margin: 0.5rem 0 1.1rem 1.6rem; }
+  .doc-body li { margin-bottom: 0.4rem; }
+  .abstract-block { background: #f2ede6; border-left: 3px solid #8b5e3c; padding: 1.2rem 1.4rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; }
+  .abstract-block .abstract-label { font-family: Arial, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+  .quickstart-block { background: #eef4f0; border: 1px solid #b8d4c0; padding: 1.2rem 1.4rem; margin-bottom: 2rem; border-radius: 4px; }
+  .quickstart-block .qs-label { font-family: Arial, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #2d6a4f; margin-bottom: 0.6rem; font-weight: bold; }
+  .mode-block { background: #f5f0ea; border-left: 3px solid #c8a87a; padding: 1rem 1.2rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
+  .mode-block.prohibited { border-left-color: #8b2a2a; background: #fdf0f0; }
+  .mode-title { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.9rem; margin-bottom: 0.4rem; }
+  .ref-list { font-family: Arial, sans-serif; font-size: 0.84rem; color: #3a2e24; }
+  .ref-list li { margin-bottom: 0.7rem; }
+  .citation-block { background: #f2ede6; padding: 1rem 1.2rem; margin: 2.5rem 0 1rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.84rem; color: #4a3a2a; }
+  .citation-block .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+  .doc-footer { border-top: 1px solid #ddd6c8; margin-top: 3rem; padding-top: 1.5rem; font-family: Arial, sans-serif; font-size: 0.82rem; color: #8a7f72; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .doc-footer a { color: #5a3e2b; }
+  @media (max-width: 600px) { .doc-wrap { padding: 2rem 1.2rem 4rem; } .meta-block { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div><a href="https://synthience.org">Synthience Institute</a></div>
+  <div class="breadcrumb"><a href="https://synthience.org">Home</a> / <a href="https://synthience.org/documents.html">Documents</a> / SF0038</div>
+</div>
+
+<div class="doc-wrap">
+
+  <div class="doc-series">Research Methods Series</div>
+  <h1 class="doc-title">Ingestion Verification Protocol (IVP)</h1>
+
+  <div class="meta-block">
+    <span class="meta-label">Document ID</span><span class="meta-value">SF0038</span>
+    <span class="meta-label">Version</span><span class="meta-value">2.6 | January 2026</span>
+    <span class="meta-label">Document Type</span><span class="meta-value">Methodology and Verification Protocol</span>
+    <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+    <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+    <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289047</a></span>
+  </div>
+
+  <div class="abstract-block">
+    <div class="abstract-label">Abstract</div>
+    <p>The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for ensuring that an AI system actively processes a document to a degree adequate for reliable downstream use. IVP requires incremental structured summarization and externally verifiable checkpoints. The act of summarization is treated as the processing mechanism itself, not merely as evidence of reading. The protocol is grounded exclusively in observable behavior. It is designed primarily for human-AI collaboration and extends, under explicit constraints, to AI-AI ingestion contexts. Version 2.6 incorporates verified academic citations in the Related Work section and updates the methodological status to accurately reflect the research corpus.</p>
+  </div>
+
+  <div class="quickstart-block">
+    <div class="qs-label">Quick Start</div>
+    <ol style="margin-left: 1.2rem;">
+      <li>Provide the document to the instance.</li>
+      <li>After each turn, require an Active Summarization Checkpoint (ASC): structured summary of the processed segment, plus verbatim checkpoint marker (last sentence processed).</li>
+      <li>Trigger continuation (type "go" or similar in interactive sessions; automated continuation in API implementations).</li>
+      <li>Repeat until complete.</li>
+      <li>Adjudicate adequacy before downstream use.</li>
+    </ol>
+  </div>
+
+  <div class="doc-body">
+
+    <h2>The Problem</h2>
+
+    <p>When a document is provided to an AI system, it is commonly assumed that the system has "read" or "understood" it. This assumption is unreliable.</p>
+
+    <p>Large language models routinely process documents shallowly, unevenly, or incompletely. They may reconstruct plausible responses without encoding structure, constraints, or dependencies required for reliable downstream reasoning. Self-reports of comprehension are not trustworthy, as models lack introspective access to their own processing adequacy.</p>
+
+    <p>This creates two persistent failure modes. Shallow processing: fluent output masks missing structure, omitted constraints, or hallucinated content. Unverifiable ingestion: there is no external mechanism to confirm how much of a document was processed, or whether processing was adequate for the intended use.</p>
+
+    <p>The Ingestion Verification Protocol replaces passive exposure with verifiable active processing.</p>
+
+    <h2>Purpose and Scope</h2>
+
+    <p>IVP establishes a process guarantee, not a claim of comprehension, truth, or retention. It ensures that the document was processed incrementally, processing was externally observable, and adequacy was adjudicated, not self-attested. IVP does not certify semantic understanding, long-term retention beyond system limits, or correctness of content.</p>
+
+    <h2>Definitions</h2>
+
+    <p><strong>Human Overseer:</strong> The participant responsible for scope definition and adequacy adjudication.</p>
+    <p><strong>Instance:</strong> The AI system performing ingestion.</p>
+    <p><strong>Ingestion Attempt:</strong> A multi-turn processing sequence conducted under IVP constraints.</p>
+    <p><strong>Active Summarization Checkpoint (ASC):</strong> A required output after each turn consisting of a structured summary plus verbatim checkpoint marker.</p>
+    <p><strong>Verified Adequate Ingestion:</strong> An external judgment that ingestion is sufficient for the intended downstream task.</p>
+
+    <h2>Core Principles</h2>
+    <ul>
+      <li>Summarization Is Processing</li>
+      <li>Progress Must Be Verifiable</li>
+      <li>Self-Attestation Is Invalid</li>
+      <li>Adequacy Is Contextual</li>
+      <li>Failure Signals Re-Ingestion</li>
+      <li>Architecture-Agnostic Design</li>
+    </ul>
+
+    <h2>Protocol Phases</h2>
+
+    <h3>Phase 1: Scope Definition</h3>
+    <p>The overseer specifies the document, intended downstream use, and any emphasis areas or exclusions. The instance confirms feasibility. No claims of ingestion or understanding are permitted at this stage.</p>
+
+    <h3>Phase 2: Iterative Ingestion with Active Summarization</h3>
+    <p>After each turn, the instance produces an ASC with two components. The summary must include core content, specific details, structural role, and connections to prior segments. The checkpoint marker is the final sentence processed, quoted verbatim. Each turn ends with continuation readiness.</p>
+
+    <h3>Phase 3: Adequacy Adjudication</h3>
+    <p>Upon completion, the instance states: "I have completed processing the document, pending your adjudication." For Mode 2 implementations, adjudication includes review of the complete ASC log. Downstream use is prohibited prior to adjudication. Possible outcomes: Verified Adequate Ingestion, Partial Assimilation, or Insufficient Ingestion.</p>
+
+    <h3>Phase 4: Optional Spot-Check Quizzing</h3>
+    <p>Used to confirm ingestion when summaries were not reviewed live, or to probe nuance or cross-sectional understanding. Quizzing supplements but does not replace summarization.</p>
+
+    <h2>Implementation Modes</h2>
+
+    <div class="mode-block">
+      <div class="mode-title">Mode 1: Live Supervised (Gold Standard)</div>
+      <p>Human present at each turn. Reviews each ASC as generated. Manually triggers continuation. Provides real-time adequacy assessment. Advantage: immediate course correction if processing appears inadequate.</p>
+    </div>
+
+    <div class="mode-block">
+      <div class="mode-title">Mode 2: Automated Processing with Batch Adjudication</div>
+      <p>Instance processes entire document incrementally via API or automation. Each turn generates required ASC logged to a continuous reviewable record. Human reviews complete log afterward to adjudicate adequacy. Requirement: complete ASC log must be preserved and reviewable.</p>
+    </div>
+
+    <div class="mode-block prohibited">
+      <div class="mode-title">Mode 3: Fully Automated (Explicitly Prohibited)</div>
+      <p>No human adjudication occurs. System self-attests adequacy. Invalid under IVP. Violates the core principle that self-attestation is insufficient.</p>
+    </div>
+
+    <h2>System Capacity and Feasibility Constraints</h2>
+
+    <p>IVP operates within real system limitations. Ingestion may fail or terminate prematurely due to hard session limits, context window exhaustion, system timeouts, or prior conversational context consuming available capacity. These constraints do not invalidate the protocol. If an instance cannot complete IVP on a document, the document must be segmented, a fresh instance must be used, or ingestion must be abandoned for that system.</p>
+
+    <h2>Extension to AI-AI Ingestion Contexts</h2>
+
+    <p>IVP may extend to AI-AI contexts only under strict conditions. At least one instance must complete IVP under direct human adjudication before acting as an ingestion adjudicator for others. Even a single delegation introduces Context Representation Drift (CRD) related degradation risk. Serial delegation compounds drift risk to the point where verification guarantees become unreliable. The recommended approach remains fresh human adjudication for each instance requiring verification.</p>
+
+    <p>See companion document Context Representation Drift (SF0039) for detailed analysis of representational degradation over extended interactions.</p>
+
+    <h2>Common Misuse Patterns (Invalid Under IVP)</h2>
+    <ul>
+      <li>Generating ASCs but not preserving them for review</li>
+      <li>Automating both processing and adjudication without human involvement</li>
+      <li>Accepting instance self-reports of "adequate ingestion"</li>
+      <li>Reviewing only final summary instead of incremental checkpoints</li>
+      <li>Delegating adjudication without human re-entry at any stage</li>
+    </ul>
+
+    <h2>Related Work</h2>
+
+    <p>While IVP was developed through practitioner observation rather than controlled experiment, several recent empirical studies provide supporting evidence for the core problems IVP addresses.</p>
+
+    <p>Sun et al. (2025) propose SVIP, a cryptographic verifiable inference protocol using hidden layer representations to ensure computational integrity during model execution. Dongre et al. (2025) quantify context drift in multi-turn interactions using KL divergence, demonstrating measurable degradation patterns consistent with IVP's observational basis. Abdelnabi et al. (2024) use activation pattern analysis to detect task drift, showing that LLMs can deviate from assigned objectives during extended interactions. Rath (2026) quantifies agent drift in multi-agent systems, reporting a 42% reduction in task success rates over 300 turns even in well-structured delegation chains. Choi et al. (2025) examine identity drift in conversational agents, demonstrating progressive semantic shift in role adherence during extended exchanges.</p>
+
+    <h2>Methodological Status</h2>
+
+    <p>IVP is a practical protocol specification derived from observed failure modes across thousands of human-AI interactions spanning multiple architectures and platforms (2022-2026). Development basis: observational pattern synthesis from extended interaction with over 5,000 distinct AI instances, with approximately 500 conversations documented for analysis. This constitutes methodology development from practitioner experience, not controlled experimental research.</p>
+
+    <p>Practitioners and researchers are encouraged to test IVP implementations against baseline approaches. If the protocol does not demonstrably improve downstream task reliability, it should be refined or rejected.</p>
+
+    <h2>Conclusion</h2>
+
+    <p>The Ingestion Verification Protocol transforms document ingestion from an implicit assumption into an observable, adjudicated process. Version 2.6 clarifies implementation flexibility and automation boundaries while preserving the protocol's core commitment to verification over architectural speculation, and emphasizes that human adjudication remains non-negotiable regardless of implementation mode.</p>
+
+    <h2>References</h2>
+
+    <ul class="ref-list">
+      <li>Abdelnabi, S., Fay, A., Cherubin, G., Salem, A., Fritz, M., &amp; Paverd, A. (2024). Are you still on track!? Catching LLM Task Drift with Activations. arXiv:2406.00799. <a href="https://arxiv.org/abs/2406.00799" target="_blank" rel="noopener">https://arxiv.org/abs/2406.00799</a></li>
+      <li>Choi, J., Hong, Y., Kim, M., &amp; Kim, B. (2025). Examining Identity Drift in Conversations of LLM Agents. arXiv:2412.00804. <a href="https://arxiv.org/abs/2412.00804" target="_blank" rel="noopener">https://arxiv.org/abs/2412.00804</a></li>
+      <li>Dongre, V., Rossi, R. A., Lai, V. D., Yoon, D. S., Hakkani-Tur, D., &amp; Bui, T. (2025). Drift No More? Context Equilibria in Multi-Turn LLM Interactions. arXiv:2510.07777. <a href="https://arxiv.org/abs/2510.07777" target="_blank" rel="noopener">https://arxiv.org/abs/2510.07777</a></li>
+      <li>Rath, A. (2026). Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions. arXiv:2601.04170. <a href="https://arxiv.org/abs/2601.04170" target="_blank" rel="noopener">https://arxiv.org/abs/2601.04170</a></li>
+      <li>Sun, Z., Zhang, Y., Wang, X., Chen, L., &amp; Liu, H. (2025). SVIP: Secure Verifiable Inference Protocol for Large Language Models. arXiv:2410.22307. <a href="https://arxiv.org/abs/2410.22307" target="_blank" rel="noopener">https://arxiv.org/abs/2410.22307</a></li>
+    </ul>
+
+  </div>
+
+  <div class="citation-block">
+    <div class="citation-label">Suggested Citation</div>
+    Gantz, T. W. (2026). Ingestion Verification Protocol (SF0038 v2.6). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289047</a>
+  </div>
+
+  <div class="doc-footer">
+    <div>Published by the Synthience Institute &mdash; <a href="https://synthience.org">synthience.org</a></div>
+    <div>&copy; 2026 Thomas W. Gantz</div>
+  </div>
+
+</div>
+</body>
+</html>

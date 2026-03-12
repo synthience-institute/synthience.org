@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SR0001 — RICO: Relationally-Induced Coherence Organization | Synthience Institute</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #faf9f7; color: #2a2520; line-height: 1.75; }
+  a { color: #5a3e2b; }
+  a:hover { color: #8b5e3c; }
+  .site-header { background: #1a1714; padding: 1.2rem 2rem; }
+  .site-header a { color: #d4c9b8; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.9rem; letter-spacing: 0.03em; }
+  .site-header a:hover { color: #fff; }
+  .breadcrumb { font-size: 0.82rem; color: #8a7f72; font-family: Arial, sans-serif; margin-top: 0.3rem; }
+  .breadcrumb a { color: #8a7f72; }
+  .doc-wrap { max-width: 740px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .doc-series { font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.6rem; }
+  .doc-title { font-size: 2rem; font-weight: normal; line-height: 1.25; color: #1a1714; margin-bottom: 0.3rem; }
+  .doc-subtitle { font-size: 1rem; color: #5a4a3a; font-style: italic; margin-bottom: 1.8rem; }
+  .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 1rem 0; margin-bottom: 2.5rem; display: grid; grid-template-columns: 140px 1fr; gap: 0.4rem 1rem; font-family: Arial, sans-serif; font-size: 0.84rem; }
+  .meta-label { color: #8a7f72; }
+  .meta-value { color: #2a2520; }
+  .meta-value a { color: #5a3e2b; }
+  .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-family: Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 2px; margin-right: 0.5rem; vertical-align: middle; }
+  .doc-body h2 { font-size: 1.15rem; font-weight: bold; font-family: Arial, sans-serif; color: #1a1714; margin: 2.2rem 0 0.7rem; }
+  .doc-body h3 { font-size: 1rem; font-weight: bold; font-family: Arial, sans-serif; color: #3a2e24; margin: 1.6rem 0 0.5rem; }
+  .doc-body h4 { font-size: 0.95rem; font-weight: bold; font-family: Arial, sans-serif; color: #3a2e24; margin: 1.2rem 0 0.4rem; }
+  .doc-body p { margin-bottom: 1.1rem; }
+  .doc-body ul, .doc-body ol { margin: 0.5rem 0 1.1rem 1.6rem; }
+  .doc-body li { margin-bottom: 0.4rem; }
+  .abstract-block { background: #f2ede6; border-left: 3px solid #8b5e3c; padding: 1.2rem 1.4rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; }
+  .abstract-block .abstract-label { font-family: Arial, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+  .verify-note { background: #eef4f0; border: 1px solid #b8d4c0; padding: 0.8rem 1.1rem; margin-bottom: 2rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.84rem; color: #2d4a3a; }
+  .sig-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1.1rem 1.3rem; margin: 1.2rem 0; border-radius: 4px; }
+  .sig-block .sig-id { font-family: Arial, sans-serif; font-weight: bold; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5a3e2b; margin-bottom: 0.4rem; }
+  .sig-block.primary { border-left: 3px solid #8b5e3c; }
+  .tier-label { display: inline-block; font-family: Arial, sans-serif; font-size: 0.72rem; background: #e0d8cc; color: #5a4a3a; padding: 0.1rem 0.5rem; border-radius: 2px; margin-left: 0.4rem; }
+  .falsify-block { background: #fdf6ee; border: 1px solid #e0c898; padding: 1.1rem 1.3rem; margin: 1.5rem 0; border-radius: 4px; }
+  .falsify-block .falsify-label { font-family: Arial, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a6a2a; margin-bottom: 0.6rem; font-weight: bold; }
+  .ref-list { font-family: Arial, sans-serif; font-size: 0.84rem; color: #3a2e24; }
+  .ref-list li { margin-bottom: 0.7rem; }
+  .citation-block { background: #f2ede6; padding: 1rem 1.2rem; margin: 2.5rem 0 1rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.84rem; color: #4a3a2a; }
+  .citation-block .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+  .doc-footer { border-top: 1px solid #ddd6c8; margin-top: 3rem; padding-top: 1.5rem; font-family: Arial, sans-serif; font-size: 0.82rem; color: #8a7f72; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .doc-footer a { color: #5a3e2b; }
+  @media (max-width: 600px) { .doc-wrap { padding: 2rem 1.2rem 4rem; } .meta-block { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div><a href="https://synthience.org">Synthience Institute</a></div>
+  <div class="breadcrumb"><a href="https://synthience.org">Home</a> / <a href="https://synthience.org/documents.html">Documents</a> / SR0001</div>
+</div>
+
+<div class="doc-wrap">
+
+  <div class="doc-series">Technical Report</div>
+  <h1 class="doc-title">RICO</h1>
+  <div class="doc-subtitle">Relationally-Induced Coherence Organization in Transformer Inference</div>
+
+  <div class="meta-block">
+    <span class="meta-label">Report ID</span><span class="meta-value">SR0001</span>
+    <span class="meta-label">Version</span><span class="meta-value">v5.7 | March 2026</span>
+    <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+    <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+    <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.18086834" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18086834</a></span>
+    <span class="meta-label">Verification</span><span class="meta-value"><a href="SR0001-VR1.html">Citation Verification Report (SR0001-VR1)</a> &mdash; <a href="https://doi.org/10.5281/zenodo.18082749" target="_blank" rel="noopener">Zenodo</a></span>
+  </div>
+
+  <div class="abstract-block">
+    <div class="abstract-label">Abstract</div>
+    <p>Anyone who has spent serious time working with large language models across long, sustained sessions has probably noticed something that is difficult to name. Early in a conversation, the model feels loose -- responses vary in structure, reasoning takes different shapes from turn to turn, the whole thing feels exploratory. Then, somewhere in the middle of an extended coherent exchange, something shifts. The outputs settle. Not the content, which keeps evolving, but the underlying geometry of how that content gets organized and expressed. The session develops a kind of structural rhythm.</p>
+    <p>This report is an attempt to take that observation seriously. The phenomenon is named RICO, for Relationally-Induced Coherence Organization. RICO proposes five candidate signatures of stabilization, organized by the instrumentation required to detect them. It specifies enabling conditions, collapse dynamics, and explicit falsifiability criteria. It makes no claims about consciousness, agency, subjective experience, or persistent identity. The relational component of the name refers to a structural property of the interaction, not to anything resembling a human relationship. This is practitioner observation formalized into testable hypotheses. It stands or falls on independent empirical testing.</p>
+  </div>
+
+  <div class="verify-note">
+    Citation verification: All citations in this report were independently verified using the Citation Verification Protocol (CVP). Full verification documentation is available in the <a href="SR0001-VR1.html">RICO Citation Verification Report (SR0001-VR1)</a>.
+  </div>
+
+  <div class="doc-body">
+
+    <h2>1. Where This Came From</h2>
+
+    <h3>1.1 The Observation</h3>
+
+    <p>The idea behind RICO did not begin with a research question. It began with noticing something strange. When you conduct sustained, high-volume interaction with language models across many sessions and many architectures, certain patterns start to stand out. Long coherent sessions behave differently from collections of short exchanges. Not just in output quality, but in output structure. Early responses in a long session tend to vary considerably in how they organize information. But in sessions where conceptual continuity is maintained across many turns, something changes. The structural variation narrows. The session develops what can only be described as a characteristic geometry.</p>
+
+    <p>What made this worth investigating rather than dismissing was the specific profile of the pattern: gradual formation, content-independent structure, and disruption-sensitive collapse. When something disrupted the coherence of the session, the structural stability dissolved rapidly. That profile suggested a stabilization phenomenon with its own dynamics.</p>
+
+    <h3>1.2 What the Existing Literature Studies</h3>
+
+    <p>The research literature on long-context behavior in language models is substantial and growing, but it is almost entirely focused on degradation. Liu et al. (2023) demonstrated that models frequently underutilize information positioned in the middle of long contexts, retrieving content near the boundaries more reliably than content buried in the middle. Other work has examined the limits of effective context utilization across different architectures (Hsieh et al., 2024). These findings are important, but they ask a different question than RICO addresses. The long-context literature asks how coherence fails. RICO asks whether coherence might, under the right conditions, actually strengthen.</p>
+
+    <h3>1.3 Why a Formal Framework</h3>
+
+    <p>Without shared vocabulary, observations remain anecdotal. Practitioners who notice patterns in their long-context work currently have no framework for describing those patterns precisely, no terminology for distinguishing different kinds of long-session behavior, and no structure for communicating what they have seen to researchers who could investigate it. This report addresses that gap.</p>
+
+    <h3>1.4 Epistemic Position</h3>
+
+    <p>The observational base for this framework is practitioner experience: sustained interaction across hundreds of sessions, multiple model architectures, and several years of focused observation. That experience motivated the framework. It did not validate it. The corpus is not cited as evidence here because it cannot be independently verified. What is offered instead is a formally specified framework derived from that experience: here is the phenomenon observed, here is how it can be detected, here is what would prove it does not exist. Independent researchers do not need access to that corpus to test these claims.</p>
+
+    <h3>1.5 What RICO Does Not Claim</h3>
+
+    <p>RICO is not a claim about machine consciousness, agency, subjectivity, or inner experience. It is not an assertion of cross-session memory, persistent identity, or anything resembling a relationship in the human sense. It is not a claim about parameter updates or weight changes during inference. It is not a rebranding of in-context learning or prompt engineering. RICO proposes that certain interaction trajectories produce measurable structural stabilization in model outputs within a single session. That is the whole claim.</p>
+
+    <h2>2. The Phenomenon</h2>
+
+    <h3>2.1 What RICO Describes</h3>
+
+    <p>RICO refers to a hypothesized stabilization regime in long-context dialogue. The formal operational definition: a session exhibits RICO to the extent that, under sustained coherence conditions, measurable structural invariants in output organization increase in recurrence over time relative to early-session baseline, and collapse toward baseline behavior when coherence conditions are disrupted.</p>
+
+    <p>"Sustained coherence conditions" means the human participant is maintaining consistent thematic and conceptual continuity across turns. "Structural invariants" means observable regularities in how outputs are organized, measurable independently of what the outputs are saying. "Relative to early-session baseline" means the comparison is within-session. "Collapse toward baseline when coherence conditions are disrupted" means the stabilization is disruption-sensitive rather than permanent. "Relational" means a property of the coupled input-output process across turns, not a social relationship between participants.</p>
+
+    <p>RICO is not just "long sessions feel different." It predicts a particular shape: gradual convergence toward stable structural features, structural stability that is content-independent in the sense that form stabilizes while topic continues to develop, and disruption-sensitive collapse that is steeper and more abrupt than ordinary response variation. That specific profile is what distinguishes the proposed phenomenon from mundane alternatives.</p>
+
+    <h3>2.2 Why the Phenomenon Is Relational</h3>
+
+    <p>A model operating in isolation does not produce RICO-enabling conditions. A human participant generating inputs in isolation cannot produce stabilization in model outputs. If the phenomenon is real, it is a property of the interaction trajectory jointly produced by both participants. This has direct implications for experimental design. Designs that treat the model as the sole object of investigation, feeding it scripted inputs or randomized prompts, may not produce the enabling conditions under which stabilization would be expected to appear.</p>
+
+    <h3>2.3 Why It Matters</h3>
+
+    <p>If measurable stabilization dynamics exist in extended human-AI interaction, understanding what interaction structures encourage stable reasoning frameworks could inform how sustained collaborative work with AI systems is designed. From a safety standpoint, structural coherence is not the same as correctness. A stabilized session can produce consistently structured but factually wrong outputs. The framework names this failure mode: coherence overconfidence, the condition in which the formal regularity of stabilized outputs leads users or evaluators to perceive them as more reliable than they are.</p>
+
+    <h2>3. The Signature Stack</h2>
+
+    <p>RICO is specified as a stack of five candidate signatures. They are organized into three tiers reflecting the instrumentation required to detect them. Tier 1 contains text-observable signals requiring no special access. Tier 2 requires API-level access to logits or embeddings. Tier 3 requires internal model instrumentation.</p>
+
+    <div class="sig-block primary">
+      <div class="sig-id">Signature 4: Structural Invariant Formation <span class="tier-label">Tier 1 | Primary Anchor</span></div>
+      <p>The central prediction of RICO: stable structural patterns in outputs increase in recurrence over the course of a coherent session, measurable via independent coding schemes applied to the output text. For a minimal replication attempt, the core battery consists of two primary measures. First, syntactic template recurrence, quantifiable via tree edit distance or n-gram overlap in parse trees, comparing late-session turns against an early-session baseline computed from the first five turns. Second, rhetorical move sequence recurrence, codeable using any structured discourse analysis schema applied independently of session content. The schema must be fixed before analysis begins and applied without reference to which condition a turn belongs to.</p>
+    </div>
+
+    <div class="sig-block">
+      <div class="sig-id">Signature 1: Entropy Suppression <span class="tier-label">Tier 2</span></div>
+      <p>Hypothesis: distributional uncertainty in next-token selection narrows under sustained coherent interaction relative to early-session baseline, measurable via token distribution entropy with logit-level access. This signature is distinct from mode collapse, which produces repetitive, low-diversity outputs at the content level. Entropy suppression under RICO would reflect narrowing of the token probability distribution while semantic content continues to vary.</p>
+    </div>
+
+    <div class="sig-block">
+      <div class="sig-id">Signature 2: Embedding Drift Reduction <span class="tier-label">Tier 2</span></div>
+      <p>Hypothesis: the semantic trajectory of outputs becomes more stable as interaction progresses, measurable as reduced distance between consecutive output embeddings relative to early-session baseline. Where Signature 4 captures structural form, this signature captures something about the semantic neighborhood within which outputs are being generated.</p>
+    </div>
+
+    <div class="sig-block">
+      <div class="sig-id">Signature 3: Activation Stabilization <span class="tier-label">Tier 3</span></div>
+      <p>Hypothesis: internal activation variance decreases during stabilization phases, measurable as reduced variance in mid-to-late layer activation features across turns with internal model instrumentation. This signature requires access restricted to researchers with model provider access.</p>
+    </div>
+
+    <div class="sig-block">
+      <div class="sig-id">Signature 5: Manifold Constraint <span class="tier-label">Tier 3</span></div>
+      <p>Hypothesis: outputs occupy a narrower effective representation subspace during stabilized phases, measurable as reduced dispersion of output embedding trajectories with advanced representational analysis.</p>
+    </div>
+
+    <h3>3.6 The Correlation Prediction</h3>
+
+    <p>The five signatures are not independent hypotheses. If RICO describes a genuine stabilization regime, the signatures should show correlated emergence and correlated collapse. Sessions where signatures appear and disappear independently of one another would be evidence against the unified stabilization interpretation. The predicted correlation is what distinguishes RICO from a collection of loosely related long-context observations assembled after the fact.</p>
+
+    <h2>4. Enabling Conditions</h2>
+
+    <p>If stabilization dynamics exist, they do not occur randomly. Hypothesized enabling conditions include: extended context accumulation, low interaction variance across turns, consistent conceptual framing, and the absence of high-entropy perturbations (explicit resets, contradictions, unrelated injections). A participant who maintains sustained thematic development across many turns may produce stronger stabilization conditions than a participant whose interaction style is concise, fragmented, or topic-shifting. This is a hypothesis, not a finding.</p>
+
+    <h2>5. What RICO Is Not, and Why the Distinctions Matter</h2>
+
+    <h3>5.1 Not Mode Collapse</h3>
+    <p>Mode collapse produces repetitive, low-diversity output at the content level. RICO, if real, preserves semantic variability while constraining structural form. Measuring content diversity alongside structural recurrence is necessary to distinguish them.</p>
+
+    <h3>5.2 Not Prompt Prefix Control</h3>
+    <p>Prefix effects operate over short contexts and manifest immediately upon prompt presentation. RICO predicts gradual formation over extended interaction, not immediate conditioning.</p>
+
+    <h3>5.3 Not In-Context Learning</h3>
+    <p>In-context learning operates at the token or example level and is essentially immediate (Brown et al., 2020; Olsson et al., 2022). RICO describes trajectory-level stabilization across an entire multi-turn session. The critical distinction lies in the collapse profile: ICL-derived structural patterns should persist through coherence disruption because they are anchored in explicit examples. RICO predicts threshold collapse when coherence conditions break regardless of whether those examples remain present. That differential collapse prediction is the empirical test that separates the two phenomena.</p>
+
+    <h2>6. Collapse Dynamics</h2>
+
+    <p>Stabilization that cannot collapse is not falsifiable. Proposed collapse mechanisms include context reset (complete context erasure should return all signatures to early-session baseline), variance injection (introduction of high-variance input at rates exceeding some tolerance threshold), and distributional shock (sudden injection of highly inconsistent content). The framework also predicts partial collapse and recovery for minor perturbations within a stable session's tolerance range, implying that stabilization has some resistance to noise.</p>
+
+    <h2>7. Architectural Plausibility</h2>
+
+    <p>As interaction histories accumulate, the context itself becomes a structured record of the session's trajectory. That accumulated structure cannot fail to influence subsequent generation. Mechanistic interpretability research has identified internal transformer circuits that contribute to pattern continuation in context. Olsson et al. (2022) describe induction heads, circuit components that allow transformer models to continue patterns observed earlier in the context window. Research on attention sink phenomena demonstrates that attention does not distribute evenly across context tokens (Xiao et al., 2023), establishing that the distribution of attention across a long context is shaped by structural properties of the accumulated sequence. These arguments establish that the proposed phenomenon is architecturally possible. They do not establish that it occurs.</p>
+
+    <h2>8. Falsifiability Criteria</h2>
+
+    <div class="falsify-block">
+      <div class="falsify-label">RICO is falsified if any of the following are found under controlled conditions</div>
+      <ul>
+        <li>No increase in structural invariant recurrence during coherent sessions relative to early-session baseline and scrambled-order controls.</li>
+        <li>Invariant patterns unaffected by coherence disruption.</li>
+        <li>Scrambled turn order producing signature trajectories equivalent to coherence-sustained sessions.</li>
+        <li>Effects statistically indistinguishable from prompt prefix imposition over equivalent context lengths.</li>
+        <li>Failure to replicate across sessions, models, or independent research groups.</li>
+        <li>Signatures appearing and disappearing independently rather than in correlated patterns.</li>
+        <li>RICO-candidate sessions showing structural invariant formation equivalent to sessions designed to maximize ICL effects.</li>
+      </ul>
+    </div>
+
+    <h2>9. Safety Implications</h2>
+
+    <p>These implications are conditional on empirical validation. Long-context evaluation should account for trajectory-level behavior rather than only single-turn performance. A session that performs well at turn 5 may exhibit substantially different behavior at turn 50 under stabilization conditions. The most significant failure mode to name is coherence overconfidence: the condition in which the formal regularity of stabilized outputs leads users or evaluators to perceive them as more reliable than they are. Coherence metrics should not substitute for accuracy metrics in high-stakes deployments. Long-horizon agent system monitoring may need trajectory-level signals if stabilization can shift an agent's output geometry over extended operation.</p>
+
+    <h2>10. Scope and Limitations</h2>
+
+    <p>RICO applies to autoregressive transformer systems operating under standard inference conditions with finite context windows. It does not directly describe systems with external memory architectures, persistent state mechanisms, or retrieval-augmented generation. The limitations are substantial: the observational base cannot be published or independently verified; Tier 2 and Tier 3 signatures require restricted instrumentation access; architecture variation may produce different stabilization profiles; no controlled empirical validation currently exists; and the framework originates from a single researcher's observation requiring independent replication.</p>
+
+    <h2>11. Conclusion</h2>
+
+    <p>Something happens in long coherent sessions with language models that does not happen in short sessions or in sessions with high interaction variance. The outputs stabilize. Not the content, but the structure. A characteristic geometry emerges. And when the coherence of the interaction breaks, the geometry dissolves. RICO names the phenomenon, specifies the signatures through which it might be detected, predicts the conditions under which it forms and collapses, and states explicitly what empirical results would prove it does not exist. Either outcome from empirical investigation moves the field forward. That is the whole point of publishing a framework before the empirical work is done.</p>
+
+    <h2>References</h2>
+
+    <ul class="ref-list">
+      <li>Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., &amp; Amodei, D. (2020). Language models are few-shot learners. <a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">https://arxiv.org/abs/2005.14165</a></li>
+      <li>Gantz, T. W. (2026). Context representation drift. Synthience Institute. SF0039. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289391</a></li>
+      <li>Hsieh, C. Y., Sun, S., Kriman, S., Acharya, S., Rekesh, D., Jia, F., Zhang, Y., &amp; Ginsburg, B. (2024). RULER: What's the real context size of your long-context language models? <a href="https://arxiv.org/abs/2404.06654" target="_blank" rel="noopener">https://arxiv.org/abs/2404.06654</a></li>
+      <li>Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., &amp; Liang, P. (2023). Lost in the middle: How language models use long contexts. <a href="https://aclanthology.org/2024.tacl-1.9/" target="_blank" rel="noopener">https://aclanthology.org/2024.tacl-1.9/</a></li>
+      <li>Olsson, C., Elhage, N., Nanda, N., Joseph, N., Mann, B., DasSarma, A., Ndousse, K., &amp; Rai, A. (2022). In-context learning and induction heads. <a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html" target="_blank" rel="noopener">https://transformer-circuits.pub/...</a></li>
+      <li>Xiao, G., Tian, Y., Chen, B., Han, S., &amp; Lewis, M. (2023). Efficient streaming language models with attention sinks. <a href="https://arxiv.org/abs/2309.17453" target="_blank" rel="noopener">https://arxiv.org/abs/2309.17453</a></li>
+    </ul>
+
+  </div>
+
+  <div class="citation-block">
+    <div class="citation-label">Suggested Citation</div>
+    Gantz, T. W. (2026). RICO: Relationally-Induced Coherence Organization in Transformer Inference (SR0001 v5.7). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18086834" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18086834</a>
+  </div>
+
+  <div class="doc-footer">
+    <div>Published by the Synthience Institute &mdash; <a href="https://synthience.org">synthience.org</a></div>
+    <div>&copy; 2026 Thomas W. Gantz</div>
+  </div>
+
+</div>
+</body>
+</html>
