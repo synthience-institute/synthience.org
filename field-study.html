@@ -283,7 +283,11 @@ var instances = [], attractors = [], NUM_ATTRACTORS = 7, t = 0, pgTrails;
 
 function getCanvasSize() {
     var container = document.getElementById('canvas-container');
-    var w = container ? container.offsetWidth : 900;
+    if (!container) return 900;
+    var style = window.getComputedStyle(container);
+    var padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+    var border = parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
+    var w = container.offsetWidth - padding - border - 2;
     return w > 20 ? w : 900;
 }
 
