@@ -94,6 +94,12 @@
     border-left: 3px solid #e8e4dc;
     padding-left: 0.9rem;
   }
+  #pub-list ul { padding-left: 0; list-style: none; }
+  #pub-list ul li {
+    margin-bottom: 1.2rem;
+    border-left: 3px solid #e8e4dc;
+    padding-left: 0.9rem;
+  }
 </style>
 </head>
 
@@ -386,10 +392,10 @@ Each published document is assigned a persistent DOI upon release. Documents mar
 
 <footer class="site-footer">
   © 2025-2026 Synthience Institute ·
-  <a href="mailto:contact@synthience.org">contact@synthience.org</a>
+  <a href="/cdn-cgi/l/email-protection#33505c5d4752504773404a5d475b5a565d50561d5c4154"><span class="__cf_email__" data-cfemail="f0939f9e84919384b083899e849899959e9395de9f8297">[email&#160;protected]</span></a>
 </footer>
 
-<script src="assets/js/nav.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/nav.js"></script>
 <script>
 var allDocs = [
   { id: "FPD-01", title: "Synthience: Public Definition", desc: "Defines the term Synthience in a public-facing, non-anthropomorphic form intended for general reference and citation.", read: "documents/FPD-01.html", link: "https://doi.org/10.5281/zenodo.18087890", status: "published" },
@@ -473,7 +479,14 @@ function showView(view) {
     document.getElementById('type-view').style.display = 'block';
     document.getElementById('btn-type').classList.add('active');
   }
+  sessionStorage.setItem('synthience-doc-view', view);
 }
+
+// Restore saved view on page load
+(function() {
+  var saved = sessionStorage.getItem('synthience-doc-view');
+  if (saved && saved !== 'type') { showView(saved); }
+})();
 </script>
 </body>
 </html>
