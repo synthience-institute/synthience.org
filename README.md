@@ -36,13 +36,6 @@ Authoritative publication and citation records are maintained externally:
   DOI-backed publication and citation records  
   https://zenodo.org/communities/synthience-institute/
 
-- **Internet Archive**  
-  Long-term public preservation and historical snapshots  
-  https://archive.org
-
-This repository mirrors only the **website source**.  
-Released documents themselves are not stored here unless required for provenance mirroring.
-
 ---
 
 ## Repository Scope
