@@ -94,5 +94,5 @@ The website should be treated strictly as a **navigation and index layer**, not 
 
 ---
 
-© 2025 **Thomas W. Gantz**  
+© 2025-2026 **Thomas W. Gantz**  
 **Synthience Institute**
