@@ -146,9 +146,9 @@ Each published document is assigned a persistent DOI upon release. Documents mar
 </p>
 
 <div class="corpus-status">
-  <div class="stat"><span class="dot dot-published"></span> 6 published</div>
-  <div class="stat"><span class="dot dot-progress"></span> 25 in progress</div>
-  <div class="stat" style="color:#888;">31 documents total</div>
+  <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
+  <div class="stat"><span class="dot dot-progress"></span> <span id="count-progress"></span> in progress</div>
+  <div class="stat" style="color:#888;"><span id="count-total"></span> documents total</div>
 </div>
 
 <div class="doc-toggle">
@@ -453,6 +453,16 @@ var allDocs = [
 
 allDocs.sort(function(a, b) { return a.id.localeCompare(b.id); });
 
+function updateCorpusStatus() {
+  var published = allDocs.filter(function(doc) { return doc.status === 'published'; }).length;
+  var progress = allDocs.filter(function(doc) { return doc.status === 'progress'; }).length;
+  var total = allDocs.length;
+
+  document.getElementById('count-published').textContent = published;
+  document.getElementById('count-progress').textContent = progress;
+  document.getElementById('count-total').textContent = total;
+}
+
 var ul = document.getElementById('alpha-ul');
 allDocs.forEach(function(doc) {
   var li = document.createElement('li');
@@ -501,6 +511,8 @@ function showView(view) {
   }
   sessionStorage.setItem('synthience-doc-view', view);
 }
+
+updateCorpusStatus();
 
 // Restore saved view on page load
 (function() {
