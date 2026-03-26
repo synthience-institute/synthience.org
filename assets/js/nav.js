@@ -6,10 +6,13 @@
   var nav = [
     ['index.html', 'Home'],
     ['documents.html', 'Documents'],
+    ['field-notes/', 'Field Notes'],
+    ['practitioner-guides/', 'Practitioner Guides'],
     ['about.html', 'About'],
     ['faq.html', 'FAQ'],
     ['glossary.html', 'Glossary'],
     ['founder.html', 'Founder'],
+    ['updates/', 'Updates'],
     ['contact.html', 'Contact']
   ];
 
