@@ -108,8 +108,10 @@
 
 <main class="study-shell">
 
-  <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-bottom: 0.5rem;">
+  <div style="margin-bottom: 0.15rem;">
     <span style="font-size:1rem; font-weight:500; color:#333; font-family:'Lora',serif;">Relational Coherence: Field Study</span>
+  </div>
+  <div style="margin-bottom: 0.5rem;">
     <span style="font-size:0.82rem; color:#aaa; font-style:italic;">Controls and description below</span>
   </div>
 
@@ -163,7 +165,7 @@
         <div class="ctrl-group">
           <label>Drift Noise</label>
           <div class="ctrl-row">
-            <input type="range" id="drift" min="0.0002" max="0.004" step="0.0002" value="0.0010" oninput="updateParam('drift', parseFloat(this.value))">
+            <input type="range" id="drift" min="0.0002" max="0.004" step="0.0002" value="0.0012" oninput="updateParam('drift', parseFloat(this.value))">
             <span class="val" id="drift-value">0.0012</span>
           </div>
         </div>
@@ -275,7 +277,7 @@
 <script type="text/javascript">
 var params = {
     seed: 42703, instanceCount: 140, attractorRadius: 110,
-    coherence: 0.09, drift: 0.0010, connAlpha: 45, resonance: 0,
+    coherence: 0.07, drift: 0.0012, connAlpha: 45, resonance: 3,
     palette: ['#d97757', '#6a9bcc', '#a87c9f', '#788c5d']
 };
 var defaultParams = JSON.parse(JSON.stringify(params));
@@ -352,8 +354,8 @@ function draw() {
     for (var i = 0; i < attractors.length; i++) {
         var a = attractors[i];
         // Livelier drift
-        a.x += (noise(a.ox + t * 0.3) * 2 - 1) * 0.35;
-        a.y += (noise(a.oy + t * 0.3) * 2 - 1) * 0.35;
+        a.x += (noise(a.ox + t * 0.3) * 2 - 1) * 0.9;
+        a.y += (noise(a.oy + t * 0.3) * 2 - 1) * 0.9;
         // Only correct when genuinely near an edge -- no central pull
         var edgePad = min(width, height) * 0.15;
         if (a.x < edgePad) a.x += (edgePad - a.x) * 0.025;
@@ -373,8 +375,8 @@ function draw() {
                 a.y += (rdy / rdist) * repForce;
             }
         }
-        a.x = constrain(a.x, 80, width - 80);
-        a.y = constrain(a.y, 80, height - 80);
+        a.x = constrain(a.x, width * 0.1, width * 0.9);
+        a.y = constrain(a.y, height * 0.1, height * 0.9);
     }
     // Clear canvas fresh every frame
     background(250, 249, 245);
@@ -388,7 +390,7 @@ function draw() {
 
 function drawConnections() {
     noFill();
-    var r = params.attractorRadius * 0.38;
+    var r = params.attractorRadius * 1.05;
     for (var i = 0; i < instances.length; i++) {
         var a = instances[i], count = 0;
         for (var j = i + 1; j < instances.length; j++) {
@@ -420,10 +422,10 @@ function drawAttractorHalos() {
 
 function Instance(att) {
     this.attIdx = attractors.indexOf(att);
-    var scatter = params.attractorRadius * 1.1;
+    var scatter = params.attractorRadius * 0.7;
     this.x = att.x + random(-scatter, scatter); this.y = att.y + random(-scatter, scatter);
     this.px = this.x; this.py = this.y;
-    this.vx = random(-1.2, 1.2); this.vy = random(-1.2, 1.2);
+    this.vx = random(-0.4, 0.4); this.vy = random(-0.4, 0.4);
     this.nx = random(10000); this.ny = random(10000);
     this.speed = random(1.5, 3.0); this.size = random(1.8, 4.2); this.history = [];
     if (random() < 0.18) this.attIdx = floor(random(attractors.length));
@@ -435,9 +437,9 @@ Instance.prototype.update = function() {
     var nx = (noise(this.nx + t * 0.4) * 2 - 1) * params.drift * 180;
     var ny = (noise(this.ny + t * 0.4) * 2 - 1) * params.drift * 180;
     var dx = a.x - this.x, dy = a.y - this.y, d = sqrt(dx*dx + dy*dy) + 0.01;
-    var pull = params.coherence * a.mass * (d > params.attractorRadius ? 1.8 : 0.06);
-    this.vx += (dx/d) * pull + nx;
-    this.vy += (dy/d) * pull + ny;
+    var pull = params.coherence * a.mass, inside = d < params.attractorRadius * 0.9;
+    this.vx += (dx/d) * (inside ? pull*0.35 : pull*1.1) + nx;
+    this.vy += (dy/d) * (inside ? pull*0.35 : pull*1.1) + ny;
     for (var i = 0; i < attractors.length; i++) {
         if (i === this.attIdx) continue;
         var oa = attractors[i], odx = this.x - oa.x, ody = this.y - oa.y, od = sqrt(odx*odx + ody*ody) + 0.01;
@@ -448,23 +450,18 @@ Instance.prototype.update = function() {
         var inst = instances[j];
         if (inst === this || inst.attIdx !== this.attIdx) continue;
         var id = dist(this.x, this.y, inst.x, inst.y);
-        if (id < 35 && id > 5) { this.vx += ((inst.x-this.x)/id)*0.0002*params.resonance; this.vy += ((inst.y-this.y)/id)*0.0002*params.resonance; if (++nearest >= params.resonance) break; }
+        if (id < 55 && id > 5) { this.vx += ((inst.x-this.x)/id)*0.003*params.resonance; this.vy += ((inst.y-this.y)/id)*0.003*params.resonance; if (++nearest >= params.resonance) break; }
     }
-    this.vx *= 0.91; this.vy *= 0.91;
+    this.vx *= 0.88; this.vy *= 0.88;
     var spd = sqrt(this.vx*this.vx + this.vy*this.vy), maxSpd = 2.2 * this.speed;
     if (spd > maxSpd) { this.vx = (this.vx/spd)*maxSpd; this.vy = (this.vy/spd)*maxSpd; }
     this.x += this.vx; this.y += this.vy;
-    // Edge handling: soft repulsion zone keeps particles well away from borders
-    var edgeMargin = 12;
-    var edgeZone = min(width, height) * 0.12;
-    if (this.x < edgeZone) { this.vx += (edgeZone - this.x) * 0.018; }
-    if (this.x > width - edgeZone) { this.vx -= (this.x - (width - edgeZone)) * 0.018; }
-    if (this.y < edgeZone) { this.vy += (edgeZone - this.y) * 0.018; }
-    if (this.y > height - edgeZone) { this.vy -= (this.y - (height - edgeZone)) * 0.018; }
-    if (this.x < edgeMargin) { this.x = edgeMargin; this.vx = abs(this.vx) * 0.8 + 0.5; }
-    if (this.x > width - edgeMargin) { this.x = width - edgeMargin; this.vx = -abs(this.vx) * 0.8 - 0.5; }
-    if (this.y < edgeMargin) { this.y = edgeMargin; this.vy = abs(this.vy) * 0.8 + 0.5; }
-    if (this.y > height - edgeMargin) { this.y = height - edgeMargin; this.vy = -abs(this.vy) * 0.8 - 0.5; }
+    // Edge handling: bounce but also add a pull back toward attractor so dots don't pin to edges
+    var edgeMargin = 10;
+    if (this.x < edgeMargin) { this.x = edgeMargin; this.vx = abs(this.vx) * 0.6 + 0.3; }
+    if (this.x > width - edgeMargin) { this.x = width - edgeMargin; this.vx = -abs(this.vx) * 0.6 - 0.3; }
+    if (this.y < edgeMargin) { this.y = edgeMargin; this.vy = abs(this.vy) * 0.6 + 0.3; }
+    if (this.y > height - edgeMargin) { this.y = height - edgeMargin; this.vy = -abs(this.vy) * 0.6 - 0.3; }
 };
 
 Instance.prototype.drawTrail = function(pg) {
