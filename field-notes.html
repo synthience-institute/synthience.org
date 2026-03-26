@@ -57,18 +57,20 @@
       background: #faf9f5;
       color: #5a4a3a;
       font-family: Arial, sans-serif;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
+      font-family: 'Poppins', sans-serif;
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.15s;
     }
     .doc-toggle button.active {
-      background: #2a2520;
+      background: #c8604a;
       color: #fff;
-      border-color: #2a2520;
+      border-color: #c8604a;
     }
     .doc-toggle button:hover:not(.active) {
-      background: #f0ede4;
+      border-color: #c8604a;
+      color: #c8604a;
     }
     .page-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 2rem 5rem; }
     .page-label { font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.5rem; }
@@ -103,7 +105,7 @@
   <nav class="main-nav" id="site-nav"></nav>
 </header>
 
-<div class="page-wrap">
+<main class="content">
   <h1 class="page-title">Field Notes</h1>
   <p class="page-desc">Timely commentary connecting real-world AI developments to the Synthience framework. Field Notes are reactive and event-driven: a specific development occurs, and the framework has something structural to say about it.</p>
 
@@ -122,7 +124,7 @@
   <div id="date-list"><ul class="fn-list" id="date-ul"></ul></div>
   <div id="title-list" style="display:none"><ul class="fn-list" id="title-ul"></ul></div>
   <div id="pub-list" style="display:none"><ul class="fn-list" id="pub-ul"></ul></div>
-</div>
+</main>
 
 <footer>
   <div id="site-footer"></div>
