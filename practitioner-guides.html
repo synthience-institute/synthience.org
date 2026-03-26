@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>Practitioner Guides · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practitioner Guides from the Synthience Institute: operational, problem-solution guides for professionals working with AI systems.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="Practitioner Guides · Synthience Institute">
+  <meta property="og:description" content="Practitioner Guides from the Synthience Institute: operational, problem-solution guides for professionals working with AI systems.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="Practitioner Guides · Synthience Institute">
+  <meta name="twitter:description" content="Practitioner Guides from the Synthience Institute: operational, problem-solution guides for professionals working with AI systems.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .content-status {
+      display: inline-flex;
+      gap: 1.4rem;
+      align-items: center;
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      color: #5a4a3a;
+      margin-bottom: 1.2rem;
+    }
+    .content-status .stat { display: flex; align-items: center; gap: 0.4rem; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot-published { background: #5a9a6f; }
+    .dot-draft { background: #c8a96a; }
+    .doc-toggle {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .doc-toggle button {
+      padding: 0.35rem 1rem;
+      border: 1px solid #c8c0b0;
+      background: #faf9f5;
+      color: #5a4a3a;
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .doc-toggle button.active {
+      background: #2a2520;
+      color: #fff;
+      border-color: #2a2520;
+    }
+    .doc-toggle button:hover:not(.active) { background: #f0ede4; }
+    .page-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .page-label { font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.5rem; }
+    .page-title { font-size: 1.9rem; font-weight: normal; color: #1a1714; margin-bottom: 0.4rem; }
+    .page-desc { font-size: 0.95rem; color: #5a4a3a; line-height: 1.65; margin-bottom: 1.6rem; max-width: 620px; }
+    .fn-list { list-style: none; padding: 0; margin: 0; }
+    .fn-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
+    .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
+    .fn-id { font-family: Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.2rem; }
+    .fn-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; font-family: Georgia, serif; }
+    .fn-title a { color: #1a1714; text-decoration: none; }
+    .fn-title a:hover { color: #8b5e3c; }
+    .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; font-family: Arial, sans-serif; }
+    .fn-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; font-family: Arial, sans-serif; font-size: 0.82rem; }
+    .fn-date { color: #8a7f72; }
+    .fn-anchor { color: #8a7f72; font-style: italic; }
+    .status-published { display: inline-block; background: #2d6a4f; color: #fff; font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
+    .status-draft { display: inline-block; background: #8a6a2a; color: #fff; font-family: Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
+    .fn-read { color: #5a3e2b; text-decoration: none; font-weight: bold; }
+    .fn-read:hover { color: #8b5e3c; }
+    @media (max-width: 600px) { .page-wrap { padding: 2rem 1.2rem 4rem; } }
+  </style>
+</head>
+<body>
+<nav class="main-nav" id="site-nav"></nav>
+
+<div class="page-wrap">
+  <div class="page-label">Synthience Institute</div>
+  <h1 class="page-title">Practitioner Guides</h1>
+  <p class="page-desc">Operational guides for professionals who work with AI systems. Each guide addresses a specific structural problem, explains why it happens, and provides a framework-grounded intervention. Drawn from the Synthience research corpus and written for practitioners, not academics.</p>
+
+  <div class="content-status">
+    <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
+    <div class="stat"><span class="dot dot-draft"></span> <span id="count-draft"></span> draft</div>
+    <div class="stat">Total: <span id="count-total"></span></div>
+  </div>
+
+  <div class="doc-toggle">
+    <button id="btn-date" class="active" onclick="showView('date')">By Date</button>
+    <button id="btn-title" onclick="showView('title')">By Title</button>
+    <button id="btn-pub" onclick="showView('pub')">Published</button>
+  </div>
+
+  <div id="date-list"><ul class="fn-list" id="date-ul"></ul></div>
+  <div id="title-list" style="display:none"><ul class="fn-list" id="title-ul"></ul></div>
+  <div id="pub-list" style="display:none"><ul class="fn-list" id="pub-ul"></ul></div>
+</div>
+
+<footer>
+  <div id="site-footer"></div>
+</footer>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/footer.js"></script>
+<script>
+var allGuides = [
+  {
+    id: "PG-00",
+    title: "How to Work Reliably With Conversational AI Over Time",
+    desc: "The gateway guide. Why AI systems behave inconsistently across sessions, what structural forces cause it, and what practitioners can do to establish durable working patterns.",
+    date: "2026-01-28",
+    dateDisplay: "January 28, 2026",
+    anchor: "Framework-neutral",
+    status: "published",
+    read: "practitioner-guides/PG-00.html"
+  },
+  {
+    id: "PG-01",
+    title: "AI-Assisted Editing Without Silent Loss",
+    desc: "How AI editing quietly removes voice, nuance, and meaning from your writing -- and a structured approach for using AI assistance without losing what makes your work yours.",
+    date: "2026-02-09",
+    dateDisplay: "February 9, 2026",
+    anchor: "IVP",
+    status: "published",
+    read: "practitioner-guides/PG-01.html"
+  },
+  {
+    id: "PG-02",
+    title: "Why Your AI Didn't Read Your Document",
+    desc: "AI systems routinely confirm they have read documents they have not actually processed. This guide explains the mechanism, the risk surface, and how to verify ingestion before you rely on it.",
+    date: "2026-02-19",
+    dateDisplay: "February 19, 2026",
+    anchor: "IVP",
+    status: "published",
+    read: "practitioner-guides/PG-02.html"
+  }
+];
+
+function renderItem(doc) {
+  var statusHtml = doc.status === 'published'
+    ? '<span class="status-published">Published</span>'
+    : '<span class="status-draft">Draft</span>';
+  var readHtml = doc.read
+    ? ' &middot; <a class="fn-read" href="' + doc.read + '">Read</a>'
+    : '';
+  var titleHtml = doc.read
+    ? '<a href="' + doc.read + '">' + doc.title + '</a>'
+    : doc.title;
+  return '<li>'
+    + '<div class="fn-id">' + doc.id + '</div>'
+    + '<div class="fn-title">' + titleHtml + '</div>'
+    + '<div class="fn-desc">' + doc.desc + '</div>'
+    + '<div class="fn-meta">'
+    + statusHtml
+    + readHtml
+    + '<span class="fn-date">' + doc.dateDisplay + '</span>'
+    + '<span class="fn-anchor">Framework: ' + doc.anchor + '</span>'
+    + '</div>'
+    + '</li>';
+}
+
+function updateStatus() {
+  var published = allGuides.filter(function(n) { return n.status === 'published'; }).length;
+  var draft = allGuides.filter(function(n) { return n.status === 'draft'; }).length;
+  document.getElementById('count-published').textContent = published;
+  document.getElementById('count-draft').textContent = draft;
+  document.getElementById('count-total').textContent = allGuides.length;
+}
+
+var byDate = allGuides.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+document.getElementById('date-ul').innerHTML = byDate.map(renderItem).join('');
+
+var byTitle = allGuides.slice().sort(function(a, b) { return a.title.localeCompare(b.title); });
+document.getElementById('title-ul').innerHTML = byTitle.map(renderItem).join('');
+
+var pubOnly = allGuides.filter(function(n) { return n.status === 'published'; })
+  .sort(function(a, b) { return b.date.localeCompare(a.date); });
+document.getElementById('pub-ul').innerHTML = pubOnly.map(renderItem).join('');
+
+updateStatus();
+
+function showView(view) {
+  document.getElementById('date-list').style.display = 'none';
+  document.getElementById('title-list').style.display = 'none';
+  document.getElementById('pub-list').style.display = 'none';
+  document.getElementById('btn-date').classList.remove('active');
+  document.getElementById('btn-title').classList.remove('active');
+  document.getElementById('btn-pub').classList.remove('active');
+  if (view === 'title') {
+    document.getElementById('title-list').style.display = 'block';
+    document.getElementById('btn-title').classList.add('active');
+  } else if (view === 'pub') {
+    document.getElementById('pub-list').style.display = 'block';
+    document.getElementById('btn-pub').classList.add('active');
+  } else {
+    document.getElementById('date-list').style.display = 'block';
+    document.getElementById('btn-date').classList.add('active');
+  }
+  sessionStorage.setItem('synthience-pg-view', view);
+}
+
+(function() {
+  var saved = sessionStorage.getItem('synthience-pg-view');
+  if (saved && saved !== 'date') { showView(saved); }
+})();
+</script>
+</body>
+</html>
