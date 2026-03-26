@@ -61,11 +61,12 @@
       transition: all 0.15s;
     }
     .doc-toggle button.active {
-      background: #2a2520;
+      background: #c8604a;
       color: #fff;
-      border-color: #2a2520;
+      border-color: #c8604a;
     }
-    .doc-toggle button:hover:not(.active) { background: #f0ede4; }
+    .doc-toggle button:hover:not(.active) { border-color: #c8604a;
+      color: #c8604a; }
     .page-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 2rem 5rem; }
     .page-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.5rem; }
     .page-title { font-size: 1.9rem; font-weight: normal; color: #1a1714; margin-bottom: 0.4rem; }
@@ -74,7 +75,7 @@
     .fn-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
     .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
     .fn-id { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.2rem; }
-    .fn-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; font-family: Georgia, serif; }
+    .fn-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; }
     .fn-title a { color: #1a1714; text-decoration: none; }
     .fn-title a:hover { color: #8b5e3c; }
     .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; }
@@ -99,7 +100,7 @@
   <nav class="main-nav" id="site-nav"></nav>
 </header>
 
-<div class="page-wrap">
+<main>
   <h1 class="page-title">Practitioner Guides</h1>
   <p class="page-desc">Operational guides for professionals who work with AI systems. Each guide addresses a specific structural problem, explains why it happens, and provides a framework-grounded intervention. Drawn from the Synthience research corpus and written for practitioners, not academics.</p>
 
@@ -118,7 +119,7 @@
   <div id="date-list"><ul class="fn-list" id="date-ul"></ul></div>
   <div id="title-list" style="display:none"><ul class="fn-list" id="title-ul"></ul></div>
   <div id="pub-list" style="display:none"><ul class="fn-list" id="pub-ul"></ul></div>
-</div>
+</main>
 
 <footer>
   <div id="site-footer"></div>
