@@ -5,9 +5,9 @@
 
   var nav = [
     ['index.html', 'Home'],
+    ['research.html', 'Research'],
     ['field-notes.html', 'Field Notes'],
     ['practitioner-guides.html', 'Practitioner Guides'],
-    ['research.html', 'Research'],
     ['about.html', 'About'],
     ['founder.html', 'Founder'],
     ['glossary.html', 'Glossary'],
