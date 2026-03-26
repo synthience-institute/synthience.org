@@ -288,7 +288,9 @@ function getCanvasSize() {
     var padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
     var border = parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
     var w = container.offsetWidth - padding - border - 2;
-    return w > 20 ? w : 900;
+    var maxH = Math.floor(window.innerHeight * 0.72);
+    var sz = w > 20 ? w : 900;
+    return Math.min(sz, maxH);
 }
 
 function setup() {
