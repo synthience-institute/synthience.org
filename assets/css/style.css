@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
 /* Base layout */
 html {
   /* Ensures consistent horizontal alignment across pages
@@ -10,7 +8,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', serif;
   line-height: 1.6;
   color: #000;
 }
