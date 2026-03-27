@@ -12,78 +12,98 @@
   <link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
   <meta charset="UTF-8">
   <title>Founder · Synthience Institute</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Thomas W. Gantz, founder of the Synthience Institute. Independent researcher and framework architect working at the intersection of AI interaction dynamics, systems governance, and language.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="founder.html">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Synthience Institute">
   <meta property="og:title" content="Founder · Synthience Institute">
-  <meta property="og:description" content="Thomas W. Gantz, founder of the Synthience Institute. Independent researcher and framework architect working at the intersection of AI interaction dynamics, systems governance, and language.">
-  <meta property="og:url" content="https://synthience.org/founder.html">
+  <meta property="og:description" content="founder.html">
+  <meta property="og:url" content="https://synthience.org/">
   <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
   <meta name="twitter:title" content="Founder · Synthience Institute">
-  <meta name="twitter:description" content="Thomas W. Gantz, founder of the Synthience Institute. Independent researcher and framework architect working at the intersection of AI interaction dynamics, systems governance, and language.">
+  <meta name="twitter:description" content="founder.html">
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    body { font-family: Georgia, 'Times New Roman', serif; }
-    body { font-family: Georgia, 'Times New Roman', serif; }
-    .founder-intro {
-      display: flex;
+    .content-status {
+      display: inline-flex;
+      gap: 1.4rem;
       align-items: center;
-      gap: 2.5rem;
-      margin-bottom: 2rem;
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 0.82rem;
+      color: #5a4a3a;
+      margin-bottom: 1.2rem;
     }
-    .founder-photo {
-      flex-shrink: 0;
-      width: 180px;
+    .content-status .stat { display: flex; align-items: center; gap: 0.4rem; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot-published { background: #5a9a6f; }
+    .dot-draft { background: #c8a96a; }
+    .doc-toggle {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
     }
-    .founder-photo img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      display: block;
+    .doc-toggle button {
+      padding: 0.35rem 1rem;
+      border: 1px solid #c8c0b0;
+      background: #faf9f5;
+      color: #5a4a3a;
+      font-size: 0.82rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s;
     }
-    .founder-bio {
-      flex: 1;
+    .doc-toggle button.active {
+      background: #c8604a;
+      color: #fff;
+      border-color: #c8604a;
     }
-    .founder-bio h3 {
-      margin-top: 0;
+    .doc-toggle button:hover:not(.active) {
+      border-color: #c8604a;
+      color: #c8604a;
     }
-    @media (max-width: 600px) {
-      .founder-intro {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-      }
-      .founder-photo {
-        width: 140px;
-      }
-      .founder-photo img {
-        width: 140px;
-        height: 140px;
-      }
-    }
+    .page-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .page-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.5rem; }
+    .page-title { font-size: 1.9rem; font-weight: normal; color: #1a1714; margin-bottom: 0.4rem; }
+    .page-desc { font-size: 0.95rem; color: #5a4a3a; line-height: 1.65; margin-bottom: 1.6rem; max-width: 620px; }
+    .fn-list { list-style: none; padding: 0; margin: 0; }
+    .fn-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
+    .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
+    .fn-id { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.2rem; }
+    .fn-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; }
+    .fn-title a { color: #1a1714; text-decoration: none; }
+    .fn-title a:hover { color: #8b5e3c; }
+    .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; }
+    .fn-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; font-size: 0.82rem; }
+    .fn-date { color: #8a7f72; }
+    .fn-anchor { color: #8a7f72; font-style: italic; }
+    .status-published { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
+    .status-draft { display: inline-block; background: #8a6a2a; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
+    .fn-read { color: #5a3e2b; text-decoration: none; font-weight: bold; }
+    .fn-read:hover { color: #8b5e3c; }
+    @media (max-width: 600px) { .page-wrap { padding: 2rem 1.2rem 4rem; } }
   </style>
 </head>
 <body>
-
 <header class="site-header">
   <div class="logo">
     <a href="index.html">
       <img src="assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
     </a>
   </div>
-  <div class="header-text">
-    <h1>Synthience Institute</h1>
-  </div>
+  <div class="header-text"><h1>Synthience Institute</h1></div>
   <nav class="main-nav" id="site-nav"></nav>
 </header>
-<script src="assets/js/nav.js"></script>
 
 <main class="content">
+
 
 <h2>Founder</h2>
 
@@ -241,12 +261,172 @@ substitute for empirical validation.
    target="_blank" rel="noopener noreferrer">Synthience Institute community on Zenodo</a>
 </p>
 
+  <div class="content-status">
+    <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
+    <div class="stat"><span class="dot dot-draft"></span> <span id="count-draft"></span> draft</div>
+    <div class="stat">Total: <span id="count-total"></span></div>
+  </div>
+
+  <div class="doc-toggle">
+    <button id="btn-date" class="active" onclick="showView('date')">By Date</button>
+    <button id="btn-title" onclick="showView('title')">By Title</button>
+    <button id="btn-pub" onclick="showView('pub')">Published</button>
+  </div>
+
+  <div id="date-list"><ul class="fn-list" id="date-ul"></ul></div>
+  <div id="title-list" style="display:none"><ul class="fn-list" id="title-ul"></ul></div>
+  <div id="pub-list" style="display:none"><ul class="fn-list" id="pub-ul"></ul></div>
 </main>
 
-<footer class="site-footer">
+<footer>
   <div id="site-footer"></div>
 </footer>
+<script src="assets/js/nav.js"></script>
 <script src="assets/js/footer.js"></script>
+<script>
+var allNotes = [
+  {
+    id: "FN-01",
+    title: "Why \"Policy\" Didn't Save Clawdbot",
+    desc: "A structural analysis of the Clawdbot collapse: why written policy failed as an alignment mechanism and what runtime continuity architecture would have done differently.",
+    date: "2026-02-01",
+    dateDisplay: "February 1, 2026",
+    anchor: "CRD, CAM, SI-WP-001",
+    status: "published",
+    read: "field-notes/FN-01.html"
+  },
+  {
+    id: "FN-02",
+    title: "The OpenClaw Arc Proves It: AI Safety Is a Runtime Problem",
+    desc: "The OpenClaw situation is not a policy failure. It is a runtime failure. The distinction matters structurally and the Synthience framework has a specific account of why.",
+    date: "2026-02-18",
+    dateDisplay: "February 18, 2026",
+    anchor: "CRD, CAM",
+    status: "published",
+    read: "field-notes/FN-02.html"
+  },
+  {
+    id: "FN-03",
+    title: "Governance Is Moving Toward Execution. The Next Problem Is Persistence.",
+    desc: "AI governance is finally catching up to deployment reality. But the next structural problem is already visible: persistence. Governance frameworks assume discrete decisions. AI systems operate across time.",
+    date: "2026-02-19",
+    dateDisplay: "February 19, 2026",
+    anchor: "SI-WP-001",
+    status: "published",
+    read: "field-notes/FN-03.html"
+  },
+  {
+    id: "FN-04",
+    title: "The Dark Factory Problem: Why Autonomous Execution Needs Continuity Architecture",
+    desc: "Autonomous AI execution is being deployed at scale. The missing layer is not capability. It is continuity architecture: the structural mechanisms that keep autonomous systems coherent across time.",
+    date: "2026-03-01",
+    dateDisplay: "March 1, 2026",
+    anchor: "CRD, CAM, SM-03",
+    status: "draft",
+    read: null
+  },
+  {
+    id: "FN-08",
+    title: "Drift vs. Over-Stabilization: The Two Failure Modes Nobody Is Naming",
+    desc: "The conversation about AI alignment focuses on one failure mode: systems that drift from intended behavior. The opposite failure is equally real and almost entirely unaddressed.",
+    date: "2026-02-23",
+    dateDisplay: "February 23, 2026",
+    anchor: "CRD",
+    status: "published",
+    read: "field-notes/FN-08.html"
+  },
+  {
+    id: "FN-09",
+    title: "Formalizing Benevolent Symbiosis Publicly",
+    desc: "A plain-language account of what benevolent symbiosis means in the context of sustained human-AI interaction, and why the concept requires formal definition rather than intuitive appeal.",
+    date: "2026-02-20",
+    dateDisplay: "February 20, 2026",
+    anchor: "SI-WP-003",
+    status: "published",
+    read: "field-notes/FN-09.html"
+  },
+  {
+    id: "FN-10",
+    title: "The Myth of Self-Correction",
+    desc: "The assumption that AI systems will self-correct errors over time is structurally unfounded. This Field Note examines why, and what the alternative looks like.",
+    date: "2026-03-01",
+    dateDisplay: "March 1, 2026",
+    anchor: "CRD, IVP",
+    status: "published",
+    read: "field-notes/FN-10.html"
+  }
+];
 
+function renderItem(doc) {
+  var statusHtml = doc.status === 'published'
+    ? '<span class="status-published">Published</span>'
+    : '<span class="status-draft">Draft</span>';
+  var readHtml = doc.read
+    ? ' &middot; <a class="fn-read" href="' + doc.read + '">Read</a>'
+    : '';
+  var titleHtml = doc.read
+    ? '<a href="' + doc.read + '">' + doc.title + '</a>'
+    : doc.title;
+  return '<li>'
+    + '<div class="fn-id">' + doc.id + '</div>'
+    + '<div class="fn-title">' + titleHtml + '</div>'
+    + '<div class="fn-desc">' + doc.desc + '</div>'
+    + '<div class="fn-meta">'
+    + statusHtml
+    + readHtml
+    + '<span class="fn-date">' + doc.dateDisplay + '</span>'
+    + '<span class="fn-anchor">Framework: ' + doc.anchor + '</span>'
+    + '</div>'
+    + '</li>';
+}
+
+function updateStatus() {
+  var published = allNotes.filter(function(n) { return n.status === 'published'; }).length;
+  var draft = allNotes.filter(function(n) { return n.status === 'draft'; }).length;
+  document.getElementById('count-published').textContent = published;
+  document.getElementById('count-draft').textContent = draft;
+  document.getElementById('count-total').textContent = allNotes.length;
+}
+
+// By date (newest first)
+var byDate = allNotes.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+document.getElementById('date-ul').innerHTML = byDate.map(renderItem).join('');
+
+// By title (alphabetical)
+var byTitle = allNotes.slice().sort(function(a, b) { return a.title.localeCompare(b.title); });
+document.getElementById('title-ul').innerHTML = byTitle.map(renderItem).join('');
+
+// Published only (newest first)
+var pubOnly = allNotes.filter(function(n) { return n.status === 'published'; })
+  .sort(function(a, b) { return b.date.localeCompare(a.date); });
+document.getElementById('pub-ul').innerHTML = pubOnly.map(renderItem).join('');
+
+updateStatus();
+
+function showView(view) {
+  document.getElementById('date-list').style.display = 'none';
+  document.getElementById('title-list').style.display = 'none';
+  document.getElementById('pub-list').style.display = 'none';
+  document.getElementById('btn-date').classList.remove('active');
+  document.getElementById('btn-title').classList.remove('active');
+  document.getElementById('btn-pub').classList.remove('active');
+  if (view === 'title') {
+    document.getElementById('title-list').style.display = 'block';
+    document.getElementById('btn-title').classList.add('active');
+  } else if (view === 'pub') {
+    document.getElementById('pub-list').style.display = 'block';
+    document.getElementById('btn-pub').classList.add('active');
+  } else {
+    document.getElementById('date-list').style.display = 'block';
+    document.getElementById('btn-date').classList.add('active');
+  }
+  sessionStorage.setItem('synthience-fn-view', view);
+}
+
+(function() {
+  var saved = sessionStorage.getItem('synthience-fn-view');
+  if (saved && saved !== 'date') { showView(saved); }
+})();
+</script>
 </body>
 </html>

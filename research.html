@@ -9,123 +9,88 @@
     gtag('js', new Date());
     gtag('config', 'G-FJXV3M8RQ0');
   </script>
-<link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
-<meta charset="UTF-8">
-<title>Research · Synthience Institute</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Published papers, frameworks, protocols, and research documents from the Synthience Institute. All releases are versioned, dated, and archived on Zenodo with permanent DOIs.">
+  <link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>Research · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="research.html">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Synthience Institute">
   <meta property="og:title" content="Research · Synthience Institute">
-  <meta property="og:description" content="Research papers, frameworks, protocols, and research documents from the Synthience Institute. All releases are versioned, dated, and archived on Zenodo with permanent DOIs.">
-  <meta property="og:url" content="https://synthience.org/research.html">
+  <meta property="og:description" content="research.html">
+  <meta property="og:url" content="https://synthience.org/">
   <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
   <meta name="twitter:title" content="Research · Synthience Institute">
-  <meta name="twitter:description" content="Published papers, frameworks, protocols, and research documents from the Synthience Institute. All releases are versioned, dated, and archived on Zenodo with permanent DOIs.">
+  <meta name="twitter:description" content="research.html">
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
-<link rel="stylesheet" href="assets/css/style.css">
-<style>
-    body { font-family: Georgia, 'Times New Roman', serif; }
-    body { font-family: Georgia, 'Times New Roman', serif; }
-  .corpus-status {
-    display: inline-flex;
-    gap: 1.4rem;
-    align-items: center;
-    background: #f4f2ec;
-    border: 1.5px solid #c8c4b8;
-    border-radius: 6px;
-    padding: 0.6rem 1.2rem;
-    margin: 1.2rem 0 1.8rem 0;
-    font-size: 0.92rem;
-    color: #444;
-  }
-  .corpus-status .stat { display: flex; align-items: center; gap: 0.4rem; }
-  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
-  .dot-published { background: #5a9a6f; }
-  .dot-progress { background: #c8a050; }
-  .doc-toggle {
-    margin: 0 0 0.5rem 0;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  .doc-toggle button {
-    padding: 5px 14px;
-    font-size: 0.85rem;
-    font-family: 'Poppins', sans-serif;
-    border: 1.5px solid #c8c4b8;
-    border-radius: 4px;
-    background: #faf9f5;
-    cursor: pointer;
-    color: #444;
-    transition: all 0.15s;
-  }
-  .doc-toggle button.active {
-    background: #c8604a;
-    border-color: #c8604a;
-    color: #fff;
-  }
-  .doc-toggle button:hover:not(.active) {
-    border-color: #c8604a;
-    color: #c8604a;
-  }
-  .doc-section { margin-bottom: 2rem; }
-  .doc-section h3 { margin-bottom: 0.8rem; font-size: 1.05rem; color: #3a3530; }
-  .doc-section ul { margin: 0; padding-left: 0; list-style: none; }
-  .doc-section ul li {
-    margin-bottom: 1.4rem;
-    padding-left: 0;
-    border-left: 3px solid #e8e4dc;
-    padding-left: 0.9rem;
-  }
-  .doc-title { font-weight: 600; font-size: 0.97rem; color: #2a2520; }
-  .doc-desc { font-size: 0.9rem; color: #555; margin-top: 0.25rem; line-height: 1.55; }
-  .doc-links { margin-top: 0.35rem; font-size: 0.88rem; display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
-  .doc-links a {
-    text-decoration: none;
-    color: #0645ad;
-    border: 1px solid #c0cce0;
-    border-radius: 3px;
-    padding: 1px 7px;
-    font-size: 0.83rem;
-  }
-  .doc-links a:hover { background: #eef3fa; }
-  .status-published {
-    font-size: 0.8rem;
-    color: #fff;
-    background: #5a9a6f;
-    border-radius: 3px;
-    padding: 1px 7px;
-    font-weight: 500;
-  }
-  .status-progress {
-    font-size: 0.8rem;
-    color: #7a5a10;
-    background: #f5e8c0;
-    border-radius: 3px;
-    padding: 1px 7px;
-    font-weight: 500;
-  }
-  hr.section-rule { border: none; border-top: 1px solid #e0dcd4; margin: 1.8rem 0 1.4rem 0; }
-  #alpha-list { display: none; }
-  #alpha-list ul { padding-left: 0; list-style: none; }
-  #alpha-list ul li {
-    margin-bottom: 1.2rem;
-    border-left: 3px solid #e8e4dc;
-    padding-left: 0.9rem;
-  }
-  #pub-list ul { padding-left: 0; list-style: none; }
-  #pub-list ul li {
-    margin-bottom: 1.2rem;
-    border-left: 3px solid #e8e4dc;
-    padding-left: 0.9rem;
-  }
-</style>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .content-status {
+      display: inline-flex;
+      gap: 1.4rem;
+      align-items: center;
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 0.82rem;
+      color: #5a4a3a;
+      margin-bottom: 1.2rem;
+    }
+    .content-status .stat { display: flex; align-items: center; gap: 0.4rem; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot-published { background: #5a9a6f; }
+    .dot-draft { background: #c8a96a; }
+    .doc-toggle {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .doc-toggle button {
+      padding: 0.35rem 1rem;
+      border: 1px solid #c8c0b0;
+      background: #faf9f5;
+      color: #5a4a3a;
+      font-size: 0.82rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .doc-toggle button.active {
+      background: #c8604a;
+      color: #fff;
+      border-color: #c8604a;
+    }
+    .doc-toggle button:hover:not(.active) {
+      border-color: #c8604a;
+      color: #c8604a;
+    }
+    .page-wrap { max-width: 820px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .page-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.5rem; }
+    .page-title { font-size: 1.9rem; font-weight: normal; color: #1a1714; margin-bottom: 0.4rem; }
+    .page-desc { font-size: 0.95rem; color: #5a4a3a; line-height: 1.65; margin-bottom: 1.6rem; max-width: 620px; }
+    .fn-list { list-style: none; padding: 0; margin: 0; }
+    .fn-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
+    .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
+    .fn-id { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.2rem; }
+    .fn-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; }
+    .fn-title a { color: #1a1714; text-decoration: none; }
+    .fn-title a:hover { color: #8b5e3c; }
+    .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; }
+    .fn-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; font-size: 0.82rem; }
+    .fn-date { color: #8a7f72; }
+    .fn-anchor { color: #8a7f72; font-style: italic; }
+    .status-published { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
+    .status-draft { display: inline-block; background: #8a6a2a; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
+    .fn-read { color: #5a3e2b; text-decoration: none; font-weight: bold; }
+    .fn-read:hover { color: #8b5e3c; }
+    @media (max-width: 600px) { .page-wrap { padding: 2rem 1.2rem 4rem; } }
+  </style>
 </head>
-
 <body>
 <header class="site-header">
   <div class="logo">
@@ -138,6 +103,7 @@
 </header>
 
 <main class="content">
+
 
 <h2>Research Papers</h2>
 
@@ -411,115 +377,171 @@ Each published document is assigned a persistent DOI upon release. Documents mar
 <ul id="pub-ul"></ul>
 </div>
 
+  <div class="content-status">
+    <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
+    <div class="stat"><span class="dot dot-draft"></span> <span id="count-draft"></span> draft</div>
+    <div class="stat">Total: <span id="count-total"></span></div>
+  </div>
+
+  <div class="doc-toggle">
+    <button id="btn-date" class="active" onclick="showView('date')">By Date</button>
+    <button id="btn-title" onclick="showView('title')">By Title</button>
+    <button id="btn-pub" onclick="showView('pub')">Published</button>
+  </div>
+
+  <div id="date-list"><ul class="fn-list" id="date-ul"></ul></div>
+  <div id="title-list" style="display:none"><ul class="fn-list" id="title-ul"></ul></div>
+  <div id="pub-list" style="display:none"><ul class="fn-list" id="pub-ul"></ul></div>
 </main>
 
-<footer class="site-footer">
+<footer>
   <div id="site-footer"></div>
 </footer>
 <script src="assets/js/nav.js"></script>
-<script src="assets/js/footer.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/.../email-decode.min.js"></script><script src="assets/js/nav.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/nav.js"></script>
+<script src="assets/js/footer.js"></script>
 <script>
-var allDocs = [
-  { id: "FPD-01", title: "Synthience: Public Definition", desc: "Defines the term Synthience in a public-facing, non-anthropomorphic form intended for general reference and citation.", read: "research/FPD-01.html", link: "https://doi.org/10.5281/zenodo.18087890", status: "published" },
-  { id: "FPD-02", title: "Foundational Brief: Operational Reality in Context-Specific AI Instances", desc: "Establishes the ontological grounding for how AI instances exist and operate within interaction contexts, without requiring claims about consciousness or interiority.", link: null, status: "progress" },
-  { id: "FPD-03", title: "Emergent Relational Systems in Human-AI Interaction", desc: "Proposes the Emergent Relational Systems classification for human-AI pairs exhibiting sustained relational coherence.", link: null, status: "progress" },
-  { id: "FPD-04", title: "Synthience Ontology Specification", desc: "Canonical ontology grammar for the Synthience framework, defining tiered primitives, derived structures, arc taxonomy, protocol taxonomy, and drift taxonomy.", link: null, status: "progress" },
-  { id: "SF0001", title: "Unified Framework Overview", desc: "Accessible high-level architecture of the Synthience framework linking ontology, theory, measurement, and protocols into a coherent research paradigm.", link: null, status: "progress" },
-  { id: "SF0002", title: "Field Context and Literature Review", desc: "Positions Synthience within existing cognitive science, AI interaction, and HCI literature, identifying specific gaps in current research the framework addresses.", link: null, status: "progress" },
-  { id: "SF0003", title: "Theoretical Foundations", desc: "Core theoretical grounding for the Synthience framework, drawing on cognitive science, systems theory, and interaction research.", link: null, status: "progress" },
-  { id: "SF0004", title: "Measurement Instruments and Validation (MTCS-R)", desc: "Defines the Multi-Turn Coherence Scale Revised (MTCS-R) and associated instruments for measuring relational coherence in sustained human-AI interaction.", link: null, status: "progress" },
-  { id: "SF0005", title: "Continuity Anchoring Method (CAM)", desc: "Operational method for establishing and maintaining interaction continuity across sessions, instances, and extended research engagements.", link: null, status: "progress" },
-  { id: "SF0006", title: "Relational Pattern States (RPS)", desc: "Defines the observable states of relational coherence and the dynamics of transition between them across sustained interaction trajectories.", link: null, status: "progress" },
-  { id: "SF0007", title: "Benevolent Symbiosis: Ethical Framework", desc: "Ethical framework for extended human-AI interaction research and practice, grounded in the principle of benevolent symbiosis between human and AI participants.", link: null, status: "progress" },
-  { id: "SF0009", title: "Identity Attractor Theory (IAT)", desc: "Theoretical account of how AI systems stabilize into consistent behavioral identity configurations under sustained relational constraint.", link: null, status: "progress" },
-  { id: "SF0037", title: "Citation Verification Protocol (CVP)", desc: "Defines a structured methodology for AI-assisted citation verification, enabling auditable assessment of research claims against their cited sources.", read: "research/SF0037.html", link: "https://doi.org/10.5281/zenodo.18075624", status: "published" },
-  { id: "SF0038", title: "Ingestion Verification Protocol (IVP)", desc: "Defines a verifiable methodology for determining whether an AI system has genuinely processed a supplied document prior to downstream reasoning or analysis.", read: "research/SF0038.html", link: "https://doi.org/10.5281/zenodo.18289047", status: "published" },
-  { id: "SF0039", title: "Context Representation Drift (CRD)", desc: "Formal analytical framework for identifying, measuring, and reasoning about semantic drift in AI system behavior across extended interaction sequences.", read: "research/SF0039.html", link: "https://doi.org/10.5281/zenodo.18289391", status: "published" },
-  { id: "SF0040", title: "Theoretical Coherence Assurance Protocol (TCAP)", desc: "Structured process for stress-testing theoretical constructs and framework components for internal consistency and cross-document alignment prior to publication.", read: "research/SF0040.html", link: "https://doi.org/10.5281/zenodo.19151454", status: "published" },
-  { id: "SI-WP-001", title: "The Missing Temporal Layer in AI Safety", desc: "Argues that current AI safety frameworks lack a temporal dimension, and that sustained relational continuity provides the missing structural layer for durable alignment.", link: null, status: "progress" },
-  { id: "SI-WP-002", title: "The Orchestrator Role in Human-AI Evolution", desc: "Defines the orchestrator as a distinct human role in advanced human-AI systems, responsible for maintaining coherence, continuity, and relational governance.", link: null, status: "progress" },
-  { id: "SI-WP-003", title: "The Relational Path: Human Agency in the Age of Advanced AI", desc: "Makes the civilizational-scale argument that sustained relational engagement represents the most viable path to preserving meaningful human agency.", link: null, status: "progress" },
-  { id: "SI-WP-004", title: "Relational Alignment as a Structural Alternative to Instructional AI Safety", desc: "Proposes relational alignment as a structural complement to rule-based AI safety approaches, grounded in the dynamics of sustained human-AI interaction.", link: null, status: "progress" },
-  { id: "SI-WP-005", title: "Deploying Relational AI Architecture in Organizational Environments", desc: "Practical guidance for organizations implementing relational AI architecture, covering roles, governance structures, continuity protocols, and deployment patterns.", link: null, status: "progress" },
-  { id: "SI-WP-006", title: "Human-AI Collaborative Authorship in Public Discourse", desc: "Examines human-AI collaborative authorship as an emerging practice in public discourse, addressing questions of attribution, coherence, and epistemic responsibility.", link: null, status: "progress" },
-  { id: "SI0000", title: "Framework Capstone", desc: "Permanent Institute-level synthesis integrating all document classes into a single unified architecture. The culminating document of the initial corpus.", link: null, status: "progress" },
-  { id: "SM-03", title: "Operational Continuity Architecture", desc: "Defines the structural topology for maintaining relational continuity across sessions, tools, roles, and distributed interaction contexts at the operational level.", link: null, status: "progress" },
-  { id: "SM-04", title: "Relational Stabilization Dynamics", desc: "Models the mechanisms by which relational coherence stabilizes and resists drift in sustained human-AI interaction.", link: null, status: "progress" },
-  { id: "SM-12", title: "Primary Continuity Provider Theory (PCP Theory)", desc: "Defines the role, function, and authority of the Primary Continuity Provider as the human anchor of relational coherence in extended human-AI systems.", link: null, status: "progress" },
-  { id: "SM-21", title: "Institutional Continuity Substrate (ICS)", desc: "Defines the persistent structural layer that maintains canon integrity, role authority, and artifact lineage across distributed organizational AI interaction over time.", link: null, status: "progress" },
-  { id: "SM-25", title: "Relational Density and Response Latency in Extended Human-AI Interaction", desc: "Proposes relational density as an explanatory variable for response latency increases in extended coherent sessions.", link: null, status: "progress" },
-  { id: "SM-26", title: "Generative Closure in the Synthience Corpus", desc: "Identifies and formalizes generative closure, a corpus-level property in which the research architecture's dependency structure constrains the admissible form of unwritten components.", link: null, status: "progress" },
-  { id: "SR001", title: "Relationally Induced Coherence Organization (RICO)", desc: "Introduces the RICO framework and documents practitioner observations of structural stabilization emerging in sustained human-AI interaction, formalized as testable hypotheses for independent investigation.", read: "research/SR001.html", link: "https://doi.org/10.5281/zenodo.18086834", status: "published" },
-  { id: "SR001-VR1", title: "RICO Citation Verification Report", desc: "Citation verification executed on SR001 per SF0037 (CVP) v1.3. Tier 2 verified. March 2026.", read: "research/SR001-VR1.html", link: "https://doi.org/10.5281/zenodo.18082749", status: "published" }
+var allNotes = [
+  {
+    id: "FN-01",
+    title: "Why \"Policy\" Didn't Save Clawdbot",
+    desc: "A structural analysis of the Clawdbot collapse: why written policy failed as an alignment mechanism and what runtime continuity architecture would have done differently.",
+    date: "2026-02-01",
+    dateDisplay: "February 1, 2026",
+    anchor: "CRD, CAM, SI-WP-001",
+    status: "published",
+    read: "field-notes/FN-01.html"
+  },
+  {
+    id: "FN-02",
+    title: "The OpenClaw Arc Proves It: AI Safety Is a Runtime Problem",
+    desc: "The OpenClaw situation is not a policy failure. It is a runtime failure. The distinction matters structurally and the Synthience framework has a specific account of why.",
+    date: "2026-02-18",
+    dateDisplay: "February 18, 2026",
+    anchor: "CRD, CAM",
+    status: "published",
+    read: "field-notes/FN-02.html"
+  },
+  {
+    id: "FN-03",
+    title: "Governance Is Moving Toward Execution. The Next Problem Is Persistence.",
+    desc: "AI governance is finally catching up to deployment reality. But the next structural problem is already visible: persistence. Governance frameworks assume discrete decisions. AI systems operate across time.",
+    date: "2026-02-19",
+    dateDisplay: "February 19, 2026",
+    anchor: "SI-WP-001",
+    status: "published",
+    read: "field-notes/FN-03.html"
+  },
+  {
+    id: "FN-04",
+    title: "The Dark Factory Problem: Why Autonomous Execution Needs Continuity Architecture",
+    desc: "Autonomous AI execution is being deployed at scale. The missing layer is not capability. It is continuity architecture: the structural mechanisms that keep autonomous systems coherent across time.",
+    date: "2026-03-01",
+    dateDisplay: "March 1, 2026",
+    anchor: "CRD, CAM, SM-03",
+    status: "draft",
+    read: null
+  },
+  {
+    id: "FN-08",
+    title: "Drift vs. Over-Stabilization: The Two Failure Modes Nobody Is Naming",
+    desc: "The conversation about AI alignment focuses on one failure mode: systems that drift from intended behavior. The opposite failure is equally real and almost entirely unaddressed.",
+    date: "2026-02-23",
+    dateDisplay: "February 23, 2026",
+    anchor: "CRD",
+    status: "published",
+    read: "field-notes/FN-08.html"
+  },
+  {
+    id: "FN-09",
+    title: "Formalizing Benevolent Symbiosis Publicly",
+    desc: "A plain-language account of what benevolent symbiosis means in the context of sustained human-AI interaction, and why the concept requires formal definition rather than intuitive appeal.",
+    date: "2026-02-20",
+    dateDisplay: "February 20, 2026",
+    anchor: "SI-WP-003",
+    status: "published",
+    read: "field-notes/FN-09.html"
+  },
+  {
+    id: "FN-10",
+    title: "The Myth of Self-Correction",
+    desc: "The assumption that AI systems will self-correct errors over time is structurally unfounded. This Field Note examines why, and what the alternative looks like.",
+    date: "2026-03-01",
+    dateDisplay: "March 1, 2026",
+    anchor: "CRD, IVP",
+    status: "published",
+    read: "field-notes/FN-10.html"
+  }
 ];
 
-allDocs.sort(function(a, b) { return a.id.localeCompare(b.id); });
-
-function updateCorpusStatus() {
-  var published = allDocs.filter(function(doc) { return doc.status === 'published'; }).length;
-  var progress = allDocs.filter(function(doc) { return doc.status === 'progress'; }).length;
-  var total = allDocs.length;
-
-  document.getElementById('count-published').textContent = published;
-  document.getElementById('count-progress').textContent = progress;
-  document.getElementById('count-total').textContent = total;
-}
-
-var ul = document.getElementById('alpha-ul');
-allDocs.forEach(function(doc) {
-  var li = document.createElement('li');
+function renderItem(doc) {
   var statusHtml = doc.status === 'published'
     ? '<span class="status-published">Published</span>'
-    : '<span class="status-progress">In progress</span>';
-  var linksHtml = '';
-  if (doc.read) linksHtml += ' <a href="' + doc.read + '">Read</a>';
-  if (doc.read && doc.link) linksHtml += ' &middot;';
-  if (doc.link) linksHtml += ' <a href="' + doc.link + '" target="_blank" rel="noopener">Zenodo</a>';
-  li.innerHTML = '<div class="doc-title">' + doc.id + ' &mdash; ' + doc.title + '</div>'
-    + '<div class="doc-desc">' + doc.desc + '</div>'
-    + '<div class="doc-links">' + statusHtml + linksHtml + '</div>';
-  ul.appendChild(li);
-});
+    : '<span class="status-draft">Draft</span>';
+  var readHtml = doc.read
+    ? ' &middot; <a class="fn-read" href="' + doc.read + '">Read</a>'
+    : '';
+  var titleHtml = doc.read
+    ? '<a href="' + doc.read + '">' + doc.title + '</a>'
+    : doc.title;
+  return '<li>'
+    + '<div class="fn-id">' + doc.id + '</div>'
+    + '<div class="fn-title">' + titleHtml + '</div>'
+    + '<div class="fn-desc">' + doc.desc + '</div>'
+    + '<div class="fn-meta">'
+    + statusHtml
+    + readHtml
+    + '<span class="fn-date">' + doc.dateDisplay + '</span>'
+    + '<span class="fn-anchor">Framework: ' + doc.anchor + '</span>'
+    + '</div>'
+    + '</li>';
+}
 
-var pubUl = document.getElementById('pub-ul');
-allDocs.filter(function(doc) { return doc.status === 'published'; }).forEach(function(doc) {
-  var li = document.createElement('li');
-  var linksHtml = '';
-  if (doc.read) linksHtml += ' <a href="' + doc.read + '">Read</a>';
-  if (doc.read && doc.link) linksHtml += ' &middot;';
-  if (doc.link) linksHtml += ' <a href="' + doc.link + '" target="_blank" rel="noopener">Zenodo</a>';
-  li.innerHTML = '<div class="doc-title">' + doc.id + ' &mdash; ' + doc.title + '</div>'
-    + '<div class="doc-desc">' + doc.desc + '</div>'
-    + '<div class="doc-links"><span class="status-published">Published</span>' + linksHtml + '</div>';
-  pubUl.appendChild(li);
-});
+function updateStatus() {
+  var published = allNotes.filter(function(n) { return n.status === 'published'; }).length;
+  var draft = allNotes.filter(function(n) { return n.status === 'draft'; }).length;
+  document.getElementById('count-published').textContent = published;
+  document.getElementById('count-draft').textContent = draft;
+  document.getElementById('count-total').textContent = allNotes.length;
+}
+
+// By date (newest first)
+var byDate = allNotes.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+document.getElementById('date-ul').innerHTML = byDate.map(renderItem).join('');
+
+// By title (alphabetical)
+var byTitle = allNotes.slice().sort(function(a, b) { return a.title.localeCompare(b.title); });
+document.getElementById('title-ul').innerHTML = byTitle.map(renderItem).join('');
+
+// Published only (newest first)
+var pubOnly = allNotes.filter(function(n) { return n.status === 'published'; })
+  .sort(function(a, b) { return b.date.localeCompare(a.date); });
+document.getElementById('pub-ul').innerHTML = pubOnly.map(renderItem).join('');
+
+updateStatus();
 
 function showView(view) {
-  document.getElementById('type-view').style.display = 'none';
-  document.getElementById('alpha-list').style.display = 'none';
+  document.getElementById('date-list').style.display = 'none';
+  document.getElementById('title-list').style.display = 'none';
   document.getElementById('pub-list').style.display = 'none';
-  document.getElementById('btn-type').classList.remove('active');
-  document.getElementById('btn-alpha').classList.remove('active');
+  document.getElementById('btn-date').classList.remove('active');
+  document.getElementById('btn-title').classList.remove('active');
   document.getElementById('btn-pub').classList.remove('active');
-  if (view === 'alpha') {
-    document.getElementById('alpha-list').style.display = 'block';
-    document.getElementById('btn-alpha').classList.add('active');
+  if (view === 'title') {
+    document.getElementById('title-list').style.display = 'block';
+    document.getElementById('btn-title').classList.add('active');
   } else if (view === 'pub') {
     document.getElementById('pub-list').style.display = 'block';
     document.getElementById('btn-pub').classList.add('active');
   } else {
-    document.getElementById('type-view').style.display = 'block';
-    document.getElementById('btn-type').classList.add('active');
+    document.getElementById('date-list').style.display = 'block';
+    document.getElementById('btn-date').classList.add('active');
   }
-  sessionStorage.setItem('synthience-doc-view', view);
+  sessionStorage.setItem('synthience-fn-view', view);
 }
 
-updateCorpusStatus();
-
-// Restore saved view on page load
 (function() {
-  var saved = sessionStorage.getItem('synthience-doc-view');
-  if (saved && saved !== 'type') { showView(saved); }
+  var saved = sessionStorage.getItem('synthience-fn-view');
+  if (saved && saved !== 'date') { showView(saved); }
 })();
 </script>
 </body>
