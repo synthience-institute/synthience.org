@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
-    .study-shell { max-width: 1400px; margin: 0 auto; padding: 2rem 2rem 4rem 2rem; }
+    .study-shell { padding: 0; }
     .study-title { font-size: 1.7rem; font-weight: 500; color: #111; margin: 0 0 0.3rem 0; }
     .study-byline { font-size: 0.95rem; color: #888; font-style: italic; margin: 0 0 2rem 0; }
     .study-interactive { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 3rem; }
@@ -85,7 +85,7 @@
       .study-below { flex-direction: column; align-items: flex-start; }
       .study-sidebar { width: 270px !important; min-width: 270px !important; max-width: 270px !important; flex-shrink: 0 !important; flex-grow: 0 !important; }
       .study-description { width: 100%; min-width: 0; }
-      .study-shell { padding: 1rem; }
+      .study-shell { padding: 0; }
     }
     /* Hint line */
     .study-hint { font-size: 0.85rem; color: #999; font-style: italic; margin: 0 0 1rem 0; }
@@ -107,8 +107,9 @@
 </header>
 <script src="assets/js/nav.js"></script>
 
-<main class="study-shell">
+<main class="content">
 
+<div class="study-shell">
   <div style="margin-bottom: 0.15rem;">
     <span style="font-size:1rem; font-weight:500; color:#333; font-family:'Lora',serif;">Relational Coherence: Field Study</span>
   </div>
@@ -266,6 +267,7 @@
     </div>
   </div>
 
+</div>
 
 </main>
 
