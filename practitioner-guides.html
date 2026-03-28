@@ -119,8 +119,8 @@ var allGuides = [
     id: "PG-00",
     title: "How to Work Reliably With Conversational AI Over Time",
     desc: "The gateway guide. Why AI systems behave inconsistently across sessions, what structural forces cause it, and what practitioners can do to establish durable working patterns.",
-    date: "2026-01-28",
-    dateDisplay: "January 28, 2026",
+    date: "2026-03-28",
+    dateDisplay: "March 28, 2026",
     anchor: "Framework-neutral",
     read: "practitioner-guides/PG-00.html"
   }
@@ -132,8 +132,7 @@ function renderItem(doc) {
     + '<div class="fn-title"><a href="' + doc.read + '">' + doc.title + '</a></div>'
     + '<div class="fn-desc">' + doc.desc + '</div>'
     + '<div class="fn-meta">'
-    + '<span class="status-published">Published</span>'
-    + ' &middot; <a class="fn-read" href="' + doc.read + '">Read</a>'
+    + '<a class="fn-read" href="' + doc.read + '">Read &rarr;</a>'
     + '<span class="fn-date">' + doc.dateDisplay + '</span>'
     + '</div>'
     + '</li>';
