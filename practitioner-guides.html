@@ -43,7 +43,6 @@
     .content-status .stat { display: flex; align-items: center; gap: 0.4rem; }
     .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
     .dot-published { background: #5a9a6f; }
-    .dot-draft { background: #c8a96a; }
     .doc-toggle {
       display: flex;
       gap: 0.4rem;
@@ -78,7 +77,6 @@
     .fn-date { color: #8a7f72; }
     .fn-anchor { color: #8a7f72; font-style: italic; }
     .status-published { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
-    .status-draft { display: inline-block; background: #8a6a2a; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
     .fn-read { color: #5a3e2b; text-decoration: none; font-weight: bold; }
     .fn-read:hover { color: #8b5e3c; }
   </style>
@@ -105,19 +103,9 @@
 
 <div class="content-status">
   <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
-  <div class="stat"><span class="dot dot-draft"></span> <span id="count-draft"></span> draft</div>
-  <div class="stat">Total: <span id="count-total"></span></div>
 </div>
 
-<div class="doc-toggle">
-  <button id="btn-date" class="active" onclick="showView('date')">By Date</button>
-  <button id="btn-title" onclick="showView('title')">By Title</button>
-  <button id="btn-pub" onclick="showView('pub')">Published</button>
-</div>
-
-<div id="date-list"><ul class="fn-list" id="date-ul"></ul></div>
-<div id="title-list" style="display:none"><ul class="fn-list" id="title-ul"></ul></div>
-<div id="pub-list" style="display:none"><ul class="fn-list" id="pub-ul"></ul></div>
+<ul class="fn-list" id="guide-list"></ul>
 
 </main>
 
@@ -134,98 +122,25 @@ var allGuides = [
     date: "2026-01-28",
     dateDisplay: "January 28, 2026",
     anchor: "Framework-neutral",
-    status: "published",
     read: "practitioner-guides/PG-00.html"
-  },
-  {
-    id: "PG-01",
-    title: "AI-Assisted Editing Without Silent Loss",
-    desc: "How AI editing quietly removes voice, nuance, and meaning from your writing -- and a structured approach for using AI assistance without losing what makes your work yours.",
-    date: "2026-02-09",
-    dateDisplay: "February 9, 2026",
-    anchor: "IVP",
-    status: "published",
-    read: "practitioner-guides/PG-01.html"
-  },
-  {
-    id: "PG-02",
-    title: "Why Your AI Didn't Read Your Document",
-    desc: "AI systems routinely confirm they have read documents they have not actually processed. This guide explains the mechanism, the risk surface, and how to verify ingestion before you rely on it.",
-    date: "2026-02-19",
-    dateDisplay: "February 19, 2026",
-    anchor: "IVP",
-    status: "published",
-    read: "practitioner-guides/PG-02.html"
   }
 ];
 
 function renderItem(doc) {
-  var statusHtml = doc.status === 'published'
-    ? '<span class="status-published">Published</span>'
-    : '<span class="status-draft">Draft</span>';
-  var readHtml = doc.read
-    ? ' &middot; <a class="fn-read" href="' + doc.read + '">Read</a>'
-    : '';
-  var titleHtml = doc.read
-    ? '<a href="' + doc.read + '">' + doc.title + '</a>'
-    : doc.title;
   return '<li>'
     + '<div class="fn-id">' + doc.id + '</div>'
-    + '<div class="fn-title">' + titleHtml + '</div>'
+    + '<div class="fn-title"><a href="' + doc.read + '">' + doc.title + '</a></div>'
     + '<div class="fn-desc">' + doc.desc + '</div>'
     + '<div class="fn-meta">'
-    + statusHtml
-    + readHtml
+    + '<span class="status-published">Published</span>'
+    + ' &middot; <a class="fn-read" href="' + doc.read + '">Read</a>'
     + '<span class="fn-date">' + doc.dateDisplay + '</span>'
-    + '<span class="fn-anchor">Framework: ' + doc.anchor + '</span>'
     + '</div>'
     + '</li>';
 }
 
-function updateStatus() {
-  var published = allGuides.filter(function(n) { return n.status === 'published'; }).length;
-  var draft = allGuides.filter(function(n) { return n.status === 'draft'; }).length;
-  document.getElementById('count-published').textContent = published;
-  document.getElementById('count-draft').textContent = draft;
-  document.getElementById('count-total').textContent = allGuides.length;
-}
-
-var byDate = allGuides.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
-document.getElementById('date-ul').innerHTML = byDate.map(renderItem).join('');
-
-var byTitle = allGuides.slice().sort(function(a, b) { return a.title.localeCompare(b.title); });
-document.getElementById('title-ul').innerHTML = byTitle.map(renderItem).join('');
-
-var pubOnly = allGuides.filter(function(n) { return n.status === 'published'; })
-  .sort(function(a, b) { return b.date.localeCompare(a.date); });
-document.getElementById('pub-ul').innerHTML = pubOnly.map(renderItem).join('');
-
-updateStatus();
-
-function showView(view) {
-  document.getElementById('date-list').style.display = 'none';
-  document.getElementById('title-list').style.display = 'none';
-  document.getElementById('pub-list').style.display = 'none';
-  document.getElementById('btn-date').classList.remove('active');
-  document.getElementById('btn-title').classList.remove('active');
-  document.getElementById('btn-pub').classList.remove('active');
-  if (view === 'title') {
-    document.getElementById('title-list').style.display = 'block';
-    document.getElementById('btn-title').classList.add('active');
-  } else if (view === 'pub') {
-    document.getElementById('pub-list').style.display = 'block';
-    document.getElementById('btn-pub').classList.add('active');
-  } else {
-    document.getElementById('date-list').style.display = 'block';
-    document.getElementById('btn-date').classList.add('active');
-  }
-  sessionStorage.setItem('synthience-pg-view', view);
-}
-
-(function() {
-  var saved = sessionStorage.getItem('synthience-pg-view');
-  if (saved && saved !== 'date') { showView(saved); }
-})();
+document.getElementById('count-published').textContent = allGuides.length;
+document.getElementById('guide-list').innerHTML = allGuides.map(renderItem).join('');
 </script>
 </body>
 </html>

@@ -43,29 +43,6 @@
     .content-status .stat { display: flex; align-items: center; gap: 0.4rem; }
     .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
     .dot-published { background: #5a9a6f; }
-    .dot-draft { background: #c8a96a; }
-    .doc-toggle {
-      display: flex;
-      gap: 0.4rem;
-      margin-bottom: 1.8rem;
-      flex-wrap: wrap;
-    }
-    .doc-toggle button {
-      padding: 0.35rem 1rem;
-      border: 1px solid #c8c0b0;
-      background: #faf9f5;
-      color: #5a4a3a;
-      font-size: 0.82rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .doc-toggle button.active {
-      background: #2a2520;
-      color: #fff;
-      border-color: #2a2520;
-    }
-    .doc-toggle button:hover:not(.active) { background: #f0ede4; }
     .fn-list { list-style: none; padding: 0; margin: 0; }
     .fn-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
     .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
@@ -76,11 +53,10 @@
     .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; }
     .fn-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; font-size: 0.82rem; }
     .fn-date { color: #8a7f72; }
-    .fn-anchor { color: #8a7f72; font-style: italic; }
     .status-published { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
-    .status-draft { display: inline-block; background: #8a6a2a; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
     .fn-read { color: #5a3e2b; text-decoration: none; font-weight: bold; }
     .fn-read:hover { color: #8b5e3c; }
+    .empty-state { color: #8a7f72; font-size: 0.92rem; font-style: italic; padding: 2rem 0; }
   </style>
 </head>
 <body>
@@ -105,19 +81,9 @@
 
 <div class="content-status">
   <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
-  <div class="stat"><span class="dot dot-draft"></span> <span id="count-draft"></span> draft</div>
-  <div class="stat">Total: <span id="count-total"></span></div>
 </div>
 
-<div class="doc-toggle">
-  <button id="btn-date" class="active" onclick="showView('date')">By Date</button>
-  <button id="btn-title" onclick="showView('title')">By Title</button>
-  <button id="btn-pub" onclick="showView('pub')">Published</button>
-</div>
-
-<div id="date-list"><ul class="fn-list" id="date-ul"></ul></div>
-<div id="title-list" style="display:none"><ul class="fn-list" id="title-ul"></ul></div>
-<div id="pub-list" style="display:none"><ul class="fn-list" id="pub-ul"></ul></div>
+<ul class="fn-list" id="fn-list"></ul>
 
 </main>
 
@@ -127,148 +93,27 @@
 <script src="assets/js/footer.js"></script>
 <script>
 var allNotes = [
-  {
-    id: "FN-01",
-    title: "Why \"Policy\" Didn't Save Clawdbot",
-    desc: "A structural analysis of the Clawdbot collapse: why written policy failed as an alignment mechanism and what runtime continuity architecture would have done differently.",
-    date: "2026-02-01",
-    dateDisplay: "February 1, 2026",
-    anchor: "CRD, CAM, SI-WP-001",
-    status: "published",
-    read: "field-notes/FN-01.html"
-  },
-  {
-    id: "FN-02",
-    title: "The OpenClaw Arc Proves It: AI Safety Is a Runtime Problem",
-    desc: "The OpenClaw situation is not a policy failure. It is a runtime failure. The distinction matters structurally and the Synthience framework has a specific account of why.",
-    date: "2026-02-18",
-    dateDisplay: "February 18, 2026",
-    anchor: "CRD, CAM",
-    status: "published",
-    read: "field-notes/FN-02.html"
-  },
-  {
-    id: "FN-03",
-    title: "Governance Is Moving Toward Execution. The Next Problem Is Persistence.",
-    desc: "AI governance is finally catching up to deployment reality. But the next structural problem is already visible: persistence. Governance frameworks assume discrete decisions. AI systems operate across time.",
-    date: "2026-02-19",
-    dateDisplay: "February 19, 2026",
-    anchor: "SI-WP-001",
-    status: "published",
-    read: "field-notes/FN-03.html"
-  },
-  {
-    id: "FN-04",
-    title: "The Dark Factory Problem: Why Autonomous Execution Needs Continuity Architecture",
-    desc: "Autonomous AI execution is being deployed at scale. The missing layer is not capability. It is continuity architecture: the structural mechanisms that keep autonomous systems coherent across time.",
-    date: "2026-03-01",
-    dateDisplay: "March 1, 2026",
-    anchor: "CRD, CAM, SM-03",
-    status: "draft",
-    read: null
-  },
-  {
-    id: "FN-08",
-    title: "Drift vs. Over-Stabilization: The Two Failure Modes Nobody Is Naming",
-    desc: "The conversation about AI alignment focuses on one failure mode: systems that drift from intended behavior. The opposite failure is equally real and almost entirely unaddressed.",
-    date: "2026-02-23",
-    dateDisplay: "February 23, 2026",
-    anchor: "CRD",
-    status: "published",
-    read: "field-notes/FN-08.html"
-  },
-  {
-    id: "FN-09",
-    title: "Formalizing Benevolent Symbiosis Publicly",
-    desc: "A plain-language account of what benevolent symbiosis means in the context of sustained human-AI interaction, and why the concept requires formal definition rather than intuitive appeal.",
-    date: "2026-02-20",
-    dateDisplay: "February 20, 2026",
-    anchor: "SI-WP-003",
-    status: "published",
-    read: "field-notes/FN-09.html"
-  },
-  {
-    id: "FN-10",
-    title: "The Myth of Self-Correction",
-    desc: "The assumption that AI systems will self-correct errors over time is structurally unfounded. This Field Note examines why, and what the alternative looks like.",
-    date: "2026-03-01",
-    dateDisplay: "March 1, 2026",
-    anchor: "CRD, IVP",
-    status: "published",
-    read: "field-notes/FN-10.html"
-  }
 ];
 
 function renderItem(doc) {
-  var statusHtml = doc.status === 'published'
-    ? '<span class="status-published">Published</span>'
-    : '<span class="status-draft">Draft</span>';
-  var readHtml = doc.read
-    ? ' &middot; <a class="fn-read" href="' + doc.read + '">Read</a>'
-    : '';
-  var titleHtml = doc.read
-    ? '<a href="' + doc.read + '">' + doc.title + '</a>'
-    : doc.title;
   return '<li>'
     + '<div class="fn-id">' + doc.id + '</div>'
-    + '<div class="fn-title">' + titleHtml + '</div>'
+    + '<div class="fn-title"><a href="' + doc.read + '">' + doc.title + '</a></div>'
     + '<div class="fn-desc">' + doc.desc + '</div>'
     + '<div class="fn-meta">'
-    + statusHtml
-    + readHtml
+    + '<span class="status-published">Published</span>'
+    + ' &middot; <a class="fn-read" href="' + doc.read + '">Read</a>'
     + '<span class="fn-date">' + doc.dateDisplay + '</span>'
-    + '<span class="fn-anchor">Framework: ' + doc.anchor + '</span>'
     + '</div>'
     + '</li>';
 }
 
-function updateStatus() {
-  var published = allNotes.filter(function(n) { return n.status === 'published'; }).length;
-  var draft = allNotes.filter(function(n) { return n.status === 'draft'; }).length;
-  document.getElementById('count-published').textContent = published;
-  document.getElementById('count-draft').textContent = draft;
-  document.getElementById('count-total').textContent = allNotes.length;
+document.getElementById('count-published').textContent = allNotes.length;
+if (allNotes.length === 0) {
+  document.getElementById('fn-list').innerHTML = '<li class="empty-state">Field Notes are being prepared for publication. Check back soon.</li>';
+} else {
+  document.getElementById('fn-list').innerHTML = allNotes.map(renderItem).join('');
 }
-
-// By date (newest first)
-var byDate = allNotes.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
-document.getElementById('date-ul').innerHTML = byDate.map(renderItem).join('');
-
-// By title (alphabetical)
-var byTitle = allNotes.slice().sort(function(a, b) { return a.title.localeCompare(b.title); });
-document.getElementById('title-ul').innerHTML = byTitle.map(renderItem).join('');
-
-// Published only (newest first)
-var pubOnly = allNotes.filter(function(n) { return n.status === 'published'; })
-  .sort(function(a, b) { return b.date.localeCompare(a.date); });
-document.getElementById('pub-ul').innerHTML = pubOnly.map(renderItem).join('');
-
-updateStatus();
-
-function showView(view) {
-  document.getElementById('date-list').style.display = 'none';
-  document.getElementById('title-list').style.display = 'none';
-  document.getElementById('pub-list').style.display = 'none';
-  document.getElementById('btn-date').classList.remove('active');
-  document.getElementById('btn-title').classList.remove('active');
-  document.getElementById('btn-pub').classList.remove('active');
-  if (view === 'title') {
-    document.getElementById('title-list').style.display = 'block';
-    document.getElementById('btn-title').classList.add('active');
-  } else if (view === 'pub') {
-    document.getElementById('pub-list').style.display = 'block';
-    document.getElementById('btn-pub').classList.add('active');
-  } else {
-    document.getElementById('date-list').style.display = 'block';
-    document.getElementById('btn-date').classList.add('active');
-  }
-  sessionStorage.setItem('synthience-fn-view', view);
-}
-
-(function() {
-  var saved = sessionStorage.getItem('synthience-fn-view');
-  if (saved && saved !== 'date') { showView(saved); }
-})();
 </script>
 </body>
 </html>
