@@ -81,14 +81,33 @@
   }
   .doc-title { font-weight: 600; font-size: 0.97rem; color: #2a2520; }
   .doc-desc { font-size: 0.9rem; color: #555; margin-top: 0.25rem; line-height: 1.55; }
-  .doc-links { margin-top: 0.35rem; font-size: 0.88rem; display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+  .doc-links { margin-top: 0.35rem; font-size: 0.88rem; display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; }
   .doc-date { font-size: 0.8rem; color: #8a7f72; }
   .doc-links a {
+    display: inline-block;
     text-decoration: none;
-    color: #0645ad;
-    font-size: 0.83rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 0.15rem 0.6rem;
+    transition: all 0.15s;
   }
-  .doc-links a:hover { text-decoration: underline; }
+  .doc-links a[href*="research/"] {
+    color: #5a3e2b;
+    border: 1px solid #5a3e2b;
+  }
+  .doc-links a[href*="research/"]:hover {
+    background: #5a3e2b;
+    color: #fff;
+  }
+  .doc-links a[href*="zenodo"], .doc-links a[href*="doi.org"] {
+    color: #8a7f72;
+    border: 1px solid #8a7f72;
+  }
+  .doc-links a[href*="zenodo"]:hover, .doc-links a[href*="doi.org"]:hover {
+    background: #8a7f72;
+    color: #fff;
+  }
   .status-published {
     font-size: 0.8rem;
     color: #5a9a6f;
@@ -166,7 +185,7 @@ Each published document is assigned a persistent DOI upon release. Documents mar
   <li>
     <div class="doc-title">FPD-01 &mdash; Synthience: Public Definition</div>
     <div class="doc-desc">Defines the term Synthience in a public-facing, non-anthropomorphic form intended for general reference and citation.</div>
-    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">December 23, 2025</span> <a href="research/FPD-01.html">Read</a> &middot; <a href="https://doi.org/10.5281/zenodo.18087890" target="_blank" rel="noopener">Zenodo</a></div>
+    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">December 23, 2025</span> <a href="research/FPD-01.html">Read</a> <a href="https://doi.org/10.5281/zenodo.18087890" target="_blank" rel="noopener">Zenodo</a></div>
   </li>
 
   <li>
@@ -260,25 +279,25 @@ Each published document is assigned a persistent DOI upon release. Documents mar
   <li>
     <div class="doc-title">SF0037 &mdash; Citation Verification Protocol (CVP)</div>
     <div class="doc-desc">Defines a structured methodology for AI-assisted citation verification, enabling auditable assessment of research claims against their cited sources.</div>
-    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">December 23, 2025</span> <a href="research/SF0037.html">Read</a> &middot; <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">Zenodo</a></div>
+    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">December 23, 2025</span> <a href="research/SF0037.html">Read</a> <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">Zenodo</a></div>
   </li>
 
   <li>
     <div class="doc-title">SF0038 &mdash; Ingestion Verification Protocol (IVP)</div>
     <div class="doc-desc">Defines a verifiable methodology for determining whether an AI system has genuinely processed a supplied document prior to downstream reasoning or analysis.</div>
-    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">January 18, 2026</span> <a href="research/SF0038.html">Read</a> &middot; <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">Zenodo</a></div>
+    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">January 18, 2026</span> <a href="research/SF0038.html">Read</a> <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">Zenodo</a></div>
   </li>
 
   <li>
     <div class="doc-title">SF0039 &mdash; Context Representation Drift (CRD)</div>
     <div class="doc-desc">Formal analytical framework for identifying, measuring, and reasoning about semantic drift in AI system behavior across extended interaction sequences.</div>
-    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">January 18, 2026</span> <a href="research/SF0039.html">Read</a> &middot; <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">Zenodo</a></div>
+    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">January 18, 2026</span> <a href="research/SF0039.html">Read</a> <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">Zenodo</a></div>
   </li>
 
   <li>
     <div class="doc-title">SF0040 &mdash; Theoretical Coherence Assurance Protocol (TCAP)</div>
     <div class="doc-desc">Structured process for stress-testing theoretical constructs and framework components for internal consistency, adversarial robustness, and cross-document alignment prior to publication.</div>
-    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">March 21, 2026</span> <a href="research/SF0040.html">Read</a> &middot; <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">Zenodo</a></div>
+    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">March 21, 2026</span> <a href="research/SF0040.html">Read</a> <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">Zenodo</a></div>
   </li>
 
 </ul>
@@ -380,13 +399,13 @@ Each published document is assigned a persistent DOI upon release. Documents mar
   <li>
     <div class="doc-title">SR001 &mdash; Relationally Induced Coherence Organization (RICO)</div>
     <div class="doc-desc">Introduces the RICO framework and documents practitioner observations of structural stabilization emerging in sustained human-AI interaction, formalized as testable hypotheses for independent investigation.</div>
-    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">December 23, 2025</span> <a href="research/SR001.html">Read</a> &middot; <a href="https://doi.org/10.5281/zenodo.18086834" target="_blank" rel="noopener">Zenodo</a></div>
+    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">December 23, 2025</span> <a href="research/SR001.html">Read</a> <a href="https://doi.org/10.5281/zenodo.18086834" target="_blank" rel="noopener">Zenodo</a></div>
   </li>
 
   <li>
     <div class="doc-title">SR001-VR1 &mdash; RICO Citation Verification Report</div>
     <div class="doc-desc">Citation verification executed on SR001 per SF0037 (CVP) v1.3. Tier 2 verified. March 2026.</div>
-    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">December 23, 2025</span> <a href="research/SR001-VR1.html">Read</a> &middot; <a href="https://doi.org/10.5281/zenodo.18082749" target="_blank" rel="noopener">Zenodo</a></div>
+    <div class="doc-links"><span class="status-published">Published</span> <span class="doc-date">December 23, 2025</span> <a href="research/SR001-VR1.html">Read</a> <a href="https://doi.org/10.5281/zenodo.18082749" target="_blank" rel="noopener">Zenodo</a></div>
   </li>
 
 </ul>
@@ -467,7 +486,7 @@ allDocs.forEach(function(doc) {
     : '<span class="status-progress">In progress</span>';
   var linksHtml = '';
   if (doc.read) linksHtml += ' <a href="' + doc.read + '">Read</a>';
-  if (doc.read && doc.link) linksHtml += ' &middot;';
+  
   if (doc.link) linksHtml += ' <a href="' + doc.link + '" target="_blank" rel="noopener">Zenodo</a>';
   var dateHtml = doc.date ? '<span class="doc-date">' + doc.date + '</span>' : '';
   li.innerHTML = '<div class="doc-title">' + doc.id + ' &mdash; ' + doc.title + '</div>'
@@ -481,7 +500,7 @@ allDocs.filter(function(doc) { return doc.status === 'published'; }).forEach(fun
   var li = document.createElement('li');
   var linksHtml = '';
   if (doc.read) linksHtml += ' <a href="' + doc.read + '">Read</a>';
-  if (doc.read && doc.link) linksHtml += ' &middot;';
+  
   if (doc.link) linksHtml += ' <a href="' + doc.link + '" target="_blank" rel="noopener">Zenodo</a>';
   var dateHtml = doc.date ? '<span class="doc-date">' + doc.date + '</span>' : '';
   li.innerHTML = '<div class="doc-title">' + doc.id + ' &mdash; ' + doc.title + '</div>'
