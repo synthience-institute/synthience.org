@@ -76,7 +76,30 @@
     .fn-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; font-size: 0.82rem; }
     .fn-date { color: #8a7f72; }
     .fn-anchor { color: #8a7f72; font-style: italic; }
-    .status-published { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
+    .sort-toggle {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .sort-toggle span { font-size: 0.82rem; color: #8a7f72; margin-right: 0.3rem; }
+    .sort-toggle button {
+      padding: 0.25rem 0.8rem;
+      border: 1px solid #c8c0b0;
+      background: #faf9f5;
+      color: #5a4a3a;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .sort-toggle button.active {
+      background: #2a2520;
+      color: #fff;
+      border-color: #2a2520;
+    }
+    .sort-toggle button:hover:not(.active) { background: #f0ede4; }
     .fn-read { display: inline-block; color: #5a3e2b; text-decoration: none; font-size: 0.8rem; font-weight: 500; border: 1px solid #5a3e2b; border-radius: 3px; padding: 0.15rem 0.6rem; transition: all 0.15s; }
     .fn-read:hover { background: #5a3e2b; color: #fff; }
   </style>
@@ -103,6 +126,13 @@
 
 <div class="content-status">
   <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
+</div>
+
+<div class="sort-toggle">
+  <span>Sort:</span>
+  <button id="sort-date" class="active" onclick="sortGuides('date')">Date</button>
+  <button id="sort-title" onclick="sortGuides('title')">Title</button>
+  <button id="sort-id" onclick="sortGuides('id')">ID</button>
 </div>
 
 <ul class="fn-list" id="guide-list"></ul>
@@ -148,7 +178,22 @@ function renderItem(doc) {
 }
 
 document.getElementById('count-published').textContent = allGuides.length;
-document.getElementById('guide-list').innerHTML = allGuides.map(renderItem).join('');
+
+function sortGuides(by) {
+  var sorted = allGuides.slice();
+  if (by === 'date') {
+    sorted.sort(function(a, b) { return b.date.localeCompare(a.date); });
+  } else if (by === 'title') {
+    sorted.sort(function(a, b) { return a.title.localeCompare(b.title); });
+  } else if (by === 'id') {
+    sorted.sort(function(a, b) { return a.id.localeCompare(b.id); });
+  }
+  document.querySelectorAll('.sort-toggle button').forEach(function(btn) { btn.classList.remove('active'); });
+  document.getElementById('sort-' + by).classList.add('active');
+  document.getElementById('guide-list').innerHTML = sorted.map(renderItem).join('');
+}
+
+sortGuides('date');
 </script>
 </body>
 </html>

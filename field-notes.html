@@ -57,6 +57,30 @@
     .fn-read { display: inline-block; color: #5a3e2b; text-decoration: none; font-size: 0.8rem; font-weight: 500; border: 1px solid #5a3e2b; border-radius: 3px; padding: 0.15rem 0.6rem; transition: all 0.15s; }
     .fn-read:hover { background: #5a3e2b; color: #fff; }
     .empty-state { color: #8a7f72; font-size: 0.92rem; font-style: italic; padding: 2rem 0; }
+    .sort-toggle {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .sort-toggle span { font-size: 0.82rem; color: #8a7f72; margin-right: 0.3rem; }
+    .sort-toggle button {
+      padding: 0.25rem 0.8rem;
+      border: 1px solid #c8c0b0;
+      background: #faf9f5;
+      color: #5a4a3a;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .sort-toggle button.active {
+      background: #2a2520;
+      color: #fff;
+      border-color: #2a2520;
+    }
+    .sort-toggle button:hover:not(.active) { background: #f0ede4; }
   </style>
 </head>
 <body>
@@ -81,6 +105,13 @@
 
 <div class="content-status">
   <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
+</div>
+
+<div class="sort-toggle">
+  <span>Sort:</span>
+  <button id="sort-date" class="active" onclick="sortNotes('date')">Date</button>
+  <button id="sort-title" onclick="sortNotes('title')">Title</button>
+  <button id="sort-id" onclick="sortNotes('id')">ID</button>
 </div>
 
 <ul class="fn-list" id="fn-list"></ul>
@@ -116,11 +147,26 @@ function renderItem(doc) {
 }
 
 document.getElementById('count-published').textContent = allNotes.length;
-if (allNotes.length === 0) {
-  document.getElementById('fn-list').innerHTML = '<li class="empty-state">Field Notes are being prepared for publication. Check back soon.</li>';
-} else {
-  document.getElementById('fn-list').innerHTML = allNotes.map(renderItem).join('');
+
+function sortNotes(by) {
+  var sorted = allNotes.slice();
+  if (by === 'date') {
+    sorted.sort(function(a, b) { return b.date.localeCompare(a.date); });
+  } else if (by === 'title') {
+    sorted.sort(function(a, b) { return a.title.localeCompare(b.title); });
+  } else if (by === 'id') {
+    sorted.sort(function(a, b) { return a.id.localeCompare(b.id); });
+  }
+  document.querySelectorAll('.sort-toggle button').forEach(function(btn) { btn.classList.remove('active'); });
+  document.getElementById('sort-' + by).classList.add('active');
+  if (sorted.length === 0) {
+    document.getElementById('fn-list').innerHTML = '<li class="empty-state">Field Notes are being prepared for publication. Check back soon.</li>';
+  } else {
+    document.getElementById('fn-list').innerHTML = sorted.map(renderItem).join('');
+  }
 }
+
+sortNotes('date');
 </script>
 </body>
 </html>
