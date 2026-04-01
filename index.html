@@ -28,16 +28,14 @@
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
   <style>
     .study-shell { padding: 0; }
     .study-title { font-size: 1.7rem; font-weight: 500; color: #111; margin: 0 0 0.3rem 0; }
     .study-byline { font-size: 0.95rem; color: #888; font-style: italic; margin: 0 0 2rem 0; }
     .study-interactive { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 3rem; }
-    .study-sidebar { width: 270px; flex-shrink: 0; background: #fff; border: 1px solid #e0ddd4; border-radius: 8px; padding: 16px; font-family: 'Poppins', sans-serif; }
-    .study-sidebar h2 { font-size: 1rem; font-weight: 600; color: #141413; margin: 0 0 2px 0; font-family: 'Lora', serif; }
+    .study-sidebar { width: 270px; flex-shrink: 0; background: #fff; border: 1px solid #e0ddd4; border-radius: 8px; padding: 16px; }
+    .study-sidebar h2 { font-size: 1rem; font-weight: 600; color: #141413; margin: 0 0 2px 0; }
     .study-sidebar .s-subtitle { font-size: 0.72rem; color: #999; font-style: italic; margin: 0 0 14px 0; line-height: 1.4; }
     .s-section { margin-bottom: 14px; }
     .s-section h3 { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: #141413; margin: 0 0 8px 0; display: flex; align-items: center; gap: 6px; }
@@ -59,7 +57,7 @@
     .col-row { display: flex; align-items: center; gap: 5px; }
     .col-row input[type="color"] { width: 22px; height: 22px; border: none; border-radius: 4px; cursor: pointer; background: none; padding: 0; }
     .col-hex { font-family: 'Courier New', monospace; font-size: 0.65rem; color: #aaa; }
-    .s-btn { width: 100%; padding: 6px 10px; background: #faf9f5; border: 1.5px solid #e0ddd4; border-radius: 6px; font-family: 'Poppins', sans-serif; font-size: 0.72rem; font-weight: 500; color: #141413; cursor: pointer; transition: all 0.15s; margin-bottom: 5px; box-sizing: border-box; }
+    .s-btn { width: 100%; padding: 6px 10px; background: #faf9f5; border: 1.5px solid #e0ddd4; border-radius: 6px; font-size: 0.72rem; font-weight: 500; color: #141413; cursor: pointer; transition: all 0.15s; margin-bottom: 5px; box-sizing: border-box; }
     .s-btn:hover { border-color: #c8604a; color: #c8604a; background: #fff; }
     .s-btn.primary { background: #c8604a; border-color: #c8604a; color: #fff; }
     .s-btn.primary:hover { background: #b3503c; border-color: #b3503c; }
