@@ -44,16 +44,27 @@
     .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
     .dot-published { background: #5a9a6f; }
     .fn-list { list-style: none; padding: 0; margin: 0; }
-    .fn-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
+    .fn-list li {
+      border-top: 1px solid #e8e4dc;
+      padding: 1.1rem 0.75rem;
+      margin: 0 -0.75rem;
+      border-left: 3px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
     .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
+    .fn-list li:hover {
+      background: #f7f4ee;
+      border-left-color: #5a3e2b;
+    }
     .fn-id { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.2rem; }
-    .fn-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; }
+    .fn-title { font-size: 1.05rem; margin-bottom: 0.3rem; }
     .fn-title a { color: #5a3e2b; text-decoration: none; }
     .fn-title a:hover { color: #3a2518; text-decoration: underline; }
     .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; }
     .fn-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; font-size: 0.82rem; }
     .fn-date { color: #8a7f72; }
-    .status-published { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; }
     .fn-read { display: inline-block; color: #5a3e2b; text-decoration: none; font-size: 0.8rem; font-weight: 500; border: 1px solid #5a3e2b; border-radius: 3px; padding: 0.15rem 0.6rem; transition: all 0.15s; }
     .fn-read:hover { background: #5a3e2b; color: #fff; }
     .empty-state { color: #8a7f72; font-size: 0.92rem; font-style: italic; padding: 2rem 0; }
@@ -143,7 +154,7 @@ var allNotes = [
 ];
 
 function renderItem(doc) {
-  return '<li>'
+  return '<li onclick="window.location=\'' + doc.read + '\'">'
     + '<div class="fn-id">' + doc.id + '</div>'
     + '<div class="fn-title"><a href="' + doc.read + '">' + doc.title + '</a></div>'
     + '<div class="fn-desc">' + doc.desc + '</div>'

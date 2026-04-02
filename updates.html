@@ -29,15 +29,30 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     .update-list { list-style: none; padding: 0; margin: 0; }
-    .update-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
+    .update-list li {
+      border-top: 1px solid #e8e4dc;
+      padding: 1.1rem 0.75rem;
+      margin: 0 -0.75rem;
+      border-left: 3px solid transparent;
+      border-radius: 4px;
+      transition: background 0.15s, border-color 0.15s;
+    }
     .update-list li:last-child { border-bottom: 1px solid #e8e4dc; }
+    .update-list li.has-link { cursor: pointer; }
+    .update-list li.has-link:hover {
+      background: #f7f4ee;
+      border-left-color: #5a3e2b;
+    }
     .update-date { font-size: 0.78rem; color: #8a7f72; margin-bottom: 0.25rem; letter-spacing: 0.03em; }
-    .update-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; }
-    .update-title a { color: #1a1714; text-decoration: none; }
-    .update-title a:hover { color: #8b5e3c; }
-    .update-body { font-size: 0.88rem; color: #5a4a3a; line-height: 1.6; }
-    .update-body a { color: #5a3e2b; }
-    .update-tag { display: inline-block; font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; background: #f0ede4; color: #6a5a48; border: 1px solid #ddd6c8; padding: 0.1rem 0.45rem; border-radius: 2px; margin-right: 0.4rem; margin-bottom: 0.5rem; }
+    .update-title { font-size: 1.05rem; margin-bottom: 0.3rem; }
+    .update-title a { color: #5a3e2b; text-decoration: none; }
+    .update-title a:hover { color: #3a2518; text-decoration: underline; }
+    .update-title span { color: #1a1714; }
+    .update-body { font-size: 0.88rem; color: #5a4a3a; line-height: 1.6; margin-bottom: 0.5rem; }
+    .update-tag { display: inline-block; font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; background: #f0ede4; color: #6a5a48; border: 1px solid #ddd6c8; padding: 0.1rem 0.45rem; border-radius: 2px; margin-right: 0.5rem; vertical-align: middle; }
+    .update-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.4rem; }
+    .update-read { display: inline-block; color: #5a3e2b; text-decoration: none; font-size: 0.8rem; font-weight: 500; border: 1px solid #5a3e2b; border-radius: 3px; padding: 0.15rem 0.6rem; transition: all 0.15s; }
+    .update-read:hover { background: #5a3e2b; color: #fff; }
   </style>
 </head>
 <body>
@@ -60,72 +75,7 @@
 <h2>Updates</h2>
 <p>Publication announcements, corpus milestones, and Institute news. For substantive commentary on AI developments, see <a href="field-notes.html">Field Notes</a>. For operational guides, see <a href="practitioner-guides.html">Practitioner Guides</a>.</p>
 
-<ul class="update-list" id="update-list">
-  <li>
-    <div class="update-date">April 2, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/IVP-video.html">Video: The Ingestion Verification Protocol</a></div>
-    <div class="update-body">
-      <span class="update-tag">Video</span>
-      First Institute video published on YouTube. Three-minute overview of SF0038: does your AI actually read your documents? Introduces the four-step Ingestion Verification Protocol. <a href="practitioner-guides/IVP-video.html">Watch &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">March 28, 2026</div>
-    <div class="update-title"><a href="field-notes/FN-02.html">FN-02: AI Safety Is a Runtime Problem</a></div>
-    <div class="update-body">
-      <span class="update-tag">Field Note</span>
-      New Field Note published. The OpenClaw arc traces five stages of operational drift -- and exposes the missing layer in AI safety that neither training-time alignment nor evaluation-time governance addresses. <a href="field-notes/FN-02.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">January 28, 2026</div>
-    <div class="update-title"><a href="field-notes/FN-01.html">FN-01: The OpenClaw Arc</a></div>
-    <div class="update-body">
-      <span class="update-tag">Field Note</span>
-      New Field Note published. The OpenClaw arc, from launch to acqui-hire in three months, is a clean case study in the gap between training-time alignment and runtime operational integrity. <a href="field-notes/FN-01.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">March 28, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/PG-01.html">PG-01: AI-Assisted Editing Without Silent Loss</a></div>
-    <div class="update-body">
-      <span class="update-tag">Practitioner Guide</span>
-      New Practitioner Guide published. A step-by-step procedure for using AI to edit complex documents without silent content loss -- covering the Edit Pass, Verification Pass, and structured diff report. <a href="practitioner-guides/PG-01.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">January 28, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/PG-00.html">PG-00: How to Work Reliably With Conversational AI Over Time</a></div>
-    <div class="update-body">
-      <span class="update-tag">Practitioner Guide</span>
-      Gateway Practitioner Guide published. Covers constraint fidelity, silent drift, context rehydration, and the core habits for long-horizon AI use. <a href="practitioner-guides/PG-00.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">March 21, 2026</div>
-    <div class="update-title">TCAP Published on Zenodo</div>
-    <div class="update-body">
-      <span class="update-tag">Publication</span>
-      The Theoretical Coherence Assurance Protocol (TCAP) is now published on Zenodo. TCAP completes the Synthience verification stack alongside CVP, IVP, and CRD, and governs all subsequent corpus publications. <a href="research/SF0040.html">Read the document.</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">March 12, 2026</div>
-    <div class="update-title">SR001 and SR001-VR1 Published on Zenodo</div>
-    <div class="update-body">
-      <span class="update-tag">Publication</span>
-      RICO: Relationally-Induced Coherence Organization and its companion Citation Verification Report are now published on Zenodo with permanent DOIs. <a href="research/SR001.html">Read RICO.</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">December 23, 2025</div>
-    <div class="update-title">CVP, IVP, and CRD Published on Zenodo</div>
-    <div class="update-body">
-      <span class="update-tag">Publication</span>
-      The Citation Verification Protocol, Ingestion Verification Protocol, and Context Representation Drift framework are published on Zenodo, establishing the first three layers of the Synthience verification stack. IVP and CRD were updated to v2.7 and v1.6 respectively in January 2026.
-    </div>
-  </li>
-</ul>
+<ul class="update-list" id="update-list"></ul>
 
 </main>
 
@@ -133,6 +83,102 @@
   <div id="site-footer"></div>
 </footer>
 <script src="assets/js/footer.js"></script>
+<script>
+var allUpdates = [
+  {
+    date: "2026-04-02",
+    dateDisplay: "April 2, 2026",
+    tag: "Video",
+    title: "Video: The Ingestion Verification Protocol",
+    body: "First Institute video published on YouTube. Three-minute overview of SF0038: does your AI actually read your documents? Introduces the four-step Ingestion Verification Protocol.",
+    read: "practitioner-guides/IVP-video.html",
+    readLabel: "Watch"
+  },
+  {
+    date: "2026-03-28",
+    dateDisplay: "March 28, 2026",
+    tag: "Field Note",
+    title: "FN-02: AI Safety Is a Runtime Problem",
+    body: "New Field Note published. The OpenClaw arc traces five stages of operational drift -- and exposes the missing layer in AI safety that neither training-time alignment nor evaluation-time governance addresses.",
+    read: "field-notes/FN-02.html",
+    readLabel: "Read"
+  },
+  {
+    date: "2026-03-28",
+    dateDisplay: "March 28, 2026",
+    tag: "Practitioner Guide",
+    title: "PG-01: AI-Assisted Editing Without Silent Loss",
+    body: "New Practitioner Guide published. A step-by-step procedure for using AI to edit complex documents without silent content loss -- covering the Edit Pass, Verification Pass, and structured diff report.",
+    read: "practitioner-guides/PG-01.html",
+    readLabel: "Read"
+  },
+  {
+    date: "2026-03-21",
+    dateDisplay: "March 21, 2026",
+    tag: "Publication",
+    title: "TCAP Published on Zenodo",
+    body: "The Theoretical Coherence Assurance Protocol (TCAP) is now published on Zenodo. TCAP completes the Synthience verification stack alongside CVP, IVP, and CRD, and governs all subsequent corpus publications.",
+    read: "research/SF0040.html",
+    readLabel: "Read"
+  },
+  {
+    date: "2026-03-12",
+    dateDisplay: "March 12, 2026",
+    tag: "Publication",
+    title: "SR001 and SR001-VR1 Published on Zenodo",
+    body: "RICO: Relationally-Induced Coherence Organization and its companion Citation Verification Report are now published on Zenodo with permanent DOIs.",
+    read: "research/SR001.html",
+    readLabel: "Read"
+  },
+  {
+    date: "2026-01-28",
+    dateDisplay: "January 28, 2026",
+    tag: "Field Note",
+    title: "FN-01: The OpenClaw Arc",
+    body: "New Field Note published. The OpenClaw arc, from launch to acqui-hire in three months, is a clean case study in the gap between training-time alignment and runtime operational integrity.",
+    read: "field-notes/FN-01.html",
+    readLabel: "Read"
+  },
+  {
+    date: "2026-01-28",
+    dateDisplay: "January 28, 2026",
+    tag: "Practitioner Guide",
+    title: "PG-00: How to Work Reliably With Conversational AI Over Time",
+    body: "Gateway Practitioner Guide published. Covers constraint fidelity, silent drift, context rehydration, and the core habits for long-horizon AI use.",
+    read: "practitioner-guides/PG-00.html",
+    readLabel: "Read"
+  },
+  {
+    date: "2025-12-23",
+    dateDisplay: "December 23, 2025",
+    tag: "Publication",
+    title: "CVP, IVP, and CRD Published on Zenodo",
+    body: "The Citation Verification Protocol, Ingestion Verification Protocol, and Context Representation Drift framework are published on Zenodo, establishing the first three layers of the Synthience verification stack. IVP and CRD were updated to v2.7 and v1.6 respectively in January 2026.",
+    read: null,
+    readLabel: null
+  }
+];
 
+allUpdates.sort(function(a, b) { return b.date.localeCompare(a.date); });
+
+function renderUpdate(u) {
+  var titleHtml = u.read
+    ? '<a href="' + u.read + '">' + u.title + '</a>'
+    : '<span>' + u.title + '</span>';
+  var metaHtml = u.read
+    ? '<div class="update-meta"><a class="update-read" href="' + u.read + '">' + u.readLabel + ' &rarr;</a></div>'
+    : '';
+  var liClass = u.read ? ' class="has-link"' : '';
+  var liClick = u.read ? ' onclick="window.location=\'' + u.read + '\'"' : '';
+  return '<li' + liClass + liClick + '>'
+    + '<div class="update-date">' + u.dateDisplay + '</div>'
+    + '<div class="update-title">' + titleHtml + '</div>'
+    + '<div class="update-body"><span class="update-tag">' + u.tag + '</span>' + u.body + '</div>'
+    + metaHtml
+    + '</li>';
+}
+
+document.getElementById('update-list').innerHTML = allUpdates.map(renderUpdate).join('');
+</script>
 </body>
 </html>
