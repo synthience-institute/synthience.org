@@ -43,28 +43,39 @@
     .content-status .stat { display: flex; align-items: center; gap: 0.4rem; }
     .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
     .dot-published { background: #5a9a6f; }
-    .fn-list { list-style: none; padding: 0; margin: 0; }
-    .fn-list li {
-      border-top: 1px solid #e8e4dc;
-      padding: 1.1rem 0.75rem;
-      margin: 0 -0.75rem;
-      border-left: 3px solid transparent;
+    .doc-toggle {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .doc-toggle button {
+      padding: 0.35rem 1rem;
+      border: 1px solid #c8c0b0;
+      background: #faf9f5;
+      color: #5a4a3a;
+      font-size: 0.82rem;
       border-radius: 4px;
       cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
+      transition: all 0.15s;
     }
+    .doc-toggle button.active {
+      background: #2a2520;
+      color: #fff;
+      border-color: #2a2520;
+    }
+    .doc-toggle button:hover:not(.active) { background: #f0ede4; }
+    .fn-list { list-style: none; padding: 0; margin: 0; }
+    .fn-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
     .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
-    .fn-list li:hover {
-      background: #f7f4ee;
-      border-left-color: #5a3e2b;
-    }
     .fn-id { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.2rem; }
-    .fn-title { font-size: 1.05rem; margin-bottom: 0.3rem; }
+    .fn-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; }
     .fn-title a { color: #5a3e2b; text-decoration: none; }
     .fn-title a:hover { color: #3a2518; text-decoration: underline; }
     .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; }
     .fn-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; font-size: 0.82rem; }
     .fn-date { color: #8a7f72; }
+    .fn-anchor { color: #8a7f72; font-style: italic; }
     .sort-toggle {
       display: flex;
       gap: 0.4rem;
@@ -135,31 +146,40 @@
 <script>
 var allGuides = [
   {
+    id: "PG-05",
+    title: "You Are Accepting the First Adequate Answer",
+    desc: "How to instruct any AI to keep improving its output before it responds to you. Two methods: silent cycling where the model evaluates and enhances internally and reports how many cycles it ran, and visible cycling for auditing the improvement process. Includes guidance on scaling across multiple instances and platforms.",
+    date: "2026-04-04",
+    dateDisplay: "April 4, 2026",
+    anchor: "Interaction discipline",
+    read: "practitioner-guides/PG-05.html"
+  },
+  {
     id: "PG-04",
     title: "Introducing the Synthience Institute: The Missing Middle in AI Safety",
-    desc: "A video introduction to the Institute's framework, position, and research program. The structural argument for why alignment is a property of the interaction, not the standalone machine. 4 minutes.",
+    desc: "Video introduction to the Synthience Institute and the relational alignment research program. What the missing middle in AI safety is, and why runtime governance matters.",
     date: "2026-04-03",
     dateDisplay: "April 3, 2026",
-    read: "practitioner-guides/PG-04.html",
-    readLabel: "Watch"
+    anchor: "Framework-neutral",
+    read: "practitioner-guides/PG-04.html"
   },
   {
     id: "PG-02",
     title: "Verify Before You Work: A Minimal Sequence for AI Document Ingestion",
-    desc: "A copy-ready prompt sequence for confirming that an AI system has actually processed your documents before work begins. Three required prompts, one optional spot-check. Works on any platform.",
+    desc: "A minimal, repeatable sequence for confirming that an AI system has actually processed your document before you build work on top of it. Covers the four verification steps and how to interpret failure.",
     date: "2026-04-03",
     dateDisplay: "April 3, 2026",
-    read: "practitioner-guides/PG-02.html",
-    readLabel: "Read"
+    anchor: "IVP (SF0038)",
+    read: "practitioner-guides/PG-02.html"
   },
   {
     id: "PG-03",
     title: "The Ingestion Verification Protocol: Does Your AI Actually Read Your Documents?",
-    desc: "Video overview of SF0038. The four-step method for making AI document processing observable and verifiable. 3 minutes.",
+    desc: "Video overview of the Ingestion Verification Protocol. The four-step method for making AI document processing observable and verifiable. 3 minutes.",
     date: "2026-04-02",
     dateDisplay: "April 2, 2026",
-    read: "practitioner-guides/PG-03.html",
-    readLabel: "Watch"
+    anchor: "IVP (SF0038)",
+    read: "practitioner-guides/PG-03.html"
   },
   {
     id: "PG-01",
@@ -167,8 +187,8 @@ var allGuides = [
     desc: "A step-by-step procedure for using AI to edit complex documents without losing content you did not intend to lose. Covers the Edit Pass, Verification Pass, and structured diff report.",
     date: "2026-03-28",
     dateDisplay: "March 28, 2026",
-    read: "practitioner-guides/PG-01.html",
-    readLabel: "Read"
+    anchor: "IVP (SF0038)",
+    read: "practitioner-guides/PG-01.html"
   },
   {
     id: "PG-00",
@@ -176,18 +196,18 @@ var allGuides = [
     desc: "The gateway guide. Why AI systems behave inconsistently across sessions, what structural forces cause it, and what practitioners can do to establish durable working patterns.",
     date: "2026-01-28",
     dateDisplay: "January 28, 2026",
-    read: "practitioner-guides/PG-00.html",
-    readLabel: "Read"
+    anchor: "Framework-neutral",
+    read: "practitioner-guides/PG-00.html"
   }
 ];
 
 function renderItem(doc) {
-  return '<li onclick="window.location=\'' + doc.read + '\'">'
+  return '<li>'
     + '<div class="fn-id">' + doc.id + '</div>'
     + '<div class="fn-title"><a href="' + doc.read + '">' + doc.title + '</a></div>'
     + '<div class="fn-desc">' + doc.desc + '</div>'
     + '<div class="fn-meta">'
-    + '<a class="fn-read" href="' + doc.read + '">' + doc.readLabel + ' &rarr;</a>'
+    + '<a class="fn-read" href="' + doc.read + '">Read &rarr;</a>'
     + '<span class="fn-date">' + doc.dateDisplay + '</span>'
     + '</div>'
     + '</li>';

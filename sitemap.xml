@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
   <url>
     <loc>https://synthience.org/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-04</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/about.html</loc>
+    <lastmod>2026-01-19</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/overview.html</loc>
@@ -11,10 +17,6 @@
   <url>
     <loc>https://synthience.org/research.html</loc>
     <lastmod>2026-04-03</lastmod>
-  </url>
-  <url>
-    <loc>https://synthience.org/about.html</loc>
-    <lastmod>2026-01-19</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/faq.html</loc>
@@ -33,21 +35,19 @@
     <lastmod>2026-01-19</lastmod>
   </url>
   <url>
-    <loc>https://synthience.org/updates.html</loc>
-    <lastmod>2026-04-03</lastmod>
-  </url>
-  <url>
     <loc>https://synthience.org/field-notes.html</loc>
     <lastmod>2026-04-03</lastmod>
   </url>
   <url>
-    <loc>https://synthience.org/field-notes/FN-03.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://synthience.org/practitioner-guides.html</loc>
+    <lastmod>2026-04-04</lastmod>
   </url>
   <url>
-    <loc>https://synthience.org/practitioner-guides.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://synthience.org/updates.html</loc>
+    <lastmod>2026-04-04</lastmod>
   </url>
+
+  <!-- Field Notes -->
   <url>
     <loc>https://synthience.org/field-notes/FN-01.html</loc>
     <lastmod>2026-01-28</lastmod>
@@ -56,6 +56,12 @@
     <loc>https://synthience.org/field-notes/FN-02.html</loc>
     <lastmod>2026-03-28</lastmod>
   </url>
+  <url>
+    <loc>https://synthience.org/field-notes/FN-03.html</loc>
+    <lastmod>2026-04-03</lastmod>
+  </url>
+
+  <!-- Practitioner Guides -->
   <url>
     <loc>https://synthience.org/practitioner-guides/PG-00.html</loc>
     <lastmod>2026-01-28</lastmod>
@@ -66,7 +72,7 @@
   </url>
   <url>
     <loc>https://synthience.org/practitioner-guides/PG-02.html</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-04</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/practitioner-guides/PG-03.html</loc>
@@ -76,4 +82,39 @@
     <loc>https://synthience.org/practitioner-guides/PG-04.html</loc>
     <lastmod>2026-04-03</lastmod>
   </url>
+  <url>
+    <loc>https://synthience.org/practitioner-guides/PG-05.html</loc>
+    <lastmod>2026-04-04</lastmod>
+  </url>
+
+  <!-- Research subpages -->
+  <url>
+    <loc>https://synthience.org/research/FPD-01.html</loc>
+    <lastmod>2026-03-22</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/research/SF0037.html</loc>
+    <lastmod>2026-03-22</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/research/SF0038.html</loc>
+    <lastmod>2026-03-22</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/research/SF0039.html</loc>
+    <lastmod>2026-03-22</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/research/SF0040.html</loc>
+    <lastmod>2026-03-22</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/research/SR001.html</loc>
+    <lastmod>2026-03-22</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/research/SR001-VR1.html</loc>
+    <lastmod>2026-03-22</lastmod>
+  </url>
+
 </urlset>
