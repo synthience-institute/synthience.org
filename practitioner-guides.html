@@ -11,19 +11,19 @@
   </script>
   <link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
   <meta charset="UTF-8">
-  <title>Practitioner Guides · Synthience Institute</title>
+  <title>Practitioner Guides &middot; Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Practitioner Guides from the Synthience Institute: operational, problem-solution guides for professionals working with AI systems.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Synthience Institute">
-  <meta property="og:title" content="Practitioner Guides · Synthience Institute">
+  <meta property="og:title" content="Practitioner Guides &middot; Synthience Institute">
   <meta property="og:description" content="Practitioner Guides from the Synthience Institute: operational, problem-solution guides for professionals working with AI systems.">
   <meta property="og:url" content="https://synthience.org/practitioner-guides.html">
   <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
-  <meta name="twitter:title" content="Practitioner Guides · Synthience Institute">
+  <meta name="twitter:title" content="Practitioner Guides &middot; Synthience Institute">
   <meta name="twitter:description" content="Practitioner Guides from the Synthience Institute: operational, problem-solution guides for professionals working with AI systems.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -43,48 +43,113 @@
     .content-status .stat { display: flex; align-items: center; gap: 0.4rem; }
     .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
     .dot-published { background: #5a9a6f; }
-    .doc-toggle {
+
+    /* === START HERE BLOCK === */
+    .start-here {
+      background: #faf9f5;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+    .start-here-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.8rem 0;
+    }
+    .start-here-items { display: flex; flex-direction: column; gap: 0.6rem; }
+    .start-here-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    .start-here-item a {
+      color: #5a3e2b;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .start-here-item a:hover { color: #3a2518; text-decoration: underline; }
+    .start-here-desc {
+      font-size: 0.82rem;
+      color: #5a4a3a;
+      line-height: 1.5;
+      margin-top: 0.15rem;
+    }
+
+    /* === SEARCH INPUT === */
+    .search-container { margin-bottom: 1rem; }
+    .search-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid #c8c0b0;
+      border-radius: 4px;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #3a3530;
+      background: #faf9f5;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-input:focus { border-color: #c8604a; }
+    .search-input::placeholder { color: #b0a898; }
+
+    /* === FILTER ROWS === */
+    .filter-row {
       display: flex;
       gap: 0.4rem;
-      margin-bottom: 1.8rem;
+      margin-bottom: 0.8rem;
       flex-wrap: wrap;
+      align-items: center;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
-    .doc-toggle button {
-      padding: 0.35rem 1rem;
+    .filter-row span {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin-right: 0.3rem;
+      flex-shrink: 0;
+    }
+    .filter-row button {
+      padding: 0.25rem 0.8rem;
       border: 1px solid #c8c0b0;
       background: #faf9f5;
       color: #5a4a3a;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.15s;
+      flex-shrink: 0;
     }
-    .doc-toggle button.active {
-      background: #2a2520;
+    .filter-row button.active {
+      background: #c8604a;
       color: #fff;
-      border-color: #2a2520;
+      border-color: #c8604a;
     }
-    .doc-toggle button:hover:not(.active) { background: #f0ede4; }
-    .fn-list { list-style: none; padding: 0; margin: 0; }
-    .fn-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
-    .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
-    .fn-id { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.2rem; }
-    .fn-title { font-size: 1.05rem; color: #1a1714; margin-bottom: 0.3rem; }
-    .fn-title a { color: #5a3e2b; text-decoration: none; }
-    .fn-title a:hover { color: #3a2518; text-decoration: underline; }
-    .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; }
-    .fn-meta { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; font-size: 0.82rem; }
-    .fn-date { color: #8a7f72; }
-    .fn-anchor { color: #8a7f72; font-style: italic; }
-    .sort-toggle {
+    .filter-row button:hover:not(.active) { background: #f0ede4; }
+
+    /* === VIEW AND SORT TOGGLES === */
+    .controls-row {
       display: flex;
-      gap: 0.4rem;
+      gap: 1.5rem;
       margin-bottom: 1.2rem;
       flex-wrap: wrap;
       align-items: center;
     }
-    .sort-toggle span { font-size: 0.82rem; color: #8a7f72; margin-right: 0.3rem; }
-    .sort-toggle button {
+    .view-toggle, .sort-toggle {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+    }
+    .view-toggle span, .sort-toggle span {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin-right: 0.3rem;
+    }
+    .view-toggle button, .sort-toggle button {
       padding: 0.25rem 0.8rem;
       border: 1px solid #c8c0b0;
       background: #faf9f5;
@@ -94,14 +159,111 @@
       cursor: pointer;
       transition: all 0.15s;
     }
-    .sort-toggle button.active {
-      background: #2a2520;
+    .view-toggle button.active, .sort-toggle button.active {
+      background: #c8604a;
       color: #fff;
-      border-color: #2a2520;
+      border-color: #c8604a;
     }
-    .sort-toggle button:hover:not(.active) { background: #f0ede4; }
-    .fn-read { display: inline-block; color: #5a3e2b; text-decoration: none; font-size: 0.8rem; font-weight: 500; border: 1px solid #5a3e2b; border-radius: 3px; padding: 0.15rem 0.6rem; transition: all 0.15s; }
+    .view-toggle button:hover:not(.active), .sort-toggle button:hover:not(.active) { background: #f0ede4; }
+
+    /* === CATEGORY SECTIONS === */
+    .doc-section { margin-bottom: 1.8rem; }
+    .doc-section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e8e4dc;
+      user-select: none;
+    }
+    .doc-section-header h3 {
+      font-size: 1.05rem;
+      color: #3a3530;
+      margin: 0;
+      flex: 1;
+    }
+    .doc-section-chevron {
+      font-size: 0.7rem;
+      color: #8a7f72;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .doc-section-chevron.collapsed { transform: rotate(-90deg); }
+    .doc-section-body.collapsed { display: none; }
+
+    /* === ARTICLE LIST === */
+    .fn-list { list-style: none; padding: 0; margin: 0; }
+    .fn-list li {
+      border-top: 1px solid #e8e4dc;
+      padding: 1.1rem 0.75rem;
+      margin: 0 -0.75rem;
+      border-left: 3px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .fn-list li:last-child { border-bottom: 1px solid #e8e4dc; }
+    .fn-list li:hover {
+      background: #f7f4ee;
+      border-left-color: #5a3e2b;
+    }
+    .fn-id {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8a7f72;
+      margin-bottom: 0.2rem;
+    }
+    .fn-title { font-size: 1.05rem; margin-bottom: 0.3rem; }
+    .fn-title a { color: #5a3e2b; text-decoration: none; }
+    .fn-title a:hover { color: #3a2518; text-decoration: underline; }
+    .fn-desc { font-size: 0.88rem; color: #5a4a3a; line-height: 1.55; margin-bottom: 0.45rem; }
+    .fn-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+    }
+    .fn-date { color: #8a7f72; }
+    .fn-read {
+      display: inline-block;
+      color: #5a3e2b;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid #5a3e2b;
+      border-radius: 3px;
+      padding: 0.15rem 0.6rem;
+      transition: all 0.15s;
+    }
     .fn-read:hover { background: #5a3e2b; color: #fff; }
+
+    /* === FORMAT BADGE === */
+    .format-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.1rem 0.45rem;
+      border-radius: 2px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+    .format-video { background: #5a3e2b; color: #fff; }
+    .format-audio { background: #4a6a5a; color: #fff; }
+    .format-slides { background: #5a5a8a; color: #fff; }
+    .format-infographic { background: #6a5a3a; color: #fff; }
+
+    /* === EMPTY STATE === */
+    .empty-state {
+      color: #8a7f72;
+      font-size: 0.92rem;
+      font-style: italic;
+      padding: 2rem 0;
+    }
   </style>
 </head>
 <body>
@@ -128,14 +290,33 @@
   <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
 </div>
 
-<div class="sort-toggle">
-  <span>Sort:</span>
-  <button id="sort-date" class="active" onclick="sortGuides('date')">Date</button>
-  <button id="sort-title" onclick="sortGuides('title')">Title</button>
-  <button id="sort-id" onclick="sortGuides('id')">ID</button>
+<!-- FLAG FOR PCP REVIEW: Start Here block. Visual treatment uses existing callout style adapted for index page. Review before publication. -->
+<div class="start-here">
+  <div class="start-here-header">New to the Institute? Start here.</div>
+  <div class="start-here-items" id="start-here-items"></div>
 </div>
 
-<ul class="fn-list" id="guide-list"></ul>
+<div class="search-container">
+  <input type="text" class="search-input" id="search-input" placeholder="Search guides by title, description, or ID..." oninput="handleSearch()">
+</div>
+
+<div id="format-filter" class="filter-row"></div>
+
+<div class="controls-row">
+  <div class="view-toggle">
+    <span>View:</span>
+    <button id="view-category" class="active" onclick="setView('category')">By Category</button>
+    <button id="view-all" onclick="setView('all')">All Articles</button>
+  </div>
+  <div class="sort-toggle">
+    <span>Sort:</span>
+    <button id="sort-date" class="active" onclick="setSort('date')">Date</button>
+    <button id="sort-title" onclick="setSort('title')">Title</button>
+    <button id="sort-id" onclick="setSort('id')">ID</button>
+  </div>
+</div>
+
+<div id="guide-list"></div>
 
 </main>
 
@@ -144,66 +325,185 @@
 </footer>
 <script src="assets/js/footer.js"></script>
 <script>
+// === DATA: CATEGORIZED GUIDES ===
 var allGuides = [
   {
-    id: "PG-05",
-    title: "You Are Accepting the First Adequate Answer",
-    desc: "How to instruct any AI to keep improving its output before it responds to you. Two methods: silent cycling where the model evaluates and enhances internally and reports how many cycles it ran, and visible cycling for auditing the improvement process. Includes guidance on scaling across multiple instances and platforms.",
-    date: "2026-04-04",
-    dateDisplay: "April 4, 2026",
-    anchor: "Interaction discipline",
-    read: "practitioner-guides/PG-05.html"
-  },
-  {
-    id: "PG-04",
-    title: "Introducing the Synthience Institute: The Missing Middle in AI Safety",
-    desc: "Video introduction to the Synthience Institute and the relational alignment research program. What the missing middle in AI safety is, and why runtime governance matters.",
-    date: "2026-04-03",
-    dateDisplay: "April 3, 2026",
-    anchor: "Framework-neutral",
-    read: "practitioner-guides/PG-04.html"
-  },
-  {
-    id: "PG-02",
-    title: "Verify Before You Work: A Minimal Sequence for AI Document Ingestion",
-    desc: "A minimal, repeatable sequence for confirming that an AI system has actually processed your document before you build work on top of it. Covers the four verification steps and how to interpret failure.",
-    date: "2026-04-03",
-    dateDisplay: "April 3, 2026",
-    anchor: "IVP (SF0038)",
-    read: "practitioner-guides/PG-02.html"
-  },
-  {
-    id: "PG-03",
-    title: "The Ingestion Verification Protocol: Does Your AI Actually Read Your Documents?",
-    desc: "Video overview of the Ingestion Verification Protocol. The four-step method for making AI document processing observable and verifiable. 3 minutes.",
-    date: "2026-04-02",
-    dateDisplay: "April 2, 2026",
-    anchor: "IVP (SF0038)",
-    read: "practitioner-guides/PG-03.html"
-  },
-  {
-    id: "PG-01",
+    id: "PG-001",
     title: "AI-Assisted Editing Without Silent Loss",
     desc: "A step-by-step procedure for using AI to edit complex documents without losing content you did not intend to lose. Covers the Edit Pass, Verification Pass, and structured diff report.",
     date: "2026-03-28",
     dateDisplay: "March 28, 2026",
     anchor: "IVP (SF0038)",
-    read: "practitioner-guides/PG-01.html"
+    read: "practitioner-guides/PG-001.html",
+    category: "verification",
+    format: "text"
   },
   {
-    id: "PG-00",
-    title: "How to Work Reliably With Conversational AI Over Time",
-    desc: "The gateway guide. Why AI systems behave inconsistently across sessions, what structural forces cause it, and what practitioners can do to establish durable working patterns.",
-    date: "2026-01-28",
-    dateDisplay: "January 28, 2026",
-    anchor: "Framework-neutral",
-    read: "practitioner-guides/PG-00.html"
+    id: "PG-002",
+    title: "Verify Before You Work: A Minimal Sequence for AI Document Ingestion",
+    desc: "A minimal, repeatable sequence for confirming that an AI system has actually processed your document before you build work on top of it. Covers the four verification steps and how to interpret failure.",
+    date: "2026-04-03",
+    dateDisplay: "April 3, 2026",
+    anchor: "IVP (SF0038)",
+    read: "practitioner-guides/PG-002.html",
+    category: "verification",
+    format: "text"
+  },
+  {
+    id: "PG-003",
+    title: "The Ingestion Verification Protocol: Does Your AI Actually Read Your Documents?",
+    desc: "Video overview of the Ingestion Verification Protocol. The four-step method for making AI document processing observable and verifiable. 3 minutes.",
+    date: "2026-04-02",
+    dateDisplay: "April 2, 2026",
+    anchor: "IVP (SF0038)",
+    read: "practitioner-guides/PG-003.html",
+    category: "verification",
+    format: "video"
+  },
+  {
+    id: "PG-005",
+    title: "You Are Accepting the First Adequate Answer",
+    desc: "How to instruct any AI to keep improving its output before it responds to you. Two methods: silent cycling where the model evaluates and enhances internally and reports how many cycles it ran, and visible cycling for auditing the improvement process.",
+    date: "2026-04-04",
+    dateDisplay: "April 4, 2026",
+    anchor: "Interaction discipline",
+    read: "practitioner-guides/PG-005.html",
+    category: "interaction",
+    format: "text"
+  },
+  {
+    id: "PG-006",
+    title: "Your AI Updated the File. Did It Preserve What It Didn\u2019t Touch?",
+    desc: "A companion verification procedure for any AI-assisted file update. How to confirm that an AI preserved unchanged sections exactly as written, without silent compression, deletion, or substitution.",
+    date: "2026-04-04",
+    dateDisplay: "April 4, 2026",
+    anchor: "IVP (SF0038)",
+    read: "practitioner-guides/PG-006.html",
+    category: "verification",
+    format: "text"
   }
 ];
 
-function renderItem(doc) {
-  return '<li>'
-    + '<div class="fn-id">' + doc.id + '</div>'
+// === DATA: START HERE ITEMS (not in category system) ===
+var startHereGuides = [
+  {
+    id: "PG-000",
+    title: "How to Work Reliably With Conversational AI Over Time",
+    desc: "The gateway guide. Why AI systems behave inconsistently across sessions, what structural forces cause it, and what practitioners can do to establish durable working patterns.",
+    read: "practitioner-guides/PG-000.html",
+    format: "text"
+  },
+  {
+    id: "PG-004",
+    title: "Introducing the Synthience Institute: The Missing Middle in AI Safety",
+    desc: "Video introduction to the Synthience Institute and the relational alignment research program. What the missing middle in AI safety is, and why runtime governance matters.",
+    read: "practitioner-guides/PG-004.html",
+    format: "video"
+  }
+];
+
+// === DATA: CATEGORIES ===
+var categories = [
+  { key: "verification", label: "Verification & Integrity" },
+  { key: "interaction", label: "Interaction Discipline" },
+  { key: "framework", label: "Understanding the Framework" },
+  { key: "deployment", label: "Organizational Deployment" }
+];
+
+// === STATE ===
+var activeFormat = "all";
+var activeView = sessionStorage.getItem("pg-view") || "category";
+var activeSort = sessionStorage.getItem("pg-sort") || "date";
+var searchTerm = "";
+var collapsedCategories = {};
+var searchTimer = null;
+
+// === FORMAT FILTER ===
+function getActiveFormats() {
+  var formats = {};
+  allGuides.forEach(function(g) { formats[g.format] = true; });
+  startHereGuides.forEach(function(g) { formats[g.format] = true; });
+  return Object.keys(formats);
+}
+
+function renderFormatButtons() {
+  var existing = getActiveFormats();
+  var allFormats = ["text", "video", "audio", "slides", "infographic"];
+  var container = document.getElementById("format-filter");
+  var html = '<span>Format:</span>';
+  html += '<button class="' + (activeFormat === "all" ? "active" : "") + '" onclick="setFormat(\'all\')">All</button>';
+  allFormats.forEach(function(f) {
+    if (existing.indexOf(f) !== -1) {
+      var label = f.charAt(0).toUpperCase() + f.slice(1);
+      html += '<button class="' + (activeFormat === f ? "active" : "") + '" onclick="setFormat(\'' + f + '\')">' + label + '</button>';
+    }
+  });
+  container.innerHTML = html;
+}
+
+function setFormat(f) {
+  activeFormat = f;
+  renderFormatButtons();
+  renderGuides();
+}
+
+// === SEARCH ===
+function handleSearch() {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(function() {
+    searchTerm = document.getElementById("search-input").value.toLowerCase().trim();
+    renderGuides();
+  }, 150);
+}
+
+function matchesSearch(doc) {
+  if (!searchTerm) return true;
+  return doc.id.toLowerCase().indexOf(searchTerm) !== -1
+    || doc.title.toLowerCase().indexOf(searchTerm) !== -1
+    || doc.desc.toLowerCase().indexOf(searchTerm) !== -1;
+}
+
+// === FILTERING ===
+function getFilteredGuides() {
+  var filtered = allGuides.slice();
+  if (activeFormat !== "all") {
+    filtered = filtered.filter(function(g) { return g.format === activeFormat; });
+  }
+  if (searchTerm) {
+    filtered = filtered.filter(matchesSearch);
+  }
+  return filtered;
+}
+
+// === SORTING ===
+function idSort(a, b) {
+  var numA = parseInt(a.id.replace(/[^0-9]/g, ""), 10);
+  var numB = parseInt(b.id.replace(/[^0-9]/g, ""), 10);
+  return numA - numB;
+}
+
+function sortList(list, by) {
+  var sorted = list.slice();
+  if (by === "date") {
+    sorted.sort(function(a, b) { return b.date.localeCompare(a.date); });
+  } else if (by === "title") {
+    sorted.sort(function(a, b) { return a.title.localeCompare(b.title); });
+  } else if (by === "id") {
+    sorted.sort(idSort);
+  }
+  return sorted;
+}
+
+// === RENDERING ===
+function formatBadge(format) {
+  if (format === "text") return "";
+  var labels = { video: "Video", audio: "Audio", slides: "Slides", infographic: "Infographic" };
+  return '<span class="format-badge format-' + format + '">' + (labels[format] || format) + '</span>';
+}
+
+function renderCard(doc) {
+  return '<li onclick="window.location=\'' + doc.read + '\'">'
+    + '<div class="fn-id">' + doc.id + ' ' + formatBadge(doc.format) + '</div>'
     + '<div class="fn-title"><a href="' + doc.read + '">' + doc.title + '</a></div>'
     + '<div class="fn-desc">' + doc.desc + '</div>'
     + '<div class="fn-meta">'
@@ -213,23 +513,92 @@ function renderItem(doc) {
     + '</li>';
 }
 
-document.getElementById('count-published').textContent = allGuides.length;
-
-function sortGuides(by) {
-  var sorted = allGuides.slice();
-  if (by === 'date') {
-    sorted.sort(function(a, b) { return b.date.localeCompare(a.date); });
-  } else if (by === 'title') {
-    sorted.sort(function(a, b) { return a.title.localeCompare(b.title); });
-  } else if (by === 'id') {
-    sorted.sort(function(a, b) { return a.id.localeCompare(b.id); });
-  }
-  document.querySelectorAll('.sort-toggle button').forEach(function(btn) { btn.classList.remove('active'); });
-  document.getElementById('sort-' + by).classList.add('active');
-  document.getElementById('guide-list').innerHTML = sorted.map(renderItem).join('');
+function renderStartHere() {
+  var container = document.getElementById("start-here-items");
+  var html = "";
+  startHereGuides.forEach(function(g) {
+    html += '<div class="start-here-item"><div>'
+      + '<a href="' + g.read + '">' + g.title + '</a> ' + formatBadge(g.format)
+      + '<div class="start-here-desc">' + g.desc + '</div>'
+      + '</div></div>';
+  });
+  container.innerHTML = html;
 }
 
-sortGuides('date');
+function toggleCategory(key) {
+  collapsedCategories[key] = !collapsedCategories[key];
+  renderGuides();
+}
+
+function renderGuides() {
+  var filtered = getFilteredGuides();
+  var container = document.getElementById("guide-list");
+
+  if (activeView === "category") {
+    var html = "";
+    categories.forEach(function(cat) {
+      var catItems = filtered.filter(function(g) { return g.category === cat.key; });
+      if (catItems.length === 0) return;
+      catItems = sortList(catItems, activeSort);
+      var isCollapsed = collapsedCategories[cat.key] || false;
+      html += '<div class="doc-section">';
+      html += '<div class="doc-section-header" onclick="toggleCategory(\'' + cat.key + '\')">';
+      html += '<h3>' + cat.label + ' <span style="font-size:0.78rem;font-weight:400;color:#8a7f72;">(' + catItems.length + ')</span></h3>';
+      html += '<span class="doc-section-chevron' + (isCollapsed ? ' collapsed' : '') + '">&#9660;</span>';
+      html += '</div>';
+      html += '<div class="doc-section-body' + (isCollapsed ? ' collapsed' : '') + '">';
+      html += '<ul class="fn-list">' + catItems.map(renderCard).join("") + '</ul>';
+      html += '</div></div>';
+    });
+    if (html === "") {
+      html = '<p class="empty-state">No guides match the selected filters.</p>';
+    }
+    container.innerHTML = html;
+  } else {
+    var sorted = sortList(filtered, activeSort);
+    if (sorted.length === 0) {
+      container.innerHTML = '<p class="empty-state">No guides match the selected filters.</p>';
+    } else {
+      container.innerHTML = '<ul class="fn-list">' + sorted.map(renderCard).join("") + '</ul>';
+    }
+  }
+
+  document.getElementById("count-published").textContent = allGuides.length + startHereGuides.length;
+}
+
+// === VIEW TOGGLE ===
+function setView(v) {
+  activeView = v;
+  sessionStorage.setItem("pg-view", v);
+  document.querySelectorAll(".view-toggle button").forEach(function(btn) { btn.classList.remove("active"); });
+  document.getElementById("view-" + v).classList.add("active");
+  renderGuides();
+}
+
+// === SORT CONTROLS ===
+function setSort(by) {
+  activeSort = by;
+  sessionStorage.setItem("pg-sort", by);
+  document.querySelectorAll(".sort-toggle button").forEach(function(btn) { btn.classList.remove("active"); });
+  document.getElementById("sort-" + by).classList.add("active");
+  renderGuides();
+}
+
+// === INIT ===
+(function() {
+  if (activeView !== "category") {
+    document.getElementById("view-category").classList.remove("active");
+    document.getElementById("view-" + activeView).classList.add("active");
+  }
+  if (activeSort !== "date") {
+    document.getElementById("sort-date").classList.remove("active");
+    document.getElementById("sort-" + activeSort).classList.add("active");
+  }
+})();
+
+renderStartHere();
+renderFormatButtons();
+renderGuides();
 </script>
 </body>
 </html>

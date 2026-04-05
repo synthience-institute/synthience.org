@@ -28,6 +28,54 @@
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
+    /* === SEARCH INPUT === */
+    .search-container { margin-bottom: 1rem; }
+    .search-input {
+      width: 100%;
+      padding: 0.45rem 0.8rem;
+      border: 1.5px solid #c8c0b0;
+      border-radius: 4px;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #3a3530;
+      background: #faf9f5;
+      box-sizing: border-box;
+      transition: border-color 0.15s;
+    }
+    .search-input:focus { outline: none; border-color: #c8604a; }
+    .search-input::placeholder { color: #b0a898; }
+
+    /* === TAG FILTER === */
+    .filter-row {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-row span {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin-right: 0.3rem;
+    }
+    .filter-row button {
+      padding: 0.25rem 0.8rem;
+      border: 1px solid #c8c0b0;
+      background: #faf9f5;
+      color: #5a4a3a;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-row button.active {
+      background: #c8604a;
+      color: #fff;
+      border-color: #c8604a;
+    }
+    .filter-row button:hover:not(.active) { background: #f0ede4; }
+
+    /* === UPDATE LIST === */
     .update-list { list-style: none; padding: 0; margin: 0; }
     .update-list li { border-top: 1px solid #e8e4dc; padding: 1.1rem 0; }
     .update-list li:last-child { border-bottom: 1px solid #e8e4dc; }
@@ -38,6 +86,7 @@
     .update-body { font-size: 0.88rem; color: #5a4a3a; line-height: 1.6; }
     .update-body a { color: #5a3e2b; }
     .update-tag { display: inline-block; font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; background: #f0ede4; color: #6a5a48; border: 1px solid #ddd6c8; padding: 0.1rem 0.45rem; border-radius: 2px; margin-right: 0.4rem; margin-bottom: 0.5rem; }
+    .empty-state { color: #8a7f72; font-size: 0.92rem; font-style: italic; padding: 2rem 0; }
   </style>
 </head>
 <body>
@@ -60,104 +109,13 @@
 <h2>Updates</h2>
 <p>Publication announcements, corpus milestones, and Institute news. For substantive commentary on AI developments, see <a href="field-notes.html">Field Notes</a>. For operational guides, see <a href="practitioner-guides.html">Practitioner Guides</a>.</p>
 
-<ul class="update-list" id="update-list">
-  <li>
-    <div class="update-date">April 4, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/PG-05.html">PG-05: You Are Accepting the First Adequate Answer</a></div>
-    <div class="update-body">
-      <span class="update-tag">Practitioner Guide</span>
-      New Practitioner Guide published. How to instruct any AI to keep improving its output before it responds to you. Two methods: silent cycling where the model evaluates and enhances internally and reports how many cycles it ran, and visible cycling for auditing the improvement process. Includes guidance on scaling across multiple instances and platforms. <a href="practitioner-guides/PG-05.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">April 3, 2026</div>
-    <div class="update-title"><a href="field-notes/FN-03.html">FN-03: The Emotion Behind the Misalignment</a></div>
-    <div class="update-body">
-      <span class="update-tag">Field Note</span>
-      New Field Note published. A response to the Anthropic emotions paper (Sofroniew et al., April 2, 2026). What the finding that AI models have functional emotional states means for alignment -- and why the real question is not what models feel but what conditions shape it. <a href="field-notes/FN-03.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">April 3, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/PG-04.html">PG-04: Introducing the Synthience Institute</a></div>
-    <div class="update-body">
-      <span class="update-tag">Video</span>
-      Second Institute video published on YouTube. Introduction to the Synthience Institute and the relational alignment research program. What the missing middle in AI safety is, and why runtime governance matters. <a href="practitioner-guides/PG-04.html">Watch &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">April 3, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/PG-02.html">PG-02: Verify Before You Work</a></div>
-    <div class="update-body">
-      <span class="update-tag">Practitioner Guide</span>
-      New Practitioner Guide published. A minimal, repeatable sequence for confirming that an AI system has actually processed your document before you build work on top of it. <a href="practitioner-guides/PG-02.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">April 2, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/PG-03.html">PG-03: The Ingestion Verification Protocol</a></div>
-    <div class="update-body">
-      <span class="update-tag">Video</span>
-      First Institute video published on YouTube. Three-minute overview of the Ingestion Verification Protocol: does your AI actually read your documents? Introduces the four-step verification method. <a href="practitioner-guides/PG-03.html">Watch &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">March 28, 2026</div>
-    <div class="update-title"><a href="field-notes/FN-02.html">FN-02: AI Safety Is a Runtime Problem</a></div>
-    <div class="update-body">
-      <span class="update-tag">Field Note</span>
-      New Field Note published. The OpenClaw arc traces five stages of operational drift -- and exposes the missing layer in AI safety that neither training-time alignment nor evaluation-time governance addresses. <a href="field-notes/FN-02.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">March 28, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/PG-01.html">PG-01: AI-Assisted Editing Without Silent Loss</a></div>
-    <div class="update-body">
-      <span class="update-tag">Practitioner Guide</span>
-      New Practitioner Guide published. A step-by-step procedure for using AI to edit complex documents without silent content loss -- covering the Edit Pass, Verification Pass, and structured diff report. <a href="practitioner-guides/PG-01.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">March 21, 2026</div>
-    <div class="update-title">TCAP Published on Zenodo</div>
-    <div class="update-body">
-      <span class="update-tag">Publication</span>
-      The Theoretical Coherence Assurance Protocol (TCAP) is now published on Zenodo. TCAP completes the Synthience verification stack alongside CVP, IVP, and CRD, and governs all subsequent corpus publications. <a href="research/SF0040.html">Read the document.</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">March 12, 2026</div>
-    <div class="update-title">SR001 and SR001-VR1 Published on Zenodo</div>
-    <div class="update-body">
-      <span class="update-tag">Publication</span>
-      RICO: Relationally-Induced Coherence Organization and its companion Citation Verification Report are now published on Zenodo with permanent DOIs. <a href="research/SR001.html">Read RICO.</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">January 28, 2026</div>
-    <div class="update-title"><a href="field-notes/FN-01.html">FN-01: The OpenClaw Arc</a></div>
-    <div class="update-body">
-      <span class="update-tag">Field Note</span>
-      New Field Note published. The OpenClaw arc, from launch to acqui-hire in three months, is a clean case study in the gap between training-time alignment and runtime operational integrity. <a href="field-notes/FN-01.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">January 28, 2026</div>
-    <div class="update-title"><a href="practitioner-guides/PG-00.html">PG-00: How to Work Reliably With Conversational AI Over Time</a></div>
-    <div class="update-body">
-      <span class="update-tag">Practitioner Guide</span>
-      Gateway Practitioner Guide published. Covers constraint fidelity, silent drift, context rehydration, and the core habits for long-horizon AI use. <a href="practitioner-guides/PG-00.html">Read &rarr;</a>
-    </div>
-  </li>
-  <li>
-    <div class="update-date">December 23, 2025</div>
-    <div class="update-title">CVP, IVP, and CRD Published on Zenodo</div>
-    <div class="update-body">
-      <span class="update-tag">Publication</span>
-      The Citation Verification Protocol, Ingestion Verification Protocol, and Context Representation Drift framework are published on Zenodo, establishing the first three layers of the Synthience verification stack. IVP and CRD were updated to v2.7 and v1.6 respectively in January 2026.
-    </div>
-  </li>
-</ul>
+<div class="search-container">
+  <input type="text" class="search-input" id="search-input" placeholder="Search updates..." oninput="handleSearch()">
+</div>
+
+<div id="tag-filter" class="filter-row"></div>
+
+<ul class="update-list" id="update-list"></ul>
 
 </main>
 
@@ -165,6 +123,225 @@
   <div id="site-footer"></div>
 </footer>
 <script src="assets/js/footer.js"></script>
+<script>
+// === DATA ===
+var allUpdates = [
+  {
+    date: "2026-04-04",
+    dateDisplay: "April 4, 2026",
+    title: "PG-006: Your AI Updated the File. Did It Preserve What It Didn\u2019t Touch?",
+    link: "practitioner-guides/PG-006.html",
+    tag: "Practitioner Guide",
+    body: "New Practitioner Guide published. A companion verification procedure for any AI-assisted file update. Confirms that unchanged sections were preserved verbatim, not silently compressed or reworded.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-006.html"
+  },
+  {
+    date: "2026-04-04",
+    dateDisplay: "April 4, 2026",
+    title: "PG-005: You Are Accepting the First Adequate Answer",
+    link: "practitioner-guides/PG-005.html",
+    tag: "Practitioner Guide",
+    body: "New Practitioner Guide published. How to instruct any AI to keep improving its output before it responds to you. Two methods: silent cycling where the model evaluates and enhances internally and reports how many cycles it ran, and visible cycling for auditing the improvement process. Includes guidance on scaling across multiple instances and platforms.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-005.html"
+  },
+  {
+    date: "2026-04-03",
+    dateDisplay: "April 3, 2026",
+    title: "FN-003: The Emotion Behind the Misalignment",
+    link: "field-notes/FN-003.html",
+    tag: "Field Note",
+    body: "New Field Note published. A response to the Anthropic emotions paper (Sofroniew et al., April 2, 2026). What the finding that AI models have functional emotional states means for alignment -- and why the real question is not what models feel but what conditions shape it.",
+    action: "Read",
+    actionLink: "field-notes/FN-003.html"
+  },
+  {
+    date: "2026-04-03",
+    dateDisplay: "April 3, 2026",
+    title: "PG-004: Introducing the Synthience Institute",
+    link: "practitioner-guides/PG-004.html",
+    tag: "Video",
+    body: "Second Institute video published on YouTube. Introduction to the Synthience Institute and the relational alignment research program. What the missing middle in AI safety is, and why runtime governance matters.",
+    action: "Watch",
+    actionLink: "practitioner-guides/PG-004.html"
+  },
+  {
+    date: "2026-04-03",
+    dateDisplay: "April 3, 2026",
+    title: "PG-002: Verify Before You Work",
+    link: "practitioner-guides/PG-002.html",
+    tag: "Practitioner Guide",
+    body: "New Practitioner Guide published. A minimal, repeatable sequence for confirming that an AI system has actually processed your document before you build work on top of it.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-002.html"
+  },
+  {
+    date: "2026-04-02",
+    dateDisplay: "April 2, 2026",
+    title: "PG-003: The Ingestion Verification Protocol",
+    link: "practitioner-guides/PG-003.html",
+    tag: "Video",
+    body: "First Institute video published on YouTube. Three-minute overview of the Ingestion Verification Protocol: does your AI actually read your documents? Introduces the four-step verification method.",
+    action: "Watch",
+    actionLink: "practitioner-guides/PG-003.html"
+  },
+  {
+    date: "2026-03-28",
+    dateDisplay: "March 28, 2026",
+    title: "FN-002: AI Safety Is a Runtime Problem",
+    link: "field-notes/FN-002.html",
+    tag: "Field Note",
+    body: "New Field Note published. The OpenClaw arc traces five stages of operational drift -- and exposes the missing layer in AI safety that neither training-time alignment nor evaluation-time governance addresses.",
+    action: "Read",
+    actionLink: "field-notes/FN-002.html"
+  },
+  {
+    date: "2026-03-28",
+    dateDisplay: "March 28, 2026",
+    title: "PG-001: AI-Assisted Editing Without Silent Loss",
+    link: "practitioner-guides/PG-001.html",
+    tag: "Practitioner Guide",
+    body: "New Practitioner Guide published. A step-by-step procedure for using AI to edit complex documents without silent content loss -- covering the Edit Pass, Verification Pass, and structured diff report.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-001.html"
+  },
+  {
+    date: "2026-03-21",
+    dateDisplay: "March 21, 2026",
+    title: "TCAP Published on Zenodo",
+    link: "research/SF0040.html",
+    tag: "Publication",
+    body: "The Theoretical Coherence Assurance Protocol (TCAP) is now published on Zenodo. TCAP completes the Synthience verification stack alongside CVP, IVP, and CRD, and governs all subsequent corpus publications.",
+    action: "Read the document.",
+    actionLink: "research/SF0040.html"
+  },
+  {
+    date: "2026-03-12",
+    dateDisplay: "March 12, 2026",
+    title: "SR001 and SR001-VR1 Published on Zenodo",
+    link: "research/SR001.html",
+    tag: "Publication",
+    body: "RICO: Relationally-Induced Coherence Organization and its companion Citation Verification Report are now published on Zenodo with permanent DOIs.",
+    action: "Read RICO.",
+    actionLink: "research/SR001.html"
+  },
+  {
+    date: "2026-01-28",
+    dateDisplay: "January 28, 2026",
+    title: "FN-001: The OpenClaw Arc",
+    link: "field-notes/FN-001.html",
+    tag: "Field Note",
+    body: "New Field Note published. The OpenClaw arc, from launch to acqui-hire in three months, is a clean case study in the gap between training-time alignment and runtime operational integrity.",
+    action: "Read",
+    actionLink: "field-notes/FN-001.html"
+  },
+  {
+    date: "2026-01-28",
+    dateDisplay: "January 28, 2026",
+    title: "PG-000: How to Work Reliably With Conversational AI Over Time",
+    link: "practitioner-guides/PG-000.html",
+    tag: "Practitioner Guide",
+    body: "Gateway Practitioner Guide published. Covers constraint fidelity, silent drift, context rehydration, and the core habits for long-horizon AI use.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-000.html"
+  },
+  {
+    date: "2025-12-23",
+    dateDisplay: "December 23, 2025",
+    title: "CVP, IVP, and CRD Published on Zenodo",
+    link: null,
+    tag: "Publication",
+    body: "The Citation Verification Protocol, Ingestion Verification Protocol, and Context Representation Drift framework are published on Zenodo, establishing the first three layers of the Synthience verification stack. IVP and CRD were updated to v2.7 and v1.6 respectively in January 2026.",
+    action: null,
+    actionLink: null
+  }
+];
 
+// === STATE ===
+var activeUpdateTag = "all";
+var searchTerm = "";
+var searchTimeout = null;
+
+// === TAG FILTER ===
+function getUpdateTags() {
+  var tags = {};
+  allUpdates.forEach(function(u) { tags[u.tag] = true; });
+  return Object.keys(tags);
+}
+
+function renderUpdateTagButtons() {
+  var existing = getUpdateTags();
+  var container = document.getElementById("tag-filter");
+  var html = '<span>Filter:</span>';
+  html += '<button class="' + (activeUpdateTag === "all" ? "active" : "") + '" onclick="setUpdateTag(\'all\')">All</button>';
+  existing.forEach(function(tag) {
+    html += '<button class="' + (activeUpdateTag === tag ? "active" : "") + '" onclick="setUpdateTag(\'' + tag + '\')">' + tag + '</button>';
+  });
+  container.innerHTML = html;
+}
+
+function setUpdateTag(tag) {
+  activeUpdateTag = tag;
+  renderUpdateTagButtons();
+  renderUpdates();
+}
+
+// === SEARCH ===
+function handleSearch() {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(function() {
+    searchTerm = document.getElementById("search-input").value.toLowerCase().trim();
+    renderUpdates();
+  }, 150);
+}
+
+// === RENDERING ===
+function renderUpdates() {
+  var filtered = allUpdates.slice();
+
+  if (activeUpdateTag !== "all") {
+    filtered = filtered.filter(function(u) { return u.tag === activeUpdateTag; });
+  }
+
+  if (searchTerm) {
+    filtered = filtered.filter(function(u) {
+      return u.title.toLowerCase().indexOf(searchTerm) !== -1
+        || u.body.toLowerCase().indexOf(searchTerm) !== -1
+        || u.tag.toLowerCase().indexOf(searchTerm) !== -1;
+    });
+  }
+
+  var container = document.getElementById("update-list");
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<li class="empty-state">No updates match the selected filters.</li>';
+    return;
+  }
+
+  var html = "";
+  filtered.forEach(function(u) {
+    var titleHtml = u.link
+      ? '<a href="' + u.link + '">' + u.title + '</a>'
+      : u.title;
+    var actionHtml = u.actionLink
+      ? ' <a href="' + u.actionLink + '">' + u.action + ' &rarr;</a>'
+      : '';
+    html += '<li>'
+      + '<div class="update-date">' + u.dateDisplay + '</div>'
+      + '<div class="update-title">' + titleHtml + '</div>'
+      + '<div class="update-body">'
+      + '<span class="update-tag">' + u.tag + '</span>'
+      + u.body + actionHtml
+      + '</div>'
+      + '</li>';
+  });
+  container.innerHTML = html;
+}
+
+// === INIT ===
+renderUpdateTagButtons();
+renderUpdates();
+</script>
 </body>
 </html>
