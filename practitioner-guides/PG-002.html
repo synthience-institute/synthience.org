@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-002: Verify Before You Work · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A minimal working sequence for confirming that an AI system has actually processed your documents before you begin work. Copy-ready prompts for any platform.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="Verify Before You Work · Synthience Institute">
+  <meta property="og:description" content="A minimal working sequence for confirming that an AI system has actually processed your documents before you begin work. Copy-ready prompts for any platform.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-002.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/PG-002_Infographic.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="Verify Before You Work · Synthience Institute">
+  <meta name="twitter:description" content="A minimal working sequence for confirming that an AI system has actually processed your documents before you begin work. Copy-ready prompts for any platform.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/PG-002_Infographic.jpg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-figure { margin: 1.5rem auto 2rem auto; max-width: 480px; }
+    .article-figure img { max-width: 100%; border-radius: 4px; display: block; margin: 0 auto; }
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
+    .pg-rule strong { color: #c8604a; }
+    .prompt-block {
+      background: #1a1714;
+      color: #e8e4dc;
+      font-family: monospace;
+      font-size: 0.88rem;
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 0.8rem 0 1.2rem 0;
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+    .prompt-block .placeholder {
+      color: #c8a96e;
+      font-style: italic;
+    }
+    .prompt-block .label {
+      color: #8a7f72;
+      font-size: 0.8rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .step-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8a7f72;
+      margin-bottom: 0.3rem;
+    }
+    .response-block {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-radius: 4px;
+      padding: 0.7rem 1rem;
+      margin: 0.4rem 0 1.2rem 0;
+      font-size: 0.88rem;
+      color: #5a4a3a;
+      font-style: italic;
+    }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>Verify Before You Work: A Minimal Sequence for AI Document Ingestion</h2>
+
+<div class="article-meta">
+  <span>PG-002</span>
+  <span>April 3, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p><em>A copy-ready prompt sequence for confirming AI document ingestion before work begins</em></p>
+
+<div class="article-figure">
+  <img src="../assets/images/PG-002_Infographic.jpg" alt="Verify Before You Work: A four-step sequence for confirming AI document ingestion. Step 1: Prime the instance. Step 2: Attach and confirm. Step 3: Request summary. Step 4: Spot-check.">
+</div>
+
+<h3>The problem in one sentence</h3>
+
+<p>
+You give an AI a document, it says it read it, and you move on. But it may have processed
+only part of it, reconstructed content it did not actually read, or lost critical details
+that will only become visible when something goes wrong later.
+</p>
+
+<div class="pg-callout">An AI system cannot verify its own ingestion. You can. This guide gives you the minimum steps to do that.</div>
+
+<h3>Who this is for</h3>
+
+<p>
+Anyone who gives an AI system a document &mdash; a report, a contract, a specification, meeting
+notes, a research paper, anything &mdash; and then expects it to use that document reliably in
+the work that follows. This is especially relevant in enterprise environments where AI
+tools handle documents as part of routine workflows.
+</p>
+
+<p>
+This guide does not require technical knowledge. It requires only the ability to copy a
+prompt and read a response.
+</p>
+
+<h3>Why this is a real problem, not a theoretical one</h3>
+
+<p>
+AI systems are optimized to produce fluent, plausible responses. When they have not fully
+processed a document, they do not say so. They fill gaps with reconstruction: text that
+sounds correct and may be mostly correct, but may also be missing constraints, inverting
+details, or substituting approximations for specifics.
+</p>
+
+<p>
+Enterprise AI tools in particular &mdash; including tools built on Microsoft Copilot and similar
+platforms &mdash; can fail silently when documents are attached. The system acknowledges the
+file, appears to proceed normally, and produces output that looks reasonable. The gap
+between what was actually in the document and what the AI used is not visible until you
+look for it.
+</p>
+
+<p>
+The sequence in this guide makes that gap visible before you rely on it.
+</p>
+
+<h3>The minimal working sequence</h3>
+
+<p>
+Three required prompts, one optional verification step, then your actual work begins.
+Each step below shows the exact prompt to send and what a valid response looks like.
+</p>
+
+<div class="pg-rule">
+<strong>Step 1</strong> &mdash; Prime: tell it files are coming, do nothing yet<br>
+<strong>Step 2</strong> &mdash; Attach and confirm receipt only<br>
+<strong>Step 3</strong> &mdash; Request summary and verify it reflects your actual document<br>
+<strong>Step 4</strong> &mdash; Spot-check with a specific question <em>(optional but recommended)</em><br>
+<strong>Step 5</strong> &mdash; Begin your actual work
+</div>
+
+<p>
+Text in <span style="color:#c8a96e;font-family:monospace;font-style:italic;">this color</span> is a placeholder: replace it with your actual content.
+</p>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 1 &mdash; Prime the instance</h4>
+
+<p class="step-label">Send this first, before attaching any files</p>
+
+<div class="prompt-block"><span class="label">YOU SAY:</span>ATTACHMENT-FIRST MODE. I am going to attach one or more files in my next message. Do not analyze, summarize, or respond to them yet. Wait for my instruction.</div>
+
+<div class="response-block">What to expect: A brief acknowledgment. Nothing more. If the AI starts analyzing or asking questions about the files, it has not followed the instruction. Send the prompt again.</div>
+
+<p>
+This step exists because some AI platforms begin processing attachments the moment they
+are received, which can cause fragmented or incomplete ingestion. Separating the
+attachment step from the analysis step forces a cleaner processing sequence.
+</p>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 2 &mdash; Attach the files and confirm receipt</h4>
+
+<p class="step-label">Attach your file or files, then send this</p>
+
+<div class="prompt-block"><span class="label">YOU SAY:</span>Files attached. Respond with exactly: ATTACHMENTS RECEIVED. Do not analyze or summarize.</div>
+
+<div class="response-block">What to expect: "ATTACHMENTS RECEIVED." and nothing else. If the AI summarizes the files or begins analysis, send the prompt again with the instruction repeated.</div>
+
+<p>
+The purpose is confirmation without processing. You are establishing that the files are
+present in the session before asking the AI to do anything with them.
+</p>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 3 &mdash; Request ingestion and summary</h4>
+
+<p class="step-label">This is the verification step</p>
+
+<div class="prompt-block"><span class="label">YOU SAY:</span>Read the attached <span class="placeholder">[file name or description]</span> as reference material for this session. This session is for <span class="placeholder">[brief description of what you want to do]</span>.
+
+Summarize the document at a high level so I can confirm you have read it. Cover the main sections and any key details relevant to <span class="placeholder">[your purpose]</span>.</div>
+
+<div class="response-block">What to expect: A structured summary covering the main sections of your document. It should be specific enough that you can recognize it as your document, not a generic description. If it reads like something the AI could have produced without seeing the file, that is a warning sign.</div>
+
+<p>
+Read the summary critically. You are not looking for a perfect summary. You are looking
+for evidence that the AI processed the actual content &mdash; your structure, your terms, your
+specific details &mdash; rather than producing a generic response about what a document of
+this type typically contains.
+</p>
+
+<div class="pg-callout">If the summary could have been written without reading your document, the ingestion has not been verified. Send Step 3 again with a more specific instruction, or try a different approach to attaching the file.</div>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 4 &mdash; Spot-check (optional but recommended)</h4>
+
+<p class="step-label">Ask something only answerable from the actual document</p>
+
+<div class="prompt-block"><span class="label">YOU SAY:</span>Before we begin, one verification question: <span class="placeholder">[ask a specific question whose answer appears in your document: a number, a name, a defined term, a constraint, a date]</span></div>
+
+<div class="response-block">What to expect: The correct answer from your document. If the AI gets it wrong, hedges, or produces a plausible-sounding answer that does not match your document, ingestion has not been adequate. Do not proceed to work.</div>
+
+<p>
+Choose a question that has a specific, verifiable answer in your document. Avoid questions
+that the AI could answer correctly from general knowledge without having read the file.
+</p>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 5 &mdash; Begin work</h4>
+
+<p class="step-label">Only after the summary and spot-check are satisfactory</p>
+
+<div class="prompt-block"><span class="label">YOU SAY:</span>Good. Now <span class="placeholder">[your actual task or question]</span>.</div>
+
+<p>
+At this point you have externally confirmed that the document is present in the session
+and that the AI has processed it to a degree adequate for your purpose. You can proceed
+with reasonable confidence.
+</p>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h3>When to use this</h3>
+
+<p>Use this sequence any time you are providing a document that the AI will need to use
+reliably: contracts, specifications, policies, reports, research, meeting notes,
+procedures. The longer or more specific the document, and the more your work depends on
+its details, the more important this sequence becomes.</p>
+
+<p>For short or low-stakes documents where you can easily catch errors, Step 3 alone &mdash;
+the summary request &mdash; is often sufficient.</p>
+
+<h3>What this sequence does not guarantee</h3>
+
+<p>
+This sequence confirms that the AI has processed your document adequately at the start
+of a session. It does not guarantee that the AI will continue to use it faithfully
+throughout a long conversation. In extended sessions, document fidelity can degrade as
+context grows. If your session runs long, re-grounding periodically &mdash; re-stating key
+constraints or re-asking targeted questions &mdash; is good practice.
+</p>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>
+This guide implements a simplified version of the Ingestion Verification Protocol, a
+formally specified methodology for observable AI document processing developed at the
+Synthience Institute.
+</p>
+
+<ul>
+  <li><a href="IVP-video.html">Video: The Ingestion Verification Protocol</a> &mdash; a three-minute overview of the full IVP method</li>
+  <li><a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol</a> &mdash; full methodology, formal definitions, and implementation guidance. DOI: <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">10.5281/zenodo.18289047</a></li>
+  <li><a href="PG-001.html">PG-001: AI-Assisted Editing Without Silent Loss</a> &mdash; a related procedure for document editing workflows where silent content loss is a risk</li>
+  <li><a href="PG-000.html">PG-000: How to Work Reliably With Conversational AI Over Time</a> &mdash; the foundational guide for long-horizon AI use</li>
+</ul>
+
+<p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-002 Practitioner Guide<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: April 3, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

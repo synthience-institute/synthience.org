@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-006: Your AI Updated the File. Did It Preserve What It Didn't Touch? · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A companion verification procedure for any AI-assisted file update. How to confirm that an AI preserved unchanged sections exactly as written, without silent compression, deletion, or substitution.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="Your AI Updated the File. Did It Preserve What It Didn't Touch? · Synthience Institute">
+  <meta property="og:description" content="A companion verification procedure for any AI-assisted file update. How to confirm that an AI preserved unchanged sections exactly as written, without silent compression, deletion, or substitution.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-006.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="Your AI Updated the File. Did It Preserve What It Didn't Touch? · Synthience Institute">
+  <meta name="twitter:description" content="A companion verification procedure for any AI-assisted file update. How to confirm that an AI preserved unchanged sections exactly as written, without silent compression, deletion, or substitution.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-figure { margin: 1.5rem auto 2rem auto; max-width: 480px; }
+    .article-figure img { max-width: 100%; border-radius: 4px; display: block; margin: 0 auto; }
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
+    .pg-rule strong { color: #c8604a; }
+    .prompt-block {
+      background: #1a1714;
+      color: #e8e4dc;
+      font-family: monospace;
+      font-size: 0.88rem;
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 0.8rem 0 1.2rem 0;
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+    .prompt-block .placeholder {
+      color: #c8a96e;
+      font-style: italic;
+    }
+    .prompt-block .label {
+      color: #8a7f72;
+      font-size: 0.8rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .step-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8a7f72;
+      margin-bottom: 0.3rem;
+    }
+    .response-block {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-radius: 4px;
+      padding: 0.7rem 1rem;
+      margin: 0.4rem 0 1.2rem 0;
+      font-size: 0.88rem;
+      color: #5a4a3a;
+      font-style: italic;
+    }
+    .diff-example {
+      background: #1a1714;
+      color: #e8e4dc;
+      font-family: monospace;
+      font-size: 0.88rem;
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 0.8rem 0 1.2rem 0;
+      line-height: 1.7;
+    }
+    .diff-example .label { color: #8a7f72; }
+    .diff-example .value { color: #e8e4dc; }
+    .diff-example .warning { color: #c8604a; }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>Your AI Updated the File. Did It Preserve What It Didn't Touch?</h2>
+
+<div class="article-meta">
+  <span>PG-006</span>
+  <span>April 4, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p><em>A companion verification procedure for any AI-assisted file update</em></p>
+
+<div class="pg-callout">The AI's failure mode is not in what it edited. It is in what it silently compressed, reworded, or dropped while carrying the rest of the file forward.</div>
+
+<h3>A different failure mode</h3>
+
+<p>
+When you ask an AI to edit a document, the risk is that it changes things you did not
+intend to change. PG-01 addresses that problem directly, with an Edit Pass and a
+Verification Pass that confirms intended changes were made correctly.
+</p>
+
+<p>
+This guide addresses something different. Editing means changing content. Updating a
+structured file means adding or modifying specific elements while the rest is supposed
+to stay exactly as written. When you ask an AI to update a structured file -- adding a
+new section, logging a new entry, bumping a version number -- the risk is not in what
+it was asked to change. It is in what it was not asked to change.
+</p>
+
+<p>
+The unchanged sections are supposed to be identical to the source. Often they are not.
+</p>
+
+<h3>What silent compression looks like in practice</h3>
+
+<p>
+You ask an instance to add a new entry to a log file. The instance adds the entry
+correctly. But in the process of producing the full updated file, it also:
+</p>
+
+<ul>
+  <li>shortens a paragraph in a section it was not asked to touch</li>
+  <li>replaces a specific rule with a looser paraphrase that means something slightly different</li>
+  <li>drops a bullet point from a checklist three sections away</li>
+  <li>substitutes a summary of an entire section it judged to be unchanged</li>
+</ul>
+
+<p>
+None of these changes appear alongside the new entry in any obvious way, because they
+did not happen there. They happened in the parts the AI was regenerating while completing
+the task you gave it.
+</p>
+
+<p>
+The output looks correct. The new entry is there. The file length is approximately right.
+The problem is invisible until something downstream depends on the section that was
+quietly reworded.
+</p>
+
+<div class="pg-callout">A file that passes a quick read is not a file that has been verified. Structural documents require structural verification.</div>
+
+<h3>Why this happens</h3>
+
+<p>
+When asked to produce a full updated file, an AI instance must regenerate every section,
+not just the changed one. As it does this across a long document, it works from its own
+understanding of what the content means, not from the exact prior wording. Unchanged
+sections are any part of the file that was not included in the update instructions --
+and they are supposed to be reproduced verbatim.
+</p>
+
+<p>
+The result is a document close to the original in meaning but not verbatim identical in
+the sections that were not supposed to change. In most documents this is harmless. In
+governance files, operational procedures, configuration files, system prompts, checklists,
+and any structured document where the specific wording of rules matters, it is a
+reliability failure.
+</p>
+
+<p>
+This is not a bug in the AI. It is the default behavior of a system that was not
+explicitly instructed to treat preservation of unchanged content as a first-class
+requirement.
+</p>
+
+<h3>The distinction from PG-01</h3>
+
+<p>Both PG-01 and this guide address silent loss in AI-assisted document work, but they target different failure modes.</p>
+
+<div class="pg-rule">
+<strong>PG-01 asks:</strong> Did the AI make the changes I requested without losing anything else?<br><br>
+<strong>This guide asks:</strong> In the sections I did not ask the AI to touch, is every word exactly as it was?
+</div>
+
+<h3>When to use this procedure</h3>
+
+<p>Use this procedure after any AI-assisted file update when:</p>
+
+<ul>
+  <li>The file encodes rules, constraints, procedures, or definitions</li>
+  <li>The file will be used to brief other instances who must rely on exact content</li>
+  <li>The unchanged sections carry operational or governance authority</li>
+  <li>The specific wording of unchanged content matters, not just the general meaning</li>
+  <li>The file is long enough that you cannot easily read it in full after every update</li>
+  <li>Multiple instances are working on the same file across sessions</li>
+</ul>
+
+<p>
+If losing a single sentence from an unchanged section would create a downstream problem,
+use this procedure. The cost is small. The risk of skipping it is cumulative and often
+invisible.
+</p>
+
+<h3>The procedure: three steps</h3>
+
+<div class="pg-rule">
+<strong>Step 1</strong> &mdash; Retain the prior version before any update begins<br>
+<strong>Step 2</strong> &mdash; After the update is delivered, run a preservation verification pass<br>
+<strong>Step 3</strong> &mdash; Human reviews the report and confirms or flags
+</div>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 1 &mdash; Retain the prior version</h4>
+
+<p class="step-label">Before asking any AI to update a structured file</p>
+
+<p>
+Save the complete prior version as an immutable artifact before any update session begins.
+Do not rely on the AI to preserve it. Do not rely on memory. If the prior version is not
+available for comparison, this procedure cannot be run.
+</p>
+
+<p>
+This step costs nothing and enables every subsequent verification. If you skip it,
+you cannot confirm what changed and what did not.
+</p>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 2 &mdash; Run the preservation verification pass</h4>
+
+<p class="step-label">After the updated file is delivered, give both versions to a verification instance</p>
+
+<p>
+Provide a fresh instance with both the prior version and the new version. Use a different
+instance than the one that produced the update, or at minimum a fresh session with no
+memory of the update task. The verification instance has one job: compare the two files
+and report every difference between them.
+</p>
+
+<div class="prompt-block"><span class="label">YOU SAY:</span>I am giving you two versions of the same file. Version A is the prior version. Version B is the updated version. Your job is comparison only.
+
+Do NOT rewrite, improve, summarize, or editorialize either version. Do NOT fix anything you find. Do NOT reassure me that the files look correct.
+
+For each difference you find, report:
+- Which section it is in
+- What the prior version said (exact wording)
+- What the updated version says (exact wording)
+- Whether this appears to be an intended change or an unintended change
+
+Organize your report by section. After the section-by-section report, produce a summary:
+- Total number of differences found
+- How many appear to be intended changes
+- How many appear to be unintended changes
+- Any sections that were entirely absent from one version
+
+[VERSION A -- prior version]
+<span class="placeholder">[paste the complete prior version here]</span>
+
+[VERSION B -- updated version]
+<span class="placeholder">[paste the complete updated version here]</span></div>
+
+<div class="response-block">What to expect: A section-by-section report identifying every difference between the two files, with exact wording from each version side by side. The summary counts should reflect every difference found, not just the ones the instance considers significant. If the instance produces reassurance instead of a report, or begins fixing things rather than reporting them, repeat the instruction explicitly.</div>
+
+<p>
+The key requirement is exact wording, not paraphrase. You need to see what each version
+actually says in the differing sections, not a summary of how they differ. Paraphrase
+can obscure precisely the kind of subtle substitution this procedure is designed to catch.
+</p>
+
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 3 &mdash; Human reviews and decides</h4>
+
+<p class="step-label">The human is the final authority on what counts as an acceptable difference</p>
+
+<p>
+Read the report. For each difference identified, decide whether it was intended or not.
+Intended differences are the ones you asked for. Every other difference is a candidate
+for correction.
+</p>
+
+<p>
+If the report identifies unintended changes, return to the instance that produced the
+update and request a corrected version with explicit instruction to preserve the affected
+sections verbatim. Then run the verification pass again on the corrected version.
+</p>
+
+<div class="pg-callout">The AI does not decide what counts as an acceptable difference. You do.</div>
+
+<h3>A note on the instruction "do not fix anything"</h3>
+
+<p>
+The verification pass instruction must explicitly prohibit editing and fixing. Without
+this instruction, AI instances will drift back into improvement mode: they will find
+something that looks like it could be better and change it rather than reporting it.
+</p>
+
+<p>
+This is the same dynamic PG-01 addresses in its verification pass instruction. AI systems
+default to improvement, not to pure observation. You have to explicitly constrain the
+task to analysis only, and the constraint needs to be stated plainly enough that the
+instance does not rationalize its way around it.
+</p>
+
+<h3>What the report should and should not look like</h3>
+
+<div class="diff-example">
+<div><span class="label">ACCEPTABLE REPORT (this example is drawn from an operations file, but the format applies to any structured document):</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Section 3.2 -- Default Commenting Posture</span></div>
+<div><span class="value">Prior version: "Prefer one coherent paragraph over fragmented micro-comments"</span></div>
+<div><span class="value">Updated version: "Prefer coherent paragraphs over fragmented micro-comments"</span></div>
+<div><span class="value">Assessment: Appears unintended -- wording changed without instruction</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Section 9.5 -- New Entry</span></div>
+<div><span class="value">Prior version: Section did not exist</span></div>
+<div><span class="value">Updated version: Full new entry present</span></div>
+<div><span class="value">Assessment: Appears intended -- this is the requested addition</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Summary: 2 differences found. 1 intended. 1 unintended.</span></div>
+</div>
+
+<p>The following responses are not valid verification results, even if they feel reassuring.</p>
+
+<div class="diff-example">
+<div><span class="warning">-- "The files look substantially the same. The new section was added correctly."</span></div>
+<div><span class="warning">-- "I made a small improvement to Section 3.2 for clarity."</span></div>
+<div><span class="warning">-- "No significant differences detected."</span></div>
+</div>
+
+<p>
+Reassurance without a structured report is not a valid verification result. "Substantially
+the same" is not "verbatim identical in unchanged sections." If the instance cannot
+produce a structured report, the verification has not been completed.
+</p>
+
+<h3>What this procedure does not do</h3>
+
+<p>
+This procedure confirms that unchanged sections are verbatim identical to the prior
+version. It does not verify that the original content was correct or complete to begin
+with. It does not confirm that the intended changes were made correctly -- that is what
+PG-01 addresses. And it does not replace the operator's judgment about whether the file
+as a whole serves its purpose. Those remain human decisions.
+</p>
+
+<h3>Checklist</h3>
+
+<ul>
+  <li>Save the complete prior version before any update session begins</li>
+  <li>After the update is delivered, provide both versions to a fresh verification instance or fresh session</li>
+  <li>Instruct the verification instance to report differences only -- no fixing, no improving, no reassuring</li>
+  <li>Require exact wording from both versions for every difference found, not paraphrase</li>
+  <li>Require a summary count: total differences, intended, unintended</li>
+  <li>Review the report yourself and decide what is acceptable</li>
+  <li>For any unintended difference, request a corrected version and run the verification pass again</li>
+  <li>Do not accept reassurance as a substitute for a structured report</li>
+</ul>
+
+<p>The cost of this procedure is one additional pass. The cost of skipping it accumulates silently across every file that was not checked.</p>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>
+This guide addresses a specific instance of a broader failure mode: AI systems that
+produce fluent, plausible outputs while silently diverging from source material. The
+formal treatment of this class of failures is distributed across the Synthience Institute
+research corpus.
+</p>
+
+<ul>
+  <li><a href="PG-001.html">PG-001: AI-Assisted Editing Without Silent Loss</a> &mdash; the companion guide for the editing side of this problem. PG-01 verifies that intended changes were made correctly. This guide verifies that unintended changes were not made at all.</li>
+  <li><a href="PG-002.html">PG-002: Verify Before You Work</a> &mdash; the input-side companion. Confirms that an AI system has actually processed a document before work begins. This guide addresses the output side: confirming that a produced file preserves what it was supposed to preserve.</li>
+  <li><a href="PG-005.html">PG-005: You Are Accepting the First Adequate Answer</a> &mdash; how to instruct an AI to cycle through self-evaluation before delivering output. Applying that technique to the update task reduces the frequency of unintended changes before they reach the verification stage.</li>
+  <li><a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol (IVP)</a> &mdash; the formal methodology underlying the verification logic used in this guide and in PG-01 and PG-02. DOI: <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">10.5281/zenodo.18289047</a></li>
+  <li><a href="../research/SF0039.html">SF0039: Context Representation Drift (CRD)</a> &mdash; the formal treatment of how AI representations of content diverge from source material during extended interaction. The silent compression failure mode this guide addresses is a direct instance of drift. DOI: <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">10.5281/zenodo.18289391</a></li>
+  <li><a href="../research/SF0037.html">SF0037: Citation Verification Protocol (CVP)</a> &mdash; the Institute's methodology for structured claim verification. The verification logic in this guide is structurally analogous: in both cases, a specific claim must be checked against a source rather than accepted on assertion. DOI: <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">10.5281/zenodo.18075624</a></li>
+  <li><a href="../research/SF0040.html">SF0040: Theoretical Coherence Assurance Protocol (TCAP)</a> &mdash; the Institute's multi-stage document review methodology. The verification pass in this guide is a practitioner application of the Stage 6 version regression check, which was developed to catch exactly this class of silent content loss across revision cycles. DOI: <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">10.5281/zenodo.19151454</a></li>
+  <li><a href="PG-000.html">PG-000: How to Work Reliably With Conversational AI Over Time</a> &mdash; the foundational guide for long-horizon AI use, including the document upload misconception and the importance of externalization.</li>
+</ul>
+
+<p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-006 Practitioner Guide<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: April 4, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

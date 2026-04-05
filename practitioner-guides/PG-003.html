@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-003: The Ingestion Verification Protocol · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Video overview of the Ingestion Verification Protocol. Does your AI actually read your documents? A four-step method for making AI document processing observable and verifiable.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="The Ingestion Verification Protocol: Video Overview · Synthience Institute">
+  <meta property="og:description" content="Does your AI actually read your documents? Video overview of the four-step Ingestion Verification Protocol.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-003.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/IVP_Vido_Title_card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="The Ingestion Verification Protocol: Video Overview · Synthience Institute">
+  <meta name="twitter:description" content="Does your AI actually read your documents? Video overview of the four-step Ingestion Verification Protocol.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/IVP_Vido_Title_card.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin: 1.5rem 0 2rem 0;
+      border-radius: 4px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    .media-tag { display: inline-block; background: #5a3e2b; color: #fff; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<span class="media-tag">Video</span>
+
+<h2>The Ingestion Verification Protocol: Does Your AI Actually Read Your Documents?</h2>
+
+<div class="article-meta">
+  <span>PG-003</span>
+  <span>April 2, 2026</span>
+  <span>Thomas W. Gantz</span>
+  <span>3:27</span>
+</div>
+
+<p><em>Video overview of SF0038: Ingestion Verification Protocol</em></p>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/xlfcDJcPuTY" allowfullscreen></iframe>
+</div>
+
+<h3>About this video</h3>
+
+<p>
+You upload a document. You tell the AI to read it. It says it did. You assume the content has been fully processed and move on.
+</p>
+
+<p>
+That assumption is wrong -- and it is one of the most common and least understood failure modes in AI-assisted work.
+</p>
+
+<p>
+This video introduces the Ingestion Verification Protocol, a four-step method for making AI document processing observable and verifiable. Instead of trusting the AI's self-report, the protocol requires the system to show its work -- section by section -- so that processing can be checked before any downstream work begins.
+</p>
+
+<div class="pg-callout">The AI cannot verify its own ingestion. You can. That is not a limitation to work around. It is the design of the protocol.</div>
+
+<h3>The four steps</h3>
+
+<p>
+The protocol proceeds through four stages. First, scope definition establishes exactly what the document is, what the use case requires, and what level of detail is needed. Second, iterative ingestion breaks the document into segments, requiring the AI to produce a structured summary and a verbatim checkpoint after each one -- transforming an opaque process into an observable record. Third, adequacy adjudication requires the human operator to review those summaries and decide whether processing was sufficient. This step cannot be delegated back to the AI. Fourth, an optional spot-check provides additional confidence by asking targeted questions that can only be answered correctly if the document was genuinely processed.
+</p>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>
+The full technical treatment of the Ingestion Verification Protocol is available as a published research paper with DOI. The companion Practitioner Guide covers a minimal working sequence for everyday document verification.
+</p>
+
+<ul>
+  <li><a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol</a> -- full methodology, formal definitions, and implementation guidance. DOI: <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">10.5281/zenodo.18289047</a></li>
+  <li><a href="PG-002.html">PG-002: Verify Before You Work</a> -- a minimal copy-ready prompt sequence for confirming document ingestion before any session begins</li>
+  <li><a href="PG-001.html">PG-001: AI-Assisted Editing Without Silent Loss</a> -- practical application of IVP principles to document editing workflows</li>
+  <li><a href="../research/SF0039.html">SF0039: Context Representation Drift (CRD)</a> -- the related failure mode describing how constraints lose influence during extended interaction</li>
+</ul>
+
+<p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-003 Practitioner Guide (Video)<br>
+Reference: SF0038 -- Ingestion Verification Protocol<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: April 2, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
