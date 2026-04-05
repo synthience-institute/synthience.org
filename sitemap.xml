@@ -63,10 +63,6 @@
 
   <!-- Practitioner Guides -->
   <url>
-    <loc>https://synthience.org/practitioner-guides/PG-000.html</loc>
-    <lastmod>2026-04-05</lastmod>
-  </url>
-  <url>
     <loc>https://synthience.org/practitioner-guides/PG-001.html</loc>
     <lastmod>2026-04-05</lastmod>
   </url>
@@ -79,15 +75,19 @@
     <lastmod>2026-04-05</lastmod>
   </url>
   <url>
+    <loc>https://synthience.org/practitioner-guides/PG-006.html</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/practitioner-guides/PG-007.html</loc>
+    <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
     <loc>https://synthience.org/practitioner-guides/PG-004.html</loc>
     <lastmod>2026-04-05</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/practitioner-guides/PG-005.html</loc>
-    <lastmod>2026-04-05</lastmod>
-  </url>
-  <url>
-    <loc>https://synthience.org/practitioner-guides/PG-006.html</loc>
     <lastmod>2026-04-05</lastmod>
   </url>
 
