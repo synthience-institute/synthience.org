@@ -54,10 +54,28 @@
       margin-bottom: 1.8rem;
     }
     .start-here-header {
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: #3a3530;
+      margin: 0 0 0.2rem 0;
+    }
+    .start-here-subtitle {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      font-style: italic;
       margin: 0 0 0.8rem 0;
+      line-height: 1.5;
+    }
+    .start-here-divider {
+      height: 1px;
+      background: #e0ddd4;
+      margin: 0.8rem 0;
+    }
+    .start-here-header-secondary {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #8a7f72;
+      margin: 0 0 0.4rem 0;
     }
     .start-here-items { display: flex; flex-direction: column; gap: 0.6rem; }
     .start-here-item {
@@ -300,16 +318,20 @@
 <main class="content">
 
 <h2>Practitioner Guides</h2>
-<p>Operational guides for professionals who work with AI systems. Each guide addresses a specific structural problem, explains why it happens, and provides a framework-grounded intervention. Drawn from the Synthience research corpus and written for practitioners, not academics.</p>
+<p>Operational guides for professionals who work with AI systems. Each guide addresses a specific structural problem, explains why it happens, and provides a practical procedure you can use immediately. Drawn from the Synthience research corpus and written for practitioners, not academics.</p>
 
 <div class="content-status">
   <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
 </div>
 
-<!-- FLAG FOR PCP REVIEW: Start Here block. Visual treatment uses existing callout style adapted for index page. Review before publication. -->
+<!-- Core Practitioner Guides block: PG-001 through PG-005 as the foundational set for any AI user -->
 <div class="start-here">
-  <div class="start-here-header">New to the Institute? Start here.</div>
-  <div class="start-here-items" id="start-here-items"></div>
+  <div class="start-here-header">Core Practitioner Guides</div>
+  <div class="start-here-subtitle">Five guides that will immediately improve how you use AI at work. No technical background required. Read PG-001 through PG-005.</div>
+  <div class="start-here-items" id="core-items"></div>
+  <div class="start-here-divider"></div>
+  <div class="start-here-header-secondary">Video Guides</div>
+  <div class="start-here-items" id="video-items"></div>
 </div>
 
 <div class="search-container">
@@ -423,30 +445,58 @@ var allGuides = [
   }
 ];
 
-// === DATA: START HERE ITEMS (not in category system) ===
-var startHereGuides = [
+// === DATA: CORE PRACTITIONER GUIDES (PG-001 through PG-005) ===
+var coreGuides = [
   {
     id: "PG-001",
     title: "How to Work Reliably With Conversational AI Over Time",
-    desc: "The gateway guide. Why AI systems behave inconsistently across sessions, what structural forces cause it, and what practitioners can do to establish durable working patterns.",
+    desc: "Why your AI starts strong and then quietly drifts. The habits that prevent it.",
     read: "practitioner-guides/PG-001.html",
     format: "text"
   },
   {
-    id: "PG-001",
-    title: "How to Work Reliably With Conversational AI Over Time",
-    desc: "The gateway guide. Why AI systems behave inconsistently across sessions, what structural forces cause it, and what practitioners can do to establish durable working patterns.",
-    date: "2026-01-28",
-    dateDisplay: "January 28, 2026",
-    anchor: "Framework-neutral",
-    read: "practitioner-guides/PG-001.html",
-    category: "interaction",
+    id: "PG-002",
+    title: "AI-Assisted Editing Without Silent Loss",
+    desc: "You asked the AI to edit your document. It sounds great. It also silently dropped a section. This procedure catches that.",
+    read: "practitioner-guides/PG-002.html",
     format: "text"
+  },
+  {
+    id: "PG-003",
+    title: "Verify Before You Work",
+    desc: "You gave the AI a document and it said it read it. It probably didn't. How to check before you build work on top of an assumption.",
+    read: "practitioner-guides/PG-003.html",
+    format: "text"
+  },
+  {
+    id: "PG-004",
+    title: "You Are Accepting the First Adequate Answer",
+    desc: "Every AI response is a first draft. How to make it evaluate and improve its own output before it responds to you, so you get the best answer, not the first adequate one.",
+    read: "practitioner-guides/PG-004.html",
+    format: "text"
+  },
+  {
+    id: "PG-005",
+    title: "Your AI Updated the File. Did It Preserve What It Didn\u2019t Touch?",
+    desc: "You asked the AI to add one section. It did. It also silently compressed three other sections and deleted a paragraph. How to catch that before you lose work.",
+    read: "practitioner-guides/PG-005.html",
+    format: "text"
+  }
+];
+
+// === DATA: VIDEO GUIDES ===
+var videoGuides = [
+  {
+    id: "PG-006",
+    title: "The Ingestion Verification Protocol",
+    desc: "Three-minute video version of the document verification method. Same content as PG-003, for people who prefer watching.",
+    read: "practitioner-guides/PG-006.html",
+    format: "video"
   },
   {
     id: "PG-007",
     title: "Introducing the Synthience Institute: The Missing Middle in AI Safety",
-    desc: "Video introduction to the Synthience Institute and the relational alignment research program. What the missing middle in AI safety is, and why runtime governance matters.",
+    desc: "What the Institute does, why it exists, and what the missing middle in AI safety research is. Four minutes.",
     read: "practitioner-guides/PG-007.html",
     format: "video"
   }
@@ -472,7 +522,8 @@ var searchTimer = null;
 function getActiveFormats() {
   var formats = {};
   allGuides.forEach(function(g) { formats[g.format] = true; });
-  startHereGuides.forEach(function(g) { formats[g.format] = true; });
+  coreGuides.forEach(function(g) { formats[g.format] = true; });
+  videoGuides.forEach(function(g) { formats[g.format] = true; });
   return Object.keys(formats);
 }
 
@@ -564,15 +615,24 @@ function renderCard(doc) {
 }
 
 function renderStartHere() {
-  var container = document.getElementById("start-here-items");
+  var coreContainer = document.getElementById("core-items");
+  var videoContainer = document.getElementById("video-items");
   var html = "";
-  startHereGuides.forEach(function(g) {
+  coreGuides.forEach(function(g) {
     html += '<div class="start-here-item"><div>'
-      + '<a href="' + g.read + '">' + g.title + '</a> ' + formatBadge(g.format)
+      + '<a href="' + g.read + '">' + g.id + ': ' + g.title + '</a> ' + formatBadge(g.format)
       + '<div class="start-here-desc">' + g.desc + '</div>'
       + '</div></div>';
   });
-  container.innerHTML = html;
+  coreContainer.innerHTML = html;
+  html = "";
+  videoGuides.forEach(function(g) {
+    html += '<div class="start-here-item"><div>'
+      + '<a href="' + g.read + '">' + g.id + ': ' + g.title + '</a> ' + formatBadge(g.format)
+      + '<div class="start-here-desc">' + g.desc + '</div>'
+      + '</div></div>';
+  });
+  videoContainer.innerHTML = html;
 }
 
 function toggleCategory(key) {
@@ -616,7 +676,7 @@ function renderGuides() {
     }
   }
 
-  document.getElementById("count-published").textContent = allGuides.length + startHereGuides.length;
+  document.getElementById("count-published").textContent = allGuides.length;
 }
 
 // === VIEW TOGGLE ===
