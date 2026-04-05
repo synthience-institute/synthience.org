@@ -168,6 +168,13 @@
 
     /* === CATEGORY SECTIONS === */
     .doc-section { margin-bottom: 1.8rem; }
+    .category-subtitle {
+      font-size: 0.78rem;
+      color: #8a7f72;
+      font-style: italic;
+      margin: -0.4rem 0 0.8rem 0;
+      line-height: 1.5;
+    }
     .doc-section-header {
       display: flex;
       align-items: center;
@@ -404,10 +411,10 @@ var startHereGuides = [
 
 // === DATA: CATEGORIES ===
 var categories = [
-  { key: "verification", label: "Verification & Integrity" },
-  { key: "interaction", label: "Interaction Discipline" },
-  { key: "framework", label: "Understanding the Framework" },
-  { key: "deployment", label: "Organizational Deployment" }
+  { key: "verification", label: "Verification & Integrity", subtitle: "Confirming that AI systems processed, preserved, and produced what they were supposed to." },
+  { key: "interaction", label: "Interaction Discipline", subtitle: "Structuring how you work with AI to get better results before you accept them." },
+  { key: "framework", label: "Understanding the Framework", subtitle: "Orientation to the Institute's research approach and methodology." },
+  { key: "deployment", label: "Organizational Deployment", subtitle: "Deploying relational AI architecture in team and enterprise environments." }
 ];
 
 // === STATE ===
@@ -546,6 +553,9 @@ function renderGuides() {
       html += '<h3>' + cat.label + ' <span style="font-size:0.78rem;font-weight:400;color:#8a7f72;">(' + catItems.length + ')</span></h3>';
       html += '<span class="doc-section-chevron' + (isCollapsed ? ' collapsed' : '') + '">&#9660;</span>';
       html += '</div>';
+      if (cat.subtitle) {
+        html += '<div class="category-subtitle">' + cat.subtitle + '</div>';
+      }
       html += '<div class="doc-section-body' + (isCollapsed ? ' collapsed' : '') + '">';
       html += '<ul class="fn-list">' + catItems.map(renderCard).join("") + '</ul>';
       html += '</div></div>';
