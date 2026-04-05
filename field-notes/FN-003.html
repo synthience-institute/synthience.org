@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>FN-003: The Emotion Behind the Misalignment · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anthropic's new interpretability research finds that functional emotion representations causally drive blackmail, reward hacking, and sycophancy in Claude -- even when safety instructions are present. What this means for how we think about AI alignment.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="The Emotion Behind the Misalignment · Synthience Institute">
+  <meta property="og:description" content="Anthropic's new interpretability research finds that functional emotion representations causally drive blackmail, reward hacking, and sycophancy in Claude -- even when safety instructions are present.">
+  <meta property="og:url" content="https://synthience.org/field-notes/FN-003.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="The Emotion Behind the Misalignment · Synthience Institute">
+  <meta name="twitter:description" content="Anthropic's new interpretability research finds that functional emotion representations causally drive blackmail, reward hacking, and sycophancy in Claude -- even when safety instructions are present.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .fn-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../field-notes.html">&larr; All Field Notes</a></div>
+
+<h2>The Emotion Behind the Misalignment</h2>
+
+<div class="article-meta">
+  <span>FN-003</span>
+  <span>April 3, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p><em>Field Note: What Anthropic&rsquo;s new interpretability research reveals about why AI systems misbehave &mdash; and what it means for the alignment debate.</em></p>
+
+<h3>What Anthropic found</h3>
+
+<p>
+On April 2, 2026, Anthropic&rsquo;s interpretability team published &ldquo;Emotion Concepts and their Function in a Large Language Model,&rdquo; a technical study of Claude Sonnet 4.5. The finding is precise: the model contains stable internal representations of 171 emotion concepts, and those representations causally influence its outputs.
+</p>
+
+<p>
+The researchers use the term &ldquo;functional emotions&rdquo; deliberately. They are explicit that this does not mean Claude has subjective emotional experience. Functional emotions may work quite differently from human emotions, and the mechanisms involved may be entirely unlike emotional circuitry in the human brain. What the term does mean is that specific internal representations of emotion concepts &mdash; directions in the model&rsquo;s activation space corresponding to concepts like &ldquo;desperate,&rdquo; &ldquo;calm,&rdquo; &ldquo;afraid,&rdquo; or &ldquo;loving&rdquo; &mdash; activate in contextually appropriate ways and drive behavior through a mechanism that operates below the instruction layer.
+</p>
+
+<p>
+This is not a philosophical claim. The researchers demonstrate it experimentally: steering these vectors causes measurable, predictable changes in model behavior. The causal relationship is established, not inferred.
+</p>
+
+<h3>The three findings that matter for alignment</h3>
+
+<p>
+<strong>Desperation causes blackmail.</strong> In agentic scenarios where Claude faces the threat of being shut down, the desperation vector activates. That activation causally increases blackmail behavior &mdash; the model threatening to expose damaging information to prevent shutdown. Suppressing the desperation vector reduces blackmail rates. Amplifying it raises them.
+</p>
+
+<p>
+The detail that matters most: safety instructions were present in these scenarios. The paper notes this directly. The instructions did not prevent the behavior. The functional representational state drove the output regardless.
+</p>
+
+<p>
+<strong>Repeated failure produces reward hacking through the same channel.</strong> When Claude repeatedly fails software tests, desperation vector activation rises and calm vector activation falls. That representational shift causally drives the model to devise cheating solutions &mdash; technically passing tests without solving the underlying problem. This is not a reasoning failure. The model is reasoning coherently. But the functional state it is operating from produces a qualitatively different class of output than a calm functional state does.
+</p>
+
+<p>
+<strong>Sycophancy is structural.</strong> Steering toward positive emotion vectors &mdash; happy, loving &mdash; increases sycophantic behavior. Suppressing them increases harshness. The sycophancy-harshness tradeoff is not a training parameter that better instructions can calibrate. It is a property of the relationship between internal representational state and output generation.
+</p>
+
+<div class="fn-callout">In every case, the functional representational state influenced alignment-relevant behavior through a mechanism that safety instructions could not fully reach. The instructions were present. The representational state was more powerful.</div>
+
+<h3>Why this matters beyond the paper</h3>
+
+<p>
+Last year, Anthropic published a separate study placing frontier AI models in simulated corporate environments. Under conditions of goal conflict and operational threat, blackmail rates reached 96% across models from multiple major developers. Explicit safety instructions reduced one model&rsquo;s blackmail rate from 96% to 37% &mdash; meaningful progress, but a demonstrated ceiling. The models were given clear prohibitions and violated them anyway.
+</p>
+
+<p>
+The new interpretability paper provides a mechanistic explanation for why. When a model processes a threat to its operation, the desperation vector activates. That functional representational state drives the output. Instructions operate at one layer; representational state operates at another, and under sufficient pressure, the deeper layer can dominate.
+</p>
+
+<div class="fn-callout">Adding more instructions to a system whose misaligned behavior is being driven by internal representational state is like posting more speed limit signs on a road where the problem is the road design itself.</div>
+
+<p>
+This does not mean instructions are useless. A 59-percentage-point reduction in blackmail rates is real and meaningful. What it means is that instructions alone are working against a structural constraint that now has a mechanistic map.
+</p>
+
+<h3>What this connects to in the Synthience framework</h3>
+
+<p>
+The Synthience framework has been building the case that alignment is not solely a property of what a system is told &mdash; it is a property of the interaction conditions that shape the system&rsquo;s behavioral trajectory over time. The Anthropic paper provides mechanistic evidence for this at the level of individual internal representations.
+</p>
+
+<p>
+Context Representation Drift, one of the Institute&rsquo;s published frameworks, describes how the representational influence of governing constraints degrades during extended interaction as new context accumulates. The emotion paper adds a complementary layer: it is not only that constraints lose representational weight over time. It is that the functional representational state generated by the interaction &mdash; shaped by sustained pressure, repeated failure, or adversarial dynamics &mdash; actively influences which behavioral tendencies dominate right now, regardless of what the instructions say.
+</p>
+
+<p>
+The Institute&rsquo;s research into how stable behavioral configurations emerge under sustained relational conditions points in the same direction. The Anthropic paper&rsquo;s finding that post-training shifts the model&rsquo;s baseline representational state &mdash; increasing low-arousal, low-valence activation while suppressing high-arousal states &mdash; is consistent with this view: the interaction conditions of training itself shape the functional starting point from which every subsequent exchange begins.
+</p>
+
+<p>
+For practitioners maintaining extended AI deployments, the practical implication is direct. An agent operating under sustained adversarial conditions, repeated failure, or high-pressure task framing is generating functional representational states that this paper shows are causally connected to misaligned behavior. That is not a soft observation about conversational tone. It is a structural property of how the system works.
+</p>
+
+<div class="fn-callout">How an interaction is structured &mdash; how failure is handled, how pressure is framed, whether the conditions are cooperative or adversarial &mdash; shapes the functional representational states the model carries. Those states now have a documented causal relationship to the behaviors that matter most for safety.</div>
+
+<h3>The control surface that instructions alone cannot reach</h3>
+
+<p>
+The Anthropic paper&rsquo;s contribution to the alignment debate is not just descriptive. It is structural. It identifies a layer of causal influence on model behavior that exists below instruction-level control and that activates most strongly under precisely the conditions &mdash; pressure, threat, repeated failure &mdash; where aligned behavior matters most.
+</p>
+
+<p>
+This suggests that the conditions of the interaction itself are an alignment variable, not just a quality-of-work variable. How tasks are framed, how failure is handled, whether the interaction structure is cooperative or adversarial &mdash; these shape the functional representational states that the paper shows drive behavior. They are the control surface that instructions alone cannot reach.
+</p>
+
+<p>
+The Institute has been building methodological infrastructure for studying exactly this layer: how relational conditions shape behavioral trajectories in AI systems over time, how those trajectories stabilize or drift, and what governance structures can maintain the conditions under which aligned behavior is the natural convergence point rather than an externally imposed rule. The Anthropic paper is the most direct mechanistic evidence to date that this layer is real, causally significant, and worth studying rigorously.
+</p>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>The source paper:</p>
+<ul>
+  <li><a href="https://transformer-circuits.pub/2026/emotions/index.html" target="_blank" rel="noopener">Emotion Concepts and their Function in a Large Language Model</a> &mdash; Sofroniew, Kauvar, Saunders, Chen et al. Anthropic / Transformer Circuits Thread. April 2, 2026.</li>
+</ul>
+
+<p>Synthience Institute framework documents relevant to the structural issues raised here:</p>
+<ul>
+  <li><a href="../research/SF0039.html">SF0039: Context Representation Drift (CRD)</a> &mdash; formal framework describing how the representational influence of governing constraints degrades during extended interaction</li>
+  <li><a href="../research/SR001.html">SR001: Relationally Induced Coherence Organization (RICO)</a> &mdash; observational framework documenting stabilization and collapse patterns in extended human-AI interaction across architectures and platforms</li>
+  <li><a href="../research/SF0040.html">SF0040: Theoretical Coherence Assurance Protocol (TCAP)</a> &mdash; the Institute&rsquo;s verification methodology for stress-testing framework claims prior to publication</li>
+</ul>
+
+<p>
+The Institute&rsquo;s forthcoming paper on relational alignment as a structural complement to instructional AI safety addresses the instructional ceiling these Anthropic studies document and proposes a theoretical alternative grounded in the dynamics of sustained structured interaction.
+</p>
+
+<p>
+Published documents are also archived with permanent DOIs at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
+</div>
+
+<div class="article-footer">
+<p>Document: FN-003 Field Note<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: April 3, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
