@@ -11,25 +11,25 @@
   </script>
   <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
   <meta charset="UTF-8">
-  <title>PG-002: Verify Before You Work · Synthience Institute</title>
+  <title>PG-002: AI-Assisted Editing Without Silent Loss · Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A minimal working sequence for confirming that an AI system has actually processed your documents before you begin work. Copy-ready prompts for any platform.">
+  <meta name="description" content="A step-by-step procedure for using AI to edit complex documents without losing content you did not intend to lose. Covers the Edit Pass, Verification Pass, and structured diff report.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
-  <meta property="og:title" content="Verify Before You Work · Synthience Institute">
-  <meta property="og:description" content="A minimal working sequence for confirming that an AI system has actually processed your documents before you begin work. Copy-ready prompts for any platform.">
+  <meta property="og:title" content="AI-Assisted Editing Without Silent Loss · Synthience Institute">
+  <meta property="og:description" content="A step-by-step procedure for using AI to edit complex documents without losing content you did not intend to lose. Covers the Edit Pass, Verification Pass, and structured diff report.">
   <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-002.html">
   <meta property="og:image" content="https://synthience.org/assets/images/PG-002_Infographic.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
-  <meta name="twitter:title" content="Verify Before You Work · Synthience Institute">
-  <meta name="twitter:description" content="A minimal working sequence for confirming that an AI system has actually processed your documents before you begin work. Copy-ready prompts for any platform.">
+  <meta name="twitter:title" content="AI-Assisted Editing Without Silent Loss · Synthience Institute">
+  <meta name="twitter:description" content="A step-by-step procedure for using AI to edit complex documents without losing content you did not intend to lose. Covers the Edit Pass, Verification Pass, and structured diff report.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/PG-002_Infographic.jpg">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
-    .article-figure { margin: 1.5rem auto 2rem auto; max-width: 480px; }
-    .article-figure img { max-width: 100%; border-radius: 4px; display: block; margin: 0 auto; }
+    .article-figure { margin: 1.5rem 0 2rem 0; }
+    .article-figure img { max-width: 100%; border-radius: 4px; display: block; }
     .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
     .article-meta span { margin-right: 1.2rem; }
     .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
@@ -38,43 +38,48 @@
     .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
     .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
     .pg-rule strong { color: #c8604a; }
-    .prompt-block {
-      background: #1a1714;
-      color: #e8e4dc;
-      font-family: monospace;
-      font-size: 0.88rem;
-      padding: 1rem 1.2rem;
-      border-radius: 4px;
-      margin: 0.8rem 0 1.2rem 0;
-      line-height: 1.7;
-      white-space: pre-wrap;
-    }
-    .prompt-block .placeholder {
-      color: #c8a96e;
-      font-style: italic;
-    }
-    .prompt-block .label {
-      color: #8a7f72;
-      font-size: 0.8rem;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .step-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #8a7f72;
-      margin-bottom: 0.3rem;
-    }
-    .response-block {
+    .diff-example { background: #1a1714; color: #e8e4dc; font-family: monospace; font-size: 0.88rem; padding: 1rem 1.2rem; border-radius: 4px; margin: 0.8rem 0 1.2rem 0; line-height: 1.7; }
+    .diff-example .label { color: #8a7f72; }
+    .diff-example .value { color: #e8e4dc; }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
       background: #f4f2ec;
       border: 1px solid #e0ddd4;
-      border-radius: 4px;
-      padding: 0.7rem 1rem;
-      margin: 0.4rem 0 1.2rem 0;
-      font-size: 0.88rem;
-      color: #5a4a3a;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
       font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
     }
     .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
     .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
@@ -99,214 +104,177 @@
 
 <div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
 
-<h2>Verify Before You Work: A Minimal Sequence for AI Document Ingestion</h2>
+<h2>AI-Assisted Editing Without Silent Loss</h2>
 
 <div class="article-meta">
   <span>PG-002</span>
-  <span>April 3, 2026</span>
+  <span>March 28, 2026</span>
   <span>Thomas W. Gantz</span>
 </div>
 
-<p><em>A copy-ready prompt sequence for confirming AI document ingestion before work begins</em></p>
+<p><em>A practitioner guide for safe human-AI document editing</em></p>
 
 <div class="article-figure">
-  <img src="../assets/images/PG-002_Infographic.jpg" alt="Verify Before You Work: A four-step sequence for confirming AI document ingestion. Step 1: Prime the instance. Step 2: Attach and confirm. Step 3: Request summary. Step 4: Spot-check.">
+  <img src="../assets/images/PG-002_Infographic.jpg" alt="Fluency is not fidelity. What AI does: drops sections silently, weakens constraints, replaces specificity with fluency. What you need: Edit Pass, Verification Pass, Human Decision. Three steps: Preserve, Edit then Freeze, Verify.">
 </div>
 
-<h3>The problem in one sentence</h3>
+<h3>Why this guide exists</h3>
 
-<p>
-You give an AI a document, it says it read it, and you move on. But it may have processed
-only part of it, reconstructed content it did not actually read, or lost critical details
-that will only become visible when something goes wrong later.
-</p>
+<p>AI systems are extremely fluent editors. They are not reliable custodians of completeness.</p>
 
-<div class="pg-callout">An AI system cannot verify its own ingestion. You can. This guide gives you the minimum steps to do that.</div>
+<p>When used to edit complex documents, AI systems routinely:</p>
 
-<h3>Who this is for</h3>
+<ul>
+<li>Drop sections without signaling it</li>
+<li>Remove constraints while "simplifying"</li>
+<li>Reorder material in ways that break dependencies</li>
+<li>Replace specificity with smoother but weaker language</li>
+</ul>
 
-<p>
-Anyone who gives an AI system a document &mdash; a report, a contract, a specification, meeting
-notes, a research paper, anything &mdash; and then expects it to use that document reliably in
-the work that follows. This is especially relevant in enterprise environments where AI
-tools handle documents as part of routine workflows.
-</p>
+<p>Humans often fail to detect this loss because the revised text sounds good, familiar content "feels" intact, cognitive load is already high, and trust increases with fluency.</p>
 
-<p>
-This guide does not require technical knowledge. It requires only the ability to copy a
-prompt and read a response.
-</p>
+<p>This guide defines a human-in-the-loop procedure that allows you to use AI for editing without losing things you did not intend to lose.</p>
 
-<h3>Why this is a real problem, not a theoretical one</h3>
+<h3>The core failure mode: silent loss</h3>
 
-<p>
-AI systems are optimized to produce fluent, plausible responses. When they have not fully
-processed a document, they do not say so. They fill gaps with reconstruction: text that
-sounds correct and may be mostly correct, but may also be missing constraints, inverting
-details, or substituting approximations for specifics.
-</p>
+<p>Silent loss occurs when content is removed or weakened, the human does not notice, and the loss is discovered only much later -- or never.</p>
 
-<p>
-Enterprise AI tools in particular &mdash; including tools built on Microsoft Copilot and similar
-platforms &mdash; can fail silently when documents are attached. The system acknowledges the
-file, appears to proceed normally, and produces output that looks reasonable. The gap
-between what was actually in the document and what the AI used is not visible until you
-look for it.
-</p>
+<p>This is not a rare edge case. It is a structural interaction failure between humans and fluent AI systems.</p>
 
-<p>
-The sequence in this guide makes that gap visible before you rely on it.
-</p>
+<div class="pg-callout">Fluency is not fidelity. AI systems optimize for coherence, not preservation.</div>
 
-<h3>The minimal working sequence</h3>
+<h3>When you must use this procedure</h3>
 
-<p>
-Three required prompts, one optional verification step, then your actual work begins.
-Each step below shows the exact prompt to send and what a valid response looks like.
-</p>
+<p>Use this procedure if any of the following are true:</p>
 
-<div class="pg-rule">
-<strong>Step 1</strong> &mdash; Prime: tell it files are coming, do nothing yet<br>
-<strong>Step 2</strong> &mdash; Attach and confirm receipt only<br>
-<strong>Step 3</strong> &mdash; Request summary and verify it reflects your actual document<br>
-<strong>Step 4</strong> &mdash; Spot-check with a specific question <em>(optional but recommended)</em><br>
-<strong>Step 5</strong> &mdash; Begin your actual work
+<ul>
+<li>The document is long or multi-section</li>
+<li>The document encodes structure, rules, scope, or constraints</li>
+<li>The document represents institutional memory</li>
+<li>Reconstructing lost content would be costly</li>
+<li>You are asking the AI to rewrite, reorganize, clean up, simplify, merge sections, or produce a full replacement</li>
+</ul>
+
+<p>If losing something would matter later, do not skip this.</p>
+
+<h3>The safe editing pattern</h3>
+
+<p>This method uses two explicit passes:</p>
+
+<ul>
+<li><strong>Edit Pass</strong> -- AI produces a full revised document</li>
+<li><strong>Verification Pass</strong> -- AI performs a strict diff against the original</li>
+</ul>
+
+<p>The human remains the final authority at all times.</p>
+
+<h3>Step-by-step procedure</h3>
+
+<h4>Step 1 -- Preserve the original</h4>
+
+<p>Before involving AI, save the complete original document and treat it as immutable. Do not rely on memory or excerpts. If the original is lost, verification becomes impossible.</p>
+
+<h4>Step 2 -- Edit Pass (full replacement only)</h4>
+
+<p>Provide the AI with the entire document. Instruct it to produce a complete revised version, not partial edits.</p>
+
+<div class="pg-rule"><strong>Recommended instruction:</strong> "Here is the full document. Produce a revised full replacement. Do not omit any sections unless explicitly instructed."</div>
+
+<p>Avoid piecemeal edits, "just rewrite this part" instructions, and trusting the AI to preserve structure implicitly.</p>
+
+<h4>Step 3 -- Freeze the revised version</h4>
+
+<p>Once the AI returns the revised document, do not mentally merge it with the original. Treat it as a separate artifact and assume nothing about completeness yet.</p>
+
+<h4>Step 4 -- Verification Pass (diff only)</h4>
+
+<p>Provide both documents to the AI -- the original unchanged and the revised version -- with a non-editing instruction.</p>
+
+<div class="pg-rule"><strong>Recommended instruction:</strong> "Your job is analysis only. Do NOT rewrite, optimize, summarize, restate, or improve either document. Extract and report factual differences only. If you find yourself tempted to fix something, stop and report it as a difference instead."</div>
+
+<p>This step is analysis, not editing. The instructions must make that distinction explicit or the AI will drift back into editing mode.</p>
+
+<h4>Step 5 -- Require a structured diff report</h4>
+
+<p>The AI must report differences in a checkable structure, not prose reassurance. Minimum acceptable format:</p>
+
+<div class="diff-example">
+<div><span class="label">DIFF SUMMARY</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Removed sections:</span></div>
+<div><span class="value">- None</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Added sections:</span></div>
+<div><span class="value">- Section X -- brief description</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Modified sections:</span></div>
+<div><span class="value">- Section Y -- wording change only</span></div>
+<div><span class="value">- Section Z -- scope clarified, no deletions</span></div>
 </div>
 
-<p>
-Text in <span style="color:#c8a96e;font-family:monospace;font-style:italic;">this color</span> is a placeholder: replace it with your actual content.
-</p>
+<p>If the AI cannot produce this clearly, repeat the step. Prose reassurance ("everything looks complete") is not a valid diff report.</p>
 
-<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+<h4>Step 6 -- Human decision</h4>
 
-<h4>Step 1 &mdash; Prime the instance</h4>
+<p>The human reviews the diff and decides to accept the revision, reject it, or request a corrected edit pass. The AI does not decide what is acceptable.</p>
 
-<p class="step-label">Send this first, before attaching any files</p>
+<h3>Key rules</h3>
 
-<div class="prompt-block"><span class="label">YOU SAY:</span>ATTACHMENT-FIRST MODE. I am going to attach one or more files in my next message. Do not analyze, summarize, or respond to them yet. Wait for my instruction.</div>
+<ul>
+<li>Never rely on "it looks the same"</li>
+<li>Never trust reassurance without a diff</li>
+<li>Never allow "streamlining" without verification</li>
+<li>Never skip the verification pass for important documents</li>
+</ul>
 
-<div class="response-block">What to expect: A brief acknowledgment. Nothing more. If the AI starts analyzing or asking questions about the files, it has not followed the instruction. Send the prompt again.</div>
+<p>This procedure trades speed for integrity and control -- intentionally.</p>
 
-<p>
-This step exists because some AI platforms begin processing attachments the moment they
-are received, which can cause fragmented or incomplete ingestion. Separating the
-attachment step from the analysis step forces a cleaner processing sequence.
-</p>
+<h3>What this procedure protects</h3>
 
-<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+<p>Following this method protects against silent section deletion, constraint erosion, accidental scope expansion or contraction, institutional memory loss, and over-trust in fluent AI output. It also reduces cognitive load by externalizing verification.</p>
 
-<h4>Step 2 &mdash; Attach the files and confirm receipt</h4>
+<h3>What this procedure does not do</h3>
 
-<p class="step-label">Attach your file or files, then send this</p>
+<p>This method does not detect subtle semantic weakening automatically, judge whether changes are good or bad, replace human judgment, or guarantee correctness of content. It guarantees completeness awareness, not correctness.</p>
 
-<div class="prompt-block"><span class="label">YOU SAY:</span>Files attached. Respond with exactly: ATTACHMENTS RECEIVED. Do not analyze or summarize.</div>
+<h3>When in doubt</h3>
 
-<div class="response-block">What to expect: "ATTACHMENTS RECEIVED." and nothing else. If the AI summarizes the files or begins analysis, send the prompt again with the instruction repeated.</div>
+<p>If you are unsure whether to use this procedure, use it. The cost of verification is small. The cost of silent loss is cumulative and often invisible.</p>
 
-<p>
-The purpose is confirmation without processing. You are establishing that the files are
-present in the session before asking the AI to do anything with them.
-</p>
-
-<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
-
-<h4>Step 3 &mdash; Request ingestion and summary</h4>
-
-<p class="step-label">This is the verification step</p>
-
-<div class="prompt-block"><span class="label">YOU SAY:</span>Read the attached <span class="placeholder">[file name or description]</span> as reference material for this session. This session is for <span class="placeholder">[brief description of what you want to do]</span>.
-
-Summarize the document at a high level so I can confirm you have read it. Cover the main sections and any key details relevant to <span class="placeholder">[your purpose]</span>.</div>
-
-<div class="response-block">What to expect: A structured summary covering the main sections of your document. It should be specific enough that you can recognize it as your document, not a generic description. If it reads like something the AI could have produced without seeing the file, that is a warning sign.</div>
-
-<p>
-Read the summary critically. You are not looking for a perfect summary. You are looking
-for evidence that the AI processed the actual content &mdash; your structure, your terms, your
-specific details &mdash; rather than producing a generic response about what a document of
-this type typically contains.
-</p>
-
-<div class="pg-callout">If the summary could have been written without reading your document, the ingestion has not been verified. Send Step 3 again with a more specific instruction, or try a different approach to attaching the file.</div>
-
-<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
-
-<h4>Step 4 &mdash; Spot-check (optional but recommended)</h4>
-
-<p class="step-label">Ask something only answerable from the actual document</p>
-
-<div class="prompt-block"><span class="label">YOU SAY:</span>Before we begin, one verification question: <span class="placeholder">[ask a specific question whose answer appears in your document: a number, a name, a defined term, a constraint, a date]</span></div>
-
-<div class="response-block">What to expect: The correct answer from your document. If the AI gets it wrong, hedges, or produces a plausible-sounding answer that does not match your document, ingestion has not been adequate. Do not proceed to work.</div>
-
-<p>
-Choose a question that has a specific, verifiable answer in your document. Avoid questions
-that the AI could answer correctly from general knowledge without having read the file.
-</p>
-
-<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
-
-<h4>Step 5 &mdash; Begin work</h4>
-
-<p class="step-label">Only after the summary and spot-check are satisfactory</p>
-
-<div class="prompt-block"><span class="label">YOU SAY:</span>Good. Now <span class="placeholder">[your actual task or question]</span>.</div>
-
-<p>
-At this point you have externally confirmed that the document is present in the session
-and that the AI has processed it to a degree adequate for your purpose. You can proceed
-with reasonable confidence.
-</p>
-
-<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
-
-<h3>When to use this</h3>
-
-<p>Use this sequence any time you are providing a document that the AI will need to use
-reliably: contracts, specifications, policies, reports, research, meeting notes,
-procedures. The longer or more specific the document, and the more your work depends on
-its details, the more important this sequence becomes.</p>
-
-<p>For short or low-stakes documents where you can easily catch errors, Step 3 alone &mdash;
-the summary request &mdash; is often sufficient.</p>
-
-<h3>What this sequence does not guarantee</h3>
-
-<p>
-This sequence confirms that the AI has processed your document adequately at the start
-of a session. It does not guarantee that the AI will continue to use it faithfully
-throughout a long conversation. In extended sessions, document fidelity can degrade as
-context grows. If your session runs long, re-grounding periodically &mdash; re-stating key
-constraints or re-asking targeted questions &mdash; is good practice.
-</p>
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Five guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li class="current">PG-002: AI-Assisted Editing Without Silent Loss <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn’t Touch?</a></li>
+</ul>
+</div>
 
 <div class="further-reading">
 <h3>Further reading</h3>
 
 <p>
-This guide implements a simplified version of the Ingestion Verification Protocol, a
-formally specified methodology for observable AI document processing developed at the
-Synthience Institute.
+The silent loss failure mode described here is a specific instance of a broader class of interaction failures that occur when AI systems are trusted to preserve fidelity across extended or complex tasks. For the formal treatment of document ingestion and retention verification, see
+<a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol (IVP)</a>.
+For understanding how context representation degrades during long interactions and how to detect it, see
+<a href="../research/SF0039.html">SF0039: Context Representation Drift (CRD)</a>.
 </p>
 
-<ul>
-  <li><a href="IVP-video.html">Video: The Ingestion Verification Protocol</a> &mdash; a three-minute overview of the full IVP method</li>
-  <li><a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol</a> &mdash; full methodology, formal definitions, and implementation guidance. DOI: <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">10.5281/zenodo.18289047</a></li>
-  <li><a href="PG-001.html">PG-001: AI-Assisted Editing Without Silent Loss</a> &mdash; a related procedure for document editing workflows where silent content loss is a risk</li>
-  <li><a href="PG-000.html">PG-000: How to Work Reliably With Conversational AI Over Time</a> &mdash; the foundational guide for long-horizon AI use</li>
-</ul>
-
 <p>
-Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+Full framework documentation available at the
+<a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
 </p>
 </div>
 
 <div class="article-footer">
 <p>Document: PG-002 Practitioner Guide<br>
-Version: 1.0<br>
+Version: 1.1<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: April 3, 2026<br>
+Date: March 28, 2026<br>
 License: CC-BY 4.0</p>
 </div>
 

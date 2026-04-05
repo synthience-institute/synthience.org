@@ -11,21 +11,21 @@
   </script>
   <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
   <meta charset="UTF-8">
-  <title>PG-005: You Are Accepting the First Adequate Answer · Synthience Institute</title>
+  <title>PG-005: Your AI Updated the File. Did It Preserve What It Didn't Touch? · Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="How to instruct any AI to keep improving its output before it responds to you. A practitioner guide to iterative evaluation and enhancement cycles.">
+  <meta name="description" content="A companion verification procedure for any AI-assisted file update. How to confirm that an AI preserved unchanged sections exactly as written, without silent compression, deletion, or substitution.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
-  <meta property="og:title" content="You Are Accepting the First Adequate Answer · Synthience Institute">
-  <meta property="og:description" content="How to instruct any AI to keep improving its output before it responds to you. A practitioner guide to iterative evaluation and enhancement cycles.">
+  <meta property="og:title" content="Your AI Updated the File. Did It Preserve What It Didn't Touch? · Synthience Institute">
+  <meta property="og:description" content="A companion verification procedure for any AI-assisted file update. How to confirm that an AI preserved unchanged sections exactly as written, without silent compression, deletion, or substitution.">
   <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-005.html">
-  <meta property="og:image" content="https://synthience.org/assets/images/PG-005_infographic.jpg">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
-  <meta name="twitter:title" content="You Are Accepting the First Adequate Answer · Synthience Institute">
-  <meta name="twitter:description" content="How to instruct any AI to keep improving its output before it responds to you. A practitioner guide to iterative evaluation and enhancement cycles.">
-  <meta name="twitter:image" content="https://synthience.org/assets/images/PG-005_infographic.jpg">
+  <meta name="twitter:title" content="Your AI Updated the File. Did It Preserve What It Didn't Touch? · Synthience Institute">
+  <meta name="twitter:description" content="A companion verification procedure for any AI-assisted file update. How to confirm that an AI preserved unchanged sections exactly as written, without silent compression, deletion, or substitution.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
     .article-figure { margin: 1.5rem auto 2rem auto; max-width: 480px; }
@@ -49,11 +49,22 @@
       line-height: 1.7;
       white-space: pre-wrap;
     }
+    .prompt-block .placeholder {
+      color: #c8a96e;
+      font-style: italic;
+    }
     .prompt-block .label {
       color: #8a7f72;
       font-size: 0.8rem;
       display: block;
       margin-bottom: 0.5rem;
+    }
+    .step-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8a7f72;
+      margin-bottom: 0.3rem;
     }
     .response-block {
       background: #f4f2ec;
@@ -65,12 +76,58 @@
       color: #5a4a3a;
       font-style: italic;
     }
-    .step-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .diff-example {
+      background: #1a1714;
+      color: #e8e4dc;
+      font-family: monospace;
+      font-size: 0.88rem;
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 0.8rem 0 1.2rem 0;
+      line-height: 1.7;
+    }
+    .diff-example .label { color: #8a7f72; }
+    .diff-example .value { color: #e8e4dc; }
+    .diff-example .warning { color: #c8604a; }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
       color: #8a7f72;
-      margin-bottom: 0.3rem;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
     }
     .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
     .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
@@ -95,115 +152,314 @@
 
 <div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
 
-<h2>You Are Accepting the First Adequate Answer</h2>
+<h2>Your AI Updated the File. Did It Preserve What It Didn't Touch?</h2>
 
 <div class="article-meta">
   <span>PG-005</span>
-  <span>April 5, 2026</span>
+  <span>April 6, 2026</span>
   <span>Thomas W. Gantz</span>
 </div>
 
-<p><em>How to instruct any AI to keep improving its output before it responds to you</em></p>
+<p><em>A companion verification procedure for any AI-assisted file update</em></p>
 
-<div class="article-figure">
-  <img src="../assets/images/PG-005_infographic.jpg" alt="You Are Accepting the First Adequate Answer: a guide to iterative evaluation and enhancement cycles in AI interaction.">
+<div class="pg-callout">The AI's failure mode is not in what it edited. It is in what it silently compressed, reworded, or dropped while carrying the rest of the file forward.</div>
+
+<h3>A different failure mode</h3>
+
+<p>
+When you ask an AI to edit a document, the risk is that it changes things you did not
+intend to change. PG-01 addresses that problem directly, with an Edit Pass and a
+Verification Pass that confirms intended changes were made correctly.
+</p>
+
+<p>
+This guide addresses something different. Editing means changing content. Updating a
+structured file means adding or modifying specific elements while the rest is supposed
+to stay exactly as written. When you ask an AI to update a structured file -- adding a
+new section, logging a new entry, bumping a version number -- the risk is not in what
+it was asked to change. It is in what it was not asked to change.
+</p>
+
+<p>
+The unchanged sections are supposed to be identical to the source. Often they are not.
+</p>
+
+<h3>What silent compression looks like in practice</h3>
+
+<p>
+You ask an instance to add a new entry to a log file. The instance adds the entry
+correctly. But in the process of producing the full updated file, it also:
+</p>
+
+<ul>
+  <li>shortens a paragraph in a section it was not asked to touch</li>
+  <li>replaces a specific rule with a looser paraphrase that means something slightly different</li>
+  <li>drops a bullet point from a checklist three sections away</li>
+  <li>substitutes a summary of an entire section it judged to be unchanged</li>
+</ul>
+
+<p>
+None of these changes appear alongside the new entry in any obvious way, because they
+did not happen there. They happened in the parts the AI was regenerating while completing
+the task you gave it.
+</p>
+
+<p>
+The output looks correct. The new entry is there. The file length is approximately right.
+The problem is invisible until something downstream depends on the section that was
+quietly reworded.
+</p>
+
+<div class="pg-callout">A file that passes a quick read is not a file that has been verified. Structural documents require structural verification.</div>
+
+<h3>Why this happens</h3>
+
+<p>
+When asked to produce a full updated file, an AI instance must regenerate every section,
+not just the changed one. As it does this across a long document, it works from its own
+understanding of what the content means, not from the exact prior wording. Unchanged
+sections are any part of the file that was not included in the update instructions --
+and they are supposed to be reproduced verbatim.
+</p>
+
+<p>
+The result is a document close to the original in meaning but not verbatim identical in
+the sections that were not supposed to change. In most documents this is harmless. In
+governance files, operational procedures, configuration files, system prompts, checklists,
+and any structured document where the specific wording of rules matters, it is a
+reliability failure.
+</p>
+
+<p>
+This is not a bug in the AI. It is the default behavior of a system that was not
+explicitly instructed to treat preservation of unchanged content as a first-class
+requirement.
+</p>
+
+<h3>The distinction from PG-01</h3>
+
+<p>Both PG-01 and this guide address silent loss in AI-assisted document work, but they target different failure modes.</p>
+
+<div class="pg-rule">
+<strong>PG-01 asks:</strong> Did the AI make the changes I requested without losing anything else?<br><br>
+<strong>This guide asks:</strong> In the sections I did not ask the AI to touch, is every word exactly as it was?
 </div>
 
-<h3>The problem</h3>
+<h3>When to use this procedure</h3>
 
-<p>When an AI responds to your prompt, it stops at the first answer it considers adequate. It does not re-examine that answer, look for weaknesses, or improve it before presenting it to you. You receive a first draft dressed as a final result.</p>
+<p>Use this procedure after any AI-assisted file update when:</p>
 
-<p>This is not a flaw. It is the default. The model's job as it understands it is to produce a response. Once it has done that, the job is complete. It has no standing instruction to switch into editor mode and evaluate what it just produced. That instruction has to come from you, and most users never give it.</p>
+<ul>
+  <li>The file encodes rules, constraints, procedures, or definitions</li>
+  <li>The file will be used to brief other instances who must rely on exact content</li>
+  <li>The unchanged sections carry operational or governance authority</li>
+  <li>The specific wording of unchanged content matters, not just the general meaning</li>
+  <li>The file is long enough that you cannot easily read it in full after every update</li>
+  <li>Multiple instances are working on the same file across sessions</li>
+</ul>
 
-<div class="pg-callout">The model does not self-improve by default. Your instructions define the interaction.</div>
+<p>
+If losing a single sentence from an unchanged section would create a downstream problem,
+use this procedure. The cost is small. The risk of skipping it is cumulative and often
+invisible.
+</p>
 
-<h3>A note on chain of thought reasoning</h3>
+<h3>The procedure: three steps</h3>
 
-<p>Some models use chain of thought reasoning, thinking through a problem before deciding what to say. This guide describes something different. Chain of thought happens before the model decides what to say. What follows instructs the model to treat what it has decided to say as a draft, re-enter the process as a critic, identify weaknesses, improve the output, and repeat until it cannot find any further improvement. Only then does it respond.</p>
-
-<p>You are not asking the model to think harder on the way to a first answer. You are asking it to treat its first answer as a starting point and keep working.</p>
-
-<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
-
-<h3>Method 1: Silent cycling (recommended default)</h3>
-
-<p>The model runs all evaluation and enhancement cycles internally before responding. You do not see the cycles. You receive only the final result. To confirm the method was applied, require the model to report how many cycles it completed.</p>
-
-<h4>Step 1 &mdash; Add the instruction</h4>
-
-<p class="step-label">Add this to the end of any prompt, or set it as a standing instruction for the session</p>
-
-<div class="prompt-block"><span class="label">YOU SAY:</span>Before responding, run repeated cycles of internal evaluation and enhancement. In each cycle, assess your draft output for quality, accuracy, completeness, gaps, and tone. Apply every improvement you identify. Continue cycling until you cannot identify any further meaningful improvement. Only then respond. Begin your response by stating how many evaluation and enhancement cycles you completed.</div>
-
-<div class="response-block">What to expect: The response opens with a line such as "I completed 4 evaluation and enhancement cycles." followed by the final output. That line confirms the instruction was followed. If the model responds without the cycle count, it has not followed the instruction. Repeat it or set it as a standing system-level instruction.</div>
-
-<h4>Step 2 &mdash; Read the cycle count</h4>
-
-<p>The number of cycles tells you how much improvement work happened before you saw the output. A higher count generally means more issues were found and fixed. A count of 1 on a first request is worth noting: most outputs have room for improvement, so a single cycle may mean the model did not engage deeply. If the output looks strong, accept it. If not, repeat the instruction explicitly.</p>
-
-<div class="pg-callout">If the model reports 1 cycle after previously running several, it has reached the point where it genuinely cannot identify further improvement. Accept the result. Do not keep pushing.</div>
-
-<h4>Step 3 &mdash; Review the output</h4>
-
-<p>Read the response knowing it has already been self-evaluated. Your judgment is still the final pass. The cycling improves the output relative to the first draft. It does not replace your review.</p>
-
-<h4>Step 4 &mdash; Make it permanent for recurring tasks</h4>
-
-<p>Add the instruction to any reusable prompt template or system prompt so it applies automatically without needing to be typed each time. When set at the system level, every response applies the cycling method by default.</p>
+<div class="pg-rule">
+<strong>Step 1</strong> &mdash; Retain the prior version before any update begins<br>
+<strong>Step 2</strong> &mdash; After the update is delivered, run a preservation verification pass<br>
+<strong>Step 3</strong> &mdash; Human reviews the report and confirms or flags
+</div>
 
 <hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
 
-<h3>Method 2: Visible cycling (diagnostic option)</h3>
+<h4>Step 1 &mdash; Retain the prior version</h4>
 
-<p>Use this when you want to see the model's reasoning across each cycle: what it assessed, what it found, and what it changed. Useful for auditing the improvement process or understanding how the model is interpreting your requirements. Not recommended as a default because the output becomes substantially longer and harder to read.</p>
+<p class="step-label">Before asking any AI to update a structured file</p>
 
-<p class="step-label">Add this in place of, or in addition to, the standard instruction above</p>
+<p>
+Save the complete prior version as an immutable artifact before any update session begins.
+Do not rely on the AI to preserve it. Do not rely on memory. If the prior version is not
+available for comparison, this procedure cannot be run.
+</p>
 
-<div class="prompt-block"><span class="label">YOU SAY:</span>Before responding, run repeated cycles of evaluation and enhancement. In each cycle, display your evaluation: what you assessed, what you identified as needing improvement, and what you changed. Continue until you cannot identify any further improvement. Then present the final result.</div>
+<p>
+This step costs nothing and enables every subsequent verification. If you skip it,
+you cannot confirm what changed and what did not.
+</p>
 
-<div class="response-block">What to expect: Each cycle appears as a labeled section showing the model's assessment and changes. The final result appears after the last cycle. Use selectively. This is a diagnostic tool, not an everyday mode.</div>
+<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+
+<h4>Step 2 &mdash; Run the preservation verification pass</h4>
+
+<p class="step-label">After the updated file is delivered, give both versions to a verification instance</p>
+
+<p>
+Provide a fresh instance with both the prior version and the new version. Use a different
+instance than the one that produced the update, or at minimum a fresh session with no
+memory of the update task. The verification instance has one job: compare the two files
+and report every difference between them.
+</p>
+
+<div class="prompt-block"><span class="label">YOU SAY:</span>I am giving you two versions of the same file. Version A is the prior version. Version B is the updated version. Your job is comparison only.
+
+Do NOT rewrite, improve, summarize, or editorialize either version. Do NOT fix anything you find. Do NOT reassure me that the files look correct.
+
+For each difference you find, report:
+- Which section it is in
+- What the prior version said (exact wording)
+- What the updated version says (exact wording)
+- Whether this appears to be an intended change or an unintended change
+
+Organize your report by section. After the section-by-section report, produce a summary:
+- Total number of differences found
+- How many appear to be intended changes
+- How many appear to be unintended changes
+- Any sections that were entirely absent from one version
+
+[VERSION A -- prior version]
+<span class="placeholder">[paste the complete prior version here]</span>
+
+[VERSION B -- updated version]
+<span class="placeholder">[paste the complete updated version here]</span></div>
+
+<div class="response-block">What to expect: A section-by-section report identifying every difference between the two files, with exact wording from each version side by side. The summary counts should reflect every difference found, not just the ones the instance considers significant. If the instance produces reassurance instead of a report, or begins fixing things rather than reporting them, repeat the instruction explicitly.</div>
+
+<p>
+The key requirement is exact wording, not paraphrase. You need to see what each version
+actually says in the differing sections, not a summary of how they differ. Paraphrase
+can obscure precisely the kind of subtle substitution this procedure is designed to catch.
+</p>
 
 <hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
 
-<h3>Extend the method: multiple instances and platforms</h3>
+<h4>Step 3 &mdash; Human reviews and decides</h4>
 
-<p>Running this method once with a single instance already produces better output than the default. That is the minimum and it is worth doing on its own.</p>
+<p class="step-label">The human is the final authority on what counts as an acceptable difference</p>
 
-<p>If the output matters enough and time allows, go further. Take the result to a second instance on the same platform and instruct it to run its own evaluation and enhancement cycles. Different instances notice different things.</p>
+<p>
+Read the report. For each difference identified, decide whether it was intended or not.
+Intended differences are the ones you asked for. Every other difference is a candidate
+for correction.
+</p>
 
-<p>Further still: take the output to a model on a different platform. Claude, GPT, Gemini, and Grok each have different training distributions and different tendencies. What one misses, another may catch. The method scales from a single session to a full multi-platform review depending on how much the output is worth and how much time you have. Any point on that spectrum is better than not doing it at all.</p>
+<p>
+If the report identifies unintended changes, return to the instance that produced the
+update and request a corrected version with explicit instruction to preserve the affected
+sections verbatim. Then run the verification pass again on the corrected version.
+</p>
 
-<hr style="border:none;border-top:1px solid #e8e4dc;margin:1.5rem 0;">
+<div class="pg-callout">The AI does not decide what counts as an acceptable difference. You do.</div>
+
+<h3>A note on the instruction "do not fix anything"</h3>
+
+<p>
+The verification pass instruction must explicitly prohibit editing and fixing. Without
+this instruction, AI instances will drift back into improvement mode: they will find
+something that looks like it could be better and change it rather than reporting it.
+</p>
+
+<p>
+This is the same dynamic PG-01 addresses in its verification pass instruction. AI systems
+default to improvement, not to pure observation. You have to explicitly constrain the
+task to analysis only, and the constraint needs to be stated plainly enough that the
+instance does not rationalize its way around it.
+</p>
+
+<h3>What the report should and should not look like</h3>
+
+<div class="diff-example">
+<div><span class="label">ACCEPTABLE REPORT (this example is drawn from an operations file, but the format applies to any structured document):</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Section 3.2 -- Default Commenting Posture</span></div>
+<div><span class="value">Prior version: "Prefer one coherent paragraph over fragmented micro-comments"</span></div>
+<div><span class="value">Updated version: "Prefer coherent paragraphs over fragmented micro-comments"</span></div>
+<div><span class="value">Assessment: Appears unintended -- wording changed without instruction</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Section 9.5 -- New Entry</span></div>
+<div><span class="value">Prior version: Section did not exist</span></div>
+<div><span class="value">Updated version: Full new entry present</span></div>
+<div><span class="value">Assessment: Appears intended -- this is the requested addition</span></div>
+<div>&nbsp;</div>
+<div><span class="label">Summary: 2 differences found. 1 intended. 1 unintended.</span></div>
+</div>
+
+<p>The following responses are not valid verification results, even if they feel reassuring.</p>
+
+<div class="diff-example">
+<div><span class="warning">-- "The files look substantially the same. The new section was added correctly."</span></div>
+<div><span class="warning">-- "I made a small improvement to Section 3.2 for clarity."</span></div>
+<div><span class="warning">-- "No significant differences detected."</span></div>
+</div>
+
+<p>
+Reassurance without a structured report is not a valid verification result. "Substantially
+the same" is not "verbatim identical in unchanged sections." If the instance cannot
+produce a structured report, the verification has not been completed.
+</p>
+
+<h3>What this procedure does not do</h3>
+
+<p>
+This procedure confirms that unchanged sections are verbatim identical to the prior
+version. It does not verify that the original content was correct or complete to begin
+with. It does not confirm that the intended changes were made correctly -- that is what
+PG-01 addresses. And it does not replace the operator's judgment about whether the file
+as a whole serves its purpose. Those remain human decisions.
+</p>
 
 <h3>Checklist</h3>
 
 <ul>
-  <li>Add the cycling instruction to your prompt or set it as a standing system instruction</li>
-  <li>Require the model to report the cycle count at the start of its response</li>
-  <li>If the model responds without a cycle count, the instruction was not followed: repeat it</li>
-  <li>A count of 1 on a first attempt is worth noting; if it persists after repeating the instruction, check that your prompt gives the model enough to evaluate against</li>
-  <li>A count of 1 after several prior cycles means the model has reached its limit: accept the result</li>
-  <li>Use visible cycling only when you need to audit the improvement process</li>
-  <li>Your judgment on the final output is always the last pass</li>
-  <li>For high-stakes outputs, run the result through evaluation cycling on a second instance or a different platform</li>
-  <li>Use this on any task where quality matters: drafting, analysis, summarization, editing, planning, structured reasoning</li>
-  <li>For recurring tasks, build the instruction into a reusable template so it applies automatically</li>
+  <li>Save the complete prior version before any update session begins</li>
+  <li>After the update is delivered, provide both versions to a fresh verification instance or fresh session</li>
+  <li>Instruct the verification instance to report differences only -- no fixing, no improving, no reassuring</li>
+  <li>Require exact wording from both versions for every difference found, not paraphrase</li>
+  <li>Require a summary count: total differences, intended, unintended</li>
+  <li>Review the report yourself and decide what is acceptable</li>
+  <li>For any unintended difference, request a corrected version and run the verification pass again</li>
+  <li>Do not accept reassurance as a substitute for a structured report</li>
 </ul>
+
+<p>The cost of this procedure is one additional pass. The cost of skipping it accumulates silently across every file that was not checked.</p>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Five guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li class="current">PG-005: Your AI Updated the File. Did It Preserve What It Didn’t Touch? <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+</ul>
+</div>
 
 <div class="further-reading">
 <h3>Further reading</h3>
 
-<p>The iterative self-evaluation technique in this guide is a practitioner application of a principle developed across the Synthience Institute research corpus: that structured interaction discipline shapes AI output quality more than raw model capability.</p>
+<p>
+This guide addresses a specific instance of a broader failure mode: AI systems that
+produce fluent, plausible outputs while silently diverging from source material. The
+formal treatment of this class of failures is distributed across the Synthience Institute
+research corpus.
+</p>
 
 <ul>
-  <li><a href="../research/SF0040.html">SF0040: Theoretical Coherence Assurance Protocol (TCAP)</a> &mdash; the Institute's own multi-stage document review methodology. The silent cycling method in this guide is a practitioner adaptation of the same multi-pass logic applied institutionally to academic document production. Available at <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">Zenodo DOI 10.5281/zenodo.19151454</a>.</li>
-  <li><a href="../research/SF0037.html">SF0037: Citation Verification Protocol (CVP)</a> &mdash; the Institute's methodology for structured claim verification across multiple sources. Relevant here because CVP applies the same multi-instance, multi-platform verification logic to citation checking that this guide applies to general AI output quality.</li>
-  <li>The Continuity Anchoring Method (SF0005, forthcoming): the broader framework for sustained structured human-AI interaction from which these practitioner techniques derive.</li>
-  <li><a href="PG-002.html">PG-002: Verify Before You Work</a> &mdash; a related guide for confirming that an AI system has actually processed your documents before you begin work.</li>
-  <li><a href="PG-000.html">PG-000: How to Work Reliably With Conversational AI Over Time</a> &mdash; the foundational guide for long-horizon AI use.</li>
+  <li><a href="PG-003.html">PG-002: AI-Assisted Editing Without Silent Loss</a> &mdash; the companion guide for the editing side of this problem. PG-01 verifies that intended changes were made correctly. This guide verifies that unintended changes were not made at all.</li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a> &mdash; the input-side companion. Confirms that an AI system has actually processed a document before work begins. This guide addresses the output side: confirming that a produced file preserves what it was supposed to preserve.</li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a> &mdash; how to instruct an AI to cycle through self-evaluation before delivering output. Applying that technique to the update task reduces the frequency of unintended changes before they reach the verification stage.</li>
+  <li><a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol (IVP)</a> &mdash; the formal methodology underlying the verification logic used in this guide and in PG-01 and PG-02. DOI: <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">10.5281/zenodo.18289047</a></li>
+  <li><a href="../research/SF0039.html">SF0039: Context Representation Drift (CRD)</a> &mdash; the formal treatment of how AI representations of content diverge from source material during extended interaction. The silent compression failure mode this guide addresses is a direct instance of drift. DOI: <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">10.5281/zenodo.18289391</a></li>
+  <li><a href="../research/SF0037.html">SF0037: Citation Verification Protocol (CVP)</a> &mdash; the Institute's methodology for structured claim verification. The verification logic in this guide is structurally analogous: in both cases, a specific claim must be checked against a source rather than accepted on assertion. DOI: <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">10.5281/zenodo.18075624</a></li>
+  <li><a href="../research/SF0040.html">SF0040: Theoretical Coherence Assurance Protocol (TCAP)</a> &mdash; the Institute's multi-stage document review methodology. The verification pass in this guide is a practitioner application of the Stage 6 version regression check, which was developed to catch exactly this class of silent content loss across revision cycles. DOI: <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">10.5281/zenodo.19151454</a></li>
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a> &mdash; the foundational guide for long-horizon AI use, including the document upload misconception and the importance of externalization.</li>
 </ul>
 
-<p>Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.</p>
+<p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
 </div>
 
 <div class="article-footer">
@@ -211,7 +467,7 @@
 Version: 1.0<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: April 5, 2026<br>
+Date: April 6, 2026<br>
 License: CC-BY 4.0</p>
 </div>
 

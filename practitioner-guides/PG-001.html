@@ -11,20 +11,20 @@
   </script>
   <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
   <meta charset="UTF-8">
-  <title>PG-001: AI-Assisted Editing Without Silent Loss · Synthience Institute</title>
+  <title>PG-001: How to Work Reliably With Conversational AI Over Time · Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A step-by-step procedure for using AI to edit complex documents without losing content you did not intend to lose. Covers the Edit Pass, Verification Pass, and structured diff report.">
+  <meta name="description" content="A practical onboarding guide for long-horizon AI use. How to prevent silent drift, maintain constraint fidelity, and work reliably with conversational AI over extended exchanges.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
-  <meta property="og:title" content="AI-Assisted Editing Without Silent Loss · Synthience Institute">
-  <meta property="og:description" content="A step-by-step procedure for using AI to edit complex documents without losing content you did not intend to lose. Covers the Edit Pass, Verification Pass, and structured diff report.">
+  <meta property="og:title" content="How to Work Reliably With Conversational AI Over Time · Synthience Institute">
+  <meta property="og:description" content="A practical onboarding guide for long-horizon AI use. How to prevent silent drift, maintain constraint fidelity, and work reliably with conversational AI over extended exchanges.">
   <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-001.html">
   <meta property="og:image" content="https://synthience.org/assets/images/PG-001_Infographic.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
-  <meta name="twitter:title" content="AI-Assisted Editing Without Silent Loss · Synthience Institute">
-  <meta name="twitter:description" content="A step-by-step procedure for using AI to edit complex documents without losing content you did not intend to lose. Covers the Edit Pass, Verification Pass, and structured diff report.">
+  <meta name="twitter:title" content="How to Work Reliably With Conversational AI Over Time · Synthience Institute">
+  <meta name="twitter:description" content="A practical onboarding guide for long-horizon AI use. How to prevent silent drift, maintain constraint fidelity, and work reliably with conversational AI over extended exchanges.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/PG-001_Infographic.jpg">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
@@ -32,15 +32,50 @@
     .article-figure img { max-width: 100%; border-radius: 4px; display: block; }
     .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
     .article-meta span { margin-right: 1.2rem; }
+    .operator-check { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
     .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
     .back-link a { color: #0645ad; text-decoration: none; }
     .back-link a:hover { text-decoration: underline; }
-    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
-    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
-    .pg-rule strong { color: #c8604a; }
-    .diff-example { background: #1a1714; color: #e8e4dc; font-family: monospace; font-size: 0.88rem; padding: 1rem 1.2rem; border-radius: 4px; margin: 0.8rem 0 1.2rem 0; line-height: 1.7; }
-    .diff-example .label { color: #8a7f72; }
-    .diff-example .value { color: #e8e4dc; }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
+    }
     .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
     .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
   </style>
@@ -64,151 +99,337 @@
 
 <div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
 
-<h2>AI-Assisted Editing Without Silent Loss</h2>
+<h2>How to Work Reliably With Conversational AI Over Time</h2>
 
 <div class="article-meta">
   <span>PG-001</span>
-  <span>March 28, 2026</span>
+  <span>January 28, 2026</span>
   <span>Thomas W. Gantz</span>
 </div>
 
-<p><em>A practitioner guide for safe human-AI document editing</em></p>
+<p><em>An onboarding guide for long-horizon use</em></p>
 
 <div class="article-figure">
-  <img src="../assets/images/PG-001_Infographic.jpg" alt="Fluency is not fidelity. What AI does: drops sections silently, weakens constraints, replaces specificity with fluency. What you need: Edit Pass, Verification Pass, Human Decision. Three steps: Preserve, Edit then Freeze, Verify.">
+  <img src="../assets/images/PG-001_Infographic.jpg" alt="AI drift happens in every long session: user intent and AI output diverge over time due to constraint dilution, context compression, and compounding errors. Three habits for long-horizon operators: Separate, Anchor, Externalize.">
 </div>
 
-<h3>Why this guide exists</h3>
+<h3>Purpose</h3>
 
-<p>AI systems are extremely fluent editors. They are not reliable custodians of completeness.</p>
+<p>
+This is an entry point for people who use conversational AI for real work and notice a
+common pattern: the system starts strong, stays fluent, and still quietly drifts away
+from the original goals, constraints, or source material.
+</p>
 
-<p>When used to edit complex documents, AI systems routinely:</p>
+<p>
+This is not a research paper. It is not a protocol. It is not a claim about what AI "is."
+</p>
 
-<ul>
-<li>Drop sections without signaling it</li>
-<li>Remove constraints while "simplifying"</li>
-<li>Reorder material in ways that break dependencies</li>
-<li>Replace specificity with smoother but weaker language</li>
-</ul>
+<p>
+It is a practical orientation for how to work with these systems without fooling yourself.
+This guide focuses on interaction practices, not model internals or system architecture.
+</p>
 
-<p>Humans often fail to detect this loss because the revised text sounds good, familiar content "feels" intact, cognitive load is already high, and trust increases with fluency.</p>
+<h3>Quick start (30 seconds)</h3>
 
-<p>This guide defines a human-in-the-loop procedure that allows you to use AI for editing without losing things you did not intend to lose.</p>
+<p>If you only take three habits:</p>
 
-<h3>The core failure mode: silent loss</h3>
+<ol>
+<li><strong>Separate generate from critique from revise.</strong></li>
+<li><strong>Keep constraints visible and checkable.</strong></li>
+<li><strong>Externalize anything you cannot afford to lose.</strong></li>
+</ol>
 
-<p>Silent loss occurs when content is removed or weakened, the human does not notice, and the loss is discovered only much later -- or never.</p>
+<p>
+These habits help prevent silent drift in long conversations where output stays fluent
+but fidelity erodes.
+</p>
 
-<p>This is not a rare edge case. It is a structural interaction failure between humans and fluent AI systems.</p>
-
-<div class="pg-callout">Fluency is not fidelity. AI systems optimize for coherence, not preservation.</div>
-
-<h3>When you must use this procedure</h3>
-
-<p>Use this procedure if any of the following are true:</p>
-
-<ul>
-<li>The document is long or multi-section</li>
-<li>The document encodes structure, rules, scope, or constraints</li>
-<li>The document represents institutional memory</li>
-<li>Reconstructing lost content would be costly</li>
-<li>You are asking the AI to rewrite, reorganize, clean up, simplify, merge sections, or produce a full replacement</li>
-</ul>
-
-<p>If losing something would matter later, do not skip this.</p>
-
-<h3>The safe editing pattern</h3>
-
-<p>This method uses two explicit passes:</p>
+<h3>Who this is for</h3>
 
 <ul>
-<li><strong>Edit Pass</strong> -- AI produces a full revised document</li>
-<li><strong>Verification Pass</strong> -- AI performs a strict diff against the original</li>
+<li>People using AI for writing, planning, analysis, coding, or long projects</li>
+<li>People who upload documents and assume the AI "read them"</li>
+<li>People who rely on a conversation staying aligned across many turns</li>
 </ul>
 
-<p>The human remains the final authority at all times.</p>
+<h3>What this document is not doing</h3>
 
-<h3>Step-by-step procedure</h3>
+<ul>
+<li>It is not arguing that AI is sentient, conscious, or a moral patient.</li>
+<li>It is not claiming an AI has stable identity or persistent memory by default.</li>
+<li>It is not asking you to trust the AI. It is helping you calibrate trust.</li>
+</ul>
 
-<h4>Step 1 -- Preserve the original</h4>
+<h3>The core observation</h3>
 
-<p>Before involving AI, save the complete original document and treat it as immutable. Do not rely on memory or excerpts. If the original is lost, verification becomes impossible.</p>
+<p>
+A conversational AI can remain fluent and internally consistent while becoming
+progressively less faithful to:
+</p>
 
-<h4>Step 2 -- Edit Pass (full replacement only)</h4>
+<ul>
+<li>your original intent</li>
+<li>your earlier constraints</li>
+<li>the structure of a plan</li>
+<li>details in a referenced document</li>
+</ul>
 
-<p>Provide the AI with the entire document. Instruct it to produce a complete revised version, not partial edits.</p>
+<p>
+When that happens, the interaction can feel coherent while the work product quietly diverges.
+</p>
 
-<div class="pg-rule"><strong>Recommended instruction:</strong> "Here is the full document. Produce a revised full replacement. Do not omit any sections unless explicitly instructed."</div>
+<p>
+<strong>Example (common):</strong> You ask for a plan with three locked requirements.
+Ten turns later the plan is elegant, but one locked requirement has disappeared.
+Nothing "breaks." The output simply slides.
+</p>
 
-<p>Avoid piecemeal edits, "just rewrite this part" instructions, and trusting the AI to preserve structure implicitly.</p>
+<p>
+<strong>Example (subtle):</strong> You are drafting a technical document with specific
+terminology from an uploaded standard. After 15 turns of refinement, the prose is
+polished, but two domain-specific terms have been replaced with common synonyms that
+change the meaning. The text reads better but is now technically incorrect.
+</p>
 
-<h4>Step 3 -- Freeze the revised version</h4>
+<h3>Why this catches people</h3>
 
-<p>Once the AI returns the revised document, do not mentally merge it with the original. Treat it as a separate artifact and assume nothing about completeness yet.</p>
+<p>
+Most users carry an implicit assumption: if the system was correct a moment ago, it will
+stay correct unless it visibly fails.
+</p>
 
-<h4>Step 4 -- Verification Pass (diff only)</h4>
+<p>
+Long-horizon use breaks that assumption. Two things can be true at once:
+</p>
 
-<p>Provide both documents to the AI -- the original unchanged and the revised version -- with a non-editing instruction.</p>
+<ul>
+<li>the system sounds confident</li>
+<li>the work is drifting</li>
+</ul>
 
-<div class="pg-rule"><strong>Recommended instruction:</strong> "Your job is analysis only. Do NOT rewrite, optimize, summarize, restate, or improve either document. Extract and report factual differences only. If you find yourself tempted to fix something, stop and report it as a difference instead."</div>
+<h3>What causes drift in practice</h3>
 
-<p>This step is analysis, not editing. The instructions must make that distinction explicit or the AI will drift back into editing mode.</p>
+<p>
+You do not need to understand the internals to use this approach effectively. A simple
+behavioral model is enough.
+</p>
 
-<h4>Step 5 -- Require a structured diff report</h4>
+<p>In extended interactions:</p>
 
-<p>The AI must report differences in a checkable structure, not prose reassurance. Minimum acceptable format:</p>
+<ul>
+<li>Earlier constraints get diluted by newer context.</li>
+<li>The system compresses what it thinks matters, often differently than you would.</li>
+<li>The conversation accumulates soft assumptions that were never validated.</li>
+<li>Errors compound because each new step builds on the last.</li>
+</ul>
 
-<div class="diff-example">
-<div><span class="label">DIFF SUMMARY</span></div>
-<div>&nbsp;</div>
-<div><span class="label">Removed sections:</span></div>
-<div><span class="value">- None</span></div>
-<div>&nbsp;</div>
-<div><span class="label">Added sections:</span></div>
-<div><span class="value">- Section X -- brief description</span></div>
-<div>&nbsp;</div>
-<div><span class="label">Modified sections:</span></div>
-<div><span class="value">- Section Y -- wording change only</span></div>
-<div><span class="value">- Section Z -- scope clarified, no deletions</span></div>
+<p>
+One practical way to think about it: the system optimizes for plausibility in the current
+moment, not for preserving your original intent over time.
+</p>
+
+<p>
+The key danger is that drift is often subtle. By the time you notice, you have already
+built on it.
+</p>
+
+<h3>A practical mental model</h3>
+
+<p><strong>Treat conversational AI as:</strong></p>
+
+<ul>
+<li>a fast generator of plausible drafts</li>
+<li>a strong pattern synthesizer</li>
+<li>a capable collaborator when you provide structure</li>
+</ul>
+
+<p><strong>Do not treat it as:</strong></p>
+
+<ul>
+<li>a self-monitoring verifier</li>
+<li>a reliable long-term memory store</li>
+<li>an authority that can certify its own correctness</li>
+</ul>
+
+<h3>The operator's rule set</h3>
+
+<p>If you adopt only a few habits, adopt these.</p>
+
+<h4>Rule 1: Creation and evaluation are different jobs</h4>
+
+<p>
+Most first-pass responses are minimum-viable drafts. They can be useful, but are rarely
+the best the system can do.
+</p>
+
+<p><strong>Separate the loop:</strong></p>
+
+<ul>
+<li>generate</li>
+<li>critique</li>
+<li>revise</li>
+<li>repeat until improvements plateau</li>
+</ul>
+
+<div class="operator-check">Operator check: "Did I explicitly ask for critique, or did I only ask for output?"</div>
+
+<h4>Rule 2: Make constraints explicit and keep them visible</h4>
+
+<p>Constraints that live only in your head will not reliably persist.</p>
+
+<p><strong>Good constraints are:</strong> short, concrete, repeatable, and checkable.</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+<li>Do not introduce new claims without a cited source.</li>
+<li>Keep the output under 800 words.</li>
+<li>Preserve these three requirements: A, B, C.</li>
+<li>If anything is uncertain, label it as uncertain.</li>
+</ul>
+
+<div class="operator-check">Operator check: "Are my constraints short enough to paste again without friction?"</div>
+
+<h4>Rule 3: Re-ground on purpose, not on vibes</h4>
+
+<p>When a task runs longer than a few turns, periodically restate:</p>
+
+<ul>
+<li>the goal</li>
+<li>the constraints</li>
+<li>what has been decided</li>
+<li>what is still unknown</li>
+<li>what counts as success</li>
+</ul>
+
+<p>This is not redundancy. It is integrity control.</p>
+
+<div class="operator-check">Operator check: "If I reopened this chat tomorrow, could I restate the mission in 3 lines?"</div>
+
+<h4>Rule 4: Restarting is not defeat</h4>
+
+<p>Starting a fresh instance can be a best practice when:</p>
+
+<ul>
+<li>the plan has become foggy</li>
+<li>outputs become generic or oddly confident</li>
+<li>earlier constraints stop being respected</li>
+<li>the conversation has become too long to audit</li>
+</ul>
+
+<p>A restart is not giving up. It is choosing a clean state, often the smartest move.</p>
+
+<div class="operator-check">Operator check: "Am I continuing out of inertia, or because this context still serves the goal?"</div>
+
+<h4>Rule 5: Externalize what matters</h4>
+
+<p>If it matters, it should exist outside the chat.</p>
+
+<p><strong>Examples:</strong></p>
+
+<ul>
+<li>a short project brief</li>
+<li>a list of locked decisions</li>
+<li>a checklist for verification</li>
+<li>a set of definitions you do not want drifting</li>
+</ul>
+
+<p>Externalization makes your work portable across tools, models, and time.</p>
+
+<div class="operator-check">Operator check: "What is the smallest external note that prevents silent loss?"</div>
+
+<h3>The document upload misconception</h3>
+
+<p>Uploading a file does not automatically mean:</p>
+
+<ul>
+<li>the system read it fully</li>
+<li>the system retained it</li>
+<li>the system can quote it correctly later</li>
+<li>the system will use it faithfully after many turns</li>
+</ul>
+
+<p><strong>If the content matters, use verification habits:</strong></p>
+
+<ul>
+<li>ask for a table of contents or section map first</li>
+<li>ask for targeted extraction with quotes</li>
+<li>ask it to point to where in the document each claim comes from</li>
+<li>ask it to regenerate a key paragraph using only direct quotes from the source, then compare side-by-side</li>
+<li>re-check after long interaction, because retention can degrade</li>
+</ul>
+
+<div class="operator-check">Operator check: "Did I ask for quotes and locations, or did I accept a summary as proof?"</div>
+
+<h3>Common misconceptions (short corrections)</h3>
+
+<ul>
+<li><strong>"It sounds confident, so it must be right."</strong> Confidence is not evidence.</li>
+<li><strong>"It didn't object, so it agrees."</strong> Silence is not validation.</li>
+<li><strong>"If it made a mistake, the model is broken."</strong> Many failures are workflow failures.</li>
+<li><strong>"If I upload a document, it read it."</strong> Upload is not ingestion, and ingestion is not stable retention.</li>
+<li><strong>"If it worked last time, the same prompt will work now."</strong> Model updates, context differences, and non-deterministic behavior mean past success does not guarantee future consistency.</li>
+</ul>
+
+<h3>What this unlocks if you work this way</h3>
+
+<p>With explicit evaluation loops and re-grounding, you can often get:</p>
+
+<ul>
+<li>higher quality writing and reasoning</li>
+<li>fewer compounding errors</li>
+<li>clearer uncertainty labeling</li>
+<li>better long-form coherence</li>
+<li>more defensible outputs</li>
+</ul>
+
+<p>The system does not self-improve. Your method improves the interaction.</p>
+
+<h3>How to proceed from here</h3>
+
+<p>If you want a low-friction path:</p>
+
+<ol>
+<li><strong>Use these rules in a real task for one week.</strong></li>
+<li><strong>Notice where drift shows up anyway.</strong></li>
+<li><strong>Add a lightweight checkpoint habit:</strong>
+  <ul>
+  <li>restate goal and constraints</li>
+  <li>verify key claims</li>
+  <li>externalize decisions</li>
+  </ul>
+</li>
+</ol>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Five guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li class="current">PG-001: How to Work Reliably With Conversational AI Over Time <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn’t Touch?</a></li>
+</ul>
 </div>
-
-<p>If the AI cannot produce this clearly, repeat the step. Prose reassurance ("everything looks complete") is not a valid diff report.</p>
-
-<h4>Step 6 -- Human decision</h4>
-
-<p>The human reviews the diff and decides to accept the revision, reject it, or request a corrected edit pass. The AI does not decide what is acceptable.</p>
-
-<h3>Key rules</h3>
-
-<ul>
-<li>Never rely on "it looks the same"</li>
-<li>Never trust reassurance without a diff</li>
-<li>Never allow "streamlining" without verification</li>
-<li>Never skip the verification pass for important documents</li>
-</ul>
-
-<p>This procedure trades speed for integrity and control -- intentionally.</p>
-
-<h3>What this procedure protects</h3>
-
-<p>Following this method protects against silent section deletion, constraint erosion, accidental scope expansion or contraction, institutional memory loss, and over-trust in fluent AI output. It also reduces cognitive load by externalizing verification.</p>
-
-<h3>What this procedure does not do</h3>
-
-<p>This method does not detect subtle semantic weakening automatically, judge whether changes are good or bad, replace human judgment, or guarantee correctness of content. It guarantees completeness awareness, not correctness.</p>
-
-<h3>When in doubt</h3>
-
-<p>If you are unsure whether to use this procedure, use it. The cost of verification is small. The cost of silent loss is cumulative and often invisible.</p>
 
 <div class="further-reading">
 <h3>Further reading</h3>
 
 <p>
-The silent loss failure mode described here is a specific instance of a broader class of interaction failures that occur when AI systems are trusted to preserve fidelity across extended or complex tasks. For the formal treatment of document ingestion and retention verification, see
-<a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol (IVP)</a>.
-For understanding how context representation degrades during long interactions and how to detect it, see
-<a href="../research/SF0039.html">SF0039: Context Representation Drift (CRD)</a>.
+These practices emerged from systematic documentation of long-horizon AI interactions
+across thousands of instances since 2022 and multiple architectures. The behavioral patterns described
+here, including constraint dilution, contextual drift, and fidelity erosion, are not
+incidental bugs. They are structural features that become research objects when studied
+systematically.
+</p>
+
+<p>
+For formal treatment of coherence-fidelity divergence and interaction-level analysis, see
+<a href="../research/SF0037.html">SF0037: Citation Verification Protocol</a>,
+<a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol</a>, and
+<a href="../research/SF0039.html">SF0039: Context Representation Drift</a>.
 </p>
 
 <p>
@@ -219,10 +440,10 @@ Full framework documentation available at the
 
 <div class="article-footer">
 <p>Document: PG-001 Practitioner Guide<br>
-Version: 1.1<br>
+Version: 1.4<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: March 28, 2026<br>
+Date: January 28, 2026<br>
 License: CC-BY 4.0</p>
 </div>
 
