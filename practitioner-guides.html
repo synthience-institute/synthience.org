@@ -131,6 +131,15 @@
     }
     .filter-row button:hover:not(.active) { background: #f0ede4; }
 
+    /* === FILTER HINT === */
+    .filter-hint {
+      font-size: 0.78rem;
+      color: #8a7f72;
+      font-style: italic;
+      margin: -0.4rem 0 0.8rem 0;
+      line-height: 1.5;
+    }
+
     /* === VIEW AND SORT TOGGLES === */
     .controls-row {
       display: flex;
@@ -308,6 +317,7 @@
 </div>
 
 <div id="format-filter" class="filter-row"></div>
+<div class="filter-hint">Format filter and search work together -- results match all active selections. Use &ldquo;All Articles&rdquo; view to see everything in a single list.</div>
 
 <div class="controls-row">
   <div class="view-toggle">
