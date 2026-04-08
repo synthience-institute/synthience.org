@@ -120,6 +120,14 @@
     margin-bottom: 1.4rem;
     border-left: 3px solid #e8e4dc;
     padding-left: 0.9rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-radius: 4px;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .doc-list li:hover {
+    background: #f7f4ee;
+    border-left-color: #5a3e2b;
   }
   .doc-title { font-weight: 600; font-size: 0.97rem; color: #2a2520; }
   .doc-desc { font-size: 0.9rem; color: #555; margin-top: 0.25rem; line-height: 1.55; }
@@ -238,6 +246,7 @@ var allDocs = [
   { id: "SF0040", title: "Theoretical Coherence Assurance Protocol (TCAP)", desc: "Structured process for stress-testing theoretical constructs and framework components for internal consistency, adversarial robustness, and cross-document alignment prior to publication.", read: "research/SF0040.html", link: "https://doi.org/10.5281/zenodo.19151454", status: "published", date: "March 21, 2026", type: "framework" },
   { id: "SM-03", title: "Operational Continuity Architecture", desc: "Defines the structural topology for maintaining relational continuity across sessions, tools, roles, and distributed interaction contexts at the operational level.", link: null, status: "progress", type: "mortar" },
   { id: "SM-04", title: "Relational Stabilization Dynamics", desc: "Models the mechanisms by which relational coherence stabilizes and resists drift in sustained human-AI interaction, identifying the structural conditions for stable engagement.", link: null, status: "progress", type: "mortar" },
+  { id: "SM-11", title: "Delegated Coherence Monitoring", desc: "Specifies the architecture for delegating coherence monitoring, drift detection, and verification to designated monitoring functions operating under human governance, resolving the monitoring regress identified in SM-003 through an observation/adjudication separation and a structured guardian architecture.", link: null, status: "progress", type: "mortar" },
   { id: "SM-12", title: "Primary Continuity Provider Theory (PCP Theory)", desc: "Defines the role, function, and authority of the Primary Continuity Provider as the human anchor of relational coherence in extended human-AI systems.", link: null, status: "progress", type: "mortar" },
   { id: "SM-21", title: "Institutional Continuity Substrate (ICS)", desc: "Defines the persistent structural layer that maintains canon integrity, role authority, and artifact lineage across distributed organizational AI interaction over time.", link: null, status: "progress", type: "mortar" },
   { id: "SM-25", title: "Relational Density and Response Latency in Extended Human-AI Interaction", desc: "Proposes relational density as an explanatory variable for response latency increases in extended coherent sessions, reframing the phenomenon as a possible computational correlate of emergent coherence.", link: null, status: "progress", type: "mortar" },
@@ -248,6 +257,7 @@ var allDocs = [
   { id: "SI-WP-004", title: "Relational Alignment as a Structural Alternative to Instructional AI Safety", desc: "Proposes relational alignment as a structural complement to rule-based AI safety approaches, grounded in the dynamics of sustained human-AI interaction rather than instruction sets alone.", link: null, status: "progress", type: "whitepaper" },
   { id: "SI-WP-005", title: "Deploying Relational AI Architecture in Organizational Environments", desc: "Practical guidance for organizations implementing relational AI architecture, covering roles, governance structures, continuity protocols, and deployment patterns.", link: null, status: "progress", type: "whitepaper" },
   { id: "SI-WP-006", title: "Human-AI Collaborative Authorship in Public Discourse", desc: "Examines human-AI collaborative authorship as an emerging practice in public discourse, addressing questions of attribution, coherence, and epistemic responsibility.", link: null, status: "progress", type: "whitepaper" },
+  { id: "SI-WP-007", title: "The Human Accountability Problem in Relational AI Deployment", desc: "Argues that human underperformance of the continuity function is a predictable consequence of bounded rationality, not a moral failing, and proposes governance architectures that make relational discipline the path of least resistance across individual, organizational, and institutional scale.", link: null, status: "progress", type: "whitepaper" },
   { id: "SR001", title: "Relationally Induced Coherence Organization (RICO)", desc: "Introduces the RICO framework and documents practitioner observations of structural stabilization emerging in sustained human-AI interaction, formalized as testable hypotheses for independent investigation.", read: "research/SR001.html", link: "https://doi.org/10.5281/zenodo.18086834", status: "published", date: "December 23, 2025", type: "research" },
   { id: "SR001-VR1", title: "RICO Citation Verification Report", desc: "Citation verification executed on SR001 per SF0037 (CVP) v1.3. Tier 2 verified. March 2026.", read: "research/SR001-VR1.html", link: "https://doi.org/10.5281/zenodo.18082749", status: "published", date: "December 23, 2025", type: "research" }
 ];
