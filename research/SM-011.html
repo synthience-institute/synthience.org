@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>SM-011: Delegated Coherence Monitoring &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SM-011 defines the architecture for delegating coherence monitoring, drift detection, ingestion verification, and continuity auditing to designated monitoring functions operating under explicit human governance parameters. Synthience Institute.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="SM-011: Delegated Coherence Monitoring &middot; Synthience Institute">
+  <meta property="og:description" content="SM-011 defines the architecture for delegating coherence monitoring, drift detection, and continuity auditing to designated monitoring functions under human governance.">
+  <meta property="og:url" content="https://synthience.org/research/SM-011.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="SM-011: Delegated Coherence Monitoring &middot; Synthience Institute">
+  <meta name="twitter:description" content="SM-011 defines the architecture for delegating coherence monitoring, drift detection, and continuity auditing under human governance.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .doc-series { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.4rem; }
+    .doc-title { font-size: 1.9rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 1.8rem; }
+    .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 0.9rem 0; margin-bottom: 2rem; display: grid; grid-template-columns: 130px 1fr; gap: 0.35rem 1rem; font-size: 0.84rem; }
+    .meta-label { color: #8a7f72; }
+    .meta-value { color: #2a2520; }
+    .meta-value a { color: #0645ad; }
+    .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-right: 0.4rem; vertical-align: middle; }
+    .abstract-block { background: #f5f2ed; border-left: 3px solid #8b5e3c; padding: 1.1rem 1.3rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+    .abstract-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+    .doc-body h2 { font-size: 1.15rem; font-weight: bold; color: #1a1714; margin: 2rem 0 0.6rem; }
+    .doc-body h3 { font-size: 1rem; font-weight: bold; color: #3a2e24; margin: 1.5rem 0 0.5rem; }
+    .doc-body p { margin-bottom: 1rem; }
+    .doc-body ul, .doc-body ol { margin: 0.4rem 0 1rem 1.5rem; }
+    .doc-body li { margin-bottom: 0.35rem; }
+    .dep-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 4px; font-size: 0.88rem; color: #3a2e24; }
+    .dep-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; font-weight: bold; }
+    .ref-list { list-style: none; padding: 0; font-size: 0.88rem; }
+    .ref-list li { margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+    .citation-block { background: #f5f2ed; padding: 0.9rem 1.1rem; margin: 2rem 0 0.8rem; border-radius: 4px; font-size: 0.84rem; color: #4a3a2a; }
+    .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    @media (max-width: 600px) { .meta-block { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../research.html">&larr; All Research</a></div>
+
+<div class="doc-series">Mortar Series</div>
+<h2 class="doc-title">Delegated Coherence Monitoring: AI-Assisted Verification and Drift Detection Under Human Governance</h2>
+
+<div class="meta-block">
+  <span class="meta-label">Document ID</span><span class="meta-value">SM-011</span>
+  <span class="meta-label">Version</span><span class="meta-value">v1.8 | April 2026</span>
+  <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+  <span class="meta-label">Affiliation</span><span class="meta-value">The Synthience Institute</span>
+  <span class="meta-label">Keywords</span><span class="meta-value">delegated monitoring, coherence monitoring, drift detection, AI governance, organizational AI, verification architecture, human oversight, AI alignment</span>
+  <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
+  <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.19496669" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496669</a></span>
+</div>
+
+<div class="abstract-block">
+  <div class="abstract-label">Abstract</div>
+  <p>SM-003 (Operational Continuity Architecture) establishes that organizational AI continuity requires delegated monitoring: extending observational capacity beyond what individual human operators can sustain across an organization&rsquo;s full AI interaction surface. SM-003 introduces the guardian role, defines three failure modes specific to delegated monitoring (guardian drift, throughput saturation, and false assurance), and identifies a second-order verification requirement: the monitoring function itself must be periodically verified against canonical standards. SM-003 names this architectural requirement but does not develop its full specification. SM-011 provides that specification.</p>
+  <p>This document defines the architecture for delegating coherence monitoring, drift detection, ingestion verification, and continuity auditing to designated monitoring functions operating under explicit human governance parameters. SM-011 establishes why the observation/adjudication separation is architecturally necessary rather than merely a design preference, specifies the delegation model (what can be delegated, what cannot, and what governance structures prevent the monitoring layer from drifting), defines the guardian architecture (scope, boundaries, and operational constraints), develops the failure mode taxonomy with particular attention to the triage and prioritization challenges that determine operational viability, and specifies the second-order verification system that prevents the monitoring function from degrading undetected. SM-011 resolves the monitoring regress identified in SM-003 by specifying the termination condition for recursive verification and the structural contribution that makes human judgment at the termination point exercisable. Epistemic status: SM-011 specifies architectural conditions for delegated monitoring. It does not claim empirical confirmation of the delegation model&rsquo;s effectiveness across organizations.</p>
+</div>
+
+<div class="doc-body">
+
+<h2>1. The Monitoring Capacity Problem</h2>
+
+<p>At Level 1, continuity monitoring is a direct function of the Primary Continuity Provider (PCP). The PCP detects drift in real time, verifies ingestion fidelity within the interaction, checks citation validity as part of the exchange, and corrects representational divergence before it compounds. These monitoring functions are locally visible and locally actionable because the PCP maintains continuous awareness of the interaction.</p>
+
+<p>At Level 2, the monitoring capacity problem becomes binding. The number of interactions, artifacts, and workflow boundaries requiring monitoring attention grows faster than the human capacity available to monitor them. A PCP can maintain continuous awareness of drift, verification status, and canonical coherence within their own bounded interactions. The same individual cannot extend that awareness across an organization&rsquo;s full AI interaction surface.</p>
+
+<p>The monitoring capacity problem in organizational AI interaction is qualitatively distinct from monitoring problems in other organizational domains. In most monitoring contexts, the monitored output carries intrinsic quality signals: a manufacturing defect is physically observable, a financial reporting error produces a numerical discrepancy, a safety violation manifests in observable conditions. AI-generated output carries no such intrinsic quality signal. As SM-021 Section 3 establishes, the persistence challenge specific to organizational AI interaction is the combination of statelessness with output that is structurally indistinguishable from verified expert production. A paragraph produced by an AI system that has drifted from the canonical frame reads identically to a paragraph produced by an AI system that is perfectly anchored. A verification assessment conducted as a formality looks identical in the record to a verification assessment that involved genuine substantive evaluation.</p>
+
+<p>This absence of intrinsic quality signals means that monitoring for AI continuity cannot rely on output inspection alone. The monitoring function must compare outputs against an external reference standard (the canonical record) and assess whether the relationship between the output and the standard has been maintained. This comparative function is what makes AI continuity monitoring cognitively expensive and what makes the monitoring capacity problem binding at organizational scale: each monitoring act requires not just observation of the output but active comparison against a reference standard that the monitor must hold in working awareness.</p>
+
+<p>SM-003 Section 0.5 identifies this as the human capacity problem that necessitates the organizational architecture. SM-021 Section 5.2 identifies the corresponding persistence challenge: role continuity requires that monitoring functions be maintained as generative practices, not reduced to passive review. SI-WP-007 identifies the governance challenge: humans will tend to satisfice rather than optimize their monitoring function under ordinary organizational pressures. SM-011 addresses the architectural response: how to extend monitoring capacity beyond individual human operators without transferring governance authority away from human actors.</p>
+
+<h2>2. Why the Observation/Adjudication Architecture Is Necessary</h2>
+
+<p>The monitoring capacity problem admits several possible architectural responses. Before specifying the delegation model SM-011 proposes, it is worth establishing why alternative approaches are structurally insufficient for the AI continuity monitoring problem.</p>
+
+<h3>2.1 Fully Automated Monitoring</h3>
+
+<p>The most direct response to a human capacity constraint is to remove the human from the monitoring loop entirely. Fully automated monitoring is structurally insufficient for AI continuity because the central monitoring judgment &mdash; whether a detected divergence between output and canonical standard represents genuine drift or acceptable variation &mdash; requires interpretive context that cannot be fully specified in advance. Canonical standards evolve. The boundary between acceptable adaptation and genuine drift shifts as the organizational context changes. A monitoring function that applies fixed thresholds without interpretive judgment will either over-flag (producing throughput saturation through false positives) or under-flag (producing false assurance through undetected genuine drift). The interpretive judgment that distinguishes drift from variation is the function that must remain with human actors. What can be automated is the detection function that surfaces candidates for that judgment.</p>
+
+<h3>2.2 Sampling-Based Audit</h3>
+
+<p>A second approach is to substitute statistical sampling: monitor a representative subset of the interaction surface and extrapolate system health from the sample. Sampling-based audit is structurally insufficient for AI continuity because the failure modes described in SM-003 Section 7 are not uniformly distributed across the interaction surface. Canon fragmentation occurs at specific inter-team boundaries. Verification decay concentrates in specific workflow segments where throughput pressure is highest. Drift accumulates along specific propagation pathways where constraint retention is weakest. A sampling strategy designed for uniformly distributed failures will systematically miss the concentrated failures that constitute the most dangerous degradation patterns. Effective monitoring must be able to direct attention to the specific locations where failure is structurally most likely, which requires continuous observational coverage rather than periodic sampling.</p>
+
+<h3>2.3 Hierarchical Review</h3>
+
+<p>A third approach is to extend monitoring capacity through management hierarchy: each level monitors the level below it, with aggregation and escalation producing organizational-level awareness. Hierarchical review is structurally insufficient for AI continuity because it reproduces the satisficing dynamic at every level of the hierarchy. Each reviewer in the chain faces the same bounded rationality constraint that SI-WP-007 identifies as the structural cause of accountability degradation: the cost of thorough review exceeds the visible cost of adequate review. The hierarchical structure adds review layers without addressing the incentive structure that determines review quality at each layer.</p>
+
+<h3>2.4 The Structural Requirement</h3>
+
+<p>The common failure across all three alternatives is instructive. Fully automated monitoring fails because the critical judgment cannot be specified in advance. Sampling fails because the failures are not uniformly distributed. Hierarchical review fails because it reproduces satisficing at every level. What the AI continuity monitoring problem requires is an architecture that provides continuous observational coverage across the full interaction surface, directs attention to locations where failure is structurally most likely, and delivers its outputs to human judgment in a form that makes the judgment exercisable without requiring the judge to re-execute the monitoring function.</p>
+
+<p>This is the structural requirement that the observation/adjudication separation satisfies. The observation function provides continuous coverage and directed attention at scales exceeding human capacity. The adjudication function provides the interpretive judgment that cannot be automated. The separation between them ensures that human judgment is exercised over well-defined, structurally bounded questions rather than over the unbounded question of organizational coherence.</p>
+
+<p>This architectural pattern is not novel to the AI continuity domain. Research on high-reliability organizations has documented the same structural separation as a defining feature of organizations that maintain safety at scales exceeding individual monitoring capacity. LaPorte and Consolini (1991) demonstrated that reliable performance in high-hazard organizations depends on empowering frontline operational units to detect and surface anomalies (the observation function) while reserving adjudicative authority for organizational roles with the contextual understanding to distinguish genuine threats from acceptable variation (the adjudication function). The reliability of the system depends on the separation between these functions, not despite it. In the HRO cases LaPorte and Consolini studied, the observation function operates on systems with intrinsic quality signals, whereas AI continuity monitoring requires observation through active comparison against an external reference standard. This disanalogy makes the AI continuity case more demanding than the HRO case: the observation function cannot rely on frontline human operators detecting visible anomalies but must be supported by monitoring functions capable of continuous canonical comparison at scale.</p>
+
+<p>The observation/adjudication architecture incorporates elements of all three alternatives within a structure that prevents each element&rsquo;s characteristic failure mode from being fatal. The guardian function is automated pattern detection, but it is not fully automated monitoring because adjudicative authority remains with human roles. The second-order verification cycle is periodic assessment, but it is not sampling-based audit because it targets the monitoring function&rsquo;s calibration rather than sampling the interaction surface. The authority structure is hierarchical, but it is not hierarchical review because each level exercises judgment over a bounded question rather than re-executing the monitoring function at a higher level.</p>
+
+<h2>3. The Delegation Model</h2>
+
+<p>Delegated monitoring extends observational capacity without transferring governance authority. This distinction is the architectural foundation of SM-011 and must be maintained throughout the system&rsquo;s design and operation.</p>
+
+<h3>3.1 What Is Delegated</h3>
+
+<p>Observational capacity is delegated: the ability to surface drift signals, track verification status, monitor propagation constraint compliance, detect canon fragmentation indicators, and flag potential coherence violations. These are pattern-detection and status-tracking functions that can be executed continuously at scales exceeding human attention capacity.</p>
+
+<p>Specifically, the following Level-1 protocol functions generalize to delegated monitoring at Level 2. CRD detection generalizes to continuous drift monitoring across the organizational interaction surface: designated monitoring functions compare system outputs against canonical standards and flag divergences that exceed defined thresholds. CVP status tracking generalizes to propagation-aware verification monitoring: designated functions track whether artifacts circulating through workflows carry valid verification status and flag those that do not. IVP assessment generalizes to ingestion monitoring at workflow entry points: designated functions assess whether AI-processed material entering workflows has been verified for processing fidelity and flag unverified ingestion events.</p>
+
+<h3>3.2 What Is Not Delegated</h3>
+
+<p>Governance authority is not delegated: the right to adjudicate canon disputes, authorize canonical changes, determine what constitutes acceptable drift, approve verification standards, or decide how to respond to flagged signals. These are judgment functions that require human authority, contextual understanding, and accountability.</p>
+
+<p>The boundary between observation and adjudication is the critical architectural constraint. If monitoring functions acquire adjudication authority, the authority structure specified in SM-003 Section 5 becomes ambiguous. If monitoring functions are treated as authoritative rather than advisory, the governance architecture loses its corrective capacity: flagged signals bypass human judgment and become automated decisions.</p>
+
+<h3>3.3 The Delegation Boundary</h3>
+
+<p>SM-011 defines the delegation boundary through three principles.</p>
+
+<p>Principle 1: Monitoring functions observe and report. They do not decide or act. Every signal produced by a monitoring function is a recommendation for human assessment, not an autonomous determination.</p>
+
+<p>Principle 2: Monitoring parameters are set by human governance. The thresholds, criteria, and scope of monitoring are defined by designated human roles and are subject to periodic review and recalibration.</p>
+
+<p>Principle 3: The monitoring function is itself subject to governance oversight. No monitoring function operates outside the governance architecture. The performance, calibration, and integrity of the monitoring function are assessed by human governance roles, not by the monitoring function itself.</p>
+
+<h2>4. Guardian Architecture</h2>
+
+<p>Guardians are the institutional embodiment of delegated monitoring. A guardian is a designated monitoring function whose role is to surface continuity signals to the appropriate authority level for adjudication.</p>
+
+<p>The guardian architecture is entity-agnostic by design: a guardian can be instantiated as a dedicated AI instance, an automated monitoring tool, a human monitoring role, or a hybrid configuration depending on organizational capacity and the specific monitoring domain. The architecture specifies what the guardian function must do, what boundaries it must respect, and what failure modes it is subject to. The instantiation decision is an organizational deployment choice.</p>
+
+<p>The failure mode dynamics described in Section 5 manifest differently depending on instantiation. Threshold erosion through borderline case resolution applies to adaptive systems that resolve ambiguous cases and adjust their effective thresholds over time. Environmental adaptation applies to systems that adjust their own sensitivity parameters in response to signal volume. Reference standard degradation applies uniformly regardless of instantiation because it is a function of the canonical standards against which any monitoring function calibrates. The delegation boundary (observation without adjudication) applies regardless of instantiation.</p>
+
+<h3>4.1 Guardian Scope</h3>
+
+<p>A guardian&rsquo;s scope is defined by four parameters: domain (which aspect of the continuity architecture the guardian monitors), boundary (the organizational perimeter within which the guardian operates), sensitivity (the thresholds at which the guardian generates signals), and reporting path (the authority role or escalation pathway to which the guardian directs its signals). These four parameters must be explicitly defined for each guardian function. A guardian without defined scope is a monitoring function without accountability, which is worse than no monitoring at all because it creates the appearance of coverage without the substance.</p>
+
+<h3>4.2 Guardian Boundaries</h3>
+
+<p>Guardians observe and report. They do not adjudicate. If a guardian detects potential canon fragmentation between two teams, it surfaces the signal to the authority role responsible for canon governance. It does not determine which team&rsquo;s interpretation is correct. If a guardian detects verification decay in an artifact&rsquo;s propagation chain, it flags the artifact for review. It does not revoke the artifact&rsquo;s status or halt the workflow.</p>
+
+<p>The guardian role is valuable precisely because it is bounded. It extends observational reach without compromising governance clarity. This structural separation mirrors the sensitivity-to-operations principle documented in High-Reliability Organization research, where empowering frontline observers to detect weak signals of operational failure without granting them adjudicative authority is the mechanism through which complex organizations maintain awareness of drift at scales exceeding centralized monitoring capacity (Weick and Sutcliffe, 2001).</p>
+
+<h3>4.3 Guardian Types</h3>
+
+<p>SM-011 defines three guardian types corresponding to the primary continuity challenges at organizational scale.</p>
+
+<p>Canon guardians monitor canonical coherence across organizational units. They detect terminological divergence, definition drift, and interpretation inconsistency by comparing canonical usage across teams against the authoritative canonical record maintained through SM-021&rsquo;s Canon Persistence Layer.</p>
+
+<p>Verification guardians monitor CVP and IVP status across artifact propagation chains. They track whether verification status is maintained as artifacts move through workflows, flag constraint-stripped artifacts, and detect verification decay over time using SM-021&rsquo;s Verification State Layer.</p>
+
+<p>Drift guardians monitor representational drift accumulation across the organizational interaction surface. They detect drift patterns that no single operator would observe from within their local context, using CRD methodology generalized to cross-workflow drift detection as specified in SM-003 Section 6.</p>
+
+<p>When multiple guardian types flag the same artifact or workflow, the signals must be triaged rather than treated as independent events. A canon guardian flagging terminological divergence and a drift guardian flagging representational drift in the same artifact may be detecting different symptoms of the same underlying problem, or they may be detecting independent failures that require separate governance responses. The authority role receiving guardian signals is responsible for this coordination assessment. The governance architecture must therefore ensure that signals from different guardian types are routed to a single authority role with visibility across guardian types, not to separate roles who each receive only the signals from their assigned guardian. Signal isolation reproduces the same fragmentation problem the guardian architecture is designed to prevent.</p>
+
+<h2>5. Failure Modes of Delegated Monitoring</h2>
+
+<p>Delegated monitoring introduces three failure modes that do not exist at Level 1, where the PCP performs monitoring directly. SM-003 Section 7 names these failure modes. SM-011 develops their full architecture.</p>
+
+<p>Understanding these failure modes as an interconnected system rather than as independent risks is essential for governance design. Reason (1997) established the foundational model for organizational accident causation: complex systems maintain multiple defensive layers, each of which contains latent weaknesses. Failure occurs not when any single layer fails but when the weaknesses in multiple layers align to create a path through the entire defense. In the guardian architecture, the three failure modes are three defensive layers: guardian calibration (defended against by second-order verification), signal processing capacity (defended against by triage architecture), and monitoring coverage validity (defended against by audit). A guardian that has drifted slightly in calibration may produce no visible problem until it coincides with a period of throughput saturation that prevents the weakened signals from reaching adjudication, producing false assurance at the institutional level.</p>
+
+<h3>5.1 Guardian Drift</h3>
+
+<p>Guardian drift occurs when the monitoring function itself loses calibration: the parameters governing what constitutes a significant drift signal, a verification gap, or a constraint violation shift informally over time, producing monitoring outputs that no longer reflect the canonical standards they were designed to enforce.</p>
+
+<p>Guardian drift is the most structurally dangerous of the three failure modes because it is self-concealing. When guardian drift occurs, the monitoring system continues to produce outputs that appear normal. Reports are filed. Signals are escalated. The governance architecture appears to be functioning. The drift is in the monitoring standards themselves, not in the monitoring behavior.</p>
+
+<p>The mechanisms through which guardian drift occurs are worth specifying because they determine the detection strategy. The most common mechanism is threshold erosion: the monitoring function&rsquo;s sensitivity thresholds shift incrementally as borderline cases are resolved. Each borderline case that is assessed as acceptable variation rather than genuine drift effectively widens the threshold for the next borderline case. Over many such decisions, the monitoring function&rsquo;s effective threshold has drifted substantially from the canonical standard, but no single decision was visibly incorrect. A second mechanism is reference standard degradation: the canonical standards against which the monitoring function calibrates are themselves subject to the canon drift that SM-021&rsquo;s Canon Persistence Layer is designed to prevent. If the canonical standards degrade, the monitoring function calibrated against them degrades in lockstep. A third mechanism is environmental adaptation: the monitoring function adjusts its sensitivity in response to the signal environment, informally raising its thresholds to reduce signal load, producing a quieter signal stream that the authority roles experience as reduced organizational drift when it actually represents reduced monitoring sensitivity.</p>
+
+<p>Detecting guardian drift requires comparing current monitoring behavior against the canonical standards that originally defined the monitoring parameters. This is a second-order verification requirement: not just monitoring the organizational AI interaction surface, but periodically verifying that the monitoring function itself remains calibrated. The second-order verification cycle is specified in Section 6.</p>
+
+<h3>5.2 Throughput Saturation</h3>
+
+<p>Throughput saturation occurs when the volume of monitoring signals exceeds the capacity of the authority roles to assess and respond to them. Escalation pathways become congested. Drift accumulates despite being detected. The monitoring function operates correctly, but the governance system downstream of it cannot process the signals fast enough to prevent degradation.</p>
+
+<p>Throughput saturation is the failure mode that organizations deploying delegated monitoring at scale will encounter first, because the monitoring function&rsquo;s observational capacity is designed to exceed human attention capacity. Extending observational capacity without correspondingly extending adjudicative capacity creates a bottleneck at the observation/adjudication boundary. The monitoring system sees more than the authority roles can process. The result is a signal queue that grows faster than it is consumed.</p>
+
+<p>The consequences of throughput saturation are not uniform across signal types. When the signal queue exceeds processing capacity, the authority roles must implicitly or explicitly triage. If the triage is deliberate and structured, the most consequential signals receive priority. If the triage is implicit, the prioritization is effectively random with respect to consequence. The most dangerous pattern is implicit triage that prioritizes easily resolved signals over complex ones, because complex signals are disproportionately likely to represent genuine structural problems rather than routine variations.</p>
+
+<p>The structural response to throughput saturation is signal triage architecture that operates between the observation function and the adjudication function. The triage function prioritizes signals based on three factors: severity (the magnitude of the detected divergence from canonical standards), scope (the breadth of the organizational surface affected by the flagged condition), and velocity (the rate at which the flagged condition is worsening). Signals that score high on all three factors represent urgent structural problems that require immediate adjudicative attention. Signals that score low on all three represent routine variations that can be queued for batch review. The triage function does not adjudicate. It prioritizes the adjudication queue.</p>
+
+<p>Throughput saturation also has a governance dimension that connects directly to SI-WP-007&rsquo;s analysis. When authority roles experience sustained signal volume that exceeds their processing capacity, the bounded rationality dynamic applies: they satisfice on signal assessment, processing signals at the minimum quality that produces no visible negative consequence. Detecting this degradation requires calibration testing of the authority role&rsquo;s assessment quality against canonical standards, not self-reporting of assessment adequacy.</p>
+
+<p>Sustained throughput saturation can produce guardian drift as a secondary effect: monitoring functions that observe their signals going unprocessed may informally raise their thresholds to reduce signal volume, producing the threshold erosion mechanism described in Section 5.1. The failure modes are therefore not independent. Sustained throughput saturation degrades the monitoring function&rsquo;s calibration, converting a visible capacity problem into a self-concealing calibration problem.</p>
+
+<p>The signal triage function is itself an architectural element subject to failure. Its specific failure mode is priority miscalibration: the triage function&rsquo;s weighting of severity, scope, and velocity drifts from the governance-defined parameters, causing complex high-severity signals to be systematically deprioritized. This failure mode is a subtype of guardian drift and is detectable through the second-order verification mechanism: comparing current triage parameters against the governance-defined prioritization standards.</p>
+
+<h3>5.3 False Assurance</h3>
+
+<p>False assurance occurs when the presence of monitoring architecture creates organizational confidence that continuity is maintained without adequate verification that the monitoring function is itself operating correctly. The organization believes it is monitored because the guardian infrastructure exists, but the guardians may be miscalibrated, under-scoped, or operating against outdated canonical standards.</p>
+
+<p>False assurance is the institutional-scale expression of the accountability problem that SI-WP-007 analyzes across all three scales. The existence of the monitoring architecture satisfies the governance requirement for oversight. The guardian system is in place. Reports are generated. Signals are processed. The institutional accountability apparatus treats the existence of the monitoring infrastructure as evidence that monitoring is occurring.</p>
+
+<p>The structural conditions that produce false assurance are specific and identifiable. The first is coverage assumption: the organization assumes that the guardian architecture covers the full organizational interaction surface when coverage gaps may exist. Coverage gaps are invisible to the governance architecture because no monitoring function exists in the gap to report its own absence. The second is calibration assumption: the organization assumes the guardian architecture&rsquo;s current calibration reflects the canonical standards when guardian drift may have shifted the monitoring parameters. The third is processing assumption: the organization assumes that the authority roles receiving guardian signals are processing them with adequate depth when throughput saturation may have degraded assessment quality.</p>
+
+<p>False assurance is detectable through substantive audit that compares the monitoring function&rsquo;s actual coverage, calibration, and processing quality against what the governance architecture assumes. This audit function must be performed by a role with expertise in the continuity architecture itself, not merely in compliance methodology.</p>
+
+<p>False assurance is therefore not only a third independent failure mode but also the institutional-level consequence of the other two when they go undetected. Guardian drift produces false assurance by making the monitoring function appear to be functioning when its calibration has degraded. Throughput saturation produces false assurance by making the adjudication function appear to be processing signals when it is satisficing on assessment quality. This is the alignment of latent weaknesses that Reason&rsquo;s (1997) model describes.</p>
+
+<h2>6. The Recursive Governance Problem</h2>
+
+<p>SM-003 Section 7 identifies the second-order verification requirement: the monitoring function must be periodically verified against canonical standards. SM-011 must address the logical implication: if the monitoring function can drift, then the function that verifies the monitoring function can also drift. The regress is real and must be explicitly resolved.</p>
+
+<h3>6.1 The Regress</h3>
+
+<p>The monitoring regress follows a predictable logical chain. Level 1: guardians monitor the organizational interaction surface. Level 2: the governance function verifies that guardians remain calibrated. Level 3: some function verifies that the governance function&rsquo;s verification of guardians is itself calibrated. The chain continues indefinitely.</p>
+
+<h3>6.2 The Termination Condition</h3>
+
+<p>The regress terminates, as it does in all governance architectures, in human judgment exercised at the institutional governance level. Legal systems terminate in judicial judgment. Safety systems terminate in inspector judgment. Audit systems terminate in auditor judgment. In every case, the ultimate backstop is a human making a judgment call that is itself subject to error, bias, and drift.</p>
+
+<p>The architecture&rsquo;s contribution is not to eliminate this terminal dependence on human judgment. It is to ensure that the judgment is exercised over a well-defined and structurally bounded question rather than over an unbounded assessment of organizational coherence. Specifically, the second-order verification question that terminates the regress is: does the monitoring function&rsquo;s current calibration match the canonical standards that define what it is supposed to detect? This is a specific, answerable question that a designated human governance role can assess by comparing monitoring parameters against the canonical record. It does not require the assessor to independently monitor the full organizational interaction surface.</p>
+
+<p>The tension between this termination condition and SI-WP-007&rsquo;s analysis of institutional governance failure deserves explicit acknowledgment. SI-WP-007 demonstrates that institutional governance functions degrade to ceremonial oversight under bounded rationality. The second-order verification cycle terminates in exactly the kind of institutional governance function that SI-WP-007 predicts will satisfice. The architecture does not claim the terminal function is immune to this degradation. It claims the terminal function is structurally different from the degrading functions it oversees in one specific way: the verification question is bounded, defined, and answerable through direct comparison rather than requiring the kind of sustained, unbounded vigilance that produces satisficing. The regress is not resolved in the sense that the terminal judgment is infallible. It is architecturally managed by choosing where to stop, specifying what happens at that level, and relying on SI-WP-007&rsquo;s governance conditions to maintain the terminal function&rsquo;s integrity.</p>
+
+<h3>6.3 The Verification Cycle</h3>
+
+<p>SM-011 specifies a periodic second-order verification cycle with four steps.</p>
+
+<p>Step 1: Canonical standard retrieval. The governance role retrieves the current canonical standards that define the monitoring function&rsquo;s parameters.</p>
+
+<p>Step 2: Monitoring parameter comparison. The governance role compares the monitoring function&rsquo;s current operational parameters against the retrieved canonical standards. Divergences are documented.</p>
+
+<p>Step 3: Calibration assessment. The governance role determines whether detected divergences represent genuine guardian drift (the monitoring function has changed without authorization) or legitimate evolution (the canonical standards have been updated and the monitoring function should be recalibrated to match).</p>
+
+<p>Step 4: Recalibration or escalation. If guardian drift is confirmed, the monitoring function is recalibrated to match canonical standards. If the divergence reveals a deeper problem (e.g., the canonical standards themselves have drifted, or the monitoring function has been informally modified by actors without authority to do so), the issue is escalated through the authority structure specified in SM-003 Section 5.</p>
+
+<p>This cycle runs at defined intervals determined by the governance architecture. The interval must be short enough to detect guardian drift before it produces consequential false assurance, and long enough to be operationally sustainable. Interval determination is a governance calibration decision informed by knowledge of how quickly guardian parameters can drift given the signal volume and borderline case frequency of the specific organizational context. The architecture requires that interval-setting be a governed decision rather than an arbitrary one, and that the interval itself be subject to periodic review rather than set once and forgotten.</p>
+
+<h2>7. Delegation Boundaries for Specific Protocol Functions</h2>
+
+<p>SM-011 specifies which aspects of each Level-1 protocol can be delegated and which require human judgment. The delegation boundary specified procedurally in Section 3.3 is grounded in an epistemic principle: it falls at the point where the function transitions from pattern detection (delegable) to interpretive judgment about the significance of the detected pattern within the current organizational context (not delegable).</p>
+
+<h3>7.1 CRD Delegation</h3>
+
+<p>Delegable: continuous comparison of system outputs against canonical reference material, computation of drift metrics, drift trend analysis across time, cross-workflow drift pattern detection.</p>
+
+<p>Not delegable: determination of whether a detected drift constitutes acceptable variation or genuine canonical divergence, decision to invoke coherence refusal, assessment of whether canonical standards themselves need updating.</p>
+
+<p>The interface between guardian output and human judgment at this boundary operates as follows. The guardian delivers a structured signal to the designated authority role: the artifact or output flagged, the canonical standard against which it was compared, the specific divergence detected, and the drift metric. The authority role receives a bounded assessment question &mdash; does this divergence represent genuine canonical departure or acceptable variation? &mdash; rather than an unbounded request to evaluate organizational coherence.</p>
+
+<h3>7.2 CVP Delegation</h3>
+
+<p>Delegable: verification of citation existence and accessibility, comparison of cited source content against claims attributed to it, tracking of verification status across artifact propagation chains.</p>
+
+<p>Not delegable: assessment of whether a source substantively supports a specific claim (requires interpretive judgment), determination of whether a flagged citation should be removed or reframed, adjudication of disputes about citation adequacy.</p>
+
+<p>The interface at this boundary has a domain-specific feature. The guardian delivers: the citation flagged, the source content retrieved, the specific claim the citation is attached to, and the guardian&rsquo;s comparison result. The authority role receives a bounded interpretive question: does the source content substantively support the claim as attributed? This question requires human judgment because substantive support is not a pattern-matching function. A source may contain the relevant information without supporting the specific claim, or may support a related but distinct claim.</p>
+
+<h3>7.3 IVP Delegation</h3>
+
+<p>Delegable: comparison of AI-processed material against source documents for completeness and fidelity, detection of selective filtering or representational distortion, tracking of ingestion verification status across workflows.</p>
+
+<p>Not delegable: assessment of whether detected processing variations constitute meaningful distortion or acceptable summarization, determination of whether an ingestion event requires re-processing, adjudication of disputes about processing fidelity standards.</p>
+
+<p>The interface at this boundary addresses a specific challenge that distinguishes IVP from the other two protocols. AI processing of source documents routinely involves summarization, selective emphasis, and structural reorganization. These are not errors. The monitoring question is not whether the processing changed the source (it always does) but whether the changes distort the source&rsquo;s meaning, omit material content, or introduce claims not present in the original. The guardian delivers: the source document, the AI-processed version, and a structured comparison identifying specific additions, omissions, and structural changes. The authority role receives a bounded fidelity question: do these processing variations preserve the source&rsquo;s essential content and meaning, or do they introduce distortions that would mislead downstream consumers?</p>
+
+<h2>8. Relationship to the Publication Module</h2>
+
+<p>SM-011 occupies a specific position in the coordinated publication module. SF0005 defines the Level-1 protocols that SM-011 generalizes to delegated monitoring. SM-003 defines the organizational topology within which delegated monitoring operates, including the guardian role concept, the three failure modes, and the second-order verification requirement that SM-011 resolves. SM-021 defines the persistence layers (particularly the Verification State Layer and the Canon Persistence Layer) that provide the canonical standards against which monitoring functions are calibrated. SI-WP-007 provides the governance design principle that SM-011&rsquo;s verification cycle must satisfy to be operationally sustainable, and provides the analysis of bounded rationality and satisficing that explains why the failure modes in Section 5 are structurally predictable. SI-WP-004 (Relational Alignment as a Structural Alternative to Instructional AI Safety) provides the argument for why the alignment approach the monitoring architecture serves is needed. SI-WP-005 (Deploying Relational AI Architecture in Organizational Environments) translates the monitoring architecture into deployment guidance.</p>
+
+<p>SM-011 closes the monitoring regress deferral from SM-003 Section 7. With SM-011 in the publication set, no reader of SM-003 encounters a forward reference to an absent document when they reach the second-order verification requirement. The full specification is available within the same release. The monitoring regress is not resolved in the sense that the terminal judgment is infallible. It is architecturally managed: the regress is truncated at a defined level, a specified verification procedure governs what happens at that level, and the governance conditions defined in SI-WP-007 maintain the integrity of the terminal function.</p>
+
+<h2>9. Scope and Limitations</h2>
+
+<p>SM-011 specifies the architecture for delegated monitoring at Level 2 (organizational scale). It does not address Level 3 (inter-organizational or civilizational-scale monitoring), which requires additional coordination mechanisms beyond the scope of organizational deployment.</p>
+
+<p>SM-011 assumes cooperative or partially cooperative governance environments, consistent with SM-003&rsquo;s topology/incentives boundary. The bounded rationality dynamics analyzed in SI-WP-007 and reflected in the failure modes of Section 5 operate within this cooperative assumption: satisficing actors are not adversarial, but their rational self-interest under bounded conditions produces degradation that the cooperative governance architecture must structurally address. SM-011&rsquo;s failure mode taxonomy and second-order verification cycle are designed precisely for this intermediate condition: actors who comply formally while satisficing operationally. SM-007 addresses the distinct case of actors who intentionally circumvent or corrupt the monitoring function.</p>
+
+<p>SM-011 does not specify particular tools, platforms, or technical implementations for monitoring functions. The architecture defines what must be monitored, what boundaries must be maintained, what failure modes must be addressed, and what governance structures must be in place. The technical implementation of monitoring functions is an organizational decision that falls outside the scope of this document.</p>
+
+<h2>10. Conclusion</h2>
+
+<p>Delegated monitoring is the architectural mechanism through which organizational AI continuity extends beyond the capacity of individual human operators. It is not a replacement for human governance but an extension of human observational reach within a governance framework that retains human authority over all adjudicative decisions.</p>
+
+<p>The observation/adjudication separation is not a design preference but an architectural necessity: the AI continuity monitoring problem requires continuous observational coverage that exceeds human capacity, directed attention to locations where failure is structurally most likely, and delivery of monitoring outputs to human judgment in a form that makes the judgment exercisable. Alternative monitoring approaches each fail against specific structural features of the AI continuity problem that the observation/adjudication architecture addresses.</p>
+
+<p>The guardian architecture provides bounded, scoped, accountable monitoring functions that surface continuity signals without compromising governance clarity. The three failure modes (guardian drift, throughput saturation, and false assurance) are specified with sufficient precision to enable detection and prevention, and their interactions are analyzed to identify the compound risks that arise when multiple failure modes coincide. The recursive governance problem is architecturally managed through a periodic second-order verification cycle that terminates the monitoring regress in human judgment exercised over a well-defined, structurally bounded question.</p>
+
+<p>SM-011 provides the monitoring architecture that SM-003 requires, that SM-021&rsquo;s persistence layers support, and that SI-WP-007&rsquo;s governance principles constrain. Together with the other papers in the coordinated publication module, SM-011 completes the Level-1-to-Level-2 architecture with no load-bearing forward reference remaining within the set.</p>
+
+<div class="dep-block">
+  <div class="dep-label">Document Dependencies</div>
+  <p><strong>Prerequisites:</strong> SF0005 (CAM), SF0037 (CVP), SF0038 (IVP), SF0039 (CRD), SM-003</p>
+  <p><strong>Enables:</strong> Institutional Scaling and Governance Research (Advanced Phase), SI0000 (Capstone)</p>
+  <p style="margin-bottom:0;"><strong>Scale:</strong> Level 2 (primary), Level 3 (essential for institutional-scale monitoring infrastructure)</p>
+</div>
+
+<h2>References</h2>
+
+<ul class="ref-list">
+  <li>Gantz, T. W. (2026). The Continuity Anchoring Method (CAM): A Structured Methodology for Sustained Human-AI Interaction. Synthience Institute. SF0005. <a href="https://doi.org/10.5281/zenodo.19494453" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19494453</a></li>
+  <li>Gantz, T. W. (2025). Citation Verification Protocol (CVP): A Structured Method for Verifying AI-Generated Citations in Academic and Research Contexts. Synthience Institute. SF0037. <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18075624</a></li>
+  <li>Gantz, T. W. (2025). Ingestion Verification Protocol (IVP): A Structured Method for Verifying AI Document Processing Fidelity. Synthience Institute. SF0038. <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289047</a></li>
+  <li>Gantz, T. W. (2025). Context Representation Drift (CRD): Measuring and Managing Representational Divergence in Extended Human-AI Interaction. Synthience Institute. SF0039. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289391</a></li>
+  <li>Gantz, T. W. (2026). Operational Continuity Architecture: Organizational Embedding of AI Alignment and Drift Governance. Synthience Institute. SM-003. <a href="https://doi.org/10.5281/zenodo.19496015" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496015</a></li>
+  <li>Gantz, T. W. (2026). Institutional Continuity Substrate (ICS): Persistent Canon, Role, and Artifact State Across Organizational AI Interaction. Synthience Institute. SM-021. <a href="https://doi.org/10.5281/zenodo.19496241" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496241</a></li>
+  <li>Gantz, T. W. (2026). The Human Accountability Problem in Relational AI Deployment: Why the PCP Function Fails and What Organizations Must Do About It. Synthience Institute. SI-WP-007. <a href="https://doi.org/10.5281/zenodo.19496485" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496485</a></li>
+  <li>LaPorte, T. R. and Consolini, P. M. (1991). Working in Practice but Not in Theory: Theoretical Challenges of &ldquo;High-Reliability Organizations.&rdquo; <em>Journal of Public Administration Research and Theory</em>, 1(1), 19&ndash;48.</li>
+  <li>Reason, J. (1997). <em>Managing the Risks of Organizational Accidents.</em> Ashgate Publishing.</li>
+  <li>Weick, K. E. and Sutcliffe, K. M. (2001). <em>Managing the Unexpected: Resilient Performance in an Age of Uncertainty.</em> Jossey-Bass.</li>
+</ul>
+
+</div>
+
+<div class="citation-block">
+  <div class="citation-label">Suggested Citation</div>
+  Gantz, T. W. (2026). Delegated Coherence Monitoring: AI-Assisted Verification and Drift Detection Under Human Governance (SM-011 v1.8). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.19496669" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496669</a>
+</div>
+
+<div class="article-footer">
+<p>Document: SM-011 Mortar Series<br>
+Version: v1.8<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: April 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
