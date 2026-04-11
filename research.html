@@ -130,6 +130,8 @@
     border-left-color: #5a3e2b;
   }
   .doc-title { font-weight: 600; font-size: 0.97rem; color: #2a2520; }
+  .doc-title a { color: #5a3e2b; text-decoration: none; font-weight: 600; }
+  .doc-title a:hover { color: #3a2518; text-decoration: underline; }
   .doc-desc { font-size: 0.9rem; color: #555; margin-top: 0.25rem; line-height: 1.55; }
   .doc-links { margin-top: 0.35rem; font-size: 0.88rem; display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; }
   .doc-date { font-size: 0.8rem; color: #8a7f72; }
@@ -312,8 +314,11 @@ function renderDocItem(doc) {
   if (doc.read) linksHtml += ' <a class="read-link" href="' + doc.read + '">Read</a>';
   if (doc.link) linksHtml += ' <a class="zenodo-link" href="' + doc.link + '" target="_blank" rel="noopener">Zenodo</a>';
   var dateHtml = doc.date ? '<span class="doc-date">' + doc.date + '</span>' : "";
+  var titleContent = doc.read
+    ? '<a href="' + doc.read + '">' + doc.id + ' &mdash; ' + doc.title + '</a>'
+    : doc.id + ' &mdash; ' + doc.title;
   return '<li>'
-    + '<div class="doc-title">' + doc.id + ' &mdash; ' + doc.title + '</div>'
+    + '<div class="doc-title">' + titleContent + '</div>'
     + '<div class="doc-desc">' + doc.desc + '</div>'
     + '<div class="doc-links">' + statusHtml + dateHtml + linksHtml + '</div>'
     + '</li>';
