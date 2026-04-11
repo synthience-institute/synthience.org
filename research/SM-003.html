@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SM-003 defines the architectural topology required for continuity-preserving AI interaction at organizational scale, introducing canon governance, workflow-embedded verification, authority structures, propagation-aware continuity, and delegated monitoring. Synthience Institute.">
+<meta name="author" content="Thomas W. Gantz">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Synthience Institute">
+<meta property="og:title" content="SM-003: Operational Continuity Architecture | Synthience Institute">
+<meta property="og:description" content="SM-003 defines the architectural topology required for continuity-preserving AI interaction at organizational scale. Synthience Institute.">
+<meta property="og:url" content="https://synthience.org/research/SM-003.html">
+<meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@SynthienceInst">
+<meta name="twitter:title" content="SM-003: Operational Continuity Architecture | Synthience Institute">
+<meta name="twitter:description" content="SM-003 defines the architectural topology required for continuity-preserving AI interaction at organizational scale. Synthience Institute.">
+<meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+<title>SM-003 &mdash; Operational Continuity Architecture | Synthience Institute</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #faf9f7; color: #2a2520; line-height: 1.75; }
+  a { color: #5a3e2b; }
+  a:hover { color: #8b5e3c; }
+  .site-header { background: #1a1714; padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+  .site-header a { color: #d4c9b8; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.9rem; letter-spacing: 0.03em; }
+  .site-header a:hover { color: #fff; }
+  .breadcrumb { font-size: 0.82rem; color: #b0a898; font-family: Arial, sans-serif; margin-top: 0.3rem; }
+  .breadcrumb a { color: #b0a898; }
+  .doc-wrap { max-width: 740px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .doc-series { font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.6rem; }
+  .doc-title { font-size: 2rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 0.4rem; font-variant-numeric: lining-nums; }
+  .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 1rem 0; margin-bottom: 2.5rem; display: grid; grid-template-columns: 140px 1fr; gap: 0.4rem 1rem; font-family: Arial, sans-serif; font-size: 0.84rem; }
+  .meta-label { color: #8a7f72; }
+  .meta-value { color: #2a2520; }
+  .meta-value a { color: #5a3e2b; }
+  .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-family: Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 2px; margin-right: 0.5rem; vertical-align: middle; }
+  .doc-body h2 { font-size: 1.15rem; font-weight: bold; font-family: Arial, sans-serif; color: #1a1714; margin: 2.2rem 0 0.7rem; }
+  .doc-body h3 { font-size: 1rem; font-weight: bold; font-family: Arial, sans-serif; color: #3a2e24; margin: 1.6rem 0 0.5rem; }
+  .doc-body h4 { font-size: 0.95rem; font-weight: bold; font-family: Arial, sans-serif; color: #3a2e24; margin: 1.2rem 0 0.4rem; }
+  .doc-body p { margin-bottom: 1.1rem; }
+  .doc-body ul, .doc-body ol { margin: 0.5rem 0 1.1rem 1.6rem; }
+  .doc-body li { margin-bottom: 0.4rem; }
+  .abstract-block { background: #f2ede6; border-left: 3px solid #8b5e3c; padding: 1.2rem 1.4rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; }
+  .abstract-block .abstract-label { font-family: Arial, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+  .ref-list { font-family: Arial, sans-serif; font-size: 0.84rem; color: #3a2e24; list-style: none; padding: 0; }
+  .ref-list li { margin-bottom: 0.7rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+  .dep-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.84rem; color: #3a2e24; }
+  .dep-block .dep-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; font-weight: bold; }
+  .citation-block { background: #f2ede6; padding: 1rem 1.2rem; margin: 2.5rem 0 1rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.84rem; color: #4a3a2a; }
+  .citation-block .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+  .doc-footer { border-top: 1px solid #ddd6c8; margin-top: 3rem; padding-top: 1.5rem; font-family: Arial, sans-serif; font-size: 0.82rem; color: #8a7f72; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .doc-footer a { color: #5a3e2b; }
+  @media (max-width: 600px) { .doc-wrap { padding: 2rem 1.2rem 4rem; } .meta-block { grid-template-columns: 1fr; } }
+  .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #ddd6c8; font-size: 0.85rem; color: #8a7f72; }
+</style>
+<link rel="icon" type="image/png" href="/assets/images/SYNTHIENCE_favicon.png">
+<link rel="shortcut icon" href="/assets/images/SYNTHIENCE_favicon.png">
+<link rel="apple-touch-icon" href="/assets/images/SYNTHIENCE_favicon.png">
+</head>
+<body>
+
+<div class="site-header">
+  <div><a href="https://synthience.org">Synthience Institute</a></div>
+  <div class="breadcrumb"><a href="https://synthience.org">Home</a> / <a href="https://synthience.org/research.html">Research</a> / SM-003</div>
+</div>
+
+<div class="doc-wrap">
+
+  <div class="doc-series">Mortar Series</div>
+  <h1 class="doc-title">Operational Continuity Architecture</h1>
+
+  <div class="meta-block">
+    <span class="meta-label">Document ID</span><span class="meta-value">SM-003</span>
+    <span class="meta-label">Version</span><span class="meta-value">v2.8 | April 2026</span>
+    <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+    <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+    <span class="meta-label">Keywords</span><span class="meta-value">operational continuity, organizational AI deployment, canon governance, drift governance, AI alignment, continuity architecture, workflow embedding, institutional AI</span>
+    <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
+    <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.19496015" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496015</a></span>
+  </div>
+
+  <div class="abstract-block">
+    <div class="abstract-label">Abstract</div>
+    <p>SM-003 defines the architectural topology required for continuity-preserving AI interaction at organizational scale. Level-1 continuity protocols (CAM, CVP, IVP, CRD) establish how coherence, canon integrity, and drift control are maintained within individual human-AI interaction. These protocols assume bounded interaction contexts in which a single human operator maintains canon authority, executes verification, and adjudicates drift. Organizational AI deployment removes these assumptions. Interaction becomes distributed across humans, AI instances, workflows, and institutional contexts. Canon becomes shared rather than local, authority becomes layered, and continuity must persist across handoffs, substitutions, and asynchronous execution. Under these conditions, continuity cannot be preserved through individual protocol adherence alone. It must be structurally embedded in organizational interaction topology. SM-003 specifies how Level-1 continuity primitives are instantiated across institutional roles, workflows, and canon systems. It introduces canon governance, workflow-embedded verification, authority and escalation structures, propagation-aware continuity, and delegated monitoring architectures. SM-003 establishes the Level-2 topology on which SM-021 (Institutional Continuity Substrate), SM-011 (Delegated Coherence Monitoring), SI-WP-002 (The Orchestrator Role), and subsequent institutional scaling work depend. Epistemic status: Level-2 continuity architecture extrapolates from empirically grounded Level-1 interaction phenomena. Organizational persistence of continuity under this topology remains a theoretical hypothesis requiring downstream validation. SM-003 specifies structural conditions under which continuity can persist at organizational scale; it does not claim empirical confirmation that it does.</p>
+  </div>
+
+  <div class="doc-body">
+
+    <h2>0. Scope and Positioning</h2>
+
+    <h3>0.1 Architectural Purpose</h3>
+
+    <p>Level-1 continuity protocols describe how coherence, canon anchoring, and drift control are maintained within sustained interaction between a human and an AI system. These protocols assume a bounded context in which authority, canon reference, and adjudication remain locally visible. A single Primary Continuity Provider (PCP) holds canon authority, executes verification, and corrects drift within a dyadic interaction thread.</p>
+
+    <p>Organizational deployment removes these assumptions. Interaction becomes distributed across actors and workflows, canon becomes shared across teams that did not author it, authority becomes layered across roles and escalation hierarchies, and continuity must persist across handoffs and substitutions that no single actor fully controls. Under these conditions, continuity cannot be preserved solely through individual protocol adherence. It must be embedded structurally in interaction topology.</p>
+
+    <p>SM-003 therefore defines the architectural conditions under which Level-1 continuity primitives remain stable when interaction extends beyond a dyadic thread. It specifies topology, not outcomes. It defines persistence conditions, not behavioral guarantees.</p>
+
+    <h3>0.2 Epistemic Boundary</h3>
+
+    <p>SM-003 operates at Level-2 (organizational scale). It assumes empirically grounded Level-1 phenomena (RICO-supported interaction continuity) and extrapolates their persistence conditions under distributed institutional interaction.</p>
+
+    <p>SM-003 does not claim that organizational continuity will necessarily emerge wherever the architecture is instantiated. It claims that without such architecture, continuity degradation is structurally expected at organizational scale. With it, persistence becomes structurally possible.</p>
+
+    <p>Validation of organizational continuity persistence remains outside SM-003 scope.</p>
+
+    <h3>0.3 Topology vs Incentives</h3>
+
+    <p>SM-003 defines interaction topology: canon placement, workflow embedding, authority structure, propagation pathways, and monitoring extension. Organizational incentives operate orthogonally to topology.</p>
+
+    <p>If incentive structures undermine canon authority, penalize escalation, reward bypassing verification, or encourage shadow workflows, continuity degradation will occur regardless of topology integrity. SM-003 therefore specifies persistence conditions under cooperative or partially cooperative governance environments. Incentive-hostile environments are addressed separately in SM-007.</p>
+
+    <p>Topology constrains continuity dynamics. Incentives modulate them. SM-003 specifies the former, not the latter.</p>
+
+    <p>The mechanism by which incentives undermine topology is worth making concrete, because it shapes the architecture. An organization can deploy a well-designed canon repository with versioning, authority mapping, and access embedding that no one uses in practice: the incentive structure rewards throughput over compliance, and using the canon governance system adds friction that the incentive structure does not reward. Escalation pathways can exist in full architectural detail while actors learn through experience that invoking them delays their work, produces no personal benefit, and creates the social friction of flagging a problem to an authority that may respond slowly or unpredictably. Workflow verification checkpoints can be embedded while teams develop workarounds that bypass them invisibly, because the bypass produces no immediate consequence and saves time that the incentive structure values. The topology does not fail suddenly under these conditions. It fails through progressive decoupling of formal structure from operational practice, which is precisely what the partial noncompliance degradation mode in Section 9 describes. Naming this mechanism here is not a scope limitation. It is an honest acknowledgment that organizational AI continuity is two separate design problems: the structural topology problem that SM-003 addresses, and the governance and incentive problem that requires separate architectural treatment.</p>
+
+    <p>SM-003 and SI-WP-007 (The Human Accountability Problem in Relational AI Deployment: Why the PCP Function Fails and What Organizations Must Do About It) therefore address co-dependent halves of a single organizational continuity problem. The topology specified here is a necessary but not sufficient condition for organizational continuity: without it, continuity degradation is structurally expected regardless of incentive conditions; with it, continuity becomes possible but remains conditional on the incentive alignment that SI-WP-007 addresses. SI-WP-007 is published simultaneously with this document as part of a coordinated publication module. SM-007 (Incentives and Adversarial Dynamics in Relational AI Systems) addresses the formal adversarial dynamics treatment in a subsequent release.</p>
+
+    <p>The interface between the two documents is more specific than a general division of labor between topology and incentives. SI-WP-007&rsquo;s accountability assignment mechanism attaches to SM-003&rsquo;s authority structure by specifying who bears named responsibility for which element of the topology: canon governance, workflow embedding, monitoring calibration. SI-WP-007&rsquo;s incentive alignment mechanism attaches to SM-003&rsquo;s workflow embedding by restructuring the cost-benefit calculation for executing embedded verification checkpoints, making compliance the path of least resistance rather than an act of sustained discipline. SI-WP-007&rsquo;s structural detection mechanism attaches to SM-003&rsquo;s delegated monitoring by specifying the second-order detection architecture that prevents monitoring degradation from becoming self-concealing. The interface operates in both directions: SI-WP-007&rsquo;s governance mechanisms require SM-003&rsquo;s topology as the structural substrate on which accountability assignment, incentive alignment, and structural detection can operate. A topology without governance degrades through satisficing. Governance without topology has no structure to sustain.</p>
+
+    <h3>0.4 Relationship to Existing Protocols</h3>
+
+    <p>SM-003 assumes Level-1 primitives: CAM (canonical anchoring persistence), CVP (constraint retention verification), IVP (ingestion adequacy verification), and CRD (drift detection and restoration).</p>
+
+    <p>At Level-1, these are executed by a single operator within a bounded interaction. SM-003 extends them to distributed institutional contexts in which canon is shared, actors are multiple, and adjudication is separated from generation.</p>
+
+    <h3>0.5 The Human Capacity Problem</h3>
+
+    <p>The operational architecture defined in this document exists in part because relational continuity cannot be maintained through individual human attention alone at organizational scale. A single PCP can sustain continuity across a bounded dyadic interaction. The same individual cannot personally monitor canon coherence across dozens of concurrent AI deployments, execute CVP on every artifact in circulation, or maintain awareness of drift accumulating across workflow boundaries they do not directly observe. The architecture is not an organizational convenience. It is the structural answer to a human capacity constraint that becomes binding as soon as AI interaction moves beyond individual use.</p>
+
+    <p>This constraint is not a flaw in the framework. It is the reason the framework exists at organizational scale. The topology specified in SM-003 distributes the continuity functions that a single PCP holds locally across institutional roles, embedded workflows, authority structures, and monitoring systems, not to replace the human continuity function but to make it viable at scales where individual attention is necessarily finite.</p>
+
+    <h2>1. From Dyadic Continuity to Institutional Continuity</h2>
+
+    <p>Continuity at Level-1 is interaction-local: coherence, canon anchoring, and drift correction occur within a bounded human-AI exchange governed by a single continuity authority. The PCP holds the canon in working memory, detects drift in real time, and applies corrections within the interaction thread. Every continuity function is locally visible and locally actionable.</p>
+
+    <p>Organizational deployment transforms continuity into a system-level property through a shift that is qualitative rather than quantitative. It is not that there are simply more interactions to manage. It is that the structural conditions that made continuity locally maintainable have dissolved. When multiple actors engage with the same AI systems across different workflows and time horizons, canon becomes a distributed artifact rather than a locally held reference standard. When personnel change, the relational context, verification history, and canonical knowledge that sustained prior interactions do not transfer automatically. When artifacts propagate across workflows, the constraints that governed their production do not travel with them unless a structure exists to enforce their carriage.</p>
+
+    <p>The transition from dyadic to institutional continuity therefore requires a structural response, not a scaling of individual effort. Continuity shifts from being maintained within an interaction to being sustained across an interaction graph: a network of humans, AI instances, canon repositories, workflows, and artifacts whose collective configuration determines whether continuity is a stable system property or an accidental local occurrence. SM-003 defines the structural conditions under which Level-1 continuity properties remain stable under this transition.</p>
+
+    <h2>2. Organizational Interaction Topology</h2>
+
+    <p>Continuity at organizational scale is a system-level property of the interaction network rather than an actor-level behavior. It cannot be located in any single participant, protocol execution, or workflow checkpoint. It emerges from the stability of the relationships among the elements that constitute the organizational interaction graph.</p>
+
+    <p>The nodes of this graph include the humans who exercise continuity functions (PCPs, authority roles, guardian monitors), the AI instances with which they interact, the canon repositories that hold shared reference material, the workflows through which AI-generated content is produced and transformed, and the artifacts that carry outputs from one context to another. The edges of this graph are the relationships among these nodes: authority relationships that determine who can adjudicate canon disputes, propagation relationships that determine how artifacts move across workflow boundaries, verification relationships that determine when and by whom ingestion and citation checks are executed, and monitoring relationships that determine who surfaces drift signals to whom. The formal properties of this interaction graph (minimum connectivity conditions for continuity persistence, structural signatures of degradation, and the relationship between graph topology and drift accumulation rate) remain unspecified in this document and constitute a formalization target for subsequent work. In this document, the interaction graph provides the organizational vocabulary (nodes, edges, relationship types) for specifying the topology&rsquo;s structural elements; the formal graph-theoretic properties that would enable quantitative analysis of topological adequacy are reserved for subsequent formalization.</p>
+
+    <p>When these structural relationships are stable (when authority is unambiguous, canon is accessible and coherent, propagation carries constraints intact, and monitoring surfaces drift before it compounds), continuity persists as a system-level property of the network regardless of which specific actors are present at any given moment. When the structural relationships degrade (when authority is contested, canon fragments across teams, propagation loses constraint retention, or monitoring becomes throughput-limited), continuity degrades even when local interactions remain individually coherent. This is the characteristic failure signature of organizational continuity loss: teams that appear to be functioning well locally while the system as a whole drifts.</p>
+
+    <h2>3. Canon Governance</h2>
+
+    <p>Canon governance is the architectural mechanism through which CAM&rsquo;s interaction-level canon anchoring becomes an institutional substrate. At Level-1, the PCP maintains canon visibility by holding canonical material in working memory and reintroducing it at each session boundary. This is sustainable within a bounded dyadic thread. It is not sustainable across an organization where multiple actors work with the same canonical material in parallel, where personnel change disrupts individual canonical knowledge, and where no single person has visibility into the full scope of AI interaction activity.</p>
+
+    <p>Canon governance distributes the anchoring function that the PCP holds locally across institutional roles and repositories. An institutional canon repository is a versioned, authority-mapped, access-embedded store of canonical definitions, decisions, and constraints. Versioning ensures that the canonical record is traceable across its full revision history: any actor at any point in institutional time can determine what the canonical definition of a term was at any prior moment, who authorized that definition, and what changed between versions. Authority mapping ensures that the provenance and approval status of each canonical element is legible: actors know whose judgment established each canonical element and what escalation pathway applies when canon is disputed. Access embedding ensures that canonical material remains retrievable without depending on individuals who may no longer be present: the canon exists in institutional infrastructure, not in personal knowledge.</p>
+
+    <p>Canon fragmentation is the primary failure mode that canon governance prevents. Fragmentation occurs when different organizational units develop locally coherent but globally incompatible interpretations of the same canonical framework, each believing their version to be authoritative. The result is not visible disagreement: fragmented teams typically do not know they are operating under incompatible interpretations, but rather silent divergence that surfaces only when cross-team projects require coordination and reveal that the shared vocabulary has split. The economic rationale for this governance investment is established in organizational theory: Arrow (1974) demonstrated that organizations develop shared codes (canonical definitions and mutual understandings) as a structural necessity for managing the prohibitive coordination costs that arise when distributed actors must process information without a common reference standard. Maintaining that shared code requires continuous structural investment; without it, divergence is the thermodynamic default. Canon governance prevents fragmentation by maintaining a single authoritative version history with traceable authority mapping, ensuring that any interpretation dispute can be adjudicated by reference to the canonical record rather than by negotiating between locally-held versions.</p>
+
+    <p>Canon governance is not a one-time architectural decision. It is an active maintenance practice. The canonical record must be updated as the framework evolves, as new interaction patterns emerge, and as prior canonical decisions prove inadequate or require refinement. Authority mapping must be kept current as organizational roles change. Access embedding must be verified as systems and personnel change. Most critically, the canonical record must be periodically audited for silent divergence: the condition in which different parts of the organization have begun interpreting the same canonical material differently without either party being aware of it. This audit function distinguishes living canon governance from archival canon governance. An archive preserves what was established. Living canon governance actively detects and corrects drift in the canonical record itself, treating the canonical layer as a system that can itself degrade and therefore requires its own continuity maintenance. Without this second-order maintenance function, a canon governance system that begins in good condition will progressively lose coherence, not through any single failure event but through the accumulation of small local interpretive variations that no individual actor has visibility into the full scope of.</p>
+
+    <p>Canon governance as specified here assumes an established canonical layer that requires maintenance, versioning, and drift correction. The origination of that canonical layer (the initial process through which organizational canonical definitions are drafted, evaluated, and ratified as authoritative when no prior canon exists to adjudicate against) is a distinct architectural problem. At Level-1, the PCP originates canon through the CAM interaction loop. At Level-2, canon origination requires a ratification process that establishes initial authority mappings, resolves competing proposals for foundational definitions, and produces a canonical baseline from which governance can operate. This bootstrapping process is not specified in SM-003 and constitutes a prerequisite condition for the governance architecture described here.</p>
+
+    <h2>4. Workflow-Embedded Continuity Primitives</h2>
+
+    <p>At Level-1, CVP and IVP are executed by the PCP as deliberate protocol actions within the interaction: the PCP checks citations, verifies ingestion fidelity, and corrects failures before accepting interaction products. The effectiveness of these checks depends on the PCP&rsquo;s attention, competence, and capacity to execute them consistently across all relevant interactions.</p>
+
+    <p>At organizational scale, this reliance on individual execution creates a structural throughput constraint. No individual or team can personally execute CVP and IVP on every artifact entering or leaving every workflow in a distributed AI deployment. Research on organizational learning confirms that when scale increases throughput beyond the processing capacity of human-mediated context, organizations experience systematic knowledge degradation, a dynamic that becomes structurally acute when AI-generated artifacts accumulate faster than individual operators can verify them (Argote and Miron-Spektor, 2011). The solution is not to abandon verification but to embed it structurally in the workflows themselves, converting verification from remembered protocol execution to structural process behavior.</p>
+
+    <p>Workflow-embedded continuity primitives are verification and constraint-retention mechanisms built into workflow architecture rather than operator vigilance. At workflow entry points, ingestion verification becomes a structural gate: AI-processed material entering a workflow triggers IVP assessment as part of the workflow&rsquo;s process definition, not as a discretionary check by an individual actor. At workflow exit points, citation verification becomes a boundary condition: artifacts leaving a workflow carry CVP status markers that subsequent consumers can confirm without re-executing the verification. At transformation boundaries, constraint retention becomes an architectural requirement: when artifacts are summarized, reprocessed, or repurposed within a workflow, the transformation step preserves the original verification status, scope limitations, and canonical anchoring rather than silently stripping them. Mintzberg&rsquo;s (1980) analysis of coordination mechanisms in complex organizations provides the theoretical precedent for this structural transition: coordination at scale must be achieved through the standardization of work processes, in which the contents of the work are specified in advance rather than left to discretionary operator alignment, converting continuity from a behavioral choice into a structural process requirement.</p>
+
+    <p>The shift from operator execution to workflow embedding does not eliminate human judgment from verification. It ensures that the structural conditions for verification are present regardless of which individual is executing the workflow at any given moment. Humans design the embedded checkpoints, assess flagged outputs, and adjudicate boundary cases. The workflow structure ensures that those human judgment points are consistently triggered rather than inconsistently remembered.</p>
+
+    <p>The failure modes at each boundary type are structurally distinct and worth naming explicitly. At entry points, the failure mode is contaminated ingestion: AI-processed material enters a workflow without IVP assessment, and any distortions introduced during processing (selective filtering, representational drift, hallucinated elements) propagate forward as if they were verified. The downstream consumer has no way to know the material was not verified and treats it with a confidence it has not earned. At exit points, the failure mode is constraint stripping: an artifact leaves a workflow without its CVP status markers, and the next workflow that receives it cannot determine whether its citations were verified. Over time, verified and unverified material circulate indistinguishably, eroding the institutional capacity to distinguish knowledge that has been checked from knowledge that merely appears authoritative. At transformation boundaries, the failure mode is lineage severance: a summarized or repurposed artifact loses its connection to the canonical anchoring of its source. The constraints that gave the original its validity (the scope limitations, the verification conditions, the canonical definitions it assumed) are invisible in the transformed version. A downstream actor may treat the transformed artifact as more general than it is, applying conclusions that were valid only under specific canonical conditions to contexts where those conditions do not hold.</p>
+
+    <h2>5. Authority and Escalation</h2>
+
+    <p>Authority at organizational scale is not self-evident. In a dyadic interaction, the PCP holds singular canonical authority: there is no question of whose judgment governs canon interpretation or drift correction because there is only one human actor. At organizational scale, multiple actors interact with shared canonical material, interpret it in their respective workflow contexts, and occasionally encounter disagreements about what the canon requires or permits.</p>
+
+    <p>Authority structure maps who holds interpretive rights at each level of the organizational topology and what pathway disputes follow when they cannot be resolved locally. An authority structure is not simply an organizational hierarchy. It is a canon-specific topology that specifies: who can ratify changes to canonical definitions, who can adjudicate disputes between competing interpretations, what escalation pathway a workflow actor follows when a local interpretation is challenged, and what governance process applies when escalation reaches the institutional level. Authority legitimacy (the condition in which actors at each level recognize the authority structure as valid and follow it in practice) is the essential precondition for this structure to function. An authority structure that exists on paper but is not followed in practice provides no continuity protection.</p>
+
+    <p>Escalation pathways generalize the CRD drift-correction function from interaction-local repair to institutional adjudication. At Level-1, drift correction is direct: the PCP detects divergence from the canonical trajectory and applies correction within the current interaction. At Level-2, drift that accumulates across workflow propagation surfaces may not be detectable by any single actor. Escalation pathways provide the structural mechanism through which drift signals that exceed local corrective capacity are routed to actors with the authority and visibility to assess and address them. Without escalation pathways, locally detected drift has nowhere to go and accumulates into systemic degradation. With them, drift signals become correctable before they compound. Galbraith&rsquo;s (1974) information processing view of organizational design provides the structural rationale: when distributed interactions generate ambiguity or novelty that exceeds the bounds of established canonical rules, localized horizontal resolution fails because no single actor has global visibility; vertical escalation to a node with organizational-wide perspective is structurally obligatory.</p>
+
+    <p>Authority legitimacy in the AI continuity context has a structural problem that distinguishes it from authority in more visible organizational domains. In most contexts, following established authority structures produces at least partially visible benefits: compliance produces auditable records, safety protocols prevent accidents that would otherwise be noticed. In the AI continuity context, the benefit of following escalation pathways is often invisible. Canon coherence is not something organizational actors directly observe: they observe their local interactions, which may appear fine even as systemic coherence degrades elsewhere. The cost of invoking an escalation pathway is immediate and concrete: delay, additional process, the social friction of flagging a problem. The benefit is diffuse and statistical: the organization maintains coherence that no individual actor can see being maintained. This asymmetry creates structural pressure against escalation that is independent of any individual&rsquo;s bad faith. Authority legitimacy in AI continuity therefore depends not only on actors recognizing the authority structure as valid but on the governance architecture creating conditions under which exercising escalation pathways is the path of least resistance rather than an act of disciplined compliance against immediate cost. An authority structure that depends on sustained virtue rather than structural alignment will erode under operational pressure regardless of how sound its design is on paper.</p>
+
+    <h2>6. Continuity Propagation Across Workflows</h2>
+
+    <p>Drift at Level-1 arises within interaction: the system&rsquo;s internal model of the canonical trajectory diverges from the established trajectory within the current exchange, producing outputs that contradict prior agreements or wander from the established frame. The PCP detects this divergence in real time and applies coherence refusal, re-anchoring the interaction from canonical material.</p>
+
+    <p>Drift at Level-2 accumulates differently. It does not arise within a single interaction but across the propagation surface of the organizational workflow network: the set of all handoffs, transformations, summarizations, and reuse operations through which AI-generated material moves from its point of production to its eventual consumption. Each propagation event is an opportunity for constraint loss: a moment at which the verification status, scope limitations, and canonical anchoring of the originating context may be silently stripped from the artifact as it crosses a workflow boundary.</p>
+
+    <p>Propagation-aware continuity is the architectural property that prevents constraint loss across propagation surfaces. It operates across three mechanisms. Constraint retention across transfers ensures that when work moves between teams or workflow stages, the continuity requirements governing that work are not silently dropped. Artifacts carry their originating constraints (scope limitations, verification status, canonical anchoring) as explicit metadata that the receiving workflow is required to acknowledge. Ingestion verification at transformation boundaries ensures that when artifacts are summarized, reprocessed, or repurposed, the transformation step is treated as a new ingestion event requiring IVP assessment rather than a continuation of the original interaction&rsquo;s verified status. Traceable lineage of outputs across workflows ensures that any artifact can be linked back to the interaction context in which it was produced, the canonical material that governed its production, and the verification decisions that established its status, regardless of how many workflow stages it has passed through since production.</p>
+
+    <p>CRD&rsquo;s Level-2 function operates through this propagation surface. At Level-1, CRD tracks representational drift within the interaction thread. At Level-2, CRD&rsquo;s drift detection logic must extend across workflow boundaries: detecting when an artifact&rsquo;s representation has diverged from its originating canonical context as it moves through propagation stages. This requires drift detection at workflow boundaries rather than within individual interactions, and it requires a reference standard that is accessible to actors at each workflow stage. Canon governance provides that reference standard. Propagation-aware continuity provides the detection surface. Walsh and Ungson&rsquo;s (1991) organizational memory framework provides theoretical grounding for this requirement: organizational knowledge retention depends not on individual memory but on retentions embedded in transformation rules, task structures, and cultural forms that carry interpretive context across personnel changes and workflow handoffs; propagation-aware continuity operationalizes this principle for AI-generated artifacts.</p>
+
+    <h2>7. Delegated Monitoring Transition</h2>
+
+    <p>Monitoring at Level-1 is a direct PCP function: the PCP observes the interaction in real time, detects drift, and applies correction within the current exchange. The PCP is both the observer and the corrector. This works within bounded dyadic interaction because the PCP has full visibility into the interaction thread and the authority to correct it immediately.</p>
+
+    <p>At organizational scale, this direct monitoring model fails for the same reason that direct verification fails: no individual can maintain continuous awareness of drift accumulating across an organization&rsquo;s full AI interaction surface. The solution is not to abandon monitoring but to delegate observational coverage to designated roles while retaining human adjudication of significant signals. The guardian role formalizes this delegation. A guardian monitors a defined scope of AI interactions for drift signals, ingestion failures, and canonical coherence breakdowns, and surfaces significant signals to the authority structure for adjudication. The guardian observes; the authority adjudicates. This separation is architecturally necessary because combining observation with adjudication authority at the guardian level creates a concentration of unaccountable power over canonical interpretation that the topology cannot self-correct. Weick and Sutcliffe&rsquo;s (2001) High-Reliability Organization framework provides structural grounding for this separation: the sensitivity-to-operations principle specifies that frontline observation must remain connected to decision authority through structural channels, not through vesting decision authority in the observer, because observation-adjacent authority concentrations produce blind spots that degrade organizational awareness.</p>
+
+    <p>The guardian role has three structural failure modes worth naming explicitly, because each requires a different architectural response. Guardian drift occurs when the guardian&rsquo;s own calibration against canonical standards degrades over time, causing their monitoring function to shift without awareness. This is the most structurally dangerous failure mode because it is self-concealing: a guardian experiencing calibration drift continues to surface signals, but the signals reflect the guardian&rsquo;s drifted reference standard rather than the canonical baseline. Throughput saturation occurs when the volume of interactions requiring monitoring exceeds the guardian&rsquo;s attention capacity, producing incomplete coverage rather than calibration failure. This failure mode is at least partially visible: coverage gaps can be detected through audit if the monitoring scope is explicitly defined. False assurance occurs when the monitoring architecture produces the appearance of coverage without the substance: interactions are marked as monitored without genuine observational depth. The second-order verification requirement that SM-003 identifies, and that SM-011 (Delegated Coherence Monitoring) fully specifies, addresses guardian drift specifically: the monitoring function itself must be periodically verified against canonical standards to prevent the guardian&rsquo;s reference frame from becoming the de facto canonical baseline through accumulated drift.</p>
+
+    <p>The guardian architecture establishes institutional continuity rather than personal continuity. When a guardian leaves the organization or transitions to a different role, the monitoring function continues because it is embedded in a defined role with explicit scope, calibration standards, and reporting relationships rather than in an individual&rsquo;s personal knowledge of the interaction surface. This is the organizational continuity analog of what canon governance achieves for canonical knowledge: converting a function that would otherwise depend on specific individuals into a function that depends on institutional structure.</p>
+
+    <h2>8. Organizational Continuity Deployment Trajectory</h2>
+
+    <p>The topology defined in Sections 3 through 7 does not emerge fully formed in organizations deploying AI systems. It develops through a progression from simple to complex as organizational AI interaction matures and the structural requirements of continuity at scale become visible.</p>
+
+    <p>In early deployment, AI interaction is typically concentrated in a small number of use cases with limited cross-workflow propagation. Canon governance at this stage may be informal: a shared document, a consistent terminology, a single person who serves as the institutional memory for AI interaction decisions. Workflow embedding may be minimal: individual operators execute verification as a personal practice rather than a structural process requirement. This embedded stage is adequate for limited deployment. Its characteristic failure is not dramatic collapse but quiet local coherence masking early canon fragmentation: different teams developing locally consistent but globally incompatible interaction practices without awareness of the divergence.</p>
+
+    <p>As AI deployment expands across the organization, the informal structures that sustained early continuity become throughput-limited. Canon governance requires explicit versioning and authority mapping because informal consensus can no longer absorb the volume and diversity of canonical questions arising across the interaction surface. Workflow embedding becomes necessary because individual operator attention cannot cover every artifact propagating through the expanded workflow network. The coordination stage introduces these structural elements in response to visible continuity pressure, typically triggered by a cross-team project that surfaces the divergence that has been accumulating under informal coordination.</p>
+
+    <p>Full institutional embedding occurs when continuity topology is designed into organizational AI deployment from the outset rather than retrofitted after pressure reveals its absence. Canon governance, workflow embedding, authority structures, propagation controls, and delegated monitoring operate as designed features of the organizational AI architecture rather than accumulated responses to visible failures. This represents the maturity state toward which SM-003 architecture is designed to guide deployment, not because earlier stages are failures but because the structural conditions for continuity at scale require deliberate design rather than emergent convention.</p>
+
+    <p>The transitions between stages are not automatic, and this is architecturally significant. Organizations move from embedded to coordinated deployment when the informal structures of the embedded stage fail visibly, typically when a cross-team project surfaces a canon divergence that informal coordination cannot resolve, or when a verification failure produces a consequential error that backward tracing reveals was caused by absent structural controls. The transition is reactive rather than proactive in most cases, meaning it occurs after continuity has already degraded rather than before. Organizations that delay the coordinated transition past this threshold face a compounding problem: the informal bypass patterns that developed during the embedded stage have become entrenched, and entrenched bypasses resist the formal structures of the coordinated stage because those structures directly constrain behaviors that the bypass patterns normalized. Early transition (before visible failure forces it) is structurally easier because the informal patterns that would resist formalization have not yet stabilized. The institutional design stage faces an even stronger version of this dynamic: designing continuity architecture from the outset requires treating it as a risk management investment, structuring for failure modes that have not yet occurred. This depends on decision-makers accepting the pre-empirical argument that degradation is structurally expected without the topology, rather than waiting for empirical confirmation that it was needed. The deployment trajectory SM-003 describes is therefore not a descriptive account of how organizations actually progress but a normative account of how organizations should progress if they intend to avoid the compounding costs of reactive rather than proactive continuity architecture.</p>
+
+    <h2>9. Degradation Modes of Organizational Continuity</h2>
+
+    <p>Continuity architecture reduces but does not eliminate variance introduced by human actors, workflow pressure, and institutional dynamics. Organizational continuity may degrade under three qualitatively distinct modes.</p>
+
+    <p>The degradation modes describe the organizational behavioral conditions under which the topology operates; the failure modes specified in Sections 3 through 7 describe the specific architectural failures that occur when individual elements degrade. The relationship between these two frameworks is not one-to-one. Architectural failure modes can occur under any degradation mode: canon fragmentation can emerge through organizational complexity even under cooperative conditions, without any intentional noncompliance. The degradation mode modulates the frequency, velocity, and distribution of architectural failures. Under partial noncompliance, the workflow-level failure modes become predominant because bypass patterns specifically target workflow friction points: contaminated ingestion and constraint stripping concentrate where throughput pressure is highest. Under incentive hostility, the authority-level failure modes become predominant because the incentive structure directly attacks the governance architecture: escalation pathways are penalized, canon authority is contested, and the verification function is systematically undermined rather than informally bypassed.</p>
+
+    <p>Cooperative mode: Canon is respected, escalation is legitimate, checkpoints are followed. Continuity is stable. This is the operating condition for which the topology is designed and under which its preventive claims hold.</p>
+
+    <p>Partial noncompliance mode: Deadline pressure bypasses some verification checkpoints, shadow workflows emerge to accelerate throughput, escalation is underused because actors prefer informal resolution. Continuity persists locally but weakens globally. Drift accumulates, but not uniformly: as bypass patterns compound, the system approaches a structural threshold beyond which canon authority weakens nonlinearly and standard escalation pathways lose corrective force. The characteristic feature of this mode is that the organization retains the formal architecture of continuity while the behavioral substance of continuity erodes. This pattern is the organizational equivalent of what Meyer and Rowan (1977) termed structural decoupling: formal topological structures are maintained as signals of institutional legitimacy while actual operational practice diverges from them, driven by competing informal incentives that the topology cannot itself override. Early detection and intervention are structurally more effective than correction after bypass patterns have become entrenched, because entrenched bypass patterns create their own informal authority structures that compete with the designed topology.</p>
+
+    <p>Incentive hostility mode: Canon is systematically overridden, escalation is actively penalized, governance is bypassed as standard practice rather than exceptional deviation. Continuity fragments regardless of topology integrity. SM-003 does not claim resilience under sustained hostility conditions. Incentive-hostile environments require the adversarial dynamics architecture specified in SM-007, which addresses coherence-hostile dynamics that topology alone cannot contain.</p>
+
+    <p>These modes describe structural degradation behavior rather than empirical thresholds. The transition between modes is not discrete but progressive, and the partial noncompliance mode represents the most important operating range for governance intervention: the window in which the topology retains corrective force if activated, before bypass patterns compound past the point where standard escalation can recover canonical authority.</p>
+
+    <h2>10. Conclusion: SM-003 as Level-2 Continuity Topology</h2>
+
+    <p>SM-003 defines how continuity, originally established at individual interaction scale, becomes an institutional property. Canon governance, workflow embedding, authority structures, propagation control, and delegated monitoring together create the topology within which continuity can persist across distributed organizational AI interaction.</p>
+
+    <p>These five architectural elements are not independent features. They constitute an interdependent topology in which each element&rsquo;s effectiveness depends on the presence and integrity of the others. Canon governance without authority structure leaves canonical material intact but its interpretation ungoverned. Authority structure without escalation pathways leaves disputes unresolvable above the local level. Workflow embedding without propagation control leaves verification conducted but constraints uncommunicated across boundaries. Delegated monitoring without the authority structure to receive and adjudicate its signals produces observations that cannot become corrections. The topology degrades progressively rather than catastrophically: partial implementation provides partial continuity protection, but with structural vulnerabilities at each point where an architectural element is absent or degraded.</p>
+
+    <p>While all five elements are required for full continuity protection, the dependency structure is not symmetric. Canon governance is the foundational element: without it, authority structure has nothing to be authoritative about, workflow embedding has no reference standard to verify against, and monitoring has no canonical baseline for calibration. Authority and escalation are the second structural prerequisite: without them, disputes about canon interpretation and drift significance have no resolution pathway. The remaining three elements (workflow embedding, propagation control, and delegated monitoring) provide operational coverage that is proportional to the extent of their implementation. An organization implementing canon governance and authority structure without workflow embedding has a valid but manually dependent architecture. An organization implementing workflow embedding without canon governance has automated checkpoints with no reference standard: a condition that produces the false assurance failure mode rather than continuity protection.</p>
+
+    <p>Continuity at Level-2 is a system-level property of the network configuration. It does not reside in any individual actor or protocol execution. It resides in the structural configuration linking canon to workflows, workflows to artifacts, artifacts to propagation pathways, and drift detection to authority restoration. SM-021 (Institutional Continuity Substrate) defines the persistence layer that makes this topology durable across the time horizons, personnel changes, and workflow evolutions that organizational life inevitably imposes. SM-003 establishes the topology. SM-021 ensures it endures. SI-WP-004 (Relational Alignment as a Structural Alternative to Instructional AI Safety) provides the argument for why the topology this document specifies matters. SI-WP-005 (Deploying Relational AI Architecture in Organizational Environments) translates this topology into deployment guidance.</p>
+
+    <p>SM-003 does not claim that organizations implementing this topology will necessarily achieve continuity persistence. It claims that without such topology, organizational continuity degradation is structurally expected, and that with it, persistence becomes structurally possible. Institutional continuity is the necessary intermediate layer between interaction-level coherence and higher-scale coordination. SM-003 establishes this Level-2 topology on which SM-021, SM-011 (Delegated Coherence Monitoring), SI-WP-002 (The Orchestrator Role), and subsequent institutional scaling work depend.</p>
+
+    <div class="dep-block">
+      <div class="dep-label">Document Dependencies</div>
+      <p><strong>Prerequisites:</strong> SF0005 (CAM), SF0037 (CVP), SF0038 (IVP), SF0039 (CRD), SR0001 (RICO)</p>
+      <p><strong>Enables:</strong> SM-021, SM-011, SM-006, SM-008, SI-WP-002</p>
+      <p><strong>Scale:</strong> Level 2 (primary), enables Level 3</p>
+      <p style="margin-bottom:0;"><strong>Note on SM-012:</strong> SM-012 (Primary Continuity Provider Theory) provides the formal PCP failure taxonomy that informs the organizational-scale PCP generalization in this document. SM-003 treats the PCP at the level of abstraction defined in SF0005. SM-012&rsquo;s extended failure analysis is available for organizations requiring deeper diagnostic specificity about PCP-level failure modes and their relationship to organizational continuity degradation.</p>
+    </div>
+
+    <h2>References</h2>
+
+    <ul class="ref-list">
+      <li>Gantz, T. W. (2026). The Continuity Anchoring Method (CAM): A Structured Methodology for Sustained Human-AI Interaction. Synthience Institute. SF0005. <a href="https://doi.org/10.5281/zenodo.19494453" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19494453</a></li>
+      <li>Gantz, T. W. (2025). Citation Verification Protocol (CVP): A Structured Method for Verifying AI-Generated Citations in Academic and Research Contexts. Synthience Institute. SF0037. <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18075624</a></li>
+      <li>Gantz, T. W. (2025). Ingestion Verification Protocol (IVP): A Structured Method for Verifying AI Document Processing Fidelity. Synthience Institute. SF0038. <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289047</a></li>
+      <li>Gantz, T. W. (2025). Context Representation Drift (CRD): Measuring and Managing Representational Divergence in Extended Human-AI Interaction. Synthience Institute. SF0039. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289391</a></li>
+      <li>Gantz, T. W. (2025). RICO: Relationally-Induced Coherence Organization. Synthience Institute. SR0001. <a href="https://doi.org/10.5281/zenodo.18086834" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18086834</a></li>
+      <li>Gantz, T. W. (2026). Institutional Continuity Substrate (ICS): Persistent Canon, Role, and Artifact State Across Organizational AI Interaction. Synthience Institute. SM-021. <a href="https://doi.org/10.5281/zenodo.19496241" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496241</a></li>
+      <li>Arrow, K. J. (1974). <em>The Limits of Organization.</em> W.W. Norton.</li>
+      <li>Argote, L. and Miron-Spektor, E. (2011). Organizational Learning: From Experience to Knowledge. <em>Organization Science</em>, 22(5), 1123&ndash;1137. <a href="https://doi.org/10.1287/orsc.1100.0621" target="_blank" rel="noopener">DOI: 10.1287/orsc.1100.0621</a>. Available at: <a href="https://pubsonline.informs.org/doi/10.1287/orsc.1100.0621" target="_blank" rel="noopener">https://pubsonline.informs.org/doi/10.1287/orsc.1100.0621</a></li>
+      <li>Galbraith, J. R. (1974). Organization Design: An Information Processing View. <em>Interfaces</em>, 4(3), 28&ndash;36. Available at: <a href="https://jaygalbraith.com/wp-content/uploads/2024/03/infoprocess1974.pdf" target="_blank" rel="noopener">https://jaygalbraith.com/wp-content/uploads/2024/03/infoprocess1974.pdf</a></li>
+      <li>Meyer, J. W. and Rowan, B. (1977). Institutionalized Organizations: Formal Structure as Myth and Ceremony. <em>American Journal of Sociology</em>, 83(2), 340&ndash;363.</li>
+      <li>Mintzberg, H. (1980). Structure in 5&rsquo;s: A Synthesis of the Research on Organization Design. <em>Management Science</em>, 26(3), 322&ndash;341.</li>
+      <li>Walsh, J. P. and Ungson, G. R. (1991). Organizational Memory. <em>Academy of Management Review</em>, 16(1), 57&ndash;91. <a href="https://doi.org/10.5465/amr.1991.4278992" target="_blank" rel="noopener">DOI: 10.5465/amr.1991.4278992</a>. Available at: <a href="https://journals.aom.org/doi/10.5465/amr.1991.4278992" target="_blank" rel="noopener">https://journals.aom.org/doi/10.5465/amr.1991.4278992</a></li>
+      <li>Weick, K. E. and Sutcliffe, K. M. (2001). <em>Managing the Unexpected: Resilient Performance in an Age of Uncertainty.</em> Jossey-Bass.</li>
+    </ul>
+
+  </div>
+
+  <div class="citation-block">
+    <div class="citation-label">Suggested Citation</div>
+    Gantz, T. W. (2026). Operational Continuity Architecture: Organizational Embedding of AI Alignment and Drift Governance (SM-003 v2.8). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.19496015" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496015</a>
+  </div>
+
+  
+    <div>
+  </div>
+
+</div>
+
+<div class="article-footer">
+<p>Document: SM-003 Mortar Series<br>
+Version: v2.8<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: April 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</div>
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+</body>
+</html>
