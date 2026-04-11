@@ -211,9 +211,9 @@ Each published document is assigned a persistent DOI upon release. Documents mar
 
 <div class="doc-toggle">
   <span style="font-size:0.85rem;color:#666;">View:</span>
-  <button id="btn-type" class="active" onclick="showView('type')">By Type</button>
+  <button id="btn-type" onclick="showView('type')">By Type</button>
   <button id="btn-alpha" onclick="showView('alpha')">Alphabetical</button>
-  <button id="btn-pub" onclick="showView('pub')">Published</button>
+  <button id="btn-pub" class="active" onclick="showView('pub')">Published</button>
 </div>
 
 <div id="doc-container"></div>
@@ -272,7 +272,7 @@ var typeDefs = [
 ];
 
 // === STATE ===
-var activeResearchView = sessionStorage.getItem("synthience-doc-view") || "type";
+var activeResearchView = sessionStorage.getItem("synthience-doc-view") || "pub";
 var searchTerm = "";
 var searchTimeout = null;
 var collapsedSections = {};
@@ -368,6 +368,11 @@ function renderDocs() {
 
   } else if (activeResearchView === "pub") {
     var pubDocs = filtered.filter(function(d) { return d.status === "published"; });
+    pubDocs.sort(function(a, b) {
+      var da = a.date ? new Date(a.date) : new Date(0);
+      var db = b.date ? new Date(b.date) : new Date(0);
+      return db - da;
+    });
     if (pubDocs.length === 0) {
       container.innerHTML = '<p class="empty-state">No published documents match the search.</p>';
     } else {
