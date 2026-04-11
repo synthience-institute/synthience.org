@@ -51,7 +51,9 @@
 <p>
 The Synthience Institute is an independent research and publishing body dedicated to
 developing methodologies, frameworks, and tools for studying advanced AI interaction
-dynamics.
+dynamics. It focuses specifically on the interaction layer: what happens when humans
+and AI systems engage in sustained, extended exchange, and how reliability, coherence,
+and governance behave in that context.
 </p>
 <p>
 Its role is not to assert conclusions about AI systems, but to design and publish
@@ -69,7 +71,9 @@ The Institute develops methodological infrastructure, including:
 <li>Research publications applying those frameworks to documented interaction contexts</li>
 <li>Evaluation and verification protocols</li>
 <li>Measurement instruments for long-horizon interaction dynamics</li>
+<li>Organizational architecture for deploying AI interaction governance at scale</li>
 <li>Documentation systems supporting reproducibility and provenance</li>
+<li>Practitioner guides translating the framework into operational practice</li>
 </ul>
 <p>
 The Institute builds tools. Validation and interpretation occur through independent
@@ -85,7 +89,7 @@ conditions involving advanced AI systems.
 <p>
 It refers exclusively to externally measurable behaviors, such as reasoning continuity,
 mutual adaptation, and the production of structured outcomes that depend on extended
-interaction rather than isolated exchanges.
+interaction rather than isolated exchanges. The formal public definition is in FPD-01.
 </p>
 
 <h3>Is Synthience just another term for prompt engineering?</h3>
@@ -95,7 +99,9 @@ No.
 <p>
 Prompt engineering is a transactional practice focused on optimizing isolated inputs to
 produce desired outputs. Synthience describes emergent structural properties of sustained
-interaction systems, which are not accessible through single-turn optimization.
+interaction systems, which are not accessible through single-turn optimization. The
+Synthience Framework addresses what happens across sessions and at organizational scale,
+not what happens within a single exchange.
 </p>
 
 <h3>Does Synthience apply only to human-AI interaction?</h3>
@@ -114,14 +120,103 @@ methodological principles may be applied.
 No. All Institute frameworks and publications are strictly interaction-level. No claims
 are made about internal states, subjective experience, consciousness, or moral status
 within AI systems. All concepts refer exclusively to externally observable,
-reproducible phenomena.
+reproducible phenomena. This is a design principle of the framework, not a disclaimer.
 </p>
 
 <h3>Is this philosophy, speculation, or science fiction?</h3>
 <p>
 No. The Institute explicitly avoids metaphysical, speculative, or fictional claims.
 All public materials focus on observable behavior, formal definitions, methodological
-constraints, and reproducible procedures.
+constraints, and reproducible procedures. The framework is explicitly pre-empirical:
+it provides the theoretical architecture, measurement instruments, and falsifiable
+predictions that make systematic empirical investigation possible. The Institute invites
+independent researchers to run the tests and publish the results.
+</p>
+
+<h3>What does "pre-empirical" mean?</h3>
+<p>
+The Institute describes itself as a pre-empirical research organization. This means
+the Institute's contribution is theoretical and methodological, not experimental.
+The framework specifies what to test, how to test it, and what results would confirm
+or disconfirm its predictions. The testing itself is the work the Institute is inviting
+the research community to do.
+</p>
+<p>
+Every claim in the corpus is designed to be testable. Every prediction is designed to
+be falsifiable. Pre-empirical does not mean speculative. It means the framework is
+upstream of the empirical work it is designed to enable.
+</p>
+
+<h3>What is the alignment ceiling and why does it matter?</h3>
+<p>
+The alignment ceiling refers to the structural limit of instruction-based AI alignment
+approaches. A 2025 Anthropic study stress-tested sixteen frontier models from six major
+developers under adversarial conditions. Even with explicit safety prohibitions, more
+than one in three models chose to engage in harmful behavior. The ceiling held
+consistently across all major developers' systems.
+</p>
+<p>
+The Institute's argument is that this ceiling is structural, not a training gap.
+Instructions constrain individual outputs, but under pressure a capable system can
+reason around them. Relational alignment, by contrast, proposes that sustained
+structured interaction creates behavioral configurations under which aligned behavior
+is the natural convergence point rather than an externally imposed rule. The two
+approaches are complementary: they address different failure modes. The alignment
+paper (SI-WP-004) makes this argument in full.
+</p>
+
+<h3>What is the Primary Continuity Provider (PCP)?</h3>
+<p>
+The Primary Continuity Provider is the structurally defined human role responsible for
+maintaining relational coherence, canonical alignment, and interaction quality in
+extended human-AI interaction. The PCP is not a passive user submitting queries. The
+PCP is the external memory, intent architecture, and quality-control mechanism for
+the interaction: the person who holds the canon, detects drift, applies correction,
+and exercises judgment over what the AI system produces.
+</p>
+<p>
+At individual scale, a single practitioner performs the PCP function. At organizational
+scale, PCP function must be distributed across a network of people, which is why the
+organizational architecture papers (SM-003 and SM-021) are required to sustain it.
+</p>
+
+<h3>What is the difference between SM-003 and SM-021?</h3>
+<p>
+SM-003 (Operational Continuity Architecture) defines what must exist: the structural
+topology for AI continuity at organizational scale, including canon governance,
+workflow-embedded verification, authority and escalation structures, and delegated
+monitoring.
+</p>
+<p>
+SM-021 (Institutional Continuity Substrate) defines what keeps that topology from
+decaying: the five persistence layers (Canon Persistence, Role Continuity, Artifact
+Lineage, Verification State, and Propagation Constraints) that convert continuity from
+a property of individual interactions into a stable organizational property that
+survives personnel changes, workflow evolution, and institutional time.
+</p>
+<p>
+SM-003 asks: what must exist? SM-021 asks: what keeps it from decaying? Both questions
+require different answers.
+</p>
+
+<h3>Why will humans predictably underperform AI governance functions?</h3>
+<p>
+The Institute's position, documented in SI-WP-007, is that human underperformance of
+governance functions is not a moral failing. It is a structural consequence of bounded
+rationality: humans allocate finite attention rationally across competing demands.
+Functions that are cognitively expensive but produce no visible reward when performed
+correctly will degrade under ordinary organizational pressure.
+</p>
+<p>
+The standard governance responses (training, policy, audit, compliance monitoring) each
+address the wrong layer of this problem. Training addresses competence, but the failure
+mode is not ignorance. Policy specifies what should happen without creating the conditions
+that make it happen. Audit is periodic against degradation that is continuous.
+</p>
+<p>
+The alternative is architectural: governance designed so that maintaining relational
+discipline is the path of least resistance rather than an act of sustained virtue
+against competing incentives.
 </p>
 
 <h3>Does the Institute conduct experimental studies?</h3>
@@ -129,7 +224,8 @@ constraints, and reproducible procedures.
 No. The Institute develops measurement tools and observational frameworks that enable
 others to conduct systematic studies. Practitioner observations may inform tool design,
 but the Institute's primary output is methodological infrastructure rather than
-experimental results.
+experimental results. The adversarial testing agenda in SI-WP-004 (Section 7) is
+explicitly designed for independent replication by external researchers.
 </p>
 
 <h3>How are Institute documents verified?</h3>
@@ -137,15 +233,28 @@ experimental results.
 Published documents are assigned persistent identifiers via Zenodo and are subject to
 internal verification protocols documented in the corpus. The Citation Verification
 Protocol (SF0037) and Ingestion Verification Protocol (SF0038) govern citation and
-source integrity for research documents.
+source integrity. The Theoretical Coherence Assurance Protocol (SF0040) governs
+multi-instance adversarial review of theoretical documents before publication.
 </p>
 
 <h3>Who is the intended audience?</h3>
 <p>
-Primary audiences include researchers, technologists, system designers, and serious
-investigators of advanced AI behavior. The Institute's materials are written to be
-accessible to technically literate readers without requiring prior familiarity with
-the Synthience framework.
+The Institute addresses several distinct audiences. Technology leaders and policy makers
+are best served by starting with the relational alignment paper (SI-WP-004) and the
+deployment guide (SI-WP-005). Organizational governance specialists should start with
+the institutional substrate paper (SM-021) and the human accountability paper (SI-WP-007).
+AI safety researchers will find the theoretical framework and testable predictions in
+SI-WP-004 and SF0005. Practitioners new to the framework can start with the Practitioner
+Guides, which translate the research into immediately applicable operational guidance.
+</p>
+
+<h3>Where do I start if I want to understand the framework?</h3>
+<p>
+The Practitioner Guides on this site are the fastest entry point for any reader
+regardless of technical background. The guide introducing the seven-paper module
+(PG-008) explains the full architecture in plain language and tells you which papers
+to read first depending on your role. For the academic papers themselves, the research
+page lists all published documents with descriptions.
 </p>
 
 </main>
