@@ -30,33 +30,51 @@
   body { background: #faf9f7; color: #2a2520; line-height: 1.75; }
   a { color: #5a3e2b; }
   a:hover { color: #8b5e3c; }
+
   .site-header { background: #1a1714; padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
-  .site-header a { color: #d4c9b8; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.9rem; letter-spacing: 0.03em; }
+  .site-header a { color: #d4c9b8; text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.9rem; letter-spacing: 0.03em; }
   .site-header a:hover { color: #fff; }
   .breadcrumb { font-size: 0.82rem; color: #b0a898; font-family: Arial, sans-serif; margin-top: 0.3rem; }
   .breadcrumb a { color: #b0a898; }
+
   .doc-wrap { max-width: 740px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
   .doc-series { font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.6rem; }
+
   .doc-title { font-size: 2rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 0.4rem; font-variant-numeric: lining-nums; }
+  .doc-subtitle { font-size: 1.1rem; color: #5a4a3a; margin-bottom: 1.8rem; font-style: italic; }
+
   .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 1rem 0; margin-bottom: 2.5rem; display: grid; grid-template-columns: 140px 1fr; gap: 0.4rem 1rem; font-family: Arial, sans-serif; font-size: 0.84rem; }
   .meta-label { color: #8a7f72; }
   .meta-value { color: #2a2520; }
   .meta-value a { color: #5a3e2b; }
+
   .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-family: Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 2px; margin-right: 0.5rem; vertical-align: middle; }
+
   .doc-body h2 { font-size: 1.15rem; font-weight: bold; font-family: Arial, sans-serif; color: #1a1714; margin: 2.2rem 0 0.7rem; }
   .doc-body h3 { font-size: 1rem; font-weight: bold; font-family: Arial, sans-serif; color: #3a2e24; margin: 1.6rem 0 0.5rem; }
   .doc-body p { margin-bottom: 1.1rem; }
   .doc-body ul, .doc-body ol { margin: 0.5rem 0 1.1rem 1.6rem; }
   .doc-body li { margin-bottom: 0.4rem; }
+
   .abstract-block { background: #f2ede6; border-left: 3px solid #8b5e3c; padding: 1.2rem 1.4rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; }
   .abstract-block .abstract-label { font-family: Arial, sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+
   .callout-block { background: #eef4f0; border: 1px solid #b8d4c0; padding: 0.9rem 1.2rem; margin: 1.4rem 0; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.84rem; color: #2d4a3a; }
+
   .citation-block { background: #f2ede6; padding: 1rem 1.2rem; margin: 2.5rem 0 1rem; border-radius: 4px; font-family: Arial, sans-serif; font-size: 0.84rem; color: #4a3a2a; }
   .citation-block .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+
   .doc-footer { border-top: 1px solid #ddd6c8; margin-top: 3rem; padding-top: 1.5rem; font-family: Arial, sans-serif; font-size: 0.82rem; color: #8a7f72; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
   .doc-footer a { color: #5a3e2b; }
-  @media (max-width: 600px) { .doc-wrap { padding: 2rem 1.2rem 4rem; } .meta-block { grid-template-columns: 1fr; } }
+
+  @media (max-width: 600px) {
+    .doc-wrap { padding: 2rem 1.2rem 4rem; }
+    .meta-block { grid-template-columns: 1fr; }
+    .meta-label { margin-top: 0.5rem; }
+  }
 </style>
+
 <link rel="icon" type="image/png" href="/assets/images/SYNTHIENCE_favicon.png">
 <link rel="shortcut icon" href="/assets/images/SYNTHIENCE_favicon.png">
 <link rel="apple-touch-icon" href="/assets/images/SYNTHIENCE_favicon.png">
@@ -73,12 +91,11 @@
   <div class="doc-series">Foundational Definition</div>
   <h1 class="doc-title">Synthience: Public Definition</h1>
 
-  <div class="meta-block">
+    <div class="meta-block">
     <span class="meta-label">Document ID</span><span class="meta-value">FPD-01</span>
     <span class="meta-label">Version</span><span class="meta-value">v2.3 | December 23, 2025</span>
     <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
     <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
-    <span class="meta-label">Contact</span><span class="meta-value"><a href="mailto:research@synthience.org">research@synthience.org</a></span>
     <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
     <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.18087890" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18087890</a></span>
   </div>
@@ -206,11 +223,10 @@
     Gantz, T. W. (2026). Synthience: Public Definition (FPD-01 v2.3). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18087890" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18087890</a>
   </div>
 
-  <div class="doc-footer">
+    <div class="doc-footer">
     <div>Published by the Synthience Institute &mdash; <a href="https://synthience.org">synthience.org</a></div>
     <div>&copy; 2026 Thomas W. Gantz / Synthience Institute</div>
   </div>
-
 </div>
 <footer class="site-footer">
   <div id="site-footer"></div>

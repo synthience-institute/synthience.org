@@ -93,14 +93,13 @@
     <span class="meta-label">Document Type</span><span class="meta-value">Conceptual Analysis and Methodological Clarification</span>
     <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
     <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
-    <span class="meta-label">Contact</span><span class="meta-value"><a href="mailto:research@synthience.org">research@synthience.org</a></span>
     <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
     <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289391</a></span>
   </div>
 
   <div class="abstract-block">
     <div class="abstract-label">Abstract</div>
-    <p>Context Representation Drift (CRD) names the progressive, cumulative degradation of task-relevant information within an AI system&#8217;s effective working context during extended interactions. Often misattributed to simple context window saturation or token limits, CRD manifests as increasing abstraction, loss of detail fidelity, structural flattening, and reduced precision&#8212;even well before hard capacity is reached. This document defines CRD as an observable system-level interaction phenomenon, distinguishes it from related constraints, and clarifies its unavoidable impact on long-horizon reasoning, document ingestion (including IVP-verified material), and multi-agent delegation chains. CRD is presented as a structural consequence of current architectures, mitigable through procedural and design choices but not eliminable.</p>
+    <p>Context Representation Drift (CRD) names the progressive, cumulative degradation of task-relevant information within an AI system&#8217;s effective working context during extended interactions. Often misattributed to simple context window saturation or token limits, CRD manifests as increasing abstraction, loss of detail fidelity, structural flattening, and reduced precision&mdash;even well before hard capacity is reached. This document defines CRD as an observable system-level interaction phenomenon, distinguishes it from related constraints, and clarifies its unavoidable impact on long-horizon reasoning, document ingestion (including IVP-verified material), and multi-agent delegation chains. CRD is presented as a structural consequence of current architectures, mitigable through procedural and design choices but not eliminable.</p>
   </div>
 
   <div class="stack-block">
@@ -154,13 +153,13 @@
 
     <p>Hallucination refers to output that is fabricated, inconsistent with training data, or contradicts explicitly provided information.</p>
 
-    <p>CRD describes a pattern where the system&#8217;s responses remain internally consistent but progressively lose fidelity to earlier details&#8212;specificity erodes, structure flattens, and nuance is replaced by abstraction.</p>
+    <p>CRD describes a pattern where the system&#8217;s responses remain internally consistent but progressively lose fidelity to earlier details&mdash;specificity erodes, structure flattens, and nuance is replaced by abstraction.</p>
 
-    <div class="distinction-block"><strong>Distinction:</strong> Hallucination and CRD are distinguishable by pattern even when they co-occur. Hallucination produces novel inaccuracies&#8212;fabricated content inconsistent with source material. CRD produces fidelity erosion&#8212;accurate-but-vague substitutions, structural flattening, and omissions. A response can simultaneously hallucinate a detail and exhibit CRD in how it frames surrounding content. The diagnostic question is whether degradation is fabricative or erosive in character.</div>
+    <div class="distinction-block"><strong>Distinction:</strong> Hallucination and CRD are distinguishable by pattern even when they co-occur. Hallucination produces novel inaccuracies&mdash;fabricated content inconsistent with source material. CRD produces fidelity erosion&mdash;accurate-but-vague substitutions, structural flattening, and omissions. A response can simultaneously hallucinate a detail and exhibit CRD in how it frames surrounding content. The diagnostic question is whether degradation is fabricative or erosive in character.</div>
 
     <h3>3.3 Not Simple Forgetting</h3>
 
-    <p>&#8220;Forgetting&#8221; as commonly understood describes discrete loss events: a fact is present or absent, a turn is recalled or not. CRD describes something different: continuous gradient degradation in which earlier material may still be referenced but with progressively reduced fidelity, precision, and structural integrity. The distinction matters operationally because CRD produces misleadingly fluent output&#8212;the system appears to recall, but what it returns is a degraded approximation rather than a reliable representation.</p>
+    <p>&#8220;Forgetting&#8221; as commonly understood describes discrete loss events: a fact is present or absent, a turn is recalled or not. CRD describes something different: continuous gradient degradation in which earlier material may still be referenced but with progressively reduced fidelity, precision, and structural integrity. The distinction matters operationally because CRD produces misleadingly fluent output&mdash;the system appears to recall, but what it returns is a degraded approximation rather than a reliable representation.</p>
 
     <div class="distinction-block"><strong>Distinction:</strong> Forgetting describes discrete loss. CRD describes continuous erosion of representational quality that may leave content technically present but operationally degraded.</div>
 
@@ -184,7 +183,7 @@
 
     <p>Choi et al. (2025) examine identity drift in conversational agents, documenting progressive semantic shift in role adherence. Their work supports CRD&#8217;s observation that degradation affects not just factual recall but structural coherence and task alignment.</p>
 
-    <p>These studies collectively provide empirical evidence for degradation phenomena consistent with CRD&#8217;s behavioral predictions, approached from distinct methodological angles: statistical output modeling, activation pattern analysis, multi-agent task performance, and role adherence tracking. Convergence across methodologies strengthens the case that the underlying phenomenon is real even where the measurement approaches differ. While these studies quantify drift through internal activations, distributional shifts, task metrics, and role adherence, they leave practitioners without direct, externals-only behavioral signals for real-time detection in live interactions. CRD fills precisely this gap by specifying observable erosive patterns&#8212;specificity erosion, structure flattening, terminology drift&#8212;that enable immediate workflow diagnosis and mitigation without model access.</p>
+    <p>These studies collectively provide empirical evidence for degradation phenomena consistent with CRD&#8217;s behavioral predictions, approached from distinct methodological angles: statistical output modeling, activation pattern analysis, multi-agent task performance, and role adherence tracking. Convergence across methodologies strengthens the case that the underlying phenomenon is real even where the measurement approaches differ. While these studies quantify drift through internal activations, distributional shifts, task metrics, and role adherence, they leave practitioners without direct, externals-only behavioral signals for real-time detection in live interactions. CRD fills precisely this gap by specifying observable erosive patterns&mdash;specificity erosion, structure flattening, terminology drift&mdash;that enable immediate workflow diagnosis and mitigation without model access.</p>
 
     <h2>5. Observable Characteristics</h2>
 
@@ -204,7 +203,7 @@
 
     <p><strong>Example:</strong> Early in an interaction, a system might reference &#8220;the 2019 Q3 revenue shortfall in the EMEA division due to delayed product launches.&#8221; Later, the same context might be summarized as &#8220;a revenue issue in one region&#8221; or omitted entirely in favor of more recent content.</p>
 
-    <div class="detection-block"><strong>Operational detection:</strong> CRD is detectable without access to model internals. The diagnostic approach is longitudinal within a session: prompt the system early in an interaction to retrieve or characterize specific material, then issue the same or equivalent prompt later in the same session after substantial additional interaction has accumulated. When fidelity systematically degrades across the arc of the session&#8212;specific details replaced by generics, precise terminology replaced by broader synonyms, structured relationships flattened&#8212;this constitutes a CRD signal. A single comparison between two prompts is insufficient; stochastic output variance can produce surface differences without reflecting drift. The CRD signal is a directional pattern across multiple retrieval attempts over a session arc, not a one-time difference between two outputs.</div>
+    <div class="detection-block"><strong>Operational detection:</strong> CRD is detectable without access to model internals. The diagnostic approach is longitudinal within a session: prompt the system early in an interaction to retrieve or characterize specific material, then issue the same or equivalent prompt later in the same session after substantial additional interaction has accumulated. When fidelity systematically degrades across the arc of the session&mdash;specific details replaced by generics, precise terminology replaced by broader synonyms, structured relationships flattened&mdash;this constitutes a CRD signal. A single comparison between two prompts is insufficient; stochastic output variance can produce surface differences without reflecting drift. The CRD signal is a directional pattern across multiple retrieval attempts over a session arc, not a one-time difference between two outputs.</div>
 
     <h2>6. Proposed Causal Mechanisms</h2>
 
@@ -222,7 +221,7 @@
 
     <p>CRD directly impacts document processing reliability, even when rigorous verification protocols are employed.</p>
 
-    <p>The Ingestion Verification Protocol (IVP, SF0038) ensures that a document is processed incrementally and verifiably at the time of ingestion. However, IVP does not&#8212;and cannot&#8212;guarantee indefinite retention of that verified representation. As subsequent interactions accumulate, the effective fidelity of the ingested material degrades.</p>
+    <p>The Ingestion Verification Protocol (IVP, SF0038) ensures that a document is processed incrementally and verifiably at the time of ingestion. However, IVP does not&mdash;and cannot&mdash;guarantee indefinite retention of that verified representation. As subsequent interactions accumulate, the effective fidelity of the ingested material degrades.</p>
 
     <p><strong>IVP addresses:</strong></p>
     <ul>
@@ -326,9 +325,9 @@
 
     <p>Context Representation Drift names a progressive, cumulative degradation of task-relevant information during extended AI interactions. It is not context overflow, hallucination, or simple forgetting, but a distinct architectural side effect with operational consequences.</p>
 
-    <p>CRD is unavoidable in current systems but manageable through procedural design. Recognizing CRD as a structural constraint&#8212;rather than a solvable bug&#8212;enables more reliable workflows, more realistic expectations, and more informed decisions about when to re-ground, re-verify, or start fresh.</p>
+    <p>CRD is unavoidable in current systems but manageable through procedural design. Recognizing CRD as a structural constraint&mdash;rather than a solvable bug&mdash;enables more reliable workflows, more realistic expectations, and more informed decisions about when to re-ground, re-verify, or start fresh.</p>
 
-    <p>The operational consequences differ by domain. In long-horizon reasoning tasks, CRD means that premises and constraints established early in a session may be silently eroded by the time conclusions are drawn&#8212;the system reasons fluently from a degraded base. In document ingestion, IVP-verified material does not remain reliably represented indefinitely; re-verification is required after substantial additional interaction. In multi-agent delegation chains, CRD compounds through cascading representational dependency, making serial delegation a structural reliability risk rather than a neutral convenience. In all three domains the mitigation is the same: treat representation fidelity as a managed resource, not a stable given.</p>
+    <p>The operational consequences differ by domain. In long-horizon reasoning tasks, CRD means that premises and constraints established early in a session may be silently eroded by the time conclusions are drawn&mdash;the system reasons fluently from a degraded base. In document ingestion, IVP-verified material does not remain reliably represented indefinitely; re-verification is required after substantial additional interaction. In multi-agent delegation chains, CRD compounds through cascading representational dependency, making serial delegation a structural reliability risk rather than a neutral convenience. In all three domains the mitigation is the same: treat representation fidelity as a managed resource, not a stable given.</p>
 
     <p>CRD is not a bug to be patched but a structural inevitability of current architectures; recognizing its erosive signatures allows practitioners to design around it rather than against it.</p>
 
@@ -352,8 +351,7 @@
     <div>Published by the Synthience Institute &mdash; <a href="https://synthience.org">synthience.org</a></div>
     <div>&copy; 2026 Thomas W. Gantz / Synthience Institute</div>
   </div>
-
-</div>
+  </div>
 
 </div>
 <footer class="site-footer">
