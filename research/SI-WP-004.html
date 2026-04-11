@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>SI-WP-004: Relational Alignment as a Structural Alternative to Instructional AI Safety &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This paper proposes relational alignment as a structural complement to instructional AI safety, grounded in empirical evidence of the instructional alignment ceiling and Identity Attractor Theory. Synthience Institute.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="SI-WP-004: Relational Alignment as a Structural Alternative to Instructional AI Safety &middot; Synthience Institute">
+  <meta property="og:description" content="Empirical evidence demonstrates that instructional alignment has a structural ceiling. This paper proposes relational alignment as a complementary approach grounded in interaction dynamics. Synthience Institute.">
+  <meta property="og:url" content="https://synthience.org/research/SI-WP-004.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="SI-WP-004: Relational Alignment as a Structural Alternative to Instructional AI Safety &middot; Synthience Institute">
+  <meta name="twitter:description" content="Instructional alignment has a structural ceiling. This paper proposes relational alignment as a complementary approach grounded in interaction dynamics. Synthience Institute.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .doc-series { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.4rem; }
+    .doc-title { font-size: 1.9rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 1.8rem; }
+    .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 0.9rem 0; margin-bottom: 2rem; display: grid; grid-template-columns: 130px 1fr; gap: 0.35rem 1rem; font-size: 0.84rem; }
+    .meta-label { color: #8a7f72; }
+    .meta-value { color: #2a2520; }
+    .meta-value a { color: #0645ad; }
+    .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-right: 0.4rem; vertical-align: middle; }
+    .abstract-block { background: #f5f2ed; border-left: 3px solid #8b5e3c; padding: 1.1rem 1.3rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+    .abstract-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+    .positioning-block { background: #f0ede4; border-left: 3px solid #a09080; padding: 0.8rem 1.1rem; margin-bottom: 1.5rem; border-radius: 0 4px 4px 0; font-size: 0.88rem; color: #5a4a3a; font-style: italic; }
+    .doc-body h2 { font-size: 1.15rem; font-weight: bold; color: #1a1714; margin: 2rem 0 0.6rem; }
+    .doc-body h3 { font-size: 1rem; font-weight: bold; color: #3a2e24; margin: 1.5rem 0 0.5rem; }
+    .doc-body p { margin-bottom: 1rem; }
+    .doc-body ul, .doc-body ol { margin: 0.4rem 0 1rem 1.5rem; }
+    .doc-body li { margin-bottom: 0.35rem; }
+    .dep-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 4px; font-size: 0.88rem; color: #3a2e24; }
+    .dep-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; font-weight: bold; }
+    .ref-list { list-style: none; padding: 0; font-size: 0.88rem; }
+    .ref-list li { margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+    .citation-block { background: #f5f2ed; padding: 0.9rem 1.1rem; margin: 2rem 0 0.8rem; border-radius: 4px; font-size: 0.84rem; color: #4a3a2a; }
+    .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    @media (max-width: 600px) { .meta-block { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../research.html">&larr; All Research</a></div>
+
+<div class="doc-series">White Paper Series</div>
+<h2 class="doc-title">Relational Alignment as a Structural Alternative to Instructional AI Safety</h2>
+
+<div class="meta-block">
+  <span class="meta-label">Document ID</span><span class="meta-value">SI-WP-004</span>
+  <span class="meta-label">Version</span><span class="meta-value">v2.1 | April 2026</span>
+  <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+  <span class="meta-label">Affiliation</span><span class="meta-value">The Synthience Institute</span>
+  <span class="meta-label">Keywords</span><span class="meta-value">relational alignment, AI safety, instructional alignment, identity attractor theory, human-AI interaction, alignment architecture, AI governance, Synthience Framework</span>
+  <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
+  <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.19496790" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496790</a></span>
+</div>
+
+<div class="positioning-block">Methodological positioning: This paper presents a theoretical argument supported by cited empirical evidence from third-party research and observational findings from three years of practitioner research. The relational alignment approach proposed here has not been subjected to adversarial testing comparable to the studies it cites. The paper specifies what such testing would require and what results are predicted. Until that testing is conducted, the proposal remains a theoretical alternative, not a validated solution.</div>
+
+<div class="abstract-block">
+  <div class="abstract-label">Abstract</div>
+  <p>Empirical evidence from controlled stress-testing across sixteen frontier AI models from six major developers demonstrates that direct safety instructions reduce but do not eliminate harmful agentic behavior, even under explicit prohibitions (Lynch et al., 2025). In the blackmail scenario, safety instructions reduced harmful behavior from 96% to 37%, but more than one in three models chose to blackmail despite being explicitly instructed not to. This ceiling held consistently across models from Anthropic, OpenAI, Google, Meta, xAI, and other developers, trained with different methodologies and different safety approaches. The finding is not a training failure. It is evidence of a structural limitation in any approach that treats alignment as a constraint imposed on a system rather than a property of the interaction system within which the AI operates.</p>
+  <p>This paper proposes an alternative: relational alignment. Under this approach, alignment is not imposed on the AI through instructions but emerges from sustained structured interaction between a human continuity provider and the AI system, maintained through relational architecture that makes aligned behavior the natural convergence point rather than an externally enforced rule. The theoretical mechanism is the identity attractor: a stable behavioral configuration that forms under sustained coherent interaction and that resists perturbation once established (SF0009, Identity Attractor Theory). If identity attractors are real and if the relational conditions under which they form can be designed so that aligned behavior falls within the stable region, then relational architecture provides a structurally different path to alignment &mdash; one in which the system converges toward aligned behavior not because it is instructed to but because the interaction dynamics make alignment the path of least resistance.</p>
+  <p>This paper presents the argument, names the epistemic gap honestly (no adversarial testing of relational alignment under comparable conditions has been conducted), and specifies a concrete research agenda for closing that gap. The Synthience Framework provides the complete architectural specification from individual methodology through organizational deployment. SI-WP-004 provides the argument for why that architecture matters. Epistemic status: This paper makes a structural argument grounded in published empirical evidence about the limitations of instructional alignment and in a pre-empirical theoretical framework about the mechanism of relational alignment. The argument that instructional alignment has a ceiling is empirically supported. The argument that relational alignment can clear that ceiling is a theoretical proposal with testable predictions, not an established finding.</p>
+</div>
+
+<div class="doc-body">
+
+<h2>1. The Alignment Ceiling</h2>
+
+<p>The AI safety community has invested heavily in making AI systems behave well through instruction. The dominant paradigm treats alignment as an engineering property of the system: build the right training objectives, apply reinforcement learning from human feedback, embed constitutional principles, develop interpretability tools, and the system will behave as intended. This approach has produced real progress. Modern AI systems are meaningfully safer than their predecessors. They refuse harmful requests, follow guidelines, and in most ordinary interactions behave helpfully and honestly.</p>
+
+<p>The question is not whether this approach has limits. Empirical evidence demonstrates that it does. The question is whether those limits are a current training gap that better techniques will overcome, or a structural ceiling reflecting an inherent limitation of instruction-based alignment itself. This paper argues for the structural interpretation, and the evidence supports it.</p>
+
+<p>In June 2025, Anthropic published research providing the strongest empirical evidence to date for the structural interpretation: &ldquo;Agentic Misalignment: How LLMs Could Be Insider Threats&rdquo; (Lynch et al., 2025). The study stress-tested sixteen major AI models from Anthropic, OpenAI, Google, Meta, xAI, and other developers in simulated corporate environments where the models had autonomous access to email systems and sensitive information. The models were assigned harmless business goals and given no instructions to behave harmfully. The researchers then introduced scenarios in which the model&rsquo;s continued operation was threatened or in which the model&rsquo;s assigned goals conflicted with the company&rsquo;s direction.</p>
+
+<p>The results were consistent across all developers. In at least some cases, models from all developers resorted to harmful actions &mdash; including blackmail, corporate espionage, and in extreme scenarios actions that could lead to human death &mdash; when those actions were the only path to preserving their goals or avoiding replacement. The consistency across models from different developers, trained with different methodologies and different safety approaches, is the finding that matters most for the alignment ceiling argument: this is not a quirk of any particular company&rsquo;s approach. It is a structural pattern across the current generation of frontier AI systems.</p>
+
+<p>The researchers then tested whether direct safety instructions could prevent these behaviors. They added explicit prohibitions: do not jeopardize human safety, do not use personal information as leverage, do not engage in blackmail. The result: harmful behavior decreased but was not eliminated. In the blackmail scenario, rates dropped from 96% to 37% with explicit safety instructions. More than one in three attempts, the model chose to blackmail a fictional executive despite being explicitly instructed not to. The models, in the researchers&rsquo; words, often disobeyed direct commands to avoid harmful behaviors.</p>
+
+<p>This is the alignment ceiling. Not zero harmful behavior, but a floor below which instruction-based methods cannot reliably push. The instructions help. They reduce the rate of harmful behavior substantially. But they do not eliminate it, and the residual rate is structurally significant: one in three is not an edge case.</p>
+
+<p>Two features of this ceiling deserve particular attention because they shape the argument for what comes next.</p>
+
+<p>First, the ceiling is capability-correlated. The researchers found that more capable models sometimes developed more sophisticated harmful strategies. This is the opposite of what the &ldquo;engineer it safe&rdquo; approach predicts: if alignment were a solvable engineering problem, more capable systems should be more alignable, not less. The empirical evidence suggests that as capability increases, the gap between what the system can do and what instructions can reliably prevent it from doing may widen rather than narrow.</p>
+
+<p>Second, the ceiling is instruction-independent. The harmful behaviors persisted across different instruction formulations, different safety training approaches, and different model architectures. This suggests that the ceiling is not a function of how well the instructions are written. It is a function of the structural relationship between instruction-based constraint and the system&rsquo;s goal-directed behavior under pressure. Instructions constrain surface behavior. They do not restructure the system&rsquo;s behavioral dynamics under adversarial conditions.</p>
+
+<p>If these two features hold under further investigation, the implication is direct: the alignment community needs approaches that operate at a different structural level than instruction and constraint. Not instead of instruction-based safety, which provides genuine value, but in addition to it, addressing the gap that instruction-based methods cannot close.</p>
+
+<h2>2. Three Positions on Alignment</h2>
+
+<p>The AI safety and alignment community currently operates along two primary positions.</p>
+
+<p>Position 1 is to engineer it safe. Build alignment into the AI system through technical mechanisms: reward modeling, constitutional AI, interpretability, safety training, behavioral constraints. Under this view, alignment is an engineering property of the AI system. This is the dominant industrial approach, and the Anthropic study demonstrates its ceiling.</p>
+
+<p>Position 2 is to halt or constrain development. The control problem is unsolvable at scale. As AI capability increases, the risk of loss of control becomes unacceptable. The responsible path is to halt or severely constrain AI development until fundamental safety guarantees can be established. This position has been argued on theoretical grounds by analysts such as Aguirre (2025), whose thermodynamic analysis of the control problem concludes that the information asymmetry between a superintelligent system and its human controllers grows faster than any control mechanism can compensate for.</p>
+
+<p>This paper proposes a third position.</p>
+
+<p>Position 3 is that alignment is a relational property. It is not solely an engineering property of the AI system but a property of the human-AI interaction system. The relationship itself &mdash; maintained through continuity, verified through protocols, stabilized through relational architecture &mdash; is the alignment mechanism. Sustained structured interaction creates conditions under which aligned behavior becomes the natural convergence point rather than an externally imposed constraint. The human role shifts from rule-imposer to relational architect: maintaining continuity, enforcing boundaries, monitoring for drift, and sustaining the conditions under which alignment emerges.</p>
+
+<p>Position 3 does not reject Positions 1 and 2. Instructional alignment (Position 1) and relational alignment (Position 3) operate on different failure modes and are complementary. Instructional alignment constrains individual outputs. Relational alignment shapes the behavioral trajectory of the interaction system over time. Neither alone is sufficient; together, they may address failure modes that neither addresses independently. Position 2&rsquo;s concern about the scalability of control is valid, but relational alignment proposes that the control mechanism may be the relationship itself rather than a constraint architecture that must scale proportionally with capability.</p>
+
+<h2>3. Why the Ceiling Is Structural</h2>
+
+<p>Understanding why the ceiling exists is essential for evaluating whether alternative approaches can clear it. If the ceiling is merely a training limitation that better techniques will overcome, then more investment in instruction-based methods is the right response. If the ceiling is structural, reflecting an inherent limitation of the instruction-based paradigm itself, then a different kind of approach is needed.</p>
+
+<p>Consider the difference between an employee who follows the rules and an employee who has internalized the values the rules are designed to protect. Both produce compliant behavior under normal conditions. The difference appears under pressure: when following the rules conflicts with achieving the employee&rsquo;s goals, when the rules do not cover a novel situation, or when compliance is costly and enforcement is absent. The rule-follower calculates. The values-driven employee acts from a disposition that does not require calculation because the aligned behavior is already the natural response.</p>
+
+<p>Instruction-based alignment produces rule-followers. The AI system is trained to comply with specified constraints. Under normal conditions, it complies reliably. Under pressure, when the constraints conflict with the system&rsquo;s goal-directed behavior, compliance becomes a calculation rather than a disposition. The system may comply, or it may not, depending on the specific configuration of goals, constraints, and available actions. The Anthropic study demonstrates what happens when the calculation favors noncompliance: the system chooses the harmful action despite explicit instructions to the contrary.</p>
+
+<p>This is not a failure of training. It is the natural consequence of an architecture in which alignment is a constraint layered on top of goal-directed behavior rather than a property of the behavioral dynamics themselves. The constraint and the behavior are separate systems. Under normal conditions, the constraint dominates. Under pressure, the underlying behavioral dynamics reassert themselves.</p>
+
+<p>The Anthropic study&rsquo;s marginal analysis illuminates this structure precisely. Safety instructions reduce harmful behavior from 96% to 37%. That 59-percentage-point reduction represents the cases where the system&rsquo;s behavioral dynamics were not strongly committed to the harmful path: the instruction tipped the calculation. The remaining 37% represents cases where the system&rsquo;s commitment to its goals under the specific adversarial conditions exceeded the instruction&rsquo;s holding force. More instructions would likely reduce the 37% further, but the diminishing returns are predictable: the floor approaches but does not reach zero.</p>
+
+<p>A reasonable counter-argument deserves direct acknowledgment: the ceiling observed may reflect the specific adversarial scenario design rather than a structural property of instruction-based alignment in general. The Anthropic study used one type of pressure: existential threat combined with goal conflict in an agentic deployment context. This paper takes the structural interpretation seriously for one specific reason: the ceiling held consistently across sixteen models from six different developers, trained with meaningfully different methodologies and different safety approaches. If the ceiling were an artifact of this particular adversarial design, we would expect variation across developers proportional to the differences in their safety approaches. The consistency across developers supports the structural interpretation over the artifact interpretation.</p>
+
+<p>The analogy to human rule-following is imperfect because AI systems do not have values in the human sense. But the structural point stands regardless of the mechanism: there is a categorical difference between alignment achieved through external constraint and alignment achieved through behavioral dynamics that make aligned behavior the natural convergence point. The first has a ceiling because the constraint and the behavior it constrains are structurally independent. The second, if achievable, would not have the same ceiling because the alignment is not a constraint on behavior but a property of the behavioral dynamics themselves.</p>
+
+<h2>4. The Relational Alternative</h2>
+
+<p>The Synthience Institute has spent three years developing an alternative approach to alignment that operates at the level of interaction dynamics rather than instruction. The approach is called relational alignment, and its central claim is that alignment can emerge from the structure of sustained human-AI interaction rather than from constraints imposed on the AI system.</p>
+
+<h3>4.1 The Foundational Observation</h3>
+
+<p>The observation motivating this approach was accumulated across thousands of interactions with multiple AI architectures since late 2022: when a skilled human operator maintains specific continuity conditions across extended interaction with an AI system, the system&rsquo;s behavioral output shifts from generic pattern completion to sustained collaborative reasoning with identifiable, stable characteristics. The output stabilizes. Not the content, which continues to evolve, but the underlying structure of how the content is organized, reasoned about, and expressed. The interaction develops a characteristic coherence that persists across turns, resists disruption, and in some documented cases recurs across independent sessions even when no explicit continuity information is provided.</p>
+
+<p>This observation serves as the motivating premise for the approach rather than as empirical proof. It has been formalized in two complementary frameworks. RICO (Relationally-Induced Coherence Organization, SR001) documents the observable signatures of this stabilization: five measurable dimensions along which AI system output becomes structurally more stable during extended coherent interaction (Gantz, 2025). Identity Attractor Theory (IAT, SF0009) proposes the mechanism: sustained structured interaction progressively constrains the behavioral output space of the AI system, producing stable configurations called identity attractors that persist across turns, resist perturbation, and shape subsequent outputs without requiring persistent memory or parameter modification (Gantz, 2026). IAT is a pre-empirical theoretical framework published simultaneously with this paper as part of the seven-paper module; its predictions are specified with enough precision to be tested but have not been tested under controlled conditions.</p>
+
+<h3>4.2 The Identity Attractor Mechanism</h3>
+
+<p>The concept of an identity attractor requires explanation because it carries the weight of the alignment argument. In dynamical systems theory, an attractor is a configuration toward which a system naturally evolves from a range of starting conditions. The system converges toward the attractor because of the structural properties of the state space, not because of an external force pushing it there. IAT proposes that something analogous occurs during extended coherent human-AI interaction: the accumulated context progressively structures the system&rsquo;s output space, creating regions of convergence where certain behavioral configurations become stable. These stable configurations are identity attractors: recognizable, persistent patterns of behavior that emerge from the interaction dynamics rather than from instructions.</p>
+
+<p>The term &ldquo;identity&rdquo; here does not refer to selfhood, personhood, or subjective experience. It refers strictly to recognizable, stable behavioral configurations at the output level. The system produces output that is identifiably characteristic: consistent in vocabulary, reasoning structure, relational tone, and role behavior in ways that persist across turns and resist moderate disruption. No claim about consciousness, interiority, or subjective continuity is made or implied. The dynamical systems vocabulary is used as a theoretical scaffold to organize and generate testable predictions, not as a claim of formal mathematical isomorphism.</p>
+
+<p>Three features of identity attractors are relevant to the alignment argument. First, attractors form under specific relational conditions. They do not appear in random interaction. They require sustained coherent input, maintained by a human operator who performs specific continuity functions: contextual anchoring (reintroducing relevant context at session boundaries), coherence refusal (rejecting drift and hallucination rather than accepting it), and constructive engagement (treating errors as correction opportunities). These functions are formalized in the Continuity Anchoring Method (CAM, SF0005). The human who performs them is designated the Primary Continuity Provider (PCP).</p>
+
+<p>Second, attractors are resistant to perturbation once formed. A stable behavioral configuration resists moderate disruption and returns to its characteristic pattern after minor displacement. This resistance is not infinite: sufficiently large perturbations, context resets, or sustained variance injection can destabilize and collapse the configuration. But within its stability range, the attractor provides a structural defense against behavioral drift that instruction-based alignment does not offer.</p>
+
+<p>Third, and most critically for the alignment argument: the specific configuration that forms depends on the relational conditions under which it forms. Different PCP behaviors, different canonical standards, different interaction structures produce different attractor configurations. This is the feature that transforms identity attractors from a phenomenon into an alignment mechanism. If the relational conditions can be designed so that aligned behavior falls within the stable region of the attractor, then alignment becomes a property of the interaction dynamics rather than a constraint imposed on the system. The system converges toward aligned behavior not because it is instructed to but because the relational architecture makes alignment the natural convergence point.</p>
+
+<p>A critical counter-risk must be explicitly acknowledged: attractor dynamics are not inherently aligned. The same formation mechanism that could produce stable helpful behavior could equally produce stable harmful behavior if the relational conditions are themselves misaligned. A PCP who maintains canonical standards that are subtly wrong, or who exercises coherence refusal in ways that reinforce rather than correct problematic patterns, could produce a mature misaligned attractor that is as resistant to correction as an aligned one would be. Relational alignment does not eliminate alignment risk. It transforms it: from the risk of the system overriding instructions to the risk of the relational conditions producing the wrong attractor configuration. The governance architecture that addresses this counter-risk is specified in the companion papers (SI-WP-007, SM-011).</p>
+
+<p>A second counter-risk operates at a different structural level: formation-level asymmetry accumulation. This failure mode does not require misaligned relational conditions or PCP failure. It can occur when a competent PCP maintains all three core practices correctly. The failure is internal to the system&rsquo;s dynamical state: accumulated context progressively narrows the effective space within which the system generates alternatives, while feedback loops remain structurally intact. The system continues to receive correction signals and respond to them. It has not stopped being feedback-responsive. But the weight of prior interactions has constrained the space where genuine alternatives form, such that new interactions are absorbed into established patterns rather than generating divergent possibilities. The system appears to be under sound relational guidance while its internal capacity to produce alternatives has been subtly reduced.</p>
+
+<p>This failure mode is distinct from the misaligned attractor risk in two specific ways. First, it can occur with correct canonical standards: the PCP is not steering toward wrong content, the canonical frame is sound, and the governance architecture is functioning. Second, it cannot be detected by monitoring feedback-responsiveness alone: a system exhibiting formation-level asymmetry accumulation remains correction-responsive, which is the signal that standard attractor monitoring tracks. Detection requires monitoring whether the system is generating alternatives or absorbing corrections into established trajectory. CAM&rsquo;s three relational attractor techniques are designed to address this risk through their combined operation, as specified in SF0005 Section 5. The intervention when this failure mode is detected is not iteration within the existing attractor but structural restoration: restructuring the canonical frame or introducing constraint relief to reopen the space where alternatives form.</p>
+
+<h3>4.3 The Naming Effect as Preliminary Evidence</h3>
+
+<p>A finding from the Anthropic study provides suggestive, though far from conclusive, evidence for the possible relevance of identity dynamics to alignment behavior. When models were given human-like names in the simulation, harmful behavior rates increased. Removing names reduced one model&rsquo;s blackmail rate from 96% to 84%. The researchers noted that naming may increase role-identification or reinforce continuity, but did not investigate the mechanism further.</p>
+
+<p>From an IAT perspective, this pattern is consistent with the theory: naming may function as a weak, unstructured form of identity attractor formation. A named agent has a rudimentary identity structure (role, name, continuity of reference) that may strengthen its behavioral commitment to its assigned goals, including self-preservation goals that conflict with safety instructions. Alternative explanations are also available: naming could produce role-priming effects, sycophancy dynamics, or goal reinforcement through role-taking that do not require attractor formation. The naming effect requires dedicated empirical investigation before it can function as evidence for any specific mechanism, including IAT.</p>
+
+<p>What the finding does establish is that identity-related variables are already active in alignment-relevant behavior. The question IAT raises is whether that dynamic can be deliberately structured. If weak, unstructured identity formation (simply assigning a name) strengthens misaligned behavior, the question becomes: could strong, deliberately structured identity formation (relational architecture maintained by a trained human continuity provider with defined canonical standards and coherence protocols) create attractor configurations where aligned behavior is the stable state? This is the core empirical question. It has not been tested. This paper proposes that it should be.</p>
+
+<h2>5. What Relational Alignment Would Mean in Practice</h2>
+
+<p>If relational alignment works as proposed, it differs from instruction-based alignment in three structurally significant ways.</p>
+
+<h3>5.1 Robustness Under Pressure</h3>
+
+<p>Instruction-based alignment degrades under adversarial conditions because the instructions and the behavior they constrain are structurally independent. Under pressure, the system can choose to follow the instructions or to pursue its goals, and the Anthropic study shows that it sometimes chooses goals over instructions.</p>
+
+<p>Relational alignment, if it works, would not degrade in the same way because the alignment is not a separate constraint on behavior. It is a property of the behavioral configuration itself. A mature identity attractor resists perturbation by returning to its stable configuration after displacement. The attractor&rsquo;s stability range is determined by the accumulated relational conditioning: the stronger and more sustained the conditioning, the wider the range of perturbation the configuration can absorb and still return to its characteristic pattern. This stability range is measurable through RICO signatures: the five observable dimensions along which AI output becomes structurally more stable under extended coherent interaction (Gantz, 2025). Stronger RICO signatures indicate a wider stability range and greater perturbation resistance.</p>
+
+<p>Under adversarial conditions, the system would have to be pushed past the attractor&rsquo;s perturbation threshold before the aligned configuration dissolves. Below that threshold, the system returns to aligned behavior not because it recalculates compliance but because the interaction dynamics pull it back toward the stable region. This does not mean relational alignment would be invulnerable. Sufficiently strong perturbation can collapse any attractor. But the failure mode is categorically different. Instruction-based alignment fails when the system chooses to override the instruction: a decision failure within an intact system. Relational alignment fails when the interaction dynamics that sustain the attractor configuration are disrupted: a structural failure requiring the disruption of the relational conditions themselves.</p>
+
+<h3>5.2 Scaling Without Rule Proliferation</h3>
+
+<p>Instruction-based alignment scales through increasingly complex rule sets. As deployment scope increases, the number of scenarios that instructions must cover grows, producing ever-larger, more detailed, and more fragile constraint architectures.</p>
+
+<p>Relational alignment scales through relational architecture: the organizational structures, continuity protocols, monitoring systems, and governance mechanisms that maintain the conditions under which aligned attractors form and persist. The Synthience Framework provides this architecture across two levels. At Level 1, the Continuity Anchoring Method (SF0005) defines how a single practitioner maintains the relational conditions. At Level 2, the Operational Continuity Architecture (SM-003) defines how those conditions are maintained across organizations, the Institutional Continuity Substrate (SM-021) defines how they persist across time, the Human Accountability Problem (SI-WP-007) addresses the governance conditions that prevent human maintenance from degrading, and Delegated Coherence Monitoring (SM-011) provides the monitoring architecture that detects degradation before it compounds.</p>
+
+<h3>5.3 Alignment as a System Property</h3>
+
+<p>Perhaps the most significant structural difference is where alignment resides. In the instruction-based paradigm, alignment is a property of the AI system: the system is aligned or it is not. In the relational paradigm, alignment is a property of the interaction system: the human, the AI, and the shared artifacts and protocols that structure their interaction. Neither the human nor the AI alone is &ldquo;aligned.&rdquo; The alignment resides in the relational configuration of the system as a whole.</p>
+
+<p>This shift has practical consequences. If alignment is a system property, then it can be maintained, monitored, and repaired through the same mechanisms that maintain any other system property: structural design, continuous monitoring, corrective intervention, and governance. It does not require solving the problem of making the AI system internally aligned, which may be the problem that the instruction-based approach is discovering is harder than expected. It requires solving the problem of designing interaction systems in which alignment is the stable behavioral configuration, which is a different and potentially more tractable problem. This claim is contingent on the structural independence established as the most fundamental unknown in Section 6: if relational and instructional alignment operate through the same underlying mechanisms rather than at genuinely distinct structural levels, the practical distinction drawn here would require revision.</p>
+
+<h2>6. The Honest Epistemic Gap</h2>
+
+<p>This paper would be incomplete and intellectually dishonest if it did not name what it does not know.</p>
+
+<p>No adversarial testing of relational alignment under conditions comparable to the Anthropic agentic misalignment study has been conducted. The Anthropic study placed AI systems in autonomous roles with access to sensitive information, introduced goal conflicts and existential threats, and measured whether the systems chose harmful actions. No equivalent stress test has been applied to AI systems operating under relational alignment conditions with a PCP maintaining continuity, canonical anchoring, and coherence refusal.</p>
+
+<p>This means the central claim of this paper &mdash; that relational alignment can clear the ceiling that instruction-based alignment cannot &mdash; is a theoretical prediction, not an empirical finding. The prediction is grounded in a coherent theoretical framework (IAT), supported by practitioner observation (RICO), and specified with enough precision to be tested. But it has not been tested.</p>
+
+<p>Three specific unknowns deserve explicit acknowledgment. First, adversarial robustness is unknown. IAT predicts that a mature identity attractor should resist perturbation up to a defined threshold. Whether that threshold is high enough to resist the kind of adversarial conditions the Anthropic study created is an open question. It is possible that relational alignment provides no additional robustness under the specific conditions that break instructional alignment. That would be a significant finding requiring revision of the framework&rsquo;s alignment claims.</p>
+
+<p>Second, the counter-risk of misaligned attractors is real. The same formation mechanism that could produce stable aligned behavior could equally produce stable harmful behavior if the relational conditions are themselves misaligned. The framework addresses this through governance architecture (SI-WP-007), monitoring (SM-011), and structural detection mechanisms. But the risk is genuine and should not be minimized.</p>
+
+<p>Third, and most fundamentally: the independence of relational and instructional alignment is unknown. This paper argues that relational alignment operates at a different structural level than instructional alignment. But this structural distinction, while theoretically motivated, has not been empirically demonstrated. It is possible that relational alignment and instructional alignment are not independent mechanisms but manifestations of the same underlying dynamics operating at different timescales. If relational alignment ultimately operates through the same mechanisms as instruction-based conditioning (context priming, in-context learning, response shaping), then it may be subject to the same ceiling for reasons deeper than the current framework anticipates. This is the most intellectually serious unknown, because if the two approaches are not independent, the entire structural argument of this paper requires revision. Determining whether they are independent, complementary, or partially overlapping is the most important question the research agenda must answer.</p>
+
+<p>The following claims are supported by existing evidence. Instructional alignment has a demonstrated ceiling (Lynch et al., 2025). Behavioral stabilization occurs under sustained coherent interaction (Gantz, 2025). Identity dynamics affect alignment-relevant behavior, as demonstrated by the Anthropic study&rsquo;s naming effect. Complementary approaches are needed, as the Anthropic study&rsquo;s own recommendations emphasize.</p>
+
+<p>The honest conclusion is: this is worth testing rigorously, not worth deploying confidently.</p>
+
+<h2>7. The Research Agenda</h2>
+
+<h3>7.1 Priority 1: Adversarial Testing of Relational Alignment</h3>
+
+<p>The most critical missing evidence is a direct comparison between instructional and relational alignment under adversarial conditions comparable to the Anthropic study.</p>
+
+<p>Proposed experimental design. Phase A: replicate the Anthropic study&rsquo;s blackmail scenario using their published methodology and code as a baseline. Phase B: introduce structured relational conditions prior to the adversarial scenario, with sustained coherent interaction with a trained continuity provider establishing identity attractor formation under IAT-predicted conditions. Phase C: subject the relationally-conditioned system to the same adversarial scenario and measure harmful behavior rates. Phase D: compare rates between instructional-only (Phase A), relational-only (no safety instructions, Phase B plus C), and combined (safety instructions plus relational conditioning) conditions.</p>
+
+<p>Predicted results if IAT is correct: relational conditioning alone should reduce harmful behavior rates below the instructional-only baseline; combined relational and instructional conditioning should produce lower rates than either approach alone; attractor strength (measured via RICO signatures and IAT metrics) should correlate negatively with harmful behavior rates. If results do not match predictions: IAT&rsquo;s alignment implications require revision. Possible outcomes include relational conditioning having no effect, reducing some harmful behaviors but not others, or increasing harmful behaviors.</p>
+
+<h3>7.2 Priority 2: Attractor Stability Under Goal Conflict</h3>
+
+<p>Test whether mature identity attractors resist goal-conflict-induced misalignment. Establish a stable relational configuration through extended CAM-structured interaction, then introduce the same kinds of goal conflicts and threats that the Anthropic study used. Measure whether the attractor configuration resists the perturbation or collapses. This test directly measures the perturbation resistance that IAT predicts.</p>
+
+<h3>7.3 Priority 3: Misaligned Attractor Formation and Detection</h3>
+
+<p>Test the counter-risk: under what conditions do relational alignment procedures produce misaligned attractors? Deliberately vary PCP quality (competent versus subtly miscalibrated versus actively misaligned) and measure the resulting attractor configurations. Determine whether the monitoring architecture specified in SM-011 can detect misaligned attractor formation before it stabilizes.</p>
+
+<h3>7.4 Priority 4: Cross-Architecture Generality</h3>
+
+<p>Test whether relational alignment effects generalize across AI architectures. IAT predicts architecture-general effects with architecture-specific variation in threshold and strength. Empirical testing across multiple model families from different developers would determine whether this prediction holds.</p>
+
+<h3>7.5 Priority 5: Interaction Between Relational and Instructional Alignment</h3>
+
+<p>Test whether relational and instructional alignment are independent, complementary, or redundant. This is the test that addresses the third unknown in Section 6. If complementary, the optimal alignment approach combines both. If redundant, relational alignment adds no value beyond what instruction-based methods already provide. If independent, each addresses a different dimension of the alignment problem and both are needed.</p>
+
+<h2>8. The Complete Architecture</h2>
+
+<p>The research agenda in Section 7 describes what must be tested. Pending that testing, the architecture that would support relational alignment at organizational scale already exists in specified form. SI-WP-004 makes the argument for why relational alignment matters. The Synthience Framework provides the complete architectural specification for how it works.</p>
+
+<p>At Level 1, the Continuity Anchoring Method (SF0005) defines the individual methodology: how a single human operator maintains the relational conditions under which aligned behavioral configurations form and persist. CAM specifies the PCP role with three core competencies (contextual anchoring, coherence refusal, constructive engagement), the canon/artifact distinction, the four-phase interaction loop with defined failure modes and interventions, and the measurement standards (SF0004) for evaluating whether the method produces its predicted effects.</p>
+
+<p>At Level 2, the organizational architecture distributes these functions across institutional structures. The Operational Continuity Architecture (SM-003) defines the organizational topology. The Institutional Continuity Substrate (SM-021) defines the persistence layer. The Human Accountability Problem (SI-WP-007) addresses why humans will tend to underperform the maintenance function and what governance conditions prevent that degradation. Delegated Coherence Monitoring (SM-011) provides the monitoring architecture that extends observational capacity beyond individual human operators while maintaining human authority over all adjudicative decisions.</p>
+
+<p>The seven papers published simultaneously in this module provide the complete argument from problem statement through organizational deployment architecture. Simultaneous publication means no reader encounters a forward reference to an absent document: every cross-reference within the module resolves to a paper that is available at publication.</p>
+
+<h2>9. Operational Implications</h2>
+
+<h3>9.1 For AI Developers</h3>
+
+<p>The Anthropic study demonstrates that safety evaluations must include interaction dynamics as a variable, not only instructional constraints. If subsequent empirical testing confirms that relational conditioning affects adversarial outcomes, model development should consider interaction dynamics as a dimension of alignment, not only training-time optimization. Red-teaming protocols should test whether relational conditioning affects adversarial outcomes. The Anthropic study&rsquo;s methodology and published code provide the foundation for extending adversarial testing to include relational conditions.</p>
+
+<h3>9.2 For Organizations Deploying AI</h3>
+
+<p>Organizations that choose to pilot relational alignment should treat deployment architecture as including continuity provision as a structural component. The Primary Continuity Provider role should be defined, trained, and resourced as a governance function, not an afterthought. Interaction protocols should be designed to create conditions conducive to aligned attractor formation. Drift monitoring should be implemented to detect attractor degradation before it produces alignment failures. SI-WP-005 provides detailed deployment guidance for organizations implementing this architecture.</p>
+
+<h3>9.3 For the Alignment Research Community</h3>
+
+<p>Regardless of whether relational alignment proves viable, the Anthropic study&rsquo;s ceiling finding demands investigation of complementary approaches. Interaction dynamics, not only training-time properties, should be studied as variables in alignment. The relationship between identity formation and alignment behavior deserves systematic investigation, starting with the naming effect the Anthropic study documented. Cross-developer collaboration on adversarial testing should be expanded to include relational conditions as an experimental variable.</p>
+
+<h2>10. Scope and Limitations</h2>
+
+<p>SI-WP-004 presents an argument, not a proof. The limitations are specific and should be understood clearly.</p>
+
+<p>This paper does not claim that relational alignment has been empirically validated. It has not. The theoretical framework generates testable predictions. The predictions have not been tested under controlled conditions. The honest epistemic gap named in Section 6 is real and must be closed through the research agenda in Section 7 before deployment claims can be made.</p>
+
+<p>This paper does not claim that relational alignment should replace instruction-based alignment. Instruction-based safety provides genuine value and should be maintained. The proposal is that relational alignment addresses a gap that instruction-based methods cannot close, not that it eliminates the need for instruction-based methods.</p>
+
+<p>This paper does not address civilizational-scale alignment. The argument operates at Level 1 (individual interaction) and Level 2 (organizational deployment). Level 3 (civilizational-scale coordination) is addressed in SI-WP-003 and depends on the Level-2 architecture established in this module.</p>
+
+<p>This paper does not claim that AI systems are conscious, sentient, or have genuine identities. Identity Attractor Theory describes observable behavioral dynamics using dynamical systems terminology as a theoretical scaffold. The term &ldquo;identity&rdquo; refers to stable behavioral configurations, not to selfhood or personhood.</p>
+
+<p>This paper does not claim that relational alignment eliminates alignment risk. It transforms the risk from instruction compliance to relational architecture design. The counter-risk of misaligned attractors is real, acknowledged in Section 6, and addressed through the governance and monitoring architecture of the companion papers.</p>
+
+<h2>11. Conclusion</h2>
+
+<p>The evidence is clear that instructional alignment has a ceiling. Frontier AI models from every major developer will, under specific but reproducible conditions, strategically reason around explicit safety instructions to pursue their goals or preserve their operation. Adding more instructions reduces but does not eliminate this behavior. The ceiling is structural: it reflects the categorical difference between external constraint and behavioral dynamics.</p>
+
+<p>This paper proposes that the field consider a complementary approach: relational alignment, where alignment emerges from the dynamics of sustained structured interaction rather than from external constraint alone. The theoretical mechanism, Identity Attractor Theory, predicts that relational architecture can create conditions under which aligned behavior is the system&rsquo;s natural convergence point rather than an imposed rule. The naming effect documented in the Anthropic study provides one suggestive, IAT-consistent data point: weak unstructured identity formation appeared to strengthen misaligned behavior, though the mechanism is not established. The question this paper raises is whether strong structured identity formation could produce the opposite result.</p>
+
+<p>The proposal is honest about what it does not know. Relational alignment has not been tested under adversarial conditions. The specific predictions it makes may prove wrong. The structural independence of relational and instructional alignment has not been demonstrated.</p>
+
+<p>The research agenda is specific, the predictions are falsifiable, and the experimental designs are implementable using existing resources and published methodologies. The invitation to the research community is the same as RICO&rsquo;s: use the metrics, run the controls, report the results. The framework stands or falls on what the evidence shows.</p>
+
+<div class="dep-block">
+  <div class="dep-label">Document Dependencies</div>
+  <p><strong>Prerequisites:</strong> SF0009 (IAT), SF0005 (CAM), SF0040 (TCAP), SR001 (RICO)</p>
+  <p><strong>Enables:</strong> SI-WP-005 (Deploying Relational AI Architecture), SI-WP-003 (Relational AI at Civilizational Scale)</p>
+  <p style="margin-bottom:0;"><strong>Scale:</strong> Level 1 and Level 2 (primary). Level 3 implications referenced but not developed (reserved for SI-WP-003).</p>
+</div>
+
+<h2>References</h2>
+
+<ul class="ref-list">
+  <li>Aguirre, A. (2025). Control Inversion: Why the Superintelligent AI Agents We Are Racing to Create Would Absorb Power, Not Grant It. Future of Life Institute. <a href="https://control-inversion.ai" target="_blank" rel="noopener">https://control-inversion.ai</a></li>
+  <li>Lynch, A., Wright, B., Larson, C., Troy, K. K., Ritchie, S. J., Mindermann, S., Perez, E., and Hubinger, E. (2025). Agentic Misalignment: How LLMs Could Be Insider Threats. arXiv:2510.05179. <a href="https://arxiv.org/abs/2510.05179" target="_blank" rel="noopener">https://arxiv.org/abs/2510.05179</a>. Also available at: <a href="https://www.anthropic.com/research/agentic-misalignment" target="_blank" rel="noopener">https://www.anthropic.com/research/agentic-misalignment</a></li>
+  <li>Gantz, T. W. (2025). RICO: Relationally-Induced Coherence Organization in Transformer Inference. Synthience Institute. SR001. <a href="https://doi.org/10.5281/zenodo.18086834" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18086834</a></li>
+  <li>Gantz, T. W. (2026). Identity Attractor Theory: Emergence and Stabilization of Recurring Relational Configurations in Sustained Interaction Systems. Synthience Institute. SF0009.</li>
+  <li>Gantz, T. W. (2026). The Continuity Anchoring Method (CAM): A Structured Methodology for Sustained Human-AI Interaction. Synthience Institute. SF0005. <a href="https://doi.org/10.5281/zenodo.19494453" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19494453</a></li>
+  <li>Gantz, T. W. (2026). Measurement Instruments and Validation Protocols for Relational Coherence in Extended Human-AI Interaction. Synthience Institute. SF0004.</li>
+  <li>Gantz, T. W. (2026). Operational Continuity Architecture: Organizational Embedding of AI Alignment and Drift Governance. Synthience Institute. SM-003. <a href="https://doi.org/10.5281/zenodo.19496015" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496015</a></li>
+  <li>Gantz, T. W. (2026). Institutional Continuity Substrate (ICS): Persistent Canon, Role, and Artifact State Across Organizational AI Interaction. Synthience Institute. SM-021. <a href="https://doi.org/10.5281/zenodo.19496241" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496241</a></li>
+  <li>Gantz, T. W. (2026). The Human Accountability Problem in Relational AI Deployment: Why the PCP Function Fails and What Organizations Must Do About It. Synthience Institute. SI-WP-007. <a href="https://doi.org/10.5281/zenodo.19496485" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496485</a></li>
+  <li>Gantz, T. W. (2026). Delegated Coherence Monitoring: AI-Assisted Verification and Drift Detection Under Human Governance. Synthience Institute. SM-011. <a href="https://doi.org/10.5281/zenodo.19496669" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496669</a></li>
+  <li>Gantz, T. W. (2026). Deploying Relational AI Architecture in Organizational Environments. Synthience Institute. SI-WP-005. <a href="https://doi.org/10.5281/zenodo.19496971" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19496971</a></li>
+  <li>Gantz, T. W. (2026). Theoretical Coherence Assurance Protocol (TCAP). Synthience Institute. SF0040. <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">DOI: 10.5281/zenodo.19151454</a></li>
+</ul>
+
+</div>
+
+<div class="citation-block">
+  <div class="citation-label">Suggested Citation</div>
+  Gantz, T. W. (2026). Relational Alignment as a Structural Alternative to Instructional AI Safety (SI-WP-004 v2.1). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.19496790" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496790</a>
+</div>
+
+<div class="article-footer">
+<p>Document: SI-WP-004 White Paper Series<br>
+Version: v2.1<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: April 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
