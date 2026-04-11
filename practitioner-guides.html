@@ -344,8 +344,8 @@
 <div class="controls-row">
   <div class="view-toggle">
     <span>View:</span>
-    <button id="view-category" class="active" onclick="setView('category')">By Category</button>
-    <button id="view-all" onclick="setView('all')">All Articles</button>
+    <button id="view-category" onclick="setView('category')">By Category</button>
+    <button id="view-all" class="active" onclick="setView('all')">All Articles</button>
   </div>
   <div class="sort-toggle">
     <span>Sort:</span>
@@ -523,7 +523,7 @@ var categories = [
 
 // === STATE ===
 var activeFormat = "all";
-var activeView = sessionStorage.getItem("pg-view") || "category";
+var activeView = sessionStorage.getItem("pg-view") || "all";
 var activeSort = sessionStorage.getItem("pg-sort") || "date";
 var searchTerm = "";
 var collapsedCategories = {};
