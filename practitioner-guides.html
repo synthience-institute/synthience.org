@@ -598,7 +598,11 @@ function idSort(a, b) {
 function sortList(list, by) {
   var sorted = list.slice();
   if (by === "date") {
-    sorted.sort(function(a, b) { return b.date.localeCompare(a.date); });
+    sorted.sort(function(a, b) {
+      var d = b.date.localeCompare(a.date);
+      if (d !== 0) return d;
+      return (a.seq || 999) - (b.seq || 999);
+    });
   } else if (by === "title") {
     sorted.sort(function(a, b) { return a.title.localeCompare(b.title); });
   } else if (by === "id") {
