@@ -310,6 +310,17 @@ var allNotes = [
     tags: ["interpretability-cognition"],
     applicability: "context",
     format: "text"
+  },
+  {
+    id: "FN-004",
+    title: "The Paperwork Was Complete. The Patient Was Harmed.",
+    desc: "Inside the governance failure that AI in medicine was designed to prevent. Three mechanisms explain why human oversight fails even when the doctor cares. Includes a video overview and the full article summarizing SI-WP-008.",
+    date: "2026-04-14",
+    dateDisplay: "April 14, 2026",
+    read: "field-notes/FN-004.html",
+    tags: ["governance-policy"],
+    applicability: "applicable",
+    format: "video"
   }
 ];
 
@@ -454,7 +465,11 @@ function idSort(a, b) {
 function sortNoteList(list, by) {
   var sorted = list.slice();
   if (by === "date") {
-    sorted.sort(function(a, b) { return b.date.localeCompare(a.date); });
+    sorted.sort(function(a, b) {
+      var d = b.date.localeCompare(a.date);
+      if (d !== 0) return d;
+      return (a.seq || 999) - (b.seq || 999);
+    });
   } else if (by === "title") {
     sorted.sort(function(a, b) { return a.title.localeCompare(b.title); });
   } else if (by === "id") {
