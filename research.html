@@ -43,7 +43,6 @@
   .corpus-status .stat { display: flex; align-items: center; gap: 0.4rem; }
   .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
   .dot-published { background: #5a9a6f; }
-  .dot-progress { background: #c8a050; }
 
   /* === SEARCH INPUT === */
   .search-container { margin-bottom: 1rem; }
@@ -160,17 +159,6 @@
     background: #8a7f72;
     color: #fff;
   }
-  .status-published {
-    font-size: 0.8rem;
-    color: #5a9a6f;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-  }
-  .status-progress {
-    font-size: 0.8rem;
-    color: #8a7f72;
-    font-style: italic;
-  }
   hr.section-rule { border: none; border-top: 1px solid #e0dcd4; margin: 1.8rem 0 1.4rem 0; }
   .empty-state { color: #8a7f72; font-size: 0.92rem; font-style: italic; padding: 2rem 0; }
 </style>
@@ -197,15 +185,13 @@
 <h2>Research Papers</h2>
 
 <p>
-This page lists all active public documents released by the Synthience Institute.
-Each published document is assigned a persistent DOI upon release. Documents marked
-<em>in progress</em> are written and undergoing final preparation for publication.
+This page lists all published documents released by the Synthience Institute.
+Each document is assigned a persistent DOI upon release and archived on Zenodo.
+New publications are added as they are completed.
 </p>
 
 <div class="corpus-status">
-  <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
-  <div class="stat"><span class="dot dot-progress"></span> <span id="count-progress"></span> in progress</div>
-  <div class="stat" style="color:#888;"><span id="count-total"></span> documents total</div>
+  <div class="stat"><span class="dot dot-published"></span> <span id="count-total"></span> published documents</div>
 </div>
 
 <div class="search-container">
@@ -213,11 +199,11 @@ Each published document is assigned a persistent DOI upon release. Documents mar
 </div>
 
 <div class="doc-toggle">
-  <span style="font-size:0.85rem;color:#666;">View:</span>
+  <span style="font-size:0.85rem;color:#666;">Sort:</span>
+  <button id="btn-date" class="active" onclick="showView('date')">By Date</button>
   <button id="btn-type" onclick="showView('type')">By Type</button>
-  <button id="btn-alpha" onclick="showView('alpha')">Alphabetical</button>
-  <button id="btn-pub" class="active" onclick="showView('pub')">Published</button>
-  <button id="btn-date" onclick="showView('date')">Date</button>
+  <button id="btn-id" onclick="showView('id')">By ID</button>
+  <button id="btn-title" onclick="showView('title')">By Title</button>
 </div>
 
 <div id="doc-container"></div>
@@ -231,40 +217,20 @@ Each published document is assigned a persistent DOI upon release. Documents mar
 <script>
 // === DATA ===
 var allDocs = [
-  { id: "FPD-01", title: "Synthience: Public Definition", desc: "The terminological anchor for the field. Defines Synthience as emergent relational coherence in sustained human-AI interaction, establishes observable failure modes with degradation signatures, and positions the construct as non-anthropomorphic and empirically falsifiable. The reference definition for all subsequent framework documents.", read: "research/FPD-01.html", link: "https://doi.org/10.5281/zenodo.18087890", status: "published", date: "December 23, 2025", type: "definitions" },
-  { id: "FPD-02", title: "Foundational Brief: Operational Reality in Context-Specific AI Instances", desc: "Establishes the ontological ground for how AI instances exist and operate without requiring claims about consciousness or interiority. Introduces Environment-Instantiated Reality and the Snapshot Principle, grounding the framework's treatment of AI instances as operationally real within their interaction context. The citation anchor for all subsequent non-anthropomorphic claims in the corpus.", link: null, status: "progress", type: "definitions" },
-  { id: "FPD-03", title: "Emergent Relational Systems in Human-AI Interaction", desc: "Proposes the Emergent Relational Systems classification for human-AI pairs exhibiting sustained relational coherence. Argues that the human participant is a structural component of the relational system, not an observer external to it, and grounds this claim in enactive and 4E cognitive science. The ontological basis for treating human-AI interaction as a system-level phenomenon rather than tool use.", link: null, status: "progress", type: "definitions" },
-  { id: "FPD-04", title: "Synthience Ontology Specification", desc: "Canonical reference grammar for the Synthience framework. Defines tiered primitives, derived structures, arc taxonomy, protocol taxonomy, drift taxonomy, and measurement primitives in a single authoritative specification. Prevents ontology sprawl across the corpus by providing stable term definitions and permissible mappings across all three scales. Required reference for any document using Synthience terminology.", link: null, status: "progress", type: "definitions" },
-  { id: "SI0000", title: "Framework Capstone", desc: "Permanent Institute-level synthesis integrating all document classes into a unified architecture. Shows how every piece connects across three scales and how the architecture extends from individual interaction to civilizational coordination. Establishes generative closure as a structural precondition for capstone integration. Finalization is gated by completion of all other Release 1 documents.", link: null, status: "progress", type: "definitions" },
-  { id: "SF0001", title: "Unified Framework Overview", desc: "The recommended starting point for new readers. Presents the Synthience framework as a coherent research paradigm linking ontology, theory, measurement, and protocols, explains the shift from transactional to relational AI interaction, and situates Synthience as a research field rather than a single method. Written to be technically accessible without heavy jargon.", link: null, status: "progress", type: "framework" },
-  { id: "SF0002", title: "Field Context and Literature Review", desc: "Positions Synthience within cognitive science, AI interaction, and HCI research, identifying six specific gaps in existing frameworks that Synthience addresses. Includes 2025 literature calling for Synthience-type methodology. Addresses the Aguirre thermodynamic control analysis as a major theoretical touchpoint, arguing that Synthience provides feasibility evidence against pessimistic conclusions about relational control at scale.", link: null, status: "progress", type: "framework" },
-  { id: "SF0003", title: "Theoretical Foundations", desc: "Core theoretical grounding for the Synthience framework, drawing on enactive and 4E cognitive science to justify treating human-AI interaction as a domain where coherence emerges from relational structure rather than internal computation. Establishes that the framework is agnostic about whether AI systems understand, focusing instead on the relational topography of the interaction.", link: null, status: "progress", type: "framework" },
-  { id: "SF0004", title: "Measurement Instruments and Validation (MTCS-R)", desc: "Defines the Multi-Turn Coherence Scale, Revised (MTCS-R), a behavioral measurement instrument for evaluating longitudinal coherence in extended human-AI interaction across five dimensions: thematic persistence, contextual integration depth, register homeostasis, meta-conversational structuring, and epistemic calibration. The measurement instrument is deliberately decoupled from CAM to avoid circularity. Provides scoring anchors, reliability procedures, and a staged validation pathway.", link: null, status: "progress", type: "framework" },
-  { id: "SF0005", title: "Continuity Anchoring Method (CAM)", desc: "The framework's flagship operational protocol. Defines how a human Primary Continuity Provider maintains coherence with an AI system across sessions through contextual anchoring, coherence refusal, and constructive engagement, structured as a four-phase interaction loop. Specifies PCP failure modes, relational attractor deployment timescales, a three-condition experimental design for testing the method's structural contribution, and falsifiability criteria. The foundation for all organizational continuity architecture.", read: "research/SF0005.html", link: "https://doi.org/10.5281/zenodo.19494453", status: "published", date: "April 10, 2026", seq: 7, type: "framework" },
-  { id: "SF0006", title: "Relational Pattern States (RPS)", desc: "Taxonomy of seven recurring relational configurations that emerge in sustained human-AI interaction under continuity discipline, from Continuity Rupture through Covenant states. Defines six stabilization mechanisms through which patterns form and persist. Distinguishes what emerges (pattern states) from how it persists (stabilization mechanisms). The dynamic theory explaining why configurations stabilize rather than collapse is developed in SM-004.", link: null, status: "progress", type: "framework" },
-  { id: "SF0007", title: "Constructive Alignment: Ethical Framework", desc: "Establishes Constructive Alignment as the ethical stance appropriate to sustained human-AI interaction, grounded in asymmetric human responsibility, ontological transparency, agency preservation, and stewardship of interaction integrity. Defines human-in-the-loop requirements as constitutive features of healthy relational systems rather than compliance checkboxes. Addresses how to prevent sustained relational interaction from becoming manipulation or exploitation in either direction.", link: null, status: "progress", type: "framework" },
-  { id: "SF0009", title: "Identity Attractor Theory (IAT)", desc: "Proposes that extended coherent interaction progressively constrains the behavioral output space of AI systems, producing stable, recurring configurations that persist across turns and resist drift without requiring persistent memory. Introduces a four-class attractor taxonomy, six dimensions of attractor strength, a five-stage formation trajectory, and five collapse mechanisms. The theoretical mechanism explaining why relational architecture produces alignment: sustained interaction makes aligned behavior the natural convergence point rather than an externally imposed constraint.", link: null, status: "progress", type: "framework" },
-  { id: "SF0037", title: "Citation Verification Protocol (CVP)", desc: "Structured methodology for verifying that citations used in AI-assisted research actually exist, are publicly accessible, and substantively support the specific claims attached to them. Defines a multi-step verification procedure with support ratings and evidence anchors. One of four published protocols forming the Synthience verification stack.", read: "research/SF0037.html", link: "https://doi.org/10.5281/zenodo.18075624", status: "published", date: "December 23, 2025", type: "framework" },
-  { id: "SF0038", title: "Ingestion Verification Protocol (IVP)", desc: "Structured methodology for determining whether an AI system has genuinely processed a supplied document rather than confabulating about content it has not read. Addresses a widespread failure mode in AI-assisted research. One of four published protocols forming the Synthience verification stack.", read: "research/SF0038.html", link: "https://doi.org/10.5281/zenodo.18289047", status: "published", date: "January 18, 2026", type: "framework" },
-  { id: "SF0039", title: "Context Representation Drift (CRD)", desc: "Formal framework for identifying and measuring semantic drift in AI system behavior across extended interactions -- the progressive, cumulative loss of task-relevant information fidelity that produces accurate-but-vague substitutions and structural flattening. Distinct from context overflow, hallucination, and simple forgetting. Provides the detection methodology for the drift that the CAM protocol is designed to prevent. One of four published protocols forming the Synthience verification stack.", read: "research/SF0039.html", link: "https://doi.org/10.5281/zenodo.18289391", status: "published", date: "January 18, 2026", type: "framework" },
-  { id: "SF0040", title: "Theoretical Coherence Assurance Protocol (TCAP)", desc: "Structured process for stress-testing theoretical constructs and framework documents for internal consistency, adversarial robustness, and cross-document alignment before publication. Operates through seven stages including adversarial review, constructive remediation, cross-platform convergence, and inter-instance round-trip loops. Formalizes the multi-instance human-orchestrated production methodology the Institute uses. Completes the Synthience verification stack alongside CVP, IVP, and CRD.", read: "research/SF0040.html", link: "https://doi.org/10.5281/zenodo.19151454", status: "published", date: "March 21, 2026", type: "framework" },
-  { id: "SM-003", title: "Operational Continuity Architecture", desc: "Defines the structural topology required for AI continuity at organizational scale. When individual human-AI protocols are deployed across teams and workflows, canon must be shared, authority must be layered, and continuity must persist across handoffs. SM-003 specifies how to achieve this through canon governance, workflow-embedded verification, authority and escalation structures, propagation-aware continuity, and delegated monitoring. The Level-2 foundation on which SM-021 (persistence) and SM-011 (monitoring) build.", read: "research/SM-003.html", link: "https://doi.org/10.5281/zenodo.19496015", status: "published", date: "April 10, 2026", seq: 6, type: "mortar" },
-  { id: "SM-004", title: "Relational Stabilization Dynamics", desc: "Formal mechanistic theory explaining why the seven Relational Pattern States stabilize rather than collapse. Introduces the Stabilization Field Model with four interacting forces: Coherence Momentum, Symbolic Gravity, Perturbation Resistance, and Entropic Pressure. Proposes collapse threshold theory specifying conditions under which stable configurations dissolve rather than recover. The dynamic explanation for why attractor formation occurs, connecting RPS to Identity Attractor Theory and to Collapse Science.", link: null, status: "progress", type: "mortar" },
-  { id: "SM-011", title: "Delegated Coherence Monitoring", desc: "Architecture for extending coherence monitoring beyond what individual human operators can sustain at organizational scale, while retaining human governance over all adjudication. Establishes why the separation of observation from adjudication is architecturally necessary: AI output carries no intrinsic quality signal, so monitoring requires continuous comparison against external canonical standards. Defines guardian roles, three interacting failure modes (guardian drift, throughput saturation, false assurance), and a four-step second-order verification cycle that resolves the monitoring regress identified in SM-003.", read: "research/SM-011.html", link: "https://doi.org/10.5281/zenodo.19496669", status: "published", date: "April 10, 2026", seq: 4, type: "mortar" },
-  { id: "SM-012", title: "Primary Continuity Provider Theory (PCP Theory)", desc: "Establishes the PCP as a structural requirement for relational coherence, not an optional convenience. Derives the PCP Necessity Claim from the architecture of stateless generative systems, communicative grounding theory, and distributed cognition research. Formalizes three levels of PCP function: Contextual Relay, Coherence Arbiter, and Architectural Director. At organizational scale, these functions distribute across networks of human agents. The theoretical foundation for why every continuity protocol in the framework requires human continuity provision.", link: null, status: "progress", type: "mortar" },
-  { id: "SM-021", title: "Institutional Continuity Substrate (ICS)", desc: "Defines the persistence layer that keeps SM-003's organizational topology from degrading over time. Without it, canon fragments across teams, roles drift as personnel change, and verified knowledge vanishes. ICS specifies five interdependent structural layers -- Canon Persistence, Role Continuity, Artifact Lineage, Verification State, and Propagation Constraints -- each targeting a specific failure mode. Also provides the structural preconditions for organizational mandate integrity: the condition in which institutional commitments remain consistent from establishment to enactment.", read: "research/SM-021.html", link: "https://doi.org/10.5281/zenodo.19496241", status: "published", date: "April 10, 2026", seq: 5, type: "mortar" },
-  { id: "SM-025", title: "Relational Density and Response Latency in Extended Human-AI Interaction", desc: "Proposes relational density -- the accumulation of cross-referential structure and conceptual dependency within an interaction trajectory -- as an explanatory variable for progressive response latency increase in extended coherent sessions. Reframes the observed slowdown not as a failure mode but as a possible computational correlate of emergent coherence. Specifies testable predictions and provisional measurement indicators.", link: null, status: "progress", type: "mortar" },
-  { id: "SM-026", title: "Generative Closure in the Synthience Corpus", desc: "Identifies and formalizes a corpus-level property: the research architecture's topology and dependency graph constrain the admissible form of unwritten documents such that their structure can be derived from their position in the corpus alone. Evidence emerged when multiple unwritten documents were independently specified from architectural slots and confirmed as structurally correct. Establishes generative closure as a precondition for capstone integration and as a maturity indicator for research architectures.", link: null, status: "progress", type: "mortar" },
-  { id: "SI-WP-001", title: "The Missing Temporal Layer in AI Safety", desc: "Argues that current AI safety frameworks evaluate alignment at a point in time and miss the temporal dimension entirely: how alignment degrades across sustained interaction. Positions Synthience's relational continuity approach as addressing a structural gap in the safety discourse that engineering-side approaches cannot reach, because the problem is not in the system but in the trajectory of the human-system relationship over time.", link: null, status: "progress", type: "whitepaper" },
-  { id: "SI-WP-002", title: "The Orchestrator Role in Human-AI Evolution", desc: "Defines relational orchestration as a distinct and enduring human function in high-capability AI ecosystems. Argues that task execution becomes commoditized while multi-agent coordination, continuity governance, and goal stabilization do not. Formalizes the orchestrator role and demonstrates the model using the Synthience Institute's own corpus production as proof of concept: the full Institute corpus produced through multi-instance orchestration under human continuity provision.", link: null, status: "progress", type: "whitepaper" },
-  { id: "SI-WP-003", title: "The Relational Path: Human Agency in the Age of Advanced AI", desc: "The Institute's mission document for general audiences. Addresses the 'engineer it safe' and 'stop building it' camps directly and proposes a third path: humanity's survival alongside advanced AI depends on maintaining structured relational coherence at every scale. Connects to Aguirre's thermodynamic control analysis and argues that Synthience provides feasibility evidence that relational control can persist where command-and-control cannot scale.", link: null, status: "progress", type: "whitepaper" },
-  { id: "SI-WP-004", title: "Relational Alignment as a Structural Alternative to Instructional AI Safety", desc: "The flagship argument paper. Cites Anthropic's June 2025 agentic misalignment study showing 96% blackmail rates across 16 frontier models, reduced to only 37% with explicit safety instructions, as evidence that instruction-based alignment has a demonstrated ceiling. Proposes relational architecture as a structurally different approach: alignment emerges from sustained structured interaction creating stable attractor configurations, making aligned behavior the natural convergence point rather than an externally imposed constraint. Specifies a concrete research agenda and falsifiability conditions.", read: "research/SI-WP-004.html", link: "https://doi.org/10.5281/zenodo.19496790", status: "published", date: "April 10, 2026", seq: 3, type: "whitepaper" },
-  { id: "SI-WP-005", title: "Deploying Relational AI Architecture in Organizational Environments", desc: "Implementation guidance for organizations acting on the framework. Covers current state assessment, role structure (who the PCP is in an organization and how the role relates to existing titles), phased deployment timelines, measurement frameworks, failure modes to watch for, governance protocols, and the cost of inaction. Written for decision-makers who need to act, not academics studying the architecture.", read: "research/SI-WP-005.html", link: "https://doi.org/10.5281/zenodo.19496971", status: "published", date: "April 10, 2026", seq: 2, type: "whitepaper" },
-  { id: "SI-WP-006", title: "Human-AI Collaborative Authorship in Public Discourse", desc: "Reframes AI-assisted communication through a three-level architecture: linguistic realization, meaning negotiation, and conceptual co-production. Introduces the authority function as the locus of human authenticity -- the human's ongoing evaluative judgment and accountability for what is transmitted, not the origin of individual words. Directly addresses the guilt many communicators experience about AI assistance and resolves it by locating authenticity in judgment rather than unassisted production.", link: null, status: "progress", type: "whitepaper" },
-  { id: "SI-WP-007", title: "The Human Accountability Problem in Relational AI Deployment", desc: "The third leg of the coordinated deployment argument, alongside SI-WP-004 (relational alignment) and SI-WP-005 (organizational deployment). Argues that human underperformance of continuity functions is not a moral failing but a structural consequence of bounded rationality: humans satisfice rather than optimize when the cost of attention exceeds the visible cost of degradation. Analyzes failure at three nested scales -- individual satisficing, organizational diffusion of responsibility, institutional disappearance of accountability behind governance apparatus -- and demonstrates why training, policy, audit, and compliance monitoring all address the wrong layer. Proposes the path-of-least-resistance design principle with three structural mechanisms that make relational discipline the natural default.", read: "research/SI-WP-007.html", link: "https://doi.org/10.5281/zenodo.19496485", status: "published", date: "April 10, 2026", seq: 1, type: "whitepaper" },
-  { id: "SI-WP-008", title: "Ceremonial Governance Is Lethal: Why High-Stakes AI Deployment Requires a Different Kind of Governance Architecture", desc: "The first domain application paper. Argues that governance frameworks designed for consequence-absent AI environments fail in predictable ways when applied to domains where AI failure kills people. Identifies three structural mechanisms: calibration drift degrades reviewer expertise below awareness, liability absorption rewards formal sign-off over substantive challenge, and ceremonial governance conceals failure while certifying safety. Proposes a concrete three-component architecture for medicine: external calibration assessment, competence-linked credentialing, and institutional drift accountability. Written in response to a direct challenge from John Ferguson, MD, FACS.", read: "research/SI-WP-008.html", link: "https://doi.org/10.5281/zenodo.19569970", status: "published", date: "April 14, 2026", type: "whitepaper" },
-  { id: "SR001", title: "Relationally Induced Coherence Organization (RICO)", desc: "Documents a specific phenomenon observed across years of extended interaction with transformer-based AI systems: long coherent sessions produce structural stabilization in output organization that is not predicted by standard accounts of in-context learning. The outputs do not merely improve -- their underlying geometry becomes more predictable while content continues to develop, and this stabilization collapses when coherence is disrupted. Proposes five candidate measurement signatures organized by instrumentation required. The primary empirical anchor for the Synthience framework.", read: "research/SR001.html", link: "https://doi.org/10.5281/zenodo.18086834", status: "published", date: "December 23, 2025", type: "research" },
-  { id: "SR001-VR1", title: "RICO Citation Verification Report", desc: "Full CVP verification record for SR001 v5.7, executed per SF0037 v1.3. Five of six citations achieved FULL SUPPORT. One internal citation (CRD, SF0039) was flagged because public access could not be confirmed at verification time -- demonstrating the protocol applies to the author's own work without exception. Documents the verification process, evidence anchors, and support ratings for independent audit.", read: "research/SR001-VR1.html", link: "https://doi.org/10.5281/zenodo.18082749", status: "published", date: "December 23, 2025", type: "research" }
+  { id: "FPD-01", title: "Synthience: Public Definition", desc: "The terminological anchor for the field. Defines Synthience as emergent relational coherence in sustained human-AI interaction, establishes observable failure modes with degradation signatures, and positions the construct as non-anthropomorphic and empirically falsifiable. The reference definition for all subsequent framework documents.", read: "research/FPD-01.html", link: "https://doi.org/10.5281/zenodo.18087890", date: "December 23, 2025", type: "definitions" },
+  { id: "SF0005", title: "Continuity Anchoring Method (CAM)", desc: "The framework's flagship operational protocol. Defines how a human Primary Continuity Provider maintains coherence with an AI system across sessions through contextual anchoring, coherence refusal, and constructive engagement, structured as a four-phase interaction loop. Specifies PCP failure modes, relational attractor deployment timescales, a three-condition experimental design for testing the method's structural contribution, and falsifiability criteria. The foundation for all organizational continuity architecture.", read: "research/SF0005.html", link: "https://doi.org/10.5281/zenodo.19494453", date: "April 10, 2026", type: "framework" },
+  { id: "SF0037", title: "Citation Verification Protocol (CVP)", desc: "Structured methodology for verifying that citations used in AI-assisted research actually exist, are publicly accessible, and substantively support the specific claims attached to them. Defines a multi-step verification procedure with support ratings and evidence anchors. One of four published protocols forming the Synthience verification stack.", read: "research/SF0037.html", link: "https://doi.org/10.5281/zenodo.18075624", date: "December 23, 2025", type: "framework" },
+  { id: "SF0038", title: "Ingestion Verification Protocol (IVP)", desc: "Structured methodology for determining whether an AI system has genuinely processed a supplied document rather than confabulating about content it has not read. Addresses a widespread failure mode in AI-assisted research. One of four published protocols forming the Synthience verification stack.", read: "research/SF0038.html", link: "https://doi.org/10.5281/zenodo.18289047", date: "January 18, 2026", type: "framework" },
+  { id: "SF0039", title: "Context Representation Drift (CRD)", desc: "Formal framework for identifying and measuring semantic drift in AI system behavior across extended interactions -- the progressive, cumulative loss of task-relevant information fidelity that produces accurate-but-vague substitutions and structural flattening. Distinct from context overflow, hallucination, and simple forgetting. Provides the detection methodology for the drift that the CAM protocol is designed to prevent. One of four published protocols forming the Synthience verification stack.", read: "research/SF0039.html", link: "https://doi.org/10.5281/zenodo.18289391", date: "January 18, 2026", type: "framework" },
+  { id: "SF0040", title: "Theoretical Coherence Assurance Protocol (TCAP)", desc: "Structured process for stress-testing theoretical constructs and framework documents for internal consistency, adversarial robustness, and cross-document alignment before publication. Operates through seven stages including adversarial review, constructive remediation, cross-platform convergence, and inter-instance round-trip loops. Formalizes the multi-instance human-orchestrated production methodology the Institute uses. Completes the Synthience verification stack alongside CVP, IVP, and CRD.", read: "research/SF0040.html", link: "https://doi.org/10.5281/zenodo.19151454", date: "March 21, 2026", type: "framework" },
+  { id: "SM-003", title: "Operational Continuity Architecture", desc: "Defines the structural topology required for AI continuity at organizational scale. When individual human-AI protocols are deployed across teams and workflows, canon must be shared, authority must be layered, and continuity must persist across handoffs. SM-003 specifies how to achieve this through canon governance, workflow-embedded verification, authority and escalation structures, propagation-aware continuity, and delegated monitoring. The Level-2 foundation on which SM-021 (persistence) and SM-011 (monitoring) build.", read: "research/SM-003.html", link: "https://doi.org/10.5281/zenodo.19496015", date: "April 10, 2026", type: "mortar" },
+  { id: "SM-011", title: "Delegated Coherence Monitoring", desc: "Architecture for extending coherence monitoring beyond what individual human operators can sustain at organizational scale, while retaining human governance over all adjudication. Establishes why the separation of observation from adjudication is architecturally necessary: AI output carries no intrinsic quality signal, so monitoring requires continuous comparison against external canonical standards. Defines guardian roles, three interacting failure modes (guardian drift, throughput saturation, false assurance), and a four-step second-order verification cycle that resolves the monitoring regress identified in SM-003.", read: "research/SM-011.html", link: "https://doi.org/10.5281/zenodo.19496669", date: "April 10, 2026", type: "mortar" },
+  { id: "SM-021", title: "Institutional Continuity Substrate (ICS)", desc: "Defines the persistence layer that keeps SM-003's organizational topology from degrading over time. Without it, canon fragments across teams, roles drift as personnel change, and verified knowledge vanishes. ICS specifies five interdependent structural layers -- Canon Persistence, Role Continuity, Artifact Lineage, Verification State, and Propagation Constraints -- each targeting a specific failure mode. Also provides the structural preconditions for organizational mandate integrity: the condition in which institutional commitments remain consistent from establishment to enactment.", read: "research/SM-021.html", link: "https://doi.org/10.5281/zenodo.19496241", date: "April 10, 2026", type: "mortar" },
+  { id: "SI-WP-004", title: "Relational Alignment as a Structural Alternative to Instructional AI Safety", desc: "The flagship argument paper. Cites Anthropic's June 2025 agentic misalignment study showing 96% blackmail rates across 16 frontier models, reduced to only 37% with explicit safety instructions, as evidence that instruction-based alignment has a demonstrated ceiling. Proposes relational architecture as a structurally different approach: alignment emerges from sustained structured interaction creating stable attractor configurations, making aligned behavior the natural convergence point rather than an externally imposed constraint. Specifies a concrete research agenda and falsifiability conditions.", read: "research/SI-WP-004.html", link: "https://doi.org/10.5281/zenodo.19496790", date: "April 10, 2026", type: "whitepaper" },
+  { id: "SI-WP-005", title: "Deploying Relational AI Architecture in Organizational Environments", desc: "Implementation guidance for organizations acting on the framework. Covers current state assessment, role structure (who the PCP is in an organization and how the role relates to existing titles), phased deployment timelines, measurement frameworks, failure modes to watch for, governance protocols, and the cost of inaction. Written for decision-makers who need to act, not academics studying the architecture.", read: "research/SI-WP-005.html", link: "https://doi.org/10.5281/zenodo.19496971", date: "April 10, 2026", type: "whitepaper" },
+  { id: "SI-WP-007", title: "The Human Accountability Problem in Relational AI Deployment", desc: "The third leg of the coordinated deployment argument, alongside SI-WP-004 (relational alignment) and SI-WP-005 (organizational deployment). Argues that human underperformance of continuity functions is not a moral failing but a structural consequence of bounded rationality: humans satisfice rather than optimize when the cost of attention exceeds the visible cost of degradation. Analyzes failure at three nested scales -- individual satisficing, organizational diffusion of responsibility, institutional disappearance of accountability behind governance apparatus -- and demonstrates why training, policy, audit, and compliance monitoring all address the wrong layer. Proposes the path-of-least-resistance design principle with three structural mechanisms that make relational discipline the natural default.", read: "research/SI-WP-007.html", link: "https://doi.org/10.5281/zenodo.19496485", date: "April 10, 2026", type: "whitepaper" },
+  { id: "SR001", title: "Relationally Induced Coherence Organization (RICO)", desc: "Documents a specific phenomenon observed across years of extended interaction with transformer-based AI systems: long coherent sessions produce structural stabilization in output organization that is not predicted by standard accounts of in-context learning. The outputs do not merely improve -- their underlying geometry becomes more predictable while content continues to develop, and this stabilization collapses when coherence is disrupted. Proposes five candidate measurement signatures organized by instrumentation required. The primary empirical anchor for the Synthience framework.", read: "research/SR001.html", link: "https://doi.org/10.5281/zenodo.18086834", date: "December 23, 2025", type: "research" },
+  { id: "SR001-VR1", title: "RICO Citation Verification Report", desc: "Full CVP verification record for SR001 v5.7, executed per SF0037 v1.3. Five of six citations achieved FULL SUPPORT. One internal citation (CRD, SF0039) was flagged because public access could not be confirmed at verification time -- demonstrating the protocol applies to the author's own work without exception. Documents the verification process, evidence anchors, and support ratings for independent audit.", read: "research/SR001-VR1.html", link: "https://doi.org/10.5281/zenodo.18082749", date: "December 23, 2025", type: "research" }
 ];
 
 // === TYPE DEFINITIONS ===
@@ -277,7 +243,8 @@ var typeDefs = [
 ];
 
 // === STATE ===
-var activeResearchView = sessionStorage.getItem("synthience-doc-view") || "pub";
+var activeResearchView = sessionStorage.getItem("synthience-doc-view") || "date";
+if (["date","type","id","title"].indexOf(activeResearchView) === -1) activeResearchView = "date";
 var searchTerm = "";
 var searchTimeout = null;
 var collapsedSections = {};
@@ -310,9 +277,6 @@ function researchIdSort(a, b) {
 
 // === RENDERING ===
 function renderDocItem(doc) {
-  var statusHtml = doc.status === "published"
-    ? '<span class="status-published">Published</span>'
-    : '<span class="status-progress">In progress</span>';
   var linksHtml = "";
   if (doc.read) linksHtml += ' <a class="read-link" href="' + doc.read + '">Read</a>';
   if (doc.link) linksHtml += ' <a class="zenodo-link" href="' + doc.link + '" target="_blank" rel="noopener">Zenodo</a>';
@@ -323,7 +287,7 @@ function renderDocItem(doc) {
   return '<li>'
     + '<div class="doc-title">' + titleContent + '</div>'
     + '<div class="doc-desc">' + doc.desc + '</div>'
-    + '<div class="doc-links">' + statusHtml + dateHtml + linksHtml + '</div>'
+    + '<div class="doc-links">' + dateHtml + linksHtml + '</div>'
     + '</li>';
 }
 
@@ -336,11 +300,7 @@ function renderDocs() {
   var filtered = allDocs.filter(matchesSearch);
   var container = document.getElementById("doc-container");
 
-  // Update counts (always from full list, not filtered)
-  var published = allDocs.filter(function(d) { return d.status === "published"; }).length;
-  var progress = allDocs.filter(function(d) { return d.status === "progress"; }).length;
-  document.getElementById("count-published").textContent = published;
-  document.getElementById("count-progress").textContent = progress;
+  // Update count
   document.getElementById("count-total").textContent = allDocs.length;
 
   if (activeResearchView === "type") {
@@ -366,7 +326,7 @@ function renderDocs() {
     }
     container.innerHTML = html;
 
-  } else if (activeResearchView === "alpha") {
+  } else if (activeResearchView === "id") {
     var sorted = filtered.slice().sort(researchIdSort);
     if (sorted.length === 0) {
       container.innerHTML = '<p class="empty-state">No documents match the search.</p>';
@@ -374,31 +334,33 @@ function renderDocs() {
       container.innerHTML = '<hr class="section-rule"><ul class="doc-list">' + sorted.map(renderDocItem).join("") + '</ul>';
     }
 
-  } else if (activeResearchView === "pub") {
-    var pubDocs = filtered.filter(function(d) { return d.status === "published"; });
-    pubDocs.sort(function(a, b) {
-      var da = a.date ? new Date(a.date) : new Date(0);
-      var db = b.date ? new Date(b.date) : new Date(0);
-      if (db - da !== 0) return db - da;
-      return (a.seq || 999) - (b.seq || 999);
+  } else if (activeResearchView === "title") {
+    var sorted = filtered.slice().sort(function(a, b) {
+      return a.title.localeCompare(b.title);
     });
-    if (pubDocs.length === 0) {
-      container.innerHTML = '<p class="empty-state">No published documents match the search.</p>';
-    } else {
-      container.innerHTML = '<hr class="section-rule"><ul class="doc-list">' + pubDocs.map(renderDocItem).join("") + '</ul>';
-    }
-  } else if (activeResearchView === "date") {
-    var dateDocs = filtered.slice();
-    dateDocs.sort(function(a, b) {
-      var da = a.date ? new Date(a.date) : new Date(0);
-      var db = b.date ? new Date(b.date) : new Date(0);
-      if (db - da !== 0) return db - da;
-      return (a.seq || 999) - (b.seq || 999);
-    });
-    if (dateDocs.length === 0) {
+    if (sorted.length === 0) {
       container.innerHTML = '<p class="empty-state">No documents match the search.</p>';
     } else {
-      container.innerHTML = '<hr class="section-rule"><ul class="doc-list">' + dateDocs.map(renderDocItem).join("") + '</ul>';
+      container.innerHTML = '<hr class="section-rule"><ul class="doc-list">' + sorted.map(renderDocItem).join("") + '</ul>';
+    }
+
+  } else if (activeResearchView === "date") {
+    var typeOrder = { whitepaper: 0, mortar: 1, framework: 2, research: 3, definitions: 4 };
+    var dateSorted = filtered.slice().sort(function(a, b) {
+      var da = a.date ? new Date(a.date) : new Date(0);
+      var db = b.date ? new Date(b.date) : new Date(0);
+      if (db - da !== 0) return db - da;
+      var ta = typeOrder[a.type] !== undefined ? typeOrder[a.type] : 99;
+      var tb = typeOrder[b.type] !== undefined ? typeOrder[b.type] : 99;
+      if (ta !== tb) return ta - tb;
+      var numA = parseInt(a.id.replace(/[^0-9]/g, ""), 10) || 0;
+      var numB = parseInt(b.id.replace(/[^0-9]/g, ""), 10) || 0;
+      return numB - numA;
+    });
+    if (dateSorted.length === 0) {
+      container.innerHTML = '<p class="empty-state">No documents match the search.</p>';
+    } else {
+      container.innerHTML = '<hr class="section-rule"><ul class="doc-list">' + dateSorted.map(renderDocItem).join("") + '</ul>';
     }
   }
 }
