@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://synthience.org/research.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-13</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/faq.html</loc>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://synthience.org/updates.html</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-13</lastmod>
   </url>
 
   <!-- Field Notes -->
@@ -175,6 +175,12 @@
   <url>
     <loc>https://synthience.org/research/SI-WP-009.html</loc>
     <lastmod>2026-05-08</lastmod>
+  </url>
+
+  <!-- New research publication May 13 2026 -->
+  <url>
+    <loc>https://synthience.org/research/SI-WP-010.html</loc>
+    <lastmod>2026-05-13</lastmod>
   </url>
 
 </urlset>
