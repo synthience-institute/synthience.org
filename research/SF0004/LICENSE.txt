@@ -1,0 +1,122 @@
+MTCS-R Release Package
+SF0004 / Synthience Institute
+
+================================================================
+LICENSE
+================================================================
+
+Copyright (c) 2026 Thomas W. Gantz / Synthience Institute
+
+This work is licensed under the Creative Commons Attribution 4.0
+International License (CC-BY 4.0).
+
+You are free to:
+
+  Share - copy and redistribute the material in any medium or format
+  Adapt - remix, transform, and build upon the material for any
+          purpose, including commercial purposes
+
+Under the following terms:
+
+  Attribution - You must give appropriate credit, provide a link
+                to the license, and indicate if changes were made.
+                You may do so in any reasonable manner, but not in
+                any way that suggests the licensor endorses you or
+                your use.
+
+The full license text is available at:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+A human-readable summary of the license is at:
+https://creativecommons.org/licenses/by/4.0/
+
+================================================================
+RECOMMENDED ATTRIBUTION
+================================================================
+
+When citing or attributing this work, the following format is
+recommended:
+
+  Gantz, T. W. MTCS-R: Measurement Instruments and Validation
+  Protocols. Synthience Institute. SF0004. Current version and
+  DOI: synthience.org. CC-BY 4.0.
+
+For BibTeX:
+
+  @misc{gantz_mtcsr,
+    author    = {Gantz, Thomas W.},
+    title     = {Measurement Instruments and Validation Protocols:
+                 Multi-Turn Coherence Scale, Revised (MTCS-R)},
+    publisher = {Synthience Institute},
+    note      = {SF0004. Current version and DOI:
+                 synthience.org}
+  }
+
+================================================================
+SCOPE OF THIS LICENSE
+================================================================
+
+This CC-BY 4.0 license applies to:
+
+  - The SF0004 paper (PDF, Word, and Markdown forms; the
+    deposit copy is the SF0004 paper PDF)
+  - MTCS-R_Rater_Training_Packet.docx
+  - MTCS-R_Scoring_Template.xlsx
+  - Original code and original sample data within the
+    MTCS-R Code Examples archive
+  - README_FIRST.md
+  - MANIFEST.txt
+  - This LICENSE.txt file
+
+================================================================
+THIRD-PARTY DEPENDENCIES
+================================================================
+
+The MTCS-R Code Examples archive references third-party
+software dependencies that are not redistributed within this
+package and remain under their own licenses. Notable
+dependencies include:
+
+  - sentence-transformers (Apache License 2.0)
+  - scipy (BSD 3-Clause License)
+  - numpy (BSD 3-Clause License)
+  - pandas (BSD 3-Clause License)
+  - matplotlib (Matplotlib License, BSD-compatible)
+  - transformers (Apache License 2.0)
+  - torch (BSD-style License)
+  - irr R package (GPL-2 or GPL-3)
+  - psych R package (GPL-2 or GPL-3)
+
+Users of the Code Examples archive must comply with the
+licenses of these dependencies as installed from their
+respective distribution channels (PyPI, CRAN, etc.). The
+CC-BY 4.0 license granted by Synthience Institute over the
+original code in the archive does not extend to or modify
+these third-party licenses.
+
+For the complete list of Python dependencies, see
+requirements.txt within the Code Examples archive.
+
+================================================================
+CONTACT
+================================================================
+
+Questions regarding this license or attribution requirements
+may be directed to:
+
+  research@synthience.org
+  https://synthience.org
+
+================================================================
+NO WARRANTY
+================================================================
+
+Unless required by applicable law or agreed to in writing,
+licensor offers the work as-is and makes no representations or
+warranties of any kind concerning the work, express, implied,
+statutory, or otherwise, including without limitation
+warranties of title, merchantability, fitness for a particular
+purpose, non-infringement, or the absence of latent or other
+defects, accuracy, or the presence or absence of errors,
+whether or not discoverable. This is consistent with the
+standard CC-BY 4.0 disclaimer.

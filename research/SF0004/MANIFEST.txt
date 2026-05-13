@@ -1,0 +1,97 @@
+MTCS-R Release Package
+SF0004 / Synthience Institute
+Author: Thomas W. Gantz
+Affiliation: Synthience Institute
+Contact: research@synthience.org
+License: CC-BY 4.0 (see LICENSE.txt)
+Canonical record: synthience.org
+
+================================================================
+FILES
+================================================================
+
+1. SF0004_MTCS-R.pdf
+   Role: Primary instrument specification (PDF, deposited form).
+   Description: Multi-Turn Coherence Scale, Revised (MTCS-R).
+                Construct definition, behavioral anchors, validation
+                pathway, reporting standards, references.
+   Format: PDF (Word and Markdown source forms available at the
+           canonical record on synthience.org).
+   License: CC-BY 4.0
+
+2. MTCS-R_Rater_Training_Packet.docx
+   Role: Companion rater training material.
+   Description: Dimension definitions, behavioral anchor reference
+                tables, scoring guidelines, three annotated example
+                transcripts with reference scores and rationale,
+                calibration discussion guide, reference materials.
+   Format: DOCX (Microsoft Word)
+   License: CC-BY 4.0
+
+3. MTCS-R_Scoring_Template.xlsx
+   Role: Workbook for entering dimension scores, notes, composite
+         scores, and simple observed agreement.
+   Description: Three-sheet Excel workbook (Scoring Form, Dimension
+                Anchors, Reliability). The Reliability sheet
+                computes simple observed agreement only; for
+                ICC(2,k) and Krippendorff's alpha, use the R script
+                in the Code Examples archive.
+   Format: XLSX (Microsoft Excel)
+   License: CC-BY 4.0
+
+4. MTCS-R-Code-Examples.zip
+   Role: Computational examples and reliability calculation tools.
+   Description: Sentence-embedding-based semantic drift analysis
+                (Python script and Jupyter notebook), perplexity
+                trajectory analysis (Python), inter-rater reliability
+                calculation including ICC(2,k) and Krippendorff's
+                alpha (R), sample data files for demonstration.
+   Format: ZIP archive
+   License: CC-BY 4.0 for original code; third-party software
+            dependencies under their own licenses (see archive
+            requirements.txt and README.md for details)
+
+5. README_FIRST.md
+   Role: Orientation document.
+   Description: Pre-validation framing requirements (must be read
+                before opening the paper), recommended use order,
+                package inventory, citation format. Designed to
+                make framing requirements unavoidable.
+   Format: Markdown
+   License: CC-BY 4.0
+
+6. MANIFEST.txt
+   Role: This file. Inventory of deposit contents.
+   Format: Plain text
+   License: CC-BY 4.0
+
+7. LICENSE.txt
+   Role: License statement for the deposit package.
+   Format: Plain text
+   License: text describes CC-BY 4.0 application to the package
+
+================================================================
+VERSIONS AND CANONICAL RECORD
+================================================================
+
+Companion files in this package do not embed paper version
+numbers. The paper itself is versioned. The current version of
+the paper, the canonical DOI, and any release notes are
+maintained at:
+
+  synthience.org
+
+The Zenodo deposit also displays the current version DOI and
+concept DOI for the paper. Companion files should be used with
+the version of the paper available at the canonical record at
+the time of use.
+
+================================================================
+PRE-VALIDATION STATUS
+================================================================
+
+This package is a pre-validation specification. MTCS-R has not
+yet undergone Phase 1 reliability testing or Phase 2 factor
+structure validation. See SF0004 Section 10 for the full
+pre-validation status statement and README_FIRST.md for the
+framing requirements that follow from it.
