@@ -273,6 +273,8 @@ function matchesSearch(doc) {
 }
 
 // === SORTING ===
+var typeOrder = { whitepaper: 0, mortar: 1, framework: 2, research: 3, definitions: 4 };
+
 function researchIdSort(a, b) {
   var prefixA = a.id.replace(/[0-9]/g, "").replace(/-+$/, "");
   var prefixB = b.id.replace(/[0-9]/g, "").replace(/-+$/, "");
@@ -280,6 +282,25 @@ function researchIdSort(a, b) {
   var numA = parseInt(a.id.replace(/[^0-9]/g, ""), 10) || 0;
   var numB = parseInt(b.id.replace(/[^0-9]/g, ""), 10) || 0;
   return numA - numB;
+}
+
+function publicationDateSort(a, b) {
+  var da = a.date ? new Date(a.date) : new Date(0);
+  var db = b.date ? new Date(b.date) : new Date(0);
+  if (db - da !== 0) return db - da;
+
+  // Manual same-date publication ordering.
+  // Higher dateOrder values display earlier. Entries without dateOrder fall back to type/ID order.
+  var oa = typeof a.dateOrder === "number" ? a.dateOrder : 0;
+  var ob = typeof b.dateOrder === "number" ? b.dateOrder : 0;
+  if (ob - oa !== 0) return ob - oa;
+
+  var ta = typeOrder[a.type] !== undefined ? typeOrder[a.type] : 99;
+  var tb = typeOrder[b.type] !== undefined ? typeOrder[b.type] : 99;
+  if (ta !== tb) return ta - tb;
+  var numA = parseInt(a.id.replace(/[^0-9]/g, ""), 10) || 0;
+  var numB = parseInt(b.id.replace(/[^0-9]/g, ""), 10) || 0;
+  return numB - numA;
 }
 
 // === RENDERING ===
@@ -313,7 +334,7 @@ function renderDocs() {
   if (activeResearchView === "type") {
     var html = "";
     typeDefs.forEach(function(td) {
-      var typeItems = filtered.filter(function(d) { return d.type === td.key; });
+      var typeItems = filtered.filter(function(d) { return d.type === td.key; }).sort(publicationDateSort);
       if (typeItems.length === 0) return;
       var isCollapsed = collapsedSections[td.key] || false;
       var chevronClass = "doc-section-chevron" + (isCollapsed ? " collapsed" : "");
@@ -352,25 +373,7 @@ function renderDocs() {
     }
 
   } else if (activeResearchView === "date") {
-    var typeOrder = { whitepaper: 0, mortar: 1, framework: 2, research: 3, definitions: 4 };
-    var dateSorted = filtered.slice().sort(function(a, b) {
-      var da = a.date ? new Date(a.date) : new Date(0);
-      var db = b.date ? new Date(b.date) : new Date(0);
-      if (db - da !== 0) return db - da;
-
-      // Manual same-date publication ordering.
-      // Higher dateOrder values display earlier. Entries without dateOrder fall back to type/ID order.
-      var oa = typeof a.dateOrder === "number" ? a.dateOrder : 0;
-      var ob = typeof b.dateOrder === "number" ? b.dateOrder : 0;
-      if (ob - oa !== 0) return ob - oa;
-
-      var ta = typeOrder[a.type] !== undefined ? typeOrder[a.type] : 99;
-      var tb = typeOrder[b.type] !== undefined ? typeOrder[b.type] : 99;
-      if (ta !== tb) return ta - tb;
-      var numA = parseInt(a.id.replace(/[^0-9]/g, ""), 10) || 0;
-      var numB = parseInt(b.id.replace(/[^0-9]/g, ""), 10) || 0;
-      return numB - numA;
-    });
+    var dateSorted = filtered.slice().sort(publicationDateSort);
     if (dateSorted.length === 0) {
       container.innerHTML = '<p class="empty-state">No documents match the search.</p>';
     } else {
