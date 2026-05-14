@@ -13,18 +13,18 @@
   <meta charset="UTF-8">
   <title>PG-000: 10 Things Every AI User Should Do · Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A short reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
+  <meta name="description" content="A reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
   <meta property="og:title" content="10 Things Every AI User Should Do · Synthience Institute">
-  <meta property="og:description" content="A short reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
+  <meta property="og:description" content="A reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
   <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-000.html">
   <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
   <meta name="twitter:title" content="10 Things Every AI User Should Do · Synthience Institute">
-  <meta name="twitter:description" content="A short reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
+  <meta name="twitter:description" content="A reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
@@ -164,13 +164,13 @@
   <span>Thomas W. Gantz</span>
 </div>
 
-<p><em>A short reliability baseline for any AI system, any platform, any task</em></p>
+<p><em>A reliability baseline for any AI system, any platform, any task</em></p>
 
 <p>AI systems fail in predictable ways. They claim to have read documents they only skimmed. They give you the first answer that sounds good rather than the best answer they could produce. They edit one part of a file and quietly change another. They make confident claims about their own behavior that turn out not to be true.</p>
 
-<p>These are not edge cases. They are the default behavior of every major AI system in professional use today, and they cause real failures in real work that nobody notices until later.</p>
+<p>These are not rare edge cases. They are recurring failure modes across major AI systems in professional use, and they cause real failures in real work that often go unnoticed until later.</p>
 
-<p>The good news is that you can prevent most of them with ten habits. They are short, concrete, and work on any AI system you are likely to use. You can read this whole guide in a couple of minutes, and the practices themselves take only a few seconds each to apply in any prompt.</p>
+<p>The good news is that you can reduce many of these failures with ten habits. They are short, concrete, and work on any AI system you are likely to use. The practices themselves take only a few seconds each to apply in any prompt.</p>
 
 <div class="pg-callout">Fluent output is not reliable output. AI fidelity is something you manage, not something you assume.</div>
 
@@ -186,7 +186,7 @@
 <div class="practice">
   <h4><span class="practice-num">2.</span> Make the AI critique its own work before giving it to you.</h4>
   <p><span class="label">Problem:</span> The AI stops at the first answer that sounds adequate. That is almost never its best work, just its fastest acceptable work.</p>
-  <p><span class="label">Solution:</span> Tell it to evaluate its own draft and improve it before responding. Most AI systems will produce noticeably better output when asked to do this, because they are capable of more than their default effort.</p>
+  <p><span class="label">Solution:</span> Tell it to evaluate its own draft and improve it before responding. This gives the system an explicit opportunity to check for omissions, weak reasoning, unsupported claims, and unclear language before you see the answer.</p>
   <div class="try-this"><span class="label">Try this:</span> "Before you give me the final answer, do one internal review pass. Look for omissions, weak reasoning, unsupported claims, and unclear language. Then give me the improved version."</div>
 </div>
 
@@ -200,7 +200,7 @@
 <div class="practice">
   <h4><span class="practice-num">4.</span> When the AI cites a source, make it quote the source.</h4>
   <p><span class="label">Problem:</span> AI doesn't only fabricate sources that don't exist. More commonly, it cites real sources but misrepresents what they actually say, often attributing claims to authors who never made them.</p>
-  <p><span class="label">Solution:</span> When the AI attributes a claim to a document, report, person, or organization, ask for the exact wording from the source. If it cannot produce the quote, the citation cannot be trusted.</p>
+  <p><span class="label">Solution:</span> When the AI attributes a claim to a document, report, person, or organization, ask for the exact wording from the source. If it cannot produce the supporting quote or a precise pointer to where the source says it, do not rely on the citation without checking it yourself.</p>
   <div class="try-this"><span class="label">Try this:</span> "For each claim you attributed to a source, quote the exact passage that supports it. If you cannot produce the exact quote, say so."</div>
 </div>
 
@@ -214,13 +214,13 @@
 <div class="practice">
   <h4><span class="practice-num">6.</span> Don't trust the AI's claims about what it did. Require evidence.</h4>
   <p><span class="label">Problem:</span> When you ask if it completed a task, the AI will say yes. When you ask if it read the whole document, it will say yes. These are not reports of what actually happened. They are predictions of what a good response sounds like.</p>
-  <p><span class="label">Solution:</span> When the AI tells you it did something, ask it to show the work. For any claim about its own process, require concrete evidence: a quote, a specific reference, a structured comparison.</p>
+  <p><span class="label">Solution:</span> When the AI tells you it did something, ask it to show the work. For any claim about its own process, require concrete evidence: a quote, a specific reference, a structured comparison. Then check that evidence against the actual source before treating the claim as verified.</p>
   <div class="try-this"><span class="label">Try this:</span> "You said you reviewed the entire document. Quote the last paragraph of the final section verbatim, and name the section headers in order."</div>
 </div>
 
 <div class="practice">
   <h4><span class="practice-num">7.</span> Keep your constraints somewhere you can re-paste them.</h4>
-  <p><span class="label">Problem:</span> Constraints you give the AI early in a conversation quietly lose force over time. By turn fifteen, the AI may be ignoring rules it accepted clearly at turn three. This is not the AI being lazy. It is a structural effect of how long sessions work.</p>
+  <p><span class="label">Problem:</span> Constraints you give the AI early in a conversation quietly lose force over time. By turn fifteen, the AI may be ignoring rules it accepted clearly at turn three. This is not a question of intention. It is a structural effect of how long sessions work.</p>
   <p><span class="label">Solution:</span> Keep your key constraints in a separate note or document, not just in the chat. Re-paste them periodically, especially before any important task.</p>
   <div class="try-this"><span class="label">Try this:</span> Save your standing instructions ("never make claims without supporting evidence", "always preserve exact wording of unchanged sections", "flag uncertainty explicitly") in a text file. Paste them at the start of important sessions and again before any critical request.</div>
 </div>
@@ -229,7 +229,7 @@
   <h4><span class="practice-num">8.</span> Re-ground or restart when a long session has drifted.</h4>
   <p><span class="label">Problem:</span> The longer a conversation goes, the more the AI's understanding drifts away from what you originally told it. Outputs sound just as fluent, but they are increasingly built on a degraded version of your context.</p>
   <p><span class="label">Solution:</span> When a session starts producing answers that feel slightly off, do not try to push through. Either re-paste the key context and constraints, or start a fresh session with a clean summary.</p>
-  <div class="try-this"><span class="label">Try this:</span> "Before continuing, restate what you understand to be the goal of this work, the key constraints I have given you, and the current task. If your understanding drifts from mine, I will correct it now."</div>
+  <div class="try-this"><span class="label">Try this:</span> "Before continuing, restate what you understand to be the goal of this work, the key constraints I have given you, and the current task. Wait for me to correct anything that is wrong before continuing."</div>
 </div>
 
 <div class="practice">
@@ -260,11 +260,13 @@
   5. After the work is complete, give me a short reliability note: what you did, what you preserved, what you are confident about, and what may need human review.
 </div>
 
+<p>This master prompt does not replace the file-management and session-management practices above. You still need to keep originals, save important work outside the chat, re-paste constraints when needed, and use a second AI review for high-stakes work.</p>
+
 <h3>The underlying rule</h3>
 
 <p>Fluent output is not reliable output. AI sounds confident whether or not it has done the work correctly. The ten practices above exist because they make the working process visible enough to check. That is the difference between AI output you can rely on and AI output that looks fine until something breaks later.</p>
 
-<p>None of these practices require technical skill. None of them require special tools. They cost a few seconds each, and they prevent most of the avoidable failures that hit professional AI users every week.</p>
+<p>None of these practices require technical skill. None of them require special tools. They cost a few seconds each, and they can reduce many of the avoidable failures that hit professional AI users every week.</p>
 
 <div class="core-series">
 <div class="core-series-header">Core Practitioner Guides</div>
