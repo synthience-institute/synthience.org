@@ -97,6 +97,76 @@
       margin-top: 0.15rem;
     }
 
+    /* === FEATURED GUIDE BLOCK (PG-000) === */
+    .featured-guide {
+      background: #fdfaf3;
+      border: 2px solid #c8604a;
+      border-radius: 6px;
+      padding: 1.1rem 1.3rem;
+      margin-bottom: 1.4rem;
+      position: relative;
+    }
+    .featured-guide-label {
+      display: inline-block;
+      background: #c8604a;
+      color: #fff;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+      font-weight: 600;
+      margin-bottom: 0.55rem;
+    }
+    .featured-guide-title {
+      font-size: 1.12rem;
+      font-weight: 600;
+      margin: 0 0 0.35rem 0;
+    }
+    .featured-guide-title a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .featured-guide-title a:hover { color: #3a2518; text-decoration: underline; }
+    .featured-guide-pitch {
+      font-size: 0.92rem;
+      color: #3a3530;
+      line-height: 1.55;
+      margin: 0 0 0.5rem 0;
+    }
+    .featured-guide-meta {
+      font-size: 0.82rem;
+      color: #8a7f72;
+    }
+    .featured-guide-meta a.featured-read {
+      display: inline-block;
+      margin-right: 0.6rem;
+      color: #5a3e2b;
+      text-decoration: none;
+      font-weight: 500;
+      border: 1px solid #5a3e2b;
+      border-radius: 3px;
+      padding: 0.15rem 0.65rem;
+      transition: all 0.15s;
+    }
+    .featured-guide-meta a.featured-read:hover { background: #5a3e2b; color: #fff; }
+
+    /* === START HERE BADGE (in full list) === */
+    .start-here-badge {
+      display: inline-block;
+      background: #c8604a;
+      color: #fff;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.1rem 0.45rem;
+      border-radius: 2px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+
+
     /* === SEARCH INPUT === */
     .search-container { margin-bottom: 1rem; }
     .search-input {
@@ -325,15 +395,27 @@
   <div class="stat"><span class="dot dot-published"></span> <span id="count-published"></span> published</div>
 </div>
 
-<!-- Core Practitioner Guides block: PG-001 through PG-005 as the foundational set for any AI user -->
+<!-- Featured guide: PG-000 as the front door, separate from the existing core/video block -->
+<div class="featured-guide">
+  <span class="featured-guide-label">Start Here</span>
+  <div class="featured-guide-title"><a href="practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a></div>
+  <p class="featured-guide-pitch">If you only read one of these guides, read this one. Ten short, concrete practices that prevent the most common ways AI-assisted work goes wrong. Each one is one Problem, one Solution, and one example prompt you can copy directly into your next AI session. No technical background required, works on any AI platform, applies to any kind of task.</p>
+  <div class="featured-guide-meta">
+    <a class="featured-read" href="practitioner-guides/PG-000.html">Read &rarr;</a>
+    <span>A few minutes to read, immediately useful.</span>
+  </div>
+</div>
+
+<!-- Core Practitioner Guides block: deeper individual treatments of specific practices from PG-000 -->
 <div class="start-here">
-  <div class="start-here-header">Core Practitioner Guides</div>
-  <div class="start-here-subtitle">Five guides that will immediately improve how you use AI at work. No technical background required. Read PG-001 through PG-005.</div>
+  <div class="start-here-header">Five Practitioner Guides in Depth</div>
+  <div class="start-here-subtitle">If a specific practice in PG-000 resonates with a problem you have hit in your own work, these guides go deeper.</div>
   <div class="start-here-items" id="core-items"></div>
   <div class="start-here-divider"></div>
   <div class="start-here-header-secondary">Video Guides</div>
   <div class="start-here-items" id="video-items"></div>
 </div>
+
 
 <div class="search-container">
   <input type="text" class="search-input" id="search-input" placeholder="Search guides by title, description, or ID..." oninput="handleSearch()">
@@ -367,6 +449,18 @@
 <script>
 // === DATA: CATEGORIZED GUIDES ===
 var allGuides = [
+  {
+    id: "PG-000",
+    title: "10 Things Every AI User Should Do",
+    desc: "A short reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong, each presented as one Problem, one Solution, and one example prompt you can copy directly into your next AI session.",
+    date: "2026-05-14",
+    dateDisplay: "May 14, 2026",
+    anchor: "Verification Vertical (SF0037-SF0040)",
+    read: "practitioner-guides/PG-000.html",
+    category: "interaction",
+    format: "text",
+    featured: true
+  },
   {
     id: "PG-002",
     title: "AI-Assisted Editing Without Silent Loss",
@@ -621,8 +715,9 @@ function formatBadge(format) {
 }
 
 function renderCard(doc) {
+  var badge = doc.featured ? '<span class="start-here-badge">Start Here</span>' : '';
   return '<li onclick="window.location=\'' + doc.read + '\'">'
-    + '<div class="fn-id">' + doc.id + ' ' + formatBadge(doc.format) + '</div>'
+    + '<div class="fn-id">' + doc.id + ' ' + formatBadge(doc.format) + badge + '</div>'
     + '<div class="fn-title"><a href="' + doc.read + '">' + doc.title + '</a></div>'
     + '<div class="fn-desc">' + doc.desc + '</div>'
     + '<div class="fn-meta">'
