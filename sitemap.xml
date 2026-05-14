@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://synthience.org/practitioner-guides.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-05-14</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/updates.html</loc>
@@ -78,6 +78,10 @@
   </url>
 
   <!-- Practitioner Guides -->
+  <url>
+    <loc>https://synthience.org/practitioner-guides/PG-000.html</loc>
+    <lastmod>2026-05-14</lastmod>
+  </url>
   <url>
     <loc>https://synthience.org/practitioner-guides/PG-001.html</loc>
     <lastmod>2026-04-05</lastmod>
