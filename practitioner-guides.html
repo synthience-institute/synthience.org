@@ -422,7 +422,7 @@
 </div>
 
 <div id="format-filter" class="filter-row"></div>
-<div class="filter-hint">Format filter and search work together -- results match all active selections. Use &ldquo;All Articles&rdquo; view to see everything in a single list.</div>
+<div class="filter-hint">Format filter and search work together. Results match all active selections. Use &ldquo;All Articles&rdquo; view to see everything in a single list.</div>
 
 <div class="controls-row">
   <div class="view-toggle">
@@ -432,9 +432,9 @@
   </div>
   <div class="sort-toggle">
     <span>Sort:</span>
-    <button id="sort-date" class="active" onclick="setSort('date')">Date</button>
+    <button id="sort-date" onclick="setSort('date')">Date</button>
     <button id="sort-title" onclick="setSort('title')">Title</button>
-    <button id="sort-id" onclick="setSort('id')">ID</button>
+    <button id="sort-id" class="active" onclick="setSort('id')">ID</button>
   </div>
 </div>
 
@@ -457,7 +457,7 @@ var allGuides = [
     dateDisplay: "May 14, 2026",
     anchor: "Verification Vertical (SF0037-SF0040)",
     read: "practitioner-guides/PG-000.html",
-    category: "interaction",
+    category: "",
     format: "text",
     featured: true
   },
@@ -621,7 +621,7 @@ var categories = [
 // === STATE ===
 var activeFormat = "all";
 var activeView = sessionStorage.getItem("pg-view") || "all";
-var activeSort = sessionStorage.getItem("pg-sort") || "date";
+var activeSort = sessionStorage.getItem("pg-sort") || "id";
 var searchTerm = "";
 var collapsedCategories = {};
 var searchTimer = null;
@@ -812,14 +812,15 @@ function setSort(by) {
 
 // === INIT ===
 (function() {
-  if (activeView !== "category") {
-    document.getElementById("view-category").classList.remove("active");
-    document.getElementById("view-" + activeView).classList.add("active");
-  }
-  if (activeSort !== "date") {
-    document.getElementById("sort-date").classList.remove("active");
-    document.getElementById("sort-" + activeSort).classList.add("active");
-  }
+  document.querySelectorAll(".view-toggle button").forEach(function(btn) {
+    btn.classList.remove("active");
+  });
+  document.getElementById("view-" + activeView).classList.add("active");
+
+  document.querySelectorAll(".sort-toggle button").forEach(function(btn) {
+    btn.classList.remove("active");
+  });
+  document.getElementById("sort-" + activeSort).classList.add("active");
 })();
 
 renderStartHere();
