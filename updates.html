@@ -116,6 +116,7 @@
 </div>
 
 <div id="tag-filter" class="filter-row"></div>
+<div id="sort-controls" class="filter-row"></div>
 
 <ul class="update-list" id="update-list"></ul>
 
@@ -131,6 +132,7 @@ var allUpdates = [
   {
     date: "2026-05-14",
     dateDisplay: "May 14, 2026",
+    dateOrder: 2,
     title: "PG-000: 10 Things Every AI User Should Do",
     link: "practitioner-guides/PG-000.html",
     tag: "Practitioner Guide",
@@ -141,6 +143,7 @@ var allUpdates = [
   {
     date: "2026-05-14",
     dateDisplay: "May 14, 2026",
+    dateOrder: 1,
     title: "FN-007: The Quote That Closed the Apologetic Era",
     link: "field-notes/FN-007.html",
     tag: "Field Note",
@@ -389,6 +392,7 @@ var allUpdates = [
 
 // === STATE ===
 var activeUpdateTag = "all";
+var activeSort = "date";
 var searchTerm = "";
 var searchTimeout = null;
 
@@ -416,6 +420,21 @@ function setUpdateTag(tag) {
   renderUpdates();
 }
 
+// === SORT CONTROLS ===
+function renderSortButtons() {
+  var container = document.getElementById("sort-controls");
+  var html = '<span>Sort:</span>';
+  html += '<button class="' + (activeSort === "date" ? "active" : "") + '" onclick="setSort(\'date\')">Date</button>';
+  html += '<button class="' + (activeSort === "title" ? "active" : "") + '" onclick="setSort(\'title\')">Title</button>';
+  container.innerHTML = html;
+}
+
+function setSort(by) {
+  activeSort = by;
+  renderSortButtons();
+  renderUpdates();
+}
+
 // === SEARCH ===
 function handleSearch() {
   clearTimeout(searchTimeout);
@@ -423,6 +442,29 @@ function handleSearch() {
     searchTerm = document.getElementById("search-input").value.toLowerCase().trim();
     renderUpdates();
   }, 150);
+}
+
+// === SORT ===
+// Matches the research-page convention: higher dateOrder displays earlier.
+// Entries without dateOrder fall back to insertion order via stable sort.
+function publicationDateSort(a, b) {
+  var da = a.date ? new Date(a.date) : new Date(0);
+  var db = b.date ? new Date(b.date) : new Date(0);
+  if (db - da !== 0) return db - da;
+
+  var oa = typeof a.dateOrder === "number" ? a.dateOrder : 0;
+  var ob = typeof b.dateOrder === "number" ? b.dateOrder : 0;
+  return ob - oa;
+}
+
+function titleSort(a, b) {
+  // Strip leading "ID:" prefix (e.g. "PG-000: ", "FN-007: ", "SF0004: ", "SI-WP-010: ")
+  // so the alphabetical sort goes by the actual title text rather than by the ID.
+  // Titles without a clear ID prefix (e.g. "TCAP Published on Zenodo") are sorted as-is.
+  var idColonPrefix = /^[A-Z]+(-[A-Z]+)?-?\d+[A-Za-z\-]*:\s*/;
+  var ta = a.title.replace(idColonPrefix, "").toLowerCase();
+  var tb = b.title.replace(idColonPrefix, "").toLowerCase();
+  return ta.localeCompare(tb);
 }
 
 // === RENDERING ===
@@ -440,6 +482,8 @@ function renderUpdates() {
         || u.tag.toLowerCase().indexOf(searchTerm) !== -1;
     });
   }
+
+  filtered.sort(activeSort === "title" ? titleSort : publicationDateSort);
 
   var container = document.getElementById("update-list");
 
@@ -470,6 +514,7 @@ function renderUpdates() {
 
 // === INIT ===
 renderUpdateTagButtons();
+renderSortButtons();
 renderUpdates();
 </script>
 </body>
