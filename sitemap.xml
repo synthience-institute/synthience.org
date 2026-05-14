@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://synthience.org/field-notes.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-05-14</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/practitioner-guides.html</loc>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://synthience.org/updates.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
   </url>
 
   <!-- Field Notes -->
@@ -71,6 +71,10 @@
   <url>
     <loc>https://synthience.org/field-notes/FN-006.html</loc>
     <lastmod>2026-04-22</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/field-notes/FN-007.html</loc>
+    <lastmod>2026-05-14</lastmod>
   </url>
 
   <!-- Practitioner Guides -->
