@@ -339,7 +339,7 @@ var allNotes = [
     desc: "AI governance has moved from data to models to execution. The missing layer is persistence. Execution governance is spatial; continuity governance is temporal. Systems will appear compliant until they are not.",
     date: "2026-04-22",
     dateDisplay: "April 22, 2026",
-    seq: 2,
+    dateOrder: 1,
     read: "field-notes/FN-005.html",
     tags: ["governance-policy", "operational-drift"],
     applicability: "context",
@@ -351,7 +351,7 @@ var allNotes = [
     desc: "OpenAI's industrial policy framework addresses what happens before and around AI deployment. It does not address the layer inside deployment itself, where governing intent is either sustained or gradually degrades.",
     date: "2026-04-22",
     dateDisplay: "April 22, 2026",
-    seq: 1,
+    dateOrder: 2,
     read: "field-notes/FN-006.html",
     tags: ["governance-policy", "industry-response"],
     applicability: "context",
@@ -503,7 +503,7 @@ function sortNoteList(list, by) {
     sorted.sort(function(a, b) {
       var d = b.date.localeCompare(a.date);
       if (d !== 0) return d;
-      return (a.seq || 999) - (b.seq || 999);
+      return (b.dateOrder || 0) - (a.dateOrder || 0);
     });
   } else if (by === "title") {
     sorted.sort(function(a, b) { return a.title.localeCompare(b.title); });

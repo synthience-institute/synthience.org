@@ -482,7 +482,7 @@ var allGuides = [
     read: "practitioner-guides/PG-003.html",
     category: "verification",
     format: "text",
-    seq: 2
+    dateOrder: 1
   },
   {
     id: "PG-006",
@@ -538,7 +538,7 @@ var allGuides = [
     read: "practitioner-guides/PG-007.html",
     category: "framework",
     format: "video",
-    seq: 1
+    dateOrder: 2
   },
   {
     id: "PG-008",
@@ -697,7 +697,7 @@ function sortList(list, by) {
     sorted.sort(function(a, b) {
       var d = b.date.localeCompare(a.date);
       if (d !== 0) return d;
-      return (a.seq || 999) - (b.seq || 999);
+      return (b.dateOrder || 0) - (a.dateOrder || 0);
     });
   } else if (by === "title") {
     sorted.sort(function(a, b) { return a.title.localeCompare(b.title); });
