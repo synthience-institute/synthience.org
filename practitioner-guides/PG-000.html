@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-000: 10 Things Every AI User Should Do · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A short reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="10 Things Every AI User Should Do · Synthience Institute">
+  <meta property="og:description" content="A short reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-000.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="10 Things Every AI User Should Do · Synthience Institute">
+  <meta name="twitter:description" content="A short reliability baseline for any AI system, any platform, any task. Ten practices that prevent the most common ways AI-assisted work goes wrong.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+
+    /* === PRACTICE BLOCK === */
+    .practice {
+      margin: 1.4rem 0 1.6rem 0;
+      padding-left: 0.9rem;
+      border-left: 3px solid #e0ddd4;
+    }
+    .practice h4 {
+      font-size: 1.02rem;
+      color: #3a3530;
+      margin: 0 0 0.5rem 0;
+    }
+    .practice-num {
+      color: #c8604a;
+      font-weight: 600;
+      margin-right: 0.3rem;
+    }
+    .practice p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+    .practice p .label {
+      font-weight: 600;
+      color: #5a3e2b;
+      margin-right: 0.25rem;
+    }
+    .practice .try-this {
+      background: #f4f2ec;
+      border-left: 2px solid #c8604a;
+      padding: 0.5rem 0.8rem;
+      margin: 0.5rem 0 0.2rem 0;
+      font-size: 0.92rem;
+      color: #3a3530;
+      font-style: italic;
+    }
+    .practice .try-this .label {
+      font-style: normal;
+    }
+
+    /* === SHORTCUT BLOCK === */
+    .shortcut {
+      background: #1a1714;
+      color: #e8e4dc;
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 1.2rem 0 1.5rem 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .shortcut .shortcut-label {
+      display: block;
+      color: #c8604a;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .further-reading p { margin: 0.5rem 0; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+  <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-000.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>10 Things Every AI User Should Do</h2>
+
+<div class="article-meta">
+  <span>PG-000</span>
+  <span>May 14, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p><em>A short reliability baseline for any AI system, any platform, any task</em></p>
+
+<p>AI systems fail in predictable ways. They claim to have read documents they only skimmed. They give you the first answer that sounds good rather than the best answer they could produce. They edit one part of a file and quietly change another. They make confident claims about their own behavior that turn out not to be true.</p>
+
+<p>These are not edge cases. They are the default behavior of every major AI system in professional use today, and they cause real failures in real work that nobody notices until later.</p>
+
+<p>The good news is that you can prevent most of them with ten habits. They are short, concrete, and work on any AI system you are likely to use. You can read this whole guide in a couple of minutes, and the practices themselves take only a few seconds each to apply in any prompt.</p>
+
+<div class="pg-callout">Fluent output is not reliable output. AI fidelity is something you manage, not something you assume.</div>
+
+<h3>The ten practices</h3>
+
+<div class="practice">
+  <h4><span class="practice-num">1.</span> Make the AI prove it read the document.</h4>
+  <p><span class="label">Problem:</span> When you upload a file, the AI often hasn't fully read it. It produces a fluent-sounding response built from whatever it scanned plus reasonable guesses to fill the gaps.</p>
+  <p><span class="label">Solution:</span> Before relying on the AI's answer, make it summarize the document's structure and identify specific details. If the summary could have been written without your file, the AI didn't actually read it.</p>
+  <div class="try-this"><span class="label">Try this:</span> "Before I ask anything else, summarize the main sections of the document I just gave you, and identify three specific details that would be easy to miss."</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">2.</span> Make the AI critique its own work before giving it to you.</h4>
+  <p><span class="label">Problem:</span> The AI stops at the first answer that sounds adequate. That is almost never its best work, just its fastest acceptable work.</p>
+  <p><span class="label">Solution:</span> Tell it to evaluate its own draft and improve it before responding. Most AI systems will produce noticeably better output when asked to do this, because they are capable of more than their default effort.</p>
+  <div class="try-this"><span class="label">Try this:</span> "Before you give me the final answer, do one internal review pass. Look for omissions, weak reasoning, unsupported claims, and unclear language. Then give me the improved version."</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">3.</span> Make the AI flag what it's uncertain about.</h4>
+  <p><span class="label">Problem:</span> AI presents guesses with the same confident tone as facts. You cannot tell from the writing alone which parts are solid and which parts the AI was filling in.</p>
+  <p><span class="label">Solution:</span> Require the AI to label uncertainty explicitly. This does not eliminate guessing, but it tells you where to double-check before acting.</p>
+  <div class="try-this"><span class="label">Try this:</span> "In your response, clearly mark any claim where you are uncertain, inferring, or working from incomplete information. Do not present guesses as facts."</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">4.</span> When the AI cites a source, make it quote the source.</h4>
+  <p><span class="label">Problem:</span> AI doesn't only fabricate sources that don't exist. More commonly, it cites real sources but misrepresents what they actually say, often attributing claims to authors who never made them.</p>
+  <p><span class="label">Solution:</span> When the AI attributes a claim to a document, report, person, or organization, ask for the exact wording from the source. If it cannot produce the quote, the citation cannot be trusted.</p>
+  <div class="try-this"><span class="label">Try this:</span> "For each claim you attributed to a source, quote the exact passage that supports it. If you cannot produce the exact quote, say so."</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">5.</span> Diff every AI-edited file against the original.</h4>
+  <p><span class="label">Problem:</span> When you ask the AI to edit a file, two failures happen quietly. The edit you asked for may not have happened cleanly. And sections you did not ask to change may have been silently reworded, compressed, or dropped.</p>
+  <p><span class="label">Solution:</span> Always keep the original file. After the edit, give both versions back to the AI and ask for a structured comparison, not a reassurance.</p>
+  <div class="try-this"><span class="label">Try this:</span> "Compare the edited version to the original. List exactly what changed, what stayed the same, and any sections that may have been compressed or reworded without my asking."</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">6.</span> Don't trust the AI's claims about what it did. Require evidence.</h4>
+  <p><span class="label">Problem:</span> When you ask if it completed a task, the AI will say yes. When you ask if it read the whole document, it will say yes. These are not reports of what actually happened. They are predictions of what a good response sounds like.</p>
+  <p><span class="label">Solution:</span> When the AI tells you it did something, ask it to show the work. For any claim about its own process, require concrete evidence: a quote, a specific reference, a structured comparison.</p>
+  <div class="try-this"><span class="label">Try this:</span> "You said you reviewed the entire document. Quote the last paragraph of the final section verbatim, and name the section headers in order."</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">7.</span> Keep your constraints somewhere you can re-paste them.</h4>
+  <p><span class="label">Problem:</span> Constraints you give the AI early in a conversation quietly lose force over time. By turn fifteen, the AI may be ignoring rules it accepted clearly at turn three. This is not the AI being lazy. It is a structural effect of how long sessions work.</p>
+  <p><span class="label">Solution:</span> Keep your key constraints in a separate note or document, not just in the chat. Re-paste them periodically, especially before any important task.</p>
+  <div class="try-this"><span class="label">Try this:</span> Save your standing instructions ("never make claims without supporting evidence", "always preserve exact wording of unchanged sections", "flag uncertainty explicitly") in a text file. Paste them at the start of important sessions and again before any critical request.</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">8.</span> Re-ground or restart when a long session has drifted.</h4>
+  <p><span class="label">Problem:</span> The longer a conversation goes, the more the AI's understanding drifts away from what you originally told it. Outputs sound just as fluent, but they are increasingly built on a degraded version of your context.</p>
+  <p><span class="label">Solution:</span> When a session starts producing answers that feel slightly off, do not try to push through. Either re-paste the key context and constraints, or start a fresh session with a clean summary.</p>
+  <div class="try-this"><span class="label">Try this:</span> "Before continuing, restate what you understand to be the goal of this work, the key constraints I have given you, and the current task. If your understanding drifts from mine, I will correct it now."</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">9.</span> Keep the things that matter outside the chat.</h4>
+  <p><span class="label">Problem:</span> Sessions get lost, context windows fill up, and AI systems do not give you reliable access to past conversations. If the only copy of important work lives inside a chat, it is one click away from gone.</p>
+  <p><span class="label">Solution:</span> Save your inputs, your outputs, and your key prompts to ordinary files outside the chat. Use the AI as a working tool, not a filing system.</p>
+  <div class="try-this"><span class="label">Try this:</span> Before ending an important session, copy the key results and the prompts that produced them into a document you control. Treat the chat as scratch paper, not permanent record.</div>
+</div>
+
+<div class="practice">
+  <h4><span class="practice-num">10.</span> For high-stakes work, run the AI's output past a different AI.</h4>
+  <p><span class="label">Problem:</span> An AI is unlikely to catch its own systematic mistakes. A different AI, on a different platform, often will, because its errors run in different directions.</p>
+  <p><span class="label">Solution:</span> For any output that will be used in a real decision, copy it into a second AI system and ask for adversarial review. This is the AI version of a second opinion.</p>
+  <div class="try-this"><span class="label">Try this:</span> "Here is a draft produced by another AI system. Review it adversarially. What is weak, missing, unsupported, or potentially wrong? Be specific."</div>
+</div>
+
+<h3>The shortcut</h3>
+
+<p>If you are only going to copy one thing, copy this. It does most of the work of practices 1, 2, 3, 4, and 6 in a single prompt. Paste it before any important AI task.</p>
+
+<div class="shortcut">
+  <span class="shortcut-label">Master prompt</span>
+  Before you answer:<br>
+  1. If I gave you source material, summarize its main sections and identify three specific details that would be easy to miss.<br>
+  2. Do one internal review pass on your draft before responding.<br>
+  3. Mark any claim where you are uncertain, inferring, or working from incomplete information.<br>
+  4. For any claim you attribute to a source, quote the exact passage. If you cannot produce the quote, say so.<br>
+  5. After the work is complete, give me a short reliability note: what you did, what you preserved, what you are confident about, and what may need human review.
+</div>
+
+<h3>The underlying rule</h3>
+
+<p>Fluent output is not reliable output. AI sounds confident whether or not it has done the work correctly. The ten practices above exist because they make the working process visible enough to check. That is the difference between AI output you can rely on and AI output that looks fine until something breaks later.</p>
+
+<p>None of these practices require technical skill. None of them require special tools. They cost a few seconds each, and they prevent most of the avoidable failures that hit professional AI users every week.</p>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">If one of the practices above resonates with a problem you have actually hit, the full guides go deeper.</p>
+<ul class="core-series-list">
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn&rsquo;t Touch?</a></li>
+</ul>
+</div>
+
+<div class="further-reading">
+<h3>Want to go deeper?</h3>
+
+<p>The ten practices above are distilled from the Synthience Institute's <strong>Verification Vertical</strong>, a set of four research papers that formalize the underlying failure modes and the protocols designed to prevent them. The papers are intended for researchers and AI governance practitioners, not for everyday users, but they are publicly available for anyone who wants the full technical treatment.</p>
+
+<ul>
+  <li><a href="../research/SF0037.html">SF0037: Citation Verification Protocol (CVP)</a> &mdash; how to verify that cited sources exist and actually support the claims attributed to them.</li>
+  <li><a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol (IVP)</a> &mdash; how to confirm that an AI system has genuinely processed a document, not just claimed to.</li>
+  <li><a href="../research/SF0039.html">SF0039: Context Representation Drift (CRD)</a> &mdash; why AI fidelity to your original context erodes over a long session, and how to detect it.</li>
+  <li><a href="../research/SF0040.html">SF0040: Theoretical Coherence Assurance Protocol (TCAP)</a> &mdash; how to stress-test AI-produced material before relying on it.</li>
+</ul>
+
+<p>Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-000 Practitioner Guide<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: May 14, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
