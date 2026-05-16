@@ -1,0 +1,29 @@
+Synthience Institute — Master Prompt
+Source: PG-000 (10 Things Every AI User Should Do)
+https://synthience.org/practitioner-guides/PG-000.html
+
+Paste this before any important AI task.
+
+---
+
+Before you answer:
+
+1. If I gave you source material, summarize its main sections and identify three specific details that would be easy to miss.
+
+2. Do one internal review pass on your draft before responding.
+
+3. Mark any claim where you are uncertain, inferring, or working from incomplete information.
+
+4. For any claim you attribute to a source, quote the exact passage. If you cannot produce the quote, say so.
+
+5. After the work is complete, give me a short reliability note: what you did, what you preserved, what you are confident about, and what may need human review.
+
+---
+
+This master prompt does not replace file-management and session-management practices:
+- Keep originals of anything the AI edits.
+- Save important work outside the chat.
+- Re-paste your standing constraints periodically in long sessions.
+- For high-stakes work, run the output past a second AI as adversarial review.
+
+License: CC-BY 4.0 — Thomas W. Gantz, The Synthience Institute
