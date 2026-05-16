@@ -73,6 +73,39 @@
     .practice .try-this .label {
       font-style: normal;
     }
+    /* Habit variant for reader-facing instructions (practices 7 and 9) */
+    .practice .habit {
+      background: #f4f2ec;
+      border-left: 2px dashed #c8604a;
+      padding: 0.5rem 0.8rem;
+      margin: 0.5rem 0 0.2rem 0;
+      font-size: 0.92rem;
+      color: #3a3530;
+    }
+    .practice .habit .label {
+      font-weight: 600;
+      color: #5a3e2b;
+      margin-right: 0.25rem;
+    }
+
+    /* === EMPHASIS CALLOUT (for high-value single insights) === */
+    .key-insight {
+      background: #fdf6f4;
+      border-left: 4px solid #c8604a;
+      padding: 0.7rem 1rem;
+      margin: 0.7rem 0 0.5rem 0;
+      font-size: 0.95rem;
+      color: #3a3530;
+    }
+    .key-insight .label {
+      font-weight: 600;
+      color: #c8604a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
 
     /* === SHORTCUT BLOCK === */
     .shortcut {
@@ -93,6 +126,19 @@
       margin-bottom: 0.5rem;
       font-weight: 600;
     }
+    .shortcut-actions {
+      margin-top: 0.8rem;
+      padding-top: 0.7rem;
+      border-top: 1px solid #3a3530;
+      font-size: 0.82rem;
+      color: #8a7f72;
+    }
+    .shortcut-actions a {
+      color: #c8604a;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+    .shortcut-actions a:hover { text-decoration: underline; }
 
     /* === CORE SERIES BLOCK === */
     .core-series {
@@ -170,7 +216,7 @@
 
 <p>These are not rare edge cases. They are recurring failure modes across major AI systems in professional use, and they cause real failures in real work that often go unnoticed until later.</p>
 
-<p>The good news is that you can reduce many of these failures with ten habits. They are short, concrete, and work on any AI system you are likely to use. The practices themselves take only a few seconds each to apply in any prompt.</p>
+<p>The good news is that you can reduce many of these failures with ten habits. They are short, concrete, and work on any AI system you are likely to use. Most take only a few seconds to apply in any prompt.</p>
 
 <div class="pg-callout">Fluent output is not reliable output. AI fidelity is something you manage, not something you assume.</div>
 
@@ -199,7 +245,11 @@
 
 <div class="practice">
   <h4><span class="practice-num">4.</span> When the AI cites a source, make it quote the source.</h4>
-  <p><span class="label">Problem:</span> AI doesn't only fabricate sources that don't exist. More commonly, it cites real sources but misrepresents what they actually say, often attributing claims to authors who never made them.</p>
+  <p><span class="label">Problem:</span> AI doesn't only fabricate sources that don't exist. More commonly, it cites <em>real</em> sources but misrepresents what they actually say.</p>
+  <div class="key-insight">
+    <span class="label">The failure mode most users miss</span>
+    The dangerous citation is not the one that points to a nonexistent paper. It is the one that points to a real paper, by a real author, that never made the claim being attributed to it. These citations pass casual inspection. They only fail when someone reads the source.
+  </div>
   <p><span class="label">Solution:</span> When the AI attributes a claim to a document, report, person, or organization, ask for the exact wording from the source. If it cannot produce the supporting quote or a precise pointer to where the source says it, do not rely on the citation without checking it yourself.</p>
   <div class="try-this"><span class="label">Try this:</span> "For each claim you attributed to a source, quote the exact passage that supports it. If you cannot produce the exact quote, say so."</div>
 </div>
@@ -220,9 +270,9 @@
 
 <div class="practice">
   <h4><span class="practice-num">7.</span> Keep your constraints somewhere you can re-paste them.</h4>
-  <p><span class="label">Problem:</span> Constraints you give the AI early in a conversation quietly lose force over time. By turn fifteen, the AI may be ignoring rules it accepted clearly at turn three. This is not a question of intention. It is a structural effect of how long sessions work.</p>
+  <p><span class="label">Problem:</span> Constraints you give the AI early in a conversation quietly lose force over time. You may tell the AI at turn three to always flag uncertainty, and by turn twenty it has stopped doing so without ever announcing the change. The outputs still sound fluent. The rule is just no longer being applied.</p>
   <p><span class="label">Solution:</span> Keep your key constraints in a separate note or document, not just in the chat. Re-paste them periodically, especially before any important task.</p>
-  <div class="try-this"><span class="label">Try this:</span> Save your standing instructions ("never make claims without supporting evidence", "always preserve exact wording of unchanged sections", "flag uncertainty explicitly") in a text file. Paste them at the start of important sessions and again before any critical request.</div>
+  <div class="habit"><span class="label">Habit:</span> Save your standing instructions ("never make claims without supporting evidence", "always preserve exact wording of unchanged sections", "flag uncertainty explicitly") in a text file. Paste them at the start of important sessions and again before any critical request.</div>
 </div>
 
 <div class="practice">
@@ -236,13 +286,13 @@
   <h4><span class="practice-num">9.</span> Keep the things that matter outside the chat.</h4>
   <p><span class="label">Problem:</span> Sessions get lost, context windows fill up, and AI systems do not give you reliable access to past conversations. If the only copy of important work lives inside a chat, it is one click away from gone.</p>
   <p><span class="label">Solution:</span> Save your inputs, your outputs, and your key prompts to ordinary files outside the chat. Use the AI as a working tool, not a filing system.</p>
-  <div class="try-this"><span class="label">Try this:</span> Before ending an important session, copy the key results and the prompts that produced them into a document you control. Treat the chat as scratch paper, not permanent record.</div>
+  <div class="habit"><span class="label">Habit:</span> Before ending an important session, copy the key results and the prompts that produced them into a document you control. Treat the chat as scratch paper, not permanent record.</div>
 </div>
 
 <div class="practice">
   <h4><span class="practice-num">10.</span> For high-stakes work, run the AI's output past a different AI.</h4>
-  <p><span class="label">Problem:</span> An AI is unlikely to catch its own systematic mistakes. A different AI, on a different platform, often will, because its errors run in different directions.</p>
-  <p><span class="label">Solution:</span> For any output that will be used in a real decision, copy it into a second AI system and ask for adversarial review. This is the AI version of a second opinion.</p>
+  <p><span class="label">Problem:</span> An AI is unlikely to catch its own systematic mistakes. A second AI, especially on a different platform, often catches errors the first one missed, particularly fabricated citations, misrepresented sources, and unsupported factual claims.</p>
+  <p><span class="label">Solution:</span> For any output that will be used in a real decision, copy it into a second AI system and ask for adversarial review. This is the AI version of a second opinion. Treat the second AI's findings as leads to investigate, not as ground truth. Errors from different systems overlap more than people assume, and a clean second pass is not the same as a verified one.</p>
   <div class="try-this"><span class="label">Try this:</span> "Here is a draft produced by another AI system. Review it adversarially. What is weak, missing, unsupported, or potentially wrong? Be specific."</div>
 </div>
 
@@ -258,13 +308,17 @@
   3. Mark any claim where you are uncertain, inferring, or working from incomplete information.<br>
   4. For any claim you attribute to a source, quote the exact passage. If you cannot produce the quote, say so.<br>
   5. After the work is complete, give me a short reliability note: what you did, what you preserved, what you are confident about, and what may need human review.
+  <div class="shortcut-actions">
+    <a href="#" onclick="navigator.clipboard.writeText(document.querySelector('.shortcut').innerText.replace(/MASTER PROMPT\n?/i,'').replace(/\n*Copy to clipboard.*$/,'').trim()); this.textContent='Copied'; setTimeout(()=>{this.textContent='Copy to clipboard';}, 2000); return false;">Copy to clipboard</a>
+    <a href="../assets/downloads/synthience-master-prompt.txt" download>Download as .txt</a>
+  </div>
 </div>
 
 <p>This master prompt does not replace the file-management and session-management practices above. You still need to keep originals, save important work outside the chat, re-paste constraints when needed, and use a second AI review for high-stakes work.</p>
 
 <h3>The underlying rule</h3>
 
-<p>Fluent output is not reliable output. AI sounds confident whether or not it has done the work correctly. The ten practices above exist because they make the working process visible enough to check. That is the difference between AI output you can rely on and AI output that looks fine until something breaks later.</p>
+<p>The ten practices above exist because AI systems sound the same whether or not they did the work correctly. You cannot tell from the prose. You have to make the working process visible enough to check.</p>
 
 <p>None of these practices require technical skill. None of them require special tools. They cost a few seconds each, and they can reduce many of the avoidable failures that hit professional AI users every week.</p>
 
@@ -297,10 +351,10 @@
 
 <div class="article-footer">
 <p>Document: PG-000 Practitioner Guide<br>
-Version: 1.0<br>
+Version: 1.1<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: May 14, 2026<br>
+Date: May 17, 2026<br>
 License: CC-BY 4.0</p>
 </div>
 
