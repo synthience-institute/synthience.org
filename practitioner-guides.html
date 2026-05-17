@@ -372,9 +372,9 @@
   </div>
   <div class="sort-toggle">
     <span>Sort:</span>
-    <button id="sort-date" onclick="setSort('date')">Date</button>
+    <button id="sort-date" class="active" onclick="setSort('date')">Date</button>
     <button id="sort-title" onclick="setSort('title')">Title</button>
-    <button id="sort-id" class="active" onclick="setSort('id')">ID</button>
+    <button id="sort-id" onclick="setSort('id')">ID</button>
   </div>
 </div>
 
@@ -552,7 +552,7 @@ var categories = [
 // === STATE ===
 var activeFormat = "all";
 var activeView = sessionStorage.getItem("pg-view") || "all";
-var activeSort = sessionStorage.getItem("pg-sort") || "id";
+var activeSort = sessionStorage.getItem("pg-sort") || "date";
 var searchTerm = "";
 var collapsedCategories = {};
 var searchTimer = null;
