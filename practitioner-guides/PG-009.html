@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-009: Make the AI Show You the Source · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI systems do not only fabricate sources. More often, they cite real sources that do not actually support the claim being attributed to them. This guide shows you how to catch that before you build work on a misrepresented citation.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="Make the AI Show You the Source · Synthience Institute">
+  <meta property="og:description" content="AI systems do not only fabricate sources. More often, they cite real sources that do not actually support the claim being attributed to them. This guide shows you how to catch that before you build work on a misrepresented citation.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-009.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="Make the AI Show You the Source · Synthience Institute">
+  <meta name="twitter:description" content="AI systems do not only fabricate sources. More often, they cite real sources that do not actually support the claim being attributed to them. This guide shows you how to catch that before you build work on a misrepresented citation.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-orient { font-size: 0.88rem; color: #8a7f72; margin: -0.3rem 0 1.5rem 0; font-style: italic; }
+    .pg-orient a { color: #5a3e2b; text-decoration: none; }
+    .pg-orient a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
+    .pg-rule strong { color: #c8604a; }
+    .key-insight {
+      background: #fdf6f4;
+      border-left: 4px solid #c8604a;
+      padding: 0.7rem 1rem;
+      margin: 0.7rem 0 1.2rem 0;
+      font-size: 0.95rem;
+      color: #3a3530;
+    }
+    .key-insight .label {
+      font-weight: 600;
+      color: #c8604a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
+    }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+  <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-009.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>Make the AI Show You the Source</h2>
+
+<div class="article-meta">
+  <span>PG-009</span>
+  <span>May 17, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p class="pg-orient">This guide expands practice #4 of <a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
+<p><em>A practitioner guide for catching misrepresented citations before they enter your work</em></p>
+
+<h3>Why this guide exists</h3>
+
+<p>Most users have heard that AI systems sometimes make up sources that do not exist. Fabricated citations are real, and they do happen. But they are not the most common citation failure, and they are not the most dangerous one.</p>
+
+<p>The more common failure is subtler and harder to catch: the AI cites a real source, by a real author, in a real venue -- and then attributes a claim to that source that the source never actually made.</p>
+
+<div class="key-insight">
+<span class="label">The failure mode most users miss</span>
+The dangerous citation is not the one that points to a nonexistent paper. It is the one that points to a real paper, by a real author, that never made the claim being attributed to it. These citations pass casual inspection. They only fail when someone reads the source.
+</div>
+
+<p>This guide is a short procedure for catching that failure before it enters your work.</p>
+
+<h3>The core failure mode: misrepresented citation</h3>
+
+<p>A misrepresented citation occurs when:</p>
+
+<ul>
+<li>The cited work exists</li>
+<li>The author, title, year, and venue are correct</li>
+<li>The DOI or URL resolves to the real paper</li>
+<li>And the claim being attributed to the work is not actually supported by the work</li>
+</ul>
+
+<p>Every surface signal that readers use to spot fake citations passes. The only thing that does not pass is the one thing most readers never check: whether the source text actually says what the AI claims it says.</p>
+
+<p>This failure is structurally invisible. The reader cannot detect it from the prose. The AI cannot detect it from its own output. The only way to catch it is to make the source text itself part of the conversation.</p>
+
+<div class="pg-callout">A real source attached to a false claim is more dangerous than a fake source, because it is harder to catch and travels further before it is caught.</div>
+
+<h3>When you must use this procedure</h3>
+
+<p>Use this procedure whenever:</p>
+
+<ul>
+<li>The AI attributes a claim to a specific paper, report, person, organization, or news source</li>
+<li>You plan to repeat that attribution in your own work</li>
+<li>The claim would carry weight because of who is being cited</li>
+<li>Being wrong about the citation would damage your credibility, mislead a reader, or affect a real decision</li>
+</ul>
+
+<p>If any of those are true, the citation needs to be verified before it leaves your hands.</p>
+
+<h3>The verification procedure</h3>
+
+<p>The principle is simple: do not accept that a source supports a claim until the source has been quoted alongside the claim.</p>
+
+<div class="pg-rule"><strong>Important prerequisite:</strong> This procedure assumes the AI can actually retrieve the source -- either because the source is in your conversation (you uploaded it, or it appeared in a prior search) or because the AI has live browsing access in the current session. If the AI is working from training memory alone, asking for a verbatim quote will often produce a plausible reconstruction presented as a quote -- which is exactly the failure mode this procedure exists to catch. Either give the AI access to the source, or treat the citation as unverified.</div>
+
+<p>Three steps.</p>
+
+<h4>Step 1 -- Ask for the exact passage</h4>
+
+<p>For every claim the AI attributes to a source, ask the AI to produce the exact passage from the source that supports it.</p>
+
+<div class="pg-rule"><strong>Recommended instruction:</strong> "For each claim you attributed to a source, quote the exact passage from the source that supports the claim. Give me the passage verbatim, with a pointer to where it appears (page number, section heading, or paragraph). If you cannot produce the exact passage, say so explicitly. Do not paraphrase the source as if it were a quote."</div>
+
+<p>The two important parts of that instruction are <em>verbatim</em> and <em>do not paraphrase as if quoting</em>. Without those, the AI will frequently produce a fluent reconstruction of what the source <em>could plausibly</em> say, presented as if it were a direct quote. That is the failure mode this step is designed to catch.</p>
+
+<h4>Step 2 -- Read what came back</h4>
+
+<p>Look at the passage the AI produced and ask three questions:</p>
+
+<ul>
+<li>Does the passage actually support the claim, or does it only mention the same topic?</li>
+<li>Is the passage a direct quote, or is it a paraphrase being presented as a quote?</li>
+<li>Does the passage support the claim as written, or only a weaker, narrower, or different version of it?</li>
+</ul>
+
+<p>"Mentions the topic" is not the same as "supports the claim." A paper that discusses memory in language models does not automatically support a claim that language models have human-like memory. The link between topic and claim is exactly where misrepresentation hides.</p>
+
+<h4>Step 3 -- Verify against the source itself</h4>
+
+<p>For any claim that will leave your hands -- public writing, professional communication, a decision affecting other people -- open the source and find the passage yourself.</p>
+
+<p>If the source is publicly accessible (a paper on arXiv or PubMed, a press release, a public report), this usually takes thirty seconds and resolves the question for the cases that matter most.</p>
+
+<p>If the source is not publicly accessible -- paywalled, behind authentication, or only available as an abstract -- you cannot verify the citation. In that case, either remove the citation, soften the claim, or replace the source with one you can read.</p>
+
+<div class="pg-rule"><strong>Working rule:</strong> If you cannot read the source, you cannot cite the source. The AI's confidence about what a paywalled source says is not evidence.</div>
+
+<h3>What good AI responses look like</h3>
+
+<p>An AI that is being honest about a citation will produce one of these:</p>
+
+<ul>
+<li>A verbatim passage from the source, with a clear pointer, that directly supports the claim</li>
+<li>A statement that it cannot produce the exact passage and an offer to revise the claim</li>
+<li>A statement that the source supports a narrower or different version of the claim, with the narrower claim spelled out</li>
+</ul>
+
+<p>An AI that is failing the verification will produce one of these instead:</p>
+
+<ul>
+<li>A paraphrase of the source presented in quotation marks</li>
+<li>A general statement that the source "discusses" or "addresses" the topic, without a passage</li>
+<li>A passage that turns out, on inspection, to be about a related but different claim</li>
+<li>Confident assurance that the citation is correct without supplying the evidence requested</li>
+</ul>
+
+<p>If the response falls into the second group, the citation has not been verified. Repeat the request, or remove the citation.</p>
+
+<h3>Key rules</h3>
+
+<ul>
+<li>Never accept "the source discusses this" as evidence the source supports a claim</li>
+<li>Never accept a paraphrase presented as a quote</li>
+<li>Never cite a source you cannot read</li>
+<li>Never assume the AI checked the source before answering -- ask</li>
+</ul>
+
+<p>The cost of asking for a quote is one extra turn in a conversation. The cost of repeating a misrepresented citation in public is much higher and lasts much longer.</p>
+
+<h3>What this procedure protects</h3>
+
+<p>Following this method protects against repeating fabricated quotes, repeating real quotes attached to false claims, citing sources that say the opposite of what is claimed, and citing sources that only tangentially mention the topic. It also reduces the cumulative reputational risk of building work on top of unverified citations.</p>
+
+<h3>What this procedure does not do</h3>
+
+<p>This method does not verify that the source itself is correct -- a real paper making a real claim can still be wrong. It does not catch every form of citation drift. And it does not relieve the writer of responsibility: the final check is always the human reading the source.</p>
+
+<h3>When in doubt</h3>
+
+<p>If you are uncertain whether a citation is safe to repeat, ask for the passage. If the passage does not arrive in a form you can verify, do not use the citation. The default is removal, not optimism.</p>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li><a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a></li>
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn&rsquo;t Touch?</a></li>
+  <li class="current">PG-009: Make the AI Show You the Source <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+</ul>
+</div>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>
+The procedure in this guide is a plain-language adaptation of a formal verification protocol used internally at the Synthience Institute to check every citation in its own publications. The formal protocol covers existence verification, public-access enforcement, claim-support rating, persistence archiving, and the full audit log required for research-grade citation discipline. Practitioners who want the full technical treatment, or who are responsible for verifying citations at scale, should read the formal protocol directly:
+</p>
+
+<ul>
+  <li><a href="../research/SF0037.html">SF0037: Citation Verification Protocol (CVP)</a> -- the full methodology, including identity and existence verification, the Public Verifiability Constraint, the three-part verification method, and the certification log. DOI: <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">10.5281/zenodo.18075624</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a> -- the companion guide on verifying that the AI has actually read the documents you gave it, before any downstream citation work begins</li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a> -- the companion guide on detecting silent content loss during AI-assisted editing, the failure mode adjacent to citation misrepresentation</li>
+</ul>
+
+<p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-009 Practitioner Guide<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: May 17, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

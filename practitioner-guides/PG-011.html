@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-011: The Cross-AI Adversarial Review Protocol &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="For high-stakes work, the most effective single review pass is to have a different AI system look at the first one&rsquo;s output. This guide shows you how to run that review well &mdash; and where its limits are.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="The Cross-AI Adversarial Review Protocol &middot; Synthience Institute">
+  <meta property="og:description" content="For high-stakes work, the most effective single review pass is to have a different AI system look at the first one&rsquo;s output. This guide shows you how to run that review well &mdash; and where its limits are.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-011.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="The Cross-AI Adversarial Review Protocol &middot; Synthience Institute">
+  <meta name="twitter:description" content="For high-stakes work, the most effective single review pass is to have a different AI system look at the first one&rsquo;s output. This guide shows you how to run that review well &mdash; and where its limits are.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .pg-orient { font-size: 0.88rem; color: #8a7f72; margin: -0.3rem 0 1.5rem 0; font-style: italic; }
+    .pg-orient a { color: #5a3e2b; text-decoration: none; }
+    .pg-orient a:hover { text-decoration: underline; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
+    .pg-rule strong { color: #c8604a; }
+    .key-insight {
+      background: #fdf6f4;
+      border-left: 4px solid #c8604a;
+      padding: 0.7rem 1rem;
+      margin: 0.7rem 0 1.2rem 0;
+      font-size: 0.95rem;
+      color: #3a3530;
+    }
+    .key-insight .label {
+      font-weight: 600;
+      color: #c8604a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
+    }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+  <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-011.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>The Cross-AI Adversarial Review Protocol</h2>
+
+<div class="article-meta">
+  <span>PG-011</span>
+  <span>May 17, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p class="pg-orient">This guide expands practice #10 of <a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
+<p><em>A practitioner guide for using a second AI system as a structured review pass on the first one&rsquo;s output</em></p>
+
+<h3>Why this guide exists</h3>
+
+<p>One AI system reviewing its own output rarely catches its own systematic mistakes. The same model that produced the mistake is the model being asked to spot it. Self-review can clean up surface problems &mdash; clarity, organization, minor errors &mdash; but it tends to be blind to the kinds of failures that come from how the system reasons.</p>
+
+<p>A different AI system, especially one from a different developer, is often better at catching these. It is not a perfect oracle. It makes its own mistakes. But it has a different set of priors, a different training history, and a different way of weighing evidence, so its blind spots overlap only partially with the first system&rsquo;s.</p>
+
+<p>Used well, a second AI review is one of the most effective lightweight review passes available to most practitioners. Used poorly, it is theater that gives false confidence. This guide is the difference between the two.</p>
+
+<h3>The core failure mode this addresses</h3>
+
+<p>When a single AI produces an output that contains systematic problems &mdash; a fabricated citation that follows a plausible pattern, a misrepresented source, an overconfident factual claim, an argument with a hidden weakness &mdash; the same AI re-reading its own work usually misses them. The problems are not surface-level slips; they are baked into how the response was generated.</p>
+
+<p>A second AI looking at the same output as a fresh input is reading it without that generative history. It does not have a stake in the conclusion. It sees the words on the page, not the reasoning that produced them.</p>
+
+<div class="key-insight">
+<span class="label">What a second AI is good and bad at catching</span>
+A second AI is typically better than the first one at catching fabricated citations, misrepresented sources, factual errors, internal contradictions, and weak or missing argument steps &mdash; the kinds of failures that come from how the first system generated its output. It is unreliable at catching deeper conceptual errors that both systems are likely to share, especially in contested or technical domains where the field itself is unsettled. This is a practitioner-derived heuristic, not an empirically established result.
+</div>
+
+<p>This is the key practical point: a second AI review is a strong filter, not a verification. It catches a significant class of errors and misses a different class. Knowing which class it catches is what makes the protocol useful instead of misleading.</p>
+
+<h3>When you must use this procedure</h3>
+
+<p>Use this procedure whenever:</p>
+
+<ul>
+<li>The output will be used in a real decision, public communication, or formal record</li>
+<li>The output makes factual claims, attributes claims to sources, or relies on specific data</li>
+<li>The output is long enough that a single read by you might miss a buried problem</li>
+<li>You will repeat or stand behind the output once it leaves your hands</li>
+</ul>
+
+<p>You do not need this for casual conversation, exploratory thinking, or first drafts that you will iterate on heavily yourself. The protocol is for finished work.</p>
+
+<h3>The protocol</h3>
+
+<p>Four steps.</p>
+
+<h4>Step 1 &mdash; Use a genuinely different system</h4>
+
+<p>The point of the second review is that the reviewer&rsquo;s failure modes overlap less with the first system&rsquo;s. The further apart the two systems, the more independent the review.</p>
+
+<p>Most useful in order of independence:</p>
+
+<ul>
+<li>An AI from a different developer (Claude reviewing GPT, Gemini reviewing Claude, Grok reviewing Gemini, and so on)</li>
+<li>The same developer but a different model family or version, if a different developer is not available</li>
+<li>The same model in a fresh session as a last resort</li>
+</ul>
+
+<p>A fresh session of the same model catches some self-review blind spots but leaves the largest one in place: the systematic priors of that specific model. Use a cross-developer pairing when the stakes justify it.</p>
+
+<h4>Step 2 &mdash; Paste the output as input, with no preamble</h4>
+
+<p>The second AI should receive the first AI&rsquo;s output as something it is reviewing &mdash; not as a continuation of a conversation, and not framed as &ldquo;please confirm this is good.&rdquo; The framing matters.</p>
+
+<div class="pg-rule"><strong>Recommended instruction:</strong> &ldquo;The text below was produced by a different AI system. Review it adversarially. What is weak, missing, unsupported, internally contradictory, or potentially wrong? Be specific about each issue and point to the exact passage. If you are uncertain whether something is a real problem, say so explicitly. Do not summarize or rewrite the text. Do not soften your critique.&rdquo;</div>
+
+<p>Three things matter in this instruction:</p>
+
+<ul>
+<li><strong>"Produced by a different AI system."</strong> Tells the reviewer not to defer.</li>
+<li><strong>"Review it adversarially."</strong> Sets the frame. Default review tends to be supportive.</li>
+<li><strong>"Do not summarize or rewrite."</strong> Reviewers often drift into rewriting, which buries the critique and dilutes the signal.</li>
+</ul>
+
+<h4>Step 3 &mdash; Treat the second AI&rsquo;s findings as leads, not verdicts</h4>
+
+<p>The second AI&rsquo;s output is information to investigate, not a final ruling. Two failure modes are common at this step:</p>
+
+<ul>
+<li><strong>Overweighting the reviewer.</strong> If the reviewer flags a citation as suspect, that is a reason to check the citation &mdash; not proof that it is wrong. The reviewer can be confidently mistaken in exactly the same way the original system can.</li>
+<li><strong>Underweighting the reviewer.</strong> If the reviewer flags a problem and you do not see it, the temptation is to dismiss. Resist. The reviewer is reading without your investment in the original output. That is the entire reason it has any value.</li>
+</ul>
+
+<p>The right move for each flag is the same: investigate the specific passage, decide for yourself, and make the change or not. The second AI is doing the work of pointing your attention at things worth examining. You are doing the work of deciding.</p>
+
+<h4>Step 4 &mdash; Stop after one good review</h4>
+
+<p>Running the same output through three or four different AIs does not produce three or four times the value. Each additional reviewer flags fewer new problems and contributes more noise. The marginal review past the first one is usually wasted effort.</p>
+
+<p>If the first review surfaces enough issues that the output needs substantial rework, fix it and then run one more review on the revision. If the first review surfaces few or no issues, the output is good enough for its purpose. You are not looking for unanimous AI consensus. You are looking for the failures that the first system was structurally blind to.</p>
+
+<h3>What good adversarial review looks like</h3>
+
+<p>A second AI doing real work will produce review of the following kinds:</p>
+
+<ul>
+<li>"Citation 3 attributes a specific statistical claim to a paper that, based on the title and venue, almost certainly does not contain that statistic. Check the actual source."</li>
+<li>"The argument in paragraph 4 depends on a premise stated only in paragraph 2 that the author has not defended. The conclusion is vulnerable if a reader rejects the premise."</li>
+<li>"This claim and this claim cannot both be true as stated. One needs to be qualified."</li>
+<li>"This section relies heavily on the word &lsquo;significant&rsquo; without specifying significance threshold or effect size."</li>
+</ul>
+
+<p>A second AI doing surface work, or simulating review without performing it, will produce:</p>
+
+<ul>
+<li>"This is a well-structured and thoughtful piece. A few minor suggestions&hellip;"</li>
+<li>Generic style notes that could apply to any document</li>
+<li>Praise dressed as critique ("you could strengthen this by&hellip;" with no specifics)</li>
+<li>Rewriting the text instead of reviewing it</li>
+</ul>
+
+<p>If the review reads like the second group, repeat the request with a sharper instruction or move to a different system. A weak review is worse than no review because it produces false confidence.</p>
+
+<h3>Key rules</h3>
+
+<ul>
+<li>Use a genuinely different system when possible &mdash; cross-developer when stakes are real</li>
+<li>Frame the input as something to review adversarially, not a finished piece to validate</li>
+<li>Treat findings as leads to investigate, never as ground truth</li>
+<li>Stop after one good review; piling on more reviewers does not improve the signal</li>
+</ul>
+
+<h3>What this procedure protects</h3>
+
+<p>Following this method protects against the systematic blind spots of any single AI system &mdash; especially around fabricated or misrepresented citations, factual errors, internal contradictions, and weak argument structure. It also makes one of the most useful skills in multi-system AI work explicit and repeatable, rather than an ad hoc thing some practitioners do well and most do not do at all.</p>
+
+<h3>What this procedure does not do</h3>
+
+<p>This method does not verify the output. The reviewer can be confidently wrong about the same things the original system was wrong about, especially in contested or technical domains where both systems share field-level priors. It does not catch deep conceptual errors that are not surface-detectable. And it is not a substitute for verifying specific claims against actual sources &mdash; for citations especially, the reviewer&rsquo;s flag is a prompt to check the source, not a substitute for checking it.</p>
+
+<h3>When in doubt</h3>
+
+<p>If you are uncertain whether a piece of work needs adversarial review, the cost of running one is small. The cost of standing behind work that contains a problem the original AI was structurally blind to is much larger and lasts much longer. The default for finished work that will leave your hands is one review pass, not zero.</p>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li><a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a></li>
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn&rsquo;t Touch?</a></li>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a></li>
+  <li><a href="PG-010.html">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work</a></li>
+  <li class="current">PG-011: The Cross-AI Adversarial Review Protocol <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+</ul>
+</div>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>
+The cross-AI review protocol is most valuable when paired with the upstream verification practices that catch problems before review is needed. It is not a substitute for those practices &mdash; it is the final filter after them. The companion guides below cover the specific verifications that should happen before adversarial review, not in place of it.
+</p>
+
+<ul>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a> &mdash; verify citations before review rather than relying on the reviewer to flag them. Citation verification is the single most common reason for cross-AI review and the single most common thing reviewers actually catch.</li>
+  <li><a href="PG-010.html">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work</a> &mdash; the underlying principle that motivates cross-AI review: AI self-report about quality is unreliable, and substituting a second system&rsquo;s judgment is one way to get around it.</li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a> &mdash; the upstream practice of having the first AI do an internal review pass before final output. Cross-AI review and intra-AI review are complementary; the first reduces what the second has to catch.</li>
+  <li><a href="../research/SF0040.html">SF0040: Theoretical Coherence Assurance Protocol (TCAP)</a> &mdash; the formal protocol used internally at the Synthience Institute for cross-system coherence verification on research documents.</li>
+</ul>
+
+<p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-011 Practitioner Guide<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: May 17, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

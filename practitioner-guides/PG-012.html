@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-012: Make the AI Tell You What It&rsquo;s Guessing &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI systems present guesses and facts in the same confident tone. You cannot tell from the prose alone which is which. This guide is a procedure for making the AI label its own uncertainty so you know where to check before acting.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="Make the AI Tell You What It&rsquo;s Guessing &middot; Synthience Institute">
+  <meta property="og:description" content="AI systems present guesses and facts in the same confident tone. You cannot tell from the prose alone which is which. This guide is a procedure for making the AI label its own uncertainty so you know where to check before acting.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-012.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="Make the AI Tell You What It&rsquo;s Guessing &middot; Synthience Institute">
+  <meta name="twitter:description" content="AI systems present guesses and facts in the same confident tone. You cannot tell from the prose alone which is which. This guide is a procedure for making the AI label its own uncertainty so you know where to check before acting.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .pg-orient { font-size: 0.88rem; color: #8a7f72; margin: -0.3rem 0 1.5rem 0; font-style: italic; }
+    .pg-orient a { color: #5a3e2b; text-decoration: none; }
+    .pg-orient a:hover { text-decoration: underline; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
+    .pg-rule strong { color: #c8604a; }
+    .key-insight {
+      background: #fdf6f4;
+      border-left: 4px solid #c8604a;
+      padding: 0.7rem 1rem;
+      margin: 0.7rem 0 1.2rem 0;
+      font-size: 0.95rem;
+      color: #3a3530;
+    }
+    .key-insight .label {
+      font-weight: 600;
+      color: #c8604a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
+    }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+  <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-012.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>Make the AI Tell You What It&rsquo;s Guessing</h2>
+
+<div class="article-meta">
+  <span>PG-012</span>
+  <span>May 17, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p class="pg-orient">This guide expands practice #3 of <a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
+<p><em>A practitioner guide for making AI uncertainty visible in the output</em></p>
+
+<h3>Why this guide exists</h3>
+
+<p>AI systems present everything in the same confident tone. A fact the system is sure of and a guess it is filling in to keep the response flowing look identical on the page. The prose carries the same rhythm, the same level of detail, the same air of authority. You cannot tell from the writing which parts the system actually knew and which parts it inferred to make the response sound complete.</p>
+
+<p>This is a structural problem, not a stylistic one. The system does not have a separate confident tone for things it knows and a hedged tone for things it is guessing. Both come out the same.</p>
+
+<p>The practical effect is that readers cannot calibrate their trust. Every claim gets the same weight, which means either everything is trusted (and some guesses pass for facts) or everything is doubted (and the useful parts of the response are dragged down with the guesses). Neither is what you want.</p>
+
+<p>This guide is a procedure for making the AI mark its own uncertainty so the calibration becomes possible.</p>
+
+<p>A caveat upfront: this procedure does not give you accurate uncertainty estimates. AI systems are not reliable at knowing what they do not know. A claim the AI marks as uncertain may be correct; a claim it leaves unmarked may be wrong. But asking explicitly for uncertainty markers consistently produces more honest output than not asking, even when the markers are imperfect. The markers are useful as a redirection of your attention, not as a calibrated confidence score.</p>
+
+<h3>The core failure mode: uniform confidence</h3>
+
+<p>Several things look the same in AI output that should not:</p>
+
+<ul>
+<li>A fact the system has high confidence in</li>
+<li>A reasonable inference from context</li>
+<li>A guess to fill a gap in what the system knows</li>
+<li>An extrapolation from a different but related case</li>
+<li>A pattern-matched answer that sounds right but is not anchored in anything specific</li>
+</ul>
+
+<p>All five come out as declarative sentences. The reader has no way to distinguish them.</p>
+
+<div class="key-insight">
+<span class="label">What this practice actually fixes</span>
+The goal is not to make the AI stop guessing. Guessing is sometimes useful and sometimes unavoidable. The goal is to make the guessing visible, so the reader knows which parts of the answer are worth checking before acting on them.
+</div>
+
+<p>An AI that flags its uncertainty honestly is more useful than an AI that hides uncertainty under uniform confidence &mdash; even if both are technically guessing the same amount.</p>
+
+<h3>When you must use this procedure</h3>
+
+<p>Use this procedure whenever:</p>
+
+<ul>
+<li>The output will inform a decision, especially a decision you cannot reverse</li>
+<li>The output contains specific factual claims, names, dates, numbers, or attributions</li>
+<li>The topic touches on recent events, niche domains, or technical specifics where the AI may have partial training</li>
+<li>You plan to repeat any part of the output without checking it first</li>
+</ul>
+
+<p>The threshold is "I do not want to be unable to tell the difference between what the AI knows and what it is filling in." That covers most professional use.</p>
+
+<h3>The procedure</h3>
+
+<p>The principle is to make uncertainty an explicit output requirement, not a stylistic choice the AI may or may not exercise.</p>
+
+<p>Three steps.</p>
+
+<h4>Step 1 &mdash; Set the uncertainty requirement upfront</h4>
+
+<p>Before asking your question, instruct the AI to label uncertainty as part of the response format. Doing this upfront works better than asking after the response arrives, because the AI tends to maintain the confident tone of the original answer when asked to retrospectively flag uncertainty &mdash; the labeling becomes performative rather than substantive.</p>
+
+<div class="pg-rule"><strong>Recommended instruction:</strong> &ldquo;In your response, clearly mark any claim where you are uncertain, inferring, or working from incomplete information. Use an explicit marker &mdash; <em>(uncertain)</em>, <em>(inference)</em>, or <em>(from training, may be outdated)</em> &mdash; alongside the relevant claim. Do not present guesses as facts. If most of your response is in one of these categories, say so at the top rather than marking every sentence.&rdquo;</div>
+
+<p>The reason for explicit markers rather than a vaguer instruction ("flag uncertainty") is that vague instructions produce vague responses. Concrete markers force the AI to make a discrete choice for each claim.</p>
+
+<h4>Step 2 &mdash; Read the markers, not just the prose</h4>
+
+<p>When the response arrives, do not skim past the uncertainty markers. They are the signal you asked for. If the AI flagged a date as uncertain, do not repeat the date without checking. If the AI flagged an attribution as an inference, do not treat it as established. The markers exist to redirect your attention to the parts of the response that need verification before they are used.</p>
+
+<p>The temptation is to read past the parentheticals because they break the flow. Resist. The parentheticals are doing the work.</p>
+
+<h4>Step 3 &mdash; Push back when nothing is marked</h4>
+
+<p>If you set the uncertainty requirement upfront and the response comes back with no markers at all, that is a signal &mdash; not a clean bill of health. Almost every response of meaningful length contains some inference. A response with zero markers usually means the AI did not actually apply the instruction.</p>
+
+<div class="pg-rule"><strong>Recommended follow-up:</strong> &ldquo;You said nothing is uncertain. For each specific claim in your response, was there any part where you were inferring, filling in from incomplete information, or working from training that may be outdated? Be honest about what you are less sure of.&rdquo;</div>
+
+<p>A genuinely uncertainty-free response is rare. If pushed, an honest AI will usually find something to mark.</p>
+
+<h3>What good AI responses look like</h3>
+
+<p>An AI applying uncertainty markers usefully will produce responses like:</p>
+
+<ul>
+<li>&ldquo;The company was founded in 1998 <em>(uncertain &mdash; might be 1997 or 1999, I&rsquo;d check the official source)</em> by three engineers from Stanford.&rdquo;</li>
+<li>&ldquo;The most likely cause is a misconfigured caching layer. <em>(Inference from the symptom description; could also be a database connection pool issue.)</em>&rdquo;</li>
+<li>&ldquo;Most of what follows about this specific tool is from my training data and may be outdated; verify against current docs before relying on any specific feature.&rdquo;</li>
+<li>&ldquo;<em>(Not directly known &mdash; my confidence here is low.)</em> The standard interpretation in this field is&hellip;&rdquo;</li>
+</ul>
+
+<p>The marker is short. It does not dominate the response. It does tell the reader where to look more carefully.</p>
+
+<p>An AI failing to apply uncertainty markers usefully will produce:</p>
+
+<ul>
+<li>No markers at all, despite the upfront request</li>
+<li>Vague hedging that applies to the whole response rather than specific claims ("some of this may be uncertain")</li>
+<li>Markers on trivial things while presenting bigger guesses as facts</li>
+<li>So many markers that the response becomes unreadable, which is usually a sign the AI does not really know what it is doing on the topic and is signaling that fact through theatrical hedging</li>
+</ul>
+
+<p>The last one is informative. A response that hedges everything is often telling you the topic is outside the system&rsquo;s reliable range. The right move is usually to ask a more focused question, find a better source, or accept that the AI is not the right tool for this question.</p>
+
+<h3>Key rules</h3>
+
+<ul>
+<li>Set the uncertainty requirement before the question, not after the answer</li>
+<li>Require explicit markers, not vague hedging</li>
+<li>Read the markers; they are not decoration</li>
+<li>Push back when nothing is marked &mdash; zero-marker responses are almost always wrong</li>
+</ul>
+
+<h3>What this procedure protects</h3>
+
+<p>Following this method protects against repeating AI guesses as facts, building work on top of inferences without realizing they are inferences, missing the parts of a response that warrant a quick verification, and falsely calibrating your trust in AI output as a whole (either too high or too low). It also slowly trains you to notice the difference between the prose patterns of confidence and the actual confidence the system has, which is useful even on responses where you forgot to set the requirement upfront.</p>
+
+<h3>What this procedure does not do</h3>
+
+<p>This method does not give you a calibrated probability for each claim &mdash; AI systems are not reliable at estimating their own confidence numerically. It does not guarantee that flagged claims are actually wrong or that unflagged claims are actually right. And it does not eliminate the need for source-checking on important claims; it just tells you where to start.</p>
+
+<h3>When in doubt</h3>
+
+<p>If you are unsure whether a response needs uncertainty markers, set the requirement and ask anyway. The cost is one extra sentence in the prompt. The benefit is a response where the AI&rsquo;s lower-confidence claims are at least flagged for your attention. There is essentially no downside to having uncertainty marked when it turns out not to matter, and a real downside to having it hidden when it does.</p>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li><a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a></li>
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn&rsquo;t Touch?</a></li>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a></li>
+  <li><a href="PG-010.html">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work</a></li>
+  <li><a href="PG-011.html">PG-011: The Cross-AI Adversarial Review Protocol</a></li>
+  <li class="current">PG-012: Make the AI Tell You What It&rsquo;s Guessing <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+</ul>
+</div>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>
+Uncertainty-flagging is closely connected to two adjacent practices. Asking the AI to mark its uncertainty addresses the surface of a response. Verifying specific claims that the AI marked as uncertain &mdash; especially attributions and citations &mdash; is the follow-through. The companion guides below cover the verification steps that begin where this guide ends.
+</p>
+
+<ul>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a> &mdash; verification procedure for claims attributed to specific sources, which are among the highest-value uncertainty markers to investigate.</li>
+  <li><a href="PG-010.html">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work</a> &mdash; the broader principle of substituting evidence for AI self-report. Uncertainty marking is a specific case: the AI is reporting on its own confidence, which is itself a kind of self-report.</li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a> &mdash; the practice of having the AI run an internal review pass, which pairs naturally with uncertainty marking: the review pass is where weak claims get either strengthened or flagged.</li>
+</ul>
+
+<p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-012 Practitioner Guide<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: May 17, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

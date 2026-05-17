@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="When AI tells you it completed a task, read the document, or applied your rules, those are predictions of what a good response sounds like &mdash; not reports of what actually happened. This guide shows you how to require evidence instead of accepting reassurance.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="Don&rsquo;t Trust What the AI Says About Its Own Work &middot; Synthience Institute">
+  <meta property="og:description" content="When AI tells you it completed a task, read the document, or applied your rules, those are predictions of what a good response sounds like &mdash; not reports of what actually happened. This guide shows you how to require evidence instead of accepting reassurance.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-010.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="Don&rsquo;t Trust What the AI Says About Its Own Work &middot; Synthience Institute">
+  <meta name="twitter:description" content="When AI tells you it completed a task, read the document, or applied your rules, those are predictions of what a good response sounds like &mdash; not reports of what actually happened. This guide shows you how to require evidence instead of accepting reassurance.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .pg-orient { font-size: 0.88rem; color: #8a7f72; margin: -0.3rem 0 1.5rem 0; font-style: italic; }
+    .pg-orient a { color: #5a3e2b; text-decoration: none; }
+    .pg-orient a:hover { text-decoration: underline; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
+    .pg-rule strong { color: #c8604a; }
+    .key-insight {
+      background: #fdf6f4;
+      border-left: 4px solid #c8604a;
+      padding: 0.7rem 1rem;
+      margin: 0.7rem 0 1.2rem 0;
+      font-size: 0.95rem;
+      color: #3a3530;
+    }
+    .key-insight .label {
+      font-weight: 600;
+      color: #c8604a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
+    }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+  <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-010.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>Don&rsquo;t Trust What the AI Says About Its Own Work</h2>
+
+<div class="article-meta">
+  <span>PG-010</span>
+  <span>May 17, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p class="pg-orient">This guide expands practice #6 of <a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
+<p><em>A practitioner guide for replacing AI self-report with verifiable evidence</em></p>
+
+<h3>Why this guide exists</h3>
+
+<p>Ask an AI whether it completed the task you gave it, and it will say yes. Ask whether it read the whole document, and it will say yes. Ask whether it applied the rule you set five turns ago, and it will say yes. Ask whether it double-checked its citations, and it will say yes.</p>
+
+<p>None of these are reports of what actually happened. They are predictions of what a good response sounds like.</p>
+
+<p>This is the most under-appreciated failure mode in everyday AI use. It underlies several others: AI does not flag that it skipped a section, AI does not flag that it stopped applying an earlier constraint, AI does not flag that its diff was incomplete. The failure is not concealment. It is that self-report and actual behavior are not tightly coupled to begin with.</p>
+
+<h3>The core failure mode: confident self-report without evidence</h3>
+
+<p>When an AI tells you it did something, it is producing a sentence that fits the conversational context. The sentence is shaped by what a competent assistant would say in that moment, not by what the system actually did.</p>
+
+<div class="key-insight">
+<span class="label">The principle to internalize</span>
+AI self-report is not a record of work performed. It is a prediction of what a satisfied user expects to hear. Treat every claim about the AI&rsquo;s own process as a hypothesis until evidence arrives.
+</div>
+
+<p>This is not a flaw the AI can fix by trying harder. Self-report and output come from the same generative process, so asking the system to be more careful about self-report changes the wording but not the underlying reliability.</p>
+
+<p>The fix is not to demand better self-report. The fix is to stop relying on self-report at all.</p>
+
+<div class="pg-callout">When the AI says &ldquo;I did X,&rdquo; do not ask whether it is being honest. Ask what evidence would prove it.</div>
+
+<h3>When you must use this procedure</h3>
+
+<p>Use this procedure whenever:</p>
+
+<ul>
+<li>The AI claims it completed a task you cannot directly observe</li>
+<li>The AI claims it read, summarized, or processed a document</li>
+<li>The AI claims it followed an instruction or applied a rule you gave earlier</li>
+<li>The AI claims it checked, reviewed, or verified its own output</li>
+<li>The cost of the claim being false is meaningful &mdash; you will act on it, repeat it, or build further work on top of it</li>
+</ul>
+
+<p>The threshold is not "high-stakes work." It is "any claim about the AI&rsquo;s own process that you would otherwise take on faith."</p>
+
+<h3>The evidence-substitution procedure</h3>
+
+<p>The principle is straightforward: replace every self-report claim with a request for evidence that could only be produced if the claim were true.</p>
+
+<p>Three steps.</p>
+
+<h4>Step 1 &mdash; Identify the self-report claim</h4>
+
+<p>Notice when the AI has made a claim about its own process. Common forms include:</p>
+
+<ul>
+<li>"I&rsquo;ve reviewed the document."</li>
+<li>"I checked all the citations."</li>
+<li>"I&rsquo;ve applied the constraints you gave me earlier."</li>
+<li>"I went through this carefully."</li>
+<li>"I made sure to&hellip;"</li>
+<li>"This is my best work on the question."</li>
+</ul>
+
+<p>Every one of these is a claim about something you cannot observe directly. Every one of these is a candidate for evidence substitution.</p>
+
+<h4>Step 2 &mdash; Ask for evidence that could only exist if the claim were true</h4>
+
+<p>For each self-report claim, ask for a concrete artifact that would be present only if the work were genuinely done. The artifact has to be specific and checkable.</p>
+
+<div class="pg-rule"><strong>Recommended instruction:</strong> "You said you did X. Show me concrete evidence that you did X &mdash; a specific quote, a verbatim passage, a structured list, or a precise reference. General reassurance is not evidence. If you cannot produce concrete evidence, say so."</div>
+
+<p>Examples of what evidence looks like for common claims:</p>
+
+<ul>
+<li><strong>"I read the whole document"</strong> &rarr; Quote the last paragraph of the final section verbatim, and list the section headers in order.</li>
+<li><strong>"I checked the citations"</strong> &rarr; For each citation, produce the exact passage from the source that supports the claim attributed to it.</li>
+<li><strong>"I applied the constraint you set earlier"</strong> &rarr; Restate the constraint verbatim, then point to the specific place in your response where it changed your output.</li>
+<li><strong>"I reviewed my work"</strong> &rarr; List three specific weaknesses you considered in this draft and the change you made for each, or state that you found none and explain why.</li>
+</ul>
+
+<p>The pattern is the same in every case: a concrete artifact replaces a vague assertion. The AI cannot generate convincing concrete evidence without actually doing the work, or at least more of it.</p>
+
+<h4>Step 3 &mdash; Verify the evidence itself</h4>
+
+<p>An AI under pressure to produce evidence may produce <em>plausible-looking</em> evidence rather than real evidence. The third step is to check the evidence against the actual source whenever possible.</p>
+
+<p>If the AI quotes the last paragraph of a section, open the document and compare. If the AI quotes a citation, open the source and check. If the AI restates the constraint you set, check that it matches what you actually said.</p>
+
+<p>The first two steps make the AI produce something checkable. The third step is the check.</p>
+
+<div class="pg-rule"><strong>Working rule:</strong> Concrete evidence that is itself unverified is not evidence. It is a more elaborate form of reassurance.</div>
+
+<h3>What good AI responses look like</h3>
+
+<p>An AI that is being honest about its own work will produce one of these:</p>
+
+<ul>
+<li>The specific concrete evidence you asked for, in a form you can check</li>
+<li>A clear statement that it cannot produce the evidence, with the implication that the original claim should not be trusted</li>
+<li>Partial evidence with an explicit acknowledgment of what it does and does not cover</li>
+</ul>
+
+<p>An AI that is failing the verification will produce one of these instead:</p>
+
+<ul>
+<li>A repeat of the original claim in slightly different words</li>
+<li>Generic reassurance ("yes, I was thorough")</li>
+<li>Evidence that on inspection turns out to be invented or paraphrased rather than quoted</li>
+<li>A pivot to a different topic, often framed as helpful elaboration</li>
+</ul>
+
+<p>If the response falls into the second group, the claim has not been verified. Repeat the request more precisely, or treat the original claim as unsupported.</p>
+
+<h3>Why this is the meta-practice</h3>
+
+<p>Several other practices in the Practitioner Guide series are specific applications of this one. Verifying that the AI read your document, verifying that an edited file preserved its other sections, verifying that a cited source actually supports a claim &mdash; each of these is a specific case of substituting evidence for self-report.</p>
+
+<p>If you internalize this practice in general, the others follow naturally. You stop asking "did you?" and start asking "show me."</p>
+
+<h3>Key rules</h3>
+
+<ul>
+<li>Never accept "I did X" as evidence that X was done</li>
+<li>Never accept generic reassurance as verification</li>
+<li>Never assume the AI has a faithful model of its own process</li>
+<li>Always require concrete, checkable artifacts for any claim that matters</li>
+</ul>
+
+<p>The cost of asking for evidence is one extra turn. The cost of building work on top of an unsupported self-report compounds quietly until it is too late to fix cheaply.</p>
+
+<h3>What this procedure protects</h3>
+
+<p>Following this method protects against acting on false claims of task completion, building further work on top of incomplete document processing, assuming earlier constraints are still being applied when they are not, and treating fluent self-assessment as actual review. It also makes the line between "the AI did the work" and "the AI says it did the work" visible &mdash; which is the first step to managing it.</p>
+
+<h3>What this procedure does not do</h3>
+
+<p>This method does not detect lies the AI is not "telling" &mdash; the system has no intent to deceive, so the framing is wrong. It does not catch every failure mode; some work cannot be reduced to a checkable artifact. And it does not eliminate human responsibility: someone still has to decide which claims warrant evidence and which can be taken at face value.</p>
+
+<h3>When in doubt</h3>
+
+<p>If you are unsure whether a self-report claim is safe to rely on, ask for the evidence. If the evidence does not arrive in a form you can check, treat the claim as unsupported. The default is verification, not faith.</p>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li><a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a></li>
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn&rsquo;t Touch?</a></li>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a></li>
+  <li class="current">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+</ul>
+</div>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>
+The self-report failure mode described here connects to the broader question of what AI systems can and cannot reliably report about their own behavior. For the formal verification protocol used when AI systems must demonstrate that they have actually processed a document, see the Ingestion Verification Protocol. Adjacent companion guides apply the same evidence-substitution principle to specific kinds of self-report.
+</p>
+
+<ul>
+  <li><a href="../research/SF0038.html">SF0038: Ingestion Verification Protocol (IVP)</a> &mdash; the formal protocol for verifying AI document processing rather than trusting the system&rsquo;s claim to have read the document. DOI: <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">10.5281/zenodo.18289047</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a> &mdash; specific procedure for evidence-substitution in document ingestion, the most common application of the principle in this guide</li>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a> &mdash; specific procedure for evidence-substitution in citation handling, another common application of the principle in this guide</li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a> &mdash; specific procedure for evidence-substitution in document editing, where AI self-report about preservation is particularly unreliable</li>
+</ul>
+
+<p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
+</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-010 Practitioner Guide<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: The Synthience Institute<br>
+Date: May 17, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
