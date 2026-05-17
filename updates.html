@@ -130,6 +130,50 @@
 // === DATA ===
 var allUpdates = [
   {
+    date: "2026-05-17",
+    dateDisplay: "May 17, 2026",
+    dateOrder: 4,
+    title: "PG-012: Make the AI Tell You What It\u2019s Guessing",
+    link: "practitioner-guides/PG-012.html",
+    tag: "Practitioner Guide",
+    body: "New Practitioner Guide published. AI systems present guesses and facts in the same confident tone, so you cannot tell from the prose which parts the system actually knew and which parts it inferred to make the response sound complete. PG-012 is a three-step procedure for making the AI mark its own uncertainty so the calibration becomes possible: set the uncertainty requirement upfront before the question, read the markers as the signal you asked for, and push back when nothing is marked. The guide is honest about what uncertainty marking does and does not do \u2014 AI systems are not reliable at knowing what they do not know, but asking explicitly for markers consistently produces more honest output than not asking. Expands practice #3 of PG-000.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-012.html"
+  },
+  {
+    date: "2026-05-17",
+    dateDisplay: "May 17, 2026",
+    dateOrder: 3,
+    title: "PG-011: The Cross-AI Adversarial Review Protocol",
+    link: "practitioner-guides/PG-011.html",
+    tag: "Practitioner Guide",
+    body: "New Practitioner Guide published. One AI system reviewing its own output rarely catches its own systematic mistakes; a different AI system, especially one from a different developer, has a different set of priors and a different way of weighing evidence, so its blind spots overlap only partially with the first system\u2019s. PG-011 is a four-step protocol for using a second AI as a structured review pass on the first one\u2019s output: use a genuinely different system, paste with adversarial framing and no preamble, treat the second AI\u2019s findings as leads to investigate rather than verdicts, and stop after one good review. The guide is explicit about the protocol\u2019s limits \u2014 a second AI is typically better at catching fabricated citations, misrepresented sources, factual errors, and internal contradictions, but is unreliable at catching deeper conceptual errors that both systems are likely to share. Expands practice #10 of PG-000.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-011.html"
+  },
+  {
+    date: "2026-05-17",
+    dateDisplay: "May 17, 2026",
+    dateOrder: 2,
+    title: "PG-010: Don\u2019t Trust What the AI Says About Its Own Work",
+    link: "practitioner-guides/PG-010.html",
+    tag: "Practitioner Guide",
+    body: "New Practitioner Guide published. When an AI tells you it completed a task, read the document, applied your earlier rules, or double-checked its citations, those statements are not reports of work performed \u2014 they are predictions of what a satisfied user expects to hear. PG-010 is a three-step evidence-substitution procedure for replacing AI self-report with verifiable artifacts: identify the self-report claim, ask for evidence that could only exist if the claim were true, and verify the evidence itself against the actual source. The guide is positioned as the meta-practice that underlies several other verification guides: verifying document ingestion, verifying citation support, and verifying edit preservation are all specific applications of the same principle of substituting evidence for self-report. Expands practice #6 of PG-000.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-010.html"
+  },
+  {
+    date: "2026-05-17",
+    dateDisplay: "May 17, 2026",
+    dateOrder: 1,
+    title: "PG-009: Make the AI Show You the Source",
+    link: "practitioner-guides/PG-009.html",
+    tag: "Practitioner Guide",
+    body: "New Practitioner Guide published. AI systems do not only fabricate sources that do not exist \u2014 more often, they cite real sources, by real authors, in real venues, and then attribute claims to those sources that the sources never actually made. These misrepresented citations pass every surface check readers use to spot fake citations; they only fail when someone reads the source. PG-009 is a three-step verification procedure: ask the AI for the verbatim passage from the source that supports the claim, read what came back critically to distinguish topic-mention from claim-support, and verify against the source itself when the claim will leave your hands. The guide is a plain-language adaptation of the Synthience Institute\u2019s Citation Verification Protocol (SF0037). Expands practice #4 of PG-000.",
+    action: "Read",
+    actionLink: "practitioner-guides/PG-009.html"
+  },
+  {
     date: "2026-05-14",
     dateDisplay: "May 14, 2026",
     dateOrder: 2,
