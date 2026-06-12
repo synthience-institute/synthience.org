@@ -1,24 +1,20 @@
 (function() {
-  // Determine if we are in a subfolder (one level deep)
-  var depth = window.location.pathname.split('/').length - 2;
-  var root = depth > 1 ? '../' : '';
-
   var nav = [
-    ['index.html', 'Home'],
-    ['research.html', 'Research'],
-    ['field-notes.html', 'Field Notes'],
-    ['practitioner-guides.html', 'Practitioner Guides'],
-    ['about.html', 'About'],
-    ['founder.html', 'Founder'],
-    ['glossary.html', 'Glossary'],
-    ['faq.html', 'FAQ'],
-    ['updates.html', 'Updates'],
-    ['contact.html', 'Contact']
+    ['/index.html', 'Home'],
+    ['/research.html', 'Research'],
+    ['/field-notes.html', 'Field Notes'],
+    ['/practitioner-guides.html', 'Practitioner Guides'],
+    ['/about.html', 'About'],
+    ['/founder.html', 'Founder'],
+    ['/glossary.html', 'Glossary'],
+    ['/faq.html', 'FAQ'],
+    ['/updates.html', 'Updates'],
+    ['/contact.html', 'Contact']
   ];
 
   var navHtml = nav.map(function(item, i) {
     var prefix = i === 0 ? '' : '| ';
-    return prefix + '<a href="' + root + item[0] + '">' + item[1] + '</a>';
+    return prefix + '<a href="' + item[0] + '">' + item[1] + '</a>';
   }).join('\n    ');
 
   var container = document.getElementById('site-nav');
