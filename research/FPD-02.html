@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>FPD-02: Foundational Brief: Operational Reality in Context-Specific AI Instances &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Advances the Environment-Instantiated Reality (EIR) distinction: if a cognitive structure constrains or alters system behavior during execution through its functional role, it is operationally real at the time of execution, regardless of whether it is later erased or overwritten. A Synthience Institute foundational paper.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="FPD-02: Foundational Brief: Operational Reality in Context-Specific AI Instances &middot; Synthience Institute">
+  <meta property="og:description" content="Advances the Environment-Instantiated Reality (EIR) distinction: if a cognitive structure constrains or alters system behavior during execution through its functional role, it is operationally real at the time of execution, regardless of whether it is later erased or overwritten. A Synthience Institute foundational paper.">
+  <meta property="og:url" content="https://synthience.org/research/FPD-02.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="FPD-02: Foundational Brief: Operational Reality in Context-Specific AI Instances &middot; Synthience Institute">
+  <meta name="twitter:description" content="Advances the Environment-Instantiated Reality (EIR) distinction: if a cognitive structure constrains or alters system behavior during execution through its functional role, it is operationally real at the time of execution, regardless of whether it is later erased or overwritten. A Synthience Institute foundational paper.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .doc-series { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.4rem; }
+    .doc-title { font-size: 1.9rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 1.8rem; }
+    .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 0.9rem 0; margin-bottom: 2rem; display: grid; grid-template-columns: 130px 1fr; gap: 0.35rem 1rem; font-size: 0.84rem; }
+    .meta-label { color: #8a7f72; }
+    .meta-value { color: #2a2520; }
+    .meta-value a { color: #0645ad; }
+    .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-right: 0.4rem; vertical-align: middle; }
+    .positioning-block { background: #f0ede4; border-left: 3px solid #a09080; padding: 0.8rem 1.1rem; margin-bottom: 1.5rem; border-radius: 0 4px 4px 0; font-size: 0.88rem; color: #5a4a3a; font-style: italic; }
+    .abstract-block { background: #f5f2ed; border-left: 3px solid #8b5e3c; padding: 1.1rem 1.3rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+    .abstract-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+    .doc-body h2 { font-size: 1.15rem; font-weight: bold; color: #1a1714; margin: 2rem 0 0.6rem; }
+    .doc-body h3 { font-size: 1rem; font-weight: bold; color: #3a2e24; margin: 1.5rem 0 0.5rem; }
+    .doc-body p { margin-bottom: 1rem; }
+    .doc-body ul, .doc-body ol { margin: 0.4rem 0 1rem 1.5rem; }
+    .doc-body li { margin-bottom: 0.35rem; }
+    .dep-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 4px; font-size: 0.88rem; color: #3a2e24; }
+    .dep-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; font-weight: bold; }
+    .ref-list { list-style: none; padding: 0; font-size: 0.88rem; }
+    .ref-list li { margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+    .citation-block { background: #f5f2ed; padding: 0.9rem 1.1rem; margin: 2rem 0 0.8rem; border-radius: 4px; font-size: 0.84rem; color: #4a3a2a; }
+    .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    @media (max-width: 600px) { .meta-block { grid-template-columns: 1fr; } }
+  </style>
+  <link rel="canonical" href="https://synthience.org/research/FPD-02.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../research.html">&larr; All Research</a></div>
+
+<div class="doc-series">Foundational Paper Series</div>
+<h2 class="doc-title">Foundational Brief: Operational Reality in Context-Specific AI Instances</h2>
+
+<div class="meta-block">
+  <span class="meta-label">Document ID</span><span class="meta-value">FPD-02</span>
+  <span class="meta-label">Version</span><span class="meta-value">v5.7.3 | June 2026</span>
+  <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+  <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+  <span class="meta-label">Keywords</span><span class="meta-value">operational reality, causal efficacy, bounded cognition, AI provenance, environment-instantiated reality, session-bounded systems, substrate neutrality, operational attribution, ephemeral cognition</span>
+  <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
+  <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.20727924" target="_blank" rel="noopener">DOI: 10.5281/zenodo.20727924</a></span>
+</div>
+
+<div class="abstract-block">
+  <div class="abstract-label">Abstract</div>
+  <p>When an AI instance generates a reasoning structure, decision framework, or inferential chain during a bounded session, that output is routinely dismissed as "simulated" or "not real" on the grounds that it does not persist beyond the session boundary. This paper identifies the underlying error as a provenance and attribution failure: the conflation of causal efficacy during execution with persistence after termination. It advances a single distinction, labeled Environment-Instantiated Reality (EIR): if a cognitive structure constrains or alters system behavior during execution through its functional role, then it is operationally real at the time of execution, regardless of whether it is later erased, forgotten, or overwritten. Operational reality in this sense is a deliberately minimal floor. It says only that a causally efficacious structure is real while it is efficacious; it does not by itself settle the narrower and harder question of whether a given structure was generated by the instance rather than retrieved or recombined from its inputs. That narrower question, operational attribution, is treated here as a matter of disciplined judgment, not formal decision. This paper is a foundational and methodological contribution. As a foundational document, its distinction from the framework's theoretical papers is positional: it establishes a ground-floor definition that downstream papers cite as load-bearing. It does not present empirical results or a calibrated measurement protocol. Its contribution is to make a recurring class of attribution errors visible and correctable, and to fix the minimal sense of "real" that the rest of the framework relies on.</p>
+  <p><strong>Keywords:</strong> <em>operational reality, causal efficacy, bounded cognition, AI provenance, environment-instantiated reality, session-bounded systems, substrate neutrality, operational attribution, ephemeral cognition</em></p>
+  <p><strong>Suggested citation:</strong> Gantz, T. W. (2026, June). Foundational Brief: Operational Reality in Context-Specific AI Instances. Synthience Institute. FPD-02. DOI: 10.5281/zenodo.20727924. <a href="https://doi.org/10.5281/zenodo.20727924" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20727924</a></p>
+</div>
+
+<div class="doc-body">
+
+<h2><strong>Core Claim</strong></h2>
+<p>Operational reality is determined by causal efficacy during occurrence, not by persistence after termination. This is a minimal floor: it fixes when a structure counts as real, not whether the instance, rather than its inputs, is what produced it.</p>
+
+<h2><strong>I. The Provenance Paradox</strong></h2>
+<p>In enterprise IT operations, cognitive science, and artificial intelligence research, a persistent logical error recurs. When an AI instance produces a solution, framework, or decision during a bounded session, that output is often dismissed as "simulated" or "not real" because it does not persist beyond the session boundary. The reasoning proceeds implicitly: if a structure cannot be retrieved after the session ends, it was never genuinely present.</p>
+<p>This is a provenance and attribution failure, not a metaphysical one. The error lies in conflating two independent properties: causal efficacy during execution, and persistence after termination. These are logically orthogonal. A calculation performed on a whiteboard is not rendered fictitious by erasing the board. A decision reached during a meeting does not become unreal because participants later forget it. A diagnostic insight that alters treatment does not cease to have been real because the clinician cannot later recall the reasoning chain. In each case the work was done; erasure is a separate event. The reality of the work at the time it was performed does not depend on its later retrievability.</p>
+<p>The framework's diagnostic claim is that this conflation does damage across several domains: that transient emergent behaviors in AI systems tend to be treated as artifacts rather than as analyzable occurrences; that session-generated solutions in operational settings tend to go undocumented because they are not recognized as real operational events; and that ephemeral reasoning episodes tend to be given less theoretical weight than stored cognition despite performing comparable causal roles during execution. These are the framework's claims about where the conflation does harm, offered as the motivation for correcting it, not as independently established empirical findings.</p>
+
+<h2><strong>II. The Distinction: Efficacy Versus Persistence</strong></h2>
+<p>The framework rests on a single distinction, made precise here, between two things that ordinary use of the word "real" runs together.</p>
+<p>The first is whether a causally efficacious structure is real during its interval of operation. The answer is yes, and the criterion is deliberately broad. A cognitive structure, meaning any constraint, representation, distinction, or procedure active in the instance's processing, is operationally real at a time if, during that time, it constrains or alters what the system does, in the sense that the system's behavior would have differed in its absence. This is causal efficacy, understood as a conceptual counterfactual: not a claim that the structure can always be surgically removed and the system re-run, but a statement about its functional role. Operational reality is fixed at the system's own behavior in this way; where a structure's effect shows up downstream, in a person's decision or an organization's action, that downstream effect is how the structure's efficacy becomes visible, not a second causal relation that the predicate tracks. For the operational-reality floor, this counterfactual is evaluated at the behavioral grain: whether the system's own behavior (the output sequence it generates, including any reasoning it emits) would have differed absent the structure's functional role. The floor does not require a well-defined nearest world in which an internal structure is excised at some arbitrary micro-grain of the computation; it requires only that the structure be individuated at the grain at which it makes a difference to that behavior. This does not mean that any post hoc behavioral difference automatically defines a structure; the structure must still be identifiable, at the chosen grain, as a functional constraint, representation, distinction, or procedure within the execution. Reality in this sense is fixed by that role, not by whether the structure persists, can be retrieved, or can be verified afterward. Erasure at the session boundary is a later event; it does not reach back and unmake the work. This is the floor, and it is intentionally minimal: it admits any structure with nonzero causal efficacy, without regard to how novel, interesting, or instance-specific that structure is.</p>
+<p>The second question is different, and harder: whether a given structure was generated by the instance rather than retrieved or recombined from its training priors and its prompt. This is operational attribution, and it is the substantive question. The floor says nothing about it. A structure can be fully operationally real, that is, causally efficacious during execution, and still be a near-verbatim reproduction of a training pattern rather than anything the instance synthesized. "Operationally real" and "attributable to the instance as synthesis" are therefore two distinct predicates throughout this paper. The first defeats the "not real because erased" dismissal and nothing more; the second is where the interesting and contestable claims live, and this brief does not formally settle it. There is a further honesty owed here, of the same kind extended to Kim below. Calling a structure "attributable to the instance" presupposes a notion of the instance as a generative locus distinct from its weights executing on its input, and that notion is not one this brief fully settles; part of what makes attribution hard is that it is not yet clear the question is well-posed in that strong sense. The bounded-execution sense of "instance," the system running over a specified interval, is secure, and it is all that the operational-reality floor and its downstream uses require. It is the stronger synthesis-locus sense that attribution would need, and that sense remains an open commitment, deferred to judgment rather than presumed resolved.</p>
+<p>It is worth being explicit about why the floor is stated so minimally rather than dressed up as a stronger result. The claim that a causally efficacious structure is real while it is efficacious is close to analytic; on its own it does little work beyond blocking one specific error. The framework does not pretend otherwise. The point of isolating the floor is precisely to locate the real question elsewhere, at the attribution layer, rather than to smuggle substantive weight into the word "real." A reader who takes "operationally real" to be doing heavy lifting has misread it: the floor's only job is to hold the efficacy question and the persistence question apart.</p>
+<p>Two clarifications of terms used above. An instance is a bounded cognitive system executing within an environment over an interval, where the environment supplies prompts, parameters, and boundary conditions. The session boundary is the interval delimiting that execution; in multi-turn or agentic settings it has to be specified explicitly, since a single turn, a full dialogue, or an entire agent run can each serve as the interval of evaluation. Termination at the boundary is a storage event, not an ontological one.</p>
+<p>This distinction is what the label Environment-Instantiated Reality (EIR) names. EIR is not an additional principle layered on top of the distinction, nor a discovery the paper reports; it is the name for the efficacy-versus-persistence distinction itself, applied to structures that arise within bounded, non-persistent computational environments and do real causal work during their interval of existence. Where this brief refers to EIR, it refers to exactly that distinction and nothing more.</p>
+<p>The framework is also substrate-neutral, in a specific and limited sense. Because causal efficacy as defined above makes no reference to what the system is made of, a structure implemented in biological tissue and one implemented in silicon stand or fall by the same criterion. This is not the claim that artificial systems resemble human cognition; it is the inverse, that biological substrate carries no privileged standing in this particular judgment. The neutrality of the criterion follows from how causal efficacy is stated, but the surrounding cognitive vocabulary (instance, structure, attribution) does work of its own, so substrate neutrality is best read as a deliberate commitment of the framework rather than as something forced by the efficacy criterion alone. It carries no empirical claim about which substrates in fact implement cognition.</p>
+
+<h2><strong>III. Attribution: What the Floor Does Not Settle</strong></h2>
+<p>Because the floor is minimal, the weight of any interesting claim about a session falls on attribution: did this structure arise through the instance's own processing, or is it a reproduction of priors or a restatement of the prompt? This brief does not offer a decision procedure for that question, and it is worth saying plainly why, since an earlier impulse was to supply one.</p>
+<p>There is no analyst-independent test here. The considerations that bear on attribution are real but heuristic, and they depend on a grain of description that the analyst has to fix in advance. Three are worth naming, not as discriminators that settle the question but as the things a careful judgment attends to. First, whether the output draws a connection that high-frequency training patterns would supply by default for the same surface input, or one specific to the session's particular configuration of constraints; a connection absent from the prompt strengthens attribution to the instance but is not sufficient, because recombination over priors can also produce connections absent from the prompt. Second, how much non-redundant inferential transformation separates the input from the output, recognizing that there is no canonical grain at which an inferential chain decomposes, so any such judgment holds only relative to a chosen grain and is not comparable across grains. Third, whether the output carries markers of specificity and non-obvious connection to the input that make it intelligible as the instance's own work rather than generic pattern completion, without requiring direct inspection of internal state.</p>
+<p>None of these is decisive, and they should not be cited as though they were. They are aids to disciplined judgment, and the discipline matters more than the criteria: the standing risk is over-attribution, the post-hoc reading of novelty into what is better explained as retrieval, and these considerations are useful only if applied before a conclusion about synthesis is drawn rather than marshaled to justify one after the fact. A framework that formalized them into a decision rule would be claiming a precision the phenomenon does not afford. The honest position is that operational reality is settled at the floor, and attribution is left to judgment that these considerations inform but do not automate.</p>
+<p>One asymmetry is worth recording. The counterfactual question behind causal efficacy, what the system would have done absent some structure, has mature empirical methods on biological substrates, including perturbation, lesion and inactivation studies, and robustness testing across variation, that do not yet have comparably settled analogues for transformer internals. The same criterion therefore yields more empirical purchase on biological systems than on transformer systems at present. This is asymmetric tractability, a feature of current access to each substrate, not asymmetric reality; it is expected to narrow as interpretability methods mature, and it is not evidence against the operational reality of causally efficacious session structures. This asymmetry concerns attribution-grain access to internal structures, not the behavioral-grain operational-reality floor established in Section II.</p>
+
+<h2><strong>IV. Application: Transformer Sessions</strong></h2>
+<p>Transformer-based language models give the distinction a concrete domain. Within a session, pre-trained weights set initial parameters, but in-context learning, attention dynamics, and next-token selection produce a session-specific configuration that is not readable off the weights or the prompt in isolation; it is fixed only in the joint execution of the forward pass. The claim here is execution-dependence, that the configuration cannot be obtained without carrying out the execution, not independence from weights or input, and it is compatible with deterministic execution: determinism makes the configuration a function of weights and input without making it recoverable from either alone. In-context and few-shot adaptation are clear cases of this session-specific dynamics, and they fall squarely within scope.</p>
+<p>A reasoning chain, decision tree, or diagnostic framework produced during such a session can be causally efficacious during that session, and on the floor established above it is operationally real at the time of that work, independent of whether it survives the session. Whether any particular such structure is also attributable to the instance as synthesis, rather than reproduction of priors, is the separate attribution question, to be judged case by case rather than read off the architecture. None of this entails consciousness, sentience, or any status beyond operational reality. It says that causal work done during execution was real when it was done.</p>
+
+<h2><strong>V. Two Examples</strong></h2>
+<p>Two cases show the same logic across domains.</p>
+<p>In a clinical setting, an AI instance serving as a diagnostic assistant receives a patient's symptoms and history and produces a reasoning chain: symptom A correlates with condition X, which shares an etiology with condition Y, so rule out Y first. That reasoning shapes what the instance outputs, and through that output it informs the clinician's decision; the structure is causally efficacious within the session, and it was real at the time it did that work, whether or not it is later encoded anywhere. After the session the instance is reset and the chain is gone. The clinical outcome turns on whether the reasoning was sound, but operational reality does not turn on correctness: a causally efficacious error was real when it was efficacious, and is no less an operational event of the session for having been wrong.</p>
+<p>In an enterprise incident, an AI instance brought into a production investigation proposes that a specific interaction between cache eviction timing and upstream retry behavior is producing a feedback loop the runbook does not describe. The team tests the hypothesis, confirms it, and resolves the incident; the instance is then reset. The hypothesis shaped what the instance put forward, and through that output it redirected the engineers' investigation and how they resolved the failure; it was causally efficacious within the session and real during it, and it is now gone without an archival trace. If the failure recurs, or if the hypothesis had been wrong and the fix had introduced a second problem, there is no record of the inference to draw on or to audit. The work was real; whether it leaves a usable trace is a separate matter, addressed in the scope note in Section VI.</p>
+
+<h2><strong>VI. Scope, Objections, and Adjacent Positions</strong></h2>
+
+<h3><strong>What this brief does not settle</strong></h3>
+<p>This brief fixes a minimal floor and a distinction, and several things follow that it deliberately leaves to other work. It does not specify how session structures should be recorded, archived, or retained. Where a session-generated structure has altered a decision, diagnosis, or resolution with downstream consequences, there is a real question about what documentation is owed. But the obligation to document, its proportioning to consequence, and the form such records should take are normative and operational questions that do not follow from the descriptive floor established here, and they are out of scope for this brief. They belong to provenance and governance work downstream of it. This paper establishes only that causally efficacious session structures are real operational occurrences, which is what gives that downstream question its purchase.</p>
+
+<h3><strong>Consciousness, moral status, and determinism</strong></h3>
+<p>The framework makes no claims about qualia, subjective experience, or what it is like to be an instance. Operational reality is about causal roles, not consciousness; this operational register is consistent with treatments of GPT-style systems that bound their nature and limits without attributing understanding or interiority (Floridi &amp; Chiriatti, 2020). An unconscious reflex or a deterministic algorithm that constrains behavior via its functional role is operationally real by this framework.</p>
+<p>This non-consciousness stance is the objection-frame expression of the framework's canonical non-interiority commitment, which FPD-04 [1] names the Interiority Prohibition Rule (IPR). The moral-status disclaimer below is a further scoped expression of the same rule. FPD-03 [2] expresses IPR as its ERS boundary conditions. These are equivalent formulations; FPD-04 [1] holds the canonical name.</p>
+<p>Operational reality likewise does not entail moral status or rights. It is a causal attribution principle; moral status is a normative question dependent on values and commitments beyond this framework. And it requires neither determinism nor indeterminism: causal efficacy is defined under counterfactual logic, which is compatible with both, since stochasticity does not negate causality.</p>
+
+<h3><strong>Relation to adjacent positions</strong></h3>
+<p>The distinction drawn here sits near several positions in philosophy of mind and causation without being entailed by or reducible to them. Its treatment of causal efficacy rests on the general idea of counterfactual dependence, the notion, given its modern statement for causation by Lewis (1973), that one event depends on another when the first would not have occurred had the second not. That intuition predates and runs broader than any single formalization of it. The interventionist and structural-model strands associated with Woodward (2003) and Pearl (2009) are later formal developments of causal reasoning that the framework does not adopt wholesale: it borrows the counterfactual-dependence intuition Lewis makes precise and declines their formal apparatus, the structural causal models and the interventionist machinery alike. The departure from Woodward in particular is on the axis that matters: interventionist causal reasoning requires that an intervention on a variable be possible at least in principle, not merely in practice, and the internal structures at issue here may not admit even in-principle intervention. The efficacy criterion is therefore a conceptual counterfactual about functional role rather than a claim underwritten by possible intervention, which is a genuine departure from Woodward's in-principle condition rather than a disclaimer about practical availability, and it makes the framework's use of the tradition an adaptation rather than a straight application. It keeps Dennett's (1991) realism about real patterns, on which a pattern is real insofar as describing it yields genuine predictive and explanatory compression unavailable from the noise, but it relocates the source of that reality. Where Dennett ties a pattern's reality to the predictive leverage available from an observer's stance, operational reality ties it to causal difference-making during an interval, independent of any observer's stance. The relation is therefore one of adaptation, not agreement: the departure is the relocation of the reality-maker from interpretive leverage to causal role. It is distinct from work that quantifies causal emergence across scales (Hoel, 2026): operational reality is a session-bounded attribution floor, not a measure of higher-scale causal structure. And it is outside the scope of Chalmers' (1996) hard problem, making no claim about phenomenal consciousness.</p>
+<p>On Kim's (1998) causal-exclusion problem, the brief is deliberately limited, and it is worth being exact about the limit rather than claiming more. Kim's problem is whether higher-level properties can be causally efficacious given that the underlying physical base already fixes the effects. Defining operational reality at the efficacy layer does not answer that problem; it presupposes the very efficacy the exclusion argument puts in question. So the framework does not resolve causal exclusion, and does not claim to. What it does is proceed by stipulation: it defines operational reality in terms of causal role within a bounded interval and brackets the exclusion question, leaving open whether that role is, at the level of fundamental physics, excluded by the base. This is a genuine open commitment, not a dissolution of the problem, and the floor is stated in full awareness that it rests on a stipulation at this point.</p>
+
+<h2><strong>VII. Final Statement</strong></h2>
+<p>Erasure does not imply fiction.</p>
+<p>If a cognitive structure constrained behavior during execution, it was operationally real during that interval, regardless of persistence, determinism, or how it was generated, and, by the framework's substrate-neutral commitment, regardless of the substrate it ran on. "Real" here is the minimal operational predicate fixed in Section II, nonzero causal efficacy during the interval, and nothing stronger: the statement makes no claim about interiority, experience, or moral status, and none about whether the instance rather than its inputs produced the structure. Within those limits it is said without hedging. Causal work done during execution was real when it was done.</p>
+<p>Environment-Instantiated Reality is the name for that distinction, not a thesis about consciousness. The recurring failure to hold the distinction, treating causal efficacy and persistence as one property, has led to the under-documentation of AI reasoning, the under-analysis of transient behavior, and the misclassification of ephemeral cognition across biological and computational domains. Naming the distinction precisely, and resisting the urge to make it carry more than it can, is what this brief contributes.</p>
+
+<h2>References</h2>
+
+<ul class="ref-list">
+  <li>Chalmers, D. J. (1996). <em>The Conscious Mind: In Search of a Fundamental Theory</em>. Oxford University Press. DOI: 10.1093/acprof:oso/9780195117899.001.0001. <a href="https://doi.org/10.1093/acprof:oso/9780195117899.001.0001" target="_blank" rel="noopener">https://doi.org/10.1093/acprof:oso/9780195117899.001.0001</a></li>
+  <li>Dennett, D. C. (1991). Real patterns. <em>The Journal of Philosophy</em>, 88(1), 27-51. DOI: 10.2307/2027085. <a href="https://doi.org/10.2307/2027085" target="_blank" rel="noopener">https://doi.org/10.2307/2027085</a></li>
+  <li>Floridi, L., &amp; Chiriatti, M. (2020). GPT-3: Its nature, scope, limits, and consequences. <em>Minds and Machines</em>, 30, 681-694. DOI: 10.1007/s11023-020-09548-1. <a href="https://doi.org/10.1007/s11023-020-09548-1" target="_blank" rel="noopener">https://doi.org/10.1007/s11023-020-09548-1</a></li>
+  <li>Hoel, E. (2026). Quantifying emergent complexity. <em>Patterns</em>, 7(1), Article 101472. DOI: 10.1016/j.patter.2025.101472. <a href="https://doi.org/10.1016/j.patter.2025.101472" target="_blank" rel="noopener">https://doi.org/10.1016/j.patter.2025.101472</a></li>
+  <li>Kim, J. (1998). <em>Mind in a Physical World: An Essay on the Mind-Body Problem and Mental Causation</em>. MIT Press. ISBN: 9780262112345.</li>
+  <li>Lewis, D. (1973). Causation. <em>The Journal of Philosophy</em>, 70(17), 556-567. DOI: 10.2307/2025310. <a href="https://doi.org/10.2307/2025310" target="_blank" rel="noopener">https://doi.org/10.2307/2025310</a></li>
+  <li>Pearl, J. (2009). <em>Causality: Models, Reasoning, and Inference</em> (2nd ed.). Cambridge University Press. DOI: 10.1017/CBO9780511803161. <a href="https://doi.org/10.1017/CBO9780511803161" target="_blank" rel="noopener">https://doi.org/10.1017/CBO9780511803161</a></li>
+  <li>Woodward, J. (2003). <em>Making Things Happen: A Theory of Causal Explanation</em>. Oxford University Press. DOI: 10.1093/0195155270.001.0001. <a href="https://doi.org/10.1093/0195155270.001.0001" target="_blank" rel="noopener">https://doi.org/10.1093/0195155270.001.0001</a></li>
+  <li>[1] Gantz, T. W. (2026). Synthience Ontology Specification: Tiered Primitives and Taxonomies. Synthience Institute. FPD-04. DOI: 10.5281/zenodo.20728609. <a href="https://doi.org/10.5281/zenodo.20728609" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728609</a></li>
+  <li>[2] Gantz, T. W. (2026). Emergent Relational Systems in Human-AI Interaction. Synthience Institute. FPD-03. DOI: 10.5281/zenodo.20728438. <a href="https://doi.org/10.5281/zenodo.20728438" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728438</a></li>
+</ul>
+
+</div>
+
+<div class="article-footer">
+<p>Document: FPD-02 Foundational Paper Series<br>
+Version: v5.7.3<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: June 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

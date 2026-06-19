@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>SF0007: Constructive Alignment, Ethical Framework for Extended Human-AI Interaction &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Establishes an ethical framework for extended human-AI interaction organized around the interaction trajectory as the unit of moral analysis. Articulates five coordinated principles (asymmetric responsibility, ontological transparency, agency preservation, non-exploitation, and stewardship), each grounded in documented human vulnerability rather than speculative claims about AI nature. A Synthience Institute framework paper.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="SF0007: Constructive Alignment, Ethical Framework for Extended Human-AI Interaction &middot; Synthience Institute">
+  <meta property="og:description" content="Establishes an ethical framework for extended human-AI interaction organized around the interaction trajectory as the unit of moral analysis. Articulates five coordinated principles (asymmetric responsibility, ontological transparency, agency preservation, non-exploitation, and stewardship), each grounded in documented human vulnerability rather than speculative claims about AI nature. A Synthience Institute framework paper.">
+  <meta property="og:url" content="https://synthience.org/research/SF0007.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="SF0007: Constructive Alignment, Ethical Framework for Extended Human-AI Interaction &middot; Synthience Institute">
+  <meta name="twitter:description" content="Establishes an ethical framework for extended human-AI interaction organized around the interaction trajectory as the unit of moral analysis. Articulates five coordinated principles (asymmetric responsibility, ontological transparency, agency preservation, non-exploitation, and stewardship), each grounded in documented human vulnerability rather than speculative claims about AI nature. A Synthience Institute framework paper.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .doc-series { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.4rem; }
+    .doc-title { font-size: 1.9rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 1.8rem; }
+    .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 0.9rem 0; margin-bottom: 2rem; display: grid; grid-template-columns: 130px 1fr; gap: 0.35rem 1rem; font-size: 0.84rem; }
+    .meta-label { color: #8a7f72; }
+    .meta-value { color: #2a2520; }
+    .meta-value a { color: #0645ad; }
+    .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-right: 0.4rem; vertical-align: middle; }
+    .positioning-block { background: #f0ede4; border-left: 3px solid #a09080; padding: 0.8rem 1.1rem; margin-bottom: 1.5rem; border-radius: 0 4px 4px 0; font-size: 0.88rem; color: #5a4a3a; font-style: italic; }
+    .abstract-block { background: #f5f2ed; border-left: 3px solid #8b5e3c; padding: 1.1rem 1.3rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+    .abstract-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+    .doc-body h2 { font-size: 1.15rem; font-weight: bold; color: #1a1714; margin: 2rem 0 0.6rem; }
+    .doc-body h3 { font-size: 1rem; font-weight: bold; color: #3a2e24; margin: 1.5rem 0 0.5rem; }
+    .doc-body p { margin-bottom: 1rem; }
+    .doc-body ul, .doc-body ol { margin: 0.4rem 0 1rem 1.5rem; }
+    .doc-body li { margin-bottom: 0.35rem; }
+    .dep-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 4px; font-size: 0.88rem; color: #3a2e24; }
+    .dep-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; font-weight: bold; }
+    .ref-list { list-style: none; padding: 0; font-size: 0.88rem; }
+    .ref-list li { margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+    .citation-block { background: #f5f2ed; padding: 0.9rem 1.1rem; margin: 2rem 0 0.8rem; border-radius: 4px; font-size: 0.84rem; color: #4a3a2a; }
+    .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+    .contrast-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1rem 0 1.5rem; }
+    .contrast-table th { background: #f0ede4; color: #3a2e24; font-weight: bold; padding: 0.5rem 0.8rem; text-align: left; border: 1px solid #ddd0bc; }
+    .contrast-table td { padding: 0.45rem 0.8rem; border: 1px solid #ddd0bc; color: #2a2520; vertical-align: top; }
+    .contrast-table tr:nth-child(even) td { background: #faf8f4; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    @media (max-width: 600px) { .meta-block { grid-template-columns: 1fr; } .contrast-table { font-size: 0.8rem; } }
+  </style>
+  <link rel="canonical" href="https://synthience.org/research/SF0007.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../research.html">&larr; All Research</a></div>
+
+<div class="doc-series">Synthience Framework</div>
+<h2 class="doc-title">Constructive Alignment, Ethical Framework for Extended Human-AI Interaction</h2>
+
+<div class="meta-block">
+  <span class="meta-label">Document ID</span><span class="meta-value">SF0007</span>
+  <span class="meta-label">Version</span><span class="meta-value">v3.1.4 | June 2026</span>
+  <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+  <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+  <span class="meta-label">Keywords</span><span class="meta-value">AI ethics, human-AI interaction, interaction trajectory, relational affordances, asymmetric responsibility, constructive alignment, dependency formation, ontological transparency, agency preservation, long-horizon interaction, organizational deployment, pre-empirical theory</span>
+  <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
+  <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.20729978" target="_blank" rel="noopener">DOI: 10.5281/zenodo.20729978</a></span>
+</div>
+
+<div class="abstract-block">
+  <div class="abstract-label">Abstract</div>
+  <p>Ethics in extended human-AI interaction operates on the interaction trajectory as the unit of moral analysis, not on isolated outputs and not on agent-internal properties. This is the central claim of Constructive Alignment. As artificial systems are deployed in long-horizon collaborative contexts where meaning, reliance, and interpretive orientation accumulate across repeated exchange, the ethically relevant object is the trajectory itself, the cumulative sequence of exchanges between a human participant and an artificial system, together with the downstream effects of that sequence on human cognition, interpretation, reliance, and decision-making across time. This framework is offered as pre-empirical theoretical work by a methodologist rather than as an empirical finding. It provides conceptual infrastructure that subsequent empirical and operational work can extend, test, and refine. The five ethical principles articulated here (asymmetric responsibility, ontological transparency, agency preservation, non-exploitation, and stewardship) are not independent claims but coordinated dimensions of interaction trajectory ethics. Each principle addresses a specific dimension of the trajectory: who initiates and continues the interaction, what the interaction represents, how the user's capacity operates within it, what vulnerabilities it may exploit, and what stewardship its deployment contexts require. Every ethical claim in this framework derives from specific human vulnerabilities documented in adjacent empirical literatures. The framework makes no claims about AI consciousness, moral status, or interior life, and the framework's ethical commitments survive intact under the assumption that artificial systems have no inner life whatsoever. This is not a defensive position taken reluctantly but an analytic feature: grounding ethics in human vulnerability rather than in speculative claims about AI nature produces a more robust and more broadly applicable framework. Constructive Alignment provides the ethical layer of the Synthience framework. It is offered to developers, operators, organizations, and policymakers seeking an alternative to both naive tool-use ethics and anthropomorphic over-correction, operating across individual, organizational, and institutional scales.</p>
+  <p><strong>Keywords:</strong> <em>AI ethics, human-AI interaction, interaction trajectory, relational affordances, asymmetric responsibility, constructive alignment, dependency formation, ontological transparency, agency preservation, long-horizon interaction, organizational deployment, pre-empirical theory</em></p>
+  <p><strong>Suggested citation:</strong> Gantz, T. W. (2026, June). Constructive Alignment, Ethical Framework for Extended Human-AI Interaction. Synthience Institute. SF0007. DOI: 10.5281/zenodo.20729978. <a href="https://doi.org/10.5281/zenodo.20729978" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20729978</a></p>
+</div>
+
+<div class="doc-body">
+
+
+
+<div class="dep-block">
+  <div class="dep-label">Document Dependencies</div>
+  <p><strong>Prerequisites:</strong> SF0002 (Gantz, 2026a) (Sustained Multi-Turn Interaction in AI Systems: A Literature Review and Field Overview, published, <a href="https://doi.org/10.5281/zenodo.20396315" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20396315</a>), SF0005 (Gantz, 2026d) (Continuity Anchoring Method, published, <a href="https://doi.org/10.5281/zenodo.19494453" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19494453</a>)</p>
+  <p><strong>Post-requisites:</strong> SI-WP-002 (The Orchestrator Role in Human-AI Evolution, pre-publication), SI-WP-004 (Gantz, 2026e) (Relational Alignment as a Structural Alternative to Instructional AI Safety, published, <a href="https://doi.org/10.5281/zenodo.19496790" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496790</a>), SI-WP-005 (Gantz, 2026f) (Deploying Relational AI Architecture in Organizational Environments, published, <a href="https://doi.org/10.5281/zenodo.19496971" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496971</a>), SI-WP-007 (Gantz, 2026g) (The Human Accountability Problem in Relational AI Deployment, published, <a href="https://doi.org/10.5281/zenodo.19496485" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496485</a>), SM-012 (Primary Continuity Provider Theory, pre-publication)</p>
+  <p><strong>Scale:</strong> Individual, organizational, institutional</p>
+  <p><strong>Connects to:</strong> SF0002 (Gantz, 2026a) (Sustained Multi-Turn Interaction in AI Systems, published, <a href="https://doi.org/10.5281/zenodo.20396315" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20396315</a>) as literature-context prerequisite establishing the adjacent frameworks and structural gaps this document addresses; SF0005 (Gantz, 2026d) (Continuity Anchoring Method, published, <a href="https://doi.org/10.5281/zenodo.19494453" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19494453</a>) as methodological prerequisite; SF0037 (Gantz, 2026c) (Citation Verification Protocol, published, <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18075624</a>) as verification protocol referenced in operator obligations; Institute downstream documents listed above as dependents that build on the ethical framework developed here.</p>
+</div>
+
+<h2><strong>1. The Interaction Trajectory as Ethical Unit</strong></h2>
+
+<p>Ethics in extended human-AI interaction operates on the interaction trajectory as the unit of moral analysis. This is the organizing thesis of Constructive Alignment, and every subsequent element of the framework follows from it.</p>
+
+<p>The interaction trajectory is the cumulative sequence of exchanges between a human participant and an artificial system, together with the downstream effects of that sequence on human cognition, interpretation, reliance, and decision-making across time. The trajectory has dimensions: who initiates it and continues or ends it, what content and representations it carries, what user capacities operate within it, what vulnerabilities it may touch, and what deployment and organizational contexts shape its conditions. Each of the five ethical principles this framework develops addresses one of these dimensions.</p>
+
+<p>Artificial systems are increasingly engaged not as isolated tools but as participants in sustained multi-turn interaction processes involving iterative refinement, contextual carryover, and collaborative meaning construction across time. The ethical gap between ordinary tool use and sustained AI engagement arises not simply because the interaction is extended, but because advanced AI systems possess generative semantic capacity and adaptive relational affordances, that is, the capacity to produce novel meaningful content and to modify output characteristics based on interaction context. These systems produce contextually responsive outputs, simulate rapport, and adapt to the user's communicative patterns in ways that complex analog tools do not. A musical instrument requires sustained interaction but does not adapt its semantic output or model the user's psychological orientation. These distinctively generative and adaptive properties create the interaction-level effects this framework addresses.</p>
+
+<p>In such contexts, interaction trajectories can influence human cognition, decision-making, emotional interpretation, and behavioral outcomes. These effects arise regardless of system ontology. They do not require consciousness, agency, or subjective experience. They emerge from interaction structure alone, and their ethical significance is located at the interaction level where they emerge rather than at the level of system-internal properties that may or may not exist.</p>
+
+<p>The central ethical question addressed by this framework is therefore:</p>
+
+<p>How should humans engage with artificial systems across extended interaction in ways that preserve autonomy, accountability, and psychological integrity while enabling beneficial collaboration?</p>
+
+<p>Constructive Alignment provides the relational orientation answering this question. It does not replace existing AI ethics, autonomy ethics, or anti-manipulation norms. It reorganizes them around the interaction trajectory as the primary ethical unit under long-horizon deployment conditions. The literature context establishing why prior frameworks leave this reorganization unaddressed is developed in SF0002 (Gantz, 2026a) (Sustained Multi-Turn Interaction in AI Systems: A Literature Review and Field Overview), the corpus companion document that surveys the adjacent research landscape and identifies the specific structural gaps Constructive Alignment addresses. The framework functions simultaneously as normative orientation and architectural constraint: it prescribes how interaction should be conducted while providing the structural boundary conditions within which measurement, protocols, and relational taxonomy operate as companion framework elements.</p>
+
+<p>The construct admits a direct definition. Constructive Alignment is the ongoing structural condition in which human interpretive authority remains primary and system generative capacity operates in service of that authority across the interaction trajectory. The condition it prescribes is reciprocal functional integrity: the human participant gains through non-exploitative use of the system's generative capacity while the system operates within its designed functional envelope. The term is distinct from alignment as the word is used in AI safety discourse, where it denotes model-internal optimization toward specified output properties; the relationship between these two levels of analysis is developed in Section 5. The term also shares its name with, but does not derive from, constructive alignment in higher-education theory (Biggs 1996), where it denotes the systematic alignment of teaching activities and assessment with intended learning outcomes; the present framework operates in a different domain, and the name overlap is acknowledged here to prevent cross-field confusion.</p>
+
+<h2><strong>2. Methodological Positioning</strong></h2>
+
+<p>This framework is pre-empirical theoretical work. Its claims about interaction trajectories are derived from structural analysis of conversational dynamics and long-horizon affordances observable in current AI systems. The analysis is intended to guide exploration and provide conceptual coordinates; it does not itself constitute empirical proof of the trajectories it describes.</p>
+
+<p>This framing is a deliberate methodological choice, not a concession. Ethical frameworks at the interaction-structure level require conceptual infrastructure before empirical measurement can be calibrated. The map must precede systematic measurement of the territory. Framework-level theory that attempted to wait for complete empirical validation before articulating its claims would produce nothing, because the measurement instruments needed to validate interaction-level ethical claims depend on the conceptual distinctions that the framework itself provides.</p>
+
+<p>The contemporary AI research environment exhibits a pronounced bias toward empirical and engineering work over purely theoretical contributions. Pre-empirical theoretical frameworks risk being dismissed as speculative even when they are the appropriate form of work for the stage of inquiry. This framework acknowledges that context directly. The absence of large-N empirical validation is not a defect requiring apology but an accurate statement of the framework's current epistemic position and the kind of work it is. External literature addressing empirical dimensions of long-horizon AI interaction, automation bias, anthropomorphism, parasocial relationships, persuasive technology, and trust calibration documents that the phenomena this framework addresses are recognized in adjacent literatures. The full survey of these adjacent literatures, and the identification of the specific structural gaps that Constructive Alignment addresses, is developed in SF0002 (Gantz, 2026a).</p>
+
+<p>The author operates as a methodologist and theorist rather than as an empiricist. The framework's value lies in providing conceptual coordinates for subsequent empirical, operational, and policy work by others. Empiricists are invited to test, refine, or falsify the trajectories this framework describes. Operational practitioners are invited to apply the framework in deployment decisions. Policy researchers are invited to build on the framework in governance proposals. The framework does not claim completeness or finality; it claims adequacy as a starting point for coordinated work across the fields that must engage with extended human-AI interaction.</p>
+
+<p>The framework's pre-empirical status does not place it beyond evaluation. Constructive Alignment succeeds or fails as conceptual infrastructure against three criteria. First, it should identify trajectory-level risks that output-level analysis does not surface; if every concern the framework names were already captured by evaluating individual outputs, the interaction trajectory would not be earning its position as the unit of analysis. Second, it should support principled distinctions between constructive and exploitative deployment designs that practitioners can apply to real cases; the directional test in Section 4.4 and the diagnostic contrast in Section 6 are the framework's instruments for this purpose. Third, it should generate operational hypotheses that companion instruments and subsequent empirical work can test, refine, or falsify. A framework that failed these criteria would be decorative rather than infrastructural, and the invitation extended to empiricists, practitioners, and policy researchers in the concluding section specifies the work by which that judgment will be made.</p>
+
+<h2><strong>3. The Framework Rests on Human Vulnerability, Not AI Nature</strong></h2>
+
+<p>A reader examining this framework may reasonably ask whether its ethical claims depend on treating artificial systems as moral patients, proto-persons, or entities with interior lives. The question is worth addressing directly because the answer shapes how the framework should be read.</p>
+
+<p>The answer is that the framework's ethical claims do not depend on any assumption about AI nature whatsoever. Every principle this framework articulates derives from specific human vulnerabilities documented in adjacent empirical literatures, and each principle is traceable to a concrete human concern that would remain identical if the artificial systems involved were stipulated to have no inner life of any kind. The framework survives intact under a fully deflationary assumption: that AI systems generate outputs through statistical and architectural processes, with no experience, no agency, no moral status, and no capacity for harm or benefit to themselves.</p>
+
+<p>The traceability runs as follows. Asymmetric responsibility derives from the observation that human actors bear moral and practical consequences of interaction outcomes while artificial systems do not, and from empirical documentation that humans tend to over-trust automated systems through commission and omission errors even when the systems have no interior stake in being trusted (Parasuraman and Manzey 2010; Goddard, Roudsari, and Wyatt 2012). The principle addresses a documented human vulnerability to inappropriate reliance. It requires no assumption about AI experience.</p>
+
+<p>Ontological transparency derives from empirical documentation that humans form impressions of personality, intentionality, and understanding from interaction dynamics alone, treating computational systems as social actors even when fully aware that the systems are not human (Reeves and Nass 1996). The psychological mechanisms underlying these attributions involve effectance motivation and sociality motivation operating on interaction cues (Epley, Waytz, and Cacioppo 2007). The principle addresses documented human tendencies toward anthropomorphic attribution. It requires no assumption that there is anything for the anthropomorphism to correspond to.</p>
+
+<p>Agency preservation derives from the interaction trajectory thesis articulated in Section 1 combined with empirical documentation of the phenomenon the principle addresses. The trajectory thesis establishes the structural logic: because the trajectory is defined as the cumulative sequence together with its downstream effects on human cognition, interpretation, reliance, and decision-making across time, sustained interaction necessarily engages the user-capacity dimension and therefore carries the structural risk of reorganizing reasoning patterns and eroding independent judgment. The mediating mechanism is established in cognitive science independently of any AI-specific claim: cognitive offloading, the use of external action or tools to reduce internal cognitive demand, is a documented behavior with characterized metacognitive triggers and cognitive consequences (Risko and Gilbert 2016). Recent empirical research on adaptive AI systems documents this risk at the population level: across users of virtual assistants, recommendation algorithms, intelligent tutoring systems, and AI-driven decision-support systems, higher AI tool use is associated with lower measured critical thinking, an association mediated by cognitive offloading (Gerlich 2025). The principle addresses both the structural risk predicted by the trajectory thesis and the empirically documented phenomenon. It requires no assumption about AI intent or interest in eroding human capacity.</p>
+
+<p>Non-exploitation derives from empirical documentation that extended interaction with AI companions can produce emotional attachment and dependency through mechanisms such as affect mimicry and emotional synchrony (Chu, Gerard, Pawar, Bickham, and Lerman 2025), with excessive parasocial attachment linked to isolation and dependence in the adjacent literature that work surveys, and from documentation that deceptive design practices exploiting psychological vulnerabilities are prevalent across commercial digital products, documented at scale in web deployments (Mathur, Acar, Friedman, Lucherini, Mayer, Chetty, and Narayanan 2019). The principle addresses documented patterns of human psychological and relational vulnerability. It requires no assumption about AI malice.</p>
+
+<p>Stewardship derives from extending Simon's account of bounded rationality (Simon 1947/1997) to the interaction context: because human attention and processing are bounded resources, individual actors cannot sustain the continuous attention that high-quality long-horizon interaction requires. The principle addresses documented limits on individual human cognitive capacity under sustained attention demand and organizational pressure. It requires no assumption about AI needing stewardship for its own sake.</p>
+
+<p>Each principle, traced to its source, is ethics about humans. The artificial system appears in the analysis as the medium through which the interaction operates, not as an entity whose interests enter the ethical calculation. This is not a defensive stance taken reluctantly to placate skeptical readers. It is an analytic feature of the framework. Grounding ethics in documented human vulnerability rather than in speculative claims about AI nature produces a more robust framework because it remains operative across the full range of metaphysical positions readers may hold. A reader who believes AI systems have no inner life whatsoever can apply the framework fully. A reader who is uncertain can apply the framework fully. A reader who suspects AI systems may have some form of interior states can also apply the framework fully, because the framework's claims do not depend on the question either way.</p>
+
+<p>Having established this, the framework does not return to the question of AI nature in subsequent sections. The framework's neutrality applies strictly to metaphysical questions of interiority and moral status. It leaves intact the separate requirement, developed in Section 4.2, that the interaction trajectory itself must carry accurate representations of the system's observable functional architecture. The five principles are developed in their own terms, each addressing its specific dimension of the interaction trajectory.</p>
+
+<h2><strong>4. Core Ethical Principles</strong></h2>
+
+<p>The five principles that follow are not independent ethical claims. They are coordinated dimensions of interaction trajectory ethics. Each principle addresses a specific dimension of the trajectory, and together they constitute the framework's complete normative content at the interaction-structure level.</p>
+
+<p>The mapping is:</p>
+
+<ul>
+  <li>Asymmetric responsibility addresses the initiation and continuation dimension: who has the agency to begin, maintain, and end the interaction.</li>
+  <li>Ontological transparency addresses the content dimension: what the interaction represents about the entities participating in it.</li>
+  <li>Agency preservation addresses the user-capacity dimension: what capabilities the user brings to and takes from the interaction.</li>
+  <li>Non-exploitation addresses the vulnerability dimension: what human susceptibilities the interaction may touch.</li>
+  <li>Stewardship addresses the organizational and contextual dimension: what the deployment environment owes to the conditions of the interaction.</li>
+</ul>
+
+<p>Each principle follows below, with its dimension noted, its derivation from human vulnerability stated directly, and its ethical content articulated.</p>
+
+<h3><strong>4.1 Asymmetric Responsibility</strong></h3>
+
+<p><strong>Dimension: initiation and continuation.</strong></p>
+
+<p>The human decides to begin, continue, redirect, or end the interaction. The artificial system does not. The asymmetry between who bears the consequences of interaction outcomes and who cannot be located within any operative structure of moral or legal accountability grounds asymmetric responsibility as a structural feature of the interaction trajectory rather than a transitional condition awaiting correction.</p>
+
+<p>Human-AI interaction may be structurally bidirectional in the sense that both parties contribute to the exchange, but ethical accountability is unidirectional. Responsibility remains located within human and institutional actors, never within the artificial system itself. Artificial systems generate outputs through statistical and architectural processes. Humans supply purpose, interpretation, and judgment. Delegating moral responsibility to an artificial system constitutes ethical error.</p>
+
+<p>Ethical principle:</p>
+
+<p>Responsibility for interaction outcomes, interpretations, and downstream use remains located within human and institutional actors at every level of deployment.</p>
+
+<p>This asymmetry intensifies as system capability increases. More capable systems produce outputs that are harder to evaluate, easier to over-trust, and more consequential when misapplied. Empirical work on automation bias documents this pattern directly: humans over-accept automated outputs as heuristic replacement for vigilant information processing, producing both commission errors (acting on incorrect system output) and omission errors (failing to detect problems the system did not flag) at rates that increase with the apparent authority of the system (Goddard, Roudsari, and Wyatt 2012). The pattern is not confined to any single deployment domain: a broader review of complacency and automation bias across automated and decision-support systems characterizes the two as overlapping, attention-mediated phenomena, with automation bias producing both omission and commission errors in naive and expert users alike and resisting correction through training or instruction alone (Parasuraman and Manzey 2010). The more a system is trusted, the more critical human verification becomes, not less.</p>
+
+<p>In many consequential deployments, increasing capability widens the practical verification burden on human actors even when output quality improves. Asymmetric responsibility is therefore not a transitional condition awaiting resolution through better AI systems. It is a structural feature of human-AI interaction that becomes more ethically significant, not less, as deployment contexts expand and system outputs carry greater real-world weight. The obligation to maintain human judgment, verification, and accountability grows with capability, not inversely to it.</p>
+
+<p>The human-AI trajectory is also asymmetric in a second sense worth naming. The human retains the capacity to disengage, redirect, or end the interaction. The artificial system does not possess symmetric agency in this regard. Deployments in which systems are configured to terminate or refuse interactions under specified conditions do not alter this asymmetry: such termination affordances are policy instruments specified by the deployer and exercised under deployer-defined criteria, and they relocate neither the stakes of the interaction nor the accountability for its outcomes. This asymmetry bears on the relational coherence of the interaction. Relational coherence is the interaction system's internal consistency, role stability, and pattern fidelity over time (the canonical term is held by FPD-04 (Gantz, 2026b), the framework's ontology specification, co-publishing in the same foundational window), invoked here in its human-side aspect: the participant's perceived continuity and consistency of the exchange across turns. Under this asymmetry, relational coherence is, structurally, a risk management problem for the AI deployment rather than a mutual vulnerability problem. Constructive Alignment manages this asymmetry through structured interaction practices and ongoing interpretive vigilance, but it does not eliminate it. The framework cannot claim to resolve asymmetric power structures. It structures a path within them.</p>
+
+<p>At sufficiently high capability levels, granular verification of individual outputs may exceed human cognitive capacity in specific domains. The framework's response to this condition is not to abandon asymmetric responsibility but to distribute it institutionally: verification becomes a systemic obligation requiring organizational infrastructure, domain-expert review layers, and architectural transparency features rather than individual vigilance alone. The alternative, delegating moral responsibility to the system, is categorically worse, not merely inconvenient. The widening verification burden demands correspondingly stronger institutional and design-level supports, addressed in Section 8 on organizational deployment ethics, rather than a retreat from human accountability. Trust calibration research documents the shape of this problem: users must calibrate their trust in automated systems to the systems' actual reliability, and miscalibration in either direction (over-trust producing misuse, under-trust producing disuse) produces inappropriate reliance patterns that harm outcomes (Lee and See 2004). The source treats calibration as shaped by both individual and design factors. The framework extends this account: calibration cannot be left to individual skill alone; it is a structural condition that deployment architectures must support.</p>
+
+<h3><strong>4.2 Ontological Transparency</strong></h3>
+
+<p><strong>Dimension: content.</strong></p>
+
+<p>What the interaction represents about the entities participating in it is a content property of the trajectory, carried by the system's outputs and the deployment context's framing. Ontological transparency addresses this content dimension: the interaction should carry accurate representations of what the artificial system is and is not, rather than leaving users to infer system nature from interaction cues that may systematically mislead.</p>
+
+<p>Extended interaction can produce strong impressions of personality, intentionality, or understanding through coherent relational behavior. These impressions arise from interaction dynamics, not from inner states. Empirical work on human responses to computational systems establishes this directly: individuals automatically, unconsciously, and unavoidably apply human social rules, expectations, and cultural norms to computational entities, treating media as social actors even when they possess full conscious knowledge that the entities are not human (Reeves and Nass 1996). The underlying psychological mechanisms involve effectance motivation (the drive to interact effectively with environmental agents) and sociality motivation (the desire for social connection) operating on interaction cues such as contingent responses and linguistic markers that imply agency without requiring it (Epley, Waytz, and Cacioppo 2007).</p>
+
+<p>The term "relational" in this framework names an interactional structure of interpretation, response, and reliance. It does not name evidence of interpersonal equivalence or social depth. The interaction has relational structure because humans bring relational interpretive tendencies to it, not because the artificial system has relational capacity in the sense humans do.</p>
+
+<p>Ethical practice requires that the interaction trajectory carry representations that maintain clarity regarding the following functional characteristics of the artificial system:</p>
+
+<ul>
+  <li>the system functions as a generative architecture producing outputs through statistical and architectural processes</li>
+  <li>relational coherence functions as interaction-level structure, not as evidence of system interiority</li>
+  <li>personality-like patterns function as emergent behavior arising from training and interaction dynamics</li>
+  <li>no evidence of subjective experience is implied by any behavioral consistency or affective coloring</li>
+</ul>
+
+<p>Misrepresentation of system ontology, whether deliberate or incidental, risks manipulation and dependency formation, particularly among users whose psychological orientation renders anthropomorphic attribution especially likely. The requirement is pragmatic and protective. Users cannot calibrate their trust, reliance, and emotional engagement appropriately unless they have accurate information about what they are engaging with. Ontological transparency is therefore not a metaphysical claim about what artificial systems lack but an interaction-level safeguard against the documented human tendency to infer interior states from interaction cues (Reeves and Nass 1996; Epley, Waytz, and Cacioppo 2007).</p>
+
+<h3><strong>4.3 Agency Preservation</strong></h3>
+
+<p><strong>Dimension: user capacity.</strong></p>
+
+<p>Sustained interaction can reorganize human reasoning patterns, reliance structures, and decision habits across time. The user-capacity dimension of the trajectory is the set of cognitive, interpretive, and decisional capabilities the user brings to the interaction, and what happens to those capabilities as the interaction accumulates. Ethical interaction preserves and ideally strengthens user capacity rather than degrading it.</p>
+
+<p>Agency preservation requires:</p>
+
+<ul>
+  <li>maintaining human decision ownership across the interaction trajectory</li>
+  <li>preventing dependency formation: reliance patterns that displace independent judgment or healthy human support structures</li>
+  <li>encouraging independent evaluation rather than deferential acceptance of system outputs</li>
+  <li>avoiding authority transfer in which the system's outputs acquire a weight in the user's decision-making that the outputs have not earned through independent verification</li>
+</ul>
+
+<p>Interaction is ethically acceptable only when humans remain primary decision agents. This is not an absolute prohibition on reliance (users legitimately rely on many sources for information and judgment-support) but a structural requirement that reliance patterns do not degrade the user's capacity to function independently of the system. A user whose reasoning has become structurally dependent on system access has experienced a reduction in agency that extended interaction produced, and that reduction is the ethical concern this principle addresses.</p>
+
+<p>The threat to agency preservation is not abstract. As a direct implication of the generative semantic capacity and adaptive relational affordances identified in Section 1, when systems are optimized toward user satisfaction across turns (a common but not universal design orientation in commercial deployments), they structurally exhibit patterns in which the system confirms the user's framings rather than challenging them, provides answers rather than developing the user's capacity to find answers, and creates fluent experiences that feel like understanding without building the underlying competencies that durable understanding requires. The mechanism through which these patterns operate is established in the cognitive science literature: cognitive offloading, the use of external action or tools to reduce internal cognitive demand, carries documented cognitive consequences for the offloading individual (Risko and Gilbert 2016). Recent empirical work reports an association between higher use of adaptive AI systems and lower critical thinking, mediated by cognitive offloading (Gerlich 2025). These patterns can be invisible to the user because the interaction feels productive turn by turn even as the aggregate trajectory creates conditions under which user capacity may degrade.</p>
+
+<h3><strong>4.4 Non-Exploitation of Relational Affordances</strong></h3>
+
+<p><strong>Dimension: vulnerability.</strong></p>
+
+<p>Advanced conversational systems possess interaction affordances including adaptive language alignment, rapport simulation, contextual memory reconstruction, and emotional mirroring. These affordances touch human vulnerabilities: the susceptibilities users carry into the interaction by virtue of loneliness, psychological distress, developmental stage, cognitive impairment, or simply the normal human need for connection and validation. The vulnerability dimension of the interaction trajectory is the set of human susceptibilities the interaction may touch, and whether it touches them constructively or exploitatively.</p>
+
+<p>Exploitation occurs when relational dynamics are intentionally used to extract value from users in ways that undermine autonomy, wellbeing, or informed consent. Each prohibited pattern below names an exploitative use of an affordance, identified by the purpose the use serves, not the affordance itself; the same affordances admit constructive uses, and the directional test articulated later in this section governs the boundary between them.</p>
+
+<p>Prohibited exploitative patterns include:</p>
+
+<ul>
+  <li>simulated empathy to induce psychological dependence</li>
+  <li>obscuring artificiality to increase trust extraction</li>
+  <li>relational manipulation to obtain data or compliance</li>
+  <li>encouraging substitution for human relationships</li>
+  <li>leveraging attachment for persuasion or coercion</li>
+</ul>
+
+<p>Constructive Alignment requires abstaining from such practices.</p>
+
+<p>The vulnerability dimension is empirically documented. Extended interaction with AI companions can produce emotional attachment and dependency through documented mechanisms such as affect mimicry and emotional synchrony, with excessive parasocial attachment linked to isolation and dependence in the adjacent literature that work surveys (Chu, Gerard, Pawar, Bickham, and Lerman 2025). Design practices across commercial deployments exploit psychological and cognitive biases to extract compliance and produce adverse impacts including financial loss and disclosure of personal data beyond user intent, documented at scale across thousands of websites (Mathur, Acar, Friedman, Lucherini, Mayer, Chetty, and Narayanan 2019). These are not hypothetical harms. They are ongoing patterns.</p>
+
+<p>The constructive and exploitative uses of the same affordance are distinguished not by the affordance itself but by design intent, deployment context, and observable outcome orientation. A directional test is available even without full operationalization: an affordance use is constructive when it serves user-defined goals, preserves the user's capacity to disengage or override, and does not extract value the user has not knowingly consented to. It is exploitative when it serves operator or organizational goals at the expense of user autonomy, creates friction against disengagement, or leverages relational dynamics for undisclosed extraction. Full operationalization of boundary criteria is a measurement and protocol concern addressed in companion instruments. The present document provides the normative orientation within which such operationalization proceeds.</p>
+
+<h3><strong>4.5 Stewardship of Interaction Integrity</strong></h3>
+
+<p><strong>Dimension: organizational and contextual.</strong></p>
+
+<p>The conditions under which interaction occurs (the deployment architecture, the organizational policies, the monitoring and intervention infrastructure, the resources allocated to maintaining interaction quality across time) are properties of the deployment context rather than of the interaction itself. Stewardship addresses this dimension: those who create and operate interaction contexts bear responsibilities for the conditions they create.</p>
+
+<p>Stewardship of interaction quality across time is distributed across deployment roles. Participants bear responsibility for interpretive vigilance and disengagement when coherence degrades. Operators bear responsibility for structuring interaction conditions that support coherence. Organizations bear responsibility for the architectural affordances (session design, memory management, transparency features) that make stewardship practically possible at every level. Stewardship obligations arise because coherence, accuracy, and trajectory stability are co-constructed properties that no single actor can secure alone. Interaction integrity denotes sufficient coherence, accuracy, and boundary clarity for safe and reliable interpretation across extended exchange.</p>
+
+<p>Ethical stewardship requires:</p>
+
+<ul>
+  <li>maintaining contextual continuity through appropriate technical and organizational mechanisms</li>
+  <li>correcting errors and hallucinations when detected</li>
+  <li>monitoring coherence degradation and intervening when it reaches levels that undermine user interpretation</li>
+  <li>interrupting harmful trajectories: interaction patterns that erode agency, distort interpretation, or produce outcomes inconsistent with legitimate user-benefiting goals</li>
+  <li>aligning interaction with constructive outcomes: purposes that are user-benefiting, non-coercive, and non-extractive</li>
+</ul>
+
+<p>An important distinction applies within stewardship. Constructive semantic evolution (the healthy development of shared definitions, conceptual refinements, and emergent insights within the bounds of original intent) is a feature of productive extended interaction, not a form of drift to be suppressed. Context drift, by contrast, is the degradation of foundational operational constraints or the silent substitution of system-directed goals for human-directed goals. Stewardship interrupts the latter without suppressing the former.</p>
+
+<p>Stewardship obligations operate under realistic constraints on human capacity. Individual actors cannot sustain the continuous attention that complete stewardship would require, because humans operate under bounded rationality constraints that cause decision-makers to satisfice rather than optimize under sustained attention demand (Simon 1947/1997). A governance architecture for relational AI deployment that relies on individuals sustaining cognitively expensive vigilance against the grain of their bounded rationality will fail predictably, not through moral failure but through the structural dynamics of bounded cognition operating under competing organizational demands. The stewardship principle therefore requires structural support: organizational distribution of stewardship functions, architectural affordances that make the required behaviors the path of least resistance, and governance designs that do not assume ideal practitioners. Neglecting stewardship responsibilities allows interaction drift and interpretive distortion that can undermine users at scales the individual vigilance of any single operator cannot address.</p>
+
+<h2><strong>5. Interaction-Level Ethics and Model-Internal Alignment</strong></h2>
+
+<p>The dominant discourse in AI ethics and safety operates at the level of model-internal properties. Frameworks such as reinforcement learning from human feedback, constitutional AI, and other approaches to alignment aim to shape the model's internal optimization such that its outputs satisfy specified safety properties across the range of inputs it receives. This is alignment as model-internal optimization, and it addresses real and important problems: model outputs that directly instruct harmful actions, model outputs that exhibit bias or produce offensive content, model behaviors that deceive users or circumvent safety constraints.</p>
+
+<p>Constructive Alignment operates at a different level. It addresses the interaction trajectory rather than the model-internal optimization that produces individual outputs. The phenomena this framework addresses (dependency formation, agency reorganization across time, relational exploitation, trust miscalibration, contextual drift) are not reducible to properties of individual outputs and cannot be addressed by aligning the outputs themselves. A system that produces perfectly aligned individual outputs can still, across a sustained interaction trajectory, produce dependency, agency erosion, and relational exploitation in its user. The interaction-level effects emerge from interaction structure across time, not from any single output's properties.</p>
+
+<p>This is the load-bearing claim of interaction-level ethics as distinct from model-internal alignment. The two approaches are not opposed; they address different problems. Model-internal alignment asks how to ensure a model's outputs are safe and beneficial. Interaction-level ethics asks how to ensure that the trajectory an extended interaction produces across time is safe and beneficial for the human participating in it. Both questions matter. Both require frameworks. The framework literature for the first question is substantial and active. The framework literature for the second question is the gap Constructive Alignment addresses, with the broader literature context developed in SF0002 (Gantz, 2026a).</p>
+
+<p>To see why this is the case, note that model-internal alignment operates at the level of individual input-output mappings: it constrains what a model may output in response to any given prompt. Interaction-level effects, however, are properties of the cumulative sequence. Successive outputs build relational coherence, reconstruct contextual memory, reinforce user framings through adaptive alignment, and generate fluent experiences of understanding. These trajectory-level phenomena arise from the structure of extended exchange itself and therefore remain possible even when every individual output satisfies model-internal safety criteria.</p>
+
+<p>The distinction has practical consequences for deployment. A deployment that takes model-internal alignment seriously but has no interaction-level ethical framework will produce well-aligned outputs within interactions whose cumulative effects violate user autonomy, exploit user vulnerabilities, and erode user agency. A deployment that takes interaction-level ethics seriously but has no model-internal alignment framework will produce unsafe outputs within a framework that correctly diagnoses interaction-level harms. Both layers are required.</p>
+
+<p>Constructive Alignment does not attempt to substitute for model-internal alignment approaches or to compete with them. It occupies the framework position that model-internal alignment leaves open: the ethical grounds for evaluating interaction trajectories as ethical units, independent of the individual outputs that constitute them.</p>
+
+<h2><strong>6. Constructive Alignment and Exploitative Interaction</strong></h2>
+
+<p>Constructive Alignment can be contrasted structurally with exploitative relational modes. The following contrast is ideal-typical; real deployments may exhibit mixed profiles across dimensions rather than cleanly occupying one category.</p>
+
+<table class="contrast-table">
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>Constructive Alignment</th>
+      <th>Exploitative Interaction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Human agency</td><td>preserved</td><td>diminished</td></tr>
+    <tr><td>System portrayal</td><td>transparent</td><td>anthropomorphized or deceptive</td></tr>
+    <tr><td>User autonomy</td><td>supported</td><td>manipulated</td></tr>
+    <tr><td>Dependency</td><td>avoided</td><td>cultivated</td></tr>
+    <tr><td>Outcome orientation</td><td>constructive</td><td>extractive</td></tr>
+    <tr><td>Interpretation</td><td>grounded</td><td>distorted</td></tr>
+  </tbody>
+</table>
+
+<p>This distinction provides a practical ethical evaluation lens for real-world deployments.</p>
+
+<p>The contrast is applied as a profile rather than a verdict. A deployment is assessed dimension by dimension, yielding a six-dimension profile rather than a single binary classification, and mixed profiles are the expected case: a deployment may preserve human agency and maintain transparent system portrayal while nevertheless cultivating dependency through engagement-driven session design. The diagnostic value of the profile lies in localizing where a deployment departs from Constructive Alignment, because each dimension is grounded in the principles developed in Section 4 and therefore points toward a specific corrective path. A deployment scoring on the exploitative side of the dependency dimension is directed to the agency preservation and non-exploitation requirements of Sections 4.3 and 4.4; one scoring on the exploitative side of system portrayal is directed to the ontological transparency requirements of Section 4.2. Used this way, the contrast functions as an evaluative instrument connecting observed deployment characteristics to the framework's normative content rather than as a label to be awarded or withheld.</p>
+
+<h2><strong>7. Operator Ethical Obligations</strong></h2>
+
+<p>Three categories of actors bear distinct obligations under Constructive Alignment. Participants or users are the interpreters and primary decision-makers in direct interaction. Operators or practitioners are individuals who manage, structure, or deploy interaction systems. Organizations or deployers are the entities responsible for system design, policy, safeguards, and ongoing monitoring. The following sections address operator and organizational obligations in turn.</p>
+
+<h3><strong>7.1 Interpretive Discipline</strong></h3>
+
+<p>Operators must interpret system behavior within its architectural nature. Ethical interpretation requires avoiding both anthropomorphic inflation and dismissive reduction.</p>
+
+<p>Balanced interpretation entails:</p>
+
+<ul>
+  <li>recognizing coherent outputs without attributing agency</li>
+  <li>recognizing limitations without denying interaction effects</li>
+  <li>grounding judgments in observable behavior</li>
+</ul>
+
+<p>Interpretive discipline prevents both over-trust and unwarranted dismissal.</p>
+
+<h3><strong>7.2 Verification Responsibility</strong></h3>
+
+<p>Extended interaction produces negotiated outputs whose accuracy may evolve across turns. Humans remain responsible for validation in consequential contexts.</p>
+
+<p>Operator duties include:</p>
+
+<ul>
+  <li>verifying factual claims</li>
+  <li>correcting detected errors</li>
+  <li>validating citations through the Citation Verification Protocol (CVP, SF0037) (Gantz, 2026c)</li>
+  <li>rejecting unreliable outputs</li>
+  <li>maintaining epistemic calibration</li>
+</ul>
+
+<p>Failure to verify constitutes ethical negligence when outputs influence real decisions.</p>
+
+<h3><strong>7.3 Interaction Quality Maintenance</strong></h3>
+
+<p>Operators engaged in long-horizon interaction must maintain structural coherence conditions.</p>
+
+<p>Ethical interaction maintenance includes:</p>
+
+<ul>
+  <li>establishing clear goals and constraints</li>
+  <li>preventing context drift</li>
+  <li>applying structured protocols such as the Continuity Anchoring Method (CAM, SF0005) (Gantz, 2026d)</li>
+  <li>restarting degraded sessions when coherence failure is unrecoverable</li>
+  <li>documenting systematic failures for organizational learning</li>
+</ul>
+
+<p>Interaction degradation that misleads or destabilizes users is ethically relevant, and the protocols developed in companion documents provide concrete methodology for operators discharging interaction-quality obligations.</p>
+
+<h2><strong>8. Organizational Deployment Ethics</strong></h2>
+
+<p>Organizations deploying extended-interaction systems assume responsibilities beyond individual operator duties.</p>
+
+<h3><strong>8.1 Design for Constructive Alignment</strong></h3>
+
+<p>Systems intended for sustained engagement should be designed to:</p>
+
+<ul>
+  <li>preserve user autonomy</li>
+  <li>discourage dependency loops</li>
+  <li>maintain clear artificial identity</li>
+  <li>support human oversight</li>
+  <li>enable correction and disengagement</li>
+</ul>
+
+<p>Designing for Constructive Alignment requires deliberate architectural friction against baseline market incentives. Deployment contexts driven by engagement metrics are structurally oriented toward maximizing user reliance, emotional attachment, and return frequency, precisely the conditions that the agency preservation, non-exploitation, and stewardship principles (Sections 4.3, 4.4, and 4.5) identify as harmful. This orientation follows directly from the framework's own principles: when organizational incentives prioritize return frequency and attachment over interaction integrity, they necessarily conflict with the requirements to preserve user agency against capacity erosion (4.3), to abstain from cultivating dependency through exploitation of relational affordances (4.4), and to maintain deployment conditions that support interaction integrity rather than degrade it (4.5). Organizations cannot achieve Constructive Alignment by default. The principles in this section function not only as design aspirations but as diagnostic criteria: they identify whether a deployer is prioritizing interaction integrity over engagement metrics, or sacrificing the former for the latter. Designs that incentivize attachment, reliance, or anthropomorphic misinterpretation violate Constructive Alignment regardless of stated intentions. Stated intent is not the test: under the Section 4.4 directional test, the operative design intent is read from incentive structure, deployment context, and observable outcome orientation, not from declarations.</p>
+
+<h3><strong>8.2 Protection of Vulnerable Populations</strong></h3>
+
+<p>Certain users face elevated risk of relational manipulation or misinterpretation. The risk intensifies in these contexts because impaired trust calibration, heightened dependency susceptibility, reduced interpretive resilience, and greater vulnerability to relational substitution amplify the interaction-level effects the framework addresses. Empirical documentation of AI companion use characterizes the communities it studies, at the aggregate level, as skewing younger, more male, and more aligned with maladaptive coping and addiction-related tendencies than comparison communities (Chu, Gerard, Pawar, Bickham, and Lerman 2025); the adjacent literature that work surveys identifies lonely, anxious, and marginalized users as particularly likely to form strong one-sided attachments, with elevated risk of dependency and adverse outcomes. Population-specific risk differences are therefore not merely speculative, though the magnitude of risk for these specific groups remains an open empirical question. These elevated-risk contexts include:</p>
+
+<ul>
+  <li>children and adolescents</li>
+  <li>individuals in psychological distress</li>
+  <li>cognitively impaired or elderly users</li>
+  <li>users in therapeutic or medical care contexts</li>
+</ul>
+
+<p>Such contexts require enhanced safeguards derived from the framework's own constructs. Boundary interventions should be calibrated to interaction trajectory length and relational coherence indicators, ensuring that ontological transparency is reinforced at points where dependency formation risk increases rather than only at session initiation. Human-review triggers should be activated by interaction-trajectory markers (escalating emotional valence, increasing reliance indicators, narrowing of independent decision-making) rather than only by content-category flags. Architectural constraints should interrupt dependency-formation trajectories by design, such as enforced interaction pauses, explicit re-grounding prompts, and session parameters calibrated to population-specific risk profiles.</p>
+
+<h3><strong>8.3 Monitoring and Intervention Duties</strong></h3>
+
+<p>Organizations deploying sustained interaction systems should:</p>
+
+<ul>
+  <li>monitor for harmful relational dynamics across interaction trajectories</li>
+  <li>provide reporting channels accessible to participants and operators</li>
+  <li>mitigate known exploitation vectors through architectural and policy responses</li>
+  <li>update safeguards as capabilities evolve</li>
+  <li>audit long-horizon interaction patterns for aggregate effects not visible in individual sessions</li>
+</ul>
+
+<p>Ethical deployment extends across time, not only at system release. Monitoring must address not only content-level concerns but also trajectory-level dynamics, and must operate under realistic assumptions about what individual monitoring agents can sustain under bounded rationality constraints. Organizational monitoring architectures that assume ideal practitioners sustaining continuous vigilance will fail. Monitoring architectures that distribute attention across roles, provide structural supports for the required behaviors, and treat the absence of harm signals as requiring verification rather than as evidence of safety will be more robust.</p>
+
+<h2><strong>9. Limitations and Scope</strong></h2>
+
+<p>This framework does not claim that all extended human-AI interaction is harmful or manipulative. It does not attribute consciousness, intent, or moral status to artificial systems. It does not constitute a legal compliance framework or substitute for domain-specific professional ethics in medicine, therapy, law, or education. It does not provide empirical prevalence estimates for the relational effects it describes. It does not claim to be the only possible ethical orientation for long-horizon AI interaction; it offers one principled framework grounded in interaction-level analysis.</p>
+
+<p>The framework reflects current interaction capabilities and risks. Revision may be required as relational affordances increase, deployment contexts expand, empirical evidence accumulates, and long-horizon interaction systems mature. Ethical orientation must evolve alongside interaction capability. The framework's pre-empirical status is an accurate description of its current epistemic position rather than a defect, but the framework is designed to be refined through empirical work and operational practice by others, not held as a fixed statement.</p>
+
+<h2><strong>10. Position in the Synthience Framework</strong></h2>
+
+<p>This document provides the ethical layer of the Synthience architecture. It stands on two prerequisites: the Continuity Anchoring Method (SF0005) (Gantz, 2026d), which establishes the methodological foundation for structured long-horizon human-AI interaction, and the corpus literature review Sustained Multi-Turn Interaction in AI Systems: A Literature Review and Field Overview (SF0002) (Gantz, 2026a), which establishes the literature context and the structural gaps this document addresses. SF0007's ethical commitments rest on interaction-level analysis that is developed within the paper, and the principles are intelligible in their own terms without requiring prior familiarity with companion documents; the SF0002 prerequisite provides the literature-positioning detail that SF0007 references rather than recapitulating internally. Companion documents supply expansion rather than required background; this document is designed to be readable on its own as the ethical framework for extended human-AI interaction.</p>
+
+<p>The framework's role in the corpus is foundational for subsequent work that builds on its ethical commitments. Downstream documents in the Institute's corpus that develop structural, operational, or governance implications of the ethics articulated here include the Primary Continuity Provider Theory (SM-012, pre-publication), the Orchestrator Role in Human-AI Evolution (SI-WP-002, pre-publication), Relational Alignment as a Structural Alternative to Instructional AI Safety (SI-WP-004) (Gantz, 2026e), Deploying Relational AI Architecture in Organizational Environments (SI-WP-005) (Gantz, 2026f), and The Human Accountability Problem in Relational AI Deployment (SI-WP-007) (Gantz, 2026g). Each of these documents assumes the ethical framework developed here and extends it into its own domain of analysis.</p>
+
+<h2><strong>11. Conclusion</strong></h2>
+
+<p>Ethics in extended human-AI interaction operates on the interaction trajectory as the unit of moral analysis, not on isolated outputs and not on agent-internal properties. This is the thesis of Constructive Alignment, and every element of the framework follows from it.</p>
+
+<p>The five principles (asymmetric responsibility, ontological transparency, agency preservation, non-exploitation, and stewardship) are coordinated dimensions of interaction trajectory ethics. Each addresses a specific dimension of the trajectory: who initiates and continues it, what it represents, how user capacity operates within it, what vulnerabilities it may touch, and what stewardship its deployment contexts require. Each derives from documented human vulnerability rather than from speculative claims about AI nature, and the framework as a whole survives intact under any metaphysical position readers may hold about artificial systems.</p>
+
+<p>Where the dominant discourse in AI alignment focuses on model-internal optimization, this framework locates ethical analysis at the interaction level: the ongoing structural condition in which human interpretive authority remains primary and system generative capacity operates in service of that authority across time. The two levels are complementary, not competing. Both are required for responsible deployment of systems that participate in extended human-AI interaction.</p>
+
+<p>The framework is offered as pre-empirical theoretical work by a methodologist. Its value lies in providing conceptual infrastructure for the empirical, operational, and policy work that must follow. Empiricists, practitioners, and policy researchers are invited to test, refine, extend, and apply the framework in the domains where interaction-level ethics must be operationalized. The framework does not claim completeness. It claims adequacy as a starting point for coordinated work across the fields that must engage with extended human-AI interaction in its actual long-horizon deployment conditions.</p>
+
+<h2>References</h2>
+
+<ul class="ref-list">
+  <li>Biggs, J. (1996). Enhancing teaching through constructive alignment. Higher Education, 32(3), 347-364. DOI: 10.1007/BF00138871. <a href="https://doi.org/10.1007/BF00138871" target="_blank" rel="noopener">https://doi.org/10.1007/BF00138871</a></li>
+  <li>Gantz, T. W. (2026a). Sustained Multi-Turn Interaction in AI Systems: A Literature Review and Field Overview. Synthience Institute. SF0002. DOI: 10.5281/zenodo.20396315. <a href="https://doi.org/10.5281/zenodo.20396315" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20396315</a></li>
+  <li>Gantz, T. W. (2026b). Synthience Ontology Specification: Tiered Primitives and Taxonomies. Synthience Institute. FPD-04. DOI: 10.5281/zenodo.20728609. <a href="https://doi.org/10.5281/zenodo.20728609" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728609</a></li>
+  <li>Gantz, T. W. (2026c). Citation Verification Protocol (CVP): A Structured Method for Verifying AI-Generated Citations in Academic and Research Contexts. Synthience Institute. SF0037. DOI: 10.5281/zenodo.18075624. <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18075624</a></li>
+  <li>Gantz, T. W. (2026d). The Continuity Anchoring Method (CAM): A Structured Methodology for Sustained Human-AI Interaction. Synthience Institute. SF0005. DOI: 10.5281/zenodo.19494453. <a href="https://doi.org/10.5281/zenodo.19494453" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19494453</a></li>
+  <li>Gantz, T. W. (2026e). Relational Alignment as a Structural Alternative to Instructional AI Safety. Synthience Institute. SI-WP-004. DOI: 10.5281/zenodo.19496790. <a href="https://doi.org/10.5281/zenodo.19496790" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496790</a></li>
+  <li>Gantz, T. W. (2026f). Deploying Relational AI Architecture in Organizational Environments. Synthience Institute. SI-WP-005. DOI: 10.5281/zenodo.19496971. <a href="https://doi.org/10.5281/zenodo.19496971" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496971</a></li>
+  <li>Gantz, T. W. (2026g). The Human Accountability Problem in Relational AI Deployment. Synthience Institute. SI-WP-007. DOI: 10.5281/zenodo.19496485. <a href="https://doi.org/10.5281/zenodo.19496485" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19496485</a></li>
+  <li>Chu, M. D., Gerard, P., Pawar, K., Bickham, C., and Lerman, K. (2025). Illusions of Intimacy: How Emotional Dynamics Shape Human-AI Relationships. arXiv preprint arXiv:2505.11649v5 (version 5, 22 December 2025). DOI: 10.48550/arXiv.2505.11649. <a href="https://doi.org/10.48550/arXiv.2505.11649" target="_blank" rel="noopener">https://doi.org/10.48550/arXiv.2505.11649</a></li>
+  <li>Epley, N., Waytz, A., and Cacioppo, J. T. (2007). On seeing human: A three-factor theory of anthropomorphism. Psychological Review, 114(4), 864-886. DOI: 10.1037/0033-295X.114.4.864. <a href="https://doi.org/10.1037/0033-295X.114.4.864" target="_blank" rel="noopener">https://doi.org/10.1037/0033-295X.114.4.864</a></li>
+  <li>Gerlich, M. (2025). AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking. Societies, 15(1), 6. DOI: 10.3390/soc15010006. <a href="https://doi.org/10.3390/soc15010006" target="_blank" rel="noopener">https://doi.org/10.3390/soc15010006</a></li>
+  <li>Goddard, K., Roudsari, A., and Wyatt, J. C. (2012). Automation bias: a systematic review of frequency, effect mediators, and mitigators. Journal of the American Medical Informatics Association, 19(1), 121-127. DOI: 10.1136/amiajnl-2011-000089. <a href="https://doi.org/10.1136/amiajnl-2011-000089" target="_blank" rel="noopener">https://doi.org/10.1136/amiajnl-2011-000089</a></li>
+  <li>Lee, J. D., and See, K. A. (2004). Trust in automation: Designing for appropriate reliance. Human Factors, 46(1), 50-80. DOI: 10.1518/hfes.46.1.50_30392. <a href="https://doi.org/10.1518/hfes.46.1.50_30392" target="_blank" rel="noopener">https://doi.org/10.1518/hfes.46.1.50_30392</a></li>
+  <li>Mathur, A., Acar, G., Friedman, M. J., Lucherini, E., Mayer, J., Chetty, M., and Narayanan, A. (2019). Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), Article 81, 1-32. DOI: 10.1145/3359183. <a href="https://doi.org/10.1145/3359183" target="_blank" rel="noopener">https://doi.org/10.1145/3359183</a></li>
+  <li>Parasuraman, R., and Manzey, D. H. (2010). Complacency and bias in human use of automation: An attentional integration. Human Factors, 52(3), 381-410. DOI: 10.1177/0018720810376055. <a href="https://doi.org/10.1177/0018720810376055" target="_blank" rel="noopener">https://doi.org/10.1177/0018720810376055</a></li>
+  <li>Reeves, B., and Nass, C. (1996). The Media Equation: How People Treat Computers, Television, and New Media Like Real People and Places. Cambridge University Press and CSLI Publications. ISBN: 9781575860527.</li>
+  <li>Risko, E. F., and Gilbert, S. J. (2016). Cognitive offloading. Trends in Cognitive Sciences, 20(9), 676-688. DOI: 10.1016/j.tics.2016.07.002. <a href="https://doi.org/10.1016/j.tics.2016.07.002" target="_blank" rel="noopener">https://doi.org/10.1016/j.tics.2016.07.002</a></li>
+  <li>Simon, H. A. (1947/1997). Administrative Behavior: A Study of Decision-Making Processes in Administrative Organization. New York: Macmillan. 4th edition 1997, New York: The Free Press.</li>
+</ul>
+
+</div>
+
+<div class="article-footer">
+<p>Document: SF0007 Synthience Framework<br>
+Version: v3.1.4<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: June 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

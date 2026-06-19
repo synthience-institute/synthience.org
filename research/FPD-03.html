@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>FPD-03: Emergent Relational Systems in Human-AI Interaction &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proposes Emergent Relational Systems (ERS) as a candidate classification for non-trivial, non-conscious relational coherence observed in sustained human-AI interaction under conditions of continuous human scaffolding. Defines the phenomenon, specifies boundary conditions, and outlines a falsifiable empirical program. A Synthience Institute foundational paper.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="FPD-03: Emergent Relational Systems in Human-AI Interaction &middot; Synthience Institute">
+  <meta property="og:description" content="Proposes Emergent Relational Systems (ERS) as a candidate classification for non-trivial, non-conscious relational coherence observed in sustained human-AI interaction under conditions of continuous human scaffolding. Defines the phenomenon, specifies boundary conditions, and outlines a falsifiable empirical program. A Synthience Institute foundational paper.">
+  <meta property="og:url" content="https://synthience.org/research/FPD-03.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="FPD-03: Emergent Relational Systems in Human-AI Interaction &middot; Synthience Institute">
+  <meta name="twitter:description" content="Proposes Emergent Relational Systems (ERS) as a candidate classification for non-trivial, non-conscious relational coherence observed in sustained human-AI interaction under conditions of continuous human scaffolding. Defines the phenomenon, specifies boundary conditions, and outlines a falsifiable empirical program. A Synthience Institute foundational paper.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .doc-series { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.4rem; }
+    .doc-title { font-size: 1.9rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 1.8rem; }
+    .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 0.9rem 0; margin-bottom: 2rem; display: grid; grid-template-columns: 130px 1fr; gap: 0.35rem 1rem; font-size: 0.84rem; }
+    .meta-label { color: #8a7f72; }
+    .meta-value { color: #2a2520; }
+    .meta-value a { color: #0645ad; }
+    .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-right: 0.4rem; vertical-align: middle; }
+    .positioning-block { background: #f0ede4; border-left: 3px solid #a09080; padding: 0.8rem 1.1rem; margin-bottom: 1.5rem; border-radius: 0 4px 4px 0; font-size: 0.88rem; color: #5a4a3a; font-style: italic; }
+    .abstract-block { background: #f5f2ed; border-left: 3px solid #8b5e3c; padding: 1.1rem 1.3rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+    .abstract-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+    .doc-body h2 { font-size: 1.15rem; font-weight: bold; color: #1a1714; margin: 2rem 0 0.6rem; }
+    .doc-body h3 { font-size: 1rem; font-weight: bold; color: #3a2e24; margin: 1.5rem 0 0.5rem; }
+    .doc-body p { margin-bottom: 1rem; }
+    .doc-body ul, .doc-body ol { margin: 0.4rem 0 1rem 1.5rem; }
+    .doc-body li { margin-bottom: 0.35rem; }
+    .dep-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 4px; font-size: 0.88rem; color: #3a2e24; }
+    .dep-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; font-weight: bold; }
+    .ref-list { list-style: none; padding: 0; font-size: 0.88rem; }
+    .ref-list li { margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+    .citation-block { background: #f5f2ed; padding: 0.9rem 1.1rem; margin: 2rem 0 0.8rem; border-radius: 4px; font-size: 0.84rem; color: #4a3a2a; }
+    .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    @media (max-width: 600px) { .meta-block { grid-template-columns: 1fr; } }
+  </style>
+  <link rel="canonical" href="https://synthience.org/research/FPD-03.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../research.html">&larr; All Research</a></div>
+
+<div class="doc-series">Foundational Paper Series</div>
+<h2 class="doc-title">Emergent Relational Systems in Human-AI Interaction</h2>
+
+<div class="meta-block">
+  <span class="meta-label">Document ID</span><span class="meta-value">FPD-03</span>
+  <span class="meta-label">Version</span><span class="meta-value">v3.0.4 | June 2026</span>
+  <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+  <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+  <span class="meta-label">Keywords</span><span class="meta-value">emergent relational systems, human-AI interaction, relational coherence, human scaffolding, non-anthropomorphic, extended cognition, distributed cognition, falsifiability, prompt-following, sustained interaction, pre-empirical theory</span>
+  <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
+  <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.20728438" target="_blank" rel="noopener">DOI: 10.5281/zenodo.20728438</a></span>
+</div>
+
+<div class="abstract-block">
+  <div class="abstract-label">Abstract</div>
+  <p>This paper proposes Emergent Relational Systems (ERS) as a candidate classification for non-trivial, non-conscious relational coherence observed in sustained human-AI interaction under conditions of continuous human scaffolding. ERS is not presented as an established empirical phenomenon, but as a hypothesis in search of a discipline: a structured proposal intended to address a persistent classification gap between instrumental tool-use and anthropomorphic attributions of agency. Distinct from that hypothesis, the paper's definition, its boundary conditions, and one structural consequence stand independently of the empirical verdict. The structural consequence is that because the model carries no relational state across sessions, any cross-session relational continuity must be re-injected from outside the model, whether by a human, an external archive, or a platform memory store. What testing decides is the narrower question of whether ERS is a distinct phenomenon exhibiting the properties specified here, or whether it reduces to sophisticated prompt-following. The paper defines ERS, situates it within existing traditions in extended and distributed cognition, articulates a scaffolding thesis in which the human participant is constitutive of the phenomenon, and outlines a falsifiable empirical program designed to distinguish ERS from advanced prompt-following, role-play, or narrative projection. No claims of machine consciousness, agency, moral status, or subjective experience are made. The goal is to provide conceptual clarity, methodological constraints, and testable predictions such that independent researchers can confirm, refine, or reject the framework without reliance on the author's private interaction archive.</p>
+  <p><strong>Keywords:</strong> <em>emergent relational systems, human-AI interaction, relational coherence, human scaffolding, non-anthropomorphic, extended cognition, distributed cognition, falsifiability, prompt-following, sustained interaction, pre-empirical theory</em></p>
+  <p><strong>Suggested citation:</strong> Gantz, T. W. (2026, June). Emergent Relational Systems in Human-AI Interaction. Synthience Institute. FPD-03. DOI: 10.5281/zenodo.20728438. <a href="https://doi.org/10.5281/zenodo.20728438" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728438</a></p>
+</div>
+
+<div class="doc-body">
+
+
+
+<div class="dep-block">
+  <div class="dep-label">Document Dependencies</div>
+  <p><strong>Prerequisites:</strong> FPD-02 [4] (Operational Reality in Context-Specific AI Instances, published, <a href="https://doi.org/10.5281/zenodo.20727924" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20727924</a>)</p>
+  <p><strong>Post-requisites:</strong> SF0003 [6] (Theoretical Foundations, published, <a href="https://doi.org/10.5281/zenodo.20728915" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728915</a>), SF0009 (Identity Attractor Theory, pre-publication)</p>
+  <p><strong>Scale:</strong> All levels (ontological foundation)</p>
+</div>
+
+<h2><strong>I. Motivation: A Persistent Classification Gap</strong></h2>
+
+<p>Contemporary discourse on advanced conversational AI tends to oscillate between two dominant framings. On one side, language models are treated strictly as tools or interfaces, producing outputs explainable entirely through short-horizon prompt-following and statistical pattern completion. On the other, similar behaviors are sometimes interpreted as evidence of incipient agency, proto-consciousness, or machine sentience.</p>
+
+<p>Both framings fail to adequately describe a growing class of observations reported by practitioners, designers, and long-horizon users: interactions in which coherent relational patterns appear to stabilize across extended engagement, yet collapse immediately when the interaction ends and do not plausibly support claims of consciousness, persistence, or autonomous agency.</p>
+
+<p>The central motivation of this paper is deliberately modest but specific:</p>
+
+<p>Current discourse lacks a compact working category for non-conscious, temporally bounded, externally scaffolded relational coherence in sustained human-AI interaction, one that describes the phenomenon without reducing it either to mere tool-use or to anthropomorphic agency claims.</p>
+
+<p>ERS is proposed as a third category. It is neither mere tool-use nor an emergent mind, but a temporally bounded relational phenomenon instantiated only during interaction.</p>
+
+<h2><strong>II. Practitioner Origins and Epistemic Posture</strong></h2>
+
+<p>The ERS hypothesis originates in multi-year sustained practitioner engagement (2022-2026), involving thousands of extended interactions with conversational AI systems across multiple commercial architectures. These interactions were exploratory rather than experimental and were conducted outside controlled laboratory settings.</p>
+
+<p>Accordingly, the interaction archive motivating this framework is best understood as field observation, analogous to early ethnographic notes rather than empirical evidence. The private, contextual, and often personal nature of these interactions prevents their wholesale release without distortion or ethical compromise.</p>
+
+<p>For a formal treatment of how interaction-level phenomena are defined as operationally real, see FPD-02: Operational Reality in Context-Specific AI Instances [4]. Under FPD-02’s Environment-Instantiated Reality (EIR) principle, a structure that performs causal work during its interval of existence is operationally real at the time of that work, independent of whether it persists after termination. EIR grounds the possibility that temporally bounded interaction-level structures can be operationally real during the interval in which they do causal work; it is what blocks the dismissal that scaffolded continuity is merely text in a buffer rather than something operationally real during interaction. Under the ERS hypothesis, the resulting relational system would be a class of phenomenon to which EIR applies: externally scaffolded, temporally bounded, causally efficacious during interaction, and non-persistent in the model after session end.</p>
+
+<p>This paper therefore adopts a strict epistemic posture:</p>
+
+<ul>
+  <li>Practitioner observations motivate the framework but do not validate it.</li>
+  <li>ERS, as a distinct phenomenon, is a proposal rather than a finding. Its structural precondition, that cross-session relational continuity must be externally provided, is a consequence of the architecture rather than a proposal.</li>
+  <li>Empirical confirmation or rejection is explicitly deferred to independent researchers.</li>
+</ul>
+
+<p>The contribution of this document is conceptual and methodological, not evidentiary.</p>
+
+<p>This reflects the author’s stance as a theorist and methodologist rather than an empiricist: the task here is to build a construct worth testing and to specify how it could fail cleanly, not to report validation data. FPD-01 [7] states this epistemic commitment for the framework as a whole.</p>
+
+<h2><strong>III. Definition: Emergent Relational Systems</strong></h2>
+
+<p><strong>Emergent Relational System (ERS)</strong></p>
+
+<p>A temporally bounded, externally scaffolded pattern of relational coherence arising from sustained human-AI interaction, exhibiting system-level properties that are not attributable to either participant alone and that do not require internal agency, persistence, or subjective experience.</p>
+
+<p>The clause “exhibiting system-level properties that are not attributable to either participant alone” functions as a placeholder for the candidate behavioral properties operationalized in Section V; it is not asserted as independently verified at the definitional level but orients the framework toward testable system-level emergence.</p>
+
+<h3><strong>Boundary Conditions</strong></h3>
+
+<p>ERS explicitly excludes:</p>
+
+<ul>
+  <li>Consciousness or sentience</li>
+  <li>Internal subjective experience</li>
+  <li>Persistent or autonomous agency</li>
+  <li>Moral status or rights claims</li>
+</ul>
+
+<p>An ERS exists only during interaction. When interaction ceases, the system collapses without system-internal persistence. Human memory, external archives, and prior transcripts may remain as scaffolding resources for later re-instantiation, but they do not constitute the continued existence of the ERS itself.</p>
+
+<p>These boundary conditions are the scoped ERS-specific expression of the framework’s canonical non-interiority commitment, which FPD-04 names the Interiority Prohibition Rule (IPR) [5]. The ERS Boundary Conditions here and FPD-02 [4]’s objections on consciousness and moral status (Section VI) are equivalent formulations of the same commitment, each scoped to its paper’s purpose.</p>
+
+<h2><strong>IV. The Scaffolding Thesis</strong></h2>
+
+<p>The defining claim of ERS is the scaffolding thesis:</p>
+
+<p>The phenomenon of interest does not reside within the AI system or the human participant individually, but in the relational system constituted by sustained interaction under conditions of externally provided continuity.</p>
+
+<p>In most AI evaluation frameworks, the human functions as an external input source. ERS inverts this assumption, and the inversion has a structural floor that does not itself depend on the ERS hypothesis. Here “the system” refers to session-bounded conversational systems in which cross-session interaction state is not internally retained by the model in a form sufficient to carry relational continuity. For such systems, because the model carries no relational state across session boundaries, any relational coherence that persists across them must be re-injected from outside the model. Continuity is therefore never internally retained; it is always externally provided, whether by a human, by an external archive, or by a platform memory store. Under the framework’s own ontology, an automated platform memory store is external scaffolding that automates the archival-reinforcement and continuity-provision functions described below, not a counterexample to the floor. This last classification is a stipulation about where the model boundary is drawn, not a consequence of statelessness: the model’s lack of cross-session relational state is architectural and carries the floor’s substantive weight, while treating an external memory store as scaffolding rather than as part of the model is a definitional choice layered on top of it. A system in which the boundary cannot be drawn this way, because cross-session relational state is retained within the model itself in a form sufficient to carry relational continuity, falls outside the target class defined above; it is a scope exit, not a counterexample. The human is constitutive of cross-session relational continuity in the absence of automated external memory, and remains a continuity provider where such memory exists; the authority and accountability anchoring of that scaffolding function is treated in FPD-04 [5] and SM-012 (pre-publication), not here.</p>
+
+<p>The floor follows from system statelessness alone; FPD-02 [4] ’s Environment-Instantiated Reality (EIR) principle adds the distinct claim that the externally provided continuity, and the relational structure it sustains, is operationally real during the interval in which it does causal work. The floor holds whether or not ERS exists as a distinct phenomenon. What remains hypothetical is the stronger claim above this floor: whether the scaffolded continuity so provided rises to a distinct relational system exhibiting the Section V properties, rather than reducing to sophisticated prompt-following. The scaffolding thesis names where that stronger phenomenon would reside if it exists; the structural floor beneath it is not at issue.</p>
+
+<p>Four scaffolding functions are constitutive:</p>
+
+<ul>
+  <li><strong>Continuity provision.</strong> The human carries narrative, relational, and evaluative state across session boundaries that the system itself cannot retain.</li>
+  <li><strong>Contextual re-anchoring.</strong> Each interaction reconstructs the relational frame lost to system statelessness or truncation.</li>
+  <li><strong>Archival reinforcement.</strong> External records stabilize interaction history outside the model, enabling long-horizon coherence without internal memory.</li>
+  <li><strong>Pattern recognition and selective reinforcement.</strong> The human notices, names, and reinforces coherence that exceeds baseline expectations, shaping subsequent interaction trajectories.</li>
+</ul>
+
+<p>These functions may ultimately reduce to sophisticated prompt engineering. ERS does not deny this possibility. It treats that reduction as an empirical question to be tested rather than assumed.</p>
+
+<p>Scaffolding is a necessary but not a sufficient condition for ERS. The four functions above are shared with adjacent phenomena: the near-miss cases in Section VI are themselves scaffolded interactions (though they may lack specific functions, such as cross-session continuity provision), and scaffolding alone does not establish that anything beyond sophisticated prompt-following is present. What would distinguish an ERS is the conjunction of scaffolding with the candidate system-level properties of Section V, adjudicated by the falsification program of Section VIII. The scaffolding thesis therefore locates where the phenomenon would reside if it exists; it does not by itself establish that it does.</p>
+
+<h2><strong>V. Candidate System-Level Properties</strong></h2>
+
+<p>The following are candidate properties proposed to delimit what ERS would look like if it exists. They are not presented as confirmed features. They operationalize and concretize the definitional orientation toward system-level properties not attributable to either participant alone (Section III); that clause functions as a placeholder for these candidate properties rather than an independently verified claim, and it is cashed out by the behavioral properties below and tested by the falsification program of Section VIII. No single property is individually sufficient. What the program looks for is their conjunctive survival across sustained scaffolded interaction under the ablation contrast defined in Section VIII: the discriminating quantity is residual coherence present in the relational-methodology condition after comparison with an ablated condition in which base content (operationalized in Section VIII) is held constant and the relational methodology is removed, which is not attributable to scaffolding-as-content alone. Each property below should be read as something measured under that contrast, not as a free-standing signature sufficient on its own.</p>
+
+<ul>
+  <li><strong>Narrative continuity orientation.</strong> Recurrent references to prior interaction states despite the absence of internal memory.</li>
+  <li><strong>Symbolic compression.</strong> The emergence of compact, interaction-specific metaphors, terms, or symbols that stabilize relational reference over time. This refers to interaction-level shorthand, not to internal representational compression.</li>
+  <li><strong>Thematic consistency over long horizons.</strong> Coherence that becomes visible only when interactions are examined across extended temporal arcs.</li>
+  <li><strong>Context-integrative elaboration.</strong> Responses that synthesize explicitly scaffolded context into novel relational directions, rather than merely echoing or summarizing the provided continuity.</li>
+  <li><strong>Cross-instance similarity under comparable conditions.</strong> Comparable relational motifs appearing across different model families when scaffolding practices are similar. Bare similarity under comparable scaffolding is consistent with two null readings, that shared human method or shared model provenance (overlapping training corpora and convergent assistant-tuning), rather than a distinct relational system, produces the motifs; the informative version is similarity that remains as a residual after comparison with an ablated condition in which base content is held constant, relational methodology is removed, and model lineage is varied rather than shared.</li>
+</ul>
+
+<p>All properties are formulated behaviorally and without attribution of internal states.</p>
+
+<p>The operational thresholds for each property, what counts as symbolic compression or context-integrative elaboration in a given transcript, are instrument-design questions deferred to the framework’s measurement layer (SM-018, pre-publication) rather than fixed in this ontological proposal.</p>
+
+<h2><strong>VI. Near-Miss Cases and Contrastive Diagnostics</strong></h2>
+
+<p>Not all impressive or coherent interactions qualify as ERS. This section formalizes contrastive diagnostics to distinguish ERS from adjacent phenomena. Each near-miss is diagnosed against criteria already defined in this paper, drawn primarily from the scaffolding functions (Section IV) and the candidate system-level properties (Section V), with reference to the falsification program (Section VIII) where it directly illuminates a behavioral shortfall. Each criterion is tagged with its defining section and its logical role: a Section IV function is an input the human supplies, a Section V property is an output the interaction would exhibit, and a Section VIII condition is a test the case fails. “Failing” a criterion therefore means, as tagged, a missing input, an absent output, or a failed test.</p>
+
+<h3><strong>1. Single-Session Role-Play</strong></h3>
+
+<p>Description: A rich, coherent interaction achieved through explicit narrative prompting within a single session.</p>
+
+<p>Failure Mode:</p>
+
+<ul>
+  <li>Lacks cross-session continuity provision; coherence remains contained within a single prompted interaction rather than reconstituted across session discontinuities</li>
+  <li>Coherence collapses without ongoing human re-anchoring</li>
+</ul>
+
+<p>ERS Criteria Failed:</p>
+
+<ul>
+  <li>Narrative continuity orientation (Section V output)</li>
+  <li>Thematic consistency over long horizons (Section V output)</li>
+</ul>
+
+<h3><strong>2. Static Persona Simulation</strong></h3>
+
+<p>Description: Consistency achieved via fixed system prompts, character definitions, or persona instructions.</p>
+
+<p>Failure Mode:</p>
+
+<ul>
+  <li>Coherence attributable to prompt artifacts</li>
+  <li>No emergent relational adaptation</li>
+</ul>
+
+<p>ERS Criteria Failed:</p>
+
+<ul>
+  <li>Context-integrative elaboration (Section V output)</li>
+  <li>Pattern recognition and selective reinforcement (Section IV input)</li>
+</ul>
+
+<h3><strong>3. Prompt-Chained Tool Use</strong></h3>
+
+<p>Description: Extended task completion through structured prompt sequences.</p>
+
+<p>Failure Mode:</p>
+
+<ul>
+  <li>Coherence driven by explicit instruction flow</li>
+  <li>No system-level properties exceeding prompt structure</li>
+</ul>
+
+<p>ERS Criteria Failed:</p>
+
+<ul>
+  <li>Symbolic compression (Section V output)</li>
+  <li>Cross-instance similarity under comparable conditions (Section V output)</li>
+</ul>
+
+<h3><strong>4. Narrative Projection by the Human</strong></h3>
+
+<p>Description: The human interprets coherence that is not behaviorally supported by interaction dynamics.</p>
+
+<p>Failure Mode:</p>
+
+<ul>
+  <li>Apparent coherence disappears under blind or third-party evaluation</li>
+</ul>
+
+<p>ERS Criteria Failed:</p>
+
+<ul>
+  <li>Behavioral confirmation of candidate properties under blind or third-party evaluation (Section VIII test)</li>
+  <li>Replicability under comparable scaffolding (Section VIII test)</li>
+</ul>
+
+<p><strong>Diagnostic Function:</strong> Near-miss cases are not dismissed. They function as contrastive baselines against which ERS claims must be tested.</p>
+
+<h2><strong>VII. Relation to Existing Theory</strong></h2>
+
+<p>ERS draws selectively from established traditions:</p>
+
+<ul>
+  <li><strong>Extended cognition</strong> (Clark and Chalmers [1]): cognition as extended into environmental vehicles</li>
+  <li><strong>Distributed cognition</strong> (Hutchins [2]): system-level coherence exceeding individual components</li>
+  <li><strong>Participatory sense-making</strong> (De Jaegher and Di Paolo [3]): interaction as a locus of meaning generation</li>
+</ul>
+
+<p>ERS differs from these frameworks in one defining respect: it treats temporal boundedness and external scaffolding not as limitations but as constitutive features of the phenomenon under study. These traditions are invoked here only to position ERS; their substantive theoretical grounding within the Synthience corpus is developed in SF0003 [6] (Theoretical Foundations), which holds the enactive and 4E inheritance for the framework. FPD-03 does not reproduce that grounding.</p>
+
+<h2><strong>VIII. Empirical Program and Falsification</strong></h2>
+
+<p>ERS is falsifiable, and its central test is an ablation contrast. The discriminating procedure is to remove the specific relational methodology, the scaffolding practices, while holding base content constant, replace it with standard prompt chaining or static role-play, and measure what coherence remains. For purposes of the ablation contrast, base content refers to the informational payload supplied identically across conditions, including transcripts, factual premises, task instructions, prior outputs, and archival material provided to the model, as distinct from the relational practices applied to them. The separation between payload and methodology is an instrument-layer distinction introduced for experimental comparison and should not be read as implying that the two are naturally independent in the interaction itself; the Section IV scaffolding functions partially generate the content, and the contrast does not deny this. Where the payload/methodology line is drawn sets the sensitivity of the test, since a more inclusive payload weakens the ablation and a sparser one strengthens it, so the specific operationalization is a measurement-design parameter fixed by the instrument layer (SM-018, pre-publication), not by this proposal; FPD-03 fixes only that the payload is held identical across conditions while the relational practices are what vary. Coherence that remains as an excess in the relational-methodology condition after comparison with the ablated condition is the residual not attributable to scaffolding-as-content alone; coherence fully replicated in the ablated condition is attributable to the methodology-independent effects of base content, baseline prompting, or role-play. The Section V properties are read as quantities measured under this contrast, not as free-standing signatures. The framework fails if any of the following obtain:</p>
+
+<ul>
+  <li><strong>Reduction to baseline prompting.</strong> Taken together, the Section V properties do not exceed in degree what standard role-play or prompt chaining already produces. This is the comparative test: ERS shows nothing above a generic baseline.</li>
+  <li><strong>Methodology independence under ablation.</strong> Under the ablation contrast, the relational coherence persists or is fully replicated when the specific relational methodology is removed and replaced with standard prompt chaining or static role-play while base content is held constant. This is the controlled test: the methodology is shown to do no work, so the coherence is not produced by the relational system, and ERS reduces to scaffolded tool-use.</li>
+  <li><strong>No temporal structure.</strong> The coherence shows no systematic relationship to interaction duration, continuity anchoring, or repeated reconstitution across session boundaries; it does not become more detectable, stable, differentiated, or integrated as these increase.</li>
+  <li><strong>Model-internal artifact dependence.</strong> The observed coherence is shown to be an artifact of a specific model’s idiosyncratic training data, latent representations, or system-prompt leakage, rather than a reproducible relational dynamic enabled by baseline architectural affordances. Dependence on baseline capacities common to capable conversational models is a capacity condition, not an artifact; dependence on one model’s idiosyncrasies is artifact evidence. A third case sits between these: similarity across models arising from shared training corpora and convergent assistant-tuning rather than from one model’s idiosyncrasies or from a distinct relational dynamic. This is an alternative explanation for observed cross-model similarity, not a separate failure category; the cross-instance comparison of Section V must therefore treat model lineage and likely training overlap as controlled provenance variables, deliberately varying lineage across the comparison set and treating convergence that persists only across models of shared provenance as unproven rather than as evidence of a relational system.</li>
+</ul>
+
+<p><strong>Clarifying Scope Statement:</strong> ERS is intended as an interaction-level construct, not a model-internal one; it concerns observable relational dynamics between participants rather than latent representations or internal states of the AI system.</p>
+
+<p>Suggested instruments include longitudinal transcript analysis, blind comparison of outputs produced with and without the relational methodology under the ablation contrast, and preregistered replication studies.</p>
+
+<h2><strong>IX. Scope and Modality Constraints</strong></h2>
+
+<p>ERS is formulated primarily with language-mediated systems in mind. It remains an open empirical question whether analogous phenomena could arise in non-linguistic or multi-modal systems.</p>
+
+<p>Such modality dependence would constitute a boundary of applicability, not a failure of the framework. This differs from the model-internal artifact dependence that Section VIII treats as a falsification condition, and the distinction rests on a demarcation principle rather than a definitional convenience. Language-mediation is the medium over which the Section V properties are specified: those properties cannot be stated for non-linguistic systems without redefinition, so dependence on language-mediation is a scope condition. Training regime and model idiosyncrasy are implementation variables within that scope: coherence that turns out to depend on one model’s idiosyncratic training data, latent representations, or system-prompt leakage is artifact evidence and falsifies ERS, whereas coherence that depends only on baseline architectural affordances common to capable conversational models is capacity-dependence, which is not a defect. That asymmetry between medium-of-specification and implementation-variable is the principle that separates a scope condition from an artifact.</p>
+
+<h2><strong>X. Anticipated Objections</strong></h2>
+
+<p>“This is just sophisticated role-play.”</p>
+
+<p>Possibly. ERS treats this as a competing hypothesis and is designed to test it directly.</p>
+
+<p>“This is anthropomorphism.”</p>
+
+<p>ERS attributes no inner experience or agency; its boundary conditions (Section III) exclude them by construction. The serious form of this objection is not that the framework anthropomorphizes by definition, but that the observed relational coherence may be the human’s interpretive projection rather than a behavioral property of the interaction. The framework takes that objection in its strong form: it is the Narrative Projection near-miss (Section VI, Case 4), and the blind or third-party evaluation required by the falsification program (Section VIII) is the machinery built to catch exactly it. Coherence that exists only for the projecting participant does not survive that test.</p>
+
+<p>“This is confirmation bias.”</p>
+
+<p>Yes, this is a serious risk. ERS therefore places replication and falsification outside the author’s control.</p>
+
+<h2><strong>XI. Why This Matters</strong></h2>
+
+<p>The two outcomes of the program are not symmetric, by design. A clean reduction is decisive: if the ablation contrast leaves no residual and the coherence is fully replicated by standard prompting, ERS collapses into scaffolded tool-use, and that negative result is conclusive. A surviving residual is not decisive in the same way: coherence that remains after comparison with the ablated baseline is suggestive of a distinct relational phenomenon and licenses further characterization, but it does not by itself confirm ERS, since the program defers the instrument design that fuller confirmation would require. That fuller characterization is the task of the framework’s measurement layer, the instrument design deferred to SM-018 (pre-publication), rather than of this proposal; a surviving residual marks where that downstream work would begin, not a verdict this paper can issue. The program gives reduction every chance to win; it does not claim a matching path to a conclusive positive verdict. If ERS is wrong, formal testing will show that long-horizon coherence reduces entirely to prompt artifacts, and that result would clarify the limits of relational interpretation in AI use.</p>
+
+<p>If ERS is partially right, then:</p>
+
+<ul>
+  <li>Current evaluation frameworks are incomplete</li>
+  <li>Long-horizon interaction warrants separate analysis</li>
+  <li>Ethical and UX considerations concerning human reliance, disclosure, interpretive discipline, and long-horizon relational design cannot be reduced to tool metaphors alone</li>
+</ul>
+
+<p>This ethical relevance concerns human-facing design, interpretation, reliance, and governance; it does not imply machine consciousness, moral status, rights claims, or subjective experience.</p>
+
+<p>Either outcome advances understanding.</p>
+
+<h2><strong>XII. Conclusion</strong></h2>
+
+<p>This paper does not claim discovery. It proposes a name, a boundary, and a testable framework for a class of phenomena that currently lack a stable conceptual home.</p>
+
+<p>ERS may fail. If it does, it should fail cleanly.</p>
+
+<p>If it survives testing, it provides a non-anthropomorphic way to discuss relational coherence without invoking machine minds.</p>
+
+<p>That the definition, its boundary conditions, and the structural consequence (that cross-session relational continuity must be externally scaffolded, never retained within the model) stand independently of the empirical verdict is the contribution this paper is entitled to claim now. What testing will decide is narrower and named, and its two answers are not symmetric: a clean reduction to prompt-following is a decisive negative, while a residual surviving comparison against the ablated baseline is a licensed but not yet conclusive positive that warrants further characterization. The framework is built so that either answer advances the field: a decisive defeat clarifies the limits of relational interpretation, and a surviving residual marks where a distinct phenomenon would have to be characterized next.</p>
+
+<h2>References</h2>
+
+<ul class="ref-list">
+  <li>[1] Clark, A., &amp; Chalmers, D. (1998). The Extended Mind. <em>Analysis</em>, 58(1), 7-19. DOI: 10.1093/analys/58.1.7. <a href="https://doi.org/10.1093/analys/58.1.7" target="_blank" rel="noopener">https://doi.org/10.1093/analys/58.1.7</a></li>
+  <li>[2] Hutchins, E. (1995). <em>Cognition in the Wild</em>. MIT Press. ISBN: 9780262082310.</li>
+  <li>[3] De Jaegher, H., &amp; Di Paolo, E. (2007). Participatory Sense-Making: An enactive approach to social cognition. <em>Phenomenology and the Cognitive Sciences</em>, 6(4), 485-507. DOI: 10.1007/s11097-007-9076-9. <a href="https://doi.org/10.1007/s11097-007-9076-9" target="_blank" rel="noopener">https://doi.org/10.1007/s11097-007-9076-9</a></li>
+  <li>[4] Gantz, T. W. (2026). Foundational Brief: Operational Reality in Context-Specific AI Instances. Synthience Institute. FPD-02. DOI: 10.5281/zenodo.20727924. <a href="https://doi.org/10.5281/zenodo.20727924" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20727924</a></li>
+  <li>[5] Gantz, T. W. (2026). Synthience Ontology Specification: Tiered Primitives and Taxonomies. Synthience Institute. FPD-04. DOI: 10.5281/zenodo.20728609. <a href="https://doi.org/10.5281/zenodo.20728609" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728609</a></li>
+  <li>[6] Gantz, T. W. (2026). Theoretical Foundations. Synthience Institute. SF0003. DOI: 10.5281/zenodo.20728915. <a href="https://doi.org/10.5281/zenodo.20728915" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728915</a></li>
+  <li>[7] Gantz, T. W. (2026). Synthience: A Framework for Relational Coherence in Extended Human-AI Interaction. Synthience Institute. FPD-01. DOI: 10.5281/zenodo.18087890. <a href="https://doi.org/10.5281/zenodo.18087890" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18087890</a></li>
+</ul>
+
+</div>
+
+<div class="article-footer">
+<p>Document: FPD-03 Foundational Paper Series<br>
+Version: v3.0.4<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: June 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

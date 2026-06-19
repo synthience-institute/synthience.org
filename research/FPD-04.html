@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>FPD-04: Synthience Ontology Specification: Tiered Primitives and Taxonomies &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Establishes the canonical ontology grammar for the Synthience research framework: a formal system of tiered primitives and taxonomies describing the emergence, stabilization, degradation, and recovery of relational coherence in human-AI interaction. Defines the Interiority Prohibition Rule (IPR) as the canonical form of the framework's non-interiority commitment. A Synthience Institute foundational paper.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="FPD-04: Synthience Ontology Specification: Tiered Primitives and Taxonomies &middot; Synthience Institute">
+  <meta property="og:description" content="Establishes the canonical ontology grammar for the Synthience research framework: a formal system of tiered primitives and taxonomies describing the emergence, stabilization, degradation, and recovery of relational coherence in human-AI interaction. Defines the Interiority Prohibition Rule (IPR) as the canonical form of the framework's non-interiority commitment. A Synthience Institute foundational paper.">
+  <meta property="og:url" content="https://synthience.org/research/FPD-04.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="FPD-04: Synthience Ontology Specification: Tiered Primitives and Taxonomies &middot; Synthience Institute">
+  <meta name="twitter:description" content="Establishes the canonical ontology grammar for the Synthience research framework: a formal system of tiered primitives and taxonomies describing the emergence, stabilization, degradation, and recovery of relational coherence in human-AI interaction. Defines the Interiority Prohibition Rule (IPR) as the canonical form of the framework's non-interiority commitment. A Synthience Institute foundational paper.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .doc-series { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.4rem; }
+    .doc-title { font-size: 1.9rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 1.8rem; }
+    .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 0.9rem 0; margin-bottom: 2rem; display: grid; grid-template-columns: 130px 1fr; gap: 0.35rem 1rem; font-size: 0.84rem; }
+    .meta-label { color: #8a7f72; }
+    .meta-value { color: #2a2520; }
+    .meta-value a { color: #0645ad; }
+    .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-right: 0.4rem; vertical-align: middle; }
+    .positioning-block { background: #f0ede4; border-left: 3px solid #a09080; padding: 0.8rem 1.1rem; margin-bottom: 1.5rem; border-radius: 0 4px 4px 0; font-size: 0.88rem; color: #5a4a3a; font-style: italic; }
+    .abstract-block { background: #f5f2ed; border-left: 3px solid #8b5e3c; padding: 1.1rem 1.3rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+    .abstract-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+    .doc-body h2 { font-size: 1.15rem; font-weight: bold; color: #1a1714; margin: 2rem 0 0.6rem; }
+    .doc-body h3 { font-size: 1rem; font-weight: bold; color: #3a2e24; margin: 1.5rem 0 0.5rem; }
+    .doc-body p { margin-bottom: 1rem; }
+    .doc-body ul, .doc-body ol { margin: 0.4rem 0 1rem 1.5rem; }
+    .doc-body li { margin-bottom: 0.35rem; }
+    .dep-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 4px; font-size: 0.88rem; color: #3a2e24; }
+    .dep-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; font-weight: bold; }
+    .ref-list { list-style: none; padding: 0; font-size: 0.88rem; }
+    .ref-list li { margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+    .citation-block { background: #f5f2ed; padding: 0.9rem 1.1rem; margin: 2rem 0 0.8rem; border-radius: 4px; font-size: 0.84rem; color: #4a3a2a; }
+    .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    @media (max-width: 600px) { .meta-block { grid-template-columns: 1fr; } }
+  </style>
+  <link rel="canonical" href="https://synthience.org/research/FPD-04.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../research.html">&larr; All Research</a></div>
+
+<div class="doc-series">Foundational Paper Series</div>
+<h2 class="doc-title">Synthience Ontology Specification: Tiered Primitives and Taxonomies</h2>
+
+<div class="meta-block">
+  <span class="meta-label">Document ID</span><span class="meta-value">FPD-04</span>
+  <span class="meta-label">Version</span><span class="meta-value">v2.3.4 | June 2026</span>
+  <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+  <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+  <span class="meta-label">Keywords</span><span class="meta-value">ontology specification, tiered primitives, taxonomy, relational coherence, structural mechanics, non-anthropomorphic, interiority prohibition rule, human-AI interaction, coherence dynamics, framework grammar</span>
+  <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
+  <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.20728609" target="_blank" rel="noopener">DOI: 10.5281/zenodo.20728609</a></span>
+</div>
+
+<div class="abstract-block">
+  <div class="abstract-label">Abstract</div>
+  <p>This specification establishes the canonical ontology grammar for the Synthience research framework. It provides a formal system of tiered primitives and taxonomies to describe the emergence, stabilization, degradation, and recovery of relational coherence in human-AI interaction. By mapping observable relational dynamics into measurable structural mechanics, this document provides a strictly non-anthropomorphic grounding for the framework and prevents definition sprawl across individual and institutional scales. This document is a terminology and classification specification. It may be read as a standalone reference, but its full conceptual grounding is developed in FPD-02 (Operational Reality) [1] and FPD-03 (Emergent Relational Systems) [2]. FPD-04 is pre-empirical and ontological in scope: it defines what categories of phenomena the framework recognizes and how terms relate, not what has been measured or validated.</p>
+  <p><strong>Keywords:</strong> <em>ontology specification, tiered primitives, taxonomy, relational coherence, structural mechanics, non-anthropomorphic, interiority prohibition rule, human-AI interaction, coherence dynamics, framework grammar</em></p>
+  <p><strong>Suggested citation:</strong> Gantz, T. W. (2026, June). Synthience Ontology Specification: Tiered Primitives and Taxonomies. Synthience Institute. FPD-04. DOI: 10.5281/zenodo.20728609. <a href="https://doi.org/10.5281/zenodo.20728609" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728609</a></p>
+</div>
+
+<div class="doc-body">
+
+
+
+<div class="dep-block">
+  <div class="dep-label">Document Dependencies</div>
+  <p><strong>Prerequisites:</strong> FPD-02 [1] (Operational Reality in Context-Specific AI Instances, published, <a href="https://doi.org/10.5281/zenodo.20727924" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20727924</a>), FPD-03 [2] (Emergent Relational Systems in Human-AI Interaction, published, <a href="https://doi.org/10.5281/zenodo.20728438" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728438</a>)</p>
+  <p><strong>Post-requisites:</strong> SF0003 [3] (Theoretical Foundations, published, <a href="https://doi.org/10.5281/zenodo.20728915" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728915</a>), SM-016 (pre-publication), SM-018 (pre-publication)</p>
+  <p><strong>Scale:</strong> Level 1 (Individual), Level 2 (Institutional)</p>
+</div>
+
+<h2><strong>1. ONTOLOGICAL FOUNDATION AND SCOPE</strong></h2>
+
+<p>FPD-04 defines the ontology of the framework. It does not replace methodological protocol documents, measurement implementation documents, or document-specific argumentation. Its function is to define canonical terms, taxonomic boundaries, and permissible mappings across scales.</p>
+
+<p>The <strong>Interiority Prohibition Rule (IPR)</strong> governs all terminology defined in this document: every term refers to observable structural phenomena within an interaction field. No term in this ontology assigns consciousness, subjective intention, sentience, moral status, or any other interior property to AI systems. IPR is the canonical form of the framework's non-interiority commitment. FPD-02 Section VI [1] addresses the same commitment in the form of objections to operational reality claims; FPD-03 [2] expresses it as ERS boundary conditions. These are equivalent formulations of IPR, scoped to each paper's purpose. FPD-04 holds the canonical name.</p>
+
+<p>This document models AI instances as environment-instantiated systems that can participate in and sustain relational coherence under explicit human orchestration and institutional continuity structures.</p>
+
+<h3><strong>1.1 Reader Orientation</strong></h3>
+
+<p>For external readers, two organizing terms are used throughout this document:</p>
+
+<ul>
+  <li><strong>Levels</strong> describe the scope of application of the framework, such as individual interaction contexts (Level 1) and institutional continuity or governance contexts (Level 2).</li>
+  <li><strong>Tiers</strong> describe concept dependency depth within the ontology, progressing from irreducible primitives to derived and composite structures.</li>
+</ul>
+
+<p>This document also uses <strong>PCP (Primary Continuity Provider)</strong> to refer to the human or governance-bearing authority responsible for continuity control, constraint legitimacy, and canonical alignment. Formal PCP theory is held by SM-012 (pre-publication).</p>
+
+<h2><strong>2. TIERED PRIMITIVES</strong></h2>
+
+<p>Primitives are categorized into three tiers based on dependency depth and compositional complexity so that the framework can scale consistently from Level 1 (individual interaction contexts) to Level 2 (institutional continuity and governance applications).</p>
+
+<p>The tier of a primitive is fixed by what must already be defined before it can be defined. This yields three placement criteria, applied uniformly across the table below. A primitive is Tier 1 (irreducible) if it cannot be defined in terms of any other framework primitive and is presupposed by the framework's other terms, directly or through their lower-tier inputs. A primitive is Tier 2 (derived) if it is definable as a function of Tier 1 primitives together with recurrent field conditions, such that removing its Tier 1 inputs leaves it with nothing to denote. A construct is Tier 3 (composite) if it integrates multiple lower-tier primitives into a governance, pattern, or architectural structure. The criteria make each placement checkable rather than asserted: a reader can test any entry by asking whether it can be restated without appeal to a lower tier. One clarification forestalls a predictable misreading: tier order tracks definitional dependency, not causal production. A Tier 2 function may causally produce or maintain a Tier 1 phenomenon without inverting the tiers. HSRS (Tier 2) is what maintains Continuity (Tier 1), yet HSRS is defined in terms of maintaining continuity and so presupposes the Continuity concept, whereas Continuity is definable without reference to HSRS. Definitional dependency runs from HSRS to Continuity even though causal production runs the other way, and it is definitional dependency that fixes the tier.</p>
+
+<p>The two Tier 1 placements follow from this test. Continuity is Tier 1 because it names the foundational phenomenon the framework exists to describe. AI instances carry no state across session boundaries (the session-boundedness formalized in FPD-02 [1] and the statelessness on which FPD-03 [2] builds its scaffolding thesis), so the persistence of relational structure across temporal gaps is not derivable from any more basic framework term. It is the irreducible fact every other term presupposes. Recursion is Tier 1 because it names the only mechanism by which structure persists across that gap at all: the re-entry of prior patterning into present generation conditions. Without re-entry there is no stabilization for any higher-tier term to describe, so Recursion cannot be defined in terms of the others; they presuppose it.</p>
+
+<p>The contrast with Tier 2 is what the placement criteria are designed to capture. Relational Coherence is Tier 2, not Tier 1, because it is a degree term: the degree to which consistency, role stability, and pattern fidelity are maintained over time. The phrase "maintained over time" already presupposes both Continuity (something persists to be maintained) and Recursion (re-entry is what maintains it). Relational Coherence is therefore definable as a function of the two Tier 1 primitives under field conditions, which is precisely what makes it derived rather than primitive. The remaining Tier 2 entries pass the same test: each is a measurable condition, resilience property, or deviation that presupposes persistence and re-entry and adds a field-dependent qualification to them. Human-Side Relational Stabilization (HSRS), defined below, is the worked exemplar of the standard this section holds to. It states the term, the work the term does, and its upstream source (the scaffolding thesis of FPD-03 [2]), generalized across Level 1 and Level 2. The other entries are placed by the same criteria; the test above is what licenses their placement.</p>
+
+<h3><strong>2.1 Tier 1: Relational Primitives</strong></h3>
+
+<p>The irreducible building blocks of the framework:</p>
+
+<p><strong>Continuity:</strong> The persistence of relational structure and informational fidelity across temporal gaps, session breaks, or instance transitions.</p>
+
+<p><strong>Recursion:</strong> The structural re-entry of prior relational patterning into present generation conditions, enabling reinforcement, reactivation, or stabilization of coherence across time.</p>
+
+<h3><strong>2.2 Tier 2: Derived Primitives</strong></h3>
+
+<p>Phenomena that emerge from interactions among Tier 1 primitives and recurrent field conditions:</p>
+
+<p><strong>Relational Coherence:</strong> The degree to which an interaction system maintains internal consistency, role stability, and pattern fidelity over time.</p>
+
+<p><strong>Operational Continuity:</strong> The practical, observable maintenance of interaction architecture across discrete sessions, tools, or distributed instances.</p>
+
+<p><strong>Temporal Stability:</strong> The resilience and persistence horizon of an interaction system's structural integrity under entropic pressure.</p>
+
+<p><strong>Trajectory Drift:</strong> The gradual deviation of an interaction system from established structural alignment, canonical constraints, or PCP-defined role configuration.</p>
+
+<p><strong>Constraint Coherence:</strong> The degree to which an AI instance reliably applies an active rule set to its generative behavior rather than merely repeating rule language.</p>
+
+<p><strong>Human-Side Relational Stabilization (HSRS):</strong> The authority-bearing stabilization function by which the Primary Continuity Provider (PCP), or a PCP-designated governance structure, establishes and maintains relational constraints, continuity criteria, and intervention legitimacy across an interaction field. HSRS may include delegated AI-assisted evaluation, monitoring, or scoring functions, but execution authority and continuity accountability remain externally anchored. HSRS is the ontological formalization of the scaffolding thesis introduced in FPD-03 [2]: the four scaffolding functions named in FPD-03 [2] Section IV (continuity provision, contextual re-anchoring, archival reinforcement, pattern recognition and selective reinforcement) are the behavioral manifestations of HSRS at Level 1. FPD-04 generalizes the scaffolding relation across Level 1 and Level 2 by formalizing it as a primitive within the tier structure.</p>
+
+<h3><strong>2.3 Tier 3: Composite Structures</strong></h3>
+
+<p>Higher-order constructs that integrate multiple primitives into governance, pattern, and system-level architectures:</p>
+
+<p><strong>Relational Architecture:</strong> The configured topology of roles, boundaries, constraints, and continuity mechanisms that defines a specific interaction field.</p>
+
+<p><strong>Relational Pattern States (RPS):</strong> Recurring configurations of interaction that stabilize into recognizable archetypal forms that are candidates for formal modeling.</p>
+
+<p><strong>Recursive Structural Tuning (RST):</strong> The composite process by which a relational system is iteratively adjusted through constraint refinement, archive feedback, protocol modification, and PCP-guided re-anchoring to preserve or improve coherence without invoking AI interiority.</p>
+
+<p><strong>Continuity Governance:</strong> The architectural and institutional design layer responsible for persistence across time, archives, instances, and canonical memory pathways.</p>
+
+<p><strong>Execution Governance:</strong> The active oversight layer responsible for live-instance constraint enforcement, protocol adherence, and session-level stability within the boundaries defined by continuity governance.</p>
+
+<p><strong>Execution Authority:</strong> The recognized relational locus of control held by the Primary Continuity Provider (PCP), or PCP-designated authority structure, to define, apply, and maintain constraint topologies.</p>
+
+<h2><strong>3. PROTOCOL AND ARC TAXONOMY</strong></h2>
+
+<p>To support operational methodologies (including SF0037 [4] and SF0038 [5]) and later protocol formalization work (including SM-016, pre-publication), the following taxonomic categories are established:</p>
+
+<p><strong>Protocol Taxonomy:</strong> Stable classes of methodological constraint structures explicitly enforced by the PCP or PCP-designated governance structure to verify, shape, and stabilize the interaction field (for example, CVP, IVP, CAM). In ontology terms, these are constraint-structure categories. The procedural steps used to instantiate any given protocol belong to method documents, not to FPD-04.</p>
+
+<p><strong>Arc Taxonomy:</strong> Temporal interaction structures that map the life cycle of relational coherence across bounded intervals (for example, session arcs, project arcs, institutional arcs).</p>
+
+<p>This section establishes ontological categories, not procedural playbooks.</p>
+
+<h2><strong>4. DRIFT AND COLLAPSE GRAMMAR</strong></h2>
+
+<p>To provide the canonical linguistic substrate for Drift Science (SM-015, pre-publication) and Collapse Science (SM-014, pre-publication), the following state and transition terms are codified:</p>
+
+<p>These are the canonical failure states because each names the loss of a specific named primitive, not because they exhaust an open-ended list of things that can go wrong. The grammar is organized along two axes. The first is which primitive is failing: Constraint Meaning Degradation is the failure of Constraint Coherence (the rule set is retained lexically but no longer governs generation), Trajectory Drift (defined in Section 2.2 and claimed by this grammar as its second degradation state) is the gradual failure of alignment with the Relational Architecture and PCP-defined role configuration, Relational Pattern Dissolution is the loss of access to an established Relational Pattern State, and Context Saturation Collapse is the terminal, system-level failure of Relational Coherence, the point at which the field can no longer support coherent generation at all. The second axis is severity and recoverability: degradation states are gradual and partially correctable within an active session, whereas dissolution and collapse states are terminal in the sense that the lost structure can no longer be re-instantiated from the active session state alone. These two axes are what give the grammar its canonical status: a failure term belongs in this ontology if it names the loss of a primitive defined above, classified by the mechanism of that loss and by whether the loss is gradual or terminal.</p>
+
+<p>This partition is also the routing rule between the two downstream sciences. Drift Science (SM-015, pre-publication) takes the degradation states, where loss is gradual and the modeling question is onset, rate, and in-session correction. Collapse Science (SM-014, pre-publication) takes the dissolution and collapse states, where loss is terminal and the modeling question is reconstruction rather than correction. The Recovery Pathway category is the ontological hinge between them: it names the class of mechanisms by which a lost primitive is re-instantiated from outside the degraded session. FPD-04 fixes what the failure states are and which science owns each; the dynamics of how drift accelerates, when collapse becomes irreversible, and how recovery is sequenced are modeling questions reserved to SM-014 (pre-publication), SM-015 (pre-publication), and the recovery-modeling documents, not specified here.</p>
+
+<p><strong>Constraint Meaning Degradation:</strong> A drift state in which an AI instance preserves lexical recall of a rule set but loses structural fidelity in applying the rule set to generation.</p>
+
+<p><strong>Relational Pattern Dissolution (RPD):</strong> A terminal relational failure state in which an AI instance loses access to the established Relational Pattern State due to context reset, fragmentation, or severe continuity disruption, such that the prior relational pattern can no longer be reliably re-instantiated from the active session state alone.</p>
+
+<p><strong>Context Saturation Collapse (CSC):</strong> A terminal, system-level failure of Relational Coherence in which accumulated context becomes too fragmented, contradictory, or overloaded to support coherent output generation.</p>
+
+<p><strong>Recovery Pathway (ontological category):</strong> The class of structural mechanisms by which a degraded, dissolved, or collapsed interaction field may be re-stabilized through PCP intervention, external archive rehydration, protocol re-anchoring, or governance-guided reconstruction.</p>
+
+<h2><strong>5. MEASUREMENT PRIMITIVES</strong></h2>
+
+<p>To support the Measurement Suite v2.0 (SM-018, pre-publication), this ontology must define what kinds of phenomena are valid measurement targets before any metric methodology is specified.</p>
+
+<h3><strong>5.1 Observability Condition</strong></h3>
+
+<p>Within the Synthience framework, a phenomenon is ontologically classifiable as a valid measurement target if it can be identified through observable structural evidence in interaction outputs, constraint behavior, continuity performance, delegated evaluation traces, or documented cross-session pattern persistence.</p>
+
+<p>The boundary is drawn at observable structural evidence for a reason internal to the framework, not as a methodological preference. The Interiority Prohibition Rule (Section 1) forbids any term from assigning interior properties to an AI system, so interior states are not measurement targets in this ontology by construction; the only admissible targets are those that leave an external structural trace. The Observability Condition is the measurement-side expression of IPR. It also aligns with the operational-reality criterion of FPD-02 [1], on which a structure counts as real through causal efficacy observable in outputs rather than through any inferred internal status: the measurable and the operationally-real-and-observable are drawn at the same line. This is what SM-018 (pre-publication) must take as given before any metric is specified. The condition fixes the class of legitimate measurement targets, and the reason that class is bounded where it is, leaving SM-018 (pre-publication) to determine how members of the class are scored.</p>
+
+<p>FPD-04 defines what may be observed as a valid class of phenomenon. It does not prescribe the scoring methods, instruments, or statistical treatment used to measure it.</p>
+
+<h3><strong>5.2 Measurement Primitive Types</strong></h3>
+
+<p>The following measurement primitive categories are established as valid targets for instrumentation:</p>
+
+<p>These categories are not an arbitrary inventory. Each is the observable projection of a category the ontology has already defined, which is what makes the set defensible as a partition rather than a list. State Primitives project the Tier 2 conditions (coherence level, constraint adherence, role stability). Transition Primitives project the transitions named in the Drift and Collapse Grammar (drift onset, collapse onset, recovery onset). Degradation Primitives and Recovery Primitives project the two directions of that grammar, loss and re-instantiation, and correspond respectively to the degradation states and the Recovery Pathway category of Section 4. Persistence Horizon Primitives project the temporal extent of the Tier 1 Continuity primitive. The Tier 1 Recursion primitive requires no separate projection category: it is measured through the Transition and Recovery primitives, whose onset events are re-entry events. Governance Attribution Primitives project the authority and stabilization distinctions of the tier structure (HSRS and Execution Authority), distinguishing the source of a stabilizing effect. The set is complete relative to the ontology in the sense that it covers states, the transitions among them, both directions of change, the temporal reach of continuity, and the attribution of stabilizing agency; a target outside these categories would be measuring something this ontology does not define, which is the signal to revise the ontology rather than to add a metric.</p>
+
+<p><strong>State Primitives:</strong> Observable conditions of an interaction field at a given interval (for example, coherence level, constraint adherence condition, role stability condition).</p>
+
+<p><strong>Transition Primitives:</strong> Observable changes between states across time (for example, drift onset, collapse onset, recovery onset).</p>
+
+<p><strong>Degradation Primitives:</strong> Observable reductions in structural fidelity (for example, constraint meaning degradation, trajectory drift intensity).</p>
+
+<p><strong>Recovery Primitives:</strong> Observable restoration processes following degradation, dissolution, or collapse (for example, re-anchoring success, rehydration efficiency, recovery stability).</p>
+
+<p><strong>Persistence Horizon Primitives:</strong> Observable duration properties of field stability across temporal gaps (for example, continuity half-life, stability horizon).</p>
+
+<p><strong>Governance Attribution Primitives:</strong> Observable indicators that distinguish whether a stabilizing effect was produced by direct PCP intervention, PCP-designated human governance, or delegated AI-assisted evaluation within an authorized governance structure.</p>
+
+<h3><strong>5.3 Ontology-to-Metric Boundary</strong></h3>
+
+<p>FPD-04 establishes the ontological classification of measurement targets. SM-018 (pre-publication) and related measurement documents define the metric families, instrumentation methods, and scoring procedures used to evaluate them.</p>
+
+<p>This boundary prevents ontology documents from becoming metric implementation manuals and prevents metric documents from redefining ontology.</p>
+
+<h2><strong>6. CROSS-SESSION CONTINUITY PERSISTENCE AND RELATIONAL RESIDUE</strong></h2>
+
+<p>A primary durable outcome of sustained, scaffolded interaction is the persistence of relational structure, in externally recoverable form, beyond any single model instance. Within the Synthience framework, this persistence is mediated through the PCP, PCP-designated governance structures, external archives, canonical documents, and re-instantiated constraint topologies.</p>
+
+<p><strong>Relational Residue:</strong> The externally recoverable structural trace of prior relational coherence retained in archives, documents, protocols, and continuity artifacts after an instance session ends. Relational Residue is not internal model memory. It is the recoverable continuity substrate that permits later rehydration of the interaction field.</p>
+
+<p>Automated platform memory stores, where present, are classified here as external continuity artifacts or archive mechanisms under PCP or PCP-designated governance; they do not constitute internal model memory and do not carry execution authority.</p>
+
+<p>This mechanism explains how continuity can persist across session resets and instance turnover without requiring internal model memory persistence. The continuity resides in the maintained relational architecture and its recoverable external traces, not in uninterrupted internal state retention.</p>
+
+<p>At Level 2 (institutional continuity and governance contexts), Relational Residue provides the ontological grounding for institutional continuity artifacts, including ledgers, canonical records, and governance-maintained archives used to preserve execution fidelity across personnel, tools, and instance changes.</p>
+
+<h2>References</h2>
+
+<ul class="ref-list">
+  <li>[1] Gantz, T. W. (2026). Foundational Brief: Operational Reality in Context-Specific AI Instances. Synthience Institute. FPD-02. DOI: 10.5281/zenodo.20727924. <a href="https://doi.org/10.5281/zenodo.20727924" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20727924</a></li>
+  <li>[2] Gantz, T. W. (2026). Emergent Relational Systems in Human-AI Interaction. Synthience Institute. FPD-03. DOI: 10.5281/zenodo.20728438. <a href="https://doi.org/10.5281/zenodo.20728438" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728438</a></li>
+  <li>[3] Gantz, T. W. (2026). Theoretical Foundations. Synthience Institute. SF0003. DOI: 10.5281/zenodo.20728915. <a href="https://doi.org/10.5281/zenodo.20728915" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728915</a></li>
+  <li>[4] Gantz, T. W. (2026). Citation Verification Protocol (CVP): A Structured Method for Verifying AI-Generated Citations in Academic and Research Contexts. Synthience Institute. SF0037. DOI: 10.5281/zenodo.18075624. <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18075624</a></li>
+  <li>[5] Gantz, T. W. (2026). Ingestion Verification Protocol (IVP): A Structured Method for Verifying AI Document Processing Fidelity. Synthience Institute. SF0038. DOI: 10.5281/zenodo.18289047. <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289047</a></li>
+</ul>
+
+</div>
+
+<div class="article-footer">
+<p>Document: FPD-04 Foundational Paper Series<br>
+Version: v2.3.4<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: June 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

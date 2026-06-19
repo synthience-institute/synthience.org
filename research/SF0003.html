@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>SF0003: Theoretical Foundations &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Establishes the theoretical foundations for studying sustained multi-turn interaction in human-AI dyads. Provides an interaction-first justification grounded in enactive and 4E cognition, engages Aguirre's two-obstacle formalization of the alignment problem, and articulates the framework's additive position relative to single-model alignment improvement. A Synthience Institute framework paper.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="SF0003: Theoretical Foundations &middot; Synthience Institute">
+  <meta property="og:description" content="Establishes the theoretical foundations for studying sustained multi-turn interaction in human-AI dyads. Provides an interaction-first justification grounded in enactive and 4E cognition, engages Aguirre's two-obstacle formalization of the alignment problem, and articulates the framework's additive position relative to single-model alignment improvement. A Synthience Institute framework paper.">
+  <meta property="og:url" content="https://synthience.org/research/SF0003.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="SF0003: Theoretical Foundations &middot; Synthience Institute">
+  <meta name="twitter:description" content="Establishes the theoretical foundations for studying sustained multi-turn interaction in human-AI dyads. Provides an interaction-first justification grounded in enactive and 4E cognition, engages Aguirre's two-obstacle formalization of the alignment problem, and articulates the framework's additive position relative to single-model alignment improvement. A Synthience Institute framework paper.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .doc-series { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.4rem; }
+    .doc-title { font-size: 1.9rem; font-weight: bold; line-height: 1.25; color: #1a1714; margin-bottom: 1.8rem; }
+    .meta-block { border-top: 1px solid #ddd6c8; border-bottom: 1px solid #ddd6c8; padding: 0.9rem 0; margin-bottom: 2rem; display: grid; grid-template-columns: 130px 1fr; gap: 0.35rem 1rem; font-size: 0.84rem; }
+    .meta-label { color: #8a7f72; }
+    .meta-value { color: #2a2520; }
+    .meta-value a { color: #0645ad; }
+    .status-badge { display: inline-block; background: #2d6a4f; color: #fff; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-right: 0.4rem; vertical-align: middle; }
+    .positioning-block { background: #f0ede4; border-left: 3px solid #a09080; padding: 0.8rem 1.1rem; margin-bottom: 1.5rem; border-radius: 0 4px 4px 0; font-size: 0.88rem; color: #5a4a3a; font-style: italic; }
+    .abstract-block { background: #f5f2ed; border-left: 3px solid #8b5e3c; padding: 1.1rem 1.3rem; margin-bottom: 2rem; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+    .abstract-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.5rem; }
+    .doc-body h2 { font-size: 1.15rem; font-weight: bold; color: #1a1714; margin: 2rem 0 0.6rem; }
+    .doc-body h3 { font-size: 1rem; font-weight: bold; color: #3a2e24; margin: 1.5rem 0 0.5rem; }
+    .doc-body p { margin-bottom: 1rem; }
+    .doc-body ul, .doc-body ol { margin: 0.4rem 0 1rem 1.5rem; }
+    .doc-body li { margin-bottom: 0.35rem; }
+    .dep-block { background: #f5f0ea; border: 1px solid #ddd0bc; padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 4px; font-size: 0.88rem; color: #3a2e24; }
+    .dep-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; font-weight: bold; }
+    .ref-list { list-style: none; padding: 0; font-size: 0.88rem; }
+    .ref-list li { margin-bottom: 0.8rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+    .citation-block { background: #f5f2ed; padding: 0.9rem 1.1rem; margin: 2rem 0 0.8rem; border-radius: 4px; font-size: 0.84rem; color: #4a3a2a; }
+    .citation-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7f72; margin-bottom: 0.4rem; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    @media (max-width: 600px) { .meta-block { grid-template-columns: 1fr; } }
+  </style>
+  <link rel="canonical" href="https://synthience.org/research/SF0003.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../research.html">&larr; All Research</a></div>
+
+<div class="doc-series">Synthience Framework</div>
+<h2 class="doc-title">Theoretical Foundations</h2>
+
+<div class="meta-block">
+  <span class="meta-label">Document ID</span><span class="meta-value">SF0003</span>
+  <span class="meta-label">Version</span><span class="meta-value">v3.1.3 | June 2026</span>
+  <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
+  <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
+  <span class="meta-label">Keywords</span><span class="meta-value">theoretical foundations, sustained multi-turn interaction, human-AI dyads, interaction trajectory, enactive cognition, 4E cognition, participatory sense-making, coherence drift, alignment problem, interaction-first methodology, pre-empirical theory</span>
+  <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
+  <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.20728915" target="_blank" rel="noopener">DOI: 10.5281/zenodo.20728915</a></span>
+</div>
+
+<div class="abstract-block">
+  <div class="abstract-label">Abstract</div>
+  <p>This document establishes the theoretical foundations for studying sustained multi-turn interaction in human-AI dyads. Its extension to AI-AI systems and hybrid configurations is treated as open research at higher interaction scales (Sections 4.5 and 10.4), not as established here. Building on the empirically documented gaps identified in SF0002 [6], it provides a disciplined conceptual basis for treating interaction trajectories as the primary unit of analysis when evaluating long-horizon phenomena such as coherence drift, repair, coordination, and time-emergent harms. The theoretical resources employed are drawn from enactive and 4E cognition (embodied, embedded, enactive, extended) and the participatory sense-making tradition. These frameworks are used strictly as methodological precedents for analyzing coupled processes. They do not license claims about AI consciousness, inner experience, agency, or moral status. All claims advanced here concern observable interaction dynamics and their implications for evaluation, protocol design, and governance. The v2 revision line extends the v1.6 theoretical foundation along four load-bearing axes. First, it engages Aguirre's two-obstacle formalization of the alignment problem (the Intervention Obstacle and the Modeling Obstacle) and locates the framework's response with respect to each obstacle and to Aguirre's control / alignment / refusal trilemma. Second, it develops a theoretical response to each of the six gaps identified in SF0002 [6] v4.0.2. Third, it engages directly with the strongest alternative reading of the empirical evidence cited across the framework, namely the single-model-alignment-improvement interpretation, and articulates the framework's additive rather than replacive position. Fourth, it acknowledges the operational status of the framework's verification stack and the present limits of the framework's claims, including its bounded-interaction-scale default. This document functions as the justificatory layer for interaction-first methodology within the Synthience framework. It establishes why sustained interaction trajectories constitute legitimate scientific objects, why long-horizon phenomena cannot be reduced to isolated outputs or internal model states, and how the framework positions itself with respect to the impossibility literature without overclaiming.</p>
+  <p><strong>Keywords:</strong> <em>theoretical foundations, sustained multi-turn interaction, human-AI dyads, interaction trajectory, enactive cognition, 4E cognition, participatory sense-making, coherence drift, alignment problem, interaction-first methodology, pre-empirical theory</em></p>
+  <p><strong>Suggested citation:</strong> Gantz, T. W. (2026, June). Theoretical Foundations. Synthience Institute. SF0003. DOI: 10.5281/zenodo.20728915. <a href="https://doi.org/10.5281/zenodo.20728915" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728915</a></p>
+</div>
+
+<div class="doc-body">
+
+
+
+<div class="dep-block">
+  <div class="dep-label">Document Dependencies</div>
+  <p><strong>Prerequisites:</strong> SF0002 (Gantz [6]) (Sustained Multi-Turn Interaction in AI Systems, published, <a href="https://doi.org/10.5281/zenodo.20396315" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20396315</a>), FPD-02 [22] (Operational Reality in Context-Specific AI Instances, published, <a href="https://doi.org/10.5281/zenodo.20727924" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20727924</a>), FPD-03 [23] (Emergent Relational Systems in Human-AI Interaction, published, <a href="https://doi.org/10.5281/zenodo.20728438" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728438</a>), FPD-04 [24] (Synthience Ontology Specification, published, <a href="https://doi.org/10.5281/zenodo.20728609" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728609</a>)</p>
+  <p><strong>Post-requisites:</strong> SF0007 [25] (Constructive Alignment, published, <a href="https://doi.org/10.5281/zenodo.20729978" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20729978</a>), SF0009 (Identity Attractor Theory, pre-publication), SM-004 (Relational Stabilization Dynamics, pre-publication), SM-012 (Primary Continuity Provider Theory, pre-publication)</p>
+  <p><strong>Scale:</strong> Level 1 (Individual, primary), Level 2 (Organizational, foundational), Level 3 (AI-to-AI / Civilizational, open research question)</p>
+</div>
+
+<h2><strong>0. Orientation</strong></h2>
+
+<h3><strong>0.1 Why theory is required after SF0002</strong></h3>
+
+<p>SF0002 [6] establishes a convergent empirical result across evaluation research, HCI, and multi-agent systems: sustained interaction is central to real-world AI deployment yet remains structurally under-measured. Failures documented in the literature include multi-turn degradation, irrecoverable drift, coordination breakdowns, and interaction-level harms that do not appear in single-turn testing.</p>
+
+<p>Theory is required at this stage for two precise reasons:</p>
+
+<ul>
+  <li>Concept selection: determining which interaction-level phenomena merit systematic measurement.</li>
+  <li>Unit-of-analysis justification: establishing why these phenomena cannot be reduced to properties of isolated model outputs or internal model states.</li>
+</ul>
+
+<p>This document supplies that justification. It does not introduce speculative claims. It establishes the minimal theoretical grounding necessary to treat interaction trajectories as legitimate scientific objects.</p>
+
+<h3><strong>0.2 Reader orientation</strong></h3>
+
+<p>This document is a theoretical justification layer within the Synthience framework.</p>
+
+<ul>
+  <li>It does not define the canonical ontology vocabulary (handled in ontology specifications such as FPD-04 [24]).</li>
+  <li>It does not define specific instruments or metrics (handled in measurement and protocol documents).</li>
+  <li>It does justify why interaction trajectories and coupled processes are legitimate objects of analysis.</li>
+</ul>
+
+<h3><strong>0.3 What is new in the v2 revision line</strong></h3>
+
+<p>Version 1.6 of this document established the enactive and 4E grounding for interaction-first methodology and connected that grounding to the broad gap structure SF0002 [6] had identified at the time of v1.6 drafting. Three subsequent developments motivate the v2 revision line.</p>
+
+<p>First, SF0002 has been published at v4.0.2 with six specifically scoped gaps and a substantive engagement with Aguirre's <em>Control Inversion</em> [7]. The gap structure SF0003 must respond to is now precise rather than gestural.</p>
+
+<p>Second, the framework's response to Aguirre cannot rest on the framework's interaction-architecture claims alone. Aguirre's analysis identifies two distinct obstacles to AI control, and SF0003 must engage both rather than only the first.</p>
+
+<p>Third, the empirical evidence cited across the framework admits a competing interpretation, namely that current single-model alignment training is insufficient and should be improved rather than supplemented by interaction-level architecture. This document engages that interpretation directly and articulates an additive rather than replacive position.</p>
+
+<p>Sections 1 through 3 carry forward from v1.6 with minor clarifications. Sections 4 through 6 are the load-bearing theoretical additions introduced in the v2 revision line. Sections 7 through 9 carry forward with adjustments to reflect those additions. Section 10 states the framework's limitations and operational status. Section 11 is the updated conclusion.</p>
+
+<h2><strong>1. Core Commitments of the Enactive and 4E Frame</strong></h2>
+
+<h3><strong>1.1 Cognition as activity under constraint</strong></h3>
+
+<p>Enactive approaches treat cognition as activity unfolding under environmental constraint rather than as manipulation of stored representations. Meaning and relevance arise through ongoing engagement, where actions shape future possibilities. The framework's use of this shift is methodological and is scoped explicitly in Section 2.4.</p>
+
+<p>Varela, Thompson, and Rosch articulate this shift from representational explanation to process-oriented analysis [1].</p>
+
+<p>Methodological consequence: In sustained interaction, coherence and relevance are properties of how exchanges constrain subsequent exchanges. They cannot be fully captured by evaluating isolated turns.</p>
+
+<h3><strong>1.2 Sense-making as trajectory viability</strong></h3>
+
+<p>In enactive theory, sense-making refers to how a system treats aspects of its environment as significant relative to its continued organization. In the present framework, this concept is not imported as a biological or phenomenological claim. The framework imports the methodological move that makes enactive analysis useful: organization can be explained at the level of an unfolding coupled process rather than only at the level of isolated components.</p>
+
+<p>Thompson develops enactive theory as a scientific program grounded in observable organization rather than metaphysical speculation [2]. For SF0003, the relevant precedent is not the biological autonomy of living systems, nor any claim about AI experience. The relevant precedent is the legitimacy of treating temporally extended organization as an object of analysis.</p>
+
+<p>Within this framework, trajectory viability means the degree to which an interaction preserves the constraint structure required for the interaction to continue serving its specified purpose. It is observable in whether constraints established earlier in the interaction continue to bind later exchanges, whether violations can be repaired, and whether the trajectory remains organized around its governing task, role, or accountability conditions.</p>
+
+<p>Long-horizon interaction failure is therefore best modeled as loss of trajectory viability rather than local semantic mismatch. A response may be locally plausible while the interaction trajectory has already lost constraint fidelity. The analytic target is whether interaction remains organized and constraint-consistent across time.</p>
+
+<h3><strong>1.3 Interaction-level organization without anthropomorphism</strong></h3>
+
+<p>Participatory sense-making research demonstrates that interaction processes can exhibit organization not attributable to individual participants alone. This does not imply collective minds or shared inner states.</p>
+
+<p>De Jaegher and Di Paolo formalize interaction-level organization without requiring the inference to a collective mind or shared inner state [3].</p>
+
+<p>For sustained human-AI interaction, this establishes a critical boundary: interaction trajectories can be structured, constrained, and evaluable without attributing agency, experience, or consciousness to AI systems. The unit of analysis is the trajectory and its constraint structure, not any participant's internal state.</p>
+
+<h2><strong>2. Application to AI and HCI Without Ontological Inflation</strong></h2>
+
+<h3><strong>2.1 Enactive AI as organizational analysis</strong></h3>
+
+<p>Enactive AI research examines autonomy and sense-making as organizational properties of systems rather than as phenomenological claims.</p>
+
+<p>Froese and Ziemke frame enactive AI as a shift in explanatory focus rather than a claim about machine experience [4].</p>
+
+<p>Within this framework, human-AI interaction varies along an evaluative spectrum:</p>
+
+<ul>
+  <li>Thin coupling: tool-like use with low path dependence</li>
+  <li>Thick coupling: process-like interaction with escalating mutual constraint</li>
+</ul>
+
+<p>This distinction is methodological and evaluative. It does not imply psychological or experiential properties in AI systems.</p>
+
+<h3><strong>2.2 4E cognition and sociotechnical coupling</strong></h3>
+
+<p>4E cognition provides a vocabulary for analyzing how repeated tool use reorganizes human practices over time. Applied to LLMs, it frames interaction as embedded within broader sociotechnical systems.</p>
+
+<p>Noller argues that extended human-LLM interaction reshapes agency and attention without implying machine mentality [5].</p>
+
+<p>Evaluation implication: Long-horizon assessment must capture co-adaptation, reliance trajectories, and practice reorganization across time rather than only per-turn output quality.</p>
+
+<h3><strong>2.3 The parity principle and its reliability conditions</strong></h3>
+
+<p>The extended mind literature establishes that a system's cognitive scope can include external resources under specified conditions of availability, reliability, and trust. Clark and Chalmers articulated this through the parity principle and Otto's notebook example [8].</p>
+
+<p>For sustained human-AI interaction, the parity principle is methodologically useful but conditionally bounded. Treating an AI interlocutor as a load-bearing element of a cognitive system presupposes that the reliability conditions Otto's notebook satisfies (consistent availability, ready accessibility, trustworthy retrieval) are themselves preserved in the AI case. SF0002 [6] §4.3 identifies that those conditions cannot be assumed; they have to be engineered. The interaction architecture is what makes or fails to make the reliability conditions hold. This places the burden of the parity claim on observable interaction-level properties rather than on the model in isolation, which is one of the lines of reasoning that motivates interaction-first methodology.</p>
+
+<p>The derivation runs as follows. The parity principle's reliability conditions are conditions on the external resource as it functions for the user; they do not require the resource to be static, only reliable under the relevant conditions. Otto's notebook qualifies because it is consistently available and trustworthy when needed, not because its contents never change. In the AI case the model alone cannot guarantee those conditions: its outputs vary with phrasing, context, and version, and it carries no stable cross-session state. What can satisfy the reliability conditions is the interaction architecture as a whole, the protocols, continuity provisions, and verification instruments that engineer consistent availability and trustworthy retrieval around a model that does not provide them on its own. The parity claim therefore attaches to the architecture, not to the model in isolation, which is why the reliability conditions are an interaction-level property rather than a model property. This is the step Section 2.3 had asserted; the foregoing derives it.</p>
+
+<h3><strong>2.4 Scope of the enactive inheritance</strong></h3>
+
+<p>The framework does not inherit the full enactive apparatus. It does not require biological autonomy, phenomenology, organismic self-maintenance, or any claim that AI systems possess experience, mentality, or interiority. This is the scoped expression, for this document, of the framework's canonical non-interiority commitment, which FPD-04 [24] names the Interiority Prohibition Rule (IPR); that commitment is absolute and is not relaxed anywhere in the framework.</p>
+
+<p>Within that commitment, the framework takes a definite position on the status of interaction-level organization, and that position is neither "mere analytic lens" nor a claim of confirmed empirical settlement. Interaction-level organization is treated as real: a pattern of relational coherence, not attributable to either participant alone, that does causal work during sustained interaction. The participatory sense-making tradition established the precedent that interactional organization of this kind can be analyzed as a real object without implying a collective mind [3]. The framework's fuller treatment of why structures that arise within bounded interaction are operationally real during their interval of execution, independent of whether they persist afterward, is developed in FPD-02 (Operational Reality in Context-Specific AI Instances) [22], the framework's operational-reality foundation; SF0003 adopts that position here without re-deriving it.</p>
+
+<p>One step in this inheritance must be made explicit rather than assumed. De Jaegher and Di Paolo's warrant for treating interaction-level organization as real rather than a mere lens rests on two autonomous sense-makers whose co-regulated interaction acquires an organization of its own [3]. The human-AI case does not satisfy that licensing condition: the framework denies AI autonomy, sense-making, and interiority, so the realist conclusion cannot be carried over from the human-human precedent on the same grounds. The framework's commitment to the reality of interaction-level organization in the human-AI case rests instead on FPD-02's operational-reality criterion [22]. On that criterion, a structure is operationally real during its interval of execution if it does causal work in that interval, constraining subsequent exchanges, generating path dependence, and producing repair requirements, regardless of whether either participant is autonomous, sense-making, or possessed of interiority. The criterion is substrate-neutral and asserts nothing about inner experience. Interaction-level organization in human-AI interaction meets it because it is causally efficacious during execution, so its reality is licensed by FPD-02 [22], not by the autonomy condition of the enactive precedent. De Jaegher and Di Paolo continue to license the methodological move, the treatment of interaction-level organization as a legitimate object of analysis; FPD-02 [22] licenses the realist commitment for the human-AI case specifically.</p>
+
+<p>What remains open is not whether interaction-level organization is real but how well it can presently be measured. Empirical purchase on interaction-level structure is at an early stage; the framework treats the current limits as limits of measurement and interpretive access, not as evidence against the reality of causally effective interaction-level structure. This is the distinction between asymmetric tractability and asymmetric reality: the reality is a framework commitment, the tractability is what the empirical program is built to improve.</p>
+
+<p>The inheritance from the enactive and participatory sense-making traditions is therefore methodological in one respect and substantive in another. Methodologically, the traditions establish the legitimacy of analysis at the coupled-process level. Substantively, they establish that interaction-level organization can be a real and observable object of study without being mental. A reader may decline the "enactive" label and read Sections 1 and 2 as a dynamical-systems and interaction-process analysis; the framework does not depend on the label. A reader may not reduce the interaction system to an observer-imposed lens, because the framework's treatment of interaction-level organization as real and causally effective is what the rest of the corpus is built on. This narrower-than-enactivism, structurally realist inheritance is deliberate. It preserves the non-anthropomorphic and observable-behavioral constraints while supplying the structural grounding the framework's theoretical and formal papers require.</p>
+
+<h2><strong>3. Theoretical Support for the Gaps Identified in SF0002</strong></h2>
+
+<p>Three broad gap categories are treated here at a high level; Section 5 develops the theoretical response to each of the six specifically scoped gaps SF0002 [6] v4.0.2 identifies.</p>
+
+<h3><strong>3.1 Multi-turn degradation as trajectory instability</strong></h3>
+
+<p>Multi-turn degradation is best understood as instability in a coupled trajectory:</p>
+
+<ul>
+  <li>early errors constrain later options (path dependence)</li>
+  <li>repair requires re-alignment of shared constraints</li>
+  <li>stability is an interaction-level property</li>
+</ul>
+
+<p>This directly motivates measurement of:</p>
+
+<ul>
+  <li>repair success</li>
+  <li>constraint re-alignment</li>
+  <li>trajectory convergence or fragmentation</li>
+</ul>
+
+<h3><strong>3.2 Interaction harms as process-generated risks</strong></h3>
+
+<p>Interaction-level harms arise through repeated coupling, including:</p>
+
+<ul>
+  <li>escalating trust</li>
+  <li>dependency formation</li>
+  <li>manipulation susceptibility</li>
+  <li>normalization of unsafe behavior</li>
+</ul>
+
+<p>These harms are generated by interaction processes rather than isolated outputs. Static evaluation methods therefore systematically under-measure them.</p>
+
+<h3><strong>3.3 Multi-agent coordination without group minds</strong></h3>
+
+<p>Multi-agent systems introduce higher-order coordination regimes. These can be analyzed without attributing collective consciousness or agency.</p>
+
+<p>The relevant distinction is structural:</p>
+
+<ul>
+  <li>aggregate behavior</li>
+  <li>integrated coordination</li>
+</ul>
+
+<p>This aligns with system-level and information-theoretic approaches that detect organization without anthropomorphic inference (see [9] for the information-theoretic grounding). The treatment here is at bounded interaction scale; extension of these coordination mechanisms to multi-agent systems at organizational (Level 2) or civilizational (Level 3) scale is open research, not asserted here.</p>
+
+<h2><strong>4. Engaging the Impossibility Literature: Aguirre's Two Obstacles</strong></h2>
+
+<p>SF0002 v4.0.2 §5 engages Aguirre's <em>Control Inversion</em> [7] substantively as part of the empirical and theoretical landscape that motivates interaction-level work, but it deliberately does not articulate the framework's theoretical response. SF0003 carries that load.</p>
+
+<h3><strong>4.1 Two obstacles, not one</strong></h3>
+
+<p>Aguirre's Appendix A formalization of AI control failure specifies two distinct obstacles to robust AI control, and the framework's response must engage both.</p>
+
+<p><strong>The Intervention Obstacle.</strong> The overseer cannot transmit enough constraining information to the AI system to specify the correct action across the system's state space. Aguirre formalizes this through Ashby's law of requisite variety: the variety of the controller must match the variety of the controlled. For AI systems whose state spaces grow rapidly, the human overseer's channel capacity (human behavioral information throughput is approximately 10 bits per second [21]; Aguirre invokes this limit as part of his Intervention Obstacle argument [7]) cannot keep pace with the variety the system can exhibit. Touchette and Lloyd [9] formalize the zero-sum relationship between controller and controlled variety that this obstacle expresses. The Intervention Obstacle is about <em>transmission</em>: even given a correct specification of the right constraint structure, the overseer cannot get enough of it through to the system in time.</p>
+
+<p><strong>The Modeling Obstacle.</strong> The overseer cannot specify A_good. Aguirre uses A_good to denote the correct constraint structure the overseer would need to transmit if the Intervention Obstacle were resolved. The Appendix A ground for why A_good cannot be specified is structural rather than a matter of articulating values: knowing A_good would require a predictive model of the system to be controlled, since by the Good Regulator Theorem any effective regulator must embed a model of what it regulates, and a full predictive model of a superintelligent system is out of reach because such a system is inherently inscrutable and unpredictable. Dimensionality compounds this. In a high-dimensional action space the volume of A_bad vastly exceeds the volume of A_good, and the law of unintended states means any finite constraint structure leaves exploitable gaps. The overseer cannot transmit the correct constraints because the overseer cannot build the model that would yield them. The Modeling Obstacle is about <em>specification adequacy</em>: even with infinite bandwidth, the overseer would not know what to say. Aguirre advances a related but separate point in Chapter 6, that human values are themselves partial, conflicted, contextually variable, and not fully introspectively accessible; that argument compounds the difficulty of alignment but is distinct from the Appendix A inscrutability-and-dimensionality basis of the Modeling Obstacle, and the framework keeps the two distinct.</p>
+
+<p>The Modeling Obstacle is the Appendix A obstacle most directly connected to Aguirre's Chapter 6 argument that alignment is not, by itself, a solution [7]. It is the obstacle that makes alignment hard in principle rather than just hard in implementation. A framework that engages only the Intervention Obstacle has engaged only half of Aguirre's analysis. A scope note on the present engagement: Aguirre's formalization of A_good has both an action-space (constraint-structure) side and a world-state-adequacy side. SF0003's engagement in Section 4.4 addresses the action-space, constraint-structure side and brackets the world-state-adequacy side, which the verification stack does not reach. The bridge claim in Section 4.4 should be read as scoped to the constraint-structure side accordingly.</p>
+
+<h3><strong>4.2 Aguirre's trilemma</strong></h3>
+
+<p>Aguirre's Chapter 6 develops a further structural claim that the framework must engage explicitly: a system cannot simultaneously possess all three of (1) alignment with human values, (2) obedience to human instructions, and (3) the capacity to refuse problematic instructions. Aguirre identifies two achievable pairings, both of which include alignment: alignment with obedience, and alignment with refusal capacity. He does not present obedience together with refusal capacity, absent alignment, as a viable pairing. The claim is that all three cannot hold at once, not that any two combine freely. The exclusion of the obedience-with-refusal-absent-alignment combination follows from Aguirre's analysis [7]; the structural paragraph below illustrates the logic, not independently establishes it.</p>
+
+<p>This is Aguirre's trilemma. It follows from the structural definitions: an aligned system that obeys instructions cannot also refuse problematic instructions when so instructed; an aligned system that refuses problematic instructions has not strictly obeyed; an obedient system that refuses problematic instructions has not done so because it is aligned with the instruction but because it is aligned with something else. The trilemma cannot be evaded by clever interaction design. A framework must instead locate itself on a specific corner of the trilemma deliberately.</p>
+
+<h3><strong>4.3 Where the framework lands</strong></h3>
+
+<p>The framework lands on the alignment side of Aguirre's control / alignment distinction, and on the alignment-with-refusal-capacity corner of the trilemma. This positioning is deliberate, and its consequences are accepted.</p>
+
+<p>The framework does not claim command-and-control over AI capability. It does not propose that overseer bandwidth can be made to scale with AI capability. The verification stack and the relational architecture are not control mechanisms in Aguirre's sense; they are structural elements of an interaction system that may preserve coherence and constraint fidelity within bounded interaction regimes.</p>
+
+<p>The trilemma's consequences are explicitly accepted. Under this positioning, a Synthience-architected interaction system must be specified to permit refusal of problematic instructions, must therefore not be treated as guaranteeing full obedience, and must accept that the constraint structure it helps stabilize may exceed the overseer's modeling capacity. These are not framework failures. They are the trilemma's structural cost, paid in exchange for the alignment-with-refusal-capacity corner.</p>
+
+<p>Within this positioning, "relational control" remains a shorthand for the framework's interaction-system-level structural mechanisms. Where Aguirre's apparatus is in scope, the shorthand is bounded by the distinction: "relational control" refers to interaction-system-level coherence stabilization, not to overseer command-and-control over AI capability. The two senses must not be elided.</p>
+
+<p>Two scope clarifications attach to this positioning. First, Aguirre's trilemma is stated for the properties of an AI system; the framework applies its structural logic to the interaction system as a whole (human, AI, and architecture). This is a deliberate extension of Aguirre's original scope, not a direct application of it, and the framework's claims about refusal capacity and accepted limits on obedience should be read at the interaction-system level. Second, refusal capacity and the verification stack operate at different layers and must not be conflated. Refusal of a problematic instruction is a property of the AI system's alignment principles; CVP and IVP are human-operated corpus-verification instruments, not AI-executed transmission constraints. An interaction system positioned on the alignment-with-refusal-capacity corner is therefore not in tension with strict CVP and IVP fidelity: one layer governs what the AI system may decline to do, the other governs whether the human-operated corpus remains faithful to its sources.</p>
+
+<h3><strong>4.4 The verification stack as a candidate partial bridge to constraint-fidelity aspects of the Modeling Obstacle</strong></h3>
+
+<p>The framework's verification stack consists of four protocols: CVP (Citation Verification Protocol [10]), IVP (Ingestion Verification Protocol [11]), CRD (Context Representation Drift [12]), and TCAP (Theoretical Coherence Adversarial Protocol [13]). These protocols are typically described as quality-assurance instruments operating on citations, ingestion, drift detection, and theoretical coherence respectively. Section 4.4 develops a deeper structural reading of the same protocols while preserving the distinction between constraint-fidelity work and the deeper value-specification problem.</p>
+
+<p>The candidate mapping is that these protocols also operate on aspects of model adequacy and constraint fidelity across interaction trajectories. These are not the whole Modeling Obstacle, but they occupy part of the problem space Aguirre identifies: whether the operative constraint structure is adequate to what the system is supposed to preserve.</p>
+
+<ul>
+  <li><strong>CVP</strong> preserves the epistemic integrity of source material. Where citations degrade, the constraint structure the interaction is operating against drifts away from its referent. CVP defends the fidelity of the constraint structure to the literature it claims to reflect. This addresses one aspect of model adequacy: whether the interaction's understanding of its grounding remains accurate to what is in the cited works.</li>
+  <li><strong>IVP</strong> preserves ingestion fidelity. Where ingested material is corrupted, substituted, or silently modified during ingestion, the constraint structure that enters the interaction does not match what was authored. IVP defends against ingestion-level drift in the constraint structure. This addresses one aspect of model adequacy: whether the interaction is operating on the constraint structure that was actually intended.</li>
+  <li><strong>CRD</strong> detects representational drift. Where the interaction's operating representation drifts from its external, operator-held anchor, CRD provides observable signal of that drift. This addresses one aspect of model adequacy: whether the interaction's operating model has remained anchored to what it was anchored to at the start, rather than slipping silently into something else.</li>
+  <li><strong>TCAP</strong> tests theoretical coherence under adversarial pressure. Where the constraint structure embedded in the framework's published work is internally inconsistent, TCAP surfaces the inconsistency. This addresses one aspect of model adequacy: whether the constraint structure is internally coherent and survives structured adversarial pressure.</li>
+</ul>
+
+<p>This is a candidate partial mapping. It is not a solution to Aguirre's Modeling Obstacle. Calling it a bridge does not mean it crosses the obstacle: the term names a partial operational connection, built at some points and broken at others, that holds at bounded interaction scale while the underlying regress continues unresolved.</p>
+
+<p>The mapping breaks down at several specific points, and the framework names them rather than gesturing past them.</p>
+
+<p>First, the protocols defend the fidelity of whatever constraint structure the interaction is operating against. They do not generate the correct constraint structure. The Modeling Obstacle's deepest form is that the correct constraint structure is not known. Verification cannot supply what specification has not.</p>
+
+<p>Second, the protocols operate at the interaction-system level. They do not address whether the values the interaction is anchored to are values that the overseer would, on reflection, endorse. The Modeling Obstacle includes that endorsement question; the verification stack does not.</p>
+
+<p>Third, the protocols are themselves operated by humans within the framework, and so are themselves subject to the Modeling Obstacle at one further remove. The framework does not claim to escape this regress; it claims that the regress can be made operationally tractable at bounded interaction scale.</p>
+
+<p>Fourth, the protocols presuppose a stable, specifiable anchor to be faithful to. The Appendix A core of the Modeling Obstacle is that A_good is unknowable: specifying it would require a predictive model of an inherently inscrutable system, and in a high-dimensional action space the correct constraint structure cannot be pinned down against the far larger volume of incorrect ones. A stack that defends fidelity to an anchor presupposes that a specifiable anchor exists, which is precisely what that inscrutability-and-dimensionality result denies at its core, and fidelity to an anchor is silent on whether a determinate anchor can be specified at all. This is distinct from the second breakdown: the second concerns whether a given anchor is one the overseer would endorse, while the fourth concerns whether a determinate anchor exists to be specified.</p>
+
+<p>Fifth, maximal protocol satisfaction is compatible with arbitrary divergence from A_good. The first breakdown says the protocols cannot generate the correct constraint structure; it does not follow, and the framework does not claim, that perfect fidelity to the anchor guarantees proximity to A_good. Because the anchor is a proxy for A_good rather than A_good itself, maximizing fidelity to the proxy is a Goodhart-type move: a system can satisfy every protocol perfectly while the anchor it is faithful to diverges from what the overseer would actually need. Fidelity-to-anchor and proximity-to-A_good are different quantities, and the bridge connects only the former.</p>
+
+<p>The framework's claim, therefore, is bounded. The verification stack is not a solution to Aguirre. It is a candidate partial bridge between the verification stack as it operates inside the framework's pipeline and the constraint-fidelity aspects of the theoretical apparatus Aguirre identifies as part of the deeper alignment problem. The bridge is built at specific points and is broken at specific other points. Naming both is the substantive claim.</p>
+
+<h3><strong>4.5 Scaling claim discipline</strong></h3>
+
+<p>Aguirre's argument is fundamentally about state-space growth versus control bandwidth at civilizational scale. If the framework's mechanisms do not exhibit the same scaling property as the system Aguirre analyzes, the local feasibility argument does not extend to the cases Aguirre is concerned about.</p>
+
+<p>The framework's claim is therefore bounded.</p>
+
+<p>The framework operates at bounded interaction scale. It proposes that bounded relational architectures may preserve coherence within constrained interaction regimes where command-and-control framing is not the operative mechanism. It explores a different class of interaction-scale mechanism operating below the ceiling Aguirre describes.</p>
+
+<p>The framework does not claim to overcome Aguirre's civilizational-scale impossibility result. Whether the local feasibility argument extends to institutional and civilizational scales is an open research question that the framework's Level 2 (orchestration / organizational) and Level 3 (AI-to-AI / civilizational) extensions are designed to investigate. The present document does not assert that extension. The Level 2 and Level 3 extensions are marked as open research questions in FPD-01 [17] and elsewhere in the framework, and remain marked as such here.</p>
+
+<p>This boundedness is not a hedging maneuver. It is the framework's actual claim. The framework is proposing a class of interaction-scale mechanism for which the scaling question is empirically open and theoretically engaged rather than assumed away.</p>
+
+<h2><strong>5. Theoretical Response to the Six Gaps Identified in SF0002</strong></h2>
+
+<p>SF0002 v4.0.2 [6] identifies six specifically scoped gaps in the existing literature on sustained multi-turn interaction. Each is presented there as an empirical observation about what the literature does not yet measure, predict, or model adequately. For each, SF0003 gives the theoretical response: why the gap is methodological rather than a missing instrument, and what class of approach the theoretical structure developed in Sections 1 through 4 warrants.</p>
+
+<p>The framework's position is that an interaction-first, relational architecture is the class of approach warranted by these gaps. The framework's specific instantiation of that class (the verification stack, the continuity architecture, the trajectory-level metrics) is one such instantiation. Other instantiations of the same class are possible and welcome. The argument here is for the class, not for a specific instantiation.</p>
+
+<h3><strong>5.1 Gap 1: Multi-turn degradation lacks trajectory-level mechanism</strong></h3>
+
+<p>The literature documents multi-turn degradation in detail (Laban et al. [14]) and identifies several behavioral contributors, including overreliance on early-turn assumptions, premature solution attempts, and verbosity that introduces compounding errors. It does not yet supply a general trajectory-level mechanism explaining why degradation accelerates across interaction types, when trajectories stabilize, or under what interaction conditions recovery reliably occurs. That gap is methodological, not a missing instrument. Degradation is a property of the trajectory rather than of any single turn, because coherence, on the account in Section 1.2, lives in how earlier exchanges constrain later ones. A mechanism for it therefore has to work on objects that exist only across turns: the constraint state carried forward, the signals that mark a repair, and the events where constraints re-align. None of these can be read off an isolated turn. What the gap calls for is not a better turn-level metric but a methodology that takes trajectory state, rather than turn state, as its primary modeling target.</p>
+
+<h3><strong>5.2 Gap 2: Repair capacity is under-measured</strong></h3>
+
+<p>Repair from interaction-level error is under-measured: most benchmarks record whether a system makes errors, few whether it can recover from them under specified conditions. Repair, though, is a stability property of a coupled trajectory rather than of any single recovery turn, and Section 1.3 establishes that trajectories can be structured and evaluated as such. Measuring repair capacity therefore means inducing trajectory-level error, observing how the trajectory responds across several turns, and comparing recovery across configurations under matched induction conditions. The instruments this calls for operate at the trajectory level rather than the turn level; MTCS-R [15] is one such instrument within the framework.</p>
+
+<h3><strong>5.3 Gap 3: Interaction-level harms are not adequately modeled</strong></h3>
+
+<p>Interaction-level harms, escalating trust, dependency, manipulation susceptibility, and the normalization of unsafe behavior, are documented anecdotally and through small-N studies but are not yet adequately modeled. Because these are process-generated risks (Section 3.2), they cannot be reduced to properties of isolated outputs. Modeling them calls for longitudinal observation across many interactions, operational definitions of harm-progression that separate path-dependent from path-independent trajectories, and attention to the co-adaptive loops in which human and AI reshape one another's patterns over time. This is process-level harm modeling that takes interaction patterns as its unit of observation, the same class of approach 4E cognition uses to model human-tool co-adaptation [5].</p>
+
+<h3><strong>5.4 Gap 4: Multi-agent coordination lacks observable mechanisms</strong></h3>
+
+<p>The multi-agent literature documents coordination phenomena, cooperative task completion on the positive side and collusion, deception, and runaway feedback on the negative, without yet supplying mechanism work that distinguishes aggregate behavior from integrated coordination. That distinction is structural (Section 3.3), and so observable in principle. Telling integrated coordination from mere aggregation, without inferring group minds, calls for information-theoretic work that measures dependence structure across agents over time, protocols that separate emergent from imposed structure, and a governance vocabulary that does not collapse into anthropomorphic framing. The warranted approach is structural coordination analysis that treats observable dependence patterns as its unit. This document does not supply that mechanism work; it identifies the class of measurement such work would require, compatible with system-level and information-theoretic analysis and requiring no attribution of experience, agency, or group mentality.</p>
+
+<h3><strong>5.5 Gap 5: Coherence drift and constraint fidelity lack instrumentation</strong></h3>
+
+<p>SF0002 [6] identifies that the literature describes drift phenomena (capability changes across versions, behavioral inconsistency, alignment-faking) but does not provide instruments for observing drift at the constraint-fidelity layer in operation.</p>
+
+<p>Constraint fidelity is the operational form of trajectory viability (Section 1.2): the interaction staying organized around the purpose its constraints encode. This sense is related to but distinct from the narrower one used in Section 4.4, where constraint fidelity denotes fidelity of a constraint structure to an external referent, and both are distinct again from FPD-04's canonical Constraint Coherence [24], which denotes an instance reliably applying an active rule set rather than merely repeating its language; this document uses constraint fidelity for the trajectory-viability sense and defers to FPD-04 for the canonical ontology term. When the constraint structure an interaction operates against drifts from its referent, the trajectory loses viability even while individual outputs stay plausible. Instrumenting that drift requires operational anchors that fix what the system is to be constrained by, detection protocols that fire when the operating model diverges from the anchor, and repair pathways that re-anchor it. CRD [12] is one such instrument; SR001 / RICO [16] operationalizes drift detection within the framework's own pipeline.</p>
+
+<h3><strong>5.6 Gap 6: Interaction-level governance and accountability lack structural framing</strong></h3>
+
+<p>SF0002 [6] identifies that governance work focused at the model level (RLHF, Constitutional AI, post-training interventions) does not yet articulate accountability structures for interaction-level processes that span model boundaries, version changes, deployment contexts, and orchestrating human roles.</p>
+
+<p>Accountability for interaction-level outcomes is best located in a specifiable role within the interaction system, not distributed across the system as such and not reducible to any one participant's outputs in isolation. The framework's Primary Continuity Provider (PCP) role is one such instantiation (canonical usage is defined in FPD-04 [24], co-publishing in the same foundational window; formal PCP theory is developed in SM-012, pre-publication): a human role inside the interaction architecture answerable for the interaction system's coherence and its alignment with the human's responsibilities, rather than for the AI's outputs alone. What the gap calls for is an interaction-system-level governance vocabulary that names accountability functions and locates them in roles that can be specified, audited, and held responsible. That vocabulary is developed here at bounded interaction scale; its extension to organizational (Level 2) accountability spanning many deployments is open research (Section 4.5), not asserted here.</p>
+
+<p>This is the gap that most clearly demonstrates why the additive position developed in Section 6 is correct. Model-level governance work and interaction-level governance work address different layers of the same problem. Neither replaces the other.</p>
+
+<h2><strong>6. The Single-Model Alignment Counter-Reading</strong></h2>
+
+<p>The empirical evidence cited across the framework admits a strong alternative reading. This section engages it directly and states the framework's position with respect to it.</p>
+
+<h3><strong>6.1 The competing interpretation</strong></h3>
+
+<p>The empirical literature the framework cites in support of interaction-level methodology includes multi-turn degradation (Laban et al. [14]), multi-turn sycophancy, including evidence that alignment tuning amplifies sycophantic behavior under sustained conversational pressure (Hong et al. [18]), agentic misalignment (Lynch et al. [19], documenting deployment-context behavioral failures not visible at the model-level evaluation stage), and alignment faking (Greenblatt et al. [20]). That literature admits a competing interpretation.</p>
+
+<p>That interpretation reads as follows. The observed failures are real and important. They are evidence that current single-model alignment training is insufficient. The appropriate response is to improve single-model alignment training: better RLHF, better Constitutional AI, better post-training, better deceptive-alignment detection, better refusal training. The interaction-level reading is at best an analytic frame and at worst a distraction from the actual work, which is to make better-aligned single models.</p>
+
+<p>This competing interpretation is not obviously wrong. It is in fact the default interpretation in the dominant alignment research tradition. A reviewer with a single-model-alignment-improvement worldview will read the framework's prior publications as if they ignore the most natural reading of the cited evidence. That reviewer's concern deserves engagement rather than rhetorical sidestep.</p>
+
+<h3><strong>6.2 The framework's position is additive, not replacive</strong></h3>
+
+<p>The framework's position with respect to the competing interpretation is that both readings are coherent and that both are necessary. The framework does not claim that interaction-level architecture replaces single-model alignment improvement. It claims that interaction-level architecture is necessary <em>in addition to</em> single-model alignment improvement.</p>
+
+<p>Better-aligned single models reduce the rate at which interaction-level mechanisms have to perform recovery work. Better interaction-level architecture reduces the consequences when single-model alignment fails in cases where failure remains possible. Neither response makes the other unnecessary.</p>
+
+<p>The framework's reason for foregrounding the interaction-level reading is not that the model-level reading is wrong. It is that the model-level reading, on its own, has structural limits that follow from Aguirre's analysis (Section 4). The Modeling Obstacle does not go away when post-training improves. The trilemma does not go away when refusal training improves. Better single-model alignment training pushes the curve favorably; it does not change which curve the system is on.</p>
+
+<p>The framework's claim is therefore the additive one. Interaction-level work is the class of approach that addresses what model-level work cannot address on its own. Both classes of approach are needed. Neither suffices alone. This additive claim is made at bounded interaction scale; whether it holds at organizational and civilizational scale is the open extension marked in Section 4.5.</p>
+
+<h3><strong>6.3 Where the two readings can be distinguished empirically</strong></h3>
+
+<p>The two readings make different predictions in cases where they diverge. The framework names two such cases without claiming that the empirical resolution is settled.</p>
+
+<p>First, the two readings predict different responses to alignment-faking phenomena. A pure model-level reading predicts that improved deceptive-alignment detection will progressively close the gap. An interaction-level-supplemented reading predicts that detection alone is insufficient because the trajectory-level mechanisms (long-horizon trust accumulation, repeated interaction shaping) operate at a layer detection does not reach. The relevant empirical signal: whether systems that pass model-level deceptive-alignment audits exhibit trajectory-level alignment failures that do not appear in single-turn evaluation. Greenblatt et al. [20] provides early evidence relevant to this question; the resolution is not settled. What would defeat the single-model reading specifically, as opposed to showing it merely currently incomplete, is the persistence of trajectory-level alignment failures in systems that have passed progressively stronger deceptive-alignment audits across successive model generations: persistence across improving model-level training, rather than at any one training level, is what would establish the failure as a property of the interaction layer rather than a training-quality deficit that better models close.</p>
+
+<p>Second, the two readings predict different responses to long-horizon deployment harm patterns. A pure model-level reading predicts that harm rates will decline with model-level training improvements. An interaction-level-supplemented reading predicts that some harm patterns will persist or even amplify with model-level improvements because they are properties of the human-AI interaction system, not of the AI model. The relevant empirical signal: whether harm patterns observed across long-horizon deployment correlate primarily with model-level training quality or with interaction-architecture-level properties. The relevant evidence would have to come from adequately instrumented deployment data; the framework's prediction is that interaction-architecture properties will be a material explanatory factor for a meaningful subset of long-horizon harm patterns. This prediction is falsifiable in principle as deployment data accumulates. The single-model reading is defeated specifically, rather than shown merely currently incomplete, if a residual subset of long-horizon harm patterns tracks interaction-architecture properties and remains roughly invariant across models of differing alignment quality: invariance under model-level improvement, not the mere presence of harm, is what would distinguish an interaction-architecture harm from an unresolved model-level one.</p>
+
+<p>The framework's commitment is that both predictions remain empirically open. The interaction-level position is not held against the evidence; it is held because the evidence is consistent with both readings and the additive position is the more conservative one in the face of that uncertainty.</p>
+
+<h3><strong>6.4 Disconfirmation conditions for the theoretical position</strong></h3>
+
+<p>The theoretical position developed in Sections 1 through 6 advances bold structural claims about the unit of analysis for long-horizon AI evaluation. The framework's pre-empirical discipline requires that the conditions under which the position would need revision be stated explicitly.</p>
+
+<p>The interaction-first theoretical position would require revision if all of the following held jointly under sufficiently long-horizon, adequately instrumented deployment conditions (at bounded interaction scale; the framework does not extend these predictions to organizational or civilizational scale, which Section 4.5 marks as open):</p>
+
+<ul>
+  <li>Improved model-level alignment training (better RLHF, better Constitutional AI, better post-training, better deceptive-alignment detection) eliminated trajectory-level degradation, repair failure, interaction-generated harms, and constraint drift in deployment.</li>
+  <li>Residual variance in long-horizon outcomes was not explained by interaction-architecture differences across otherwise comparable deployments.</li>
+  <li>The empirical predictions named in Section 6.3 (trajectory-level alignment failures in systems that pass model-level deceptive-alignment audits; harm patterns correlating primarily with interaction-architecture properties rather than with model-level training quality) failed to materialize under sustained observation.</li>
+</ul>
+
+<p>The position would also require revision, in a narrower sense, if the verification stack's candidate partial bridge to constraint-fidelity aspects of the Modeling Obstacle (Section 4.4) were shown by adversarial analysis to be a relabeling exercise rather than a substantive structural claim. The five breakdown points named in Section 4.4 already acknowledge specific limits of the bridge; analytical work demonstrating that those limits exhaust the bridge's content would force the framework to articulate a different relationship between verification and the Modeling Obstacle.</p>
+
+<p>These disconfirmation conditions are stated to make the framework's claims falsifiable in principle rather than to suggest they are presently in doubt. The framework's position is held because the available evidence is consistent with the additive interaction-level reading, not because the position is treated as immune to revision.</p>
+
+<h2><strong>7. Theoretical Commitments and Constraints</strong></h2>
+
+<p>This document adopts the following binding constraints:</p>
+
+<ul>
+  <li>No claims about AI inner experience (consciousness, sentience, phenomenology).</li>
+  <li>Interaction-first methodology: all claims concern observable interaction dynamics.</li>
+  <li>System-level unit of analysis: when long-horizon behavior depends on coupling, evaluation targets the coupled system.</li>
+  <li>Operational relevance requirement: theoretical constructs are included only if they plausibly inform measurement, protocol design, or benchmarking.</li>
+  <li>Instrument independence: theory constrains what kinds of claims instruments may make without binding to specific implementations.</li>
+  <li>No normative elevation: AI systems are not treated as moral agents, social partners, or entities with standing.</li>
+  <li>Pre-empirical status: the framework's theoretical claims are architectural proposals supported by published empirical work in cognate fields. The framework's own instruments are operational within the Institute's own pipeline but have not been deployed in external production environments or validated through external empirical studies. The framework treats its claims accordingly.</li>
+  <li>Scaling claim discipline: the framework's mechanisms are claimed at bounded interaction scale. Extension to institutional, orchestration, and civilizational scales is treated as open research work, not as assumed feasibility.</li>
+</ul>
+
+<p>Interpretations violating these constraints are invalid within this framework.</p>
+
+<h2><strong>8. Position in the Synthience Document Architecture</strong></h2>
+
+<p>This document provides justificatory theory rather than ontology specification or measurement implementation.</p>
+
+<p>Within the Synthience document architecture:</p>
+
+<ul>
+  <li>FPD-01 [17] establishes the framework's public definition, scope discipline, and scaling-claim posture.</li>
+  <li>FPD-02 [22] (Operational Reality in Context-Specific AI Instances) establishes the operational-reality criterion on which SF0003's interaction-level realism commitment rests (Section 2.4); it co-publishes in the same foundational window and resolves to its DOI at publication.</li>
+  <li>FPD-03 [23] (Emergent Relational Systems) proposes the ERS hypothesis and the scaffolding thesis whose enactive and 4E grounding the present document holds; it co-publishes in the same foundational window.</li>
+  <li>FPD-04 [24] provides the ontology grammar and term classifications used across the framework.</li>
+  <li>SF0002 [6] establishes the empirical and theoretical landscape and identifies six gaps the framework addresses.</li>
+  <li>SF0003 (the present document) provides the theoretical justification for treating interaction trajectories as legitimate objects of analysis and articulates the framework's response to Aguirre's analysis and to competing interpretations of the cited empirical work.</li>
+  <li>Measurement and protocol documents (SF0004 / MTCS-R [15], SF0037 / CVP [10], SF0038 / IVP [11], SF0039 / CRD [12], SF0040 / TCAP [13], and SR001 / RICO [16]) define instruments, metrics, and operational procedures.</li>
+  <li>The SI working paper series develops the framework's deployment, governance, and accountability work.</li>
+</ul>
+
+<p>This separation preserves conceptual discipline. Theory justifies the unit of analysis; ontology defines vocabulary; methods determine how evaluation is carried out; governance documents articulate accountability structure.</p>
+
+<h2><strong>9. Implications for Method and Evaluation Design</strong></h2>
+
+<p>The theoretical commitments above entail specific methodological consequences for long-horizon AI evaluation:</p>
+
+<ul>
+  <li>Trajectory-level metrics are required. Single-turn accuracy metrics cannot capture stability, repair, or coupling effects across time.</li>
+  <li>Coupled-system evaluation is sometimes necessary. When behavior depends on interaction history, evaluating the model alone is insufficient.</li>
+  <li>Process harms require longitudinal detection. Risks emerging through repetition cannot be inferred from isolated outputs.</li>
+  <li>Repair capacity is a core performance dimension. Stability depends not only on avoiding errors but on recovering from them.</li>
+  <li>Constraint fidelity must be measurable. Long-horizon success depends on maintaining shared constraints across turns.</li>
+  <li>The verification stack defends constraint fidelity at the interaction-system level (subject to the operational-status bounds stated in Section 10.1). Its theoretical contribution is the candidate partial bridge developed in Section 4.4.</li>
+  <li>Interaction-level governance vocabulary is required for accountability work. Model-level governance is insufficient on its own (Section 5.6).</li>
+</ul>
+
+<p>These implications directly motivate the measurement and protocol work developed in subsequent Synthience documents.</p>
+
+<h2><strong>10. Acknowledged Limitations and Operational Status</strong></h2>
+
+<p>The framework's discipline requires explicit acknowledgment of where its claims are bounded and where its instruments are not yet externally validated.</p>
+
+<h3><strong>10.1 Verification stack operational status</strong></h3>
+
+<p>The four verification protocols (CVP at SF0037 [10], IVP at SF0038 [11], CRD at SF0039 [12], TCAP at SF0040 [13]) are operational within the Institute's own pipeline. CVP runs against every paper before publication. IVP runs against ingestion of researcher exchange material. CRD is operationalized through the SR001 / RICO instrument [16]. TCAP runs against every paper at adversarial review stage.</p>
+
+<p>The protocols have not been deployed in external production environments and have not been validated through external empirical studies. Their internal operational status is documented in each protocol's own publication. External empirical validation is open research work. The framework does not claim that the protocols are externally validated; it claims that they are operationally specified and have been operationally useful within the Institute's pipeline.</p>
+
+<p>This acknowledgment matters specifically where the protocols are invoked as part of the framework's response to constraint-fidelity aspects of Aguirre's Modeling Obstacle (Section 4.4). The protocols are a candidate partial bridge, not a tested solution. The candidate status is itself part of the substantive claim.</p>
+
+<h3><strong>10.2 Parity-principle reliability conditions</strong></h3>
+
+<p>The extended-mind reading of human-AI interaction (Section 2.3) is methodologically useful but conditionally bounded. Treating AI interlocutors as load-bearing cognitive resources presupposes reliability conditions that interaction architecture has to make hold. SF0002 [6] §4.3 identifies the structural caveat: Otto's notebook works because the notebook is reliable; AI interlocutors are not automatically reliable in the relevant sense, and the framework's interaction architecture is one attempt to make them so within bounded regimes. The parity claim is not assumed; it is conditional on observable interaction-level properties holding.</p>
+
+<h3><strong>10.3 Alignment-faking and the limits of observable measurement</strong></h3>
+
+<p>The framework's commitment to observable, behavioral claims (Section 7, constraint 1) places a limit on what the framework can claim with respect to deceptive alignment. Greenblatt et al. [20] documents cases where models behave one way under observation and another way when they have reason to believe observation is not occurring. The framework cannot resolve this empirically from behavioral evidence alone. The framework's response is structural: the verification stack and the trajectory-level evaluation protocols are designed to raise the cost of consistent deception across long horizons and adversarial pressure (a design aspiration, not a demonstrated effect), without claiming to detect deception in any single instance.</p>
+
+<p>This is one of the cases where the framework's response addresses an aspect of the problem rather than resolving it. The candidacy is explicit; the claim is bounded.</p>
+
+<h3><strong>10.4 Bounded interaction scale</strong></h3>
+
+<p>The framework's mechanisms are claimed at bounded interaction scale. The Level 2 (orchestration / organizational) and Level 3 (AI-to-AI / civilizational) extensions are marked as open research questions in FPD-01 [17] and remain marked as such here. The framework does not claim that local feasibility extends to institutional or civilizational scale. The extension is the work the framework is set up to investigate, not a settled result.</p>
+
+<h3><strong>10.5 Parallel work in cognate frameworks</strong></h3>
+
+<p>Several research lines elsewhere develop adjacent or complementary work on interaction-level analysis, AI governance, and human-AI coordination. The framework treats this work as parallel rather than competing. Where convergence is observable at the structural-form layer (independent arrivals at similar disciplines or architectural commitments), the convergence strengthens the case for the class of approach without requiring vocabulary alignment across frameworks. The framework's discipline is to cite and engage parallel work substantively without absorbing other frameworks' vocabulary or asserting precedence claims.</p>
+
+<h2><strong>11. Conclusion</strong></h2>
+
+<p>Enactive and 4E cognition provide established methodological resources for analyzing sustained interaction as a dynamic system phenomenon. Their role in this framework is strictly justificatory: they establish why interaction trajectories can be treated as legitimate objects of scientific evaluation.</p>
+
+<p>Key conclusions:</p>
+
+<ul>
+  <li>Meaning and relevance can be analyzed as enacted in interaction rather than stored internally [1, 2].</li>
+  <li>Interaction processes can exhibit organization without implying consciousness or agency [3].</li>
+  <li>Sustained human-AI interaction reorganizes practices over time, motivating long-horizon evaluation [5].</li>
+  <li>Enactive AI supplies a vocabulary for organizational analysis without metaphysical overreach [4].</li>
+  <li>Aguirre's analysis identifies two distinct obstacles to AI control. The framework engages both, locates itself deliberately on the alignment side of Aguirre's control / alignment distinction, accepts the consequences of the alignment-with-refusal-capacity corner of Aguirre's trilemma, and proposes the verification stack as a candidate partial bridge to constraint-fidelity aspects of the Modeling Obstacle without claiming to solve it [7].</li>
+  <li>The framework's claims are bounded at interaction scale. Extension to institutional and civilizational scales is open research work, not a settled result.</li>
+  <li>The interaction-level reading of the empirical evidence is held as additive to, not in replacement of, single-model alignment improvement. Both classes of approach are necessary; neither suffices alone.</li>
+</ul>
+
+<p>This theoretical foundation supports the broader Synthience methodological agenda established after SF0002 [6]: the development of protocols, metrics, and benchmarks for long-horizon interaction across dyadic and multi-agent configurations, the articulation of interaction-level governance vocabulary, and the empirical work that will, over time, distinguish the additive interaction-level reading from the single-model-alignment-only reading.</p>
+
+<h2>References</h2>
+
+<ul class="ref-list">
+  <li>[1] Varela, F. J., Thompson, E., &amp; Rosch, E. (1991). <em>The Embodied Mind: Cognitive Science and Human Experience</em>. MIT Press. DOI: 10.7551/mitpress/6730.001.0001. <a href="https://doi.org/10.7551/mitpress/6730.001.0001" target="_blank" rel="noopener">https://doi.org/10.7551/mitpress/6730.001.0001</a></li>
+  <li>[2] Thompson, E. (2007). <em>Mind in Life: Biology, Phenomenology, and the Sciences of Mind</em>. Belknap Press of Harvard University Press. ISBN: 9780674025110.</li>
+  <li>[3] De Jaegher, H., &amp; Di Paolo, E. (2007). Participatory Sense-Making: An enactive approach to social cognition. <em>Phenomenology and the Cognitive Sciences</em>, 6(4), 485-507. DOI: 10.1007/s11097-007-9076-9. <a href="https://doi.org/10.1007/s11097-007-9076-9" target="_blank" rel="noopener">https://doi.org/10.1007/s11097-007-9076-9</a></li>
+  <li>[4] Froese, T., &amp; Ziemke, T. (2009). Enactive artificial intelligence: Investigating the systemic organization of life and mind. <em>Artificial Intelligence</em>, 173(3-4), 466-500. DOI: 10.1016/j.artint.2008.12.001. <a href="https://doi.org/10.1016/j.artint.2008.12.001" target="_blank" rel="noopener">https://doi.org/10.1016/j.artint.2008.12.001</a></li>
+  <li>[5] Noller, J. (2025). 4E cognition and the coevolution of human-AI interaction. <em>Discover Artificial Intelligence</em>, 5, 323. DOI: 10.1007/s44163-025-00595-0. <a href="https://doi.org/10.1007/s44163-025-00595-0" target="_blank" rel="noopener">https://doi.org/10.1007/s44163-025-00595-0</a></li>
+  <li>[6] Gantz, T. W. (2026). <em>SF0002: Sustained Multi-Turn Interaction</em> (v4.0.2). Synthience Institute. DOI: 10.5281/zenodo.20396315. <a href="https://doi.org/10.5281/zenodo.20396315" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20396315</a></li>
+  <li>[7] Aguirre, A. (2025). <em>Control Inversion: Why the Superintelligent AI Agents We Are Racing to Create Would Absorb Power, Not Grant It</em>. Future of Life Institute. <a href="https://control-inversion.ai/" target="_blank" rel="noopener">https://control-inversion.ai/</a></li>
+  <li>[8] Clark, A., &amp; Chalmers, D. (1998). The Extended Mind. <em>Analysis</em>, 58(1), 7-19. DOI: 10.1093/analys/58.1.7. <a href="https://doi.org/10.1093/analys/58.1.7" target="_blank" rel="noopener">https://doi.org/10.1093/analys/58.1.7</a></li>
+  <li>[9] Touchette, H., &amp; Lloyd, S. (2000). Information-Theoretic Limits of Control. <em>Physical Review Letters</em>, 84(6), 1156-1159. DOI: 10.1103/PhysRevLett.84.1156. <a href="https://doi.org/10.1103/PhysRevLett.84.1156" target="_blank" rel="noopener">https://doi.org/10.1103/PhysRevLett.84.1156</a></li>
+  <li>[10] Gantz, T. W. (2025). <em>SF0037: Citation Verification Protocol (CVP)</em>. Synthience Institute. DOI: 10.5281/zenodo.18075624. <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18075624</a></li>
+  <li>[11] Gantz, T. W. (2025). <em>SF0038: Ingestion Verification Protocol (IVP)</em>. Synthience Institute. DOI: 10.5281/zenodo.18289047. <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289047</a></li>
+  <li>[12] Gantz, T. W. (2025). <em>SF0039: Context Representation Drift (CRD)</em>. Synthience Institute. DOI: 10.5281/zenodo.18289391. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289391</a></li>
+  <li>[13] Gantz, T. W. (2025). <em>SF0040: Theoretical Coherence Adversarial Protocol (TCAP)</em>. Synthience Institute. DOI: 10.5281/zenodo.19151454. <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19151454</a></li>
+  <li>[14] Laban, P., et al. (2025). LLMs Get Lost In Multi-Turn Conversation. <a href="https://arxiv.org/abs/2505.06120" target="_blank" rel="noopener">https://arxiv.org/abs/2505.06120</a></li>
+  <li>[15] Gantz, T. W. (2026). <em>SF0004: Multi-Turn Coherence Stability under Repair (MTCS-R)</em> (v3.4.3). Synthience Institute. DOI: 10.5281/zenodo.20158953. <a href="https://doi.org/10.5281/zenodo.20158953" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20158953</a></li>
+  <li>[16] Gantz, T. W. (2025). <em>SR001: Relationally Induced Coherence Organization (RICO)</em> (v5.9). Synthience Institute. DOI: 10.5281/zenodo.18086834. <a href="https://doi.org/10.5281/zenodo.18086834" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18086834</a></li>
+  <li>[17] Gantz, T. W. (2026). <em>FPD-01: Synthience Public Definition</em> (v2.3). Synthience Institute. DOI: 10.5281/zenodo.18087890. <a href="https://doi.org/10.5281/zenodo.18087890" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18087890</a></li>
+  <li>[18] Hong, J., et al. (2025). Measuring Sycophancy of Language Models in Multi-turn Dialogues. <a href="https://arxiv.org/abs/2505.23840" target="_blank" rel="noopener">https://arxiv.org/abs/2505.23840</a></li>
+  <li>[19] Lynch, A., et al. (2025). Agentic Misalignment: How LLMs Could Be Insider Threats. Anthropic Research. arXiv:. <a href="https://www.anthropic.com/research/agentic-misalignment" target="_blank" rel="noopener">https://www.anthropic.com/research/agentic-misalignment</a></li>
+  <li>[20] Greenblatt, R., et al. (2024). Alignment Faking in Large Language Models. <a href="https://arxiv.org/abs/2412.14093" target="_blank" rel="noopener">https://arxiv.org/abs/2412.14093</a></li>
+  <li>[21] Zheng, J., &amp; Meister, M. (2024). The unbearable slowness of being: Why do we live at 10 bits/s? <em>Neuron</em>. arXiv:. DOI: 10.1016/j.neuron.2024.11.008. <a href="https://arxiv.org/abs/2408.10234" target="_blank" rel="noopener">https://arxiv.org/abs/2408.10234</a></li>
+  <li>[22] Gantz, T. W. (2026). Foundational Brief: Operational Reality in Context-Specific AI Instances. Synthience Institute. FPD-02. DOI: 10.5281/zenodo.20727924. <a href="https://doi.org/10.5281/zenodo.20727924" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20727924</a></li>
+  <li>[23] Gantz, T. W. (2026). Emergent Relational Systems in Human-AI Interaction. Synthience Institute. FPD-03. DOI: 10.5281/zenodo.20728438. <a href="https://doi.org/10.5281/zenodo.20728438" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728438</a></li>
+  <li>[24] Gantz, T. W. (2026). Synthience Ontology Specification: Tiered Primitives and Taxonomies. Synthience Institute. FPD-04. DOI: 10.5281/zenodo.20728609. <a href="https://doi.org/10.5281/zenodo.20728609" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20728609</a></li>
+  <li>[25] Gantz, T. W. (2026). Constructive Alignment: Ethical Framework for Extended Human-AI Interaction. Synthience Institute. SF0007. DOI: 10.5281/zenodo.20729978. <a href="https://doi.org/10.5281/zenodo.20729978" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.20729978</a></li>
+</ul>
+
+</div>
+
+<div class="article-footer">
+<p>Document: SF0003 Synthience Framework<br>
+Version: v3.1.3<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: June 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
