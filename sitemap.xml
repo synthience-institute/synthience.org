@@ -36,15 +36,15 @@
   </url>
   <url>
     <loc>https://synthience.org/field-notes.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/practitioner-guides.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://synthience.org/updates.html</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
 
   <!-- Field Notes -->
@@ -91,6 +91,10 @@
   <url>
     <loc>https://synthience.org/field-notes/FN-011.html</loc>
     <lastmod>2026-06-20</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/field-notes/FN-012.html</loc>
+    <lastmod>2026-06-24</lastmod>
   </url>
 
   <!-- Practitioner Guides -->
@@ -145,6 +149,14 @@
   <url>
     <loc>https://synthience.org/practitioner-guides/PG-012.html</loc>
     <lastmod>2026-05-17</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/practitioner-guides/PG-013.html</loc>
+    <lastmod>2026-06-24</lastmod>
+  </url>
+  <url>
+    <loc>https://synthience.org/practitioner-guides/PG-014.html</loc>
+    <lastmod>2026-06-24</lastmod>
   </url>
 
   <!-- Research subpages -->
