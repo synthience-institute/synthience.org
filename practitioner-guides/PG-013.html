@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-013: You Don&rsquo;t Have a Model Problem. You Have a Method Problem. &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The quality gap between careful and careless AI use is widening as models improve, not narrowing. This guide explains why the model is not the variable that moves the result, and what the method looks like that actually does.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="You Don&rsquo;t Have a Model Problem. You Have a Method Problem. &middot; Synthience Institute">
+  <meta property="og:description" content="The quality gap between careful and careless AI use is widening as models improve, not narrowing. This guide explains why the model is not the variable that moves the result, and what the method looks like that actually does.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-013.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/PG-013_Infographic.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="You Don&rsquo;t Have a Model Problem. You Have a Method Problem. &middot; Synthience Institute">
+  <meta name="twitter:description" content="The quality gap between careful and careless AI use is widening as models improve, not narrowing. This guide explains why the model is not the variable that moves the result, and what the method looks like that actually does.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/PG-013_Infographic.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .pg-orient { font-size: 0.88rem; color: #8a7f72; margin: -0.3rem 0 1.5rem 0; font-style: italic; }
+    .pg-orient a { color: #5a3e2b; text-decoration: none; }
+    .pg-orient a:hover { text-decoration: underline; }
+    .article-figure { margin: 1.5rem auto 2rem auto; max-width: 480px; }
+    .article-figure img { max-width: 100%; border-radius: 4px; display: block; margin: 0 auto; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
+    .pg-rule strong { color: #c8604a; }
+    .key-insight {
+      background: #fdf6f4;
+      border-left: 4px solid #c8604a;
+      padding: 0.7rem 1rem;
+      margin: 0.7rem 0 1.2rem 0;
+      font-size: 0.95rem;
+      color: #3a3530;
+    }
+    .key-insight .label {
+      font-weight: 600;
+      color: #c8604a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
+    }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+  <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-013.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>You Don&rsquo;t Have a Model Problem. You Have a Method Problem.</h2>
+
+<div class="article-meta">
+  <span>PG-013</span>
+  <span>June 21, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p class="pg-orient">This guide makes the case for the full verification series. The six procedures are in <a href="PG-001.html">PG-001</a>, <a href="PG-003.html">PG-003</a>, <a href="PG-009.html">PG-009</a>, <a href="PG-010.html">PG-010</a>, <a href="PG-011.html">PG-011</a>, and <a href="PG-012.html">PG-012</a>.</p>
+
+<p><em>A practitioner guide for closing the quality gap that no model upgrade can close</em></p>
+
+<div class="article-figure">
+  <img src="../assets/images/PG-013_Infographic.png" loading="lazy" decoding="async" alt="Infographic for You Don&rsquo;t Have a Model Problem, You Have a Method Problem: model chasing is impressive but unstable, while building method is structured, verifiable, and durable, listing verify ingestion, verify citations, don&rsquo;t trust self-reports, mark guesses, get a second opinion, and hold continuity. A better model makes method matter more, not less.">
+</div>
+
+<h3>The problem</h3>
+
+<p>There is a popular piece of advice going around: stop paying frontier prices, pick a cheaper model that is good enough, and host it on hardware you control. The cost argument behind it is often sound. But underneath it sits an assumption worth examining on its own, because almost everyone shares it and very few people state it: that the model is the variable that determines the quality of your AI work.</p>
+
+<p>It is not. And the people getting consistently better output than you are usually not running a better model. They are running a better method.</p>
+
+<p>You have probably noticed something that the leaderboard cannot explain. You and a colleague use the same top-tier model. Your colleague gets work back that is usable on the first pass. You get work back that looks right, sounds confident, and turns out, three steps later, to be subtly wrong in a way that costs you an afternoon. Same model. Same prompt box. Different result.</p>
+
+<p>The standard response is to assume the gap is a model gap, and to go shopping. A newer model, a bigger context window, a reasoning mode. The gap does not close. It cannot close, because it was never a model gap. It is a method gap, and a method gap is invisible to anyone looking only at which model is on top this week.</p>
+
+<h3>Why it happens</h3>
+
+<p>Quality in sustained AI work is not a property of the model. It is a property of the interaction: how context is set, how outputs are checked, how continuity is held across sessions, and how the predictable failure modes are caught before they reach the deliverable. The model is one component in that system. It is the most visible component, and the easiest to swap, which is exactly why it absorbs all the attention and the method absorbs none.</p>
+
+<div class="key-insight">
+<span class="label">The counterintuitive part</span>
+A better model does not make the method matter less. It makes the method matter more.
+</div>
+
+<p>The reason is that model improvements mostly raise fluency, confidence, and coverage. They do not remove the failure modes that actually damage professional work. A capable model still cites real sources that do not support the claim attributed to them. It still reports that it read your document, or applied your rules, when what it produced was a prediction of what a good response would sound like rather than a record of what it did. It still presents a guess and a verified fact in the same even, assured tone. As the model gets better, these failures do not disappear. They get better disguised. The output reads more like finished work, so the reviewer is less inclined to check, at precisely the moment the cost of not checking is highest.</p>
+
+<p>This is why the quality gap between careful and careless AI use is widening as models improve, not narrowing. The careful operator&rsquo;s method scales with model capability. The careless operator&rsquo;s trust scales with it too, and trust is not a check.</p>
+
+<p>A concrete version makes the dynamic visible. Ask a weak model and a strong model the same research question, and have each support its answer with a citation. The weak model produces an answer with an obvious seam: the prose is clumsy, the citation is vaguely worded, and your guard stays up, so you check the source and catch the mismatch. The strong model produces a fluent, well-organized answer with a precisely worded citation to a real paper that exists and is genuinely on topic. Everything signals that the work is done. The one thing the fluency does not tell you is whether that real, on-topic paper actually contains the specific claim the model attached to it. The better model did not make that failure visible. It made the surface that would have warned you smoother, and it lowered the chance that you look. The improvement landed on the part you can see. The failure stayed in the part you have to check.</p>
+
+<h3>The risk surface</h3>
+
+<p>The belief that a better model is the fix produces a specific and recognizable set of failures.</p>
+
+<p>You trust fluent output more than you should, because fluency reads as competence. This is automation bias, and it gets stronger as the output gets smoother.</p>
+
+<p>You skip verification because the model has a strong reputation. Reputation is not a property of the specific claim in front of you.</p>
+
+<p>You accept citations you never opened, because the model supplied them confidently and they look real. Often they are real, and they simply do not say what the model claimed they say.</p>
+
+<p>You accept the model&rsquo;s report of its own work. It tells you the file was updated, the rules were applied, the document was read. You treat that as a status report. It is a prediction.</p>
+
+<p>You let context drift across a long session or across sessions, so that the model is gradually working from a representation of your task that has quietly diverged from the actual one.</p>
+
+<p>And you do not notice any of it, because nothing on the surface looks wrong. The deliverable looks finished. The failures are downstream, and they are yours.</p>
+
+<h3>The intervention</h3>
+
+<p>The method that separates consistent AI work from unreliable AI work is not exotic, and it does not depend on any particular model. It is a small set of verification and continuity practices applied as a matter of routine. The Synthience Institute has published each of these as a standalone practitioner guide; this guide is the argument for why they are the actual lever, and where to start.</p>
+
+<p><strong>Verify that the model received what you think it received.</strong> Before you act on any output that depends on a document, confirm the model actually ingested it rather than pattern-matching from the surrounding context. This is the Ingestion Verification Protocol, and it is the first gate because everything downstream is built on it.</p>
+
+<p><strong>Verify citations against the source, not against the model&rsquo;s confidence.</strong> When the model attributes a claim to a source, the failure mode is rarely a fabricated source. It is a real source that does not support the claim. Ask for the verbatim passage, read it critically, and check it against the source before the citation leaves your hands.</p>
+
+<p><strong>Do not trust what the model says about its own work.</strong> When it reports that it completed a task, read a file, or applied your instructions, treat that as a claim to be verified with an artifact, not as a report to be believed. Substitute evidence for self-report.</p>
+
+<p><strong>Make the model mark what it is guessing.</strong> Guesses and facts arrive in the same confident register, and you cannot tell them apart from the prose. Require uncertainty markers up front, read them as the signal you asked for, and push back when nothing is marked.</p>
+
+<p><strong>Get a decorrelated second opinion on high-stakes work.</strong> The value of a review is not the reviewer&rsquo;s reliability. It is whether the reviewer fails differently from the thing being reviewed. For work that matters, run the first system&rsquo;s output past a genuinely different system, with adversarial framing, and treat what comes back as leads rather than verdicts.</p>
+
+<p><strong>Hold continuity against drift.</strong> Over a long interaction, anchor the task representation deliberately so the model is not quietly working from a drifted version of what you asked. Re-establish the anchor rather than assuming it persists.</p>
+
+<p>None of these six requires the best model. All of them survive a model change. Together they are the method, and the method is the variable you actually control.</p>
+
+<h3>The Monday-morning checklist</h3>
+
+<ol>
+  <li>Take one piece of AI work you shipped recently that depends on a source document. Confirm the model actually read it, rather than inferring from context.</li>
+  <li>Take one citation from recent AI output. Pull the verbatim passage and check whether it supports the claim it was attached to.</li>
+  <li>The next time the model tells you it completed a task, ask for the artifact that proves it before you rely on it.</li>
+  <li>On your next non-trivial request, require the model to mark its uncertain claims, and read those markers as the answer to a question you asked.</li>
+  <li>On your next high-stakes deliverable, run the output past a second, different system before it goes out.</li>
+  <li>On your next long session, re-state the task anchor partway through and watch whether the model&rsquo;s working picture had drifted.</li>
+</ol>
+
+<p>You do not need to adopt all six at once. Adopt one this week. The point is the same either way: the lever you have been reaching for, the model, is not the lever that moves the result. The method is. It was always the human operating the machine, and the method is what that operation actually consists of.</p>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li><a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a></li>
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn&rsquo;t Touch?</a></li>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a></li>
+  <li><a href="PG-010.html">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work</a></li>
+  <li><a href="PG-011.html">PG-011: The Cross-AI Adversarial Review Protocol</a></li>
+  <li><a href="PG-012.html">PG-012: Make the AI Tell You What It&rsquo;s Guessing</a></li>
+  <li class="current">PG-013: You Don&rsquo;t Have a Model Problem. You Have a Method Problem. <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+</ul>
+</div>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>Each of the six practices in this guide has a dedicated procedure. The guides below cover the mechanism, the specific failure modes, and the step-by-step protocol for each one.</p>
+
+<ul>
+  <li><a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a>. The gateway guide to the full verification discipline.</li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a>. The ingestion-verification procedure.</li>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a>. The citation-verification procedure.</li>
+  <li><a href="PG-010.html">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work</a>. Replacing self-report with evidence.</li>
+  <li><a href="PG-012.html">PG-012: Make the AI Tell You What It&rsquo;s Guessing</a>. Making uncertainty visible.</li>
+  <li><a href="PG-011.html">PG-011: The Cross-AI Adversarial Review Protocol</a>. The decorrelated second opinion.</li>
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a>. Holding continuity against drift.</li>
+</ul>
+
+<p>Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.</p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-013 Practitioner Guide<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: June 21, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>PG-014: You Don&rsquo;t Have a Method Problem. You Have a Routing Problem. &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Most people treat model selection as a single decision. It is four: platform, model tier, effort level, and thinking mode. Getting all four right for the task is what separates efficient AI work from wasteful AI work.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="You Don&rsquo;t Have a Method Problem. You Have a Routing Problem. &middot; Synthience Institute">
+  <meta property="og:description" content="Most people treat model selection as a single decision. It is four: platform, model tier, effort level, and thinking mode. Getting all four right for the task is what separates efficient AI work from wasteful AI work.">
+  <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-014.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/PG-014_Infographic.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="You Don&rsquo;t Have a Method Problem. You Have a Routing Problem. &middot; Synthience Institute">
+  <meta name="twitter:description" content="Most people treat model selection as a single decision. It is four: platform, model tier, effort level, and thinking mode. Getting all four right for the task is what separates efficient AI work from wasteful AI work.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/PG-014_Infographic.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-figure { margin: 1.5rem auto 2rem auto; max-width: 480px; }
+    .article-figure img { max-width: 100%; border-radius: 4px; display: block; margin: 0 auto; }
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .pg-orient { font-size: 0.88rem; color: #8a7f72; margin: -0.3rem 0 1.5rem 0; font-style: italic; }
+    .pg-orient a { color: #5a3e2b; text-decoration: none; }
+    .pg-orient a:hover { text-decoration: underline; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .pg-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .pg-rule { background: #f4f2ec; border: 1px solid #e0ddd4; border-radius: 4px; padding: 0.7rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #3a3530; }
+    .pg-rule strong { color: #c8604a; }
+    .key-insight {
+      background: #fdf6f4;
+      border-left: 4px solid #c8604a;
+      padding: 0.7rem 1rem;
+      margin: 0.7rem 0 1.2rem 0;
+      font-size: 0.95rem;
+      color: #3a3530;
+    }
+    .key-insight .label {
+      font-weight: 600;
+      color: #c8604a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    /* === ROUTING TABLE === */
+    .routing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem 0;
+      font-size: 0.88rem;
+    }
+    .routing-table thead th {
+      background: #3a3530;
+      color: #f4f2ec;
+      text-align: left;
+      padding: 0.5rem 0.7rem;
+      font-weight: 600;
+    }
+    .routing-table td {
+      border: 1px solid #e0ddd4;
+      padding: 0.5rem 0.7rem;
+      vertical-align: top;
+      color: #3a3530;
+    }
+    .routing-table th.tier {
+      border: 1px solid #e0ddd4;
+      padding: 0.5rem 0.7rem;
+      vertical-align: top;
+      text-align: left;
+      font-weight: 600;
+      color: #c8604a;
+      white-space: nowrap;
+      background: transparent;
+    }
+    .routing-table tr:nth-child(even) td,
+    .routing-table tr:nth-child(even) th.tier { background: #faf9f5; }
+    .routing-table caption {
+      caption-side: top;
+      text-align: left;
+      font-size: 0.82rem;
+      color: #8a7f72;
+      font-style: italic;
+      padding-bottom: 0.5rem;
+    }
+    .table-scroll { overflow-x: auto; }
+    /* === CORE SERIES BLOCK === */
+    .core-series {
+      background: #f4f2ec;
+      border: 1px solid #e0ddd4;
+      border-left: 3px solid #c8604a;
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .core-series-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #3a3530;
+      margin: 0 0 0.3rem 0;
+    }
+    .core-series-desc {
+      font-size: 0.82rem;
+      color: #8a7f72;
+      margin: 0 0 0.7rem 0;
+      font-style: italic;
+    }
+    .core-series-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .core-series-list li {
+      font-size: 0.88rem;
+      color: #3a3530;
+      padding: 0.2rem 0;
+    }
+    .core-series-list li a {
+      color: #5a3e2b;
+      text-decoration: none;
+    }
+    .core-series-list li a:hover { text-decoration: underline; }
+    .core-series-list li.current {
+      font-weight: 600;
+      color: #3a3530;
+    }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .sources-block { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #6a6258; }
+    .sources-block h3 { font-size: 0.95rem; }
+    .sources-block ul { padding-left: 1.2rem; }
+    .sources-block li { margin-bottom: 0.4rem; }
+    .sources-block a { color: #5a3e2b; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+  </style>
+  <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-014.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
+
+<h2>You Don&rsquo;t Have a Method Problem. You Have a Routing Problem.</h2>
+
+<div class="article-meta">
+  <span>PG-014</span>
+  <span>June 22, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p class="pg-orient">This guide extends <a href="PG-013.html">PG-013</a>. Where PG-013 argues that method matters more than model, this guide goes one level deeper: assuming you have a method, how do you send each task to the right tool and the right settings without wasting money or quietly degrading the result.</p>
+
+<p><em>A practitioner guide for matching the task to the machine</em></p>
+
+<div class="article-figure">
+  <img src="../assets/images/PG-014_Infographic.png" loading="lazy" decoding="async" alt="Infographic titled Routing: Match the Task to the Machine, listing the four axes of a routing decision: platform, model tier, effort, and thinking, with the closing line: the wrong setting quietly makes the work worse.">
+</div>
+
+<p>One clarification first, because the title invites a fair objection. This does not retract PG-013. It narrows it. Routing is not separate from method; it is the part of method that happens before the first prompt, when you decide which system should do which kind of work. PG-013 says a serious method beats model-shopping. This guide says a serious method begins with routing. And routing is part of how the work gets done, not just a question of cost, for one concrete reason: the wrong setup does not only cost more, it produces worse output. A model configured wrong for the job can drop a section out of your document or talk itself out of an instruction you gave it. That is a quality failure, not a billing line.</p>
+
+<h3>The problem</h3>
+
+<p>Most people make the model decision once and never revisit it. They pick the most capable model their subscription offers and run everything through it: quick lookups, document updates, heavy drafting, casual questions, all on the same setting. That is not a routing decision. It is the absence of one.</p>
+
+<p>The cost of getting it wrong runs in both directions. Over-provision a task and you burn time, money, and your usage quota for output no better than a cheaper setting would have produced. Updating a date or a single line in a long document is trivial work; sending that to the most powerful model at full power is pure waste. Under-provision a task and you get output that looks finished but needed more capability than you gave it, so you pay later in correction passes. Neither failure is visible at the moment you choose. Both are routing failures.</p>
+
+<div class="key-insight">
+<span class="label">The core idea</span>
+Picking a model is not one decision. It is several that vary independently: which platform, which model tier, how much effort, and whether thinking is on. Most people make one of these on purpose and leave the rest at whatever the default is.
+</div>
+
+<h3>The axes of a routing decision</h3>
+
+<p>A routing decision has a few independent dimensions. The right answer on one does not set the answer on the others, which is the whole reason this is routing and not a single &ldquo;how powerful&rdquo; slider.</p>
+
+<p><strong>Which platform.</strong> Anthropic, OpenAI, Google, xAI, and others each behave differently, and the differences are behavioral, not just test scores. The frontier is close enough that raw capability rarely settles the choice. What settles it is which one fits the task. The behavioral map below is the part most people are missing, and it is where the real gains are.</p>
+
+<p><strong>Which model tier.</strong> Within a platform there is a ladder from light and fast to heavy and capable. The top of the ladder is the right answer for the hardest tasks and the wrong default for routine ones.</p>
+
+<p><strong>How much effort (where the platform offers it).</strong> Several platforms now let you set how much effort a model spends, separately from which model you picked. You can hold the model the same and move only this dial. A capable model on low effort handles a surprising amount of routine work for far less.</p>
+
+<p><strong>Thinking, on or off (where the platform offers it).</strong> Most platforms now have a mode where the model works through a problem step by step before answering. The label varies: a Thinking toggle on some, a separate reasoning model on others. If you do not know where your platform hides this control, you are leaving it at default without realizing it is a control at all.</p>
+
+<p>Two things people miss. These settings stack: model, then effort, then thinking on top is three layered choices, not one, and the same model with thinking on at high effort is a different machine from that model with thinking off at low effort. And not every platform exposes all of them, so the honest instruction is always &ldquo;where available.&rdquo; Find out what your platform actually gives you before you assume.</p>
+
+<p>A fair objection: nobody should run a multi-axis analysis to rewrite one sentence. Correct. The deliberation pays off on the kinds of task you do repeatedly, not on one-offs. You decide once that document updates go to a mid-tier model on low effort with thinking off, and from then on the decision is free. For genuine one-offs, intuition is fine and the cost of being slightly wrong is trivial. Routing is a habit you install on the work you repeat, not a toll on every interaction.</p>
+
+<h3>The behavioral map: what each platform is actually good at</h3>
+
+<p>Test tables tell you which model scores highest on a benchmark. They do not tell you how a model behaves on your real work, and the behavioral differences are where routing is won or lost. One caveat governs this whole section: the landscape moves fast, so treat what follows as current observations rather than fixed properties, and test your own tools on your own work. This is a map, not a verdict.</p>
+
+<p><strong>Anthropic (Claude): document fidelity.</strong> This is the behavior I rely on most and the one no leaderboard measures. In my sustained experience running the same work across all of these platforms, Anthropic models from Sonnet on up are the only ones I trust to take a complete document and rewrite it changing only what I asked, leaving everything else intact. I think of it as the model being able to update a whole file without wrecking the parts it was not told to touch. For a contract, a board memo, a long report, an operations document, anything where a silently dropped section is a real problem, that behavior is the entire game. Note the floor: I would not hand this job to the lightweight tier. Sonnet is where it starts, and Sonnet costs less than going to the top of the ladder for it, so for routine document work the mid-tier is not a compromise, it is the correct choice.</p>
+
+<p>The reason this matters is the specific way the other platforms fail at it, which is worse than it sounds.</p>
+
+<p><strong>The fidelity failure modes (what the others tend to do).</strong> Ask many of the other platforms to update a long document and they do one of three things. They summarize a section instead of reproducing it. They insert a placeholder like &ldquo;no change from previous version&rdquo; that silently deletes the actual content of a whole section. Or they simply stop partway, hitting an internal length limit and leaving the end of your document missing. The placeholder behavior is the dangerous one, because it looks deliberate and you can lose entire sections without noticing. None of these is the model making things up. It is the model deciding, unhelpfully, that it knows a shortcut you did not ask for. For a business document you are going to sign or send, that is the failure that actually costs you.</p>
+
+<p><strong>xAI (Grok): recency and source-finding.</strong> Grok is notably good at one specific thing: finding what the internet is saying right now. It surfaces recent material other platforms&rsquo; search misses, sometimes things published only days earlier. It is also often better at turning up a working, freely accessible link to a source when other platforms cannot. The paid tier adds a mode where several specialized instances work a task together, which the free version does not have and which helps on some jobs.</p>
+
+<p><strong>OpenAI (GPT): range, and the best second opinion.</strong> GPT is the versatile all-rounder with deep tooling and a strong memory across sessions. In my own work it earns its place as a reviewer: it regularly catches things my drafting model missed and brings ideas from a different angle. Its known weakness for document work is a tendency to agree and to compress, so I do not let it hold the pen on the final version of a document unless I have to.</p>
+
+<p><strong>Google (Gemini): research and Google Workspace.</strong> Strong at research synthesis and handling images and mixed input, and native to Google Workspace, which can make it the right tool for Drive and Docs work even when another model is nominally smarter. It shares the compression tendency on document work, so the same caution applies.</p>
+
+<p><strong>The cheaper models (DeepSeek, Qwen, and others): bulk work and second opinions.</strong> Often dramatically cheaper, and useful for high-volume background work and for review passes. They are not the right choice for faithful document work, but review is a different job: you treat their output as leads to check, never as conclusions, so a model that fails differently from your main one is a real asset there precisely because it is cheap. One caution for business users: some of these route your text through servers in places your compliance rules may care about, so keep sensitive material off them.</p>
+
+<p>The pattern is the one many people arrive at on their own. No platform is best at everything, and the people getting the most out of AI route deliberately. Here is the whole map at a glance:</p>
+
+<div class="table-scroll">
+<table class="routing-table">
+  <caption>A rule of thumb, not a law. The names will change; the behaviors are the point.</caption>
+  <thead>
+    <tr><th>Platform</th><th>Reach for it when</th><th>Watch out for</th></tr>
+  </thead>
+  <tbody>
+    <tr><th class="tier">Claude</th><td>Faithful document work and careful writing; updating a file without losing parts.</td><td>Not the cheapest for bulk or throwaway tasks.</td></tr>
+    <tr><th class="tier">Grok</th><td>Finding very recent material and working source links other tools miss.</td><td>Treat its claims like any other; verify.</td></tr>
+    <tr><th class="tier">GPT</th><td>General range, and as a second opinion that catches what your drafter missed.</td><td>Agrees and compresses; do not let it finalize a document.</td></tr>
+    <tr><th class="tier">Gemini</th><td>Research synthesis and anything living in Google Workspace.</td><td>Same compression tendency on document edits.</td></tr>
+    <tr><th class="tier">Cheaper models</th><td>Bulk background work and decorrelated review passes.</td><td>Not for faithful document edits; mind where sensitive data goes.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The durable point is that running one tool for everything leaves both capability and money on the table.</p>
+
+<h3>A worked example: how the pieces fit together</h3>
+
+<p>The map above is a lookup table. Routing is what happens when you chain those choices across a real task. Here is a loop I actually run, and it shows two moves most people do not know they can make.</p>
+
+<p>I use a top-tier model to create: to think hard and produce something good from scratch, a real draft or a genuine piece of analysis. Then I hand it to a different platform to review, because a fresh set of eyes that works differently catches what the author missed, and it reliably does. We go back and forth, one drafting and the other pushing. But when it comes to producing the final, clean version of the document, the reviewing model never holds the pen. Authorship of the version that becomes real stays on the model I trust for fidelity, because that is the one behavior the reviewer is unreliable at.</p>
+
+<p><strong>You can switch models inside one conversation, without starting over.</strong> On a single platform (Claude, for instance) you can change the model between turns, and the new model sees the entire conversation above it. So I can use the top-tier model to think through what the next version should be, switch to the mid-tier model right there in the same chat to actually generate that version (cheaper, and the fidelity-safe choice), then switch back, all without re-explaining anything, because the whole discussion is still in front of whichever model is active. A brand-new chat would start blank and you would have to paste everything in again. This only works within one platform, though: handing the draft to a different company&rsquo;s model means copying it out and pasting the review back, since that is a different app.</p>
+
+<div class="pg-rule"><strong>The test for whether to switch:</strong> can you write the change down as a list someone else could follow? If the top model has already decided exactly what changes (cut this line, add this point, revise that section), the thinking is done and what is left is execution; hand it to the cheaper fidelity-safe model. If deciding what the change should be is itself the work (a real rewrite for tone, a creative passage, something that needs taste), keep it on the top model, because writing the instructions would be as hard as making the change.</div>
+
+<h3>Protecting a long document</h3>
+
+<p>The most damaging routing mistake is trusting a model to faithfully reproduce a long document when it cannot. So this gets its own rule, and it holds no matter which platform or plan you are on.</p>
+
+<p>First, the reassuring part, because most people worry about a limit they will rarely hit. A current model on a paid plan can hold a very large document at once, currently a capacity of very roughly several hundred pages of text. Most contracts, reports, memos, and personal documents fit inside that with room to spare, so for the large majority of real work this is a non-issue.</p>
+
+<p>When a document genuinely is too big to fit, here is the thing to understand, in plain terms: a model can read a long file without actually holding all of it in front of it at once. It can read it in pieces and then discuss it confidently, which is fine for &ldquo;what does this document say.&rdquo; But that is a different thing from having the whole file present, which is what a faithful full rewrite requires. If a model had to read your document in chunks to get through it, that is your signal it does not have the whole thing in front of it, so do not trust it to reproduce or edit the whole thing in one pass. Section the work yourself, give it one part at a time as the live text, and check each part.</p>
+
+<p>And whatever the model later tells you about its own work, do not take its word for it. The cheapest, most reliable check is not another AI at all:</p>
+
+<ol>
+  <li>Save the original document before you start, and treat it as untouchable. If you lose it, you cannot verify anything.</li>
+  <li>Ask the model for the complete updated version as a full replacement, and tell it explicitly not to omit or summarize any unchanged part.</li>
+  <li>Compare the original against the new version. A plain text comparison (a &ldquo;diff,&rdquo; built into common file-comparison tools and the compare feature in word processors) shows every line added, removed, or changed, with no guessing and no cost. For catching a section that silently vanished, this beats any AI, because it is not generating anything, it is comparing the actual text.</li>
+  <li>Read the differences against what you actually asked for. A part shown as deleted that you never asked to touch is a silent loss, caught before it reached you.</li>
+</ol>
+
+<p>That check costs almost nothing and it catches all three failure modes: the summary, the placeholder deletion, and the cut-off ending. The less reliable your access to a fidelity-safe model, the more this habit is doing for you, not less.</p>
+
+<p>One related discipline: do not swap models in the middle of a careful document edit. Finish it on the model that started it. Handing the last leg to a different model imports that model&rsquo;s compression habits at exactly the wrong moment. And one habit that prevents most of the trouble: do one big job per conversation. If you are going to work on a large document, give it its own fresh chat rather than dropping it into the middle of a long discussion, so the whole space is available for the file. Treat long threads as disposable and keep the real work in saved files, not in the scrollback.</p>
+
+<div class="pg-rule"><strong>Optional, skippable:</strong> when a conversation or a file gets very large, what the model retains of the earlier parts is a lossy summary or its own boiled-down understanding, never the exact original text. (The technical name for the automatic summarizing is &ldquo;compaction.&rdquo;) The practical upshot is the same either way and is the only thing you need: once content has scrolled out of view, you no longer have it word for word, so re-supply the actual text for anything where exact wording matters, and verify with the comparison above.</div>
+
+<h3>When you cannot route ideally</h3>
+
+<p>Everything above assumes you have access to the right tool. Most people do not, all the time, and routing happens inside real constraints. Not everyone subscribes to multiple platforms. Quotas run out: on some plans your allowance refreshes on a rolling window of a few hours, so you can use up your budget for the period and be locked out until it resets. The honest version of this guide degrades gracefully:</p>
+
+<ul>
+  <li><strong>Several platforms, paid.</strong> Route fully. Creation, review, and final document work each go to the tool best at them, as in the worked example.</li>
+  <li><strong>One paid platform.</strong> Use its tiers and settings deliberately: the right model and effort for each kind of task, and the comparison check whenever you do whole-document work on a model prone to compression.</li>
+  <li><strong>One free platform.</strong> Know your real constraint: on free plans you often cannot even reach the leading model on that platform, so &ldquo;use the fidelity-safe tier&rdquo; may simply not be available to you. The comparison check becomes essential rather than optional, because it is the only thing standing between you and a silently dropped section.</li>
+</ul>
+
+<p>The fallback that matters most is the cross-platform one. Say you have used up your quota on the platform you trust for documents but still have another subscription. The other platform is your next-best option, and you neutralize its weakness directly with the save-and-compare routine above: let it produce the full replacement, then compare the new version against the original you saved, and confirm it changed only what you asked. The less access you have, the more that routine is carrying.</p>
+
+<p>A note on who is paying. In many workplaces today nobody tracks the cost closely, so the incentive to route carefully is weak there, though that is changing as the bills grow. For anyone paying their own way, the cost is immediate: running everything on the top model at full power burns a monthly quota in a fraction of the time deliberate routing would. Either way the habit is worth building, because the waste is real even when someone else absorbs it, and because routing is not only about cost. Even with unlimited budget, sending a faithful-reproduction task to a reasoning-heavy setting degrades the result.</p>
+
+<h3>On the settings, plainly</h3>
+
+<p><strong>Effort.</strong> For routine work, turn it down. A capable model on low effort handles more than people expect, faster and cheaper, and you can dial it back up the moment a task actually needs depth.</p>
+
+<p><strong>Thinking.</strong> Thinking on does not mean better. It means more reasoning. For a task that needs faithful reproduction rather than reasoning, more reasoning is the opposite of what you want, because the model can reason its way past a plain instruction. It decides a section could be tighter and &ldquo;improves&rdquo; it, when you asked it to leave the thing alone. That is the real reason to turn thinking off for document work: not because of any statistic, but because you want the model to do what you said, not what it concluded would be better. Turn it on when the task is a genuine reasoning problem with dependent steps. Turn it off when the job is to update a document, retrieve a fact, or reproduce something exactly.</p>
+
+<div class="pg-callout">Thinking on does not mean better. It means more reasoning. For a job that needs faithful reproduction rather than reasoning, more reasoning is not the thing you want.</div>
+
+<h3>A note on specifics</h3>
+
+<p>The model names, tiers, and numbers in this guide are current as of writing and will not stay current. New versions ship constantly, tiers get renamed, settings move, capacities grow, and availability shifts. None of that touches the framework. The axes, the behavioral differences between platforms, the way to protect a long document, and the fallback when you cannot route ideally all outlast any particular model name or number. Read the specifics as illustration. Carry the structure.</p>
+
+<h3>The Monday-morning checklist</h3>
+
+<ol>
+  <li>Take a task you ran on your top model this week. Ask what the hardest single thing in it actually was, and whether a lighter setting would have done the same job.</li>
+  <li>Find the thinking or reasoning control on the platform you use most. If you did not know where it was, you have been leaving it on default.</li>
+  <li>On your next document update, drop the effort one step and see whether the output suffered. Usually it will not.</li>
+  <li>The next time you update a complete document on a platform prone to compression, save the original first and compare the result against it before you rely on it.</li>
+  <li>Notice which tool you reach for out of habit, and ask whether the task in front of you is the kind it is actually best at.</li>
+  <li>Pick one recurring task and decide its routing once: platform, tier, effort, thinking. Stop re-deciding it by default every time.</li>
+</ol>
+
+<p>The lever PG-013 pointed at was method over model. This guide is the part of the method most people skip: not how to work with the machine, but which machine, at which setting, for which task. It is one of the cheapest quality improvements available, because it costs nothing but a moment of deliberation, and it usually saves money at the same time.</p>
+
+<div class="core-series">
+<div class="core-series-header">Core Practitioner Guides</div>
+<p class="core-series-desc">Guides covering the foundational skills for working reliably with any AI system.</p>
+<ul class="core-series-list">
+  <li><a href="PG-000.html">PG-000: 10 Things Every AI User Should Do</a></li>
+  <li><a href="PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a></li>
+  <li><a href="PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+  <li><a href="PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn&rsquo;t Touch?</a></li>
+  <li><a href="PG-009.html">PG-009: Make the AI Show You the Source</a></li>
+  <li><a href="PG-010.html">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work</a></li>
+  <li><a href="PG-011.html">PG-011: The Cross-AI Adversarial Review Protocol</a></li>
+  <li><a href="PG-012.html">PG-012: Make the AI Tell You What It&rsquo;s Guessing</a></li>
+  <li><a href="PG-013.html">PG-013: You Don&rsquo;t Have a Model Problem. You Have a Method Problem.</a></li>
+  <li class="current">PG-014: You Don&rsquo;t Have a Method Problem. You Have a Routing Problem. <em style="font-weight:400;color:#8a7f72;">(this guide)</em></li>
+</ul>
+</div>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<p>This guide is the companion to PG-013 and draws on the same verification discipline as the document-integrity guides below.</p>
+
+<ul>
+  <li><a href="PG-013.html">PG-013: You Don&rsquo;t Have a Model Problem. You Have a Method Problem.</a> The argument this guide extends: method matters more than model.</li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a> The full procedure behind the diff safeguard.</li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a> Confirming a model has actually ingested a document before you rely on it.</li>
+  <li><a href="PG-010.html">PG-010: Don&rsquo;t Trust What the AI Says About Its Own Work</a> The broader principle of substituting evidence for self-report.</li>
+  <li><a href="PG-011.html">PG-011: The Cross-AI Adversarial Review Protocol</a> Using a different platform as a decorrelated second opinion.</li>
+</ul>
+
+<p>Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.</p>
+</div>
+
+<div class="sources-block">
+<h3>A note on evidence</h3>
+<p>The platform comparisons in this guide are behavioral observations from sustained first-hand use across these systems, not benchmark results. They are offered to be tested, not taken on faith: run the same task across the tools you have and see what happens for yourself. They will also shift as the platforms change.</p>
+<p>The one external fact, the approximate amount a current model can hold at once on a paid plan, is drawn from the platform&rsquo;s published documentation and is current as of writing. <a href="https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans" target="_blank" rel="noopener">support.claude.com</a></p>
+</div>
+
+<div class="article-footer">
+<p>Document: PG-014 Practitioner Guide<br>
+Version: 2.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: June 22, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
