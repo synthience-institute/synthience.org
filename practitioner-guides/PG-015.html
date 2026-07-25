@@ -13,19 +13,19 @@
   <meta charset="UTF-8">
   <title>PG-015: You&rsquo;re Not Paying for the Model. You&rsquo;re Paying for the Conversation. &middot; Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A chat is not a program that stays running. The whole conversation is resubmitted every time you send a message, so the cost of a turn grows with the thread above it. Three currencies, two opposite optimizations, and why budget discipline and verification discipline turn out to be the same discipline.">
+  <meta name="description" content="A chat is not a program that stays running. The conversation so far is resubmitted each time you send a message, so the cost of a turn grows with the thread above it. Three currencies, two opposite optimizations, and why budget discipline and verification discipline turn out to be the same discipline.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
   <meta property="og:title" content="You&rsquo;re Not Paying for the Model. You&rsquo;re Paying for the Conversation. &middot; Synthience Institute">
-  <meta property="og:description" content="A chat is not a program that stays running. The whole conversation is resubmitted every time you send a message, so the cost of a turn grows with the thread above it. Three currencies, two opposite optimizations, and why budget discipline and verification discipline turn out to be the same discipline.">
+  <meta property="og:description" content="A chat is not a program that stays running. The conversation so far is resubmitted each time you send a message, so the cost of a turn grows with the thread above it. Three currencies, two opposite optimizations, and why budget discipline and verification discipline turn out to be the same discipline.">
   <meta property="og:url" content="https://synthience.org/practitioner-guides/PG-015.html">
   <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-015.html">
   <meta property="og:image" content="https://synthience.org/assets/images/PG-015_Infographic.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
   <meta name="twitter:title" content="You&rsquo;re Not Paying for the Model. You&rsquo;re Paying for the Conversation. &middot; Synthience Institute">
-  <meta name="twitter:description" content="A chat is not a program that stays running. The whole conversation is resubmitted every time you send a message, so the cost of a turn grows with the thread above it. Three currencies, two opposite optimizations, and why budget discipline and verification discipline turn out to be the same discipline.">
+  <meta name="twitter:description" content="A chat is not a program that stays running. The conversation so far is resubmitted each time you send a message, so the cost of a turn grows with the thread above it. Three currencies, two opposite optimizations, and why budget discipline and verification discipline turn out to be the same discipline.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/PG-015_Infographic.png">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
@@ -115,7 +115,7 @@
 
 <div class="article-meta">
   <span>PG-015</span>
-  <span>July 24, 2026</span>
+  <span>July 25, 2026</span>
   <span>Thomas W. Gantz</span>
 </div>
 
@@ -143,7 +143,7 @@
 
 <p>Here is the mechanism, and almost nothing about the way these products are presented to you makes it visible.</p>
 
-<p>A chat is not a program that stays running. Within a single thread, the model has no memory of the exchange from one message to the next, and it does not sit between your messages with your conversation loaded. What creates the very convincing impression of memory is that the entire conversation gets sent back through the system every single time you send a new message. Your first question, its answer, your correction, its revision, the document you pasted in at turn three, all of it, resubmitted as context so the model can produce the next reply. Cross-chat memory features, where a platform offers them, are a separate mechanism layered on top and do not change this.</p>
+<p>A chat is not a program that stays running. Within a single thread, the model has no memory of the exchange from one message to the next, and it does not sit between your messages with your conversation loaded. What creates the very convincing impression of memory is that the conversation so far gets sent back through the system each time you send a new message. Your first question, its answer, your correction, its revision, the document you pasted in at turn three, all of it, resubmitted as context so the model can produce the next reply. Cross-chat memory features, where a platform offers them, are a separate mechanism layered on top and do not change this.</p>
 
 <div class="key-insight">
   <span class="label">The mechanism</span>
@@ -152,7 +152,7 @@
 
 <p>Ask a question at the top of a fresh chat and you are paying for that question. Ask the identical question forty messages into an existing thread and you are paying for that question plus forty messages of history, every time. Same words from you, materially different cost. And the long thread is not the one that answers better: <a href="PG-001.html">PG-001</a> makes the fidelity case that a drifted context produces drifted output, which means the expensive version of the question is also the one more likely to come back wrong. It compounds in a direction most people never think about: every message you add to a thread makes every future message in that thread more expensive than it would otherwise have been.</p>
 
-<p>Platforms do reduce this in various ways. The most common is caching the repeated portion so that resubmitted history bills at a lower rate than fresh text. That genuinely helps, and it is why the effect is not as brutal as the raw arithmetic suggests. What it does not do is stop the repetition from growing. A discount on a number that keeps climbing is still a number that keeps climbing.</p>
+<p>Platforms do reduce this in various ways. The most common is caching the repeated portion so that resubmitted history bills at a lower rate than fresh text. That genuinely helps, and it is why the effect is not as brutal as the raw arithmetic suggests. What it does not do is stop the repetition from growing. A discount on a number that keeps climbing is still a number that keeps climbing. Some platforms go further than caching and compact a long thread, summarizing or dropping the oldest turns rather than carrying them forward verbatim. That changes what gets resent, but not the underlying pressure: the cost tracks how much context each turn has to carry, and that still grows as the thread grows.</p>
 
 <p>This mechanism is the one people are least likely to be looking at, because it is the only one the interface never shows you. Model choice is visible. Prompt length is visible. The accumulated weight of the thread you are already sitting in is not.</p>
 
@@ -166,7 +166,7 @@
   <strong>The bound.</strong> What holds under every metering scheme is the direction: shorter threads and fewer wasted turns cost less than longer threads and more wasted turns. Optimize for the direction, since the precise numbers are not available to you.
 </div>
 
-<p>The same caution applies to every specific named below. Plan structures, model names, tier boundaries, window lengths, and pricing all change, sometimes quickly. Nothing in this guide depends on any of them. The mechanism is the durable part: conversations are resubmitted in full, so length costs; turns and tokens are different currencies with opposite optimizations; and the expensive step is cheapest when it runs last on the smallest input. Read the specifics as illustration. Carry the structure.</p>
+<p>The same caution applies to every specific named below. Plan structures, model names, tier boundaries, window lengths, and pricing all change, sometimes quickly. Nothing in this guide depends on any of them. The mechanism is the durable part: the prior conversation is carried forward as context, so length costs; turns and tokens are different currencies with opposite optimizations; and the expensive step is cheapest when it runs last on the smallest input. Read the specifics as illustration. Carry the structure.</p>
 
 <p>With that said, three things are being spent. Two of them, money and tokens, are the same meter read at different resolutions. The third, turns, is different in kind and optimizes in the opposite direction. Which one you are rationed on changes what you should do about it, and most people do not know which one applies to them.</p>
 
@@ -335,7 +335,7 @@ This series does not pretend the author executes his own advice perfectly. Knowi
 
 <div class="sources-block">
 <h3>A note on evidence</h3>
-<p>The mechanism this guide rests on, that a conversation is resubmitted in full with every message and that the cost of a turn therefore grows with the thread above it, is how these systems are documented to work and is not in dispute.</p>
+<p>The mechanism this guide rests on, that each new turn has to carry the prior conversation forward as context and that the cost of a turn therefore grows as that context grows, is how these systems are documented to work. Platforms differ in the details, some resend the thread verbatim, some cache it, some compact it once it runs long, but the direction is the same under all of them.</p>
 <p>Everything downstream of it is behavioral observation from sustained first-hand use across several platforms, not benchmark results and not billing data. I cannot see your meter, and the guide&rsquo;s own argument is that you frequently cannot either. The claims about which habits cost the most are offered to be tested against your own usage rather than taken on faith. Plan structures, tier boundaries and pricing will also move after this is written, which is why the guide is built on the mechanism rather than on any current number.</p>
 </div>
 
@@ -344,7 +344,7 @@ This series does not pretend the author executes his own advice perfectly. Knowi
 Version: 1.0<br>
 Author: Thomas W. Gantz<br>
 Affiliation: Synthience Institute<br>
-Date: July 24, 2026<br>
+Date: July 25, 2026<br>
 License: CC-BY 4.0</p>
 </div>
 
