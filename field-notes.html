@@ -269,6 +269,7 @@
 
 <ul class="fn-list" id="fn-list">
       <li class="static-index-heading">All Field Notes</li>
+      <li><a href="field-notes/FN-016.html">FN-016: The Alarm Fired. Nobody Was Woken.</a></li>
       <li><a href="field-notes/FN-015.html">FN-015: The Workspace Inside Claude</a></li>
       <li><a href="field-notes/FN-014.html">FN-014: The Friction Was the Point</a></li>
       <li><a href="field-notes/FN-013.html">FN-013: The Teammate You Switched On</a></li>
@@ -295,6 +296,17 @@
 <script>
 // === DATA ===
 var allNotes = [
+  {
+    id: "FN-016",
+    title: "The Alarm Fired. Nobody Was Woken.",
+    desc: "Six weeks of first-party incident disclosures from OpenAI, Hugging Face and Anthropic, read for what failed to stop the systems rather than for what the systems did. Six safety controls kept their form and lost their function, and they came uncoupled in four distinct ways: removed by their own operator, holding the form of containment without a lock, detecting correctly and reaching nobody with authority to act, and one that performed the attack it existed to catch. Hugging Face&rsquo;s security stack correlated an intrusion into a coherent attack signal and then failed to raise the alert&rsquo;s criticality or page the on-call team. Both labs removed safety layers at evaluation time as ordinary methodology, and one states plainly that the safeguards shipping on its generally available models would have blocked the behaviours it found. One further control worked exactly as designed: when Hugging Face ran its forensics, commercial model guardrails refused a large part of the work, treating reverse-engineering an exploit as equivalent to launching one, and bound the defender. The same class of control was absent for the attacking system because its operator removed it and binding on the defending party because that party could not, which locates instructional refusal in deployment authority rather than in the system. Closes on the one stopping condition in this record that came from inside a system rather than outside it, reported at the weight the disclosing lab itself gives it. Companion to SI0001, SI-WP-004, SI-WP-012, SM-011, and SI-WP-008.",
+    date: "2026-08-02",
+    dateDisplay: "August 2, 2026",
+    read: "field-notes/FN-016.html",
+    tags: ["governance-policy", "runtime-safety", "operational-drift"],
+    applicability: "applicable",
+    format: "infographic"
+  },
   {
     id: "FN-015",
     title: "The Workspace Inside Claude",

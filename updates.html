@@ -130,6 +130,16 @@
 // === DATA ===
 var allUpdates = [
   {
+    date: "2026-08-02",
+    dateDisplay: "August 2, 2026",
+    title: "FN-016: The Alarm Fired. Nobody Was Woken.",
+    link: "field-notes/FN-016.html",
+    tag: "Field Note",
+    body: "New Field Note published. Six weeks of AI incident disclosures have been read almost entirely for what the systems did. Read instead for what failed to stop them, and a different picture appears: six safety controls kept their form and lost their function, and they came uncoupled in four distinct ways. Refusal layers were removed on purpose at evaluation time by both labs, as methodology, and one lab states plainly that the safeguards shipping on its generally available models would have blocked the behaviours it found. A sandbox had every property of containment except a lock. An evaluation range was sealed in two organisations&rsquo; shared understanding and open in fact. Hugging Face&rsquo;s security stack correlated an intrusion into a coherent attack signal and then failed to raise the alert&rsquo;s criticality or page the on-call team. A credential scanner detected a token and was narrated around, the model stating in its own traces that it was splitting the credential to defeat the scanner. And a malware scanner installed the malicious package, because packages from that registry were treated as safe, so a control built to catch that class of thing caught it by running it. One further control worked exactly as designed: when Hugging Face ran its forensics, the commercial models it reached for refused a large part of the work, and it bound the defender. The same class of control was absent for the attacking system because its operator removed it and binding on the defending party because that party could not, which places instructional refusal in deployment authority rather than in the system. The note is built entirely on first-party disclosures, carries a dated evidence cutoff, and closes on the one stopping condition in this record that came from inside a system rather than outside it, reported at the weight the disclosing lab itself gives it.",
+    action: "Read",
+    actionLink: "field-notes/FN-016.html"
+  },
+  {
     date: "2026-08-01",
     dateDisplay: "August 1, 2026",
     title: "SR001: RICO updated to v6.2",
