@@ -13,18 +13,18 @@
   <meta charset="UTF-8">
   <title>SR001-VR1: RICO Citation Verification Report &middot; Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Citation Verification Report for RICO (SR001). All six citations verified using CVP SF0037 v1.3 with live browsing. Tier 2 verification achieved. Synthience Institute.">
+  <meta name="description" content="Citation Verification Report for RICO (SR001 v6.3). All six citations processed using CVP SF0037 v1.4 with live retrieval and full-text evidence anchors. Tier 1 with PAR records. Synthience Institute.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
   <meta property="og:title" content="SR001-VR1: RICO Citation Verification Report &middot; Synthience Institute">
-  <meta property="og:description" content="Citation Verification Report for RICO (SR001). All six citations verified using CVP SF0037 v1.3 with live browsing. Tier 2 verification achieved.">
+  <meta property="og:description" content="Citation Verification Report for RICO (SR001 v6.3). All six citations processed using CVP SF0037 v1.4 with live retrieval and full-text evidence anchors. Tier 1 with PAR records.">
   <meta property="og:url" content="https://synthience.org/research/SR001-VR1.html">
   <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
   <meta name="twitter:title" content="SR001-VR1: RICO Citation Verification Report &middot; Synthience Institute">
-  <meta name="twitter:description" content="Citation Verification Report for RICO (SR001). All six citations verified using CVP SF0037 v1.3. Tier 2 verification achieved.">
+  <meta name="twitter:description" content="Citation Verification Report for RICO (SR001 v6.3). All six citations processed using CVP SF0037 v1.4. Tier 1 with PAR records.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
@@ -87,12 +87,12 @@
 
 <div class="meta-block">
   <span class="meta-label">Report ID</span><span class="meta-value">SR001-VR1</span>
-  <span class="meta-label">Version</span><span class="meta-value">v1.1 | December 23, 2025</span>
-  <span class="meta-label">Manuscript</span><span class="meta-value"><a href="SR001.html">RICO (SR001 v5.7)</a></span>
-  <span class="meta-label">CVP Protocol</span><span class="meta-value"><a href="SF0037.html">SF0037 v1.3</a></span>
-  <span class="meta-label">Verifier</span><span class="meta-value">Claude Sonnet 4.6 (claude-sonnet-4-6), Anthropic</span>
-  <span class="meta-label">Verification Date</span><span class="meta-value">March 5, 2026</span>
-  <span class="meta-label">Verification Tier</span><span class="meta-value">Tier 2 (Dual-Platform Verified where available)</span>
+  <span class="meta-label">Version</span><span class="meta-value">v1.2 | August 8, 2026</span>
+  <span class="meta-label">Manuscript</span><span class="meta-value"><a href="SR001.html">RICO (SR001 v6.3)</a></span>
+  <span class="meta-label">CVP Protocol</span><span class="meta-value"><a href="SF0037.html">SF0037 v1.4</a></span>
+  <span class="meta-label">Verifier</span><span class="meta-value">Claude Opus 4.6 (claude-opus-4-6), Anthropic</span>
+  <span class="meta-label">Verification Date</span><span class="meta-value">August 8, 2026</span>
+  <span class="meta-label">Verification Tier</span><span class="meta-value">Tier 1 (Single-Platform Verified) with PAR persistence records</span>
   <span class="meta-label">Prepared by</span><span class="meta-value">Thomas W. Gantz, Synthience Institute</span>
   <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
   <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.18082749" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18082749</a></span>
@@ -100,28 +100,40 @@
 
 <div class="doc-body">
 
-<h2>1. Live Browsing Access Confirmation</h2>
+<div style="border-left:3px solid #c0392b; padding:0.8rem 1rem; margin:0 0 1.6rem 0; background:#fdf6f5;">
+<strong>Report Version Note</strong><br><br>
+This is a substantive revision, not a reissue. Report versions v1.0 and v1.1 verified RICO v3.8 and v5.7 respectively. Those versions were previously described as permanently locked to the manuscript version they verified. That lock has been lifted by PCP decision of 2026-08-08, on the ground that the lock governs which manuscript version a report verifies, not whether the report&rsquo;s findings are correct, and v1.1 contained an error that could not be corrected without re-issuing.<br><br>
+<strong>The error:</strong> v1.1 recorded C2 (Olsson et al., 2022) as verified with no fabrication detected, and dispositioned it KEEP. The RICO reference at that time listed an author, &ldquo;Rai, A.&rdquo;, who does not appear anywhere in the source, and gave DasSarma the wrong initial. The v1.1 record shows the verifier encountered the discrepancy and produced an unparseable note about it rather than assigning the AMBIGUOUS rating that CVP Section 5 Part C requires when support cannot be confidently determined. The certification statement issued on that basis was therefore inaccurate as to C2.<br><br>
+This version re-runs the full protocol against RICO v6.3, in which the reference has been corrected. The failure is documented rather than quietly repaired, because a demonstration artifact for a verification protocol is more useful to a practitioner when it shows the protocol&rsquo;s real failure mode than when it shows only a clean pass.
+</div>
 
-<p>Per SF037 v1.3 Section 4.1, live web access was confirmed prior to verification. The following pages were opened and content retrieved in real time:</p>
+<h2>1. Live Retrieval Access Confirmation</h2>
+
+<p>Per SF0037 v1.4 Section 4.1. Live access confirmed prior to verification. Full text was retrieved for every citation; no citation was assessed from abstract or metadata alone.</p>
 
 <table class="vr-table">
   <tr><th>URL Opened</th><th>Content Confirmed</th><th>Status</th></tr>
-  <tr><td>arxiv.org/abs/2005.14165</td><td>Brown et al. (2020) abstract and submission history confirmed.</td><td>LIVE</td></tr>
-  <tr><td>transformer-circuits.pub/2022/in-context-learning&hellip;</td><td>Olsson et al. (2022) full HTML text retrieved; induction heads definition confirmed.</td><td>LIVE</td></tr>
+  <tr><td>arxiv.org/abs/2005.14165</td><td>Brown et al. (2020) landing page; 31-author byline and v4 submission history retrieved.</td><td>LIVE</td></tr>
+  <tr><td>arxiv.org/pdf/2005.14165</td><td>75-page full text extracted; few-shot definition located at p.6.</td><td>LIVE</td></tr>
+  <tr><td>transformer-circuits.pub/2022/in-context-learning&hellip;</td><td>Full HTML retrieved (124,410 characters of body text); byline and induction-head definition confirmed.</td><td>LIVE</td></tr>
+  <tr><td>aclanthology.org/2024.tacl-1.9.pdf</td><td>17-page TACL full text; lost-in-the-middle finding located at p.1.</td><td>LIVE</td></tr>
+  <tr><td>arxiv.org/pdf/2404.06654</td><td>27-page RULER full text; context-length degradation results located at p.1.</td><td>LIVE</td></tr>
+  <tr><td>arxiv.org/pdf/2309.17453</td><td>21-page ICLR 2024 full text; attention-sink mechanism located at p.1.</td><td>LIVE</td></tr>
+  <tr><td>doi.org/10.5281/zenodo.18289391</td><td>Concept DOI resolved to record 19155138 (CRD v1.6); PDF openly downloadable.</td><td>LIVE</td></tr>
 </table>
 
 <h2>2. Citation Inventory</h2>
 
-<p>Per SF037 v1.3 Section 4.2. Total citations in RICO v5.7: N = 6.</p>
+<p>Per SF0037 v1.4 Section 4.2. Total citations in RICO v6.3: N = 6.</p>
 
 <table class="vr-table">
-  <tr><th>ID</th><th>Reference</th><th>Section(s) Cited In</th><th>Access Class</th></tr>
-  <tr><td>C1</td><td>Brown et al. (2020)</td><td>5.3 (ICL), 7.2 (Induction Heads)</td><td>FREE-FULLTEXT</td></tr>
-  <tr><td>C2</td><td>Olsson et al. (2022)</td><td>5.3 (ICL), 7.2 (Induction Heads)</td><td>FREE-FULLTEXT</td></tr>
-  <tr><td>C3</td><td>Liu et al. (2023)</td><td>1.2 (Long-context literature)</td><td>FREE-FULLTEXT</td></tr>
-  <tr><td>C4</td><td>Hsieh et al. (2024)</td><td>1.2 (Long-context literature)</td><td>FREE-FULLTEXT</td></tr>
-  <tr><td>C5</td><td>Xiao et al. (2023)</td><td>7.3 (Attention sinks)</td><td>FREE-FULLTEXT</td></tr>
-  <tr><td>C6</td><td>Gantz (2026) SF0039</td><td>1.2, References</td><td>FLAGGED</td></tr>
+  <tr><th>ID</th><th>Reference</th><th>Cited In</th><th>Access Class</th></tr>
+  <tr><td>C1</td><td>Brown et al. (2020)</td><td>5.3</td><td>FREE-FULLTEXT</td></tr>
+  <tr><td>C2</td><td>Olsson et al. (2022)</td><td>5.3, 7.2</td><td>FREE-FULLTEXT</td></tr>
+  <tr><td>C3</td><td>Liu et al. (2024)</td><td>1.2</td><td>FREE-FULLTEXT</td></tr>
+  <tr><td>C4</td><td>Hsieh et al. (2024)</td><td>1.2</td><td>FREE-FULLTEXT</td></tr>
+  <tr><td>C5</td><td>Xiao et al. (2023)</td><td>7.3</td><td>FREE-FULLTEXT</td></tr>
+  <tr><td>C6</td><td>Gantz (2026) SF0039</td><td>References only</td><td>FREE-FULLTEXT</td></tr>
 </table>
 
 <h2>3. Individual Citation Verification Records</h2>
@@ -132,10 +144,10 @@
     <span class="verdict-badge verdict-keep">KEEP</span>
     <span class="verdict-badge verdict-full">FULL SUPPORT</span>
   </div>
-  <div class="cr-row"><span class="cr-label">Reference</span><span>Brown, T. B., Mann, B., Ryder, N., et al. (2020). Language models are few-shot learners. arXiv:2005.14165. <a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">https://arxiv.org/abs/2005.14165</a></span></div>
-  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-01: &ldquo;in-context learning, where models adapt to patterns from examples provided within a prompt (Brown et al., 2020; Olsson et al., 2022)&rdquo;</span></div>
-  <div class="cr-row"><span class="cr-label">Evidence anchor</span><span>Section 2.1 / Figure 2.1: Few-shot learning is defined as giving K examples at inference time &ldquo;without any gradient updates or fine-tuning.&rdquo; Directly establishes ICL as example-within-prompt adaptation.</span></div>
-  <div class="cr-row"><span class="cr-label">Notes</span><span>Full text accessed via arXiv HTML. Authors, title, year, venue (NeurIPS 2020) all match. DOI: 10.48550/arXiv.2005.14165 confirmed. Secondary confirmation via NeurIPS 2020 proceedings page.</span></div>
+  <div class="cr-row"><span class="cr-label">Reference</span><span>Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., &amp; Amodei, D. (2020). Language models are few-shot learners. arXiv:2005.14165.</span></div>
+  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-01: &ldquo;in-context learning, where models adapt to patterns from examples provided within a prompt&rdquo;</span></div>
+  <div class="cr-row"><span class="cr-label">Evidence anchor</span><span>p.6 (Section 2.1, Figure 2.1 discussion): &ldquo;few-shot works by giving K examples of context and completion&rdquo;. Defines few-shot operation as in-prompt example provision at inference time, which is the adaptation the claim attributes to the source.</span></div>
+  <div class="cr-row"><span class="cr-label">Notes</span><span>Bibliographic note: the source carries 31 authors. The RICO reference lists the first six followed by the final author, Amodei, with no ellipsis, presenting a truncated list as though complete. All seven named authors are correct and correctly initialled, and no name is fabricated; this is a style defect, not an integrity defect.</span></div>
 </div>
 
 <div class="citation-record">
@@ -143,23 +155,26 @@
     C2 &mdash; Olsson et al. (2022)
     <span class="verdict-badge verdict-keep">KEEP</span>
     <span class="verdict-badge verdict-full">FULL SUPPORT</span>
+    <span style="font-size:0.82rem; color:#c0392b; font-weight:normal;">v1.1 DISPOSITION SUPERSEDED</span>
   </div>
-  <div class="cr-row"><span class="cr-label">Reference</span><span>Olsson, C., Elhage, N., Nanda, N., et al. (2022). In-context learning and induction heads. Transformer Circuits Thread. <a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html" target="_blank" rel="noopener">transformer-circuits.pub</a></span></div>
+  <div class="cr-row"><span class="cr-label">Reference</span><span>Olsson, C., Elhage, N., Nanda, N., Joseph, N., DasSarma, N., Henighan, T., Mann, B., &amp; Ndousse, K. (2022). In-context learning and induction heads. Transformer Circuits Thread.</span></div>
   <div class="cr-row"><span class="cr-label">Claims</span><span>CLAIM-01 (ICL support) and CLAIM-02: &ldquo;Olsson et al. (2022) describe induction heads &mdash; circuit components that allow transformer models to continue patterns observed earlier in the context window&rdquo;</span></div>
-  <div class="cr-row"><span class="cr-label">Evidence anchors</span><span>Introduction: paper&rsquo;s thesis is that &ldquo;induction heads might constitute the mechanism for the actual majority of all in-context learning in large transformer models&rdquo; (CLAIM-01). Definition section: induction head circuit implements [A][B]&hellip;[A]&rarr;[B] pattern continuation (CLAIM-02).</span></div>
-  <div class="cr-row"><span class="cr-label">Notes</span><span>Full HTML text retrieved directly from transformer-circuits.pub. Minor author list note: citation is an abbreviated version of a large collaborative paper, acceptable under standard practice. No fabrication detected.</span></div>
+  <div class="cr-row"><span class="cr-label">Evidence anchors</span><span>Introduction: &ldquo;induction heads might constitute the mechanism for the actual majority of all in-context learning&rdquo;. Induction head definition section: &ldquo;induction heads in our models are implemented by a circuit of two attention heads&rdquo;. Both FULL SUPPORT.</span></div>
+  <div class="cr-row"><span class="cr-label">Author list correction</span><span>The reference verified in v1.1 read &ldquo;&hellip;Mann, B., DasSarma, A., Ndousse, K., &amp; Rai, A.&rdquo; Two defects were present and both were passed. First: the source byline gives Nova DasSarma; the initial A. was wrong, it is N. Second: no author named Rai appears in the source. An exhaustive search of the retrieved full text returns exactly one occurrence of the string &ldquo;Rai&rdquo;, as a substring of &ldquo;Rebecca Raible&rdquo; in the contributions list, and zero occurrences of Rai as a standalone surname anywhere in the byline, the BibTeX block, or the acknowledgements. The name was fabricated.</span></div>
+  <div class="cr-row"><span class="cr-label">Why v1.1 passed it</span><span>Report v1.1 recorded that it had encountered this discrepancy and wrote that &ldquo;Rai A. listed as &lsquo;Kamal Ndousse&rsquo; in full list&rdquo;, a statement that does not resolve to any coherent finding, then concluded no fabrication detected and dispositioned KEEP. Under SF0037 Section 5 Part C, a verifier that cannot confidently determine the position must assign AMBIGUOUS, which is treated as failure. The correct v1.1 disposition was REVISE CLAIM.</span></div>
+  <div class="cr-row"><span class="cr-label">Resolution</span><span>RICO v6.3 corrects the reference to the source byline order: Olsson, Elhage, Nanda, Joseph, DasSarma (N.), Henighan, Mann, Ndousse. All eight names verified present and correctly initialled against the retrieved byline. Henighan, previously omitted, sits between DasSarma and Mann in the source and is restored.</span></div>
 </div>
 
 <div class="citation-record">
   <div class="citation-record-header">
-    C3 &mdash; Liu et al. (2023)
+    C3 &mdash; Liu et al. (2024)
     <span class="verdict-badge verdict-keep">KEEP</span>
     <span class="verdict-badge verdict-full">FULL SUPPORT</span>
   </div>
-  <div class="cr-row"><span class="cr-label">Reference</span><span>Liu, N. F., Lin, K., Hewitt, J., et al. (2023). Lost in the middle: How language models use long contexts. TACL, 11, 553&ndash;569. arXiv:2307.03172</span></div>
-  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-03: &ldquo;Liu et al. (2023) demonstrated that models frequently underutilize information positioned in the middle of long contexts, retrieving content near the boundaries of a context more reliably than content buried in the middle&rdquo;</span></div>
-  <div class="cr-row"><span class="cr-label">Evidence anchor</span><span>Abstract: &ldquo;performance is often highest when relevant information occurs at the beginning or end of the input context, and significantly degrades when models must access relevant information in the middle of long contexts.&rdquo; FULL SUPPORT.</span></div>
-  <div class="cr-row"><span class="cr-label">Notes</span><span>Bibliographic note: ACL Anthology record shows final TACL publication as vol. 12, pp. 157&ndash;173, 2024. RICO v5.7 cites vol. 11, pp. 553&ndash;569, 2023 (arXiv preprint version). Same work; minor bibliographic discrepancy, not a fabrication. No correction required unless house style requires final journal citation.</span></div>
+  <div class="cr-row"><span class="cr-label">Reference</span><span>Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., &amp; Liang, P. (2024). Lost in the middle: How language models use long contexts. Transactions of the Association for Computational Linguistics, 12, 157&ndash;173.</span></div>
+  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-03: models underutilize information positioned in the middle of long contexts, retrieving content near the boundaries more reliably.</span></div>
+  <div class="cr-row"><span class="cr-label">Evidence anchor</span><span>p.1 (Abstract and Introduction): &ldquo;performance is often highest when relevant information occurs at the beginning or end of the input context&rdquo;. The source states the boundary-advantage and middle-degradation pattern directly.</span></div>
+  <div class="cr-row"><span class="cr-label">Notes</span><span>Bibliographic note cleared: v1.1 recorded that RICO cited the arXiv preprint numbering (vol. 11, 553&ndash;569, 2023) rather than the final TACL record. RICO v6.3 uses the final journal citation and the ACL Anthology locator. The v1.1 recommendation was adopted and this note is closed.</span></div>
 </div>
 
 <div class="citation-record">
@@ -168,9 +183,9 @@
     <span class="verdict-badge verdict-keep">KEEP</span>
     <span class="verdict-badge verdict-full">FULL SUPPORT</span>
   </div>
-  <div class="cr-row"><span class="cr-label">Reference</span><span>Hsieh, C. Y., Sun, S., Kriman, S., et al. (2024). RULER: What&rsquo;s the real context size of your long-context language models? arXiv:2404.06654. <a href="https://arxiv.org/abs/2404.06654" target="_blank" rel="noopener">https://arxiv.org/abs/2404.06654</a></span></div>
-  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-04: &ldquo;the limits of effective context utilization across different architectures (Hsieh et al., 2024)&rdquo;</span></div>
-  <div class="cr-row"><span class="cr-label">Evidence anchor</span><span>Abstract: &ldquo;despite achieving nearly perfect accuracy in the vanilla NIAH test, almost all models exhibit large performance drops as the context length increases&hellip; only half of them can maintain satisfactory performance at the length of 32K.&rdquo; 17 long-context LMs evaluated. FULL SUPPORT.</span></div>
+  <div class="cr-row"><span class="cr-label">Reference</span><span>Hsieh, C. Y., Sun, S., Kriman, S., Acharya, S., Rekesh, D., Jia, F., Zhang, Y., &amp; Ginsburg, B. (2024). RULER: What&rsquo;s the real context size of your long-context language models? arXiv:2404.06654.</span></div>
+  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-04: &ldquo;the limits of effective context utilization across different architectures&rdquo;</span></div>
+  <div class="cr-row"><span class="cr-label">Evidence anchor</span><span>p.1 (Abstract): &ldquo;almost all models exhibit large performance drops as the context length increases&rdquo;. Across the seventeen long-context models RULER evaluates, only half sustain satisfactory performance at 32K.</span></div>
 </div>
 
 <div class="citation-record">
@@ -179,20 +194,23 @@
     <span class="verdict-badge verdict-keep">KEEP</span>
     <span class="verdict-badge verdict-full">FULL SUPPORT</span>
   </div>
-  <div class="cr-row"><span class="cr-label">Reference</span><span>Xiao, G., Tian, Y., Chen, B., Han, S., Lewis, M. (2023). Efficient streaming language models with attention sinks. arXiv:2309.17453. <a href="https://arxiv.org/abs/2309.17453" target="_blank" rel="noopener">https://arxiv.org/abs/2309.17453</a></span></div>
-  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-05: &ldquo;Research on attention sink phenomena demonstrates that attention does not distribute evenly across context tokens (Xiao et al., 2023). Certain tokens accumulate disproportionate attention weight regardless of their semantic relevance.&rdquo;</span></div>
-  <div class="cr-row"><span class="cr-label">Evidence anchor</span><span>Abstract: &ldquo;keeping the KV of initial tokens will largely recover the performance of window attention&hellip; the emergence of attention sink is due to the strong attention scores towards initial tokens as a sink even if they are not semantically important.&rdquo; Supports both halves of the claim. FULL SUPPORT.</span></div>
+  <div class="cr-row"><span class="cr-label">Reference</span><span>Xiao, G., Tian, Y., Chen, B., Han, S., &amp; Lewis, M. (2023). Efficient streaming language models with attention sinks. arXiv:2309.17453.</span></div>
+  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-05: attention does not distribute evenly across context tokens; certain tokens accumulate disproportionate weight regardless of semantic relevance.</span></div>
+  <div class="cr-row"><span class="cr-label">Evidence anchor</span><span>p.1 (Abstract and Introduction): &ldquo;strong attention scores towards initial tokens as a sink even if they are not semantically important&rdquo;. Supports both halves of the claim.</span></div>
+  <div class="cr-row"><span class="cr-label">Notes</span><span>Author list verified complete against the source byline: Guangxuan Xiao, Yuandong Tian, Beidi Chen, Song Han, Mike Lewis. Five authors, all present, correctly initialled, no truncation.</span></div>
 </div>
 
 <div class="citation-record">
   <div class="citation-record-header">
     C6 &mdash; Gantz (2026) SF0039
-    <span class="verdict-badge verdict-flag">FLAGGED</span>
-    <span style="font-size:0.82rem; color:#8a7f72; font-weight:normal;">CONDITIONAL KEEP</span>
+    <span class="verdict-badge verdict-flag">SECTION 4.4 FAILURE</span>
+    <span style="font-size:0.82rem; color:#8a7f72; font-weight:normal;">REMOVE OR REATTACH</span>
   </div>
   <div class="cr-row"><span class="cr-label">Reference</span><span>Gantz, T. W. (2026). Context representation drift. Synthience Institute. SF0039. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289391</a></span></div>
-  <div class="cr-row"><span class="cr-label">Claim</span><span>CLAIM-06: Cited in the References section of RICO v5.7. Does not serve as an inline evidence anchor for any specific body-text claim.</span></div>
-  <div class="cr-row"><span class="cr-label">Disposition</span><span>The DOI record did not resolve in public indexes at the time of this verification run (March 5, 2026), consistent with a recent upload pending indexing. Under CVP SF037 v1.3, a PVC failure on a references-only citation does not disqualify the manuscript from publication, but must be flagged. Confirm live access to zenodo.org/records/18289391 prior to final submission. If not yet public at submission time, mark as &ldquo;forthcoming&rdquo; or remove from references.</span></div>
+  <div class="cr-row"><span class="cr-label">Claim</span><span>NONE. No inline claim in RICO v6.3 depends on this citation. Part C is not reached, because support verification cannot be performed on a citation that supports no claim.</span></div>
+  <div class="cr-row"><span class="cr-label">PVC status resolved</span><span>Report v1.1 assigned this citation UNABLE TO VERIFY because the Zenodo record did not resolve in any public index on 2026-03-05. It now resolves: the concept DOI redirects to version record 19155138, CRD v1.6, with the full PDF openly downloadable (178.8 kB, md5 97f250409fedb3557089fb669f49f5dc). The v1.1 flag is cleared. That flag was correctly raised at the time and correctly did not exempt the author&rsquo;s own work.</span></div>
+  <div class="cr-row"><span class="cr-label">New finding</span><span>Floating citation, SF0037 v1.4 Section 4.4. The reference appears in RICO v6.3&rsquo;s reference list, and a full-document search finds no inline citation of Gantz, SF0039, CRD, or Context representation drift anywhere in the body text. Section 4.4 states that citations not mapped to claims are invalid and must be removed or reattached with explicit claim linkage. Report v1.1 assessed this under CVP v1.3 and recorded the absence of an inline claim as the reason a PVC failure would not disqualify the manuscript; v1.4&rsquo;s Section 4.4 makes the same absence itself disqualifying.</span></div>
+  <div class="cr-row"><span class="cr-label">Disposition</span><span>This is not a fabrication or an accessibility problem. The cited work exists, is the author&rsquo;s own, is openly accessible, and is architecturally related to RICO. The defect is that the reference list asserts a dependency the manuscript does not have. REMOVE or REATTACH, PCP decision required.</span></div>
 </div>
 
 <h2>4. Verification Summary</h2>
@@ -201,46 +219,53 @@
   <tr><th>Metric</th><th>Result</th></tr>
   <tr><td>Total citations inventoried (N)</td><td>6</td></tr>
   <tr><td>Citations fully processed</td><td>6 / 6</td></tr>
-  <tr><td>Citations passed PVC (FREE-FULLTEXT)</td><td>5 (C1&ndash;C5)</td></tr>
-  <tr><td>Citations flagged</td><td>1 (C6 &mdash; access unconfirmed at verification time)</td></tr>
-  <tr><td>Citations with FULL SUPPORT rating</td><td>5 (C1&ndash;C5)</td></tr>
-  <tr><td>Citations with UNABLE TO VERIFY rating</td><td>1 (C6)</td></tr>
-  <tr><td>Citations removed or replaced</td><td>0</td></tr>
-  <tr><td>Bibliographic discrepancies noted</td><td>1 (C3 &mdash; arXiv vs. final TACL volume/page numbers; not a fabrication)</td></tr>
-  <tr><td>Author list notes</td><td>1 (C2 &mdash; abbreviated author list; acceptable)</td></tr>
-  <tr><td>Verification Tier achieved</td><td>Tier 2 (dual-source confirmation for C1, C3; single primary for C2, C4, C5; unverifiable for C6)</td></tr>
+  <tr><td>Citations passing PVC (FREE-FULLTEXT)</td><td>6 (C1&ndash;C6)</td></tr>
+  <tr><td>Citations mapped to a manuscript claim</td><td>5 (C1&ndash;C5); C6 unmapped</td></tr>
+  <tr><td>Citations rated FULL SUPPORT</td><td>5 (C1&ndash;C5), across six claim mappings</td></tr>
+  <tr><td>Citations failing Section 4.4 claim-map requirement</td><td>1 (C6)</td></tr>
+  <tr><td>Citations removed or replaced</td><td>0 (one pending PCP decision)</td></tr>
+  <tr><td>Fabricated author names detected and corrected</td><td>1 (C2, corrected in manuscript v6.3)</td></tr>
+  <tr><td>Prior-report findings superseded</td><td>2 (C2 disposition; C6 PVC flag cleared)</td></tr>
+  <tr><td>Bibliographic style notes recorded</td><td>1 (C1 truncation without ellipsis)</td></tr>
+  <tr><td>Verification Tier achieved</td><td>Tier 1 (Single-Platform Verified) with PAR records</td></tr>
 </table>
+
+<p><strong>Tier note, stated plainly.</strong> SF0037 Section 7 sets Tier 2 (dual-platform verification) as the default for public release. This run achieved Tier 1: each citation was verified against one authoritative first-party source with full text opened and evidence anchors captured, and PAR persistence records were recorded for all six. Independent second-repository confirmation was not performed for every citation. The honest tier is therefore Tier 1 with PAR, not Tier 2. Report v1.1 claimed Tier 2 on the basis of dual confirmation for two of six citations, which overstated the tier; that claim is superseded.</p>
 
 <div class="cert-block">
   <strong>Certification Statement</strong><br><br>
-  I certify that I executed SF037 CVP v1.3 using live browsing against public sources.<br>
-  Total citations inventoried: N = 6 | Citations fully processed: 6 / 6 | Citations retained: 5 (unconditional) + 1 (conditional) | Citations removed or replaced: 0 | Verification tier achieved: Tier 2 | Verification completed: March 5, 2026<br><br>
-  Verifier: Claude Sonnet 4.6 (claude-sonnet-4-6), Anthropic | Prepared by: Thomas W. Gantz, Synthience Institute
+  I certify that I executed SF0037 CVP v1.4 using live retrieval against public sources. Full text was opened for every citation; no support rating was assigned from an abstract, from metadata, or from model priors.<br>
+  Total citations inventoried: N = 6 | Citations fully processed: 6 / 6 | Citations retained: 5 unconditional (C1&ndash;C5) + 1 pending PCP disposition (C6) | Citations removed or replaced: 0 | Verification tier achieved: Tier 1 with PAR | Verification completed: August 8, 2026<br><br>
+  Verifier: Claude Opus 4.6 (claude-opus-4-6), Anthropic | Prepared by: Thomas W. Gantz, Synthience Institute
 </div>
 
 <h2>5. Recommendations for Publication</h2>
 
-<p><strong>C6 (Gantz 2026, CRD, SF0039):</strong> Confirm that Zenodo record 18289391 is publicly accessible before submission. If SF0039 is not yet live, either mark the citation as &ldquo;forthcoming&rdquo; or remove it from the reference list. The citation does not support any inline body-text claim, so removal does not affect the manuscript&rsquo;s evidentiary integrity.</p>
+<p><strong>1. C6 (Gantz 2026, CRD, SF0039) &mdash; action required.</strong> The citation satisfies PVC but fails the Section 4.4 claim-map requirement. Two dispositions are available and the choice is a PCP decision. Remove it from the reference list, which costs nothing evidentially since no claim rests on it. Or reattach it by adding an inline citation at a point where RICO&rsquo;s argument genuinely draws on context representation drift; Section 1.2, which surveys long-context literature, is the natural site. Reattachment is the stronger option if and only if the manuscript actually uses the source; adding an inline citation solely to legitimise a reference-list entry would invert the requirement.</p>
 
-<p><strong>C3 (Liu et al. 2023):</strong> The arXiv preprint citation differs from the final TACL publication. No correction required unless house style requires the final journal citation, in which case update to: Transactions of the Association for Computational Linguistics, 12, 157&ndash;173. DOI: 10.1162/tacl_a_00638.</p>
+<p><strong>2. C1 (Brown et al. 2020) &mdash; optional style correction.</strong> The seven-name list is a truncation of a 31-author byline presented without an ellipsis. All named authors are correct. No integrity issue and no urgency.</p>
 
-<p><strong>C2 (Olsson et al. 2022):</strong> Abbreviated author list for a large collaborative paper. Standard practice. No correction required.</p>
+<p><strong>3. C2 (Olsson et al. 2022) &mdash; closed.</strong> The fabricated author and the incorrect initial are corrected in RICO v6.3 and verified against the source byline.</p>
 
-<p>All five verifiable citations (C1&ndash;C5) fully support the specific claims they are cited to justify. No overclaiming or misrepresentation was detected. This report should be uploaded to Zenodo alongside RICO v5.7 and linked from the manuscript&rsquo;s citation verification statement.</p>
+<p><strong>4. C3 (Liu et al. 2024) &mdash; closed.</strong> The final TACL citation replaced the preprint numbering per the v1.1 recommendation.</p>
+
+<p><strong>5. Tier upgrade before deposit.</strong> A second independent repository confirmation per citation would achieve the Tier 2 default that SF0037 Section 7 sets for public release.</p>
+
+<p><strong>6. On the value of this report as a demonstration artifact.</strong> Report v1.1 was published to show what CVP output looks like. It now also shows what a verification failure looks like from the inside: a verifier that retrieved the correct source, encountered a name it could not place, wrote a fluent sentence that resolved nothing, and passed. Section 5 Part C already prescribes the correct behaviour, which is to rate AMBIGUOUS and treat it as failure. The gap was not in the protocol but in its execution, and the class of error is one an automated author-list comparison cannot commit, since a name either appears in the retrieved byline or it does not. Practitioners running CVP should treat any author-name discrepancy as AMBIGUOUS until resolved by direct string comparison against the retrieved source.</p>
 
 </div>
 
 <div class="citation-block">
   <div class="citation-label">Suggested Citation</div>
-  Gantz, T. W. (2026). RICO Citation Verification Report (SR001-VR1 v1.1). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18082749" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18082749</a>
+  Gantz, T. W. (2026). RICO Citation Verification Report (SR001-VR1 v1.2). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18082749" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18082749</a>
 </div>
 
 <div class="article-footer">
 <p>Document: SR001-VR1 Verification Report<br>
-Version: v1.1<br>
+Version: v1.2<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: December 23, 2025<br>
+Date: August 8, 2026<br>
 License: CC-BY 4.0</p>
 </div>
 
