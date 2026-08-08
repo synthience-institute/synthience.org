@@ -13,18 +13,18 @@
   <meta charset="UTF-8">
   <title>SF0037: Citation Verification Protocol (CVP) &middot; Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Citation Verification Protocol (CVP) ensures that every citation in Synthience Institute publications is real, retrievable, and genuinely supports the specific claim it is used to justify.">
+  <meta name="description" content="The Citation Verification Protocol (CVP) is a domain-general method ensuring every citation is real, correctly identified, and genuinely supports the specific claim it is used to justify. Applies to academic, legal, clinical, regulatory, and commercial work.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
   <meta property="og:title" content="SF0037: Citation Verification Protocol (CVP) &middot; Synthience Institute">
-  <meta property="og:description" content="The Citation Verification Protocol (CVP) ensures that every citation is real, retrievable, and genuinely supports the specific claim it is used to justify.">
+  <meta property="og:description" content="The Citation Verification Protocol (CVP) is a domain-general method ensuring every citation is real, correctly identified, and genuinely supports the specific claim it is used to justify.">
   <meta property="og:url" content="https://synthience.org/research/SF0037.html">
   <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
   <meta name="twitter:title" content="SF0037: Citation Verification Protocol (CVP) &middot; Synthience Institute">
-  <meta name="twitter:description" content="The Citation Verification Protocol (CVP) ensures that every citation is real, retrievable, and genuinely supports the specific claim it is used to justify.">
+  <meta name="twitter:description" content="The Citation Verification Protocol (CVP) is a domain-general method ensuring every citation is real, correctly identified, and genuinely supports the specific claim it is used to justify.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
@@ -78,7 +78,7 @@
 
 <div class="meta-block">
   <span class="meta-label">Document ID</span><span class="meta-value">SF0037</span>
-  <span class="meta-label">Version</span><span class="meta-value">v1.4 | December 23, 2025</span>
+  <span class="meta-label">Version</span><span class="meta-value">v1.5 | August 8, 2026</span>
   <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
   <span class="meta-label">Affiliation</span><span class="meta-value">The Synthience Institute</span>
   <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
@@ -87,14 +87,14 @@
 
 <div class="abstract-block">
   <div class="abstract-label">Abstract</div>
-  <p>This document establishes the Citation Verification Protocol (CVP) for Synthience Institute publications. CVP ensures that every citation is (1) real and retrievable and (2) genuinely supports the specific claim it is used to justify. The protocol is designed to be executed using AI systems with live browsing, while producing an auditable verification log that can be independently reviewed.</p>
+  <p>This document establishes the Citation Verification Protocol (CVP), a domain-general method for verifying citations in any document whose claims rest on cited sources. CVP ensures that every citation is (1) real and correctly identified and (2) genuinely supports the specific claim it is used to justify. The second requirement is what distinguishes CVP from ordinary citation checking. The verifier must retrieve the source, read the portion of it that bears on the claim, and record the evidence found there, rather than confirming only that the work exists. CVP applies wherever a fabricated or misattributed citation carries a cost, including academic manuscripts, legal filings, clinical and regulatory documents, analyst and consulting reports, and internal business research. The protocol is designed to be executed using AI systems with live browsing, while producing an auditable verification log that can be independently reviewed.</p>
 </div>
 
 <div class="doc-body">
 
 <h2>1. Purpose and Scope</h2>
 
-<p>This protocol provides a systematic method for verifying citations used in Synthience Institute manuscripts and research artifacts.</p>
+<p>This protocol provides a systematic method for verifying citations used in any document that relies on them. It was developed for Synthience Institute manuscripts and research artifacts and is published for general use. Nothing in the three-part verification method of Section 5 is specific to academic publishing: the operation of checking whether a source substantiates the use it is being put to is the same whether the source is a journal article, a court opinion, a clinical guideline, a technical standard, or an internal report.</p>
 
 <p>CVP addresses two verification requirements:</p>
 
@@ -103,26 +103,32 @@
   <li><strong>Support verification:</strong> Confirming that cited works actually support the specific claims they are cited to justify.</li>
 </ul>
 
-<p><strong>Critical requirement:</strong> This protocol is only effective when using live browsing against real public sources. Prior-based assessments (model memory, training priors, general plausibility judgments) are explicitly insufficient.</p>
+<p><strong>Critical requirement:</strong> This protocol is only effective when the verifier retrieves the actual source text at verification time, whether by live browsing, licensed database access, or a lawfully held copy. Prior-based assessments (model memory, training priors, general plausibility judgments) are explicitly insufficient, and no support rating may be assigned from an abstract, an index record, a snippet, or a summary. Access may be restricted. Reading may not be skipped. This requirement is absolute and does not vary by domain or by profile.</p>
 
-<h3>1.1 Public Verifiability Constraint (PVC): Mandatory Exclusion Gate</h3>
+<h3>1.1 Public Verifiability Constraint (PVC): Access Gate and Profiles</h3>
 
-<p>Synthience Institute publications may cite only sources whose full text is publicly accessible for free at the time of verification.</p>
+<p>The Public Verifiability Constraint governs what counts as adequate access to a source. It operates through one of two profiles, selected before verification begins and recorded in the log. The profile determines whether restricted access disqualifies a citation. It never relaxes the requirement that the verifier read the portion of the source that bears on the claim.</p>
 
-<p>This is a hard exclusion rule. If a source is paywalled, requires authentication, is only partially viewable, or cannot be retrieved in full, it must not appear in the manuscript references.</p>
+<p><strong>Profile 1, Open-Publication.</strong> The default for Synthience Institute publications, and for any document whose readers must be able to check its sources without payment. Sources must be publicly accessible for free at the time of verification. This is a hard exclusion rule: if a source is paywalled, requires authentication, is only partially viewable, or cannot be retrieved in full, it must not appear in the references.</p>
+
+<p><strong>Profile 2, Licensed-Access.</strong> For legal, clinical, regulatory, commercial, and internal work, where the authoritative sources are licensed, purchased, or unpublished. Access Class is recorded descriptively rather than as an exclusion gate. A citation passes if the verifier held lawful access to the complete text at verification time, the log records the basis of that access, and the log states plainly whether an independent reader can reach the source. Restricted access is disclosed, not disqualifying.</p>
+
+<p><strong>What does not change between profiles.</strong> The verifier must reach and read the portion of the source that bears on the claim. A citation whose relevant text could not be read, under either profile, cannot receive a FULL SUPPORT rating. Profile 2 widens what may be cited. It does not widen what may be asserted about a source that was never opened.</p>
 
 <p><strong>Access Class (required for every citation)</strong></p>
 
 <p><strong>PASS</strong></p>
 <ul>
-  <li><strong>FREE-FULLTEXT:</strong> Complete text accessible without payment or authentication at the time of verification.</li>
+  <li><strong>FREE-FULLTEXT:</strong> Complete text accessible without payment or authentication at the time of verification. Passes under both profiles.</li>
+  <li><strong>LICENSED-FULLTEXT</strong> (Profile 2 only): Complete text accessible to the verifier under a subscription, institutional licence, or purchase, including a copy lawfully exported for verification. Record the platform and the basis of access.</li>
+  <li><strong>INTERNAL</strong> (Profile 2 only): Complete text held lawfully by the verifying organisation and not publicly published. Record the document identifier, version, and custodian.</li>
 </ul>
 
 <p><strong>FAIL</strong></p>
 <ul>
-  <li><strong>PAYWALLED:</strong> Payment required.</li>
-  <li><strong>AUTH-REQUIRED:</strong> Institutional login or account required.</li>
-  <li><strong>PARTIAL-ONLY:</strong> Abstract only, preview only, limited pages, &ldquo;snippet view,&rdquo; or any form of incomplete access.</li>
+  <li><strong>PAYWALLED:</strong> Payment required and not held. Fails under both profiles. A paywalled source the verifier has lawfully purchased or licensed is classed LICENSED-FULLTEXT; this class covers only sources the verifier could not reach.</li>
+  <li><strong>AUTH-REQUIRED:</strong> Institutional login or account required and not held. Fails under both profiles.</li>
+  <li><strong>PARTIAL-ONLY:</strong> Abstract only, preview only, limited pages, &ldquo;snippet view,&rdquo; or any form of incomplete access. Fails under both profiles, without exception. This is the class that most often produces a false pass, because a plausible abstract invites a support rating the full text would not sustain.</li>
   <li><strong>UNAVAILABLE:</strong> Link rot, removed content, dead URL, or otherwise not retrievable.</li>
 </ul>
 
@@ -136,6 +142,16 @@
 </ul>
 
 <p>If the verifier cannot access the complete text needed to check claim support, the citation fails PVC.</p>
+
+<h3>1.1.1 Foundational-Text Provision (Established Works Not Retrieved)</h3>
+
+<p>A narrow provision covers long-established works, typically books, that are cited for the proposition they are widely known for, and whose full text the verifier did not obtain. It exists because such works were in practice being passed on convergent citation rather than on retrieval, and an unwritten allowance is more dangerous than a stated one.</p>
+
+<p><strong>What it permits.</strong> Part A identity verification may be satisfied without the full text where the work is confirmable through authoritative catalogue records (publisher, ISBN, edition, library holdings) and is cited by many independent sources for the same proposition. Identity is genuinely established this way; a widely held book is not a fabrication risk.</p>
+
+<p><strong>What it does not permit.</strong> Part C claim support may not be satisfied this way. Convergent citation is evidence about what the field reports the work to say. It is not evidence from the work. A citation passed under this provision receives the support rating ATTRIBUTED, not FULL SUPPORT, and the log must record that the rating rests on convergent independent attribution rather than on the source text.</p>
+
+<p><strong>Hard limit.</strong> A citation rated ATTRIBUTED may not carry a load-bearing claim. If the document&rsquo;s argument depends on what the work actually says, obtain the work. The provision covers background, orientation, and canonical attribution, and nothing else. Any verifier applying it must state in the log why the claim is not load-bearing.</p>
 
 <h3>1.2 Persistence and Archiving Requirement (PAR)</h3>
 
@@ -177,23 +193,23 @@
 
 <p>CVP may be executed on any AI system that can:</p>
 <ul>
-  <li>Open live web pages,</li>
+  <li>Open live web pages, or access licensed databases and lawfully held local copies,</li>
   <li>Retrieve full-text sources,</li>
-  <li>Report the accessed URLs,</li>
+  <li>Report the locators actually accessed,</li>
   <li>Produce a structured verification log.</li>
 </ul>
 
-<p>If live browsing is unavailable or blocked, CVP cannot be performed.</p>
+<p>If the verifier cannot reach source text by any route, CVP cannot be performed. Live web browsing is the usual route and the only one available under Profile 1; under Profile 2 a licensed database session or a lawfully exported copy supplied to the verifier serves equally.</p>
 
 <h2>4. Pre-Verification Requirements</h2>
 
-<h3>4.1 Confirm AI Platform Has Live Browsing Access</h3>
+<h3>4.1 Confirm Verifier Has Source Access</h3>
 
-<p>Before verifying any manuscript, the verifier must demonstrate live access by opening at least one known public page and recording:</p>
+<p>Before verifying any document, the verifier must demonstrate working source access by opening at least one known source and recording:</p>
 <ul>
-  <li>The URL</li>
+  <li>The locator opened (URL, database record, or file identifier)</li>
   <li>The access date and time</li>
-  <li>A short content confirmation (one sentence) that could only be produced by actually opening the page</li>
+  <li>A short content confirmation (one sentence) that could only be produced by actually opening the source</li>
 </ul>
 
 <h3>4.2 Create a Complete Citation Inventory</h3>
@@ -208,13 +224,39 @@
 
 <p>CVP is incomplete until all citations in the inventory are processed.</p>
 
-<h3>4.3 Enforce PVC Before Verification</h3>
+<h3>4.3 Select Profile and Enforce PVC Before Verification</h3>
 
-<p>For each citation, determine Access Class immediately. Any FAIL citation must be removed or replaced before the manuscript is eligible for publication.</p>
+<p>Select and record the PVC profile before verification begins. For each citation, determine Access Class immediately. Any citation that fails the selected profile must be removed or replaced before the document is eligible for release. Under Profile 2, a citation classed LICENSED-FULLTEXT or INTERNAL passes, and the log must state that an independent reader without the same access cannot reach it.</p>
 
 <h3>4.4 Claim Map Requirement (No &ldquo;floating citations&rdquo;)</h3>
 
 <p>Every citation must be tied to a specific claim (or set of claims) in the manuscript. Citations not mapped to claims are invalid and must be removed or reattached with explicit claim linkage.</p>
+
+<h3>4.5 Citation Brief Method</h3>
+
+<p>By default the verifier receives the full document and works from it. For large documents or multi-document runs, the verification input may instead be a citation brief: an extract containing only what verification requires. The verifier never ingests the full document.</p>
+
+<p><strong>Why it exists.</strong> Full-document ingestion consumes verifier context, slows the run, and encourages skimming in place of verification. In a seven-document Institute run, a brief of roughly five kilobytes replaced five hundred kilobytes of ingestion, the verifier proceeded directly to opening sources, and no context pressure was observed.</p>
+
+<p><strong>Brief construction.</strong> One entry per citation, containing the cited passage verbatim as it appears in the document; the claim the citation must support, stated as a claim; the full reference as written; and the primary URL or locator.</p>
+
+<p><strong>When to use it.</strong> Recommended for multi-document runs and for any document exceeding roughly fifty kilobytes. The full document remains acceptable, and is preferable, for single short documents where context is not under pressure.</p>
+
+<p><strong>Constraint.</strong> The brief must be built from the current version of the document, after all content revisions have been applied. A brief built from a superseded draft verifies a document that no longer exists. Sources passed under the foundational-text provision need no brief entry, since no source retrieval is performed.</p>
+
+<h3>4.6 Multi-Pass Escalation</h3>
+
+<p>A single verification pass does not always find evidence that exists. Evidence may sit in an appendix, a supplementary file, or a companion document on a different domain from the source itself. In one Institute run, a statistic required four passes before it was located in a standalone appendix hosted separately from the main paper.</p>
+
+<p>Where a claim&rsquo;s supporting evidence cannot be located in the primary source, escalate in this order before recording a failure:</p>
+<ol>
+  <li>Retrieve the primary URL or locator.</li>
+  <li>Try alternative access paths for the same work: repository copies, publisher HTML where the PDF is blocked, author-hosted manuscripts, web archive snapshots.</li>
+  <li>Check for supplementary materials, appendices, datasets, or companion documents linked from the primary source. This is the step most often skipped, and the one that most often holds the missing evidence.</li>
+  <li>If steps 1 to 3 fail, run a wider search using a different platform or a deep research tool, on the reasoning that a single retriever&rsquo;s coverage is not the field&rsquo;s coverage.</li>
+</ol>
+
+<p><strong>Recording the result.</strong> Where evidence is found in a supplementary document rather than the main source, the reference must be updated to include the supplementary locator, so a later reader reaches the evidence rather than repeating the search. A claim is not failed merely because it does not appear in the main document: supplementary materials linked from the canonical source are legitimate evidence anchors. A claim is failed when steps 1 to 4 are exhausted and the evidence is still not found, and the log must record which steps were run.</p>
 
 <h2>5. Three-Part Verification Method</h2>
 
@@ -225,24 +267,24 @@
 <p>Confirm the cited work&rsquo;s identity matches the reference:</p>
 <ul>
   <li>Title, authors, year, venue</li>
-  <li>Canonical identifier (preferred): DOI / arXiv / PubMed / ACL / OpenReview / ISBN</li>
-  <li>Canonical landing page URL</li>
+  <li>Canonical identifier (preferred), by source type. <em>Scholarly:</em> DOI, arXiv, PubMed, ACL Anthology, OpenReview, ISBN. <em>Legal:</em> reporter citation, docket number, statute or regulation number, ECLI. <em>Clinical and regulatory:</em> trial registration number, guideline identifier, marketing authorisation or approval number. <em>Standards and commercial:</em> ISO, IEC or IEEE number; report identifier plus publisher. <em>Internal:</em> document identifier, version, and custodian.</li>
+  <li>Canonical landing page URL, or the database record locator where no public page exists</li>
 </ul>
 
 <p>Record any mismatches. If the cited identity cannot be confirmed, the citation fails.</p>
 
 <h3>Part B: Access Verification and Canonical Locator Priority</h3>
 
-<p>Determine Access Class under PVC.</p>
+<p>Determine Access Class under the PVC profile selected in Section 4.3.</p>
 
 <p>Prefer canonical locators in this order (when available):</p>
 <ol>
   <li>DOI landing page that provides FREE-FULLTEXT, or links to a FREE-FULLTEXT version</li>
-  <li>First-party repository (arXiv, ACL Anthology, PubMed Central, institutional repository)</li>
-  <li>Author-hosted full manuscript (stable URL)</li>
+  <li>First-party repository or official publisher of record (arXiv, ACL Anthology, PubMed Central, institutional repository; for non-scholarly sources, the issuing court, agency, regulator, standards body, or originating organisation)</li>
+  <li>Author-hosted full manuscript at a stable URL, or, under Profile 2 only, a licensed database copy or lawfully held internal copy</li>
 </ol>
 
-<p>If only secondary mirrors exist, the verifier must justify their use in the log and still meet FREE-FULLTEXT.</p>
+<p>If only secondary mirrors exist, the verifier must justify their use in the log and must still reach complete text. Where escalation beyond the primary locator was required, record the steps run per Section 4.6.</p>
 
 <h3>Part C: Claim Support Verification (Evidence Standard)</h3>
 
@@ -266,14 +308,16 @@
   <li><strong>PARTIAL SUPPORT:</strong> Evidence supports only a weaker or narrower version of the claim.</li>
   <li><strong>NO SUPPORT:</strong> Evidence does not support the claim.</li>
   <li><strong>AMBIGUOUS:</strong> Cannot confidently determine support from the source text (treated as failure).</li>
+  <li><strong>ATTRIBUTED:</strong> The source was not read, and the rating rests on convergent independent attribution of the same proposition to the same work. Available only under the foundational-text provision of Section 1.1.1, and only for claims that are not load-bearing.</li>
 </ul>
 
 <p><strong>Disposition Rules:</strong></p>
 <ul>
-  <li>Only FULL SUPPORT may pass.</li>
+  <li>Only FULL SUPPORT may pass, except where ATTRIBUTED is expressly permitted under Section 1.1.1.</li>
   <li>PARTIAL SUPPORT requires manuscript revision (narrow the claim) or source replacement.</li>
   <li>NO SUPPORT requires source removal or claim removal.</li>
   <li>AMBIGUOUS requires source replacement or claim rework until verifiable.</li>
+  <li>ATTRIBUTED passes only if the claim is not load-bearing and the log records why. If the argument depends on what the source says, obtain the source and re-rate.</li>
 </ul>
 
 <h2>6. Implementation Procedure</h2>
@@ -348,7 +392,7 @@
   <li>Claim text (verbatim)</li>
   <li>Evidence anchor pointer (page/section)</li>
   <li>Short excerpt (&le; 25 words) or precise paraphrase</li>
-  <li>Support Rating (FULL / PARTIAL / NONE / AMBIGUOUS)</li>
+  <li>Support Rating (FULL / PARTIAL / NONE / AMBIGUOUS / ATTRIBUTED)</li>
   <li>Disposition (KEEP / REVISE CLAIM / REPLACE SOURCE / REMOVE)</li>
 </ul>
 
@@ -362,7 +406,9 @@
 <p><strong>Certification Statement Template</strong></p>
 
 <div class="cert-block">
-I certify that I executed SF0037 CVP v1.4 using live browsing against public sources.<br>
+I certify that I executed SF0037 CVP v1.5, retrieving and reading the portion of each cited source that bears on the claim it supports.<br>
+PVC profile applied: ______ (Open-Publication / Licensed-Access)<br>
+Verification input: ______ (full document / citation brief)<br>
 Total citations inventoried: N = ___<br>
 Citations fully processed: ___ / ___<br>
 Citations retained after PVC and support verification: ___<br>
@@ -374,31 +420,33 @@ Verification completed on: _______________
 <h2>Appendix A: Quick Reference Checklist</h2>
 
 <ul>
-  <li>Live browsing confirmed (URL + timestamp recorded)</li>
+  <li>Source access confirmed (locator + timestamp recorded)</li>
   <li>Citation inventory complete (denominator N present)</li>
-  <li>PVC enforced for every citation (Access Class recorded)</li>
-  <li>Canonical identifier recorded (DOI/arXiv/etc.)</li>
+  <li>PVC profile selected and recorded; Access Class recorded for every citation</li>
+  <li>Canonical identifier recorded, appropriate to source type</li>
   <li>Full text opened for every citation</li>
   <li>Each citation mapped to Claim ID(s)</li>
   <li>Evidence anchors recorded for every claim (page/section + excerpt/paraphrase)</li>
-  <li>Support rating applied (FULL required to pass)</li>
+  <li>Support rating applied (FULL required to pass, except ATTRIBUTED under Section 1.1.1)</li>
   <li>Persistence record captured (archival link and/or local hash)</li>
   <li>Certification statement completed</li>
+  <li>Escalation steps recorded where the primary locator did not yield the evidence</li>
+  <li>Citation brief, if used, built from the current version of the document</li>
 </ul>
 
 </div>
 
 <div class="citation-block">
   <div class="citation-label">Suggested Citation</div>
-  Gantz, T. W. (2025). Citation Verification Protocol (CVP): A Structured Method for Verifying AI-Generated Citations in Academic and Research Contexts (SF0037 v1.4). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18075624</a>
+  Gantz, T. W. (2025). Citation Verification Protocol (CVP): A Structured Method for Verifying AI-Generated Citations in Academic and Research Contexts (SF0037 v1.5). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18075624</a>
 </div>
 
 <div class="article-footer">
 <p>Document: SF0037 Framework Series<br>
-Version: v1.4<br>
+Version: v1.5<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: December 23, 2025<br>
+Date: August 8, 2026<br>
 License: CC-BY 4.0</p>
 </div>
 
