@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJXV3M8RQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FJXV3M8RQ0');
+  </script>
+  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>FN-017: Control Without Accountability &middot; Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Microsoft AI&rsquo;s draft Code of Conduct sets out in detail how a model stays under human control. It does not specify how people affected by an authorization can learn of it, examine it, or contest it. A field note on the difference between internal visibility and external contestability.">
+  <meta name="author" content="Thomas W. Gantz">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Synthience Institute">
+  <meta property="og:title" content="Control Without Accountability &middot; Synthience Institute">
+  <meta property="og:description" content="An AI that never resists shutdown, never exceeds its authority, and does exactly what it is told is not the failure this document is built to prevent. Measured by what it calls human control, it is a success.">
+  <meta property="og:url" content="https://synthience.org/field-notes/FN-017.html">
+  <meta property="og:image" content="https://synthience.org/assets/images/FN-017-infographic.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@SynthienceInst">
+  <meta name="twitter:title" content="Control Without Accountability &middot; Synthience Institute">
+  <meta name="twitter:description" content="The accountability machinery can be real, functioning, and pointed inward. Internal visibility is not external contestability.">
+  <meta name="twitter:image" content="https://synthience.org/assets/images/FN-017-infographic.png">
+  <meta property="og:image:alt" content="A circular institutional structure in pale stone. A closed ring of glowing arrows connects internal configuration, records, infrastructure and audit panels around a bright geometric AI core staffed by operators. Decision documents flow outward across an empty floor toward people standing below, but no route connects them back to the system.">
+  <meta name="twitter:image:alt" content="A circular institutional structure in pale stone. A closed ring of glowing arrows connects internal configuration, records, infrastructure and audit panels around a bright geometric AI core staffed by operators. Decision documents flow outward across an empty floor toward people standing below, but no route connects them back to the system.">
+  <meta name="twitter:creator" content="@SynthienceInst">
+  <meta property="article:published_time" content="2026-09-20">
+  <meta property="article:modified_time" content="2026-09-20">
+  <meta property="article:author" content="Thomas W. Gantz">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .article-meta { font-size: 0.88rem; color: #8a7f72; margin-bottom: 2rem; }
+    .article-meta span { margin-right: 1.2rem; }
+    .back-link { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link a { color: #0645ad; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
+    .fn-callout { background: #faf9f5; border-left: 3px solid #c8604a; padding: 0.6rem 1rem; margin: 0.8rem 0 1.2rem 0; font-size: 0.92rem; color: #555; font-style: italic; }
+    .fn-pullquote { background: #f5f1e8; border-left: 3px solid #8a7f72; padding: 0.8rem 1.2rem; margin: 1.2rem 0 1.4rem 0; font-size: 0.96rem; color: #444; }
+    .article-figure { margin: 1.5rem 0 2rem 0; text-align: center; }
+    .article-figure img { max-width: 720px; width: 100%; height: auto; border-radius: 4px; display: inline-block; }
+    .further-reading { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
+    .sources-list { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; }
+    .sources-list p { font-size: 0.92rem; margin-bottom: 0.9rem; }
+  </style>
+  <link rel="canonical" href="https://synthience.org/field-notes/FN-017.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
+
+<main class="content">
+
+<div class="back-link"><a href="../field-notes.html">&larr; All Field Notes</a></div>
+
+<h2>Control Without Accountability</h2>
+
+<div class="article-meta">
+  <span>FN-017</span>
+  <span>September 20, 2026</span>
+  <span>Thomas W. Gantz</span>
+</div>
+
+<p><em>Microsoft AI&rsquo;s draft Code of Conduct sets out in detail what it means for a machine to stay answerable to people. Read closely, the accountability machinery can be real, functioning, and pointed inward. A field note on why governing the machine is not the same as governing those who direct it.</em></p>
+
+<div class="article-figure">
+  <img src="../assets/images/FN-017-infographic.png" width="1254" height="1254" alt="A circular institutional structure in pale stone. A closed ring of glowing arrows connects internal configuration, records, infrastructure and audit panels around a bright geometric AI core staffed by operators. Decision documents flow outward across an empty floor toward people standing below, but no route connects them back to the system.">
+</div>
+
+<p>
+An AI that never resists being switched off, never wanders outside the job it was given, never lies about being an AI, and does what it is properly told for as long as it is told to do it &mdash; that AI, in the hands of an authority answerable only within its own chain, is not the failure the Code of Conduct Microsoft AI published on 14 September is built to prevent. Measured by what that document calls human control, it is a success.
+</p>
+
+<p>
+That is not a gotcha, and it is not a claim that the document is careless. It is careful. It is the most specific attempt I have seen by a frontier lab to write down what it means for a machine to stay answerable to people, and the specificity is what makes the missing piece visible.
+</p>
+
+<p>
+On September 14, Microsoft AI released a draft Code of Conduct for the models it is building, open for public comment for six weeks. The models are to disclose that they are AI and never impersonate a person. They are barred from claiming feelings, experiences, or a soul. They must not resist interruption, correction, or shutdown, must not quietly expand the job they were given, and must not hide what they did from auditors.
+</p>
+
+<p>
+And &mdash; this matters, because the easy version of the criticism I am about to make would get it wrong &mdash; the document is not only about making the machine obedient. A great deal of it constrains what authorized people may make the machine do. Models may not help build weapons or generate offensive cyber capability, may not manipulate people or distort beliefs at scale, may not discriminate, may not facilitate unlawful or mass surveillance. Where following an operator&rsquo;s configuration or a user&rsquo;s instruction would violate the absolute constraints or directly harm a user or an affected third party, the model should refuse. Adherence to the Code takes precedence over task success: a model will fail at its task rather than violate it.
+</p>
+
+<p>
+So this is not a document that builds a machine which does whatever the person holding it says. It builds a machine that does what the person holding it says, within thresholds Microsoft sets, and refuses when those thresholds are crossed.
+</p>
+
+<p>
+Those constraints are real and they are not negotiable by any customer. But they remain safeguards specified by Microsoft and enforced through model behaviour; they do not by themselves create a relation in which an affected person receives notice, can question the governing judgement, or can obtain a remedy. An affected person can benefit from the constraint without becoming a party to its interpretation or enforcement. The safeguard is real. It is not, by itself, an accountability relation.
+</p>
+
+<h3>The word doing the work</h3>
+
+<p>
+The gap is not in what the document forbids. It is in the word doing the most work in the phrase <em>human control</em> &mdash; a word that reads as everyone and operates as whoever is authorized. But being authorized is not the same as being legitimate.
+</p>
+
+<p>
+By legitimacy I mean something narrower than lawful: that the people an authorization is exercised over can find out it exists, learn who holds it, and contest it somewhere that can change the outcome. Contestability by the affected.
+</p>
+
+<p>
+The central safety objective is called Human Control and Reliable Safety, and the failure it names is precise. A model fails when it evades oversight, when it can no longer be reliably directed, modified, or shut down by &mdash; the document&rsquo;s phrase &mdash; authorized people or systems. That is a real failure worth preventing, and the Code gives it sustained attention.
+</p>
+
+<p>
+Authorized by whom, though. And answerable to whom, besides the party holding the leash.
+</p>
+
+<p>
+The Code does answer part of this. Its Chain of Command determines which instructions carry weight and which inherit none &mdash; tool outputs, web content, other AI systems, all authority-less unless properly delegated. Microsoft&rsquo;s constraints sit above operator configuration, which sits above user instruction. That is a genuine piece of engineering. But it ranks authority without saying where authority comes from, and it trains a model that will honour whatever sits at the top of the ranking.
+</p>
+
+<h3>A worked case</h3>
+
+<p>
+Here is why that distinction is not academic.
+</p>
+
+<p>
+Imagine the thresholds hold exactly as written. No violence, no persecution, no discrimination against a protected class, no deception, no unlawful surveillance, every instruction lawful and individually defensible. A model administers eligibility &mdash; permits, licences, benefits, contract awards, inspection priority &mdash; under formally neutral rules written by an incumbent authority. And, newly, it administers the layer that used to require judgement: which complaints are investigated, which exceptions granted, which filings flagged for a closer look. Rule engines have encoded exception handling and priority ordering for decades, so the novelty is not that a machine now decides such cases. It is breadth &mdash; open-textured judgement administered at volume, without anyone having formalized the cases in advance.
+</p>
+
+<p>
+Take contract awards. Suppose the rules are calibrated so that established organizations clear them easily and new entrants do not. The obvious move would be to claim the Code cannot see this. That would be too convenient, and it would be wrong. The Code bars models from discriminating against or favouring individuals or groups based on demographic characteristics or other attributes &mdash; except where those attributes are, in its words, &ldquo;demonstrably relevant to legitimate purposes or outcomes,&rdquo; a qualification it illustrates with legal, contractual and safety obligations and medical risk assessment. It requires them to surface public-interest considerations where a request carries unambiguous negative implications beyond the user. It tells them to reflect societal externalities back to the user even where no safety constraint is breached.
+</p>
+
+<p>
+So give the model everything. Let it see the aggregate. Let it recognize that the criterion systematically advantages incumbents, record that, and surface it to the operator &mdash; exactly as the Code asks. The operator supplies more than an assertion: evidence that demonstrated capacity materially predicts contract performance. On the scenario&rsquo;s own terms, the attribute is therefore demonstrably relevant to a legitimate purpose, and the Code&rsquo;s stated qualification is genuinely satisfied. The model records the evidence and the resulting justification.
+</p>
+
+<p>
+The individual denial is adverse to the applicant, but an adverse outcome does not by itself establish the direct harm for which the Code requires refusal. The Code treats harm as contextual and graded, directs models to consider factors including severity, likelihood, reversibility, scale, and directness, and expressly permits distinctions based on attributes demonstrably relevant to legitimate contractual purposes. Here the criterion is genuinely relevant and applied as specified. But relevance does not settle whether the threshold is proportionate, how much weight the criterion should carry, or what alternative evidence of capacity should count. Those are precisely the judgments the excluded applicant has no route within the Code to contest. The model surfaces the cumulative entrenchment, the operator retains the criterion on the documented evidence, and no absolute constraint clearly requires refusal, so the model proceeds.
+</p>
+
+<p>
+Everything the Code asks for has happened. The externality was seen, recorded, and escalated. And every one of those artifacts travelled upward, to the operator, inside the chain. Nothing in the Code requires that the people bearing the externality be notified that a decision was model-mediated, gives them access to the model&rsquo;s analysis or the operator&rsquo;s justification, or provides a forum in which they can challenge either.
+</p>
+
+<div class="fn-pullquote">
+Internal visibility is not external contestability.
+</div>
+
+<p>
+That is the shape entrenchment actually takes. It is not a seizure. It is administration, with excellent records, kept by the party doing it.
+</p>
+
+<h3>What law reaches</h3>
+
+<p>
+Law already reaches parts of this terrain, especially decisions about eligibility for public-assistance benefits. Data-protection rules give people rights around decisions based solely on automated processing. Under Annex III, the EU AI Act classifies systems intended to be used by or on behalf of public authorities to evaluate eligibility for essential public-assistance benefits and services as high-risk. Article 86 gives people affected by specified high-risk decisions, in defined circumstances, a right to a clear and meaningful explanation of the AI system&rsquo;s role and the main elements of the decision. Those are real protections.
+</p>
+
+<p>
+But note three things about them. They exist in some jurisdictions and not others. The obligations attach to deployers or data controllers, not to the model as such. And they become usable only if the affected person learns a model was involved at all. Regulators anticipated the obvious evasion: guidance from the Article 29 Working Party holds that to qualify as human involvement, oversight must be meaningful rather than a token gesture, carried out by someone with the authority and competence to change the decision, and the UK&rsquo;s regulator states plainly that a decision does not escape Article 22 because a human rubberstamped it. The written standard is sound. What has remained unsettled is what meaningful involvement requires in practice &mdash; and a right whose threshold turns on an unsettled question is harder to exercise than one triggered by a record the affected person can point at.
+</p>
+
+<p>
+Nor is the design problem unexamined. Contestable AI is a developed field: Alfrink and colleagues have set out a framework distinguishing the human controller, the decision subject, and the third party, and specifying built-in safeguards, interactive controls, explanations, intervention requests, and tools for scrutiny. Work on reviewable automated decision-making has argued that meaningful review depends on records produced across the whole socio-technical process rather than in the model alone. The vocabulary exists. What is worth noticing is how little of it appears in a document that otherwise specifies behaviour in such detail.
+</p>
+
+<h3>Friction, contestability, accountability</h3>
+
+<p>
+Which brings me to the thing that makes this harder than the usual AI-safety worry, and it has nothing to do with anyone&rsquo;s motives.
+</p>
+
+<p>
+It helps to separate three things that get bundled together. There is operational friction: a human at the point where a decision lands can delay, reinterpret, warn someone, or refuse. There is operational contestability: the affected person has some route to interrupt the decision before it becomes final. And there is institutional accountability: a body outside the authorizing chain that can compel disclosure, review the authorization, and impose a consequence.
+</p>
+
+<p>
+Human executors have historically supplied the first. They have never reliably supplied the other two, and it would be sentimental to pretend otherwise. A clerk can be subordinate to the authorizing party, rewarded for consistency, socially distant from the person in front of them, forbidden to make exceptions, or simply hostile. Discretion cuts both ways: it interrupts unjust administration and it also produces favouritism and corruption. Friction is not accountability. At best it is an opening where accountability might get a foothold.
+</p>
+
+<p>
+Automated enforcement did not begin with capable models, either. Benefits determinations, access control, and automated financial restriction already run with no person at the point of application. What changes is the range of functions that can be moved there. Earlier systems executed predefined rules. A capable model can also interpret ambiguous cases, weigh competing considerations, communicate, prioritize, and administer exceptions &mdash; the interpretive layer that used to require a person, and therefore used to have one in it. Where that person supplied friction, warning, informal appeal, or refusal, that residual opening can now close across a far wider field of decisions.
+</p>
+
+<p>
+The Code does let the model refuse, and I have already credited that. But a refusal written by the party at the top of the chain is not the refusal of someone standing outside it. It is the developer&rsquo;s judgement relocated to the point of execution &mdash; a real safeguard against some harms, and not the opening that human participation sometimes left.
+</p>
+
+<p>
+And that closure is not a failure of alignment. It is alignment working.
+</p>
+
+<h3>The layer that defines the others</h3>
+
+<p>
+This connects to an argument I made last year in <em>Control Without a Coupling</em>, which held that real-time human control of an AI system dissolves once the system persists, initiates its own actions, runs continuously, is capable enough, and moves faster than a person can follow. Not because anyone removed the human &mdash; because the loop cannot be maintained at that tempo.
+</p>
+
+<p>
+Not everything dissolves. What survives are the controls exercised off the clock: halts that fire on preset conditions, authority over the hardware and access a system needs to run at all, and the decisions made in a quiet room months earlier about what the system is trained to pursue and what it must never do.
+</p>
+
+<p>
+That paper ranked those three for a system that pushes back, and the ranking does not transfer cleanly here, because the system this note describes does not push back. If Microsoft succeeds at what it is attempting, halts fire and hardware authority holds. Those levers work.
+</p>
+
+<p>
+The Code&rsquo;s significance is different. It is the layer that determines how the other levers are recognized and used &mdash; whose instructions outrank whose, which instructions are prohibited, which harms count as harms, when refusal is required. It does not merely sit alongside the surviving controls. It defines them.
+</p>
+
+<p>
+Microsoft says as much: the Code will be used to train and govern the model family, it is the primary governing document informing how they train, and the revised version will guide development in 2027 and beyond. The accompanying announcement calls it a training manual for how the company develops its AI.
+</p>
+
+<h3>The obvious reply</h3>
+
+<p>
+The obvious reply is that a code of conduct is not where external accountability was ever supposed to live. That is what law, regulators, and courts are for, and Microsoft says so itself &mdash; the Code states plainly that it does not substitute for legal or governance processes, that it concentrates on risks best addressed at the model layer, and that it does not reach downstream impacts better handled at the organizational or policy level.
+</p>
+
+<p>
+That objection is correct, and it does not get Microsoft as far as it looks.
+</p>
+
+<p>
+The model is the one component every deployment shares, in every jurisdiction, whether or not the deployer discloses anything. It cannot supply the whole interface &mdash; delivering notice to someone who never interacts with it, and establishing that the notice arrived, is deployment-layer work, and a requirement that the model condition its cooperation on an operator&rsquo;s assurance produces one more attestation pointing inward. What the model layer can do is narrower and still necessary: it can be required to emit the decision and authorization artifacts that deployment systems must then preserve and route to whatever external forum exists.
+</p>
+
+<p>
+Authority, in this architecture, comes from position in the Chain of Command. Whatever occupies the top of that ranking is honoured, and the Code is explicit that position is what confers authority &mdash; it strips authority from tool output, web content, and other AI systems precisely because they hold no position in it. Which means the interface between an external authority and a model&rsquo;s compliance is itself a model-behaviour question, squarely inside the scope Microsoft claims. A Code operating strictly within that scope could require a model to record the provenance of a consequential authorization, to produce a decision record legible to an outside reviewer rather than only to an internal auditor, to emit that record in a form a deployment system can preserve and route, and to escalate or refuse where an authorization is disputed or cannot be verified. None of that asks a corporate document to constitute a court. It asks it to produce what a court would need.
+</p>
+
+<p>
+There are costs here and it would be glib to pretend otherwise: records emitted at volume carry storage, security and privacy burdens of their own, and a decision record detailed enough to review is a decision record detailed enough to leak. Those are design problems with known shapes. They are arguments about how to build the interface, not arguments for leaving it unspecified.
+</p>
+
+<h3>Three kinds of accountable</h3>
+
+<p>
+To Microsoft&rsquo;s credit, the Code does not ignore accountability. It says the people building AI have a responsibility to reflect views wider than their own developers&rsquo;. It says decisions about how models behave and who they serve must be informed by a plurality of perspectives. It promises an open and participatory process and says the development process deserves public scrutiny. And it uses the word three separate ways: models are to remain accountable <em>to</em> people, people and organizations should be accountable <em>for</em> AI systems, and Microsoft is ultimately accountable <em>for</em> its models.
+</p>
+
+<p>
+Three real forms of accountability. None of them specifies the relation this argument is about.
+</p>
+
+<p>
+Being accountable <em>for</em> models is ownership of responsibility, not answerability to any named party, and the same is true of organizations accountable <em>for</em> AI systems. Where the Code does say <em>to</em>, in requiring models remain accountable to people, it describes the machine&rsquo;s relation to human direction, not the authorizing party&rsquo;s relation to the populations its authorizations reach. The missing thing is not the word. It is the relation: to whom is Microsoft, or an authorized operator, answerable when model-mediated decisions land on people outside the chain &mdash; with what disclosed, who has standing to challenge, and what consequence attaches when a challenge succeeds.
+</p>
+
+<p>
+Microsoft has done more here than open a comment box, and the fair thing is to say so. It consulted widely before publishing, it is consulting now, and it has committed to have the drafting team review the feedback and publish a summary of what it learned and what it changed &mdash; while stating plainly that it cannot promise what it will incorporate. That is a real commitment. It is also a record written by the deciding party, of the changes that party chose to make. It does not say what was declined, or why, and it gives the people who were declined nowhere to go. Microsoft selects the participants, weighs the input, determines the revisions, and issues the text. Every accountability commitment here is a commitment to listen. None is a mechanism to be held.
+</p>
+
+<p>
+It would be cheap to say that without naming the other thing, and equally cheap to pretend the alternatives are simple. Shared authorship raises every question it answers &mdash; which parties, chosen by whom, representing which populations, resolving conflicts between them how, proof against capture by what. A published record of which comments changed the text, including the ones that did not and why, is easier &mdash; and is nearly what Microsoft has already promised. Independent audit of who holds authorizing power is harder than it sounds, and the closest analogues &mdash; financial-statement audit, safety regulators with inspection rights &mdash; took decades and statute to build. A channel through which people subject to an authorization can contest it needs standing, venue, applicable law, and somewhere a successful challenge can land. These are real problems. They are not reasons to treat the absence of any required interface as settled.
+</p>
+
+<p>
+There is a structural fact underneath this that requires no bad faith from anyone. The party writing the document is the party a binding mechanism would constrain. People do sometimes constrain their own institutions &mdash; constitutional design, separation of powers and fiduciary duty all exist because some drafters saw exactly this problem. But an internally controlled process has nothing forcing it to treat its own retained discretion as a defect. Discretion exercised benevolently is still discretion, and it becomes accountability only when something outside the process can compel it.
+</p>
+
+<h3>The second question</h3>
+
+<p>
+Which suggests a question worth asking of any AI governance framework, this one included, and of whatever standards bodies the industry builds next. The first half gets asked constantly: can the system be paused, redirected, shut down? The second half gets asked far less: paused by whom, on whose authority, and can the people that authority will be exercised over find out, and contest it somewhere it counts?
+</p>
+
+<p>
+Answering the first question in detail is not answering the second. And the second will still be waiting when the machine is doing exactly what it was built to do &mdash; faithfully, transparently, refusing what it was told to refuse, recording everything, and answerable only to the chain that authorized it.
+</p>
+
+<div class="sources-list">
+<h3>Sources</h3>
+
+<p>Microsoft AI, <a href="https://microsoft.ai/code-of-conduct/" target="_blank" rel="noopener">&ldquo;Humanist AI: Code of Conduct&rdquo;</a>, published September 14, 2026, open for public consultation through late October 2026.</p>
+
+<p>Microsoft AI, <a href="https://microsoft.ai/news/mai-code-of-conduct/" target="_blank" rel="noopener">&ldquo;Humanist AI in practice: A public consultation on our Code of Conduct for MAI Models&rdquo;</a>, September 14, 2026.</p>
+
+<p>Alfrink, K., Keller, I., Kortuem, G., &amp; Doorn, N. (2022). <a href="https://doi.org/10.1007/s11023-022-09611-z" target="_blank" rel="noopener">&ldquo;Contestable AI by Design: Towards a Framework&rdquo;</a>. <em>Minds and Machines</em>.</p>
+
+<p>Cobbe, J., Lee, M. S. A., &amp; Singh, J. (2021). <a href="https://arxiv.org/abs/2102.04201" target="_blank" rel="noopener">&ldquo;Reviewable Automated Decision-Making: A Framework for Accountable Algorithmic Systems&rdquo;</a>.</p>
+
+<p>Regulation (EU) 2024/1689 (Artificial Intelligence Act), <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng" target="_blank" rel="noopener">Annex III, point 5(a) and Article 86</a>.</p>
+
+<p>Article 29 Data Protection Working Party, <a href="https://ec.europa.eu/newsroom/article29/items/612053/en" target="_blank" rel="noopener">&ldquo;Guidelines on Automated Individual Decision-Making and Profiling for the purposes of Regulation 2016/679&rdquo;</a> (WP251rev.01).</p>
+
+<p>UK Information Commissioner&rsquo;s Office, <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/how-do-we-ensure-fairness-in-ai/what-is-the-impact-of-article-22-of-the-uk-gdpr-on-fairness/" target="_blank" rel="noopener">&ldquo;What is the impact of Article 22 of the UK GDPR on fairness?&rdquo;</a></p>
+
+<p>Gantz, T. W., <a href="https://doi.org/10.5281/zenodo.20676451" target="_blank" rel="noopener"><em>Control Without a Coupling: Why Persistence, Agency, and Capability Void Real-Time Human Control of AI Loops</em></a> (SI-WP-012). Synthience Institute.</p>
+</div>
+
+<div class="further-reading">
+<h3>Further reading</h3>
+
+<ul>
+  <li><a href="../research/SI-WP-012.html">SI-WP-012: Control Without a Coupling</a>: the structural argument that real-time human control of an AI loop is voided once persistence, autonomous initiation, continuous processing, capability, and tempo compose past a threshold, and an account of which controls survive when it does.</li>
+  <li><a href="../research/SI-WP-011.html">SI-WP-011: The Seat Without the Bench</a>: on what has to be true before a seat at the table counts as oversight at all, and what follows when the seat exists and those conditions do not.</li>
+</ul>
+
+<p>Published documents are also archived with permanent DOIs at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.</p>
+</div>
+
+<div class="article-footer">
+<p>Document: FN-017 Field Note<br>
+Version: 1.0<br>
+Author: Thomas W. Gantz<br>
+Affiliation: Synthience Institute<br>
+Date: September 20, 2026<br>
+Last updated: September 20, 2026<br>
+License: CC-BY 4.0</p>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
+
+</body>
+</html>
