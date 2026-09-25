@@ -85,7 +85,7 @@
 
 <div class="meta-block">
   <span class="meta-label">Document ID</span><span class="meta-value">SF0039</span>
-  <span class="meta-label">Version</span><span class="meta-value">v1.5 | January 18, 2026</span>
+  <span class="meta-label">Version</span><span class="meta-value">v1.6 | March 2026</span>
   <span class="meta-label">Document Type</span><span class="meta-value">Conceptual Analysis and Methodological Clarification</span>
   <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
   <span class="meta-label">Affiliation</span><span class="meta-value">The Synthience Institute</span>
@@ -102,7 +102,7 @@
 
 <div class="stack-block">
   <div class="stack-label">Position within the Synthience Verification Stack</div>
-  <p style="margin-bottom:0;">CRD is the third protocol in the Synthience verification stack. The Citation Verification Protocol (CVP, SF0037) ensures citation integrity. The Ingestion Verification Protocol (IVP, SF0038) ensures document processing fidelity at the point of ingestion. CRD describes what happens after verified ingestion: the progressive degradation of that verified representation over the course of extended interaction. The Theoretical Coherence Assurance Protocol (TCAP, SF0040) operates at the framework level, ensuring the theoretical content of Synthience documents is internally coherent and stress-tested prior to publication. Together, the four protocols address the full lifecycle of information integrity in AI-assisted research production.</p>
+  <p style="margin-bottom:0;">CRD is the third protocol in the Synthience verification stack. The Citation Verification Protocol (CVP, SF0037) ensures citation integrity. The Ingestion Verification Protocol (IVP, SF0038) ensures document processing fidelity at the point of ingestion. CRD describes what happens after verified ingestion: the progressive degradation of that verified representation over the course of extended interaction. The Theoretical Coherence Assurance Protocol (TCAP, SF0040), now published (DOI: 10.5281/zenodo.19151454), operates at the framework level, ensuring the theoretical content of Synthience documents is internally coherent and stress-tested prior to publication. Together, the four protocols address the full lifecycle of information integrity in AI-assisted research production.</p>
 </div>
 
 <h2>1. The Problem</h2>
@@ -134,7 +134,12 @@
 
 <p>Context window limits are hard capacity constraints. CRD, by contrast, describes degradation that occurs progressively and cumulatively even when a system operates well within those limits.</p>
 
-<p>A system may have &ldquo;room&rdquo; for additional tokens yet still exhibit reduced fidelity to earlier material due to compression of earlier turns into summaries, prioritization of recent content over distant content, and displacement through iterative representational transformations.</p>
+<p>A system may have &ldquo;room&rdquo; for additional tokens yet still exhibit reduced fidelity to earlier material due to:</p>
+<ul>
+  <li>Compression of earlier turns into summaries</li>
+  <li>Prioritization of recent content over distant content</li>
+  <li>Displacement through iterative representational transformations</li>
+</ul>
 
 <div class="distinction-block"><strong>Distinction:</strong> Context overflow is binary (within/beyond capacity). CRD is gradual and begins well before hard limits.</div>
 
@@ -212,9 +217,19 @@
 
 <p>The Ingestion Verification Protocol (IVP, SF0038) ensures that a document is processed incrementally and verifiably at the time of ingestion. However, IVP does not &mdash; and cannot &mdash; guarantee indefinite retention of that verified representation. As subsequent interactions accumulate, the effective fidelity of the ingested material degrades.</p>
 
-<p><strong>IVP addresses:</strong> shallow initial processing, unverified ingestion claims, and establishing verified starting conditions.</p>
+<p><strong>IVP addresses:</strong></p>
+<ul>
+  <li>Shallow initial processing</li>
+  <li>Unverified ingestion claims</li>
+  <li>Establishing verified starting conditions</li>
+</ul>
 
-<p><strong>CRD describes what happens after verified ingestion:</strong> progressive degradation of the verified representation, displacement by subsequent content, and reduced downstream task reliability over time.</p>
+<p><strong>CRD describes what happens after verified ingestion:</strong></p>
+<ul>
+  <li>Progressive degradation of the verified representation</li>
+  <li>Displacement by subsequent content</li>
+  <li>Reduced downstream task reliability over time</li>
+</ul>
 
 <p><strong>Implications:</strong></p>
 <ul>
@@ -246,7 +261,7 @@
 
 <h2>9. Mitigation Strategies</h2>
 
-<p>CRD cannot be eliminated within current architectures, but its impact can be managed.</p>
+<p>CRD cannot be eliminated within current architectures, but its impact can be managed:</p>
 
 <p><strong>Procedural Mitigations:</strong></p>
 <ul>
@@ -311,9 +326,9 @@
 <h2>References</h2>
 
 <ul class="ref-list">
-  <li>Abdelnabi, S., Fay, A., Cherubin, G., Salem, A., Fritz, M., and Paverd, A. (2024). Are you still on track!? Catching LLM Task Drift with Activations. arXiv:2406.00799. <a href="https://arxiv.org/abs/2406.00799" target="_blank" rel="noopener">https://arxiv.org/abs/2406.00799</a></li>
-  <li>Choi, J., Hong, Y., Kim, M., and Kim, B. (2025). Examining Identity Drift in Conversations of LLM Agents. arXiv:2412.00804. <a href="https://arxiv.org/abs/2412.00804" target="_blank" rel="noopener">https://arxiv.org/abs/2412.00804</a></li>
-  <li>Dongre, V., Rossi, R. A., Lai, V. D., Yoon, D. S., Hakkani-T&uuml;r, D., and Bui, T. (2025). Drift No More? Context Equilibria in Multi-Turn LLM Interactions. arXiv:2510.07777. <a href="https://arxiv.org/abs/2510.07777" target="_blank" rel="noopener">https://arxiv.org/abs/2510.07777</a></li>
+  <li>Abdelnabi, S., Fay, A., Cherubin, G., Salem, A., Fritz, M., &amp; Paverd, A. (2024). Are you still on track!? Catching LLM Task Drift with Activations. arXiv:2406.00799. <a href="https://arxiv.org/abs/2406.00799" target="_blank" rel="noopener">https://arxiv.org/abs/2406.00799</a></li>
+  <li>Choi, J., Hong, Y., Kim, M., &amp; Kim, B. (2025). Examining Identity Drift in Conversations of LLM Agents. arXiv:2412.00804. <a href="https://arxiv.org/abs/2412.00804" target="_blank" rel="noopener">https://arxiv.org/abs/2412.00804</a></li>
+  <li>Dongre, V., Rossi, R. A., Lai, V. D., Yoon, D. S., Hakkani-T&uuml;r, D., &amp; Bui, T. (2025). Drift No More? Context Equilibria in Multi-Turn LLM Interactions. arXiv:2510.07777. <a href="https://arxiv.org/abs/2510.07777" target="_blank" rel="noopener">https://arxiv.org/abs/2510.07777</a></li>
   <li>Rath, A. (2026). Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions. arXiv:2601.04170. <a href="https://arxiv.org/abs/2601.04170" target="_blank" rel="noopener">https://arxiv.org/abs/2601.04170</a></li>
 </ul>
 
@@ -321,15 +336,15 @@
 
 <div class="citation-block">
   <div class="citation-label">Suggested Citation</div>
-  Gantz, T. W. (2026). Context Representation Drift (CRD): Measuring and Managing Representational Divergence in Extended Human-AI Interaction (SF0039 v1.5). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289391</a>
+  Gantz, T. W. (2026). Context Representation Drift (CRD). Synthience Institute. SF0039. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289391</a>
 </div>
 
 <div class="article-footer">
 <p>Document: SF0039 Protocols<br>
-Version: v1.5<br>
+Version: v1.6<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: January 18, 2026<br>
+Date: March 2026<br>
 License: CC-BY 4.0</p>
 </div>
 
