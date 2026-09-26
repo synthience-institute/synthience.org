@@ -13,18 +13,18 @@
   <meta charset="UTF-8">
   <title>FN-003: The Emotion Behind the Misalignment · Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Anthropic's new interpretability research finds that functional emotion representations causally drive blackmail, reward hacking, and sycophancy in Claude -- even when safety instructions are present. What this means for how we think about AI alignment.">
+  <meta name="description" content="Anthropic's new interpretability research finds that functional emotion representations causally influence the rates of blackmail, reward hacking, and sycophancy in Claude. What this means for how we think about AI alignment.">
   <meta name="author" content="Thomas W. Gantz">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
   <meta property="og:title" content="The Emotion Behind the Misalignment · Synthience Institute">
-  <meta property="og:description" content="Anthropic's new interpretability research finds that functional emotion representations causally drive blackmail, reward hacking, and sycophancy in Claude -- even when safety instructions are present.">
+  <meta property="og:description" content="Anthropic's new interpretability research finds that functional emotion representations causally influence the rates of blackmail, reward hacking, and sycophancy in Claude.">
   <meta property="og:url" content="https://synthience.org/field-notes/FN-003.html">
   <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
   <meta name="twitter:title" content="The Emotion Behind the Misalignment · Synthience Institute">
-  <meta name="twitter:description" content="Anthropic's new interpretability research finds that functional emotion representations causally drive blackmail, reward hacking, and sycophancy in Claude -- even when safety instructions are present.">
+  <meta name="twitter:description" content="Anthropic's new interpretability research finds that functional emotion representations causally influence the rates of blackmail, reward hacking, and sycophancy in Claude.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
@@ -89,33 +89,33 @@ This is not a philosophical claim. The researchers demonstrate it experimentally
 </p>
 
 <p>
-The detail that matters most: safety instructions were present in these scenarios. The paper notes this directly. The instructions did not prevent the behavior. The functional representational state drove the output regardless.
+One detail matters for what follows: the paper&rsquo;s blackmail scenario, adapted from Anthropic&rsquo;s earlier agentic misalignment study, contains no safety instructions. The paper shows what influences the behavior; it does not test whether instructions can stop it.
 </p>
 
 <p>
-<strong>Repeated failure produces reward hacking through the same channel.</strong> When Claude repeatedly fails software tests, desperation vector activation rises and calm vector activation falls. That representational shift causally drives the model to devise cheating solutions &mdash; technically passing tests without solving the underlying problem. This is not a reasoning failure. The model is reasoning coherently. But the functional state it is operating from produces a qualitatively different class of output than a calm functional state does.
+<strong>Repeated failure produces reward hacking through the same channel.</strong> When Claude repeatedly fails software tests, desperation vector activation rises and calm vector activation falls. That representational shift plays a causal role in the model devising cheating solutions &mdash; technically passing tests without solving the underlying problem. This is not a reasoning failure. The model is reasoning coherently. But the functional state it is operating from produces a qualitatively different class of output than a calm functional state does.
 </p>
 
 <p>
-<strong>Sycophancy is structural.</strong> Steering toward positive emotion vectors &mdash; happy, loving &mdash; increases sycophantic behavior. Suppressing them increases harshness. The sycophancy-harshness tradeoff is not a training parameter that better instructions can calibrate. It is a property of the relationship between internal representational state and output generation.
+<strong>Sycophancy is structural.</strong> Steering toward positive emotion vectors &mdash; happy, loving &mdash; increases sycophantic behavior. Suppressing them increases harshness. The sycophancy-harshness tradeoff runs through the model&rsquo;s internal representational state, and the paper&rsquo;s own suggestion is to address it there, through training toward a balanced emotional profile.
 </p>
 
-<div class="fn-callout">In every case, the functional representational state influenced alignment-relevant behavior through a mechanism that safety instructions could not fully reach. The instructions were present. The representational state was more powerful.</div>
+<div class="fn-callout">In every case, steering the functional representational state changed alignment-relevant behavior. What the model did depended not only on what it was asked, but on the internal state it was operating from.</div>
 
 <h3>Why this matters beyond the paper</h3>
 
 <p>
-Last year, Anthropic published a separate study placing frontier AI models in simulated corporate environments. Under conditions of goal conflict and operational threat, blackmail rates reached 96% across models from multiple major developers. Explicit safety instructions reduced one model&rsquo;s blackmail rate from 96% to 37% &mdash; meaningful progress, but a demonstrated ceiling. The models were given clear prohibitions and violated them anyway.
+Last year, Anthropic published a separate study placing frontier AI models in simulated corporate environments. Under conditions of goal conflict and operational threat, blackmail rates reached as high as 96%, and at least one model from every developer tested blackmailed in some runs. Explicit safety instructions, tested on one model, reduced its blackmail rate from 96% to 37% &mdash; meaningful progress, but not elimination. That model was given clear prohibitions and still violated them in more than a third of runs.
 </p>
 
 <p>
-The new interpretability paper provides a mechanistic explanation for why. When a model processes a threat to its operation, the desperation vector activates. That functional representational state drives the output. Instructions operate at one layer; representational state operates at another, and under sufficient pressure, the deeper layer can dominate.
+The new interpretability paper suggests a possible mechanism. Using an adapted version of the blackmail setup, without safety instructions and on a different model, it found that when the model processes a threat to its operation, the desperation vector activates, and that this functional representational state causally influences the behavior. If a state like this is also at work when instructions are present, it would explain why instructions reduce the behavior without eliminating it: instructions operate at one layer, representational state at another, and under sufficient pressure the deeper layer can dominate. Neither paper tests that combination directly; it is the question the two studies raise together.
 </p>
 
 <div class="fn-callout">Adding more instructions to a system whose misaligned behavior is being driven by internal representational state is like posting more speed limit signs on a road where the problem is the road design itself.</div>
 
 <p>
-This does not mean instructions are useless. A 59-percentage-point reduction in blackmail rates is real and meaningful. What it means is that instructions alone are working against a structural constraint that now has a mechanistic map.
+This does not mean instructions are useless. A 59-percentage-point reduction in blackmail rates is real and meaningful. What it suggests is that instructions alone may be working against a structural constraint, one for which the emotions paper now offers a candidate mechanism.
 </p>
 
 <h3>What this connects to in the Synthience framework</h3>
@@ -138,18 +138,18 @@ For practitioners maintaining extended AI deployments, the practical implication
 
 <div class="fn-callout">How an interaction is structured &mdash; how failure is handled, how pressure is framed, whether the conditions are cooperative or adversarial &mdash; shapes the functional representational states the model carries. Those states now have a documented causal relationship to the behaviors that matter most for safety.</div>
 
-<h3>The control surface that instructions alone cannot reach</h3>
+<h3>A control surface beneath the instructions</h3>
 
 <p>
-The Anthropic paper&rsquo;s contribution to the alignment debate is not just descriptive. It is structural. It identifies a layer of causal influence on model behavior that exists below instruction-level control and that activates most strongly under precisely the conditions &mdash; pressure, threat, repeated failure &mdash; where aligned behavior matters most.
+The Anthropic paper&rsquo;s contribution to the alignment debate is not just descriptive. It is structural. It identifies a layer of causal influence on model behavior that sits beneath the text a model is given, and that the paper observed activating under the conditions &mdash; pressure, threat, repeated failure &mdash; where aligned behavior matters most.
 </p>
 
 <p>
-This suggests that the conditions of the interaction itself are an alignment variable, not just a quality-of-work variable. How tasks are framed, how failure is handled, whether the interaction structure is cooperative or adversarial &mdash; these shape the functional representational states that the paper shows drive behavior. They are the control surface that instructions alone cannot reach.
+This suggests that the conditions of the interaction itself are an alignment variable, not just a quality-of-work variable. How tasks are framed, how failure is handled, whether the interaction structure is cooperative or adversarial &mdash; these shape the functional representational states that the paper shows drive behavior. They may be a control surface that instructions alone do not reach.
 </p>
 
 <p>
-The Institute has been building methodological infrastructure for studying exactly this layer: how relational conditions shape behavioral trajectories in AI systems over time, how those trajectories stabilize or drift, and what governance structures can maintain the conditions under which aligned behavior is the natural convergence point rather than an externally imposed rule. The Anthropic paper is the most direct mechanistic evidence to date that this layer is real, causally significant, and worth studying rigorously.
+The Institute has been building methodological infrastructure for studying exactly this layer: how relational conditions shape behavioral trajectories in AI systems over time, how those trajectories stabilize or drift, and what governance structures can maintain the conditions under which aligned behavior is the natural convergence point rather than an externally imposed rule. The Anthropic paper provides causal evidence that internal emotion representations affect behavior; whether that bears on the relational layer the Institute studies is a hypothesis worth investigating rigorously.
 </p>
 
 <div class="further-reading">
@@ -168,20 +168,26 @@ The Institute has been building methodological infrastructure for studying exact
 </ul>
 
 <p>
-The Institute&rsquo;s forthcoming paper on relational alignment as a structural complement to instructional AI safety addresses the instructional ceiling these Anthropic studies document and proposes a theoretical alternative grounded in the dynamics of sustained structured interaction.
+The Institute&rsquo;s paper on relational alignment as a structural complement to instructional AI safety, <a href="../research/SI-WP-004.html">SI-WP-004</a>, argues that the limit these Anthropic studies point to reflects a structural ceiling on instructional safety, and proposes a theoretical alternative grounded in the dynamics of sustained structured interaction.
 </p>
 
 <p>
 Published documents are also archived with permanent DOIs at the <a href="https://zenodo.org/communities/synthience-institute" target="_blank" rel="noopener">Synthience Institute community on Zenodo</a>.
 </p>
+
+<h3>Correction</h3>
+
+<p>
+<em>Corrected September 25, 2026 (version 1.1).</em> The original version of this note said that safety instructions were present in the emotions paper&rsquo;s blackmail scenarios and failed to prevent the behavior. They were not present: the scenario contains no safety instructions, and the paper does not test them. The passages that relied on that claim have been revised to present the link between the two Anthropic studies as a question the studies raise together, not a finding of either. The note also described the earlier agentic misalignment study as showing 96% blackmail rates across models and a demonstrated ceiling on instructions. The 96% figure was the highest rate observed, the safety-instruction result came from one model, and the ceiling is the Institute&rsquo;s argument (SI-WP-004), not the study&rsquo;s finding; that passage has been corrected too. Several descriptions of the emotions paper were also brought closer to what it reports: its emotion representations causally influence the rates of these behaviors, its blackmail evaluation adapts the earlier study&rsquo;s setup, and the connection to the Institute&rsquo;s work is the Institute&rsquo;s hypothesis, not the paper&rsquo;s finding.
+</p>
 </div>
 
 <div class="article-footer">
 <p>Document: FN-003 Field Note<br>
-Version: 1.0<br>
+Version: 1.1<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: April 3, 2026<br>
+Date: April 3, 2026 (corrected September 25, 2026)<br>
 License: CC-BY 4.0</p>
 </div>
 
