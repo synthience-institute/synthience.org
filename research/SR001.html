@@ -4,16 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SR001 — RICO: Relationally-Induced Coherence Organization | Synthience Institute</title>
+<link rel="stylesheet" href="../assets/css/style.css">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: Georgia, 'Times New Roman', serif; background: #faf9f7; color: #2a2520; line-height: 1.75; }
   a { color: #5a3e2b; }
   a:hover { color: #8b5e3c; }
-  .site-header { background: #1a1714; padding: 1.2rem 2rem; }
-  .site-header a { color: #d4c9b8; text-decoration: none; font-family: Arial, sans-serif; font-size: 0.9rem; letter-spacing: 0.03em; }
-  .site-header a:hover { color: #fff; }
-  .breadcrumb { font-size: 0.82rem; color: #b0a898; font-family: Arial, sans-serif; margin-top: 0.3rem; }
-  .breadcrumb a { color: #b0a898; }
   .doc-wrap { max-width: 740px; margin: 0 auto; padding: 3rem 2rem 5rem; }
   .doc-series { font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f72; margin-bottom: 0.6rem; }
   .doc-title { font-size: 2rem; font-weight: normal; line-height: 1.25; color: #1a1714; margin-bottom: 0.3rem; }
@@ -52,10 +48,18 @@
 </head>
 <body>
 
-<div class="site-header">
-  <div><a href="https://synthience.org">Synthience Institute</a></div>
-  <div class="breadcrumb"><a href="https://synthience.org">Home</a> / <a href="https://synthience.org/documents.html">Documents</a> / SR001</div>
-</div>
+<header class="site-header">
+  <div class="logo">
+    <a href="../index.html">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+  </div>
+  <nav class="main-nav" id="site-nav"></nav>
+</header>
+<script src="../assets/js/nav.js"></script>
 
 <div class="doc-wrap">
 
@@ -533,5 +537,10 @@
   </div>
 
 </div>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+<script src="../assets/js/footer.js"></script>
 </body>
 </html>
