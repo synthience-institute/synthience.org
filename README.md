@@ -71,7 +71,7 @@ It is **not** intended for:
 - Pull requests
 - Community modification
 
-Authoritative research documents are published via **Zenodo** and preserved via **Internet Archive**.
+Authoritative research documents are published via **Zenodo**.
 
 ---
 
