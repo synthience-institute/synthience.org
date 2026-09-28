@@ -4,7 +4,7 @@ This repository is the Synthience Institute website (synthience.org), served by 
 
 ## Where the rules live
 
-The Institute's operations files are the authority. This file only points to them. Ask the PCP (Thomas W. Gantz) to upload the current versions before any website work:
+The Institute's operations files are the authority. This file only points to them. They are in the PCP's (Thomas W. Gantz's) Google Drive, in the `_Continuity` folder: use the files directly in it, since its `Versions` subfolder holds old copies only. With the Drive connector, search Drive for the file name (for example `08_site_ops`) and read the newest version; ask the PCP to upload a file only if Drive isn't available. Before any website work, read:
 
 - **08_site_ops**: site architecture, the publication checklist, index-page sorting.
 - **15_word_production_spec**: paper pages, the Google Scholar tags, and the Website Publication Workflow for new papers and new versions.
@@ -12,6 +12,8 @@ The Institute's operations files are the authority. This file only points to the
 - **10_social_pipeline**: Field Notes and Practitioner Guides, with titles and publication dates.
 
 If those files and this one disagree, the operations files win.
+
+**Starting a new session?** Also read `CLAUDE_CODE_HANDOFF.md` in `_Continuity/_Claude_Code` on Drive. It records work in progress, the site's verified state and the checking tools, so a new session can pick up where the last one stopped. The same folder keeps a backup copy of this file. 08_site_ops says how both are kept up to date.
 
 ## Standing conventions (reminders; details are in the files above)
 
@@ -33,5 +35,5 @@ If those files and this one disagree, the operations files win.
 
 ## Environment notes (Claude Code on the web)
 
-- **Blocked:** zenodo.org, doi.org, api.datacite.org and synthience.org are unreachable from the cloud container. New PDFs have to be uploaded by the PCP.
+- **Blocked:** zenodo.org, doi.org, api.datacite.org, arxiv.org and synthience.org are unreachable from the cloud container. New PDFs have to be uploaded by the PCP (a zip works for many files); check each against the Zenodo MD5 the coordinating instance reports.
 - **Google Drive connector:** it can find and read files, but it can't copy them into the repository.
