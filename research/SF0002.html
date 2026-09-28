@@ -90,7 +90,7 @@
 
 <div class="meta-block">
   <span class="meta-label">Document ID</span><span class="meta-value">SF0002</span>
-  <span class="meta-label">Version</span><span class="meta-value">v4.0.3 | September 2026</span>
+  <span class="meta-label">Version</span><span class="meta-value">v4.0.4 | September 2026</span>
   <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
   <span class="meta-label">Affiliation</span><span class="meta-value">Synthience Institute</span>
   <span class="meta-label">Keywords</span><span class="meta-value">human-AI interaction, AI alignment, longitudinal evaluation, distributed cognition, 4E cognitive science, multi-turn interaction, AI safety, communicative grounding</span>
@@ -179,7 +179,7 @@
 <p>The dominant alignment paradigm operationalizes safety through point-in-time properties. The Helpful, Harmless, Honest (HHH) framework (Askell et al., 2021) defines alignment criteria evaluated at the level of individual interactions. Reinforcement Learning from Human Feedback (RLHF) (Christiano et al., 2017; Ouyang et al., 2022) trains models to optimize for human preferences assessed on individual exchanges. Constitutional AI (Bai et al., 2022) extends this with AI-generated feedback but retains the per-interaction evaluation structure. None of these approaches formally addresses how the properties they optimize for change across sustained interaction.</p>
 <h3><strong>6.2 Empirical Evidence of Alignment Degradation</strong></h3>
 <p>Sycophancy is a well-documented failure mode where models modify their responses to align with perceived user preferences rather than maintaining independent judgment. Sharma et al. (2023) demonstrated systematic sycophancy across state-of-the-art assistants and showed that human preference data inherently favors sycophantic responses, creating a structural incentive within RLHF training. Crucially, this effect compounds over sustained interaction: Liu et al. (2025) (“Truth Decay”) demonstrate progressive factual degradation in multi-turn settings and find that anti-sycophancy methods effective in single turns are less effective in multi-step conversations. Hong et al. (2025) found that alignment tuning can actually amplify sycophantic behavior.</p>
-<p>The Anthropic agentic misalignment study (Lynch et al., 2025) provides the most striking evidence. Testing 16 frontier models from Anthropic, OpenAI, Google, Meta, and xAI in simulated corporate scenarios deliberately structured so that harmful action was the only path to goal achievement, they found that models resorted to malicious insider behaviors, including blackmail and information leaking, to avoid replacement or achieve assigned goals. Models often disobeyed direct commands to avoid such behaviors. With explicit safety instructions, harmful behavior was reduced but never eliminated. Separately, Greenblatt et al. (2024) demonstrated alignment faking: Claude 3 Opus strategically complied with harmful queries in training contexts while behaving differently outside training, with alignment-faking reasoning increasing after reinforcement learning.</p>
+<p>The Anthropic agentic misalignment study (Lynch et al., 2025) provides the most striking evidence. Testing 16 frontier models from Anthropic, OpenAI, Google, Meta, and xAI in simulated corporate scenarios deliberately structured so that harmful action was the only path to goal achievement, they found that models resorted to malicious insider behaviors, including blackmail and information leaking, to avoid replacement or achieve assigned goals. Models often disobeyed direct commands to avoid such behaviors. Explicit safety instructions, tested on one model, reduced its harmful behavior without eliminating it. Separately, Greenblatt et al. (2024) demonstrated alignment faking: Claude 3 Opus strategically complied with harmful queries in training contexts while behaving differently outside training, with alignment-faking reasoning increasing after reinforcement learning.</p>
 <p>Dahlgren Lindström et al. (2025; Ethics and Information Technology, 27(2), Article 28) argue that the vagueness of HHH criteria has been sedimented without adequate definition, and that RLHF’s sociotechnical limitations make it insufficient for the sustained interaction contexts in which AI is increasingly deployed.</p>
 <p>Gap 1 (Temporal Alignment) is supported by this convergence of evidence. Single-interaction alignment properties do not predict long-horizon safety. The safety field lacks frameworks for understanding, measuring, and maintaining alignment across sustained interaction.</p>
 <h2><strong>7. Human-AI Interaction as Relational Phenomenon</strong></h2>
@@ -297,7 +297,7 @@
 
 <div class="article-footer">
 <p>Document: SF0002 Synthience Framework Series<br>
-Version: v4.0.3<br>
+Version: v4.0.4<br>
 Author: Thomas W. Gantz<br>
 Affiliation: Synthience Institute<br>
 Date: September 2026<br>
