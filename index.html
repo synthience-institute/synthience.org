@@ -30,26 +30,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
 
   <style>
-    .start-here { margin: 0 0 2.5rem 0; }
-    .start-here h2 { font-size: 1.15rem; margin: 0 0 0.9rem 0; color: #1a1714; }
-    .start-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .start-card { background: #faf9f5; border: 1px solid #e0ddd4; border-top: 3px solid #c8604a; border-radius: 6px; padding: 1rem 1.1rem 1.1rem; display: flex; flex-direction: column; }
-    .start-card h3 { font-size: 1rem; margin: 0 0 0.45rem 0; color: #1a1714; }
-    .start-card p { font-size: 0.9rem; line-height: 1.55; color: #444; margin: 0 0 0.8rem 0; }
-    .start-card ul { list-style: none; margin: auto 0 0 0; padding: 0; }
-    .start-card li { margin: 0.35rem 0; font-size: 0.9rem; line-height: 1.4; }
-    .start-card a { color: #5a3e2b; text-decoration: none; border-bottom: 1px solid #d8cfc2; }
-    .start-card a:hover { color: #c8604a; border-bottom-color: #c8604a; }
-    @media (max-width: 760px) { .start-grid { grid-template-columns: 1fr; } }
-    .home-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 1.6rem; align-items: start; margin-bottom: 2.5rem; }
-    .home-hero .study-canvas-wrap { margin-bottom: 0.5rem; }
-    .hero-caption { font-size: 0.85rem; color: #666; margin: 0; line-height: 1.5; }
-    .hero-caption a { color: #5a3e2b; }
-    .home-hero .start-here { margin: 0; }
-    .home-hero .start-grid { grid-template-columns: 1fr; gap: 0.7rem; }
-    .home-hero .start-card { padding: 0.75rem 0.95rem 0.8rem; }
-    .home-hero .start-card p { margin-bottom: 0.45rem; }
-    @media (max-width: 860px) { .home-hero { grid-template-columns: 1fr; } }
+    .start-here { margin: 0 0 1.6rem 0; padding: 0.55rem 1.1rem; border: 1px solid #e0ddd4; border-radius: 6px; background: #fff; }
+    .start-title { margin: 0.1rem 0 0.2rem 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c8604a; }
+    .start-row { margin: 0.3rem 0; font-size: 0.9rem; line-height: 1.55; color: #444; }
+    .start-label { font-weight: 600; color: #1a1714; margin-right: 0.25rem; }
+    .start-row .sep { color: #b8ad9e; margin: 0 0.2rem; }
+    .start-row a { color: #5a3e2b; text-decoration: none; border-bottom: 1px solid #d8cfc2; }
+    .start-row a:hover { color: #c8604a; border-bottom-color: #c8604a; }
     .study-shell { padding: 0; }
     .study-title { font-size: 1.7rem; font-weight: 500; color: #111; margin: 0 0 0.3rem 0; }
     .study-byline { font-size: 0.95rem; color: #888; font-style: italic; margin: 0 0 2rem 0; }
@@ -132,56 +119,26 @@
 
 
 
-<div class="home-hero">
-  <div class="hero-model">
-    <div class="study-canvas-wrap">
-      <div id="canvas-container">
-        <div class="canvas-loading">Initializing relational field&hellip;</div>
-      </div>
-    </div>
-    <p class="hero-caption"><strong>Relational Coherence: Interactive Model.</strong> Each dot moves on its own, yet structure emerges. <a href="#model">Controls and explanation &darr;</a></p>
-  </div>
-  <div class="hero-side">
-<section class="home-orientation" style="margin-bottom: 1.4rem; padding: 1.1rem 1.3rem; background: #faf9f5; border-left: 3px solid #c8604a;">
+<section class="home-orientation" style="margin-bottom: 1.2rem; padding: 0.8rem 1.1rem; background: #faf9f5; border-left: 3px solid #c8604a;">
   <p style="margin: 0; font-size: 1rem; line-height: 1.65; color: #333;">
     The Synthience Institute develops methodological frameworks, protocols, and measurement tools for studying sustained human-AI interaction over time. Its work is behavioral and interaction-level: it makes no claims about AI consciousness, sentience, inner experience, or moral status.
   </p>
 </section>
 <section class="start-here" aria-labelledby="start-here-title">
-  <h2 id="start-here-title">Start here</h2>
-  <div class="start-grid">
-    <div class="start-card">
-      <h3>New here?</h3>
-      <p>A short video introduction to the Institute, and the one-page definition of what it studies.</p>
-      <ul>
-        <li><a href="practitioner-guides/PG-007.html">&#9654; Video: Introducing the Synthience Institute</a></li>
-        <li><a href="research/FPD-01.html">FPD-01: Synthience: Public Definition</a></li>
-      </ul>
-    </div>
-    <div class="start-card">
-      <h3>Use AI more reliably</h3>
-      <p>Plain-language guides for anyone who works with AI: checking what it read, what it cited, and what it actually did.</p>
-      <ul>
-        <li><a href="practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a></li>
-        <li><a href="practitioner-guides/PG-006.html">&#9654; Video: The Ingestion Verification Protocol</a></li>
-        <li><a href="practitioner-guides.html">All practitioner guides &rarr;</a></li>
-      </ul>
-    </div>
-    <div class="start-card">
-      <h3>The research</h3>
-      <p>Every paper is free to read online or as a PDF, with a permanent DOI on Zenodo. Field notes apply the work to current AI news.</p>
-      <ul>
-        <li><a href="research.html">Research papers &rarr;</a></li>
-        <li><a href="field-notes.html">Field notes &rarr;</a></li>
-      </ul>
-    </div>
-  </div>
+  <p class="start-title" id="start-here-title">Start here</p>
+  <p class="start-row"><span class="start-label">New here?</span> <a href="practitioner-guides/PG-007.html">&#9654; Video: Introducing the Synthience Institute</a> <span class="sep">&middot;</span> <a href="research/FPD-01.html">FPD-01: Synthience: Public Definition</a></p>
+  <p class="start-row"><span class="start-label">Use AI more reliably:</span> <a href="practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a> <span class="sep">&middot;</span> <a href="practitioner-guides/PG-006.html">&#9654; Video: The Ingestion Verification Protocol</a> <span class="sep">&middot;</span> <a href="practitioner-guides.html">All&nbsp;guides&nbsp;&rarr;</a></p>
+  <p class="start-row"><span class="start-label">The research:</span> <a href="research.html">Papers (read online, PDF, Zenodo) &rarr;</a> <span class="sep">&middot;</span> <a href="field-notes.html">Field&nbsp;notes&nbsp;&rarr;</a></p>
 </section>
-  </div>
-</div>
 
 <div class="study-shell">
 <h2 id="model">Relational Coherence: Interactive Model</h2>
+
+  <div class="study-canvas-wrap">
+    <div id="canvas-container">
+      <div class="canvas-loading">Initializing relational field&hellip;</div>
+    </div>
+  </div>
 
   <div class="study-below">
 
