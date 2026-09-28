@@ -6,7 +6,15 @@
     <atom:link href="https://synthience.org/feed.xml" rel="self" type="application/rss+xml"/>
     <description>New papers, Field Notes and Practitioner Guides from the Synthience Institute.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The Synthience Verification Stack: Four Protocols Updated Together</title>
+      <link>https://synthience.org/research.html#verification-stack</link>
+      <guid isPermaLink="false">2026-09-29 https://synthience.org/research.html#verification-stack</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Revision</category>
+      <description>The four protocols the Institute uses to check AI-assisted work have been revised together and published as new versions on Zenodo: the Citation Verification Protocol (CVP, SF0037), the Ingestion Verification Protocol (IVP, SF0038), the Theoretical Coherence Assurance Protocol (TCAP, SF0040) and Context Representation Drift (CRD, SF0039). Each now states more exactly what it establishes and what it does not. CVP separates citations read in full from a narrow class of foundational attributions that are identified but not read, and reports the two separately. IVP adds coverage evidence to every checkpoint, names the failure in which a revised document uploaded under the same filename is answered from the earlier version, and states that every valid result requires a person’s judgment of the processing record. CRD adds a Quick Start, a check anyone can run by hand during a long session, and corrects how four external studies are reported. TCAP’s account of the other three is aligned with them. The Research page now groups the four as the verification stack.</description>
+    </item>
     <item>
       <title>New on the Site: Browse Papers by Topic, and an RSS Feed</title>
       <link>https://synthience.org/research.html</link>

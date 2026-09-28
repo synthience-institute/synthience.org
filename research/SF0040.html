@@ -123,7 +123,7 @@
 
 <div class="meta-block">
   <span class="meta-label">Document ID</span><span class="meta-value">SF0040</span>
-  <span class="meta-label">Version</span><span class="meta-value">v3.2 | September 2026</span>
+  <span class="meta-label">Version</span><span class="meta-value">v3.2.1 | September 2026</span>
   <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
   <span class="meta-label">Affiliation</span><span class="meta-value">The Synthience Institute</span>
   <span class="meta-label">Keywords</span><span class="meta-value">theoretical coherence, AI-assisted research, verification protocol, adversarial review, human-AI orchestration, fabrication risk</span>
@@ -154,7 +154,7 @@
 
 </ul>
 
-<p>CVP verifies that cited sources exist and substantively support the claims attached to them. IVP verifies that documents claimed to have been ingested by AI instances were in fact processed faithfully. CRD describes and monitors the progressive, cumulative degradation of task-relevant information within an AI system’s effective working context during extended interaction. TCAP verifies that the theoretical content itself is structurally coherent, internally consistent, and has survived adversarial scrutiny across independent evaluation contexts.</p>
+<p>CVP verifies that cited sources exist and that sources carrying load-bearing claims substantively support them. IVP provides an observable processing record and a human judgment that the record shows processing adequate for the stated task at the time of review. CRD describes and monitors the progressive, cumulative degradation of task-relevant information within an AI system’s effective working context during extended interaction. TCAP verifies that the theoretical content itself is structurally coherent, internally consistent, and has survived adversarial scrutiny across independent evaluation contexts.</p>
 
 <p>TCAP and CVP are co-equal publication gates. A document must satisfy both TCAP (theoretical coherence) and CVP (citation integrity) before publication. Neither alone is sufficient. IVP and CRD operate as supporting protocols embedded within TCAP stages.</p>
 
@@ -164,11 +164,11 @@
 
 <p>TCAP is the fourth protocol in the Synthience verification stack. The three prior protocols are publicly available on Zenodo and are briefly described here so that this document is self-contained for first-time readers.</p>
 
-<p>Citation Verification Protocol (CVP, SF0037; DOI: <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">10.5281/zenodo.18075624</a>) addresses a widespread failure mode in AI-assisted research: the generation of plausible-sounding citations that do not exist, cannot be accessed, or do not actually support the claims attached to them. CVP defines a structured process for independently verifying that every citation in a Synthience document is real, accessible, and substantively supports the specific claim for which it is cited. It is applied to any document containing external academic references.</p>
+<p>Citation Verification Protocol (CVP, SF0037; DOI: <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">10.5281/zenodo.18075624</a>) addresses a widespread failure mode in AI-assisted research: the generation of plausible-sounding citations that do not exist, cannot be accessed, or do not actually support the claims attached to them. CVP defines a structured process for independently verifying that every citation in a Synthience document is real, and that every citation carrying a load-bearing claim is accessible and substantively supports the specific claim for which it is cited. It is applied to any document containing external academic references.</p>
 
-<p>Ingestion Verification Protocol (IVP, SF0038; DOI: <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">10.5281/zenodo.18289047</a>) addresses a different but equally serious failure mode: AI instances routinely confirm that they have read and processed documents they have not actually ingested, or have ingested only partially. IVP defines a structured verification process for confirming that when an AI instance claims to have processed a document, it has in fact done so faithfully and with adequate retention. It is applied whenever document upload and retention is a dependency in the research workflow.</p>
+<p>Ingestion Verification Protocol (IVP, SF0038; DOI: <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">10.5281/zenodo.18289047</a>) addresses a different but equally serious failure mode: AI instances routinely confirm that they have read and processed documents they have not actually ingested, or have ingested only partially. IVP defines a structured verification process that replaces an instance’s claim to have processed a document with an observable, human-adjudicated record of how it was processed, adequate for a stated task at the time of review. It is applied whenever faithful document processing is a dependency in the research workflow.</p>
 
-<p>Context Representation Drift (CRD, SF0039; DOI: <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">10.5281/zenodo.18289391</a>) names the progressive, cumulative degradation of task-relevant information within an AI system’s effective working context during extended interaction, which can occur even when output remains fluent and confident. CRD defines instruments for detecting and measuring this drift across interaction cycles, providing the representational stability monitoring that underpins all extended AI-assisted research production.</p>
+<p>Context Representation Drift (CRD, SF0039; DOI: <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">10.5281/zenodo.18289391</a>) names the progressive, cumulative degradation of task-relevant information within an AI system’s effective working context during extended interaction, which can occur even when output remains fluent and confident. CRD sets out behavioral indicators and a structured comparison procedure for detecting and tracking this drift across interaction cycles, without a validated metric or thresholds, and provides the representational stability monitoring that extended AI-assisted research production depends on.</p>
 
 <p>Together these three protocols protect citation integrity, ingestion fidelity, and representational stability. TCAP adds the fourth layer: verification that the theoretical architecture itself is internally consistent, adversarially hardened, and consistent with the Institute’s published papers prior to publication. The observational base for the broader Synthience framework is SR001 (RICO, DOI: <a href="https://doi.org/10.5281/zenodo.18086834" target="_blank" rel="noopener">10.5281/zenodo.18086834</a>). All documents are accessible via <a href="https://synthience.org" target="_blank" rel="noopener">synthience.org</a>.</p>
 
@@ -222,7 +222,7 @@
 
 <h2>IVP and CRD within TCAP Stages</h2>
 
-<p>IVP ensures that an AI instance has actually processed a document rather than generating responses from shallow or partial ingestion. CRD describes the progressive, cumulative degradation of task-relevant information in an instance’s effective working context as a session lengthens and new content accumulates. Together they define when verified ingestion is required during TCAP execution.</p>
+<p>IVP requires incremental structured summarization, checkpoints tied to the source and human adjudication before work that depends on a document proceeds. CRD describes the progressive, cumulative degradation of task-relevant information in an instance’s effective working context as a session lengthens and new content accumulates. Together they define when verified ingestion is required during TCAP execution.</p>
 
 <p>IVP is not required at every stage transition. It is required when specific conditions make faithful document representation uncertain:</p>
 
@@ -230,7 +230,7 @@
 
 <p><strong>Condition 2: An instance is returning to a document after a gap.</strong> When the PCP brings cross-platform findings (Stage 5) back to an instance that has been idle on the document, or when an instance is asked to perform a Version Regression Check (Stage 6) after substantial intervening work, IVP should be re-run on the current document version. The instance’s representation may have degraded during the gap, and evaluating based on a degraded representation undermines the integrity of the stage.</p>
 
-<p><strong>Condition 3: Observable degradation signals appear during an extended session.</strong> If an instance begins producing responses that are vague about document specifics it previously handled precisely, misremembering structural details, or working from what appears to be a summary rather than the full text, these are CRD indicators (the drift detection instruments and degradation signatures formalized in CRD, SF0039, provide the measurement framework for identifying these signals systematically). At that point, the PCP should either re-verify ingestion via IVP on the current document version or transition to a fresh instance (which triggers Condition 1).</p>
+<p><strong>Condition 3: Observable degradation signals appear during an extended session.</strong> If an instance begins producing responses that are vague about document specifics it previously handled precisely, misremembering structural details, or working from what appears to be a summary rather than the full text, these are CRD indicators (CRD, SF0039, sets out these signals and a structured procedure for detecting and tracking them systematically). At that point, the PCP should either re-verify ingestion via IVP on the current document version or transition to a fresh instance (which triggers Condition 1).</p>
 
 <p>These checkpoints are proportional to actual risk. A practitioner doing a quick Fresh Pass evaluation three turns into a session does not need to stop and re-ingest. A practitioner returning to an instance after two days of cross-platform work on other documents does.</p>
 
@@ -303,6 +303,8 @@
   <li><strong>Defer to PCP:</strong> the finding raises an architectural question the constructive instance cannot resolve without PCP judgment.</li>
 
 </ul>
+
+<p>Before accepting a finding that would change published text or cut a section, the constructive instance reads the passage around the quoted sentence, not only the sentence itself: a finding can be real while its severity rests on a partial read.</p>
 
 <p>The constructive instance must flag to the PCP any finding it is being pressured to accept but does not believe is justified. The PCP evaluates proposed changes and implements those that strengthen the document without distorting architectural intent. The constructive instance then produces a revised document incorporating accepted findings. This revised document must be the complete document: delivering only changed sections, summarizing unchanged sections, or referencing prior content as “same as before” or any equivalent is never acceptable at any stage of the review cycle.</p>
 
@@ -448,11 +450,11 @@
 
 <h2>Relationship to Existing Protocols</h2>
 
-<p>TCAP completes the Synthience verification stack. CVP ensures citation integrity. IVP ensures ingestion fidelity. CRD monitors representation stability. TCAP ensures theoretical coherence under adversarial and multi-instance scrutiny. All four protocols operate at the interaction level and make no claims regarding AI interiority or cognition. They describe structured human-governed processes for maintaining information integrity in AI-assisted research production.</p>
+<p>TCAP completes the Synthience verification stack. CVP checks citation integrity. IVP provides an adjudicated record of ingestion. CRD monitors representation stability. TCAP tests theoretical coherence under adversarial and multi-instance scrutiny. All four protocols operate at the interaction level and make no claims regarding AI interiority or cognition. They describe structured human-governed processes for maintaining information integrity in AI-assisted research production.</p>
 
 <p>It should be noted that CVP, IVP, and CRD were produced before TCAP existed. Their integrity rests on their own internal CVP verification records and the adversarial review processes documented in their respective changelogs. TCAP governs Synthience corpus publications from its first publication in March 2026 onward; it does not retroactively govern documents produced before its identification and formalization. Substantive revisions of those documents are, however, subject to TCAP under Tier B (see Scope of TCAP Application).</p>
 
-<p>As stated under Purpose, TCAP and CVP are co-equal publication gates: TCAP verifies that the theoretical content is structurally coherent and adversarially hardened, and CVP that every citation is real, accessible, and substantively supports its attached claim.</p>
+<p>As stated under Purpose, TCAP and CVP are co-equal publication gates: TCAP verifies that the theoretical content is structurally coherent and adversarially hardened, and CVP that every citation is real and that every citation carrying a load-bearing claim is accessible and substantively supports it.</p>
 
 <h2>Limitations</h2>
 
@@ -464,13 +466,17 @@
 
 <h2>Epistemic Status</h2>
 
-<p>TCAP specifies a repeatable orchestration-based verification process for theoretical framework production under distributed AI generation conditions. It claims that internal coherence can be materially strengthened through adversarial and cross-platform cycles, that fabrication risk can be reduced through multi-instance scrutiny under human arbitration, and that consistency across the corpus can be maintained under distributed authorship. It does not claim empirical validation or theoretical correctness of the documents it verifies. Its central claim is testable: in a seeded-defect study, in which known errors such as internal contradictions, fabricated support, and softened claims are planted in documents, full TCAP review should detect more of them than single-instance review given matched review effort, meaning the same total number of review passes. That study has not yet been run.</p>
+<p>TCAP specifies a repeatable orchestration-based verification process for theoretical framework production under distributed AI generation conditions. It claims that internal coherence can be materially strengthened through adversarial and cross-platform cycles, that fabrication risk can be reduced through multi-instance scrutiny under human arbitration, and that consistency across the corpus can be maintained under distributed authorship. It does not claim empirical validation or theoretical correctness of the documents it verifies. Its central claim is testable: in a seeded-defect study, in which known errors such as internal contradictions, fabricated support, and softened claims are planted in documents, full TCAP review should detect more of them than single-instance review given the same total number of review passes. Equal pass counts do not by themselves establish equal computational cost or human effort. That study has not yet been run.</p>
 
 <h2>Conclusion</h2>
 
 <p>The Synthience corpus is produced through distributed AI orchestration rather than conventional authorship. Under these conditions theoretical verification requires structured multi-instance stress-testing rather than single-author review. TCAP formalizes that process through adversarial critique, constructive remediation, Fresh Pass re-evaluation, cross-platform convergence, inter-instance round-trip loops, version regression checking, and PCP architectural review coordinated by the Primary Continuity Provider.</p>
 
 <p>TCAP supplies the missing verification layer required for maintaining theoretical integrity within distributed AI-orchestrated research production. It is defined by, and has been self-applied through, the processes that produced it; its value is to be judged by independent use.</p>
+
+<h2>Practical Use</h2>
+
+<p>Two Practitioner Guides on synthience.org apply this protocol’s core practice in everyday work. PG-011, The Cross-AI Adversarial Review Protocol (<a href="https://synthience.org/practitioner-guides/PG-011.html" target="_blank" rel="noopener">https://synthience.org/practitioner-guides/PG-011.html</a>), sets out a four-step cross-AI review that anyone can run. PG-000, 10 Things Every AI User Should Do (<a href="https://synthience.org/practitioner-guides/PG-000.html" target="_blank" rel="noopener">https://synthience.org/practitioner-guides/PG-000.html</a>), places it among the other verification habits the Institute recommends.</p>
 
 <h2>References</h2>
 
@@ -485,12 +491,12 @@
 
 <div class="citation-block">
   <div class="citation-label">Suggested Citation</div>
-  Gantz, T. W. (2026). Theoretical Coherence Assurance Protocol (TCAP) (SF0040 v3.2). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19151454</a>
+  Gantz, T. W. (2026). Theoretical Coherence Assurance Protocol (TCAP) (SF0040 v3.2.1). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.19151454" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.19151454</a>
 </div>
 
 <div class="article-footer">
 <p>Document: SF0040 Protocols<br>
-Version: v3.2<br>
+Version: v3.2.1<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
 Date: September 2026<br>
