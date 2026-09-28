@@ -164,7 +164,7 @@
   <ol style="margin-left:1.2rem;">
     <li>Provide the document to the instance.</li>
     <li>After each turn, require an Active Summarization Checkpoint (ASC): structured summary of the processed segment, plus verbatim checkpoint marker (last sentence processed).</li>
-    <li>Trigger continuation (type &ldquo;go&rdquo; or similar in interactive sessions; automated continuation in API implementations).</li>
+    <li>Trigger continuation (in interactive sessions: type &quot;go&quot; or similar; in API implementations: automated continuation with checkpoint logging).</li>
     <li>Repeat until complete.</li>
     <li>Adjudicate adequacy before downstream use.</li>
   </ol>
@@ -246,7 +246,13 @@
 <p>After each turn, the instance produces an ASC.</p>
 
 <p><strong>Component 1: Summary</strong></p>
-<p>Must include: core content, specific details, structural role, and connections to prior segments.</p>
+<p>Must include:</p>
+<ul>
+  <li>Core content</li>
+  <li>Specific details</li>
+  <li>Structural role</li>
+  <li>Connections to prior segments</li>
+</ul>
 
 <p><strong>Component 2: Checkpoint Marker</strong></p>
 <p>The final sentence processed, quoted verbatim.</p>
