@@ -21,6 +21,7 @@ If those files and this one disagree, the operations files win.
 - **`research/pdf/<ID>.pdf`** is the exact PDF on Zenodo, byte for byte, named by document ID only. A new Zenodo version replaces the file under the same name and updates the paper's page to match.
 - **`updates.html`** announces new pieces only, never new versions or corrections. After adding an entry, rebuild the RSS feed with `node tools/build-feed.js`, which regenerates `feed.xml` from updates.html. **`sitemap.xml`** changes only when a page is added.
 - **New papers:** the research.html entry needs a `topic` (the By Topic view), and the paper goes into the same group in "The Body of Work" on about.html.
+- **Published papers only.** Website text never names an unpublished paper and never uses internal planning language (tiers, sequences, verticals, cascades, firewalls, canon entries); see 09_instance_briefing §2.3.
 - **Images:** export as JPEG (quality about 85 to 88) before upload, keeping the original pixel size.
 
 ## How changes are made
