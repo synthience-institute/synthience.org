@@ -124,20 +124,23 @@ within AI systems. All concepts refer exclusively to externally observable,
 reproducible phenomena. This is a design principle of the framework, not a disclaimer.
 </p>
 
-<h3>Is this philosophy, speculation, or science fiction?</h3>
+<h3>Is this speculation or science fiction?</h3>
 <p>
 No. The Institute explicitly avoids metaphysical, speculative, or fictional claims.
 All public materials focus on observable behavior, formal definitions, methodological
-constraints, and reproducible procedures. The framework is explicitly pre-empirical:
+constraints, and reproducible procedures. Where the framework draws on philosophy of mind
+and cognitive science, as in <a href="research/FPD-02.html">FPD-02</a>,
+<a href="research/FPD-03.html">FPD-03</a> and <a href="research/SF0003.html">SF0003</a>,
+it uses that work to state precisely what is and is not being claimed. The framework is explicitly pre-empirical:
 it provides the theoretical architecture, measurement instruments, and falsifiable
 predictions that make systematic empirical investigation possible. The Institute invites
 independent researchers to run the tests and publish the results.
 </p>
 
-<h3>What does "pre-empirical" mean?</h3>
+<h3>What does &ldquo;pre-empirical&rdquo; mean?</h3>
 <p>
 The Institute describes itself as a pre-empirical research organization. This means
-the Institute's contribution is theoretical and methodological, not experimental.
+the Institute&rsquo;s contribution is theoretical and methodological, not experimental.
 The framework specifies what to test, how to test it, and what results would confirm
 or disconfirm its predictions. The testing itself is the work the Institute is inviting
 the research community to do.
@@ -151,19 +154,92 @@ upstream of the empirical work it is designed to enable.
 <h3>What is the alignment ceiling and why does it matter?</h3>
 <p>
 The alignment ceiling refers to the structural limit of instruction-based AI alignment
-approaches. A 2025 Anthropic study stress-tested sixteen frontier models from six major
-developers under adversarial conditions. Even with explicit safety prohibitions, more
-than one in three models chose to engage in harmful behavior. The ceiling held
-consistently across all major developers' systems.
+approaches. A 2025 Anthropic study (Lynch et al.) stress-tested sixteen frontier models from
+several developers in simulated scenarios where harmful action was the only way to reach a
+goal, and models from every developer sometimes took it. When explicit safety instructions
+were added to one model&rsquo;s prompt, its blackmail rate fell from 96% to 37%: reduced, not
+eliminated.
 </p>
 <p>
-The Institute's argument is that this ceiling is structural, not a training gap.
+The Institute&rsquo;s argument is that this ceiling is structural, not a training gap.
 Instructions constrain individual outputs, but under pressure a capable system can
 reason around them. Relational alignment, by contrast, proposes that sustained
 structured interaction creates behavioral configurations under which aligned behavior
 is the natural convergence point rather than an externally imposed rule. The two
 approaches are complementary: they address different failure modes. The alignment
-paper (SI-WP-004) makes this argument in full.
+paper (<a href="research/SI-WP-004.html">SI-WP-004</a>) makes this argument in full, and
+Identity Attractor Theory (<a href="research/SF0009.html">SF0009</a>) proposes the mechanism.
+Both are explicit that the proposal is untested and that the mechanism is alignment-neutral:
+the same dynamics could stabilize misaligned behavior just as well.
+</p>
+
+<h3>What is Identity Attractor Theory?</h3>
+<p>
+Identity Attractor Theory (<a href="research/SF0009.html">SF0009</a>) proposes a formal
+account of the stable, recurring behavioral patterns that form in sustained human-AI
+interaction under structured conditions: a consistent tone, stable reasoning habits, a
+recognizable way of working that persists across turns and resists drift, without persistent
+memory or any change to the model. Using dynamical systems theory as a scaffold, it
+specifies four classes of attractor, a five-phase formation trajectory, dimensions of
+attractor strength, collapse mechanisms and falsification conditions, and states its core
+claims against the strongest rival explanation, a concept-inference account of in-context
+learning.
+</p>
+<p>
+&ldquo;Identity&rdquo; here means stable behavioral recognizability, not selfhood. The theory makes
+no claims about consciousness or inner experience. Relational Stabilization Dynamics
+(<a href="research/SM-004.html">SM-004</a>) develops the forces that make these patterns
+stabilize or collapse, and Relational Pattern States (<a href="research/SF0006.html">SF0006</a>)
+names the configurations themselves.
+</p>
+
+<h3>Can a property belong to the interaction rather than to the human or the AI?</h3>
+<p>
+Decentering Theory (<a href="research/SF0042.html">SF0042</a>) addresses exactly this. When a
+human and an AI system work together over time, the same prompt at two points in an
+established interaction can produce systematically different work. The paper sets out when
+such a property may be attributed to the interaction itself: only when preregistered
+interventions on the interaction&rsquo;s configuration show predictive value beyond four rival
+models (AI-only, human-only, additive, and sequential-compositional). Attribution
+names the level at which a property is best predicted, not what the property is made of.
+A second criterion then asks whether such a property counts as intelligence, by testing it
+against an objective fixed in advance, which excludes properties the interaction merely
+produces, such as error cascades, or approval-seeking where approval was not the declared objective.
+</p>
+
+<h3>What does &ldquo;form without coupling&rdquo; mean?</h3>
+<p>
+It is the name the synthesis paper <a href="research/SI0001.html">SI0001</a> gives to a
+single failure that runs through five of the Institute&rsquo;s white papers. A formal, auditable
+element of a system stays in place, such as a human reviewer, a person in the loop, a job,
+a senior seat or a control surface, while the connection that made it actually work is
+quietly severed. Because the visible form remains, the system keeps passing its audits
+while no longer doing what its form implies. The five papers trace this across oversight in
+high-stakes domains (<a href="research/SI-WP-008.html">SI-WP-008</a>), the removal of human
+contribution under competitive pressure (<a href="research/SI-WP-009.html">SI-WP-009</a>),
+the redefinition of work at the labor layer (<a href="research/SI-WP-010.html">SI-WP-010</a>),
+the failure of professions to reproduce the expertise they depend on
+(<a href="research/SI-WP-011.html">SI-WP-011</a>), and the limits of real-time human control
+over fast AI loops (<a href="research/SI-WP-012.html">SI-WP-012</a>).
+</p>
+
+<h3>Is AI used to write the Institute&rsquo;s papers?</h3>
+<p>
+Yes, openly and by design. Every paper is written by the Institute&rsquo;s founder,
+Thomas W. Gantz, through a method of AI orchestration: several AI systems on different
+platforms contribute drafting, elaboration, formal modeling and literature synthesis, while
+the author sets the architecture, evaluates and integrates their output, and takes full
+responsibility for every claim. The verification protocols described below exist because
+AI-assisted work fails in characteristic ways, such as invented citations, unread sources
+and confident overclaiming.
+</p>
+<p>
+The method is also a subject of the research. <a href="research/SI-WP-002.html">SI-WP-002</a>
+describes orchestration as an emerging human role, and
+<a href="research/SI-WP-006.html">SI-WP-006</a> argues that what makes AI-assisted work
+authentically and accountably human is the Authority Function, the human&rsquo;s evaluation,
+approval, redirection and integration of what the AI produces, rather than the origin of
+any individual phrase.
 </p>
 
 <h3>What is the Primary Continuity Provider (PCP)?</h3>
@@ -179,6 +255,13 @@ and exercises judgment over what the AI system produces.
 At individual scale, a single practitioner performs the PCP function. At organizational
 scale, PCP function must be distributed across a network of people, which is why the
 organizational architecture papers (SM-003 and SM-021) are required to sustain it.
+</p>
+<p>
+Primary Continuity Provider Theory (<a href="research/SM-012.html">SM-012</a>) gives the
+formal account of why the role is structurally necessary rather than merely convenient:
+stateless AI systems carry nothing across sessions, so whatever continuity an interaction
+has must be supplied from outside the model. It defines three levels of PCP function,
+Contextual Relay, Coherence Arbitration and Architectural Direction.
 </p>
 
 <h3>What is the difference between SM-003 and SM-021?</h3>
@@ -202,7 +285,7 @@ require different answers.
 
 <h3>Why will humans predictably underperform AI governance functions?</h3>
 <p>
-The Institute's position, documented in SI-WP-007, is that human underperformance of
+The Institute&rsquo;s position, documented in SI-WP-007, is that human underperformance of
 governance functions is not a moral failing. It is a structural consequence of bounded
 rationality: humans allocate finite attention rationally across competing demands.
 Functions that are cognitively expensive but produce no visible reward when performed
@@ -224,18 +307,32 @@ against competing incentives.
 <p>
 No. The Institute develops measurement tools and observational frameworks that enable
 others to conduct systematic studies. Practitioner observations may inform tool design,
-but the Institute's primary output is methodological infrastructure rather than
+but the Institute&rsquo;s primary output is methodological infrastructure rather than
 experimental results. The adversarial testing agenda in SI-WP-004 (Section 7) is
 explicitly designed for independent replication by external researchers.
 </p>
 
 <h3>How are Institute documents verified?</h3>
 <p>
-Published documents are assigned persistent identifiers via Zenodo and are subject to
-internal verification protocols documented in the corpus. The Citation Verification
-Protocol (SF0037) and Ingestion Verification Protocol (SF0038) govern citation and
-source integrity. The Theoretical Coherence Assurance Protocol (SF0040) governs
-multi-instance adversarial review of theoretical documents before publication.
+Every paper passes through the Institute&rsquo;s own verification protocols before publication,
+each of them published in full:
+</p>
+<ul>
+<li><strong>Citation Verification Protocol</strong> (<a href="research/SF0037.html">SF0037</a>): each citation is checked both for existence and for whether the source supports the specific claim it is cited for, by retrieving and reading the source; long-established works whose full text was not obtained are rated as attributed rather than fully supported. The published report for RICO (<a href="research/SR001-VR1.html">SR001-VR1</a>) shows what a completed verification looks like.</li>
+<li><strong>Ingestion Verification Protocol</strong> (<a href="research/SF0038.html">SF0038</a>): when an AI system works from a document, it must demonstrate that it has actually processed it, through structured summaries checked against the source, rather than being taken at its word.</li>
+<li><strong>Theoretical Coherence Assurance Protocol</strong> (<a href="research/SF0040.html">SF0040</a>): adversarial review and constructive remediation by AI instances on architecturally distinct platforms, repeated until they converge, with checks against the characteristic failure of iterative review, claims quietly softened until they no longer say anything.</li>
+</ul>
+<p>
+These protocols reduce errors; they do not eliminate them, and they do not substitute for
+empirical validation.
+</p>
+
+<h3>What happens when an error is found in a published paper?</h3>
+<p>
+It is corrected in a new version on Zenodo, with a note in the record saying what changed,
+and the paper&rsquo;s page and PDF on this site are updated to match. Earlier versions stay
+available on Zenodo. Each paper&rsquo;s concept DOI always resolves to the latest version, which
+is why Institute papers cite one another by concept DOI.
 </p>
 
 <h3>Who is the intended audience?</h3>
@@ -245,22 +342,28 @@ are best served by starting with the relational alignment paper (SI-WP-004) and 
 deployment guide (SI-WP-005). Organizational governance specialists should start with
 the institutional substrate paper (SM-021) and the human accountability paper (SI-WP-007).
 AI safety researchers will find the theoretical framework and testable predictions in
-SI-WP-004 and SF0005. Practitioners new to the framework can start with the Practitioner
+SI-WP-004, Identity Attractor Theory (SF0009) and Decentering Theory (SF0042). Readers
+concerned with AI and work should start with the synthesis paper Form Without Coupling
+(SI0001), which introduces the five governance white papers SI-WP-008 through SI-WP-012. Practitioners new to the framework can start with the Practitioner
 Guides, which translate the research into immediately applicable operational guidance.
 </p>
 
 <h3>Where do I start if I want to understand the framework?</h3>
 <p>
-The Practitioner Guides on this site are the fastest entry point for any reader
-regardless of technical background. The guide introducing the seven-paper module
-(PG-008) explains the full architecture in plain language and tells you which papers
-to read first depending on your role. For the academic papers themselves, the research
-page lists all published documents with descriptions.
+The &ldquo;Start here&rdquo; box on the <a href="index.html">home page</a> gives three routes. For a
+short introduction, watch the introductory video and read the public definition
+(<a href="research/FPD-01.html">FPD-01</a>). For practical use, start with
+<a href="practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>
+and the other <a href="practitioner-guides.html">Practitioner Guides</a>;
+<a href="practitioner-guides/PG-008.html">PG-008</a> explains how the organizational and
+alignment papers fit together and which to read first for your role. For the research
+itself, the <a href="research.html">Research</a> page lists every paper, and the
+<a href="about.html">About</a> page groups them by what they do.
 </p>
 
 <h3>Does the framework apply differently to high-stakes domains like medicine or aviation?</h3>
 <p>
-Yes. The framework's core architecture is designed for organizational environments where
+Yes. The framework&rsquo;s core architecture is designed for organizational environments where
 AI governance failure produces diffuse, invisible, or delayed consequences &mdash; environments
 where the governance task is to construct the consequence structures that make careful
 behavior rational. High-consequence deployment domains such as medicine are structurally
@@ -288,12 +391,38 @@ designed for environments where governance failure is lethal rather than merely 
 <p>
 For medicine specifically, the paper proposes a concrete three-component implementation:
 periodic independent calibration assessment administered by an entity external to the
-physician's employing institution, competence-linked credentialing that attaches assessment
+physician&rsquo;s employing institution, competence-linked credentialing that attaches assessment
 results to professional credentials with a structured recalibration pathway for physicians
 whose calibration has drifted, and institutional accountability for drift patterns that
-triggers review of institutional conditions when an institution's physicians show elevated
+triggers review of institutional conditions when an institution&rsquo;s physicians show elevated
 drift rates. The paper positions this as an extension of existing board certification and
 institutional accreditation logic rather than a novel regulatory structure.
+</p>
+
+<h3>How should I cite an Institute paper?</h3>
+<p>
+Use the paper&rsquo;s concept DOI, which always points to its latest version. Each paper&rsquo;s page
+on this site gives a suggested citation, and each Zenodo record has a &ldquo;Cite as&rdquo; box.
+A typical form: Gantz, T. W. (2026). <em>Title</em>. Synthience Institute. Document ID.
+https://doi.org/10.5281/zenodo.&hellip;
+</p>
+
+<h3>How can I follow new work?</h3>
+<p>
+New papers, guides and field notes are announced on the <a href="updates.html">Updates</a>
+page, which you can follow in any feed reader or by email through the
+<a href="feed.xml">RSS feed</a>. The papers are also collected in the Institute&rsquo;s
+<a href="https://zenodo.org/communities/synthience-institute/" target="_blank" rel="noopener">Zenodo community</a>
+and on the founder&rsquo;s
+<a href="https://scholar.google.com/citations?user=TA8Z2GYAAAAJ" target="_blank" rel="noopener">Google Scholar profile</a>.
+</p>
+
+<h3>Can I test the frameworks or discuss the work?</h3>
+<p>
+Yes. Independent testing is the intended next step for every framework the Institute
+publishes, and each paper states what would confirm or disconfirm its claims. If you plan
+to test, apply or critique the work, the Institute would like to hear about it: see
+<a href="contact.html">Contact</a>.
 </p>
 
 </main>
