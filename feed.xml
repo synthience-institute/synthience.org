@@ -429,7 +429,7 @@
       <guid isPermaLink="false">2026-03-28 https://synthience.org/field-notes/FN-002.html</guid>
       <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
       <category>Field Note</category>
-      <description>New Field Note published. The OpenClaw arc traces five stages of operational drift -- and exposes the missing layer in AI safety that neither training-time alignment nor evaluation-time governance addresses.</description>
+      <description>New Field Note published. The OpenClaw arc traces five stages of operational drift — and exposes the missing layer in AI safety that neither training-time alignment nor evaluation-time governance addresses.</description>
     </item>
     <item>
       <title>PG-002: AI-Assisted Editing Without Silent Loss</title>
@@ -437,7 +437,7 @@
       <guid isPermaLink="false">2026-03-28 https://synthience.org/practitioner-guides/PG-002.html</guid>
       <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
       <category>Practitioner Guide</category>
-      <description>New Practitioner Guide published. A step-by-step procedure for using AI to edit complex documents without silent content loss -- covering the Edit Pass, Verification Pass, and structured diff report.</description>
+      <description>New Practitioner Guide published. A step-by-step procedure for using AI to edit complex documents without silent content loss — covering the Edit Pass, Verification Pass, and structured diff report.</description>
     </item>
     <item>
       <title>SF0040: Theoretical Coherence Assurance Protocol (TCAP)</title>

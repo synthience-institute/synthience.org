@@ -100,6 +100,37 @@
     .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
   </style>
   <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-009.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Make the AI Show You the Source",
+    "description": "AI systems do not only fabricate sources. More often, they cite real sources that do not actually support the claim being attributed to them. This guide shows you how to catch that before you build work on a misrepresented citation.",
+    "author": {
+      "@type": "Person",
+      "name": "Thomas W. Gantz",
+      "url": "https://synthience.org/founder.html",
+      "sameAs": [
+        "https://orcid.org/0009-0003-7168-493X",
+        "https://scholar.google.com/citations?user=TA8Z2GYAAAAJ"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Synthience Institute",
+      "url": "https://synthience.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://synthience.org/assets/images/synthience-logo-black-bg.png"
+      }
+    },
+    "datePublished": "2026-05-17",
+    "url": "https://synthience.org/practitioner-guides/PG-009.html",
+    "mainEntityOfPage": "https://synthience.org/practitioner-guides/PG-009.html",
+    "image": "https://synthience.org/assets/images/synthience-logo-black-bg.png",
+    "inLanguage": "en"
+  }
+  </script>
 </head>
 <body>
 
@@ -110,7 +141,7 @@
     </a>
   </div>
   <div class="header-text">
-    <h1>Synthience Institute</h1>
+    <p class="site-title">Synthience Institute</p>
   </div>
   <nav class="main-nav" id="site-nav"></nav>
 </header>
@@ -120,7 +151,7 @@
 
 <div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
 
-<h2>Make the AI Show You the Source</h2>
+<h1 class="page-title">Make the AI Show You the Source</h1>
 
 <div class="article-meta">
   <span>PG-009</span>
@@ -136,7 +167,7 @@
 
 <p>Most users have heard that AI systems sometimes make up sources that do not exist. Fabricated citations are real, and they do happen. But they are not the most common citation failure, and they are not the most dangerous one.</p>
 
-<p>The more common failure is subtler and harder to catch: the AI cites a real source, by a real author, in a real venue -- and then attributes a claim to that source that the source never actually made.</p>
+<p>The more common failure is subtler and harder to catch: the AI cites a real source, by a real author, in a real venue &mdash; and then attributes a claim to that source that the source never actually made.</p>
 
 <div class="key-insight">
 <span class="label">The failure mode most users miss</span>
@@ -179,11 +210,11 @@ The dangerous citation is not the one that points to a nonexistent paper. It is 
 
 <p>The principle is simple: do not accept that a source supports a claim until the source has been quoted alongside the claim.</p>
 
-<div class="pg-rule"><strong>Important prerequisite:</strong> This procedure assumes the AI can actually retrieve the source -- either because the source is in your conversation (you uploaded it, or it appeared in a prior search) or because the AI has live browsing access in the current session. If the AI is working from training memory alone, asking for a verbatim quote will often produce a plausible reconstruction presented as a quote -- which is exactly the failure mode this procedure exists to catch. Either give the AI access to the source, or treat the citation as unverified.</div>
+<div class="pg-rule"><strong>Important prerequisite:</strong> This procedure assumes the AI can actually retrieve the source &mdash; either because the source is in your conversation (you uploaded it, or it appeared in a prior search) or because the AI has live browsing access in the current session. If the AI is working from training memory alone, asking for a verbatim quote will often produce a plausible reconstruction presented as a quote &mdash; which is exactly the failure mode this procedure exists to catch. Either give the AI access to the source, or treat the citation as unverified.</div>
 
 <p>Three steps.</p>
 
-<h4>Step 1 -- Ask for the exact passage</h4>
+<h4>Step 1 &mdash; Ask for the exact passage</h4>
 
 <p>For every claim the AI attributes to a source, ask the AI to produce the exact passage from the source that supports it.</p>
 
@@ -191,7 +222,7 @@ The dangerous citation is not the one that points to a nonexistent paper. It is 
 
 <p>The two important parts of that instruction are <em>verbatim</em> and <em>do not paraphrase as if quoting</em>. Without those, the AI will frequently produce a fluent reconstruction of what the source <em>could plausibly</em> say, presented as if it were a direct quote. That is the failure mode this step is designed to catch.</p>
 
-<h4>Step 2 -- Read what came back</h4>
+<h4>Step 2 &mdash; Read what came back</h4>
 
 <p>Look at the passage the AI produced and ask three questions:</p>
 
@@ -203,13 +234,13 @@ The dangerous citation is not the one that points to a nonexistent paper. It is 
 
 <p>"Mentions the topic" is not the same as "supports the claim." A paper that discusses memory in language models does not automatically support a claim that language models have human-like memory. The link between topic and claim is exactly where misrepresentation hides.</p>
 
-<h4>Step 3 -- Verify against the source itself</h4>
+<h4>Step 3 &mdash; Verify against the source itself</h4>
 
-<p>For any claim that will leave your hands -- public writing, professional communication, a decision affecting other people -- open the source and find the passage yourself.</p>
+<p>For any claim that will leave your hands &mdash; public writing, professional communication, a decision affecting other people &mdash; open the source and find the passage yourself.</p>
 
 <p>If the source is publicly accessible (a paper on arXiv or PubMed, a press release, a public report), this usually takes thirty seconds and resolves the question for the cases that matter most.</p>
 
-<p>If the source is not publicly accessible -- paywalled, behind authentication, or only available as an abstract -- you cannot verify the citation. In that case, either remove the citation, soften the claim, or replace the source with one you can read.</p>
+<p>If the source is not publicly accessible &mdash; paywalled, behind authentication, or only available as an abstract &mdash; you cannot verify the citation. In that case, either remove the citation, soften the claim, or replace the source with one you can read.</p>
 
 <div class="pg-rule"><strong>Working rule:</strong> If you cannot read the source, you cannot cite the source. The AI's confidence about what a paywalled source says is not evidence.</div>
 
@@ -240,7 +271,7 @@ The dangerous citation is not the one that points to a nonexistent paper. It is 
 <li>Never accept "the source discusses this" as evidence the source supports a claim</li>
 <li>Never accept a paraphrase presented as a quote</li>
 <li>Never cite a source you cannot read</li>
-<li>Never assume the AI checked the source before answering -- ask</li>
+<li>Never assume the AI checked the source before answering &mdash; ask</li>
 </ul>
 
 <p>The cost of asking for a quote is one extra turn in a conversation. The cost of repeating a misrepresented citation in public is much higher and lasts much longer.</p>
@@ -251,7 +282,7 @@ The dangerous citation is not the one that points to a nonexistent paper. It is 
 
 <h3>What this procedure does not do</h3>
 
-<p>This method does not verify that the source itself is correct -- a real paper making a real claim can still be wrong. It does not catch every form of citation drift. And it does not relieve the writer of responsibility: the final check is always the human reading the source.</p>
+<p>This method does not verify that the source itself is correct &mdash; a real paper making a real claim can still be wrong. It does not catch every form of citation drift. And it does not relieve the writer of responsibility: the final check is always the human reading the source.</p>
 
 <h3>When in doubt</h3>
 
@@ -279,9 +310,9 @@ The procedure in this guide is a plain-language adaptation of a formal verificat
 </p>
 
 <ul>
-  <li><a href="../research/SF0037.html">SF0037: Citation Verification Protocol (CVP)</a> -- the full methodology, including identity and existence verification, the Public Verifiability Constraint, the three-part verification method, and the certification log. DOI: <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">10.5281/zenodo.18075624</a></li>
-  <li><a href="PG-003.html">PG-003: Verify Before You Work</a> -- the companion guide on verifying that the AI has actually read the documents you gave it, before any downstream citation work begins</li>
-  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a> -- the companion guide on detecting silent content loss during AI-assisted editing, the failure mode adjacent to citation misrepresentation</li>
+  <li><a href="../research/SF0037.html">SF0037: Citation Verification Protocol (CVP)</a> &mdash; the full methodology, including identity and existence verification, the Public Verifiability Constraint, the three-part verification method, and the certification log. DOI: <a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">10.5281/zenodo.18075624</a></li>
+  <li><a href="PG-003.html">PG-003: Verify Before You Work</a> &mdash; the companion guide on verifying that the AI has actually read the documents you gave it, before any downstream citation work begins</li>
+  <li><a href="PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a> &mdash; the companion guide on detecting silent content loss during AI-assisted editing, the failure mode adjacent to citation misrepresentation</li>
 </ul>
 
 <p>

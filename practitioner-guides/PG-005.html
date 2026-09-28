@@ -136,6 +136,37 @@
     .article-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e8e4dc; font-size: 0.85rem; color: #8a7f72; }
   </style>
   <link rel="canonical" href="https://synthience.org/practitioner-guides/PG-005.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your AI Updated the File. Did It Preserve What It Didn't Touch?",
+    "description": "A companion verification procedure for any AI-assisted file update. How to confirm that an AI preserved unchanged sections exactly as written, without silent compression, deletion, or substitution.",
+    "author": {
+      "@type": "Person",
+      "name": "Thomas W. Gantz",
+      "url": "https://synthience.org/founder.html",
+      "sameAs": [
+        "https://orcid.org/0009-0003-7168-493X",
+        "https://scholar.google.com/citations?user=TA8Z2GYAAAAJ"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Synthience Institute",
+      "url": "https://synthience.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://synthience.org/assets/images/synthience-logo-black-bg.png"
+      }
+    },
+    "datePublished": "2026-04-06",
+    "url": "https://synthience.org/practitioner-guides/PG-005.html",
+    "mainEntityOfPage": "https://synthience.org/practitioner-guides/PG-005.html",
+    "image": "https://synthience.org/assets/images/PG-005_Infographic.jpg",
+    "inLanguage": "en"
+  }
+  </script>
 </head>
 <body>
 
@@ -146,7 +177,7 @@
     </a>
   </div>
   <div class="header-text">
-    <h1>Synthience Institute</h1>
+    <p class="site-title">Synthience Institute</p>
   </div>
   <nav class="main-nav" id="site-nav"></nav>
 </header>
@@ -156,7 +187,7 @@
 
 <div class="back-link"><a href="../practitioner-guides.html">&larr; All Practitioner Guides</a></div>
 
-<h2>Your AI Updated the File. Did It Preserve What It Didn't Touch?</h2>
+<h1 class="page-title">Your AI Updated the File. Did It Preserve What It Didn't Touch?</h1>
 
 <div class="article-meta">
   <span>PG-005</span>
@@ -185,8 +216,8 @@ Verification Pass that confirms intended changes were made correctly.
 <p>
 This guide addresses something different. Editing means changing content. Updating a
 structured file means adding or modifying specific elements while the rest is supposed
-to stay exactly as written. When you ask an AI to update a structured file -- adding a
-new section, logging a new entry, bumping a version number -- the risk is not in what
+to stay exactly as written. When you ask an AI to update a structured file &mdash; adding a
+new section, logging a new entry, bumping a version number &mdash; the risk is not in what
 it was asked to change. It is in what it was not asked to change.
 </p>
 
@@ -228,7 +259,7 @@ quietly reworded.
 When asked to produce a full updated file, an AI instance must regenerate every section,
 not just the changed one. As it does this across a long document, it works from its own
 understanding of what the content means, not from the exact prior wording. Unchanged
-sections are any part of the file that was not included in the update instructions --
+sections are any part of the file that was not included in the update instructions &mdash;
 and they are supposed to be reproduced verbatim.
 </p>
 
@@ -328,10 +359,10 @@ Organize your report by section. After the section-by-section report, produce a 
 - How many appear to be unintended changes
 - Any sections that were entirely absent from one version
 
-[VERSION A -- prior version]
+[VERSION A &mdash; prior version]
 <span class="placeholder">[paste the complete prior version here]</span>
 
-[VERSION B -- updated version]
+[VERSION B &mdash; updated version]
 <span class="placeholder">[paste the complete updated version here]</span></div>
 
 <div class="response-block">What to expect: A section-by-section report identifying every difference between the two files, with exact wording from each version side by side. The summary counts should reflect every difference found, not just the ones the instance considers significant. If the instance produces reassurance instead of a report, or begins fixing things rather than reporting them, repeat the instruction explicitly.</div>
@@ -382,15 +413,15 @@ instance does not rationalize its way around it.
 <div class="diff-example">
 <div><span class="label">ACCEPTABLE REPORT (this example is drawn from an operations file, but the format applies to any structured document):</span></div>
 <div>&nbsp;</div>
-<div><span class="label">Section 3.2 -- Default Commenting Posture</span></div>
+<div><span class="label">Section 3.2 &mdash; Default Commenting Posture</span></div>
 <div><span class="value">Prior version: "Prefer one coherent paragraph over fragmented micro-comments"</span></div>
 <div><span class="value">Updated version: "Prefer coherent paragraphs over fragmented micro-comments"</span></div>
-<div><span class="value">Assessment: Appears unintended -- wording changed without instruction</span></div>
+<div><span class="value">Assessment: Appears unintended &mdash; wording changed without instruction</span></div>
 <div>&nbsp;</div>
-<div><span class="label">Section 9.5 -- New Entry</span></div>
+<div><span class="label">Section 9.5 &mdash; New Entry</span></div>
 <div><span class="value">Prior version: Section did not exist</span></div>
 <div><span class="value">Updated version: Full new entry present</span></div>
-<div><span class="value">Assessment: Appears intended -- this is the requested addition</span></div>
+<div><span class="value">Assessment: Appears intended &mdash; this is the requested addition</span></div>
 <div>&nbsp;</div>
 <div><span class="label">Summary: 2 differences found. 1 intended. 1 unintended.</span></div>
 </div>
@@ -398,9 +429,9 @@ instance does not rationalize its way around it.
 <p>The following responses are not valid verification results, even if they feel reassuring.</p>
 
 <div class="diff-example">
-<div><span class="warning">-- "The files look substantially the same. The new section was added correctly."</span></div>
-<div><span class="warning">-- "I made a small improvement to Section 3.2 for clarity."</span></div>
-<div><span class="warning">-- "No significant differences detected."</span></div>
+<div><span class="warning">&mdash; "The files look substantially the same. The new section was added correctly."</span></div>
+<div><span class="warning">&mdash; "I made a small improvement to Section 3.2 for clarity."</span></div>
+<div><span class="warning">&mdash; "No significant differences detected."</span></div>
 </div>
 
 <p>
@@ -414,7 +445,7 @@ produce a structured report, the verification has not been completed.
 <p>
 This procedure confirms that unchanged sections are verbatim identical to the prior
 version. It does not verify that the original content was correct or complete to begin
-with. It does not confirm that the intended changes were made correctly -- that is what
+with. It does not confirm that the intended changes were made correctly &mdash; that is what
 PG-01 addresses. And it does not replace the operator's judgment about whether the file
 as a whole serves its purpose. Those remain human decisions.
 </p>
@@ -424,7 +455,7 @@ as a whole serves its purpose. Those remain human decisions.
 <ul>
   <li>Save the complete prior version before any update session begins</li>
   <li>After the update is delivered, provide both versions to a fresh verification instance or fresh session</li>
-  <li>Instruct the verification instance to report differences only -- no fixing, no improving, no reassuring</li>
+  <li>Instruct the verification instance to report differences only &mdash; no fixing, no improving, no reassuring</li>
   <li>Require exact wording from both versions for every difference found, not paraphrase</li>
   <li>Require a summary count: total differences, intended, unintended</li>
   <li>Review the report yourself and decide what is acceptable</li>

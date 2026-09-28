@@ -78,9 +78,21 @@ header .logo img {
 }
 
 /* Titles */
-h1 {
+/* The site name in the header: the <h1> on the home page, a <p class="site-title"> elsewhere. */
+h1,
+.site-title {
   margin: 0;
   font-size: 2rem;
+}
+
+.site-title {
+  font-weight: bold;
+}
+
+/* Each page's own title is its <h1>, sized as the former <h2> titles were. */
+main h1 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
 }
 
 .subtitle {
@@ -163,7 +175,8 @@ h3 {
   main {
     padding: 1rem;
   }
-  h1 {
+  h1,
+  .site-title {
     font-size: 1.5rem;
   }
   nav a {
