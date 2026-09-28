@@ -19,7 +19,7 @@ If those files and this one disagree, the operations files win.
 - **Concept DOIs** for Institute papers. Outside works keep the DOI of the version cited.
 - **Version numbers** appear only on a paper's own page (meta block and footer). Nothing else refers to a specific version.
 - **`research/pdf/<ID>.pdf`** is the exact PDF on Zenodo, byte for byte, named by document ID only. A new Zenodo version replaces the file under the same name and updates the paper's page to match.
-- **`updates.html`** announces new pieces only, never new versions or corrections. **`sitemap.xml`** changes only when a page is added.
+- **`updates.html`** announces new pieces only, never new versions or corrections. After adding an entry, rebuild the RSS feed with `node tools/build-feed.js`, which regenerates `feed.xml` from updates.html. **`sitemap.xml`** changes only when a page is added.
 - **Images:** export as JPEG (quality about 85 to 88) before upload, keeping the original pixel size.
 
 ## How changes are made
