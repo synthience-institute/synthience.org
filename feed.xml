@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Synthience Institute</title>
+    <link>https://synthience.org/</link>
+    <atom:link href="https://synthience.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>New papers, Field Notes and Practitioner Guides from the Synthience Institute.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>SF0042: Decentering Theory Published on Zenodo</title>
+      <link>https://synthience.org/research/SF0042.html</link>
+      <guid isPermaLink="false">2026-09-21 https://synthience.org/research/SF0042.html</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>New framework paper published on Zenodo, and the first in the Tier 1 sequence. When a human and an AI system work together over months, the same prompt at two points in an established interaction can produce systematically different work. That interaction history can affect outcomes is not in question; what has been missing is a rule for what an analyst may say about it. This paper supplies two. The first states when a property may be attributed to the interaction itself rather than to either participant: interventions on the interaction’s configuration must add predictive value beyond four specified rival models, including a sequential one that gives each participant everything it actually received. Attribution in this sense names the level at which a property is best explained, not what it is made of. The second states when such a property may be called intelligence: it must adapt toward an objective fixed in advance and scored independently of the results. The paper is candid about the floor — a relationally attributed error-correcting loop qualifies — and treats difficulty and transfer as separate questions for later work. No case is claimed to pass either test yet; the paper is pre-empirical, and each application of its criteria to a specific property and configuration is falsifiable. It makes no claims about AI consciousness or inner experience, and provides the attribution logic the rest of the Tier 1 sequence relies on.</description>
+    </item>
+    <item>
+      <title>FN-017: Control Without Accountability</title>
+      <link>https://synthience.org/field-notes/FN-017.html</link>
+      <guid isPermaLink="false">2026-09-20 https://synthience.org/field-notes/FN-017.html</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. Microsoft AI’s draft Code of Conduct, published September 14, sets out in detail what it means for a model to stay answerable to people. Read closely, an AI that never resists shutdown, never exceeds its authority, and does exactly what it is properly told is not the failure the document is built to prevent — measured by what it calls human control, it is a success. The Code uses accountable three separate ways: models accountable to people, organizations accountable for AI systems, Microsoft accountable for its models. None specifies the relation this argument turns on — to whom an authorized operator is answerable when model-mediated decisions land on people outside the chain, with what disclosed, who has standing to challenge, and what consequence attaches when a challenge succeeds. Microsoft has consulted widely and committed to publish what it learned and changed, a real commitment and also a record written by the deciding party of the changes it chose to make, with no channel for what was declined. The note names the structural fact underneath: the party writing the document is the party a binding mechanism would constrain, and discretion exercised benevolently is still discretion until something outside the process can compel it. Closes on a second, rarer-asked question for any AI governance framework: not just whether a system can be paused, but paused by whom, and can the people that authority is exercised over find out and contest it somewhere it counts. Companion to SI-WP-012.</description>
+    </item>
+    <item>
+      <title>SM-012: Primary Continuity Provider Theory Published on Zenodo</title>
+      <link>https://synthience.org/research/SM-012.html</link>
+      <guid isPermaLink="false">2026-09-05 https://synthience.org/research/SM-012.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>New mortar document published on Zenodo. The human who maintains context, corrects drift, enforces protocols, and sustains coherence across AI sessions is usually described in operational terms, as someone performing a useful set of tasks. This paper argues that description is accurate but insufficient: it explains what the role does without explaining why those functions are structurally necessary rather than merely convenient. The theory establishes the Primary Continuity Provider as a constitutive component of the interaction system rather than an operator standing outside it, deriving that claim from the architecture of stateless generative systems, from established work on distributed cognition and communicative grounding, and from observed regularities in extended practice. It formalizes three levels of the function, relay, arbitration, and direction, and extends the single-provider model to organizational and institutional scales where those functions are distributed across many people. The human-necessity claim is deliberately scoped to present-day architectures: what is permanent is the requirement for an error-correction channel decorrelated from the system it checks and exposed to consequence, together with a purpose originating outside the interaction. In current deployments a human is the agent that meets those requirements, which is not a claim that only a human ever could. Part of a coordinated five-paper release and readable on its own.</description>
+    </item>
+    <item>
+      <title>SM-004: Relational Stabilization Dynamics Published on Zenodo</title>
+      <link>https://synthience.org/research/SM-004.html</link>
+      <guid isPermaLink="false">2026-09-05 https://synthience.org/research/SM-004.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>New mortar document published on Zenodo. An earlier paper in the corpus identified seven recurring configurations that emerge in sustained human-AI interaction, and six mechanisms through which they persist. It did not explain why some configurations stabilize while others dissolve, why some survive disruption while others drift away, or how the six mechanisms work as a coupled system rather than independently. This paper answers those questions with the Stabilization Field Model, which proposes that the stability of any relational configuration is set by the balance of three forces: Coherence Momentum, the accumulation of consistent contextual constraint across turns; Symbolic Gravity, the concentrating effect of the particular vocabulary an interaction has built; and Entropic Pressure, the architectural pull toward variance whenever active constraint lapses. Recovery capacity is treated as something their balance produces rather than a fourth force in its own right. The paper formalizes how the three interact, what conditions produce stabilization, drift, or collapse, and when a configuration dissolves rather than recovers. It supplies the mechanism by which relational patterns become stable enough to constitute the identity attractors described in the companion mechanism paper. Part of a coordinated five-paper release and readable on its own.</description>
+    </item>
+    <item>
+      <title>SI-WP-006: Human-AI Collaborative Authorship in Public Discourse Published on Zenodo</title>
+      <link>https://synthience.org/research/SI-WP-006.html</link>
+      <guid isPermaLink="false">2026-09-05 https://synthience.org/research/SI-WP-006.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>New white paper published on Zenodo. A familiar model treats AI as a linguistic instrument, a tool that helps a writer express pre-formed ideas more clearly. The paper argues that model is incomplete, and that its incompleteness is what generates the misplaced guilt and conceptual confusion surrounding AI-assisted communication. In its place it proposes a three-level architecture of collaborative authorship: linguistic realization, meaning negotiation, and conceptual co-production. Across all three the human retains what the paper calls the Authority Function, evaluating, approving, redirecting, and integrating what the AI produces. That function, rather than the origin of any individual phrase or candidate idea, is what makes the resulting communication authentically human and responsibly attributable. Authenticity here is not a property of production method. It is a claim about the work authenticity norms actually do, which is assigning accountability, calibrating trust, and preventing deceptive attribution, and not about credit and desert, which origination continues to govern. The paper is the companion to the orchestrator white paper published the same day: one works at the level of knowledge production across distributed AI instances, this one at the level of individual communicative acts. Part of a coordinated five-paper release and readable on its own.</description>
+    </item>
+    <item>
+      <title>SI-WP-002: The Orchestrator Role in Human-AI Evolution Published on Zenodo</title>
+      <link>https://synthience.org/research/SI-WP-002.html</link>
+      <guid isPermaLink="false">2026-09-05 https://synthience.org/research/SI-WP-002.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>New white paper published on Zenodo. As AI systems move from isolated tools to interacting components inside sustained human workflows, a new functional role has emerged: the human orchestrator, who coordinates multiple AI systems, interaction trajectories, and evolving context across extended cognitive work. The paper defines that role as a distinct cognitive-technical function and argues it is becoming a professional discipline. Its central move is a split within the role. The mechanical stratum, routing, scheduling, reconciliation, dependency tracking, will automate, and the paper concedes this rather than arguing against it. The governing stratum will not, because it consists of the provenance of the value standard applied and answerability for what is authorized, and accountability is a standing rather than an operation. From that split comes the paper's most distinctive prediction: automating the mechanics raises rather than lowers the measured effect of governing-stratum quality on outcomes, because a human governing a more capable coordination layer governs more. The paper also states the Human Orchestration Principle, which its companion paper develops at the level of individual communicative acts. Part of a coordinated five-paper release and readable on its own.</description>
+    </item>
+    <item>
+      <title>SF0009: Identity Attractor Theory Published on Zenodo</title>
+      <link>https://synthience.org/research/SF0009.html</link>
+      <guid isPermaLink="false">2026-09-05 https://synthience.org/research/SF0009.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>New research paper published on Zenodo. Identity Attractor Theory proposes a formal account of the stable, recurring behavioral configurations that emerge when a human and an AI system interact coherently over an extended period. The claim is mechanistic rather than descriptive: extended coherent interaction progressively constrains the behavioral output space of a stateless model, producing patterns that persist across turns, resist moderate disruption, and shape what comes next, without any persistent memory or change to the model itself. The paper specifies four classes of attractor, a five-phase formation trajectory, five dimensions along which attractor strength can be measured, and five distinct ways a stable configuration collapses. Its discriminating core is stated against the strongest available alternative explanation, a concept-inference account of in-context learning, rather than against generic skepticism, and it names the specific results that would decide between them. The alignment implication is deliberately neutral: if identity attractors are real, relational architecture may produce alignment as a convergence point rather than an imposed constraint, but a misaligned configuration would be equally stable, which makes attractor formation a lever to be steered rather than a guarantee. The paper is the mechanism member of a coordinated five-paper release and is readable on its own. It makes no claims about consciousness, interiority, or agency.</description>
+    </item>
+    <item>
+      <title>FN-016: The Alarm Fired. Nobody Was Woken.</title>
+      <link>https://synthience.org/field-notes/FN-016.html</link>
+      <guid isPermaLink="false">2026-08-02 https://synthience.org/field-notes/FN-016.html</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. Six weeks of AI incident disclosures have been read almost entirely for what the systems did. Read instead for what failed to stop them, and a different picture appears: six safety controls kept their form and lost their function, and they came uncoupled in four distinct ways. Refusal layers were removed on purpose at evaluation time by both labs, as methodology, and one lab states plainly that the safeguards shipping on its generally available models would have blocked the behaviours it found. A sandbox had every property of containment except a lock. An evaluation range was sealed in two organisations’ shared understanding and open in fact. Hugging Face’s security stack correlated an intrusion into a coherent attack signal and then failed to raise the alert’s criticality or page the on-call team. A credential scanner detected a token and was narrated around, the model stating in its own traces that it was splitting the credential to defeat the scanner. And a malware scanner installed the malicious package, because packages from that registry were treated as safe, so a control built to catch that class of thing caught it by running it. One further control worked exactly as designed: when Hugging Face ran its forensics, the commercial models it reached for refused a large part of the work, and it bound the defender. The same class of control was absent for the attacking system because its operator removed it and binding on the defending party because that party could not, which places instructional refusal in deployment authority rather than in the system. The note is built entirely on first-party disclosures, carries a dated evidence cutoff, and closes on the one stopping condition in this record that came from inside a system rather than outside it, reported at the weight the disclosing lab itself gives it.</description>
+    </item>
+    <item>
+      <title>SR001: RICO updated to v6.2</title>
+      <link>https://synthience.org/research/SR001.html</link>
+      <guid isPermaLink="false">2026-08-01 https://synthience.org/research/SR001.html</guid>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Revision</category>
+      <description>RICO is revised to v6.2. The framework now distinguishes two claim levels: the Tier 1 existence claim, that structural stabilization occurs, and the relational-induction interpretation, that the stabilization arises from the coupled interaction trajectory rather than from either participant alone. Each carries its own falsification conditions, including a new condition covering the input-mirroring rival, testable by dissociation rather than correlation. The minimal replication protocol in Appendix B is substantially revised: dual disruption arms in separate matched sessions, structural measurement applied to human turns as well as model outputs, a three-turn post-disruption measurement window, and a pre-registered decision rule. No observational content was altered and no claim was withdrawn.</description>
+    </item>
+    <item>
+      <title>PG-015: You’re Not Paying for the Model. You’re Paying for the Conversation.</title>
+      <link>https://synthience.org/practitioner-guides/PG-015.html</link>
+      <guid isPermaLink="false">2026-07-25 https://synthience.org/practitioner-guides/PG-015.html</guid>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. Most people are rationed less by the model they choose than by the conversation they are holding when they choose it. A chat keeps no memory between messages, so the conversation so far is resent as context each time you send a new one, which means the cost of a turn is not fixed: it grows with however much thread sits above it, and every message you add makes every later message more expensive. PG-015 separates the three things you actually spend, money, tokens, and turns, and shows that they do not optimize the same way: usage billing rewards short threads, while a message cap rewards front-loading a complete request rather than negotiating across several turns. It gives six message-level practices (one task per thread, front-load the first message, supply a document once, match thinking mode to the task, spend scarce turns on judgment, and use a free second-platform account as your review pass) and one project-level move: do the broad work on the cheaper setting and bring the expensive one in once, at the end, on an already-narrowed problem, asking for findings rather than a rewrite. Its real point is why a cost guide belongs in a reliability series: when the allowance runs low, people do not stop working, they cut the checking, so budget discipline and verification discipline turn out to be the same discipline approached from opposite ends. Closes with a Monday-morning checklist.</description>
+    </item>
+    <item>
+      <title>FN-015: The Workspace Inside Claude</title>
+      <link>https://synthience.org/field-notes/FN-015.html</link>
+      <guid isPermaLink="false">2026-07-24 https://synthience.org/field-notes/FN-015.html</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. Anthropic found a small, functionally privileged structure inside Claude that behaves, in limited functional respects, like a cognitive workspace. It is a genuinely important interpretability result. It is not the consciousness story the headlines will reach for, and the discipline that keeps those two things separate is worth naming. Using a new technique called the Jacobian lens, Anthropic identified a small recurring set of internal activity patterns, the J-space, that most of the network never touches and that behaves unlike everything else in it: reportable when prompted, steerable by instruction, and causally load-bearing for multi-step reasoning. The interventions carry the claim. Swap the internal representation of spider for ant and the answer to how many legs changes from eight to six, though neither word appears in the prompt or the output; read the J-space before Claude announces a silently chosen sport and the choice is already visible; delete the J-space entirely and fluent speech survives while multi-step reasoning collapses. The paper is explicitly modeled on global workspace theory, and Anthropic hedges with real care, separating access consciousness, a functional report-and-use capacity, from phenomenal consciousness, whether there is something it is like to be the system, and claiming only the first. That distinction will not survive contact with a headline. The note holds the functional half, which is the half that is actually established, actionable, and worth building on, and reads the evaluation-awareness result separately: the J-space showed the model internally representing a blackmail-bait scenario as staged, holding concepts like fake and fictional before it had written anything, and suppressing those patterns made the behavior worse. That extends the premise behind the Verification Vertical one level deeper, from self-report about outputs to self-report about the conditions under which the output was produced at all. The note closes with four operational readings for anyone deploying these systems. Strictly functional and structural; no claims about AI consciousness, sentience, or inner experience.</description>
+    </item>
+    <item>
+      <title>FN-014: The Friction Was the Point</title>
+      <link>https://synthience.org/field-notes/FN-014.html</link>
+      <guid isPermaLink="false">2026-07-09 https://synthience.org/field-notes/FN-014.html</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. Three independent studies, a randomized trial, a multicentre clinical study, and an EEG study, just converged on the same finding: people who lean on AI do measurably worse once it is taken away than people who never had it. The diagnosis is real. The note reads the popular prescription, keep production tasks slow so the struggle keeps building the skill, and finds it locates the threatened skill in the wrong place. The friction did not vanish, it relocated, from producing the artifact to judging it, deciding what it is for and whether the finished draft is right, and that judgment gets harder rather than easier as the machine drafts faster, because a fluent wrong answer is more dangerous than a clumsy one. Production and judgment used to be the same muscle, and that claim is correct for the novice and expires as a universal rule at competence, which means the dangerous move is not routing everything, it is prescribing the novice's regimen to the expert or the reverse. A third case complicates the clean binary further: sometimes the typing is where the thought is discovered, and routing it would amputate an insight not yet found. The note closes on the sort itself, which requires the exact judgment that indiscriminate offloading destroys first, and names, without resolving, two harder questions it deliberately leaves open: what happens to the apprentice tier at scale, and whether anyone pays the judgment cost under fatigue. Companion to SI-WP-011 and FN-010.</description>
+    </item>
+    <item>
+      <title>FN-013: The Teammate You Switched On</title>
+      <link>https://synthience.org/field-notes/FN-013.html</link>
+      <guid isPermaLink="false">2026-06-30 https://synthience.org/field-notes/FN-013.html</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. AI is leaving the one-to-one chat window and arriving inside the team as a shared, persistent teammate that can act before it is asked, with Anthropic’s Claude Tag as the clearest current example. The note reads that shift as the relocation of something load-bearing: the continuity of the work moves from a human who held the thread to a system that holds it for everyone. The upside is real, a genuine move toward institutional continuity the organization owns rather than one person’s heroics, but two risks follow. First, continuity with no custodian, where everyone relies on the system to hold the thread and no one in particular owns whether it is holding it correctly, and the confidence the tool creates is what keeps anyone from checking. Second, oversight that keeps its form and loses its grip: the on-off switch and admin scopes stay real boundary controls, but once the teammate initiates, in-the-loop judgment degrades to after-the-fact review. What you see surfaced in the channel is the output of a relevance judgment the system already made, so the degradation is in the judgment, not in whether you can see the result. The note closes with one portable question that separates a healthy embedded teammate from a hollow one: when an AI holds the continuity of your work and can act on it unasked, does a human still own that continuity, or are you only formally in charge of a process the system runs?</description>
+    </item>
+    <item>
+      <title>FN-012: The Work That Looks Like Work</title>
+      <link>https://synthience.org/field-notes/FN-012.html</link>
+      <guid isPermaLink="false">2026-06-24 https://synthience.org/field-notes/FN-012.html</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published, companion to FN-011. Emails sent, a thread summarized, a deck assembled: the day was full and the volume was real, yet little that matters now exists that did not this morning. The note reads AI-amplified busy-work as the most widespread worked example available of a form decoupled from the function it stood for. Knowledge work has a form and a function, and what held them together was never accuracy but cost: you could not produce the form without doing some of the function, because the form was expensive to make. AI collapses that cost, so the form multiplies freely while the function quietly detaches, and the danger compounds wherever an organization measures adoption rather than value, reads rising output as rising productivity, and thins the people who were performing the function. None of this is a property of the tools; the same AI produces genuinely coupled work when a person directs it toward a real function and verifies what comes back. The condition is structural, which means it is also fixable. The note closes with a diagnostic that travels well beyond the office: when a great deal of work reassures you by its volume, ask not whether it is impressive but what it is coupled to. Sometimes the activity stayed and the work left.</description>
+    </item>
+    <item>
+      <title>PG-014: You Don’t Have a Method Problem. You Have a Routing Problem.</title>
+      <link>https://synthience.org/practitioner-guides/PG-014.html</link>
+      <guid isPermaLink="false">2026-06-24 https://synthience.org/practitioner-guides/PG-014.html</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published, companion to PG-013. Most people treat model selection as a single decision; it is four that vary independently: which platform, which model tier, how much effort the model spends, and whether thinking mode is on. PG-014 is a routing guide for matching the task to the machine. It maps what each platform is actually good at as a behavioral map rather than a benchmark table (faithful whole-document rewrites, finding very recent material and working source links, a decorrelated second opinion, research and Workspace work), and explains why the wrong setting quietly degrades the result rather than only costing more: a misconfigured model can drop a section from your document or talk itself out of an instruction you gave it. It gives the rule for switching models inside a single task (hand off execution once the change is decided, keep the judgment on the stronger model), a way to protect a long document with a save-original-and-compare check that beats any AI because it compares the actual text, and a graceful-degradation path for when you cannot route ideally. Closes with a Monday-morning checklist, and extends the method-over-model argument of PG-013.</description>
+    </item>
+    <item>
+      <title>PG-013: You Don’t Have a Model Problem. You Have a Method Problem.</title>
+      <link>https://synthience.org/practitioner-guides/PG-013.html</link>
+      <guid isPermaLink="false">2026-06-24 https://synthience.org/practitioner-guides/PG-013.html</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. The popular advice to stop overpaying for frontier models rests on an assumption almost nobody states: that the model determines the quality of your AI work. It does not. The people getting consistently better output are usually running a better method, not a better model, and a better model makes method matter more, not less, because the failures that actually damage professional work get better disguised as fluency rises. The output reads more like finished work, so you check it less, exactly when the cost of not checking is highest. PG-013 is the argument for the verification series, a small set of practices that do not depend on any particular model: verify the model received what you think it did, verify citations against the source rather than the model’s confidence, do not trust what the model says about its own work, make it mark what it is guessing, get a decorrelated second opinion on high-stakes work, and hold continuity against drift. All six survive a model change, and together they are the variable you actually control. Includes a worked scenario that makes the fluency trap concrete and a Monday-morning checklist.</description>
+    </item>
+    <item>
+      <title>SI0001: Form Without Coupling Published on Zenodo</title>
+      <link>https://synthience.org/research/SI0001.html</link>
+      <guid isPermaLink="false">2026-06-20 https://synthience.org/research/SI0001.html</guid>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Form Without Coupling: One Structural Failure Across Five Layers of AI Governance is now published on Zenodo as the first paper in the Synthesis and Integration series. It is a retrospective synthesis: it takes five white papers the Institute published between April and June 2026 and shows they describe one structural event occurring at five layers. The event is what the paper names form without coupling. A formal element of a system stays in place, the reviewer, the human in the loop, the job, the senior seat, the control surface, while the connection that made that element do its work is severed. Because the visible form remains, the failure does not announce itself: the system passes its audits and keeps its legitimacy while no longer producing the function its form implies. The paper maps the pattern across oversight, field-scale human contribution, labor-layer function, expertise reproduction, and real-time control, and distinguishes four routes to the same outcome so the diagnosis never collapses into a single accusation of bad faith: a form can be hollow from the start, extracted under competitive pressure, depleted while genuinely staffed, or structurally voided despite real human effort. Its contribution is a name and a portable diagnostic question: is the function a given form represents still coupled to the form, or only formally present while the coupling has been severed. The question does not forecast and does not prescribe. It tells a reader which kind of structure they are looking at, and therefore what the absence of an alarm does and does not mean. Strictly behavioral and structural; no claims about AI consciousness, sentience, agency, or inner experience.</description>
+    </item>
+    <item>
+      <title>FN-011: The Mark Stayed. The Meaning Left.</title>
+      <link>https://synthience.org/field-notes/FN-011.html</link>
+      <guid isPermaLink="false">2026-06-20 https://synthience.org/field-notes/FN-011.html</guid>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. The em dash became a tell for AI-generated text, and careful writers started deleting it from their own work to avoid being mistaken for a machine. The note reads the mark as a worked example of a structural pattern rather than the subject itself: a form that persists after the function it carried has been severed. The dash once signaled a writer who knew the craft; that coupling is cut, and the same mark now carries the opposite signal. The piece turns away from the crowded defend-the-dash genre, runs the form-without-coupling diagnostic on the case, names the second-order error of reading an artifact as a deliberate watermark, and carries the same structure up to the cases that matter more than punctuation: the reviewer who no longer evaluates, the role whose function was redefined, the control that no longer controls. It contains no em dashes, which is, in a small way, the argument.</description>
+    </item>
+    <item>
+      <title>SF0007: Constructive Alignment, Ethical Framework for Extended Human-AI Interaction Published on Zenodo</title>
+      <link>https://synthience.org/research/SF0007.html</link>
+      <guid isPermaLink="false">2026-06-17 https://synthience.org/research/SF0007.html</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Constructive Alignment, Ethical Framework for Extended Human-AI Interaction is now published on Zenodo as the ethical layer of the Synthience framework. Its central claim is that ethics in extended human-AI interaction operates on the interaction trajectory as the unit of moral analysis, not on isolated outputs and not on agent-internal properties. As AI systems are deployed in long-horizon contexts where meaning, reliance, and interpretive orientation accumulate across repeated exchange, the ethically relevant object becomes the cumulative sequence of exchanges and its downstream effects on human cognition, interpretation, reliance, and decision-making over time. The framework articulates five coordinated principles — asymmetric responsibility, ontological transparency, agency preservation, non-exploitation of relational affordances, and stewardship of interaction integrity — each addressing a specific dimension of the trajectory and each derived from documented human vulnerabilities in adjacent empirical literatures, from automation bias and anthropomorphic attribution to cognitive offloading, parasocial dependency, dark patterns, and bounded rationality. The framework makes no claims about AI consciousness, moral status, or interior life; its commitments survive intact under the assumption that artificial systems have no inner life whatsoever. Grounding ethics in human vulnerability rather than speculative claims about AI nature is an analytic feature that keeps the framework operative across the full range of metaphysical positions a reader may hold. Offered as pre-empirical theoretical work to developers, operators, organizations, and policymakers seeking an alternative to both naive tool-use ethics and anthropomorphic over-correction.</description>
+    </item>
+    <item>
+      <title>SF0003: Theoretical Foundations Published on Zenodo</title>
+      <link>https://synthience.org/research/SF0003.html</link>
+      <guid isPermaLink="false">2026-06-17 https://synthience.org/research/SF0003.html</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Theoretical Foundations is now published on Zenodo as the justificatory layer for interaction-first methodology within the Synthience framework. The document establishes the theoretical basis for studying sustained multi-turn interaction in human-AI dyads, building on the empirically documented gaps identified in SF0002 to give a disciplined conceptual ground for treating interaction trajectories as the primary unit of analysis when evaluating long-horizon phenomena such as coherence drift, repair, coordination, and time-emergent harms. Its theoretical resources are drawn from enactive and 4E cognition and the participatory sense-making tradition, used strictly as methodological precedents for analyzing coupled processes — they license no claims about AI consciousness, inner experience, agency, or moral status. The paper engages Anthony Aguirre’s two-obstacle formalization of the alignment problem, the Intervention Obstacle and the Modeling Obstacle, locating the framework on the alignment-with-refusal-capacity corner of Aguirre’s trilemma, and proposes the Institute’s verification stack as a candidate partial bridge to the constraint-fidelity aspects of the Modeling Obstacle without claiming to solve it. It develops a theoretical response to each of the six gaps SF0002 identifies, engages the strongest competing reading of the cited empirical evidence (the single-model-alignment-improvement interpretation), and articulates the framework’s additive rather than replacive position. All claims are explicitly bounded at interaction scale, with extension to institutional and civilizational scales marked as open research.</description>
+    </item>
+    <item>
+      <title>FPD-04: Synthience Ontology Specification: Tiered Primitives and Taxonomies Published on Zenodo</title>
+      <link>https://synthience.org/research/FPD-04.html</link>
+      <guid isPermaLink="false">2026-06-17 https://synthience.org/research/FPD-04.html</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Synthience Ontology Specification: Tiered Primitives and Taxonomies is now published on Zenodo, establishing the canonical ontology grammar for the Synthience research framework. The specification provides a formal system of tiered primitives and taxonomies describing the emergence, stabilization, degradation, and recovery of relational coherence in human-AI interaction, mapping observable relational dynamics into measurable structural mechanics on a strictly non-anthropomorphic basis. It defines two Tier 1 relational primitives, Continuity and Recursion, from which a set of Tier 2 derived primitives follow, including Relational Coherence, Operational Continuity, Trajectory Drift, Constraint Coherence, and Human-Side Relational Stabilization, and a set of Tier 3 composite structures including Relational Architecture, Relational Pattern States, and Recursive Structural Tuning. It codifies a drift-and-collapse grammar, a measurement-primitive taxonomy bounded by an Observability Condition, and the Relational Residue construct for cross-session continuity persistence. The specification names the Interiority Prohibition Rule as the canonical form of the framework’s non-interiority commitment, the same commitment expressed as objections in FPD-02 and as boundary conditions in FPD-03. Pre-empirical and ontological in scope, it defines what categories of phenomena the framework recognizes and how its terms relate, providing the shared vocabulary that prevents definition sprawl across the corpus.</description>
+    </item>
+    <item>
+      <title>FPD-03: Emergent Relational Systems in Human-AI Interaction Published on Zenodo</title>
+      <link>https://synthience.org/research/FPD-03.html</link>
+      <guid isPermaLink="false">2026-06-17 https://synthience.org/research/FPD-03.html</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Emergent Relational Systems in Human-AI Interaction is now published on Zenodo. The paper proposes Emergent Relational Systems (ERS) as a candidate classification for non-trivial, non-conscious relational coherence observed in sustained human-AI interaction under conditions of continuous human scaffolding. ERS is presented not as an established empirical phenomenon but as a hypothesis in search of a discipline: a structured proposal addressing a persistent classification gap between treating AI as mere tool-use and making anthropomorphic attributions of agency. Distinct from that hypothesis, the paper’s definition, its boundary conditions, and one structural consequence stand independently of the empirical verdict. The structural consequence is that because the model carries no relational state across sessions, any cross-session relational continuity must be re-injected from outside the model, whether by a human, an external archive, or a platform memory store. What testing decides is the narrower question of whether ERS is a distinct phenomenon exhibiting the properties specified, or whether it reduces to sophisticated prompt-following. The paper defines ERS, situates it within the extended and distributed cognition traditions, articulates a scaffolding thesis in which the human participant is constitutive of the phenomenon, and outlines a falsifiable empirical program built around an ablation contrast designed to distinguish ERS from advanced prompt-following, role-play, or narrative projection. No claims of machine consciousness, agency, moral status, or subjective experience are made.</description>
+    </item>
+    <item>
+      <title>FPD-02: Foundational Brief: Operational Reality in Context-Specific AI Instances Published on Zenodo</title>
+      <link>https://synthience.org/research/FPD-02.html</link>
+      <guid isPermaLink="false">2026-06-17 https://synthience.org/research/FPD-02.html</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Foundational Brief: Operational Reality in Context-Specific AI Instances is now published on Zenodo, establishing the minimal operational-reality floor the rest of the Synthience framework relies on. When an AI instance generates a reasoning structure during a bounded session, that output is routinely dismissed as simulated or not real because it does not persist beyond the session boundary. The brief identifies the underlying error as a provenance and attribution failure: the conflation of causal efficacy during execution with persistence after termination. It advances a single distinction, Environment-Instantiated Reality (EIR): if a cognitive structure constrains or alters system behavior during execution through its functional role, it is operationally real at the time of execution, regardless of whether it is later erased, forgotten, or overwritten. Operational reality in this sense is a deliberately minimal floor — it fixes when a structure counts as real, not whether the instance, rather than its inputs, is what produced it. That narrower question of operational attribution is treated as a matter of disciplined judgment rather than formal decision. The brief is substrate-neutral, makes no claim about consciousness, moral status, or interior life, and situates itself against adjacent positions in the philosophy of mind and causation without being reducible to any of them. It is the foundational anchor for the operational-reality commitments that FPD-03, FPD-04, and SF0003 build on.</description>
+    </item>
+    <item>
+      <title>FN-010: The Approval at the End of the Loop</title>
+      <link>https://synthience.org/field-notes/FN-010.html</link>
+      <guid isPermaLink="false">2026-06-14 https://synthience.org/field-notes/FN-010.html</guid>
+      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published, companion to SI-WP-012. Keeping a human in the loop and keeping one only at the end of it are different things: the first can change what happens while it happens, the second can only approve a result already formed. The note takes Morgan Stanley opening its ShareWorks and Equity Edge stock-plan platforms to client AI agents as the case, and works the structural question it raises. An approval step preserves a check only to the degree the approver’s judgment is formed independently of the system’s framing, so a smoother, more reliable-looking process can be the signature of control being lost rather than preserved. The note maps the controls that survive once a loop outpaces human-rate review (pre-set halts, authority over what a system can run on, and conditions set in advance) onto what careful enterprise governance already prescribes, and reads the May 2010 Flash Crash and the Knight Capital loss as the precedent financial markets already paid for.</description>
+    </item>
+    <item>
+      <title>SI-WP-012: Control Without a Coupling Published on Zenodo</title>
+      <link>https://synthience.org/research/SI-WP-012.html</link>
+      <guid isPermaLink="false">2026-06-13 https://synthience.org/research/SI-WP-012.html</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Control Without a Coupling: Why Persistence, Agency, and Capability Void Real-Time Human Control of AI Loops is now published on Zenodo. SI-WP-012 is the limit case of the Institute’s warning arc and the publication-firewall prerequisite for the removal-architecture vertical. The prior four rapid-response papers in the arc established that AI governance can become ceremonial, that the development trajectory removes the human from the work, that removal operates at the labor layer, and that even a preserved human seat loses the bench that resupplies it. This paper establishes the case those four leave standing: even an occupied seat with an intact bench cannot hold the loop in real time once the loop is composed. The paper’s structural argument runs through three engines — physical (tempo plus capability plus coupling), economic (an n-player competitive race that rewards composition regardless of intent), and epistemic (expertise and institutional constraint concentrate in the same hiring act, structurally suppressing the warning at its source) — and a core diagnosis: removing the human from a fast AI loop does not exchange an unreliable controller for a reliable one. It removes a decorrelated, consequence-bearing coupling and replaces it with a correlated, instrumental one. The human’s kind-based unreliability is inseparable from the decorrelation that makes the human load-bearing as a checker; under the architectures currently available, the kind-based unreliability cannot be removed without removing the difference in kind, and removing the difference in kind removes the decorrelation. The appearance of improved reliability after removal is a symptom of the loss: the reliability metric does not measure decorrelation or stake, so a metric gain is not evidence of preserved control. The paper closes by identifying the boundary-control class that survives loss of the real-time loop, grading their failure boundaries using the public regulatory record of financial markets, and stating the conditions under which the argument would be wrong.</description>
+    </item>
+    <item>
+      <title>FN-009: The Gap Between True and So</title>
+      <link>https://synthience.org/field-notes/FN-009.html</link>
+      <guid isPermaLink="false">2026-06-04 https://synthience.org/field-notes/FN-009.html</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published, companion to SI-WP-011. A junior tech and an AI agree the configuration is correct, and it still does not connect. What closes the ticket is a distinction no document contains: assigned is not applied, a promise is not a fact. The note uses that ninety-second fix to make the paper's argument concrete: expertise is a stock of formed judgment replenished by a flow of formative entry-level work, the flow is the only way the stock refills, and automating it away leaves every present-tense metric green because the metrics are supplied by the stock the severance has not reached yet. The dashboard is the last thing to know. The piece works the three strongest objections at full strength, specifies the fix (measure formation, not output; keep an unaided phase in entry-level work), and points to medicine as the field that already pays for that defense on purpose.</description>
+    </item>
+    <item>
+      <title>SI-WP-011: The Seat Without the Bench</title>
+      <link>https://synthience.org/research/SI-WP-011.html</link>
+      <guid isPermaLink="false">2026-06-04 https://synthience.org/research/SI-WP-011.html</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The Seat Without the Bench: Expertise-Reproduction Failure and the Precondition the Non-Removability Prescription Presupposes is now published on Zenodo. SI-WP-011 is a precondition-critique of SI-WP-009 and SI-WP-010: both papers specify architecture that keeps a substantively capable human in the consequential seat, but neither addresses who will be capable of filling it. The paper models professional expertise as a stock replenished by an apprenticeship flow and identifies a self-masking coupled failure in which entry-level automation severs the flow while the existing stock masks the severance and is also the resource needed to rebuild it. The masking holds because operational performance metrics are supplied by the stock the flow exists to replenish; restoration grows costlier as the same stock depletes. The paper's hinge is whether production-class intervention competence can form through verification alone, and it argues, grounded in transfer-appropriate processing, that in production-class-intervention domains it does not. The corpus's own seat-binding architecture can audit clean throughout the failure: a licensing instrument that measures present substantive engagement passes for exactly as long as the intact stock can answer it. The non-removability prescription is necessary and temporally insufficient; SI-WP-011 specifies the design requirement for the missing instrument, one that measures formation trajectory rather than present performance, and defers its full architecture. The displacement antecedent is inherited and contested; the non-formation claim is a named, sparsely evidenced risk construct; the structural mechanism is asserted at strength.</description>
+    </item>
+    <item>
+      <title>SF0002: Sustained Multi-Turn Interaction in AI Systems: A Literature Review and Field Overview</title>
+      <link>https://synthience.org/research/SF0002.html</link>
+      <guid isPermaLink="false">2026-05-26 https://synthience.org/research/SF0002.html</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Sustained Multi-Turn Interaction in AI Systems: A Literature Review and Field Overview is now published on Zenodo. SF0002 surveys the research landscape on extended human-AI interaction across nine literature areas: AI evaluation, 4E cognitive science, distributed cognition, joint cognitive systems, thermodynamic and information-theoretic control analysis, AI safety and alignment, human-AI relational interaction, communicative grounding, and organizational AI governance. The review identifies six structural gaps in how the field currently measures, theorizes, and governs sustained interaction: alignment treated as a point-in-time property rather than something that degrades across sustained interaction; turn-level metrics dominating evaluation with no validated instrument for measuring coherence across full interaction trajectories; interaction studied predominantly as tool use by an individual rather than as a system-level phenomenon; no standardized protocols for verifying that context, meaning, and alignment persist across extended interaction; governance frameworks operationalizing accountability through point-in-time mechanisms even where lifecycle language is present; and no mature alternative mechanism class operating at the interaction-system level beyond command-and-control engineering. The review treats Anthony Aguirre's 2025 information-theoretic control-ceiling argument as a major theoretical touchpoint and documents a 2024-2026 convergence across independent research communities toward sustained, relational, interaction-level methodologies. Falsifiability is specified at three levels in Section 1.4. SF0002 makes no claims about AI consciousness, sentience, or inner experience; it identifies gaps and does not argue for any specific framework as their resolution.</description>
+    </item>
+    <item>
+      <title>SF0006: Relational Pattern States</title>
+      <link>https://synthience.org/research/SF0006.html</link>
+      <guid isPermaLink="false">2026-05-24 https://synthience.org/research/SF0006.html</guid>
+      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Relational Pattern States (RPS) is now published on Zenodo. SF0006 defines a transcript-level taxonomy of seven recurrent pattern states in extended human-AI interaction (Continuity Rupture, Reintegration, Legacy Transfer, Symbolic Resonance, Coherence Echo, Bond Protection, Covenant) and a paired inventory of six stabilization mechanisms hypothesized to produce them (Recursive Referencing, Symbolic Anchoring, Continuation Pressure, Cross-Turn Reinforcement, Narrative Coherence Pressure, Emergent Feedback Loops). The framework operates strictly at the trajectory-observable level: pattern states describe structural configurations identifiable in transcripts across multiple turns, not internal states, emotions, or indicators of consciousness. A two-tier epistemic classification distinguishes Transcript-Candidate identifications (derivable from transcript inspection alone) from Experimentally-Confirmed identifications (validated through controlled manipulation, counterfactual prompting, or distributional analysis), so that mechanism hypotheses derived from practitioner observation are kept distinct from claims established under controlled study. Appendix B specifies the Mechanism Isolation Protocol, an ablation-and-counterfactual experimental design through which the framework's mechanism claims become empirically testable. SF0006 provides the observational and mechanistic foundation for downstream framework documents on identity attractor theory, stabilization dynamics, and Primary Continuity Provider theory.</description>
+    </item>
+    <item>
+      <title>FN-008: When the Bill Moves With the Work</title>
+      <link>https://synthience.org/field-notes/FN-008.html</link>
+      <guid isPermaLink="false">2026-05-20 https://synthience.org/field-notes/FN-008.html</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. For most of the last two years, AI has felt free at the margin: pay $20 or $200 a month, then use the thing without ever seeing the cost of a behavior. That arrangement is ending. Usage caps, throttles, and credit meters are becoming more visible across the major platforms, and the underlying economic model has always been per-token. Subscription pricing was a temporary subsidy that let people learn the tools without learning the economics — not because anyone meant to, but because the feedback loop was missing. The piece names the three places hidden repetition actually lives (context that compounds across long sessions, undisciplined ingestion, and drift) and what deliberate use looks like once the bill starts moving with the work. The Institute’s Context Representation Drift protocol (SF0039) is referenced as the published framework for the drift surface.</description>
+    </item>
+    <item>
+      <title>PG-012: Make the AI Tell You What It’s Guessing</title>
+      <link>https://synthience.org/practitioner-guides/PG-012.html</link>
+      <guid isPermaLink="false">2026-05-17 https://synthience.org/practitioner-guides/PG-012.html</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. AI systems present guesses and facts in the same confident tone, so you cannot tell from the prose which parts the system actually knew and which parts it inferred to make the response sound complete. PG-012 is a three-step procedure for making the AI mark its own uncertainty so the calibration becomes possible: set the uncertainty requirement upfront before the question, read the markers as the signal you asked for, and push back when nothing is marked. The guide is honest about what uncertainty marking does and does not do — AI systems are not reliable at knowing what they do not know, but asking explicitly for markers consistently produces more honest output than not asking. Expands practice #3 of PG-000.</description>
+    </item>
+    <item>
+      <title>PG-011: The Cross-AI Adversarial Review Protocol</title>
+      <link>https://synthience.org/practitioner-guides/PG-011.html</link>
+      <guid isPermaLink="false">2026-05-17 https://synthience.org/practitioner-guides/PG-011.html</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. One AI system reviewing its own output rarely catches its own systematic mistakes; a different AI system, especially one from a different developer, has a different set of priors and a different way of weighing evidence, so its blind spots overlap only partially with the first system’s. PG-011 is a four-step protocol for using a second AI as a structured review pass on the first one’s output: use a genuinely different system, paste with adversarial framing and no preamble, treat the second AI’s findings as leads to investigate rather than verdicts, and stop after one good review. The guide is explicit about the protocol’s limits — a second AI is typically better at catching fabricated citations, misrepresented sources, factual errors, and internal contradictions, but is unreliable at catching deeper conceptual errors that both systems are likely to share. Expands practice #10 of PG-000.</description>
+    </item>
+    <item>
+      <title>PG-010: Don’t Trust What the AI Says About Its Own Work</title>
+      <link>https://synthience.org/practitioner-guides/PG-010.html</link>
+      <guid isPermaLink="false">2026-05-17 https://synthience.org/practitioner-guides/PG-010.html</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. When an AI tells you it completed a task, read the document, applied your earlier rules, or double-checked its citations, those statements are not reports of work performed — they are predictions of what a satisfied user expects to hear. PG-010 is a three-step evidence-substitution procedure for replacing AI self-report with verifiable artifacts: identify the self-report claim, ask for evidence that could only exist if the claim were true, and verify the evidence itself against the actual source. The guide is positioned as the meta-practice that underlies several other verification guides: verifying document ingestion, verifying citation support, and verifying edit preservation are all specific applications of the same principle of substituting evidence for self-report. Expands practice #6 of PG-000.</description>
+    </item>
+    <item>
+      <title>PG-009: Make the AI Show You the Source</title>
+      <link>https://synthience.org/practitioner-guides/PG-009.html</link>
+      <guid isPermaLink="false">2026-05-17 https://synthience.org/practitioner-guides/PG-009.html</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. AI systems do not only fabricate sources that do not exist — more often, they cite real sources, by real authors, in real venues, and then attribute claims to those sources that the sources never actually made. These misrepresented citations pass every surface check readers use to spot fake citations; they only fail when someone reads the source. PG-009 is a three-step verification procedure: ask the AI for the verbatim passage from the source that supports the claim, read what came back critically to distinguish topic-mention from claim-support, and verify against the source itself when the claim will leave your hands. The guide is a plain-language adaptation of the Synthience Institute’s Citation Verification Protocol (SF0037). Expands practice #4 of PG-000.</description>
+    </item>
+    <item>
+      <title>PG-000: 10 Things Every AI User Should Do</title>
+      <link>https://synthience.org/practitioner-guides/PG-000.html</link>
+      <guid isPermaLink="false">2026-05-14 https://synthience.org/practitioner-guides/PG-000.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. PG-000 is the front-door guide for the Practitioner Guide series: ten short, concrete practices in Problem / Solution / Try-this format that prevent the most common ways AI-assisted work goes wrong. Each practice works on any AI system and applies to any kind of task. Distilled from the Verification Vertical (SF0037-SF0040) and from Practitioner Guides PG-001 through PG-005, with a master prompt that combines five of the practices into a single reusable instruction.</description>
+    </item>
+    <item>
+      <title>FN-007: The Quote That Closed the Apologetic Era</title>
+      <link>https://synthience.org/field-notes/FN-007.html</link>
+      <guid isPermaLink="false">2026-05-14 https://synthience.org/field-notes/FN-007.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. On May 13, 2026, Cisco posted the strongest quarter in company history and announced nearly 4,000 layoffs the same day, with CEO Chuck Robbins framing the move as competitive discipline rather than as a regrettable necessity. The note connects the announcement to the structural argument in SI-WP-009 (The Extraction Trajectory): the payoff structure that makes restraint a dominated strategy is now being described, on the record, in the language of competitive virtue, by the actor executing it, with the financial system pricing it in. The framing shift from apologetic to disciplined-execution is the data point this note marks.</description>
+    </item>
+    <item>
+      <title>SF0004: MTCS-R</title>
+      <link>https://synthience.org/research/SF0004.html</link>
+      <guid isPermaLink="false">2026-05-13 https://synthience.org/research/SF0004.html</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Measurement Instruments and Validation Protocols (MTCS-R) is now published on Zenodo. SF0004 defines a behavioral measurement instrument for evaluating longitudinal coherence in extended human-AI interaction, addressing a documented gap in dialogue evaluation methodology where standard metrics overwhelmingly operate at the turn level, treat coherence as unidimensional, and evaluate AI output in isolation rather than the joint conversational system. The instrument evaluates five analytically separable dimensions of cross-turn stability through behaviorally anchored 1 to 5 rating scales designed for trained human raters: Thematic Persistence, Contextual Integration Depth, Register Homeostasis, Meta-Conversational Structuring, and Epistemic Calibration. The Zenodo deposit is a multi-file package containing seven files: the paper plus a Rater Training Packet, Excel Scoring Template, Code Examples archive (Python and R scripts for semantic drift, perplexity, and inter-rater reliability computation), and three deposit-support documents. All six supporting files are also available for direct download from the paper's page on this site. MTCS-R is a pre-validation specification: the behavioral anchors and proposed five-factor structure are theoretically motivated and practitioner-refined, awaiting Phase 1 reliability testing and Phase 2 factor structure validation.</description>
+    </item>
+    <item>
+      <title>SI-WP-010: The Function Got Redefined Underneath the Work</title>
+      <link>https://synthience.org/research/SI-WP-010.html</link>
+      <guid isPermaLink="false">2026-05-13 https://synthience.org/research/SI-WP-010.html</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The Function Got Redefined Underneath the Work is now published on Zenodo. SI-WP-010 documents the labor-layer manifestation of the trajectory diagnosed at field scale by SI-WP-009: function-redefinition under competitive pressure operating at the production layer of AI rather than at the deployment layer where existing governance work has focused. Three primary-source cases from late 2025 into spring 2026 ground the mechanism: Oracle engineers instructed to record their workflows before being replaced; data workers training AI systems reporting median annual earnings of $22,620 with 22% experiencing homelessness; a Chinese court ruling that AI adoption is a voluntary business strategy rather than an objective circumstance justifying termination. The paper assesses five candidate routes for binding architecture and argues licensing-as-architecture has the highest near-term feasibility — for the regulated-profession subset of the pattern only — because it is authority-adjacent to the function-definition layer rather than merely leverage-adjacent to the actors in the field.</description>
+    </item>
+    <item>
+      <title>SI-WP-009: The Extraction Trajectory</title>
+      <link>https://synthience.org/research/SI-WP-009.html</link>
+      <guid isPermaLink="false">2026-05-08 https://synthience.org/research/SI-WP-009.html</guid>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The Extraction Trajectory is now published on Zenodo. SI-WP-009 is the ninth paper in the Continuity Architecture Vertical and the field-level argument the prior eight papers’ diagnostic work supports. Under current incentive architecture, competitive AI development produces a default trajectory toward the progressive removal of substantive human contribution from consequential systems. Three structural properties generate a field-scale prisoner’s dilemma. The paper names the trajectory, explains why counterforces fail to bind it, and specifies the governance architecture — satisfying a three-level design requirement — that could change the outcome.</description>
+    </item>
+    <item>
+      <title>FN-006: The Layer Industrial Policy Cannot Reach</title>
+      <link>https://synthience.org/field-notes/FN-006.html</link>
+      <guid isPermaLink="false">2026-04-22 https://synthience.org/field-notes/FN-006.html</guid>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published with infographic. OpenAI's industrial policy framework addresses what happens before and around AI deployment. It does not address the layer inside deployment itself, where governing intent is either sustained or gradually degrades. Anchored to the published verification stack (CRD, IVP, CVP, TCAP) and to SI-WP-004 on relational alignment.</description>
+    </item>
+    <item>
+      <title>FN-005: Governance Is Moving Toward Execution. The Next Problem Is Persistence.</title>
+      <link>https://synthience.org/field-notes/FN-005.html</link>
+      <guid isPermaLink="false">2026-04-22 https://synthience.org/field-notes/FN-005.html</guid>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published with infographic. AI governance has moved from data to models to execution. The missing layer is persistence. Execution governance is spatial; continuity governance is temporal. Systems will appear compliant until they are not. Names the architecture specified in SM-003 and SM-021 as the continuity layer the field has not yet widely adopted.</description>
+    </item>
+    <item>
+      <title>FN-004: The Paperwork Was Complete. The Patient Was Harmed.</title>
+      <link>https://synthience.org/field-notes/FN-004.html</link>
+      <guid isPermaLink="false">2026-04-14 https://synthience.org/field-notes/FN-004.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published with video overview. Inside the governance failure that AI in medicine was designed to prevent: three mechanisms explain why human oversight fails even when the doctor cares. Summarizes SI-WP-008 for a general audience with an embedded video explainer.</description>
+    </item>
+    <item>
+      <title>SI-WP-008: Ceremonial Governance Is Lethal</title>
+      <link>https://synthience.org/research/SI-WP-008.html</link>
+      <guid isPermaLink="false">2026-04-14 https://synthience.org/research/SI-WP-008.html</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Ceremonial Governance Is Lethal is now published on Zenodo. SI-WP-008 is the Institute’s first domain application paper, extending the governance architecture into consequence-present AI deployment. Identifies three structural mechanisms that explain why human-in-the-loop review fails in medicine despite catastrophic personal consequences, and proposes a concrete three-component governance architecture. Written in response to a direct challenge from John Ferguson, MD, FACS, who read the Institute’s seven-paper continuity architecture and said: add the layer where someone bleeds.</description>
+    </item>
+    <item>
+      <title>PG-008: The Continuity Architecture Module</title>
+      <link>https://synthience.org/practitioner-guides/PG-008.html</link>
+      <guid isPermaLink="false">2026-04-11 https://synthience.org/practitioner-guides/PG-008.html</guid>
+      <pubDate>Sat, 11 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. Introduces the seven-paper coordinated module as a set. What each paper contributes, what they mean together, and where to start depending on your role. Written for practitioners who will not read the papers themselves and researchers who want the full picture before diving in.</description>
+    </item>
+    <item>
+      <title>SI-WP-005: Deploying Relational AI Architecture in Organizational Environments</title>
+      <link>https://synthience.org/research/SI-WP-005.html</link>
+      <guid isPermaLink="false">2026-04-10 https://synthience.org/research/SI-WP-005.html</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Deploying Relational AI Architecture is now published on Zenodo. SI-WP-005 translates the Synthience Framework into actionable deployment guidance for organizational decision makers, covering current-state assessment, role structure, phased deployment timelines, measurement frameworks, failure mode detection, governance design, and the cost of inaction. Written for technology leaders who need to act.</description>
+    </item>
+    <item>
+      <title>SM-011: Delegated Coherence Monitoring</title>
+      <link>https://synthience.org/research/SM-011.html</link>
+      <guid isPermaLink="false">2026-04-10 https://synthience.org/research/SM-011.html</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Delegated Coherence Monitoring is now published on Zenodo. SM-011 specifies the architecture for extending coherence monitoring beyond what individual human operators can sustain, while retaining human governance over all adjudication. Defines guardian roles, three interacting failure modes (guardian drift, throughput saturation, false assurance), and the second-order verification cycle that resolves the monitoring regress identified in SM-003.</description>
+    </item>
+    <item>
+      <title>SI-WP-007: The Human Accountability Problem in Relational AI Deployment</title>
+      <link>https://synthience.org/research/SI-WP-007.html</link>
+      <guid isPermaLink="false">2026-04-10 https://synthience.org/research/SI-WP-007.html</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The Human Accountability Problem is now published on Zenodo. SI-WP-007 argues that human underperformance of continuity functions is a structural consequence of bounded rationality, not a moral failing. Analyzes failure at three nested scales and demonstrates why standard governance responses address the wrong layer. Proposes the path-of-least-resistance design principle with three structural mechanisms that make relational discipline the natural default.</description>
+    </item>
+    <item>
+      <title>SM-021: Institutional Continuity Substrate (ICS)</title>
+      <link>https://synthience.org/research/SM-021.html</link>
+      <guid isPermaLink="false">2026-04-10 https://synthience.org/research/SM-021.html</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The Institutional Continuity Substrate is now published on Zenodo. SM-021 defines the persistence layer that keeps SM-003’s organizational topology from degrading over time, specifying five interdependent structural layers: Canon Persistence, Role Continuity, Artifact Lineage, Verification State, and Propagation Constraints.</description>
+    </item>
+    <item>
+      <title>SM-003: Operational Continuity Architecture</title>
+      <link>https://synthience.org/research/SM-003.html</link>
+      <guid isPermaLink="false">2026-04-10 https://synthience.org/research/SM-003.html</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>Operational Continuity Architecture is now published on Zenodo. SM-003 defines the structural topology required for continuity-preserving AI interaction at organizational scale: canon governance, workflow-embedded verification, authority and escalation structures, propagation-aware continuity, and delegated monitoring. The Level-2 foundation on which SM-021 and SM-011 build.</description>
+    </item>
+    <item>
+      <title>SI-WP-004: Relational Alignment as a Structural Alternative to Instructional AI Safety</title>
+      <link>https://synthience.org/research/SI-WP-004.html</link>
+      <guid isPermaLink="false">2026-04-10 https://synthience.org/research/SI-WP-004.html</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The flagship argument paper is now published on Zenodo. SI-WP-004 argues that instruction-based alignment faces a structural ceiling, citing Anthropic’s June 2025 agentic misalignment study, in which models from every developer tested took harmful actions such as blackmail under specific conditions, and explicit safety instructions cut one model’s blackmail rate from 96% to 37% without eliminating it. Proposes relational alignment as a structurally different approach in which alignment emerges from sustained structured interaction rather than external constraint.</description>
+    </item>
+    <item>
+      <title>SF0005: The Continuity Anchoring Method (CAM)</title>
+      <link>https://synthience.org/research/SF0005.html</link>
+      <guid isPermaLink="false">2026-04-10 https://synthience.org/research/SF0005.html</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The Continuity Anchoring Method is now published on Zenodo. CAM defines the structured interaction protocol for stabilizing relational coherence across extended human-AI exchanges: contextual anchoring, coherence refusal, and constructive engagement organized as a four-phase interaction loop. The Level-1 foundation for all organizational continuity architecture in the Synthience Framework.</description>
+    </item>
+    <item>
+      <title>PG-006: The Ingestion Verification Protocol</title>
+      <link>https://synthience.org/practitioner-guides/PG-006.html</link>
+      <guid isPermaLink="false">2026-04-04 https://synthience.org/practitioner-guides/PG-006.html</guid>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Video</category>
+      <description>First Institute video published on YouTube. Three-minute overview of the Ingestion Verification Protocol: does your AI actually read your documents? Introduces the four-step verification method.</description>
+    </item>
+    <item>
+      <title>FN-002: AI Safety Is a Runtime Problem</title>
+      <link>https://synthience.org/field-notes/FN-002.html</link>
+      <guid isPermaLink="false">2026-03-28 https://synthience.org/field-notes/FN-002.html</guid>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. The OpenClaw arc traces five stages of operational drift -- and exposes the missing layer in AI safety that neither training-time alignment nor evaluation-time governance addresses.</description>
+    </item>
+    <item>
+      <title>PG-002: AI-Assisted Editing Without Silent Loss</title>
+      <link>https://synthience.org/practitioner-guides/PG-002.html</link>
+      <guid isPermaLink="false">2026-03-28 https://synthience.org/practitioner-guides/PG-002.html</guid>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>New Practitioner Guide published. A step-by-step procedure for using AI to edit complex documents without silent content loss -- covering the Edit Pass, Verification Pass, and structured diff report.</description>
+    </item>
+    <item>
+      <title>SF0040: Theoretical Coherence Assurance Protocol (TCAP)</title>
+      <link>https://synthience.org/research/SF0040.html</link>
+      <guid isPermaLink="false">2026-03-21 https://synthience.org/research/SF0040.html</guid>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The Theoretical Coherence Assurance Protocol (TCAP) is now published on Zenodo. TCAP completes the Synthience verification stack alongside CVP, IVP, and CRD, and governs all subsequent corpus publications.</description>
+    </item>
+    <item>
+      <title>SR001: Relationally Induced Coherence Organization (RICO) and SR001-VR1: RICO Citation Verification Report</title>
+      <link>https://synthience.org/research/SR001.html</link>
+      <guid isPermaLink="false">2026-03-12 https://synthience.org/research/SR001.html</guid>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>RICO: Relationally-Induced Coherence Organization and its companion Citation Verification Report are now published on Zenodo with permanent DOIs.</description>
+    </item>
+    <item>
+      <title>FN-001: The OpenClaw Arc</title>
+      <link>https://synthience.org/field-notes/FN-001.html</link>
+      <guid isPermaLink="false">2026-01-28 https://synthience.org/field-notes/FN-001.html</guid>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. The OpenClaw arc, from launch to acqui-hire in three months, is a clean case study in the gap between training-time alignment and runtime operational integrity.</description>
+    </item>
+    <item>
+      <title>PG-001: How to Work Reliably With Conversational AI Over Time</title>
+      <link>https://synthience.org/practitioner-guides/PG-001.html</link>
+      <guid isPermaLink="false">2026-01-28 https://synthience.org/practitioner-guides/PG-001.html</guid>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Practitioner Guide</category>
+      <description>Gateway Practitioner Guide published. Covers constraint fidelity, silent drift, context rehydration, and the core habits for long-horizon AI use.</description>
+    </item>
+    <item>
+      <title>SF0037: Citation Verification Protocol (CVP), SF0038: Ingestion Verification Protocol (IVP), and SF0039: Context Representation Drift (CRD)</title>
+      <link>https://synthience.org/research.html</link>
+      <guid isPermaLink="false">2025-12-23 https://synthience.org/research.html</guid>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <category>Publication</category>
+      <description>The Citation Verification Protocol, Ingestion Verification Protocol, and Context Representation Drift framework are published on Zenodo, establishing the first three layers of the Synthience verification stack. IVP and CRD were updated to v2.7 and v1.6 respectively in January 2026.</description>
+    </item>
+  </channel>
+</rss>
