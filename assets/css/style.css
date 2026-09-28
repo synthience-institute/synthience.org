@@ -187,3 +187,13 @@ h3 {
     padding: 0 1rem;
   }
 }
+
+/* Long URLs and table cells wrap instead of widening the page on small screens. */
+main a,
+main td,
+main th,
+.doc-body a,
+.doc-body td,
+.doc-body th {
+  overflow-wrap: anywhere;
+}
