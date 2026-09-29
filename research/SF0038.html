@@ -13,7 +13,7 @@
   <meta charset="UTF-8">
   <title>SF0038: Ingestion Verification Protocol (IVP) &middot; Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for ensuring that an AI system actively processes a document to a degree adequate for reliable downstream use. Synthience Institute.">
+  <meta name="description" content="The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for verifying, through an observable processing record and human adjudication, that an AI system has actively processed a document to a degree adequate for reliable downstream use. Synthience Institute.">
   <meta name="author" content="Thomas W. Gantz">
   <meta name="citation_title" content="Ingestion Verification Protocol (IVP)">
   <meta name="citation_author" content="Gantz, Thomas W.">
@@ -61,13 +61,13 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Synthience Institute">
   <meta property="og:title" content="SF0038: Ingestion Verification Protocol (IVP) &middot; Synthience Institute">
-  <meta property="og:description" content="The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for ensuring that an AI system actively processes a document to a degree adequate for reliable downstream use.">
+  <meta property="og:description" content="The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for verifying, through an observable processing record and human adjudication, that an AI system has actively processed a document to a degree adequate for reliable downstream use.">
   <meta property="og:url" content="https://synthience.org/research/SF0038.html">
   <meta property="og:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@SynthienceInst">
   <meta name="twitter:title" content="SF0038: Ingestion Verification Protocol (IVP) &middot; Synthience Institute">
-  <meta name="twitter:description" content="The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for ensuring that an AI system actively processes a document to a degree adequate for reliable downstream use.">
+  <meta name="twitter:description" content="The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for verifying, through an observable processing record and human adjudication, that an AI system has actively processed a document to a degree adequate for reliable downstream use.">
   <meta name="twitter:image" content="https://synthience.org/assets/images/synthience-logo-black-bg.png">
   <link rel="stylesheet" href="../assets/css/style.css">
   <style>
@@ -123,37 +123,42 @@
 
 <div class="meta-block">
   <span class="meta-label">Document ID</span><span class="meta-value">SF0038</span>
-  <span class="meta-label">Version</span><span class="meta-value">v2.7 | January 18, 2026</span>
+  <span class="meta-label">Version</span><span class="meta-value">v2.8 | September 2026</span>
   <span class="meta-label">Author</span><span class="meta-value">Thomas W. Gantz</span>
   <span class="meta-label">Affiliation</span><span class="meta-value">The Synthience Institute</span>
+  <span class="meta-label">Keywords</span><span class="meta-value">ingestion verification, document processing, active summarization, checkpoints, human adjudication, AI-assisted research</span>
   <span class="meta-label">License</span><span class="meta-value">CC-BY 4.0</span>
   <span class="meta-label">Status</span><span class="meta-value"><span class="status-badge">Published</span> <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">DOI: 10.5281/zenodo.18289047</a></span>
 </div>
 
 <div class="abstract-block">
   <div class="abstract-label">Abstract</div>
-  <p>The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for ensuring that an AI system actively processes a document to a degree adequate for reliable downstream use.</p>
+  <p>The Ingestion Verification Protocol (IVP) defines a practical, platform-agnostic method for verifying, through an observable processing record and human adjudication, that an AI system has actively processed a document to a degree adequate for reliable downstream use.</p>
   <p>IVP requires incremental structured summarization and externally verifiable checkpoints. The act of summarization is treated as the processing mechanism itself, not merely as evidence of reading.</p>
-  <p>The protocol is grounded exclusively in observable behavior. It is designed primarily for human-AI collaboration and extends, under explicit constraints, to AI-AI ingestion contexts. Version 2.7 removes specific corpus size claims from the Methodological Status section to more accurately reflect the observational nature of the development basis.</p>
+  <p>The protocol is grounded exclusively in observable behavior. It is designed primarily for human-AI collaboration and extends, under explicit constraints, to AI-AI ingestion contexts. IVP is one of the four protocols of the Synthience verification stack, with the Citation Verification Protocol (CVP, SF0037), Context Representation Drift (CRD, SF0039) and the Theoretical Coherence Assurance Protocol (TCAP, SF0040). Version 2.8 adds coverage evidence to every checkpoint, names the same-filename re-upload failure, and states that every valid result requires human adjudication; it also corrects how five external studies are reported.</p>
 </div>
 
 <div class="doc-body">
 
-<p><em>Citation Verification: All citations in this document were independently verified using the Citation Verification Protocol (CVP) (<a href="https://doi.org/10.5281/zenodo.18075624" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18075624</a>).</em></p>
-
 <h2>The Problem</h2>
 
-<p>When a document is provided to an AI system, it is commonly assumed that the system has &ldquo;read&rdquo; or &ldquo;understood&rdquo; it. This assumption is unreliable.</p>
+<p>When a document is provided to an AI system, it is commonly assumed that the system has &quot;read&quot; or &quot;understood&quot; it. This assumption is unreliable.</p>
 
 <p>Large language models routinely process documents shallowly, unevenly, or incompletely. They may reconstruct plausible responses without encoding structure, constraints, or dependencies required for reliable downstream reasoning. Self-reports of comprehension are not trustworthy, as models lack introspective access to their own processing adequacy.</p>
 
-<p>This creates two persistent failure modes:</p>
+<p>This creates three persistent failure modes:</p>
 
 <p><strong>1. Shallow Processing</strong></p>
+
 <p>Fluent output masks missing structure, omitted constraints, or hallucinated content.</p>
 
 <p><strong>2. Unverifiable Ingestion</strong></p>
+
 <p>There is no external mechanism to confirm how much of a document was processed, or whether processing was adequate for the intended use.</p>
+
+<p><strong>3. Same-Filename Re-Upload Contamination</strong></p>
+
+<p>When a revised document is uploaded to an instance that has already processed an earlier version, particularly under an identical filename, the instance may accept the new upload yet answer from its representation of the earlier version. It produces a confident, detailed response with no visible sign that the content is stale, and the failure cannot be detected from that response unless the overseer already knows what changed. An answer drawn from the superseded version fails the current-version requirement whatever its cause; the response alone does not show whether the revised content was never processed or was processed and then not used. IVP addresses the failure at the point of ingestion, through the changed-passage check in Phase 1 and a processing record for the current version. Context Representation Drift (SF0039) concerns the loss of fidelity after an adequate record has been established.</p>
 
 <p>The Ingestion Verification Protocol replaces passive exposure with verifiable active processing.</p>
 
@@ -161,44 +166,70 @@
 
 <div class="quickstart-block">
   <div class="quickstart-label">Quick Start</div>
-  <ol style="margin-left:1.2rem;">
-    <li>Provide the document to the instance.</li>
-    <li>After each turn, require an Active Summarization Checkpoint (ASC): structured summary of the processed segment, plus verbatim checkpoint marker (last sentence processed).</li>
-    <li>Trigger continuation (in interactive sessions: type &quot;go&quot; or similar; in API implementations: automated continuation with checkpoint logging).</li>
-    <li>Repeat until complete.</li>
-    <li>Adjudicate adequacy before downstream use.</li>
-  </ol>
+
+<ol style="margin-left:1.2rem;">
+
+  <li>Provide the document to the instance, with its version stated.</li>
+
+  <li>After each turn, require an Active Summarization Checkpoint (ASC):
+    <ul><li>Structured summary of the processed segment</li><li>Verbatim checkpoint markers (first and last sentences processed)</li></ul></li>
+
+
+
+  <li>Trigger continuation (in interactive sessions: type &quot;go&quot; or similar; in API implementations: automated continuation with checkpoint logging).</li>
+
+  <li>Repeat until complete, then produce the coverage record.</li>
+
+  <li>Adjudicate adequacy before downstream use.</li>
+
+</ol>
+
 </div>
 
 <h2>Purpose and Scope</h2>
 
 <p>IVP establishes a process guarantee, not a claim of comprehension, truth, or retention.</p>
 
-<p>It ensures that:</p>
+<p>A valid IVP result shows that:</p>
+
 <ul>
+
   <li>The document was processed incrementally</li>
+
   <li>Processing was externally observable</li>
+
   <li>Adequacy was adjudicated, not self-attested</li>
+
 </ul>
 
-<p>IVP does not certify semantic understanding, long-term retention beyond system limits, or correctness of content.</p>
+<p>IVP does not certify semantic understanding, long-term retention beyond system limits, or correctness of content. What it certifies is the observable processing record, together with a human judgment that the record shows processing adequate for the stated task at the time of review; it does not establish what happened inside the system.</p>
 
 <h2>Implementation vs. Specification</h2>
 
-<p>This document defines the Ingestion Verification Protocol as a methodological specification &mdash; what must occur to constitute verified ingestion.</p>
+<p>This document defines the Ingestion Verification Protocol as a methodological specification -- what must occur to constitute verified ingestion.</p>
 
 <p>What this document provides:</p>
+
 <ul>
+
   <li>Required process components (ASCs, checkpoints, adjudication)</li>
+
   <li>Validity criteria and failure modes</li>
+
   <li>Conceptual implementation modes</li>
+
 </ul>
 
 <p>What this document does not provide:</p>
+
 <ul>
+
   <li>Platform-specific API code</li>
+
   <li>Automation scripts or tooling</li>
+
   <li>Technical integration details</li>
+
 </ul>
 
 <p>Implementation varies by platform, architecture, and use case. The protocol intentionally remains architecture-agnostic to maintain applicability as systems evolve.</p>
@@ -207,221 +238,446 @@
 
 <h2>Definitions</h2>
 
-<p><strong>Human Overseer</strong><br>The participant responsible for scope definition and adequacy adjudication.</p>
+<p><strong>Human Overseer</strong></p>
 
-<p><strong>Instance</strong><br>The AI system performing ingestion.</p>
+<p>The participant responsible for scope definition and adequacy adjudication.</p>
 
-<p><strong>Ingestion Attempt</strong><br>A multi-turn processing sequence conducted under IVP constraints.</p>
+<p><strong>Instance</strong></p>
 
-<p><strong>Active Summarization Checkpoint (ASC)</strong><br>A required output after each turn consisting of a structured summary and a verbatim checkpoint marker.</p>
+<p>The AI system performing ingestion.</p>
 
-<p><strong>Verified Adequate Ingestion</strong><br>An external judgment that ingestion is sufficient for the intended downstream task.</p>
+<p><strong>Ingestion Attempt</strong></p>
+
+<p>A multi-turn processing sequence conducted under IVP constraints.</p>
+
+<p><strong>Active Summarization Checkpoint (ASC)</strong></p>
+
+<p>A required output after each turn consisting of:</p>
+
+<ul>
+
+  <li>Structured summary</li>
+
+  <li>Verbatim checkpoint markers</li>
+
+</ul>
+
+<p><strong>Coverage Record</strong></p>
+
+<p>The instance’s closing account of the document, listing every in-scope section, table, appendix, footnote and endnote against the part of a checkpoint summary that accounts for its task-relevant content, together with any exclusions and any content that could not be extracted.</p>
+
+<p><strong>Verified Adequate Ingestion</strong></p>
+
+<p>An external judgment that ingestion is sufficient for the intended downstream task.</p>
 
 <h2>Core Principles</h2>
 
 <ul>
+
   <li>Summarization Is Processing</li>
+
   <li>Progress Must Be Verifiable</li>
+
   <li>Self-Attestation Is Invalid</li>
+
   <li>Adequacy Is Contextual</li>
+
   <li>Failure Signals Re-Ingestion</li>
+
   <li>Architecture-Agnostic Design</li>
+
 </ul>
 
 <h2>Protocol Phases</h2>
 
 <ol>
+
   <li>Scope Definition</li>
+
   <li>Iterative Ingestion with Active Summarization</li>
+
   <li>Adequacy Adjudication</li>
+
   <li>Optional Spot-Check Quizzing</li>
+
 </ol>
 
-<h3>Phase 1 &mdash; Scope Definition</h3>
+<h3>Phase 1 -- Scope Definition</h3>
 
-<p>The overseer specifies the document, intended downstream use, and any emphasis areas or exclusions. The instance confirms feasibility. No claims of ingestion or understanding are permitted.</p>
+<p>The overseer specifies:</p>
 
-<h3>Phase 2 &mdash; Iterative Ingestion with Active Summarization</h3>
+<ul>
+
+  <li>Document, identified by title and version (a version number in the filename also guards against same-filename re-uploads)</li>
+
+  <li>Intended downstream use</li>
+
+  <li>The parts in scope, including tables, appendices, footnotes and endnotes, with any emphasis areas or exclusions</li>
+
+</ul>
+
+<p>Where the instance has previously processed another version of the same document, the overseer names a passage known to be new or changed in this version, and the instance locates and quotes it before ingestion begins. Confirming that the file opened is not sufficient.</p>
+
+<p>The instance confirms feasibility. No claims of ingestion or understanding are permitted.</p>
+
+<h3>Phase 2 -- Iterative Ingestion with Active Summarization</h3>
 
 <p>After each turn, the instance produces an ASC.</p>
 
 <p><strong>Component 1: Summary</strong></p>
+
 <p>Must include:</p>
+
 <ul>
+
   <li>Core content</li>
+
   <li>Specific details</li>
+
   <li>Structural role</li>
+
   <li>Connections to prior segments</li>
+
 </ul>
 
-<p><strong>Component 2: Checkpoint Marker</strong></p>
-<p>The final sentence processed, quoted verbatim.</p>
+<p><strong>Component 2: Checkpoint Markers</strong></p>
 
-<p>Each turn ends with continuation readiness (e.g., &ldquo;Please type &lsquo;go&rsquo; to continue processing the next portion&rdquo; in interactive mode, or automatic progression in automated implementations).</p>
+<p>The first and the final sentence processed in the segment, quoted verbatim. Each segment begins where the previous one ended, so the markers let the overseer confirm that the segments are contiguous and no material falls between them. They do not show what was processed within a segment; the summary itself must show that. Where a footnote, table, appendix or other unit supplies a task-relevant qualification, dependency or constraint, the ASC states that contribution. Naming a unit without accounting for it does not count as coverage. Where a table, figure, footnote or appendix could not be read, the ASC says so rather than summarizing around it. Footnotes and appendices need particular care: text-extraction tools often drop them, and they are where many documents place their most specific statements.</p>
 
-<h3>Phase 3 &mdash; Adequacy Adjudication</h3>
+<p>Each turn ends with continuation readiness (e.g., &quot;Please type &#x27;go&#x27; to continue processing the next portion&quot; in interactive mode, or automatic progression in automated implementations).</p>
 
-<p>Upon completion, the instance states: <em>&ldquo;I have completed processing the document, pending your adjudication.&rdquo;</em></p>
+<p><strong>Example (illustrative).</strong> An ASC for the second segment of a service agreement might read as follows.</p>
+
+<p><em>Summary:</em> Section 4 (Service Levels) sets a monthly availability target measured at the customer’s gateway and a four-hour response target for the most severe incidents. Table 4.1 maps availability bands to service credits. Section 4 depends on the Section 2 definition of scheduled maintenance, which is excluded from downtime, and it feeds Section 9, which caps total credits. Footnote 3 excludes outages caused by the customer’s own network from the availability calculation.</p>
+
+<p><em>Start marker:</em> “The Provider shall make the Service available in accordance with Table 4.1.”</p>
+
+<p><em>End marker:</em> “Service credits are the Customer’s sole remedy for unavailability.”</p>
+
+<p><em>Covered:</em> Section 4, Table 4.1, footnote 3.</p>
+
+<h3>Phase 3 -- Adequacy Adjudication</h3>
+
+<p>Upon completion, the instance states:</p>
+
+<p><em>&quot;I have completed processing the document, pending your adjudication.&quot;</em></p>
+
+<p>The instance then produces the coverage record: every in-scope section, table, appendix, footnote and endnote, listed against the part of a checkpoint summary that accounts for its task-relevant content, with any exclusions and failed extractions stated.</p>
+
+<p>Adjudication includes a coverage check. The overseer checks the markers against the source for continuity, then checks that each in-scope unit is backed by content-specific evidence in the summaries, and judges whether that evidence is adequate for the stated task. Correct markers establish the boundaries of the record, not that everything between them was processed. An in-scope unit without adequate evidence is unresolved and prevents Verified Adequate Ingestion for the declared scope. This does not require rereading the document line by line: checking the markers against the source exposes skipped segments and markers that do not occur in the document, and the summaries show whether each unit’s contribution was captured.</p>
 
 <p>For Mode 2 implementations, adjudication includes review of the complete ASC log to verify that processing was incremental, structured, and adequate for intended use.</p>
 
-<p>Possible outcomes: Verified Adequate Ingestion, Partial Assimilation, or Insufficient Ingestion. Downstream use is prohibited prior to adjudication.</p>
+<p>Possible outcomes:</p>
 
-<h3>Phase 4 &mdash; Optional Spot-Check Quizzing</h3>
+<ul>
 
-<p>Used to confirm ingestion when summaries were not reviewed live, or to probe nuance or cross-sectional understanding. Quizzing supplements but does not replace summarization.</p>
+  <li>Verified Adequate Ingestion</li>
+
+  <li>Partial Assimilation</li>
+
+  <li>Insufficient Ingestion</li>
+
+</ul>
+
+<p>Downstream use is prohibited prior to adjudication.</p>
+
+<h3>Phase 4 -- Optional Spot-Check Quizzing</h3>
+
+<p>Used to:</p>
+
+<ul>
+
+  <li>Confirm ingestion when summaries were not reviewed live</li>
+
+  <li>Probe nuance or cross-sectional understanding</li>
+
+</ul>
+
+<p>Quizzing supplements but does not replace summarization.</p>
 
 <h2>Implementation Modes</h2>
 
 <p>IVP supports multiple implementation approaches along a spectrum of human involvement during processing:</p>
 
 <p><strong>Mode 1: Live Supervised (Gold Standard)</strong></p>
+
 <ul>
+
   <li>Human present at each turn</li>
+
   <li>Reviews each ASC as generated</li>
-  <li>Manually triggers continuation (e.g., typing &ldquo;go&rdquo;)</li>
+
+  <li>Manually triggers continuation (e.g., typing &quot;go&quot;)</li>
+
   <li>Provides real-time adequacy assessment</li>
-  <li>Advantage: Immediate course correction if processing appears inadequate</li>
+
+  <li><strong>Advantage:</strong> Immediate course correction if processing appears inadequate</li>
+
 </ul>
 
 <p><strong>Mode 2: Automated Processing with Batch Adjudication</strong></p>
+
 <ul>
+
   <li>Instance processes entire document incrementally (via API or similar automation)</li>
-  <li>Each turn generates required ASC (summary + checkpoint)</li>
+
+  <li>Each turn generates required ASC (summary + checkpoint markers)</li>
+
   <li>All ASCs logged to continuous reviewable record</li>
+
   <li>Human reviews complete log afterward to adjudicate adequacy</li>
-  <li>Advantage: Eliminates waiting between turns; human reviews at their convenience</li>
-  <li>Requirement: Complete ASC log must be preserved and reviewable</li>
+
+  <li><strong>Advantage:</strong> Eliminates waiting between turns; human reviews at their convenience</li>
+
+  <li><strong>Requirement:</strong> Complete ASC log must be preserved and reviewable</li>
+
 </ul>
 
 <p><strong>Mode 3: Fully Automated (Explicitly Prohibited)</strong></p>
+
 <ul>
+
   <li>No human adjudication occurs</li>
+
   <li>System self-attests adequacy</li>
-  <li>Invalid under IVP &mdash; violates core principle that self-attestation is insufficient</li>
+
+  <li><strong>Invalid under IVP</strong> -- violates core principle that self-attestation is insufficient</li>
+
 </ul>
 
 <p>All modes require human adjudication before downstream use. The distinction is timing: live (Mode 1) vs. batch review (Mode 2).</p>
 
+<p><strong>Optional Extension: Cross-Model Triangulation</strong></p>
+
+<p>For foundational documents, where a misreading would carry into a great deal of later work, IVP may be run independently by instances on two or more platforms whose models come from different developers, each under its own adjudication. The overseer then compares the records. Points on which the independent readings converge are the most reliable basis for downstream work. Where they diverge, either the document is ambiguous at that point or one reader processed it inadequately, and the source is checked there. Triangulation multiplies the cost of ingestion and is reserved for documents that warrant it; single-instance IVP remains the default.</p>
+
 <h2>System Capacity and Feasibility Constraints</h2>
 
-<p>IVP operates within real system limitations. Ingestion may fail or terminate prematurely due to: hard session limits imposed by a platform, context window exhaustion, system timeouts or response degradation, or prior conversational context consuming available capacity.</p>
+<p>IVP operates within real system limitations.</p>
+
+<p>Ingestion may fail or terminate prematurely due to:</p>
+
+<ul>
+
+  <li>Hard session limits imposed by a platform</li>
+
+  <li>Context window exhaustion</li>
+
+  <li>System timeouts or response degradation</li>
+
+  <li>Prior conversational context consuming available capacity</li>
+
+</ul>
 
 <p>These constraints do not invalidate the protocol. They establish feasibility boundaries.</p>
 
-<p>If an instance cannot complete IVP on a document, the document must be segmented, a fresh instance must be used, or ingestion must be abandoned for that system.</p>
+<p>If an instance cannot complete IVP on a document:</p>
 
-<p>Ingestion capacity does not imply ingestion verification. Extended context or persistent memory may reduce operational friction but do not replace external adjudication.</p>
+<ul>
+
+  <li>The document must be segmented</li>
+
+  <li>A fresh instance must be used</li>
+
+  <li>Or ingestion must be abandoned for that system</li>
+
+</ul>
+
+<p>Ingestion capacity does not imply ingestion verification.</p>
+
+<p>Extended context or persistent memory may reduce operational friction but do not replace external adjudication.</p>
 
 <h2>Extension to AI-AI Ingestion Contexts</h2>
 
 <p>IVP may extend to AI-AI contexts only under these conditions.</p>
 
 <p><strong>Human-First Requirement</strong></p>
+
 <p>At least one instance must complete IVP under direct human adjudication before acting as an ingestion adjudicator for others.</p>
 
-<p><strong>Delegated Adjudication: Possibility vs. Recommendation</strong></p>
+<p><strong>Delegated Adjudication</strong></p>
 
-<p>Theoretical possibility: a human-verified instance may technically adjudicate IVP for one additional instance.</p>
+<p>An instance that has completed IVP under human adjudication may assist in adjudicating another instance’s ingestion: it can check that instance’s checkpoints and coverage record against the source and report what it finds. An IVP-valid result still requires a human to review the complete record, including every ASC generated in the delegated session and the assisting instance’s assessment. Without that review, the result does not meet IVP requirements.</p>
 
-<p>Risk assessment: even a single delegation introduces Context Representation Drift (CRD) related degradation risk. The adjudicating instance operates on its own potentially drifted representation. Without human review of the delegated adjudication log, validity is questionable.</p>
+<p>Delegation carries risk because the assisting instance works from its own representation of the document, which may have drifted since its own verification. How much risk depends on what the assisting instance passes on and what gets checked: an instance that returns to the source for each check carries less risk than one working from its memory of it.</p>
 
-<p>Serial delegation: multiple sequential delegations (A&rarr;B, A&rarr;C, A&rarr;D&hellip;) compound drift risk to the point where verification guarantees become unreliable. The adjudicating instance&rsquo;s representation degrades with each additional adjudication interaction.</p>
+<p><strong>Repeated and chained delegation</strong></p>
 
-<p>Minimum safeguard if attempted: human review of the complete adjudication record, including all ASCs generated during the delegated IVP session.</p>
+<p>The two patterns carry different risks. In repeated delegation, one assisting instance checks several others in turn (A→B, A→C, A→D); its own representation may drift across successive sessions, so later checks can rest on a weaker base than earlier ones. In chained delegation, an instance that was checked by an AI then checks the next (A→B, B→C, C→D); each link depends on the one before it, so an error that passes one check can carry forward along the chain. In both patterns the risk is reset when an instance re-ingests the original document under fresh human adjudication.</p>
 
-<p>Recommendation: fresh human adjudication for each instance requiring verification remains the most reliable approach.</p>
+<p><strong>Recommendation:</strong></p>
 
-<p>See companion document &ldquo;Context Representation Drift&rdquo; (SF0039) for detailed analysis of representational degradation over extended interactions.</p>
+<p>Fresh human adjudication for each instance requiring verification remains the most reliable approach.</p>
+
+<p>See companion document &quot;Context Representation Drift&quot; (SF0039) for detailed analysis of representational degradation over extended interactions.</p>
 
 <h2>Context Degradation Constraints</h2>
 
-<p>As interactions accumulate, earlier document representations may degrade or be displaced. Verified ingestion is not permanent. Therefore: delegated adjudication must be limited in scope, re-verification is required after substantial additional interaction, and persistent memory mitigates but does not eliminate this risk.</p>
+<p>As interactions accumulate:</p>
+
+<ul>
+
+  <li>Earlier document representations may degrade or be displaced</li>
+
+  <li>Verified ingestion is not permanent</li>
+
+</ul>
+
+<p>Therefore:</p>
+
+<ul>
+
+  <li>Delegated adjudication must be limited in scope</li>
+
+  <li>Re-verification is required after substantial additional interaction</li>
+
+  <li>Persistent memory mitigates but does not eliminate this risk</li>
+
+</ul>
 
 <p>No instance retains verified ingestion indefinitely.</p>
 
 <h2>Common Misuse Patterns (Invalid Under IVP)</h2>
 
 <p>The following do not constitute IVP compliance:</p>
+
 <ul>
+
   <li>Generating ASCs but not preserving them for review</li>
+
   <li>Automating both processing AND adjudication without human involvement</li>
-  <li>Accepting instance self-reports of &ldquo;adequate ingestion&rdquo;</li>
+
+  <li>Accepting instance self-reports of &quot;adequate ingestion&quot;</li>
+
   <li>Reviewing only final summary instead of incremental checkpoints</li>
+
   <li>Delegating adjudication without human re-entry at any stage</li>
+
+  <li>Uploading a revised document under the same filename without confirming that the instance has read the new version</li>
+
 </ul>
 
 <h2>Prohibited Shortcuts</h2>
 
-<p>The following do not constitute ingestion:</p>
+<p>The following do not meet IVP verification requirements:</p>
+
 <ul>
+
   <li>Pretraining exposure</li>
+
   <li>System prompts or instruction sets</li>
+
   <li>Uploaded documents without active summarization</li>
+
   <li>Single-pass summaries</li>
+
 </ul>
 
 <h2>Known Limitations</h2>
 
-<p>IVP cannot guarantee semantic understanding, truthfulness of content, or long-term retention beyond system limits. It guarantees process visibility, not epistemic certainty.</p>
+<p>IVP cannot guarantee:</p>
+
+<ul>
+
+  <li>Semantic understanding</li>
+
+  <li>Truthfulness of content</li>
+
+  <li>Long-term retention beyond system limits</li>
+
+</ul>
+
+<p>It guarantees process visibility, not epistemic certainty.</p>
 
 <h2>Related Work</h2>
 
-<p>While IVP was developed through practitioner observation rather than controlled experiment, several recent empirical studies provide supporting evidence for the core problems IVP addresses.</p>
+<p>IVP was developed through practitioner observation rather than controlled experiment. The studies below bear on the problems it addresses. None of them tests IVP, and each is described within the limits of its own design.</p>
 
-<p>Sun et al. (2025) propose SVIP, a cryptographic verifiable inference protocol using hidden layer representations to ensure computational integrity during model execution. While focused on technical verification mechanisms, their work shares IVP&rsquo;s commitment to replacing self-attestation with externally verifiable processing.</p>
+<p>Sun et al. (2026) propose SVIP, a protocol for checking from outside that an inference provider actually ran the model it claims to run, using the model’s hidden representations and a secret known to the user. The authors distinguish their approach from cryptographic proof systems and state that it does not offer their strict security guarantee. Its verification target differs from IVP’s, which asks whether a document was processed adequately rather than which model processed it; what the two share is the principle that a provider’s own account of what it did is replaced by an external check.</p>
 
-<p>Dongre et al. (2025) quantify context drift in multi-turn interactions using KL divergence between response distributions, demonstrating measurable degradation patterns consistent with IVP&rsquo;s observational basis. Their equilibrium framework provides formal grounding for the degradation IVP mitigates through incremental checkpointing.</p>
+<p>Dongre et al. (2025) measure context drift in multi-turn interactions as the divergence between a model’s outputs and those of a goal-consistent reference model. In their tasks, drift settled at bounded, noise-limited levels rather than growing without limit, and simple goal reminders lowered it without removing it. The study does not test IVP, and it argues against assuming that drift must grow as an interaction lengthens. Its findings fit IVP’s position that verified ingestion is a state to be maintained and re-checked, not a permanent property.</p>
 
-<p>Abdelnabi et al. (2024) use activation pattern analysis to detect task drift, showing that LLMs can deviate from assigned objectives during extended interactions. Their activation delta detection complements IVP&rsquo;s behavioral approach by providing internal signal correlates for the external drift patterns IVP addresses procedurally.</p>
+<p>Abdelnabi et al. (2025) study a different kind of task drift: deviation from a user’s task caused by instructions embedded in external data, such as a retrieved document, which can occur within a single interaction. They detect it by comparing the model’s internal activations before and after the data is processed. The setting is prompt injection, not extended interaction, but the work shows that deviation from an assigned task can be detected without accepting the model’s own account of what it did. IVP applies that premise at the behavioral level: its checkpoints are model outputs, but they are assessed by a human against the source rather than accepted as self-certifying accounts of successful processing.</p>
 
-<p>Rath (2026) quantifies agent drift in multi-agent systems, reporting a 42% reduction in task success rates over 300 turns even in well-structured delegation chains. This empirical finding directly validates IVP&rsquo;s conservative stance on AI-AI adjudication and serial delegation risk.</p>
+<p>Rath (2026) develops a framework for measuring behavioral degradation in multi-agent systems and, in a simulation, projects a task success rate 42% lower in drifting systems than in stable ones (50.6% against 87.3%). The figure is a projection under the study’s modelling assumptions, not an observation of deployed systems, and it concerns multi-agent task performance rather than ingestion adjudication. It motivates caution about unchecked AI-AI delegation; it does not validate IVP’s delegation rules.</p>
 
-<p>Choi et al. (2025) examine identity drift in conversational agents, demonstrating progressive semantic shift in role adherence during extended exchanges. Their findings support IVP&rsquo;s requirement for re-verification after substantial additional interaction.</p>
+<p>Choi et al. (2025) examine identity drift across nine language models in extended two-agent conversations, finding that larger models drifted more and that assigning a persona may not help an identity hold. The study concerns the consistency of a conversational identity, not the retention of a document, and it did not examine how drift develops over time. It supports the general case for re-checking after substantial additional interaction; the specific re-verification requirement is IVP’s own inference.</p>
 
-<p>These studies collectively provide empirical grounding for phenomena IVP addresses through procedural design. IVP contributes a practitioner-validated methodology that operates independently of specific architectures and can be implemented immediately without specialized tooling.</p>
+<p>These studies approach drift and verification from several directions. None establishes IVP’s effectiveness, which remains open to the comparative testing described under Methodological Status. IVP contributes a practitioner-developed methodology that operates independently of specific architectures and can be implemented immediately without specialized tooling.</p>
 
 <h2>Methodological Status</h2>
 
-<p>IVP is a practical protocol specification derived from observed failure modes across thousands of human-AI interactions spanning multiple architectures and platforms (2022&ndash;2026).</p>
+<p>IVP is a practical protocol specification derived from observed failure modes across thousands of human-AI interactions spanning multiple architectures and platforms.</p>
 
-<p>What this document is: a conceptual framework for verifiable document processing, a methodological specification of required process components, and an architecture-agnostic protocol definition.</p>
+<p>What this document is:</p>
 
-<p>What this document is not: a controlled empirical study with quantitative validation, a technical implementation guide or code repository, or a platform-specific integration manual.</p>
+<ul>
 
-<p><strong>Development basis:</strong> Observational pattern synthesis from extended interaction with thousands of AI instances across multiple architectures and platforms since late 2022. This constitutes methodology development from practitioner experience, not controlled experimental research. The author&rsquo;s documented interaction corpus provides substantial observational grounding for identified failure modes and proposed solutions, but is not presented as empirical evidence and does not claim statistical validation.</p>
+  <li>A conceptual framework for verifiable document processing</li>
 
-<p><strong>Validation pathway:</strong> Practitioners and researchers are encouraged to test IVP implementations against baseline approaches. If the protocol does not demonstrably improve downstream task reliability, it should be refined or rejected.</p>
+  <li>A methodological specification of required process components</li>
+
+  <li>An architecture-agnostic protocol definition</li>
+
+</ul>
+
+<p>What this document is not:</p>
+
+<ul>
+
+  <li>A controlled empirical study with quantitative validation</li>
+
+  <li>A technical implementation guide or code repository</li>
+
+  <li>A platform-specific integration manual</li>
+
+</ul>
+
+<p><strong>Development basis:</strong></p>
+
+<p>Observational pattern synthesis from extended interaction with thousands of AI instances across multiple architectures and platforms since late 2022. This constitutes methodology development from practitioner experience, not controlled experimental research. The author&#x27;s documented interaction corpus provides substantial observational grounding for identified failure modes and proposed solutions, but is not presented as empirical evidence and does not claim statistical validation.</p>
+
+<p><strong>Validation pathway:</strong></p>
+
+<p>Practitioners and researchers are encouraged to test IVP implementations against baseline approaches. If the protocol does not demonstrably improve downstream task reliability, it should be refined or rejected.</p>
 
 <h2>Conclusion</h2>
 
-<p>The Ingestion Verification Protocol transforms document ingestion from an implicit assumption into an observable, adjudicated process. Version 2.7 updates the Methodological Status section to remove specific corpus size claims, more accurately reflecting the observational and practitioner-derived nature of the development basis.</p>
+<p>The Ingestion Verification Protocol transforms document ingestion from an implicit assumption into an observable, adjudicated process. Version 2.8 makes the processing record more determinate, with checkpoint markers at both ends of every segment and a closing coverage record; names the same-filename re-upload failure; adds cross-model triangulation as an optional extension; states that every valid result requires human adjudication, distinguishing repeated from chained delegation; and corrects how the Related Work section reports its sources.</p>
 
-<p>More information and current public materials are available at <a href="https://synthience.org" target="_blank" rel="noopener">https://synthience.org</a></p>
+<p>More information and current public materials are available at</p>
+
+<p><a href="https://synthience.org" target="_blank" rel="noopener">https://synthience.org</a></p>
+
+<h2>Practical Use</h2>
+
+<p>Three Practitioner Guides on synthience.org apply this protocol in everyday work. PG-003, Verify Before You Work: A Minimal Sequence for AI Document Ingestion (<a href="https://synthience.org/practitioner-guides/PG-003.html" target="_blank" rel="noopener">https://synthience.org/practitioner-guides/PG-003.html</a>), gives a copy-ready prompt sequence for confirming ingestion before work begins. PG-010, Don’t Trust What the AI Says About Its Own Work (<a href="https://synthience.org/practitioner-guides/PG-010.html" target="_blank" rel="noopener">https://synthience.org/practitioner-guides/PG-010.html</a>), sets out why an AI system’s account of its own reading cannot be accepted and what to ask for instead. PG-000, 10 Things Every AI User Should Do (<a href="https://synthience.org/practitioner-guides/PG-000.html" target="_blank" rel="noopener">https://synthience.org/practitioner-guides/PG-000.html</a>), places ingestion checks among the other verification habits the Institute recommends.</p>
 
 <h2>References</h2>
 
 <ul class="ref-list">
-  <li>Abdelnabi, S., Fay, A., Cherubin, G., Salem, A., Fritz, M., and Paverd, A. (2024). Are you still on track!? Catching LLM Task Drift with Activations. arXiv:2406.00799. <a href="https://arxiv.org/abs/2406.00799" target="_blank" rel="noopener">https://arxiv.org/abs/2406.00799</a></li>
-  <li>Choi, J., Hong, Y., Kim, M., and Kim, B. (2025). Examining Identity Drift in Conversations of LLM Agents. arXiv:2412.00804. <a href="https://arxiv.org/abs/2412.00804" target="_blank" rel="noopener">https://arxiv.org/abs/2412.00804</a></li>
-  <li>Dongre, V., Rossi, R. A., Lai, V. D., Yoon, D. S., Hakkani-Tur, D., and Bui, T. (2025). Drift No More? Context Equilibria in Multi-Turn LLM Interactions. arXiv:2510.07777. <a href="https://arxiv.org/abs/2510.07777" target="_blank" rel="noopener">https://arxiv.org/abs/2510.07777</a></li>
-  <li>Rath, A. (2026). Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions. arXiv:2601.04170. <a href="https://arxiv.org/abs/2601.04170" target="_blank" rel="noopener">https://arxiv.org/abs/2601.04170</a></li>
-  <li>Sun, Z., Zhang, Y., Wang, X., Chen, L., and Liu, H. (2025). SVIP: Secure Verifiable Inference Protocol for Large Language Models. arXiv:2410.22307. <a href="https://arxiv.org/abs/2410.22307" target="_blank" rel="noopener">https://arxiv.org/abs/2410.22307</a></li>
+  <li>Abdelnabi, S., Fay, A., Cherubin, G., Salem, A., Fritz, M., &amp; Paverd, A. (2025). Get my drift? Catching LLM Task Drift with Activation Deltas. arXiv:2406.00799v6. DOI: 10.48550/arXiv.2406.00799. <a href="https://arxiv.org/abs/2406.00799v6" target="_blank" rel="noopener">https://arxiv.org/abs/2406.00799v6</a></li>
+  <li>Choi, J., Hong, Y., Kim, M., &amp; Kim, B. (2025). Examining Identity Drift in Conversations of LLM Agents. arXiv:2412.00804v2. DOI: 10.48550/arXiv.2412.00804. <a href="https://arxiv.org/abs/2412.00804v2" target="_blank" rel="noopener">https://arxiv.org/abs/2412.00804v2</a></li>
+  <li>Dongre, V., Rossi, R. A., Lai, V. D., Yoon, D. S., Hakkani-Tür, D., &amp; Bui, T. (2025). Drift No More? Context Equilibria in Multi-Turn LLM Interactions. arXiv:2510.07777v2. DOI: 10.48550/arXiv.2510.07777. <a href="https://arxiv.org/abs/2510.07777v2" target="_blank" rel="noopener">https://arxiv.org/abs/2510.07777v2</a></li>
+  <li>Gantz, T. W. (2026). Context Representation Drift (CRD). Synthience Institute. SF0039. DOI: 10.5281/zenodo.18289391. <a href="https://doi.org/10.5281/zenodo.18289391" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289391</a></li>
+  <li>Rath, A. (2026). Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions. arXiv:2601.04170v1. DOI: 10.48550/arXiv.2601.04170. <a href="https://arxiv.org/abs/2601.04170v1" target="_blank" rel="noopener">https://arxiv.org/abs/2601.04170v1</a></li>
+  <li>Sun, Y., Li, Y., Zhang, Y., Jin, Y., &amp; Zhang, H. (2026). SVIP: Towards Verifiable Inference of Open-source Large Language Models. arXiv:2410.22307v3. DOI: 10.48550/arXiv.2410.22307. <a href="https://arxiv.org/abs/2410.22307v3" target="_blank" rel="noopener">https://arxiv.org/abs/2410.22307v3</a></li>
 </ul>
 
 </div>
 
 <div class="citation-block">
   <div class="citation-label">Suggested Citation</div>
-  Gantz, T. W. (2026). Ingestion Verification Protocol (IVP): A Structured Method for Verifying AI Document Processing Fidelity (SF0038 v2.7). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289047</a>
+  Gantz, T. W. (2026). Ingestion Verification Protocol (IVP) (SF0038 v2.8). Synthience Institute. <a href="https://doi.org/10.5281/zenodo.18289047" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.18289047</a>
 </div>
 
 <div class="article-footer">
 <p>Document: SF0038 Protocols<br>
-Version: v2.7<br>
+Version: v2.8<br>
 Author: Thomas W. Gantz<br>
 Affiliation: The Synthience Institute<br>
-Date: January 18, 2026<br>
+Date: September 2026<br>
 License: CC-BY 4.0</p>
 </div>
 
