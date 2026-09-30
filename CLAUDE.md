@@ -13,7 +13,7 @@ The Institute's operations files are the authority. This file only points to the
 
 If those files and this one disagree, the operations files win.
 
-**Starting a new session?** Also read `CLAUDE_CODE_HANDOFF.md` in `_Continuity/_Claude_Code` on Drive. It records work in progress, the site's verified state and the checking tools, so a new session can pick up where the last one stopped. The same folder keeps a backup copy of this file. 08_site_ops says how both are kept up to date.
+**Starting a new session?** Also read two files in `_Continuity/_Claude_Code` on Drive, in this order. `CLAUDE_CODE_GUIDE.md` is the standing orientation: the role, the environment, how work flows between the PCP, the coordinating instance and Claude Code, and lessons from earlier sessions. `CLAUDE_CODE_HANDOFF.md` records the current state: work in progress, the site's verified state and open items with their owners. The same folder keeps a backup copy of this file. 08_site_ops says how these files are kept up to date. The checking scripts earlier sessions wrote are in `tools/checks/`.
 
 ## Standing conventions (reminders; details are in the files above)
 
