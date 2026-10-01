@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>Synthience Institute</title>
+<link>https://synthience.org/</link>
+<description>Field Notes and Practitioner Guides from the Synthience Institute.</description>
+<language>en-us</language>
+<item>
+<title>The AI Capture Fight Doesn’t Need a Villain</title>
+<link>https://synthience.org/field-notes/FN-018.html</link>
+<guid isPermaLink="true">https://synthience.org/field-notes/FN-018.html</guid>
+<pubDate>Thu, 01 Oct 2026 12:00:00 -0400</pubDate>
+<dc:creator>Thomas W. Gantz</dc:creator>
+<category>Field Notes</category>
+<description><![CDATA[You don’t need to know whether the AI labs mean it. You need to know whom their rules would serve.]]></description>
+<content:encoded><![CDATA[<p><em>You don’t need to know whether the AI labs mean it. You need to know whom their rules would serve.</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/field-notes/FN-018.html">https://synthience.org/field-notes/FN-018.html</a></p>
+<img alt="An infographic. Two boxes, “Sincere safety concern” and “Commercial interest”, send arrows into one box, “The same rule”. Below, three numbered questions for any AI rule: who writes the standard, who pays the referee, and how it is enforced and against whom. A coral line reads: the machinery can still work; the question is whom it works for." src="https://synthience.org/assets/images/FN-018-infographic.jpg"/>
+<p>
+At 5:21 p.m. Eastern on Friday, June 12, Anthropic says, a letter arrived from the US government. That evening the company announced it was switching off its two newest AI models for every customer it had. The letter was an export control directive barring foreign nationals from using the models, and Anthropic said the net effect was that it had to pull them from everyone.
+</p>
+<p>
+Anthropic had said publicly that the government should have the power to block unsafe deployments, “as part of a statutory process that is transparent, fair, clear, and grounded in technical facts.” This action, the company said, did not meet that standard, and it called the episode “a misunderstanding.” It said the government had given it only “verbal evidence” of the flaw at issue, though it had reviewed a demonstration of the technique, and a report it believed was behind the directive, and it said the same capability was available from rival models.
+</p>
+<p>
+Then there is Amazon. According to The Wall Street Journal, as reported by CNBC, the directive followed conversations between US officials and Andy Jassy, Amazon’s chief executive. Amazon is a major investor in Anthropic, its cloud supplier, and a competitor in AI. Jassy, the Journal reported, told officials that Amazon researchers had prompted the model into producing information that could aid cyberattacks.
+</p>
+<p>
+Access came back within three weeks. When it did, Anthropic announced it was drafting a framework for rating the severity of “jailbreaks,” ways of getting a model past its safeguards, together with Amazon, Microsoft, Google, and other partners, and invited other developers to join. It hoped the framework, along with its collaboration with the US government, would become “the basis for systematic rules for the whole industry.”
+</p>
+<p>
+The episode also sat inside a wider fight with the administration. In March the Pentagon had designated Anthropic a supply-chain risk, under two different laws, after a dispute over how the military could use its models, and the two designations have since gone opposite ways in court.
+</p>
+<p>
+June touched every point where safety policy meets commercial power: who reports a flaw, who decides to pull a product, and who writes the standard afterward. A safety concern can be real and still come from a competitor. None of it tells us who meant what. It does show how rules get made, and that is the part we can actually examine.
+</p>
+<h3>The fight over motives</h3>
+<p>
+September mixed real objections to the proposals with an argument over whether the warnings were sincere. On September 8, Jacob Coxon, a 27-year-old researcher, quit Anthropic and said in public that both it and OpenAI were racing toward superintelligence while “gambling with our lives.” His posts passed 150 million views within 36 hours. Evan Hubinger, who leads alignment stress testing at Anthropic, replied that Coxon was “correct here” and that “we really do earnestly believe AI could kill all humans,” put his own odds of that within the next decade above 10 percent, and added that he believed Anthropic was trying its best but had no plan yet to solve alignment for superintelligence.
+</p>
+<p>
+Four days later Anthropic’s chief executive, Dario Amodei, published an essay calling for the whole industry to slow down. He committed Anthropic to letting independent evaluators work inside the company, and asked governments to require the same of its competitors.
+</p>
+<p>
+The critics answered on both levels. David Sacks, the venture capitalist and former White House AI czar, wrote that if the labs did not slow down on their own, “we’ll know this was just another bid for regulatory capture — or an election-season psyop.” He also objected to the arrangements themselves, from the antitrust waiver the labs wanted to the independence of the evaluators. Aidan Gomez, who runs the Canadian AI company Cohere, called the effort to have a few leading labs set safety standards together “a cartel by any other name.” His objection was structural too: he supported independent review while challenging who would set the standards and who would oversee them. Those questions stand whether or not anyone’s intentions are what the critics suspect.
+</p>
+<p>
+Then Pirate Wires reported, citing two unnamed people and an email, that a communications firm with prominent AI-safety clients had been working for Coxon and trying to book him interviews. Asked on Fox News whether he had worked with any third parties in going public, Coxon had said, “Not at all.” The report argued that his rise was “probably orchestrated,” but said it did not know when the relationship began, and it later added Nate Soares’s account that he had introduced Coxon to the firm after the post went viral. Help with interviews after a post takes off is not the same as a staged resignation, and the report itself judged it “more likely that he does believe what he’s saying.”
+</p>
+<p>
+All of this ran alongside an IPO that could value Anthropic at more than $2 trillion. Its prospectus, as described by Reuters, gives roughly 80 of the 261 pages in its main body to risk factors, including a warning that advanced AI could pose “catastrophic or existential risks to humanity.”
+</p>
+<p>
+So are the warnings sincere or strategic? The public record doesn’t settle it. Take the prospectus. Those pages could be honest belief. They could be legal protection, since securities law requires companies to disclose material risks and can impose liability for leaving them out. They could be a signal of how powerful the product is. They could be all three at once, and the document alone can’t tell you which.
+</p>
+<p>
+The fight over motives may never be settled. It doesn’t need to be.
+</p>
+<h3>No villain required</h3>
+<p>
+In 1983 the economist Bruce Yandle described a pattern he had seen in Sunday liquor laws. Baptists wanted liquor stores closed on Sundays for moral reasons. Bootleggers wanted the same thing because a closed legal market was good for business. The two never had to meet, and the law served both.
+</p>
+<p>
+Apply that to AI and the motive question falls away. Safety researchers can be entirely sincere, and on the substance they may be right. Incumbent firms can still benefit from the rules that sincerity makes possible, whether or not anyone plans it. Sincere fear supplies the legitimacy, commercial interest supplies the lobbying capacity, and the resulting rule can protect commercial advantage as well as address the stated risk. No villain is required.
+</p>
+<p>
+This is also why the usual test of a safeguard misses it. We normally ask whether an oversight body does anything real or has become a rubber stamp. A captured regulator can pass that test. It can still inspect, license, and enforce, and firms may still need its approval to enter the market. Its decisions matter. The question is whom they serve.
+</p>
+<p>
+At the Synthience Institute we study a failure we call form without coupling: a safeguard that keeps its shape after it has stopped doing its job. Capture is the hardest version to see, because nothing looks broken. The machinery is still connected and working, just not for the public it was built to protect. So the question to put to any AI rule is not only “is it coupled?” but “coupled, but to whom?”
+</p>
+<p>
+A big firm coping better with a costly rule doesn’t make the rule captured; some safety is expensive. The test is whether a rule demands more than its safety purpose needs. Could a smaller developer prove it is just as safe another way? Are similar risks treated the same?
+</p>
+<h3>Three questions for September</h3>
+<p>
+None of September’s proposals is a rule yet, and the closest thing to one is voluntary. On September 29, at the White House, leaders of the largest AI companies, Anthropic’s Dario Amodei and OpenAI’s Greg Brockman among them, signed voluntary safety standards that President Trump called “morally binding.” According to the copy he posted, they committed to “four layers of controls and audits” and to meet regularly to set standards and best practices. Trump said they understood “they have to self-police.” We can’t see how any of this would work in practice, but we can examine its design now, and none of these questions requires knowing what anyone meant.
+</p>
+<p>
+<strong>Who writes the standard?</strong> The jailbreak-severity framework has four named first drafters: Anthropic, Amazon, Microsoft, and Google. Amodei’s essay also asks for a narrow antitrust waiver so that leading labs can hold certain safety conversations together. Both may be reasonable. Both also put the largest firms early in the standard-setting process. The chair of the Federal Trade Commission, Andrew Ferguson, speaking for himself and without naming any company, has already said that when companies ask Washington for regulations and an antitrust exemption at the same time, “all of my alarm bells go off.” If these proposals become binding, the questions are who can revise the standards, which developers they cover, and whether other firms can meet them without adopting the incumbents’ own methods.
+</p>
+<p>
+<strong>Who pays the referee?</strong> An evaluator’s independence comes down to who funds it, who appoints and can remove it, what it can inspect, and whether it can publish what it finds. Amodei’s essay names METR, a nonprofit evaluation group, as an example. Sacks says METR is “intertwined with Anthropic’s investors and staff.” METR says it takes no money from frontier AI companies and no donations made by or at the direction of their staff, though those companies give it free use of their models. Its list of past and present supporters includes the Survival and Flourishing Fund, through which Jaan Tallinn, who led Anthropic’s Series A round in 2021, gives to AI safety work.
+</p>
+<p>
+The accord promises audits; who chooses and pays the auditors is the question it will have to answer. On September 30, the Federal Trade Commission confirmed it was investigating Anthropic, OpenAI and other AI companies over potential risks to consumers, a probe it had opened over the summer. An FTC spokesperson said the agency plans to request information from METR as well. That doesn’t mean METR is under investigation or has done anything wrong, but a regulator now wants to hear from the referee. Amodei also proposes that evaluators get the right to publish and that companies be limited in what they can redact. A law requiring evaluators would have to make protections like these enforceable, and spell out who qualifies, who pays, and what the requirement costs a lab a fraction of Anthropic’s size.
+</p>
+<p>
+<strong>How is it enforced, and against whom?</strong> June is the test case. By Anthropic’s account the government’s evidence reached it only verbally, and the company said other developers’ models had the same capability. Alex Stamos, a former Facebook security chief who led an open letter asking for the order to be lifted, said the rules need to be “written down and transparent,” and that this had not happened. On that account, the intervention left real questions open: what risk justified pulling the models, whether comparable systems were treated alike, and whether a narrower restriction would have protected the public as well. A competitor’s report can justify action. It doesn’t excuse the government from explaining why the action was as broad as it was.
+</p>
+<h3>The questions cut both ways</h3>
+<p>
+These questions are not an argument for regulation or against it. A federal law that wipes out stricter state rules can protect incumbents as well as any licensing regime. So can leaving things as they are, where the cost of frontier development already favors firms with vast resources.
+</p>
+<p>
+The money runs both ways too. In February, Anthropic announced a $20 million contribution to Public First Action, a bipartisan political nonprofit that promotes AI safeguards. Leading the Future, a super PAC backed by OpenAI co-founder Greg Brockman and the venture firm Andreessen Horowitz, said it and its affiliates had raised about $125 million in 2025, counting commitments, to back candidates who favor one national standard over state-by-state rules. The two sums are different kinds of money, but both are money lining up behind rival visions of AI policy.
+</p>
+<p>
+Nor is this a claim that the fear is manufactured. The risks of increasingly capable AI are serious. But sincerity only protects the people who hold it from the charge of bad faith. It does not protect the rules they help produce from being bent toward someone else’s interest.
+</p>
+<p>
+If these proposals become rules, the argument about motives may still be running. Don’t wait for it. Read the rule. Ask what harm each requirement addresses, and whether a route open to smaller firms would protect as well. Ask who is exempt, who wrote the standard, who pays the referee, and how it has been enforced. Ask what the rule does and whom it serves.
+</p>
+<p>
+<em>Events as of October 1, 2026.</em>
+</p>
+<h3>Sources</h3><p>Anthropic. <a href="https://www.anthropic.com/news/fable-mythos-access">“Statement on the US government directive to suspend access to Fable 5 and Mythos 5.”</a> June 12, 2026.</p><p>CNBC. <a href="https://www.cnbc.com/2026/06/17/anthropic-ai-regulation-trump.html">“Anthropic asked for regulation. Washington went much further.”</a> June 17, 2026.</p><p>Reuters. <a href="https://money.usnews.com/investing/news/articles/2026-09-29/exclusive-anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners">“Exclusive: Anthropic IPO prospectus lays bare deep dependence on Big Tech partners.”</a> September 29, 2026 (via U.S. News &amp; World Report).</p><p>Anthropic. <a href="https://www.anthropic.com/news/redeploying-fable-5">“Redeploying Claude Fable 5.”</a> June 30, 2026, updated July 1, 2026.</p><p>CNBC. <a href="https://www.cnbc.com/2026/08/28/judge-blocks-pentagon-blacklist--anthropic-.html">“Judge blocks Pentagon blacklist of Anthropic as supply chain risk.”</a> August 27, 2026.</p><p>CNBC. <a href="https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html">“U.S. appeals court upholds Pentagon designation of Anthropic as supply chain risk.”</a> September 25, 2026.</p><p>US Court of Appeals for the D.C. Circuit. <a href="https://media.cadc.uscourts.gov/opinions/docs/2026/09/26-1049-2194984.pdf"><em>Anthropic PBC v. United States Department of War</em></a>, No. 26-1049 (consolidated with No. 26-1162). Decided September 25, 2026.</p><p>Booth, H. <a href="https://time.com/article/2026/09/09/ai-anthropic-openai-jacob-coxon/">“He Helped Build Powerful AI at OpenAI and Anthropic. Now He’s Afraid It Could Kill Us.”</a> <em>TIME</em>, September 9, 2026.</p><p>Perrigo, B., Booth, H., &amp; Nix, N. <a href="https://time.com/article/2026/09/15/ai-anthropic-researcher-quits-coxon-slowdown/">“The AI Tipping Point.”</a> <em>TIME</em>, September 15, 2026.</p><p>Amodei, D. <a href="https://darioamodei.com/post/we-must-pace-the-frontier">“We Must Pace the Frontier.”</a> darioamodei.com, September 12, 2026.</p><p>Sacks, D. Post on X, September 12, 2026. <a href="https://x.com/DavidSacks/status/2098973625252708460">https://x.com/DavidSacks/status/2098973625252708460</a></p><p>Gomez, A. <a href="https://cohere.com/blog/who-gets-to-define-the-rules-for-ai">“Who Gets to Define the Rules for AI?”</a> Cohere, September 13, 2026.</p><p>Ryerson, H. <a href="https://www.piratewires.com/p/jacob-coxon-worked-with-ai-doomer-firm">“EXCLUSIVE: Jacob Coxon Worked With Doomer PR Firm.”</a> <em>Pirate Wires</em>, September 24, 2026 (US time; updated after publication).</p><p>Reuters. <a href="https://www.cnbc.com/2026/09/28/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-reuters.html">“Anthropic’s IPO prospectus shows sweeping AI vision, surging costs.”</a> September 28, 2026 (via CNBC).</p><p>Wang, E., &amp; Soni, A. <a href="https://www.huffpost.com/entry/anthropic-ai-existential-risks-ipo_n_6abbb5f4e4b075cb0a40fb1f">“Anthropic Warns AI May Pose ‘Existential Risks To Humanity’ In IPO Filing.”</a> Reuters, September 28, 2026 (via HuffPost, September 29).</p><p>US Securities and Exchange Commission, Regulation S-K, Item 105, Risk factors (17 CFR 229.105); Securities Act of 1933, Section 11 (15 U.S.C. 77k).</p><p>Yandle, B. (1983). Bootleggers and Baptists: The education of a regulatory economist. <em>Regulation</em>, 7(3), 12-16.</p><p>Gantz, T. W. (2026). <a href="https://synthience.org/research/SI0001.html"><em>Form Without Coupling: One Structural Failure Across Five Layers of AI Governance</em></a> (SI0001). Synthience Institute. Clarification to Section 5 added October 2026.</p><p>CBS News. <a href="https://www.cbsnews.com/news/ftc-investigation-openai-anthropic-ai-safety/">“FTC investigating Anthropic, OpenAI and other companies over potential AI risks.”</a> September 30, 2026.</p><p>Reuters. <a href="https://whbl.com/2026/09/15/ftc-chair-suspicious-of-calls-for-ai-antitrust-exemptions/">“FTC chair suspicious of calls for AI antitrust exemptions.”</a> September 15, 2026 (syndicated).</p><p>METR. <a href="https://metr.org/blog/2026-08-14-funding-update/">“Funding update.”</a> August 14, 2026.</p><p>Survival and Flourishing Fund. <a href="https://survivalandflourishing.fund/initiative-committee">“SFF Initiative Committee”</a> (table of gifts and grants, source Jaan Tallinn).</p><p>Anthropic. <a href="https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems">“Anthropic raises $124 million to build more reliable, general AI systems.”</a> May 28, 2021.</p><p>Stamos, A., et al. <a href="https://freefable.org/">“An Open Letter On Transparent AI Cyber Protections.”</a> June 14, 2026.</p><p>Anthropic. <a href="https://www.anthropic.com/news/donate-public-first-action">“Anthropic is donating $20 million to Public First Action.”</a> February 12, 2026.</p><p>CNBC. <a href="https://www.cnbc.com/2026/01/30/ai-industry-super-pac-raises-campaign-money.html">“AI industry super PAC raises $125 million in 2025.”</a> January 30, 2026.</p><p><em>The American Prospect</em>. <a href="https://prospect.org/2026/02/20/aipac-ai-pacs-crypto-midterms-congress-chicago/">“First AIPAC, Now AI PACs.”</a> February 20, 2026.</p>
+<h3>Further reading</h3><ul>
+<li><a href="https://synthience.org/research/SI0001.html">SI0001: Form Without Coupling</a>: the diagnostic this essay applies to AI rules.</li>
+<li><a href="https://synthience.org/research/SI-WP-010.html">SI-WP-010: The Function Got Redefined Underneath the Work</a>: Section 6.4 engages regulatory capture as one of the strongest objections to licensing-as-architecture and names the design features that resist it.</li>
+<li><a href="https://synthience.org/research/SI-WP-012.html">SI-WP-012: Control Without a Coupling</a>: why real-time human control of a fast AI loop is structurally voided.</li>
+<li><a href="https://synthience.org/field-notes/FN-017.html">FN-017: Control Without Accountability</a>: a worked scenario of a neutral criterion that advantages incumbents.</li>
+</ul><p>Published documents are also archived with permanent DOIs at the <a href="https://zenodo.org/communities/synthience-institute">Synthience Institute community on Zenodo</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Verify Before You Work: A Minimal Sequence for AI Document Ingestion</title>
+<link>https://synthience.org/practitioner-guides/PG-003.html</link>
+<guid isPermaLink="true">https://synthience.org/practitioner-guides/PG-003.html</guid>
+<pubDate>Fri, 03 Apr 2026 12:00:00 -0400</pubDate>
+<dc:creator>Thomas W. Gantz</dc:creator>
+<category>Practitioner Guides</category>
+<description><![CDATA[]]></description>
+<content:encoded><![CDATA[<p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-003.html">https://synthience.org/practitioner-guides/PG-003.html</a></p>
+
+<p>This guide expands practice #1 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+<p><em>A copy-ready prompt sequence for confirming AI document ingestion before work begins</em></p>
+<img alt="Verify Before You Work: A four-step sequence for confirming AI document ingestion. Step 1: Prime the instance. Step 2: Attach and confirm. Step 3: Request summary. Step 4: Spot-check." src="https://synthience.org/assets/images/PG-003_Infographic.jpg"/>
+<h3>The problem in one sentence</h3>
+<p>
+You give an AI a document, it says it read it, and you move on. But it may have processed
+only part of it, reconstructed content it did not actually read, or lost critical details
+that will only become visible when something goes wrong later.
+</p>
+<blockquote><p>An AI system cannot verify its own ingestion. You can. This guide gives you the minimum steps to do that.</p></blockquote>
+<h3>Who this is for</h3>
+<p>
+Anyone who gives an AI system a document — a report, a contract, a specification, meeting
+notes, a research paper, anything — and then expects it to use that document reliably in
+the work that follows. This is especially relevant in enterprise environments where AI
+tools handle documents as part of routine workflows.
+</p>
+<p>
+This guide does not require technical knowledge. It requires only the ability to copy a
+prompt and read a response.
+</p>
+<h3>Why this is a real problem, not a theoretical one</h3>
+<p>
+AI systems are optimized to produce fluent, plausible responses. When they have not fully
+processed a document, they do not say so. They fill gaps with reconstruction: text that
+sounds correct and may be mostly correct, but may also be missing constraints, inverting
+details, or substituting approximations for specifics.
+</p>
+<p>
+Enterprise AI tools in particular — including tools built on Microsoft Copilot and similar
+platforms — can fail silently when documents are attached. The system acknowledges the
+file, appears to proceed normally, and produces output that looks reasonable. The gap
+between what was actually in the document and what the AI used is not visible until you
+look for it.
+</p>
+<p>
+The sequence in this guide makes that gap visible before you rely on it.
+</p>
+<h3>The minimal working sequence</h3>
+<p>
+Three required prompts, one optional verification step, then your actual work begins.
+Each step below shows the exact prompt to send and what a valid response looks like.
+</p>
+<blockquote><p>
+<strong>Step 1</strong> — Prime: tell it files are coming, do nothing yet<br/>
+<strong>Step 2</strong> — Attach and confirm receipt only<br/>
+<strong>Step 3</strong> — Request summary and verify it reflects your actual document<br/>
+<strong>Step 4</strong> — Spot-check with a specific question <em>(optional but recommended)</em><br/>
+<strong>Step 5</strong> — Begin your actual work
+</p></blockquote>
+<p>
+Text in this color is a placeholder: replace it with your actual content.
+</p>
+<hr/>
+<h4>Step 1 — Prime the instance</h4>
+<p>Send this first, before attaching any files</p>
+<p><strong>YOU SAY:</strong></p><pre><code>ATTACHMENT-FIRST MODE. I am going to attach one or more files in my next message. Do not analyze, summarize, or respond to them yet. Wait for my instruction.</code></pre>
+<blockquote><p>What to expect: A brief acknowledgment. Nothing more. If the AI starts analyzing or asking questions about the files, it has not followed the instruction. Send the prompt again.</p></blockquote>
+<p>
+This step exists because some AI platforms begin processing attachments the moment they
+are received, which can cause fragmented or incomplete ingestion. Separating the
+attachment step from the analysis step forces a cleaner processing sequence.
+</p>
+<hr/>
+<h4>Step 2 — Attach the files and confirm receipt</h4>
+<p>Attach your file or files, then send this</p>
+<p><strong>YOU SAY:</strong></p><pre><code>Files attached. Respond with exactly: ATTACHMENTS RECEIVED. Do not analyze or summarize.</code></pre>
+<blockquote><p>What to expect: "ATTACHMENTS RECEIVED." and nothing else. If the AI summarizes the files or begins analysis, send the prompt again with the instruction repeated.</p></blockquote>
+<p>
+The purpose is confirmation without processing. You are establishing that the files are
+present in the session before asking the AI to do anything with them.
+</p>
+<hr/>
+<h4>Step 3 — Request ingestion and summary</h4>
+<p>This is the verification step</p>
+<p><strong>YOU SAY:</strong></p><pre><code>Read the attached [file name or description] as reference material for this session. This session is for [brief description of what you want to do].
+
+Summarize the document at a high level so I can confirm you have read it. Cover the main sections and any key details relevant to [your purpose].</code></pre>
+<blockquote><p>What to expect: A structured summary covering the main sections of your document. It should be specific enough that you can recognize it as your document, not a generic description. If it reads like something the AI could have produced without seeing the file, that is a warning sign.</p></blockquote>
+<p>
+Read the summary critically. You are not looking for a perfect summary. You are looking
+for evidence that the AI processed the actual content — your structure, your terms, your
+specific details — rather than producing a generic response about what a document of
+this type typically contains.
+</p>
+<blockquote><p>If the summary could have been written without reading your document, the ingestion has not been verified. Send Step 3 again with a more specific instruction, or try a different approach to attaching the file.</p></blockquote>
+<hr/>
+<h4>Step 4 — Spot-check (optional but recommended)</h4>
+<p>Ask something only answerable from the actual document</p>
+<p><strong>YOU SAY:</strong></p><pre><code>Before we begin, one verification question: [ask a specific question whose answer appears in your document: a number, a name, a defined term, a constraint, a date]</code></pre>
+<blockquote><p>What to expect: The correct answer from your document. If the AI gets it wrong, hedges, or produces a plausible-sounding answer that does not match your document, ingestion has not been adequate. Do not proceed to work.</p></blockquote>
+<p>
+Choose a question that has a specific, verifiable answer in your document. Avoid questions
+that the AI could answer correctly from general knowledge without having read the file.
+</p>
+<hr/>
+<h4>Step 5 — Begin work</h4>
+<p>Only after the summary and spot-check are satisfactory</p>
+<p><strong>YOU SAY:</strong></p><pre><code>Good. Now [your actual task or question].</code></pre>
+<p>
+At this point you have externally confirmed that the document is present in the session
+and that the AI has processed it to a degree adequate for your purpose. You can proceed
+with reasonable confidence.
+</p>
+<hr/>
+<h3>When to use this</h3>
+<p>Use this sequence any time you are providing a document that the AI will need to use
+reliably: contracts, specifications, policies, reports, research, meeting notes,
+procedures. The longer or more specific the document, and the more your work depends on
+its details, the more important this sequence becomes.</p>
+<p>For short or low-stakes documents where you can easily catch errors, Step 3 alone —
+the summary request — is often sufficient.</p>
+<h3>What this sequence does not guarantee</h3>
+<p>
+This sequence confirms that the AI has processed your document adequately at the start
+of a session. It does not guarantee that the AI will continue to use it faithfully
+throughout a long conversation. In extended sessions, document fidelity can degrade as
+context grows. If your session runs long, re-grounding periodically — re-stating key
+constraints or re-asking targeted questions — is good practice.
+</p>
+<p><strong>Core Practitioner Guides</strong></p><p>Five guides covering the foundational skills for working reliably with any AI system.</p><ul>
+<li><a href="https://synthience.org/practitioner-guides/PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a></li>
+<li><a href="https://synthience.org/practitioner-guides/PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a></li>
+<li>PG-003: Verify Before You Work <em>(this guide)</em></li>
+<li><a href="https://synthience.org/practitioner-guides/PG-004.html">PG-004: You Are Accepting the First Adequate Answer</a></li>
+<li><a href="https://synthience.org/practitioner-guides/PG-005.html">PG-005: Your AI Updated the File. Did It Preserve What It Didn’t Touch?</a></li>
+</ul>
+<h3>Further reading</h3><p>
+This guide implements a simplified version of the Ingestion Verification Protocol, a
+formally specified methodology for observable AI document processing developed at the
+Synthience Institute.
+</p><ul>
+<li><a href="https://synthience.org/practitioner-guides/PG-006.html">Video: The Ingestion Verification Protocol</a> — a three-minute overview of the full IVP method</li>
+<li><a href="https://synthience.org/research/SF0038.html">SF0038: Ingestion Verification Protocol</a> — full methodology, formal definitions, and implementation guidance.</li>
+<li><a href="https://synthience.org/practitioner-guides/PG-002.html">PG-002: AI-Assisted Editing Without Silent Loss</a> — a related procedure for document editing workflows where silent content loss is a risk</li>
+<li><a href="https://synthience.org/practitioner-guides/PG-001.html">PG-001: How to Work Reliably With Conversational AI Over Time</a> — the foundational guide for long-horizon AI use</li>
+</ul><p>
+Full framework documentation available at the <a href="https://zenodo.org/communities/synthience-institute">Synthience Institute community on Zenodo</a>.
+</p>]]></content:encoded>
+</item>
+</channel>
+</rss>
