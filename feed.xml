@@ -6,7 +6,15 @@
     <atom:link href="https://synthience.org/feed.xml" rel="self" type="application/rss+xml"/>
     <description>New papers, Field Notes and Practitioner Guides from the Synthience Institute.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>FN-018: The AI Capture Fight Doesn’t Need a Villain</title>
+      <link>https://synthience.org/field-notes/FN-018.html</link>
+      <guid isPermaLink="false">2026-10-02 https://synthience.org/field-notes/FN-018.html</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Field Note</category>
+      <description>New Field Note published. September brought an argument about the AI labs that mixed real objections with a question of motive: are their warnings about extinction sincere, or a strategy for capturing their own regulation? This Field Note argues that the question that matters can be answered without settling it. Starting from the June export directive that pulled Anthropic’s newest models offline, it uses Bruce Yandle’s Bootleggers and Baptists to show how sincere fear and commercial interest can produce the same rule with no villain required, why a captured regulator can pass the usual test of whether oversight does anything real, and why an incumbent’s advantage is not by itself capture. It then puts three questions to September’s proposals, the jailbreak-severity framework, embedded evaluators and the requested antitrust waiver: who writes the standard, who pays the referee, and how it is enforced, and against whom. Companion to SI0001.</description>
+    </item>
     <item>
       <title>PG-016: Checking the Checkers: How Four Verification Protocols Were Corrected in Public</title>
       <link>https://synthience.org/practitioner-guides/PG-016.html</link>
