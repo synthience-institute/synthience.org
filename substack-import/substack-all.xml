@@ -1623,6 +1623,7 @@ Published Institute documents are archived with permanent DOIs at the <a href="h
 
 <p>This guide expands practice #3 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
 
+<img alt="Infographic: lines of an AI answer tagged uncertain, inference, and from training, may be outdated. The procedure: set the uncertainty requirement upfront, read the markers not just the prose, push back when nothing is marked. Do not stop the guessing; make it visible." src="https://synthience.org/assets/images/PG-012_Infographic.jpg"/>
 <h3>Why this guide exists</h3>
 <p>AI systems present everything in the same confident tone. A fact the system is sure of and a guess it is filling in to keep the response flowing look identical on the page. The prose carries the same rhythm, the same level of detail, the same air of authority. You cannot tell from the writing which parts the system actually knew and which parts it inferred to make the response sound complete.</p>
 <p>This is a structural problem, not a stylistic one. The system does not have a separate confident tone for things it knows and a hedged tone for things it is guessing. Both come out the same.</p>
@@ -1732,6 +1733,7 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 
 <p>This guide expands practice #10 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
 
+<img alt="Infographic: the output of AI system A passes to AI system B for adversarial review. The protocol: use a genuinely different system, paste the output as input with no preamble, treat the findings as leads not verdicts, stop after one good review. A different system brings different priors." src="https://synthience.org/assets/images/PG-011_Infographic.jpg"/>
 <h3>Why this guide exists</h3>
 <p>One AI system reviewing its own output rarely catches its own systematic mistakes. The same model that produced the mistake is the model being asked to spot it. Self-review can clean up surface problems — clarity, organization, minor errors — but it tends to be blind to the kinds of failures that come from how the system reasons.</p>
 <p>A different AI system, especially one from a different developer, is often better at catching these. It is not a perfect oracle. It makes its own mistakes. But it has a different set of priors, a different training history, and a different way of weighing evidence, so its blind spots overlap only partially with the first system’s.</p>
@@ -1847,6 +1849,7 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 
 <p>This guide expands practice #6 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
 
+<img alt="Infographic: a claim, I did it, set against evidence, a quote, passage or reference. The procedure: identify the self-report claim, ask for evidence that could only exist if the claim were true, verify the evidence itself." src="https://synthience.org/assets/images/PG-010_Infographic.jpg"/>
 <h3>Why this guide exists</h3>
 <p>Ask an AI whether it completed the task you gave it, and it will say yes. Ask whether it read the whole document, and it will say yes. Ask whether it applied the rule you set five turns ago, and it will say yes. Ask whether it double-checked its citations, and it will say yes.</p>
 <p>None of these are reports of what actually happened. They are predictions of what a good response sounds like.</p>
@@ -1966,6 +1969,7 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 
 <p>This guide expands practice #4 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
 
+<img alt="Infographic: a fake source is easier to catch; a real source with a false claim is harder to catch and travels further. The procedure: ask for the exact passage, read what came back, verify against the source itself. If you cannot read the source, you cannot cite the source." src="https://synthience.org/assets/images/PG-009_Infographic.jpg"/>
 <h3>Why this guide exists</h3>
 <p>Most users have heard that AI systems sometimes make up sources that do not exist. Fabricated citations are real, and they do happen. But they are not the most common citation failure, and they are not the most dangerous one.</p>
 <p>The more common failure is subtler and harder to catch: the AI cites a real source, by a real author, in a real venue — and then attributes a claim to that source that the source never actually made.</p>
@@ -2073,6 +2077,7 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <category>Practitioner Guides</category>
 <description><![CDATA[A reliability baseline for any AI system, any platform, any task]]></description>
 <content:encoded><![CDATA[<p><em>A reliability baseline for any AI system, any platform, any task</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-000.html">https://synthience.org/practitioner-guides/PG-000.html</a></p>
+<img alt="Infographic listing the ten practices: make the AI prove it read the document; make it critique its own work first; make it flag what it is uncertain about; when it cites a source, make it quote the source; diff every AI-edited file against the original; do not trust its claims about what it did; keep your constraints ready to re-paste; re-ground or restart a drifted session; keep what matters outside the chat; for high-stakes work, use a second AI. Fluent output is not reliable output." src="https://synthience.org/assets/images/PG-000_Infographic.jpg"/>
 <p>AI systems fail in predictable ways. They claim to have read documents they only skimmed. They give you the first answer that sounds good rather than the best answer they could produce. They edit one part of a file and quietly change another. They make confident claims about their own behavior that turn out not to be true.</p>
 <p>These are not rare edge cases. They are recurring failure modes across major AI systems in professional use, and they cause real failures in real work that often go unnoticed until later.</p>
 <p>The good news is that you can reduce many of these failures with ten habits. They are short, concrete, and work on any AI system you are likely to use. Most take only a few seconds to apply in any prompt.</p>
@@ -2417,7 +2422,7 @@ Published documents are also archived with permanent DOIs at the <a href="https:
 <category>Field Notes</category>
 <description><![CDATA[Inside the governance failure that AI in medicine was designed to prevent.]]></description>
 <content:encoded><![CDATA[<p><em>Inside the governance failure that AI in medicine was designed to prevent.</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/field-notes/FN-004.html">https://synthience.org/field-notes/FN-004.html</a></p>
-<p>Watch the video: <a href="https://www.youtube.com/watch?v=hy2fXLqOpNQ">https://www.youtube.com/watch?v=hy2fXLqOpNQ</a></p>
+<p><a href="https://www.youtube.com/watch?v=hy2fXLqOpNQ"><img alt="Video thumbnail: The Paperwork Was Complete. The Patient Was Harmed." src="https://img.youtube.com/vi/hy2fXLqOpNQ/maxresdefault.jpg"/></a></p><p>Watch the video: <a href="https://www.youtube.com/watch?v=hy2fXLqOpNQ">https://www.youtube.com/watch?v=hy2fXLqOpNQ</a></p>
 <p>Somewhere right now, a physician is reviewing an AI-generated diagnostic recommendation. She is experienced. She is conscientious. She has never had a malpractice claim. She will sign off on the recommendation, and her signature will carry the full legal and professional weight of a physician who has exercised independent clinical judgment.</p>
 <p>She has not exercised independent clinical judgment. Not in the way that phrase is supposed to mean. She has reviewed the AI’s output against her own sense of what an acceptable recommendation looks like. The problem is that her sense of what an acceptable recommendation looks like has been quietly shifting for two years, drifting into alignment with what the AI tends to produce, and she does not know it has shifted. She is still reviewing carefully. She still cares deeply about her patients. She still has the same malpractice exposure and the same professional license at stake.</p>
 <p>She can no longer reliably detect when the AI has moved away from the clinical standard, because her own standard has moved with it.</p>
@@ -2894,7 +2899,7 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <category>Practitioner Guides</category>
 <description><![CDATA[Video overview of SF0038: Ingestion Verification Protocol]]></description>
 <content:encoded><![CDATA[<p><em>Video overview of SF0038: Ingestion Verification Protocol</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-006.html">https://synthience.org/practitioner-guides/PG-006.html</a></p>
-<p>Watch the video: <a href="https://www.youtube.com/watch?v=xlfcDJcPuTY">https://www.youtube.com/watch?v=xlfcDJcPuTY</a></p>
+<p><a href="https://www.youtube.com/watch?v=xlfcDJcPuTY"><img alt="Video thumbnail: The Ingestion Verification Protocol: Does Your AI Actually Read Your Documents?" src="https://img.youtube.com/vi/xlfcDJcPuTY/maxresdefault.jpg"/></a></p><p>Watch the video: <a href="https://www.youtube.com/watch?v=xlfcDJcPuTY">https://www.youtube.com/watch?v=xlfcDJcPuTY</a></p>
 <h3>About this video</h3>
 <p>
 You upload a document. You tell the AI to read it. It says it did. You assume the content has been fully processed and move on.
@@ -2931,7 +2936,7 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <category>Practitioner Guides</category>
 <description><![CDATA[A video introduction to the Institute's framework, position, and research program]]></description>
 <content:encoded><![CDATA[<p><em>A video introduction to the Institute's framework, position, and research program</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-007.html">https://synthience.org/practitioner-guides/PG-007.html</a></p>
-<p>Watch the video: <a href="https://www.youtube.com/watch?v=-jfnZuRYKlo">https://www.youtube.com/watch?v=-jfnZuRYKlo</a></p>
+<p><a href="https://www.youtube.com/watch?v=-jfnZuRYKlo"><img alt="Video thumbnail: Introducing the Synthience Institute: The Missing Middle in AI Safety" src="https://img.youtube.com/vi/-jfnZuRYKlo/maxresdefault.jpg"/></a></p><p>Watch the video: <a href="https://www.youtube.com/watch?v=-jfnZuRYKlo">https://www.youtube.com/watch?v=-jfnZuRYKlo</a></p>
 <h3>About this video</h3>
 <p>
 AI safety research is built around two massive drifting monoliths, leaving a vast and expanding void between them. The lower level — model architecture, training regimes, and benchmarks — and the upper domain of high-level governance and existential risk occupy separate extremes. Because research is concentrated at these two poles, the field has developed a systemic blind spot regarding how we evaluate real-world risk and reliability.
@@ -3126,6 +3131,7 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <category>Field Notes</category>
 <description><![CDATA[Field Note: What Anthropic’s new interpretability research reveals about why AI systems misbehave — and what it means for the alignment debate.]]></description>
 <content:encoded><![CDATA[<p><em>Field Note: What Anthropic’s new interpretability research reveals about why AI systems misbehave — and what it means for the alignment debate.</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/field-notes/FN-003.html">https://synthience.org/field-notes/FN-003.html</a></p>
+<img alt="Infographic: three stacked layers. Instructions, what the model is told; functional internal states, measurable patterns inside the model, which researchers can steer; and behavior, what the model actually does. Steering the internal state changed the behavior. Functional, not felt: no claim of inner experience." src="https://synthience.org/assets/images/FN-003-infographic.jpg"/>
 <h3>What Anthropic found</h3>
 <p>
 On April 2, 2026, Anthropic’s interpretability team published “Emotion Concepts and their Function in a Large Language Model,” a technical study of Claude Sonnet 4.5. The finding is precise: the model contains stable internal representations of 171 emotion concepts, and those representations causally influence its outputs.
