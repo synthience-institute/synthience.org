@@ -625,8 +625,10 @@ Evidence note. Every factual claim above rests on a first-party account publishe
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A practitioner guide for the reader who keeps running out]]></description>
-<content:encoded><![CDATA[<p><a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000</a> and <a href="https://synthience.org/practitioner-guides/PG-001.html">PG-001</a> already tell you to keep sessions short and to work outside the chat. This guide is the other half of that instruction: what a long thread and a wasted turn are actually costing you.</p>
-<p><em>A practitioner guide for the reader who keeps running out</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-015.html">https://synthience.org/practitioner-guides/PG-015.html</a></p>
+<content:encoded><![CDATA[<p><em>A practitioner guide for the reader who keeps running out</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-015.html">https://synthience.org/practitioner-guides/PG-015.html</a></p>
+
+<p><a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000</a> and <a href="https://synthience.org/practitioner-guides/PG-001.html">PG-001</a> already tell you to keep sessions short and to work outside the chat. This guide is the other half of that instruction: what a long thread and a wasted turn are actually costing you.</p>
+
 <img alt="Infographic titled You’re Not Paying for the Model. You’re Paying for the Conversation. A vertical stack of four chat messages labeled Turn 1 through Turn 4, ranging from low cost to highest cost, each sitting under a bracket with a progressively larger shaded block behind it to show that each new message resends the whole thread above it; the most expensive turn carries a dollar icon. A caption reads: each new message resends the whole thread. A side panel contrasts two billing models, billed by usage where long threads cost more, and capped by messages where every message costs the same. The closing line reads: the meter measures the conversation, not the model." src="https://synthience.org/assets/images/PG-015_Infographic.jpg"/>
 <h3>The problem</h3>
 <p>You run out, and you do not know why.</p>
@@ -993,8 +995,10 @@ The structure behind this note is developed across the Synthience Institute’s 
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A practitioner guide for matching the task to the machine]]></description>
-<content:encoded><![CDATA[<p>This guide extends <a href="https://synthience.org/practitioner-guides/PG-013.html">PG-013</a>. Where PG-013 argues that method matters more than model, this guide goes one level deeper: assuming you have a method, how do you send each task to the right tool and the right settings without wasting money or quietly degrading the result.</p>
-<p><em>A practitioner guide for matching the task to the machine</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-014.html">https://synthience.org/practitioner-guides/PG-014.html</a></p>
+<content:encoded><![CDATA[<p><em>A practitioner guide for matching the task to the machine</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-014.html">https://synthience.org/practitioner-guides/PG-014.html</a></p>
+
+<p>This guide extends <a href="https://synthience.org/practitioner-guides/PG-013.html">PG-013</a>. Where PG-013 argues that method matters more than model, this guide goes one level deeper: assuming you have a method, how do you send each task to the right tool and the right settings without wasting money or quietly degrading the result.</p>
+
 <img alt="Infographic titled Routing: Match the Task to the Machine, listing the four axes of a routing decision: platform, model tier, effort, and thinking, with the closing line: the wrong setting quietly makes the work worse." src="https://synthience.org/assets/images/PG-014_Infographic.jpg"/>
 <p>One clarification first, because the title invites a fair objection. This does not retract PG-013. It narrows it. Routing is not separate from method; it is the part of method that happens before the first prompt, when you decide which system should do which kind of work. PG-013 says a serious method beats model-shopping. This guide says a serious method begins with routing. And routing is part of how the work gets done, not just a question of cost, for one concrete reason: the wrong setup does not only cost more, it produces worse output. A model configured wrong for the job can drop a section out of your document or talk itself out of an instruction you gave it. That is a quality failure, not a billing line.</p>
 <h3>The problem</h3>
@@ -1100,8 +1104,10 @@ Picking a model is not one decision. It is several that vary independently: whic
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A practitioner guide for closing the quality gap that no model upgrade can close]]></description>
-<content:encoded><![CDATA[<p>This guide makes the case for the full verification series. The six procedures are in <a href="https://synthience.org/practitioner-guides/PG-001.html">PG-001</a>, <a href="https://synthience.org/practitioner-guides/PG-003.html">PG-003</a>, <a href="https://synthience.org/practitioner-guides/PG-009.html">PG-009</a>, <a href="https://synthience.org/practitioner-guides/PG-010.html">PG-010</a>, <a href="https://synthience.org/practitioner-guides/PG-011.html">PG-011</a>, and <a href="https://synthience.org/practitioner-guides/PG-012.html">PG-012</a>.</p>
-<p><em>A practitioner guide for closing the quality gap that no model upgrade can close</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-013.html">https://synthience.org/practitioner-guides/PG-013.html</a></p>
+<content:encoded><![CDATA[<p><em>A practitioner guide for closing the quality gap that no model upgrade can close</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-013.html">https://synthience.org/practitioner-guides/PG-013.html</a></p>
+
+<p>This guide makes the case for the full verification series. The six procedures are in <a href="https://synthience.org/practitioner-guides/PG-001.html">PG-001</a>, <a href="https://synthience.org/practitioner-guides/PG-003.html">PG-003</a>, <a href="https://synthience.org/practitioner-guides/PG-009.html">PG-009</a>, <a href="https://synthience.org/practitioner-guides/PG-010.html">PG-010</a>, <a href="https://synthience.org/practitioner-guides/PG-011.html">PG-011</a>, and <a href="https://synthience.org/practitioner-guides/PG-012.html">PG-012</a>.</p>
+
 <img alt="Infographic for You Don’t Have a Model Problem, You Have a Method Problem: model chasing is impressive but unstable, while building method is structured, verifiable, and durable, listing verify ingestion, verify citations, don’t trust self-reports, mark guesses, get a second opinion, and hold continuity. A better model makes method matter more, not less." src="https://synthience.org/assets/images/PG-013_Infographic.jpg"/>
 <h3>The problem</h3>
 <p>There is a popular piece of advice going around: stop paying frontier prices, pick a cheaper model that is good enough, and host it on hardware you control. The cost argument behind it is often sound. But underneath it sits an assumption worth examining on its own, because almost everyone shares it and very few people state it: that the model is the variable that determines the quality of your AI work.</p>
@@ -1613,8 +1619,10 @@ Published Institute documents are archived with permanent DOIs at the <a href="h
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A practitioner guide for making AI uncertainty visible in the output]]></description>
-<content:encoded><![CDATA[<p>This guide expands practice #3 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>A practitioner guide for making AI uncertainty visible in the output</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-012.html">https://synthience.org/practitioner-guides/PG-012.html</a></p>
+<content:encoded><![CDATA[<p><em>A practitioner guide for making AI uncertainty visible in the output</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-012.html">https://synthience.org/practitioner-guides/PG-012.html</a></p>
+
+<p>This guide expands practice #3 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <h3>Why this guide exists</h3>
 <p>AI systems present everything in the same confident tone. A fact the system is sure of and a guess it is filling in to keep the response flowing look identical on the page. The prose carries the same rhythm, the same level of detail, the same air of authority. You cannot tell from the writing which parts the system actually knew and which parts it inferred to make the response sound complete.</p>
 <p>This is a structural problem, not a stylistic one. The system does not have a separate confident tone for things it knows and a hedged tone for things it is guessing. Both come out the same.</p>
@@ -1720,8 +1728,10 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A practitioner guide for using a second AI system as a structured review pass on the first one’s output]]></description>
-<content:encoded><![CDATA[<p>This guide expands practice #10 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>A practitioner guide for using a second AI system as a structured review pass on the first one’s output</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-011.html">https://synthience.org/practitioner-guides/PG-011.html</a></p>
+<content:encoded><![CDATA[<p><em>A practitioner guide for using a second AI system as a structured review pass on the first one’s output</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-011.html">https://synthience.org/practitioner-guides/PG-011.html</a></p>
+
+<p>This guide expands practice #10 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <h3>Why this guide exists</h3>
 <p>One AI system reviewing its own output rarely catches its own systematic mistakes. The same model that produced the mistake is the model being asked to spot it. Self-review can clean up surface problems — clarity, organization, minor errors — but it tends to be blind to the kinds of failures that come from how the system reasons.</p>
 <p>A different AI system, especially one from a different developer, is often better at catching these. It is not a perfect oracle. It makes its own mistakes. But it has a different set of priors, a different training history, and a different way of weighing evidence, so its blind spots overlap only partially with the first system’s.</p>
@@ -1833,8 +1843,10 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A practitioner guide for replacing AI self-report with verifiable evidence]]></description>
-<content:encoded><![CDATA[<p>This guide expands practice #6 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>A practitioner guide for replacing AI self-report with verifiable evidence</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-010.html">https://synthience.org/practitioner-guides/PG-010.html</a></p>
+<content:encoded><![CDATA[<p><em>A practitioner guide for replacing AI self-report with verifiable evidence</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-010.html">https://synthience.org/practitioner-guides/PG-010.html</a></p>
+
+<p>This guide expands practice #6 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <h3>Why this guide exists</h3>
 <p>Ask an AI whether it completed the task you gave it, and it will say yes. Ask whether it read the whole document, and it will say yes. Ask whether it applied the rule you set five turns ago, and it will say yes. Ask whether it double-checked its citations, and it will say yes.</p>
 <p>None of these are reports of what actually happened. They are predictions of what a good response sounds like.</p>
@@ -1950,8 +1962,10 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A practitioner guide for catching misrepresented citations before they enter your work]]></description>
-<content:encoded><![CDATA[<p>This guide expands practice #4 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>A practitioner guide for catching misrepresented citations before they enter your work</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-009.html">https://synthience.org/practitioner-guides/PG-009.html</a></p>
+<content:encoded><![CDATA[<p><em>A practitioner guide for catching misrepresented citations before they enter your work</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-009.html">https://synthience.org/practitioner-guides/PG-009.html</a></p>
+
+<p>This guide expands practice #4 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <h3>Why this guide exists</h3>
 <p>Most users have heard that AI systems sometimes make up sources that do not exist. Fabricated citations are real, and they do happen. But they are not the most common citation failure, and they are not the most dangerous one.</p>
 <p>The more common failure is subtler and harder to catch: the AI cites a real source, by a real author, in a real venue — and then attributes a claim to that source that the source never actually made.</p>
@@ -2562,8 +2576,10 @@ Published documents are also archived with permanent DOIs at the <a href="https:
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A companion verification procedure for any AI-assisted file update]]></description>
-<content:encoded><![CDATA[<p>This guide expands practice #5 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>A companion verification procedure for any AI-assisted file update</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-005.html">https://synthience.org/practitioner-guides/PG-005.html</a></p>
+<content:encoded><![CDATA[<p><em>A companion verification procedure for any AI-assisted file update</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-005.html">https://synthience.org/practitioner-guides/PG-005.html</a></p>
+
+<p>This guide expands practice #5 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <img alt="Your AI Updated the File. Did It Preserve What It Didn't Touch? A three-step verification procedure: save the prior version, run a comparison pass, you decide." src="https://synthience.org/assets/images/PG-005_Infographic.jpg"/>
 <blockquote><p>The AI's failure mode is not in what it edited. It is in what it silently compressed, reworded, or dropped while carrying the rest of the file forward.</p></blockquote>
 <h3>A different failure mode</h3>
@@ -2802,8 +2818,10 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[How to instruct any AI to keep improving its output before it responds to you]]></description>
-<content:encoded><![CDATA[<p>This guide expands practice #2 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>How to instruct any AI to keep improving its output before it responds to you</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-004.html">https://synthience.org/practitioner-guides/PG-004.html</a></p>
+<content:encoded><![CDATA[<p><em>How to instruct any AI to keep improving its output before it responds to you</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-004.html">https://synthience.org/practitioner-guides/PG-004.html</a></p>
+
+<p>This guide expands practice #2 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <img alt="You Are Accepting the First Adequate Answer: a guide to iterative evaluation and enhancement cycles in AI interaction." src="https://synthience.org/assets/images/PG-004_infographic.jpg"/>
 <h3>The problem</h3>
 <p>When an AI responds to your prompt, it stops at the first answer it considers adequate. It does not re-examine that answer, look for weaknesses, or improve it before presenting it to you. You receive a first draft dressed as a final result.</p>
@@ -2956,8 +2974,10 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A copy-ready prompt sequence for confirming AI document ingestion before work begins]]></description>
-<content:encoded><![CDATA[<p>This guide expands practice #1 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>A copy-ready prompt sequence for confirming AI document ingestion before work begins</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-003.html">https://synthience.org/practitioner-guides/PG-003.html</a></p>
+<content:encoded><![CDATA[<p><em>A copy-ready prompt sequence for confirming AI document ingestion before work begins</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-003.html">https://synthience.org/practitioner-guides/PG-003.html</a></p>
+
+<p>This guide expands practice #1 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <img alt="Verify Before You Work: A four-step sequence for confirming AI document ingestion. Step 1: Prime the instance. Step 2: Attach and confirm. Step 3: Request summary. Step 4: Spot-check." src="https://synthience.org/assets/images/PG-003_Infographic.jpg"/>
 <h3>The problem in one sentence</h3>
 <p>
@@ -3188,8 +3208,10 @@ Published documents are also archived with permanent DOIs at the <a href="https:
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[A practitioner guide for safe human-AI document editing]]></description>
-<content:encoded><![CDATA[<p>This guide expands practice #5 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>A practitioner guide for safe human-AI document editing</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-002.html">https://synthience.org/practitioner-guides/PG-002.html</a></p>
+<content:encoded><![CDATA[<p><em>A practitioner guide for safe human-AI document editing</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-002.html">https://synthience.org/practitioner-guides/PG-002.html</a></p>
+
+<p>This guide expands practice #5 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <img alt="Fluency is not fidelity. What AI does: drops sections silently, weakens constraints, replaces specificity with fluency. What you need: Edit Pass, Verification Pass, Human Decision. Three steps: Preserve, Edit then Freeze, Verify." src="https://synthience.org/assets/images/PG-002_Infographic.jpg"/>
 <h3>Why this guide exists</h3>
 <p>AI systems are extremely fluent editors. They are not reliable custodians of completeness.</p>
@@ -3384,8 +3406,10 @@ Full framework documentation available at the <a href="https://zenodo.org/commun
 <dc:creator>Thomas W. Gantz</dc:creator>
 <category>Practitioner Guides</category>
 <description><![CDATA[An onboarding guide for long-horizon use]]></description>
-<content:encoded><![CDATA[<p>This guide expands practices #7 and #8 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
-<p><em>An onboarding guide for long-horizon use</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-001.html">https://synthience.org/practitioner-guides/PG-001.html</a></p>
+<content:encoded><![CDATA[<p><em>An onboarding guide for long-horizon use</em></p><p>Originally published at synthience.org: <a href="https://synthience.org/practitioner-guides/PG-001.html">https://synthience.org/practitioner-guides/PG-001.html</a></p>
+
+<p>This guide expands practices #7 and #8 of <a href="https://synthience.org/practitioner-guides/PG-000.html">PG-000: 10 Things Every AI User Should Do</a>.</p>
+
 <img alt="AI drift happens in every long session: user intent and AI output diverge over time due to constraint dilution, context compression, and compounding errors. Three habits for long-horizon operators: Separate, Anchor, Externalize." src="https://synthience.org/assets/images/PG-001_Infographic.jpg"/>
 <h3>Purpose</h3>
 <p>
