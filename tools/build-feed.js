@@ -34,7 +34,7 @@ const rfc822 = d => new Date(d + 'T00:00:00Z').toUTCString().replace('GMT', '+00
 
 const items = updates.map(u => {
   // Entries without a single page (e.g. several papers announced together) link to the Research page.
-  const url = SITE + (u.link || 'research.html');
+  const url = /^https?:\/\//.test(u.link || '') ? u.link : SITE + (u.link || 'research.html');
   return [
     '    <item>',
     `      <title>${esc(decode(u.title))}</title>`,
