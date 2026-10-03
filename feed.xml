@@ -6,7 +6,15 @@
     <atom:link href="https://synthience.org/feed.xml" rel="self" type="application/rss+xml"/>
     <description>New papers, Field Notes and Practitioner Guides from the Synthience Institute.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The Institute Is Now on Substack</title>
+      <link>https://synthienceinstitute.substack.com</link>
+      <guid isPermaLink="false">2026-10-03 https://synthienceinstitute.substack.com</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Site</category>
+      <description>The Synthience Institute now publishes on Substack, so new work can reach you by email. Every Field Note and Practitioner Guide is there in full, and every published paper has a short, plain-language note on what it does, linking to the full paper here, where each one can be read online or as a PDF and is archived on Zenodo with a permanent DOI. The whole back catalog is already on Substack in publication order. Subscribing is free. This site remains the permanent home of the research, and the RSS feed continues as before.</description>
+    </item>
     <item>
       <title>FN-018: The AI Capture Fight Doesn’t Need a Villain</title>
       <link>https://synthience.org/field-notes/FN-018.html</link>
@@ -37,7 +45,7 @@
       <guid isPermaLink="false">2026-09-28 https://synthience.org/research.html</guid>
       <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
       <category>Site</category>
-      <description>Two additions to make the work easier to find and follow. The Research page now has a By Topic view that groups every paper by what it does: definitions and foundations, the central theories, method and measurement, verification protocols, organizations and alignment, the human role, and governance warnings. It sits alongside the existing By Date, By Type, By ID and By Title views. And the Institute now has an RSS feed of new papers, Field Notes and Practitioner Guides at synthience.org/feed.xml, linked as Subscribe (RSS) at the foot of every page. Follow it in any feed reader, or have new items emailed to you through a free RSS-to-email service.</description>
+      <description>Two additions to make the work easier to find and follow. The Research page now has a By Topic view that groups every paper by what it does: definitions and foundations, the central theories, method and measurement, verification protocols, organizations and alignment, the human role, and governance warnings. It sits alongside the existing By Date, By Type, By ID and By Title views. And the Institute now has an RSS feed of new papers, Field Notes and Practitioner Guides at synthience.org/feed.xml, linked as RSS feed at the foot of every page. Follow it in any feed reader, or have new items emailed to you through a free RSS-to-email service.</description>
     </item>
     <item>
       <title>SF0042: Decentering Theory Published on Zenodo</title>

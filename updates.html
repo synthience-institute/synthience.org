@@ -111,7 +111,10 @@
 
 <h1 class="page-title">Updates</h1>
 <p>Publication announcements, corpus milestones, and Institute news. For substantive commentary on AI developments, see <a href="field-notes.html">Field Notes</a>. For operational guides, see <a href="practitioner-guides.html">Practitioner Guides</a>.</p>
-<p class="rss-note" style="font-size:0.9rem;color:#555;">Follow new papers and articles by <a href="feed.xml">RSS</a>: add <code>https://synthience.org/feed.xml</code> to any feed reader. To get them by email instead, paste the same address into a free RSS-to-email service.</p>
+<div class="subscribe-box">
+<p>New papers and articles by email: <a href="https://synthienceinstitute.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack&nbsp;&rarr;</a></p>
+</div>
+<p class="rss-note" style="font-size:0.9rem;color:#555;">Follow new papers and articles by <a href="feed.xml">RSS</a>: add <code>https://synthience.org/feed.xml</code> to any feed reader.</p>
 
 <div class="search-container">
   <input type="text" class="search-input" id="search-input" placeholder="Search updates..." oninput="handleSearch()">
@@ -131,6 +134,16 @@
 <script>
 // === DATA ===
 var allUpdates = [
+  {
+    date: "2026-10-03",
+    dateDisplay: "October 3, 2026",
+    title: "The Institute Is Now on Substack",
+    link: "https://synthienceinstitute.substack.com",
+    tag: "Site",
+    body: "The Synthience Institute now publishes on Substack, so new work can reach you by email. Every Field Note and Practitioner Guide is there in full, and every published paper has a short, plain-language note on what it does, linking to the full paper here, where each one can be read online or as a PDF and is archived on Zenodo with a permanent DOI. The whole back catalog is already on Substack in publication order. Subscribing is free. This site remains the permanent home of the research, and the RSS feed continues as before.",
+    action: "Subscribe on Substack",
+    actionLink: "https://synthienceinstitute.substack.com/subscribe"
+  },
   {
     date: "2026-10-01",
     dateDisplay: "October 1, 2026",
@@ -169,7 +182,7 @@ var allUpdates = [
     title: "New on the Site: Browse Papers by Topic, and an RSS Feed",
     link: "research.html",
     tag: "Site",
-    body: "Two additions to make the work easier to find and follow. The Research page now has a By Topic view that groups every paper by what it does: definitions and foundations, the central theories, method and measurement, verification protocols, organizations and alignment, the human role, and governance warnings. It sits alongside the existing By Date, By Type, By ID and By Title views. And the Institute now has an RSS feed of new papers, Field Notes and Practitioner Guides at synthience.org/feed.xml, linked as Subscribe (RSS) at the foot of every page. Follow it in any feed reader, or have new items emailed to you through a free RSS-to-email service.",
+    body: "Two additions to make the work easier to find and follow. The Research page now has a By Topic view that groups every paper by what it does: definitions and foundations, the central theories, method and measurement, verification protocols, organizations and alignment, the human role, and governance warnings. It sits alongside the existing By Date, By Type, By ID and By Title views. And the Institute now has an RSS feed of new papers, Field Notes and Practitioner Guides at synthience.org/feed.xml, linked as RSS feed at the foot of every page. Follow it in any feed reader, or have new items emailed to you through a free RSS-to-email service.",
     action: "Browse by topic",
     actionLink: "research.html"
   },
