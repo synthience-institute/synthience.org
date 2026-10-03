@@ -3,12 +3,14 @@
 and Practitioner Guide, plus a short note on every published paper, for Substack's
 "Import posts" tool.
 
-Usage: build_substack_feed.py REPO OUTDIR [--no-papers]
+Usage: build_substack_feed.py REPO OUTDIR [--no-papers] [--paper-image URL]
 Writes OUTDIR/substack-all.xml (articles and paper notes, newest first),
 OUTDIR/substack-articles.xml (articles only), OUTDIR/substack-pilot.xml (the PILOT pieces),
 and OUTDIR/preview/<ID>.html (a paste file per post, 06_article_production_guide Section 1.12).
-Paper notes come from paper_notes.json beside this script (text only; the back catalog
-was imported without images, and a new paper's note gets its announcement image by hand).
+Paper notes come from paper_notes.json beside this script. With --paper-image, each note carries
+that image after its "Read the full paper" line (the back catalog uses one Institute logo card,
+so Substack's cards show the logo instead of an empty grey box; a new paper's note gets its own
+announcement image instead).
 """
 import sys, os, re, copy, html, json
 from datetime import datetime
@@ -18,6 +20,7 @@ from bs4 import BeautifulSoup, NavigableString, Tag, Comment
 
 REPO, OUT = sys.argv[1], sys.argv[2]
 WITH_PAPERS = "--no-papers" not in sys.argv[3:]
+PAPER_IMAGE = sys.argv[sys.argv.index("--paper-image") + 1] if "--paper-image" in sys.argv else None
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://synthience.org"
 PILOT = {"FN-018", "PG-003"}
@@ -291,6 +294,8 @@ def paper_items():
             if h.startswith("*") and h.endswith("*"):
                 h = "<em>" + h[1:-1] + "</em>"
             body.append(f"<p>{h}</p>")
+            if PAPER_IMAGE and para.startswith("Read the full paper"):
+                body.append(f'<p><img src="{PAPER_IMAGE}" alt="Synthience Institute logo"></p>')
         dek = re.sub(r"^\*|\*$", "", paras[0])
         # Post title: the paper's exact title as on research.html (and in its citation tags)
         items.append(dict(id=pid, title=html.unescape(js_field(b, "title")), dek=dek, date=d.replace(hour=9, tzinfo=ET),
