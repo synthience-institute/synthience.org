@@ -1,26 +1,36 @@
 #!/usr/bin/env python3
 """Build an RSS 2.0 feed (full text in content:encoded) of every published Field Note
-and Practitioner Guide, for Substack's "Import posts" tool.
+and Practitioner Guide, plus a short note on every published paper, for Substack's
+"Import posts" tool.
 
-Usage: build_substack_feed.py REPO OUTDIR
-Writes OUTDIR/substack-all.xml, OUTDIR/substack-pilot.xml (FN-018 only),
-OUTDIR/substack-rest.xml (everything except the pilot), and OUTDIR/preview/<ID>.html.
+Usage: build_substack_feed.py REPO OUTDIR [--no-papers]
+Writes OUTDIR/substack-all.xml (articles and paper notes, newest first),
+OUTDIR/substack-articles.xml (articles only), OUTDIR/substack-pilot.xml (the PILOT pieces),
+and OUTDIR/preview/<ID>.html (a paste file per post, 06_article_production_guide Section 1.12).
+Paper notes come from paper_notes.json beside this script (text only; the back catalog
+was imported without images, and a new paper's note gets its announcement image by hand).
 """
-import sys, os, re, copy, html
+import sys, os, re, copy, html, json
 from datetime import datetime
 from email.utils import format_datetime
 from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup, NavigableString, Tag, Comment
 
 REPO, OUT = sys.argv[1], sys.argv[2]
+WITH_PAPERS = "--no-papers" not in sys.argv[3:]
+HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://synthience.org"
 PILOT = {"FN-018", "PG-003"}
 ET = ZoneInfo("America/New_York")
-LISTING_DATES = {}
+LISTING_DATES, LISTING_ORDER = {}, {}
 for _f in ("field-notes.html", "practitioner-guides.html"):
     _s = open(os.path.join(REPO, _f), encoding="utf-8").read()
     for _id, _d in re.findall(r'id:\s*"((?:FN|PG)-\d{3})",(?:(?!id:).)*?date:\s*"(\d{4}-\d{2}-\d{2})"', _s, re.S):
         LISTING_DATES.setdefault(_id, _d)
+    for _b in re.findall(r"\{([^{}]*?id:\s*\"(?:FN|PG)-\d{3}\"[^{}]*?)\}", _s, re.S):
+        _m = re.search(r'id:\s*"((?:FN|PG)-\d{3})"', _b); _o = re.search(r"dateOrder:\s*(\d+)", _b)
+        if _o:
+            LISTING_ORDER.setdefault(_m.group(1), int(_o.group(1)))
 
 # Styled boxes on the site that become quotes on Substack
 QUOTE_CLASSES = {"fn-callout", "fn-pullquote", "pg-callout", "response-block", "key-insight",
@@ -214,7 +224,8 @@ def convert(path, section, kind):
     # PG-003 points to colored placeholder text; Substack drops the color, and the placeholders are bracketed
     body = body.replace("Text in this color is a placeholder", "Text in [square brackets] is a placeholder")
     body = re.sub(r"\n\s*\n+", "\n\n", body).strip()
-    return dict(id=doc_id, title=title, dek=subtitle, date=dt, date_txt=date_txt, url=url, body=body, kind=kind)
+    return dict(id=doc_id, title=title, dek=subtitle, date=dt, date_txt=date_txt, url=url, body=body, kind=kind,
+                dateOrder=LISTING_ORDER.get(doc_id), type=None)
 
 
 def wrap_loose_text(soup, el):
@@ -246,6 +257,74 @@ def wrap_loose_text(soup, el):
     flush(None)
 
 
+def js_blocks(path, key):
+    s = open(path, encoding="utf-8").read()
+    return re.findall(r"\{([^{}]*?" + key + r"[^{}]*?)\}", s, re.S)
+
+
+def js_field(b, k):
+    m = re.search(k + r':\s*"([^"]*)"', b)
+    return m.group(1) if m else None
+
+
+def js_num(b, k):
+    m = re.search(k + r":\s*(\d+)", b)
+    return int(m.group(1)) if m else None
+
+
+TYPE_ORDER = {"whitepaper": 0, "mortar": 1, "framework": 2, "protocol": 2, "research": 3, "definitions": 4}
+
+
+def paper_items():
+    notes = json.load(open(os.path.join(HERE, "paper_notes.json"), encoding="utf-8"))
+    items = []
+    for b in js_blocks(os.path.join(REPO, "research.html"), "read:"):
+        pid = js_field(b, "id")
+        d = datetime.strptime(js_field(b, "date"), "%B %d, %Y")
+        n = notes[pid]
+        url = f"{SITE}/research/{pid}.html"
+        paras = [x.strip() for x in n["text"].split("\n\n") if x.strip()]
+        body = []
+        for para in paras:
+            h = html.escape(para, quote=False)
+            h = re.sub(r"(https://[^\s<]+?)([.,;:)]?)(?=\s|$)", r'<a href="\1">\1</a>\2', h)
+            if h.startswith("*") and h.endswith("*"):
+                h = "<em>" + h[1:-1] + "</em>"
+            body.append(f"<p>{h}</p>")
+        dek = re.sub(r"^\*|\*$", "", paras[0])
+        # Post title: the paper's exact title as on research.html (and in its citation tags)
+        items.append(dict(id=pid, title=html.unescape(js_field(b, "title")), dek=dek, date=d.replace(hour=9, tzinfo=ET),
+                          date_txt=d.strftime("%B %-d, %Y"), url=url, body="\n".join(body), kind="PAPER",
+                          dateOrder=js_num(b, "dateOrder"), type=js_field(b, "type")))
+    return items
+
+
+def order_same_day(items):
+    """Posts that share a date get minutes after 09:00 ET so Substack's newest-first archive shows them in
+    the order the site does: the pieces' own dateOrder (research.html or the listing pages) when every one
+    carries it, else updates.html's order when it lists them all, else research.html's By Date rule."""
+    upd = []
+    for b in js_blocks(os.path.join(REPO, "updates.html"), "dateDisplay"):
+        m = re.search(r"([A-Z][A-Z-]*\d+(?:-VR1)?)\.html", js_field(b, "link") or "")
+        if m:
+            upd.append(m.group(1))
+    groups = {}
+    for it in items:
+        groups.setdefault(it["date"].date(), []).append(it)
+    for g in groups.values():
+        if len(g) == 1:
+            continue
+        if all(it.get("dateOrder") for it in g):
+            shown = sorted(g, key=lambda it: -it["dateOrder"])
+        elif all(it["id"] in upd for it in g):
+            shown = sorted(g, key=lambda it: upd.index(it["id"]))
+        else:  # research.html's fallback: typeOrder, then ID descending
+            shown = sorted(g, key=lambda it: it["id"], reverse=True)
+            shown = sorted(shown, key=lambda it: (-(it.get("dateOrder") or 0), TYPE_ORDER.get(it.get("type"), 5)))
+        for pos, it in enumerate(shown):
+            it["date"] = it["date"].replace(minute=len(shown) - 1 - pos)
+
+
 def rss(items, title):
     def cdata(x):
         return "<![CDATA[" + x.replace("]]>", "]]]]><![CDATA[>") + "]]>"
@@ -254,7 +333,7 @@ def rss(items, title):
            "<channel>",
            f"<title>{html.escape(title)}</title>",
            f"<link>{SITE}/</link>",
-           "<description>Field Notes and Practitioner Guides from the Synthience Institute.</description>",
+           "<description>Field Notes, Practitioner Guides and paper notes from the Synthience Institute.</description>",
            "<language>en-us</language>"]
     for it in items:
         out += ["<item>",
@@ -264,7 +343,7 @@ def rss(items, title):
                 f'<guid isPermaLink="true">{it["url"][:-5]}</guid>',
                 f"<pubDate>{format_datetime(it['date'])}</pubDate>",
                 "<dc:creator>Thomas W. Gantz</dc:creator>",
-                f"<category>{'Field Notes' if it['kind'] == 'FN' else 'Practitioner Guides'}</category>",
+                f"<category>{ {'FN': 'Field Notes', 'PG': 'Practitioner Guides'}.get(it['kind'], 'Papers') }</category>",
                 f"<description>{cdata(it['dek'])}</description>",
                 f"<content:encoded>{cdata(it['body'])}</content:encoded>",
                 "</item>"]
@@ -279,18 +358,21 @@ def main():
         for f in sorted(os.listdir(d)):
             if re.match(pat, f):
                 items.append(convert(os.path.join(d, f), section, kind))
+    if WITH_PAPERS:
+        items += paper_items()
+    order_same_day(items)
     items.sort(key=lambda x: (x["date"], x["id"]), reverse=True)
     os.makedirs(os.path.join(OUT, "preview"), exist_ok=True)
     open(os.path.join(OUT, "substack-all.xml"), "w").write(rss(items, "Synthience Institute"))
+    open(os.path.join(OUT, "substack-articles.xml"), "w").write(rss([i for i in items if i["kind"] != "PAPER"], "Synthience Institute"))
     open(os.path.join(OUT, "substack-pilot.xml"), "w").write(rss([i for i in items if i["id"] in PILOT], "Synthience Institute"))
-    open(os.path.join(OUT, "substack-rest.xml"), "w").write(rss([i for i in items if i["id"] not in PILOT], "Synthience Institute"))
     for it in items:
         open(os.path.join(OUT, "preview", it["id"] + ".html"), "w").write(
             f"<!doctype html><meta charset='utf-8'><title>{html.escape(it['title'])}</title>"
             f"<body style='max-width:680px;margin:2rem auto;font-family:Georgia,serif;line-height:1.6;padding:0 16px'>"
             f"<h1>{html.escape(it['title'])}</h1><p style='color:#666'>{it['date_txt']} · Thomas W. Gantz</p>{it['body']}</body>")
     for it in items:
-        print(f"{it['id']}\t{it['date'].date()}\t{len(it['body']):>6}\t{it['title']}")
+        print(f"{it['id']}\t{it['date'].strftime('%Y-%m-%d %H:%M')}\t{len(it['body']):>6}\t{it['title']}")
     print(len(items), "items")
 
 
