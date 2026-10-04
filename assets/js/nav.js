@@ -20,7 +20,7 @@
   var container = document.getElementById('site-nav');
   if (container) {
     container.innerHTML =
-      '<span class="site-tagline">We study what emerges from sustained relational interaction \u2014 between humans and AI, AI and AI, and institutions built around both.</span>' +
+      '<span class="site-tagline">We study what develops in sustained relational interaction \u2014 between humans and AI, AI and AI, and institutions built around both.</span>' +
       '<div class="nav-links">' + navHtml + '</div>';
   }
 })();
