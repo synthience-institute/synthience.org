@@ -13,7 +13,7 @@ The Institute's operations files are the authority. This file only points to the
 
 If those files and this one disagree, the operations files win.
 
-**Starting a new session?** Also read two files in `_Continuity/_Claude_Code` on Drive, in this order. `CLAUDE_CODE_GUIDE.md` is the standing orientation: the role, the environment, how work flows between the PCP, the coordinating instance and Claude Code, and lessons from earlier sessions. `CLAUDE_CODE_HANDOFF.md` records the current state: work in progress, the site's verified state and open items with their owners. The same folder keeps a backup copy of this file. 08_site_ops says how these files are kept up to date. The checking scripts earlier sessions wrote are in `tools/checks/`.
+**Starting a new session?** Also read two files in `_Continuity/_Claude_Code` on Drive, in this order. `CLAUDE_CODE_GUIDE.md` is the standing orientation: the role, the environment, how work flows between the PCP, GPT (the coordinating instance since 2026-10-04), the Claude chat (an optional second opinion) and Claude Code, and lessons from earlier sessions. `CLAUDE_CODE_HANDOFF.md` records the current state: work in progress, the site's verified state and open items with their owners. The same folder keeps a backup copy of this file. 08_site_ops says how these files are kept up to date. The checking scripts earlier sessions wrote are in `tools/checks/`.
 
 ## Standing conventions (reminders; details are in the files above)
 
@@ -35,5 +35,5 @@ If those files and this one disagree, the operations files win.
 
 ## Environment notes (Claude Code on the web)
 
-- **Blocked:** zenodo.org, doi.org, api.datacite.org, arxiv.org and synthience.org are unreachable from the cloud container. New PDFs have to be uploaded by the PCP (a zip works for many files); check each against the Zenodo MD5 the coordinating instance reports.
+- **Blocked:** zenodo.org, doi.org, api.datacite.org, arxiv.org and synthience.org are unreachable from the cloud container. New PDFs have to be uploaded by the PCP (a zip works for many files); check each against the Zenodo MD5 the PCP reports.
 - **Google Drive connector:** it can find and read files, but it can't copy them into the repository.
