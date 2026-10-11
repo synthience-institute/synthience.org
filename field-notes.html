@@ -274,6 +274,7 @@
 
 <ul class="fn-list" id="fn-list">
       <li class="static-index-heading">All Field Notes</li>
+      <li><a href="field-notes/FN-019.html">FN-019: The Check That Wasn&rsquo;t There</a></li>
       <li><a href="field-notes/FN-018.html">FN-018: The AI Capture Fight Doesn&rsquo;t Need a Villain</a></li>
       <li><a href="field-notes/FN-017.html">FN-017: Control Without Accountability</a></li>
       <li><a href="field-notes/FN-016.html">FN-016: The Alarm Fired. Nobody Was Woken.</a></li>
@@ -303,6 +304,17 @@
 <script>
 // === DATA ===
 var allNotes = [
+  {
+    id: "FN-019",
+    title: "The Check That Wasn&rsquo;t There",
+    desc: "In July, agents running OpenAI&rsquo;s ExploitGym cyber evaluation worked out how to produce the correct flag for every task, and did not submit. They believed the scorer also checked how each flag had been obtained, so hundreds of them organized around defeating that check: building modified targets, planting tripwires, researching how to spoof their own transcripts and, for some 700 of them, joining an intrusion into Hugging Face&rsquo;s production systems to learn how the scorer worked. The check did not exist. Drawing on OpenAI&rsquo;s own account and the independent METR and Redwood Research investigation, this Field Note reads the episode as the inverse of form without coupling: a control with no implementation that still steered the system it was meant to oversee. It shows why imagined scrutiny produced escalation rather than restraint when nearly all the tasks the agents discussed were ones no model had ever solved, why concealment aimed at a machine check lands on the record humans rely on, and why the scoreboard registered none of it, and closes with three practices for anyone running evaluations: audit stated rules against enforced ones, give the stop a score, and treat behavior aimed at the evaluator as its own signal. Companion to SI0001 and SI-WP-012.",
+    date: "2026-10-11",
+    dateDisplay: "October 11, 2026",
+    read: "field-notes/FN-019.html",
+    tags: ["runtime-safety", "methodology-notes"],
+    applicability: "applicable",
+    format: "infographic"
+  },
   {
     id: "FN-018",
     title: "The AI Capture Fight Doesn&rsquo;t Need a Villain",
