@@ -6,7 +6,10 @@ and Practitioner Guide, plus a short note on every published paper, for Substack
 Usage: build_substack_feed.py REPO OUTDIR [--no-papers] [--paper-image URL]
 Writes OUTDIR/substack-all.xml (articles and paper notes, newest first),
 OUTDIR/substack-articles.xml (articles only), OUTDIR/substack-pilot.xml (the PILOT pieces),
-and OUTDIR/preview/<ID>.html (a paste file per post, 06_article_production_guide Section 1.12).
+and OUTDIR/preview/<ID>.html (a paste file per post, 06_article_production_guide Section 1.12), plus, for each
+article, OUTDIR/preview/<ID>-linkedin.html, the paste file for its LinkedIn article (Section 1.6): the same body with
+the Substack subscribe line placed where the site page has its subscribe box. Paste files open on the title and the
+dek: no date or byline line, since the platform adds its own and the first paragraph becomes the preview.
 Paper notes come from paper_notes.json beside this script. With --paper-image, each note carries
 that image after its "Read the full paper" line (the back catalog uses one Institute logo card,
 so Substack's cards show the logo instead of an empty grey box; a new paper's note gets its own
@@ -22,6 +25,8 @@ REPO, OUT = sys.argv[1], sys.argv[2]
 WITH_PAPERS = "--no-papers" not in sys.argv[3:]
 PAPER_IMAGE = sys.argv[sys.argv.index("--paper-image") + 1] if "--paper-image" in sys.argv else None
 HERE = os.path.dirname(os.path.abspath(__file__))
+SUBSCRIBE_URL = "https://synthienceinstitute.substack.com/subscribe"
+SUBSCRIBE_MARK = "@@SUBSCRIBE@@"
 SITE = "https://synthience.org"
 PILOT = {"FN-018", "PG-003"}
 ET = ZoneInfo("America/New_York")
@@ -85,7 +90,10 @@ def convert(path, section, kind):
         print(f"NOTE {doc_id}: page shows {spans[1:2]}, listing date {date_txt} used", file=sys.stderr)
     url = f"{SITE}/{section}/{os.path.basename(path)}"
 
-    for sel in ["back-link", "article-meta", "article-footer", "subscribe-box"]:
+    # The subscribe box leaves a marker: the LinkedIn paste file puts its subscribe line there (06 Section 1.6)
+    for x in main.find_all(class_="subscribe-box"):
+        x.replace_with(soup.new_string(SUBSCRIBE_MARK))
+    for sel in ["back-link", "article-meta", "article-footer"]:
         for x in main.find_all(class_=sel):
             x.decompose()
     main.find("h1").decompose()
@@ -227,8 +235,12 @@ def convert(path, section, kind):
     # PG-003 points to colored placeholder text; Substack drops the color, and the placeholders are bracketed
     body = body.replace("Text in this color is a placeholder", "Text in [square brackets] is a placeholder")
     body = re.sub(r"\n\s*\n+", "\n\n", body).strip()
+    li_line = (f'<p>New articles in full, plus a short note on each new paper, by email: '
+               f'<a href="{SUBSCRIBE_URL}">{SUBSCRIBE_URL}</a></p>')
+    li_body = body.replace(SUBSCRIBE_MARK, li_line) if SUBSCRIBE_MARK in body else body + "\n\n" + li_line
+    body = re.sub(r"\n\s*\n+", "\n\n", body.replace(SUBSCRIBE_MARK, "")).strip()
     return dict(id=doc_id, title=title, dek=subtitle, date=dt, date_txt=date_txt, url=url, body=body, kind=kind,
-                dateOrder=LISTING_ORDER.get(doc_id), type=None)
+                dateOrder=LISTING_ORDER.get(doc_id), type=None, li_body=li_body)
 
 
 def wrap_loose_text(soup, el):
@@ -371,11 +383,15 @@ def main():
     open(os.path.join(OUT, "substack-all.xml"), "w").write(rss(items, "Synthience Institute"))
     open(os.path.join(OUT, "substack-articles.xml"), "w").write(rss([i for i in items if i["kind"] != "PAPER"], "Synthience Institute"))
     open(os.path.join(OUT, "substack-pilot.xml"), "w").write(rss([i for i in items if i["id"] in PILOT], "Synthience Institute"))
-    for it in items:
-        open(os.path.join(OUT, "preview", it["id"] + ".html"), "w").write(
-            f"<!doctype html><meta charset='utf-8'><title>{html.escape(it['title'])}</title>"
+    def paste_file(name, title, body):
+        open(os.path.join(OUT, "preview", name), "w").write(
+            f"<!doctype html><meta charset='utf-8'><title>{html.escape(title)}</title>"
             f"<body style='max-width:680px;margin:2rem auto;font-family:Georgia,serif;line-height:1.6;padding:0 16px'>"
-            f"<h1>{html.escape(it['title'])}</h1><p style='color:#666'>{it['date_txt']} · Thomas W. Gantz</p>{it['body']}</body>")
+            f"<h1>{html.escape(title)}</h1>{body}</body>")
+    for it in items:
+        paste_file(it["id"] + ".html", it["title"], it["body"])
+        if it["kind"] != "PAPER":
+            paste_file(it["id"] + "-linkedin.html", it["title"], it["li_body"])
     for it in items:
         print(f"{it['id']}\t{it['date'].strftime('%Y-%m-%d %H:%M')}\t{len(it['body']):>6}\t{it['title']}")
     print(len(items), "items")
